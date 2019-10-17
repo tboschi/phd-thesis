@@ -1,0 +1,634 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		CHAP 1		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\chapter{Neutrino physics in the Standard Model}
+\label{cha:intro}
+
+The Standard Model (SM) is a gauge theory that describes the strong, electromagnetic, and weak interactions %
+of elementary particles in the framework of quantum field theory.
+The theory is based on the local symmetry group 
+\begin{equation}
+	\label{eq:smgroup}
+	\mathrm{SU(3)}_C \otimes \mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y
+\end{equation}
+where $C$, $L$ and $Y$ denote color, left-handed chirality and weak hypercharge, respectively.
+The gauge group uniquely determines the interactions and the number of %
+vector gauge bosons that correspond to the generators of the group.
+They are eight massless gluons that mediate strong interactions, %
+corresponding to the eight generators of SU(3)$_C$, and four gauge bosons, %
+of which three are massive ($W^\pm$ and $Z$) and one is massless, corresponding %
+to the three generators of SU(2)$_L$ and one generator of U(1)$_Y$, responsible for %
+electroweak interactions.
+The symmetry group of the SM fixes the interactions, i.e. the number and properties of the %
+vector gauge bosons, with only three independent unknown parameters: the three coupling constants of %
+the SU(3)$_C$, SU(2)$_L$, and U(1)$_Y$ groups, all of which must be determined from experiments.
+On the contrary, the number and properties of scalar bosons and fermions are left unconstrained, %
+except for the fact that they must transform according to the representations of the symmetry group, %
+while the fermion representations must lead to the cancellation of quantum anomalies.
+The known elementary fermions are divided in two categories, quarks and
+leptons, according to the scheme:
+\begin{center}
+	\small
+	\begin{tabular}{lccc}
+		\toprule
+		\textbf{Generation}	&\textbf{1st}	& \textbf{2nd}	& \textbf{3rd}	\\
+		\midrule
+		\multirow{2}*{Quark} & $u$ 		& $c$		& $t$		\\
+		& $d$		& $s$		& $b$		\\
+		\midrule
+		\multirow{2}*{Letpons}	& $e$ 		& $\mu$		& $\tau$	\\
+		& $\nu_e$	& $\nu_\mu$	& $\nu_\tau$	\\
+		\bottomrule
+	\end{tabular}
+\end{center}
+and their respective antiparticles.
+They are distinguished by the fact that quarks participate in all the interactions % 
+whereas leptons participate only in the electroweak interactions~\cite{Giunti2010}.
+
+In the SM, electroweak interactions can be studied separately from strong interactions, %
+because the symmetry under the color group is unbroken and there is no mixing %
+between the SU(3)$_C$ and the $\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$ sectors.
+On the other hand, the Glashow, Salam, and Weinberg theory well explains the group mixing between %
+electromagnetic and weak interactions caused by a symmetry breaking process.
+This model and the discovery of the predicted $W$ and $Z$ bosons, in addition to the gluon, %
+the top, and charm quarks, made the fortune of the Standard Model.
+Their redicted properties were experimentally confirmed with good precision and %
+the recent discovery of the Higgs Boson~\cite{Chatrchyan2012}~\cite{Chatrchyan2014} %
+is the last crowning achievement of SM.
+
+Despite being the most successful theory of particle physics to date, the SM is actually limited %
+in its approximation to reality, in that some clear evidences cannot be explained.
+The most outstanding breakthrough is the neutrino oscillations, which was awarded the Nobel Prize in Physics in 2015 %
+and has proved that the neutrinos are not all massless, as it is assumed by theory.
+Mass terms for the neutrinos can be included in the SM, with the implications of theoretical problems.
+Likewise, the SM is unable to provide an explanation of the observed asymmetry between matter and anti-matter.
+It was noted by Sakharov that a solution to this puzzle would require some form of C and CP violation %
+in the early Universe, along with Baryon number violation and out-of-equilibrium interactions.
+These facts suggest that the Standard Model is not a complete theory and additional physics %
+Beyond the Standard Model (BSM) is required.
+
+The study of neutrinos is for sure one of the most promising probe to BSM physics and %
+is of vital importance to the future development of particle physics, %
+in particular through precision measurement of their interactions.
+A deep understanding of neutrino interactions, and neutrino-nucleon interactions in particular, %
+could lead to a great impact on long-baseline experiments, proton decay search, and supernova detection.
+
+\section{Neutrino interactions}
+\label{sec:inter}
+
+Neutrinos are colourless and chargless particles, thus sensitive only to weak interactions.
+Because of their nature, these leptons have small cross-sections and are difficult to measure.
+All the interactions are described by the the electroweak part of the SM, based on the symmetry group %
+$\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$, and are governed by the lagrangian %
+$\mathcal{L} = \mathcal{L}^{(CC)} + \mathcal{L}^{(NC)}$.
+In fact, neutrinos are mediated by the $W^\pm$ for charged-current (CC) interactions and by the $Z$ boson for %
+neutral-current (NC) ones, whose respective lagrangians are:
+\begin{align}
+	\label{eq:cc}
+	\mathcal{L}^{(CC)} &= - \frac{g}{2\sqrt{2}} \big (j^\mu_{W,L}W_\mu +\mathrm{h.c} \big ) \\
+	\label{eq:nc}
+	\mathcal{L}^{(NC)} &= - \frac{g}{2\cos\vartheta_{\mathrm{W}}} j^\mu_{Z,\nu}Z_\mu\,,
+\end{align}
+where the two currents are given by
+\begin{align}
+	j^\mu_{W,L}   &= 2 \sum_{\alpha = e, \mu, \tau} \overline{\nu_{\alpha L}} \gamma^\mu l_{\alpha L} \\
+	j^\mu_{Z,\nu}   & = \sum_{\alpha = e, \mu, \tau} \overline{\nu_{\alpha L}} \gamma^\mu \nu_{\alpha L}\,,
+\end{align}
+and $\vartheta_{\mathrm{W}} = \np{28.7}^\circ$ is the Weinberg angle.
+
+The easiest interaction that can be studied is the neutrino-electron elastic scattering
+\begin{equation}
+	\nu_\alpha + e^- \rightarrow \nu_\alpha + e^-\,,
+\end{equation}
+and its antineutrino counterpart\footnote{In terms of Feynam diagrams, the \emph{t}-channel diagram is %
+	replaced by the \emph{s}-channel diagram.}.
+For the electronic neutrino, both CC and NC interactions are allowed, while for $\alpha = \mu, \tau$ the %
+charged-current interactions are forbidden.
+The respective Feynman diagrams are shown in Fig.~\ref{fig:nescat} and~\ref{nutscat}.
+For low neutrino energies, where the effects of the $W$ and $Z$ propagators can be neglected, %
+the above processes are described by the effective charged-current and neutral-current lagrangians
+\begin{align}
+	\mathcal{L}_\mathrm{eff}(\nu_e e^- \rightarrow \nu_e e^-) &= - \frac{G_F}{\sqrt{2}} %
+	[\overline{\nu_e}\gamma^\mu(1-\gamma^5)\nu_e][\bar{e}\gamma_\mu((1+g_V^l)-(1+g_A^l)\gamma^5)e] \\
+	\mathcal{L}_\mathrm{eff}(\nu_\alpha e^- \rightarrow \nu_\alpha e^-) &= - \frac{G_F}{\sqrt{2}} %
+	[\overline{\nu_\alpha}\gamma^\mu(1-\gamma^5)\nu_\alpha][\bar{e}\gamma_\mu(g_V^l-g_A^l)\gamma^5)e] %
+	\quad (\alpha = \mu,\tau)\,.
+\end{align}
+
+The differential cross-section with respect to the momentum transfer $Q^2$
+\begin{equation}
+	\frac{\mathrm{d}\sigma}{\mathrm{d}Q^2} = \frac{G_F^2}{\pi}\bigg[g_1^2 + g_2^2\bigg(1 - %
+	\frac{Q^2}{2p_\nu \cdot p_e} \bigg)^2 - g_1 g_2 m_e^2 \frac{Q^2}{2 (p_\nu \cdot p_e)^2} \bigg]\,.
+\end{equation}
+The quantities $g_1$ and $g_2$ depend on the flavour of the neutrino and related to the vector and axial couplings, %
+$g_V$ and $g_A$.
+They are:
+\begin{align}
+	g_1^{\nu_e} &= \frac{1}{2} + \sin^2\vartheta_W \quad , \quad
+	g_2^{\nu_e} = \sin^2\vartheta_W \\
+	g_1^{\nu_{\mu,\tau}} &= -\frac{1}{2} + \sin^2\vartheta_W \quad , \quad
+	g_2^{\nu_{\mu,\tau}} = \sin^2\vartheta_W\,.
+\end{align}
+
+The differential cross-section as a function of the electron scattering angle in the laboratory frame is
+\begin{equation}
+	\begin{split}
+		\frac{\mathrm{d}\sigma}{\mathrm{d}\cos\theta} = \sigma_0 \frac{4 E_\nu^2 (m_e+E_\nu)^2 \cos \theta}%
+		{\big[(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta \big]^2} \bigg[&g_1^2 + g_2^2\bigg(1 - %
+		\frac{2 m_e E_\nu \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} \bigg)^2 \\
+		- &g_1 g_2 \frac{2m_e^2 \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} \bigg]\,,
+	\end{split}
+\end{equation}
+where 
+\begin{equation}
+	\sigma_0 = \frac{2 G_F^2 m_e^2}{\pi}\,.
+\end{equation}
+
+For what concern the experiments, neutrino interactions with nucleons are easier to study thanks to the %
+much larger cross-section and a more diverse range of processes, despite being less straightforward to %
+deal with theoretically.
+In general, these processes can be categorised according to the momentum transfer.
+At small $Q^2$, elastic interactions dominate and may be brought about by both charged and neutral currents.
+When this occurs via neutral currents, all flavour of neutrinos and anti-neutrinos can scatter off %
+both neutrons and protons in what is referred to as ``NC elastic'' scattering.
+The process is:
+\begin{align}
+	\nu_l + N \rightarrow \nu_l + N\,,
+	\bar\nu_l + N \rightarrow \bar\nu_l + N\,,
+\end{align}
+
+Once neutrinos acquire sufficient energy they can also undergo the analogous charged current interactions, %
+called ``quasi-elastic'', due to the fact that the recoiling nucleon changes its charge and mass transfer occurs.
+The processes are
+\begin{align}
+	\nu_l + n &\rightarrow p + l^-\,\\
+	\bar\nu_l + p &\rightarrow n + l^+\,,
+\end{align}
+with $l=e, \mu, \tau$.
+For the muonic neutrino with energy below one GeV, the CCQE is the dominant interaction, event though the %
+cross-section plateaus at higher energies, as the available $Q^2$ increases: it becomes increasingly unlikely %
+for the nucleon to remain intact.
+
+The physics behind the CC quasi-elastic processes is more complicated.
+The differential cross-section for the scattering in the laboratory frame is given by
+\begin{equation}
+	\label{eq:cc_xsec_q}
+	\frac{\mathrm{d} \sigma_{CC}}{\mathrm{d}Q^2} = \frac{G_F^2 |V_{ud}|^2 m_N^4}{8\pi (p_\nu \cdot p_N)^2} %
+	\bigg [A(Q^2) \pm B(Q^2) \frac{s-u}{m_N^2} + C(Q^2) \frac{(s-u)^2}{m_N^4} \bigg]\,,
+\end{equation}
+where the plus sign refers to the $N = n$ interactions, while the minus sign to $N = p$.
+
+\begin{equation}
+	\label{eq:cc_xsec_t}
+	\frac{\mathrm{d} \sigma_{CC}}{\mathrm{d}\cos\theta} = -\frac{G_F^2 |V_{ud}|^2 m_N^2}{4\pi} \frac{p_l}{E_\nu} %
+	\bigg [A(Q^2) \pm B(Q^2) \frac{s-u}{m_N^2} + C(Q^2) \frac{(s-u)^2}{m_N^4} \bigg]\,,
+\end{equation}
+
+The functions $A(Q^2)$, $B(Q^2)$, and $C(Q^2)$ depends on the nucleon form-factors in the following way:
+\begin{align}
+	\begin{split}
+		\label{eq:A(Q)}
+		A &= \frac{m_l^2+Q^2}{m_N^2} \bigg\{ \bigg(1+\frac{Q^2}{4m_N^2}\bigg) G_A^2 - \bigg(1-\frac{Q^2}{4m_N^2}\bigg) %
+		\bigg(F_1^2 - \frac{Q^2}{4m_N^2}F_2^2 \bigg) +\frac{Q^2}{m_N^2} F_1 F_2 \\
+		&\qquad- \frac{m_l^2}{4m_N^2} %
+		\bigg[ (F_1+F_2)^2+(G_A+2G_P)^2-\frac{1}{4}\bigg(1+\frac{Q^2}{4m_N^2}\bigg) G_P^2 \bigg] \bigg\}\, 
+	\end{split}\\
+	\label{eq:B(Q)}
+	B &= \frac{Q^2}{m_N^2} G_A (F_1+F_2)\,\\
+	\label{eq:C(Q)}
+	C &= \frac{1}{4} \big (G_A^2 +F_1^2+\frac{Q^2}{4m_N^2}F_2^2\big)\,.
+\end{align}
+
+The form factors $F_1(Q^2)$, $F_2(Q^2)$, $G_A(Q^2)$, and $G_P(Q^2)$ are called, respectively, \emph{Dirac}, %
+\emph{Pauli}, \emph{axial}, and \emph{pseudoscalar} weak charged-current form factors of the nucleon.
+These funtions of $Q^2$ describe the spatial distributions of electric charge and current inside the nucleon %
+and thus are intimately related to its internal structure.
+
+CCQE interactions are particularly important to neutrino physics for mainly two reasons:
+\begin{itemize}
+	\item measurements of the differential cross-section in Eq.~\ref{eq:cc_xsec_q} give information on the %
+		nucleon form-factors, which are difficult to measure; 
+	\item their nature as two-body interactions enable the kinematics to be completely reconstructed, %
+		and hence the initial neutrino energy determined which is critical for measuring the oscillation parameters.
+\end{itemize}
+
+In fact, if the target nucleon is at rest, at least compared to the neutrino energy, %
+then this can be calculated as:
+\begin{equation}
+	E_\nu = \frac{m_n E_l + \frac{1}{2}\big ( m_p^2-m_n^2-m_l^2)}{m_n - E_l+p_l \cos \theta_l}\,,
+\end{equation}
+where the measurement of the momentum, $p_l$ and the angle with respect to the neutrino, $\theta_l$, of the %
+outgoing charged lepton are only required.
+
+Similar calculations can be made for the NCQE scatterings.
+The cross-sections have the same form as the CC cross-sections in Eq.~\ref{eq:cc_xsec_q} and ~\ref{eq:cc_xsec_t}, %
+without the mixing term $|V_{ud}|^2$ and with the proper nucleon form factors.
+Since the values of the electromagnetic form factors, $F_1$ and $F_2$, are reasonably well known and the part %
+in Eq.~\ref{eq:A(Q)} containing $G_P$ can be often neglected, thanks to the different mass magnitudes of %
+leptons and nucleons, the axial form factor, $G_A$, can be determined through measurements of the charged-current %
+quasielastic scattering processes.
+On the contrary, measurements of the neutral-current elastic scattering cross-section give information %
+on the \emph{strange} form factors of the nucleon, whose main contribute comes from the strange quark.
+
+
+The low $Q^2$ region also presents an inelastic scattering contribution mostly affected by resonance production, %
+where the nucleon is excited into a baryonic resonance before decaying.
+At high $Q^2$, inelastic scattering is dominated by deep inelastic scattering (DIS), because the neutrino can scatter %
+directly off a constituent quark, fragmenting the original nucleon.
+In between these extreme scenarios, an additional contribution comes from interactions where the hadronic %
+system is neither completely fragmented nor forms a recognisable resonance.
+These interactions are referred to as ``shallow inelastic scattering'', and there is no clear model for dealing %
+with them.
+
+\section{Neutrino detection}
+\label{sec:detect}
+
+Being electrically neutral and uncoloured particles, neutrinos can only interact through weak interactions.
+For this reason, coupled with the small cross-sections typical of the weak force, the study of neutrino results %
+in a challenging task.
+Direct observation is unfeasible, thus detection must rely on weak interactions with matter, where %
+their SU(2) charged counterparts are either produced or scattered, by CC or NC interactions respectively.
+The physics is mediated by the lagrangians in Eq.~\ref{eq:cc} and~\ref{eq:nc}.
+
+Large active volumes have to be employed, such that a significant number of neutrino can be considered and %
+interaction probability is thus increased.
+These apparatus are often built underground to shield the detector from cosmic rays and other barckground radiation.
+Apart from providing matter to interact with, at the same time these volumes must be capable of detecting %
+the scattered charged leptons.
+Many are the materials or substances that can be used, like chlorine, gallium, solid or liquid scintillators.
+
+One of the most promising techniques is to combine liquid argon with time projection chambers.
+As with most other liquefied noble gases, argon has a high scintillation light yield %
+(ca 51~photons/keV[arXiv:1004.0373]), is transparent to its own scintillation light, and is relatively easy to purify.
+Compared to xenon, argon is also cheaper and has a distinct scintillation time profile which allows the separation %
+of electronic recoils from nuclear recoils.
+
+A more dated and better-known technology is the \emph{water Cherenkov} method, where the detector is used to %
+record the Cherenkov light produced when the particles pass through pass through tanks full of purified water. 
+
+\subsection{Water cherenkov}
+\label{sec:wch}
+
+The speed of light in vacuum is a universal constant, $c$, and it is a physical limit of the propagation %
+of information, as stated by the special theory of Relativity.
+However, when in a medium, light may travel at speed significantly less than $c$.
+This reduction of speed depends on the relative permittivity, $\varepsilon$, of the material in which light is %
+propagating.
+Because of the non-zero real part of the dielectric constant, the electromagnetic (EM) field is modified and %
+the phase velocity of light changes into
+\begin{equation}
+	\label{eq:light}
+	v_P = \frac{c}{\sqrt{\varepsilon(\lambda)}} = \frac{c}{n(\lambda)}\,,
+\end{equation}
+where $n(\lambda) > 1$ is the \emph{refractive index} of the medium and %
+depends on the wavelenght (energy) of the wave.
+
+A charged particles moving at a constant velocity in a dielectric medium disrupts the local electromagnetic field, %
+by deforming its molecules and temporarily polarising the material.
+The dipoles are restored almost instantaneously and thus become impulsive sources of EM waves.
+If the velocity of the passing particle, $v = \beta c$, is less than the speed of the light in the medium %
+as expressed in Eq.~\ref{eq:light}, i.e.\ $\beta < 1/n$, then the total energy flux of the excited %
+field is zero and EM waves are not irradiated.
+On the contrary, if $\beta > 1/n$, the perturbance left by the passage of the particle is such that %
+the energy is released coherently.
+The result is that the field is different from zero in a cone coaxial with respect to the direction of %
+the charged particle, whose direction is opposite to the particle motion.
+As far as the photons are concerned, these are emitted coherently to a fixed angle with respect %
+to the particle motion.
+With the help of Fig.~\ref{fig:cherenkov}, it is easy to find that:
+\begin{align}
+	\sin \alpha &= \frac{1}{\beta n}\,\\
+	\cos \theta &= \frac{1}{\beta n}\,.
+\end{align}
+where $\alpha$ is the apex angle of the cone and $\theta$ is the photon angle with respect to the particle direction.
+For an ultra-relativistic particle, for which $\beta \sim 1$, there is a maximum angle of emission, given by:
+\begin{equation}
+	\cos \theta_{\mathrm{MAX}} = \frac{1}{n}\,.
+\end{equation}
+
+The phenomenon is called \emph{Cherenkov effect}, and it occurs everytime a charged particle passes through a %
+dielectric medium at a speed:
+\begin{equation}
+	\label{eq:cherenkov}
+	\beta > \frac{1}{n}\,.
+\end{equation}
+According to the theory of electromagnetic waves, a charged particle moving uniformly does not irradiate %
+and this proves that the Cherenkov radiation is not related with Bremsstrahlung. 
+
+This condition can be expressed in terms of the particle energy, given that $E^2 = p^2+m^2$ and %
+$\beta = p/E$\footnote{For this calculation, the convention $c = 1$ is adopted.}.
+The threshold becomes:
+\begin{equation}
+	\label{eq:ch_Eth}
+	\frac{E}{m} > \frac{1}{\sqrt{1-1/n^2}}\,,
+\end{equation}
+with $m$ the mass of the charged particle.
+
+The radiation is emitted in the visible and near visible regions of the EM spectrum, for which $ n > 1$.
+A real medium is always dispersive and radiation is restricted to those frequencies bands for which %
+$n(\nu) > \frac{1}{\beta}$.
+In the x-ray region, for instance, $n(\nu)$ is always less than one and radiation is forbidden at this energies, %
+because Eq.~\ref{eq:cherenkov} cannot be satisfied.
+
+Truly, coherent emission of light needs two more conditions to be fulfilled:
+\begin{itemize}
+	\item the length of the track of the particle in the medium should be large compared with the wavelength, %
+		$\lambda$, of the radiation in question, otherwise diffraction effects will become dominant;
+	\item the velocity of the particle must be constant during its passage through the medium, or, %
+		to be more specific, the differences in the times for particle to traverse successive $\lambda$ distances %
+		should be small compared with the period $\frac{\lambda}{c}$ of the emitted light.
+\end{itemize}
+
+The number of photons emitted by a charged particle of charge $Ze$ per unit path length and per unit %
+energy interval, or equivalently to $\lambda$, of the photons is equal to:
+\begin{equation}
+	\label{eq:ch_ph}
+	\frac{\mathrm{d}^2N}{\mathrm{d}x\mathrm{d}\lambda} = \frac{2\pi\alpha Z^2}{\lambda^2} %
+	\bigg(1-\frac{1}{\beta^2 n^2(\lambda)} \bigg)\,.
+\end{equation}
+This means that the greater part of Cherenkov photons are emitted in the ultraviolet range, because of the %
+proportionality to $1/\lambda^2$.
+
+\emph{Cherenkov detectors} take advantage of this effect, detecting the light produced by charge particles.
+A large volume of transparent material, such as water, ice, or liquid scintillator, can be %
+surrounded by lightsensitive detectors in order to capture the Cherenkov radiation.
+This technique is largely used in neutrino detection, since they cannot be detected directly: the charged lepton, %
+yeilded in CC or NC interactions, is observed.
+From the light collected, it is possibile to reconstruct information on the interaction, such as the velocity %
+of the charged particle, which is somehow related to the energy of the incident neutrino, or the position %
+of the interaction vertex.
+If the charged lepton drop under the Cherenkov threshold, the light is emitted in the shape of a ring, which %
+further data can be inferred from.
+Not every neutrino energy allows the production of a charged lepton\footnote{For instance, the CCQE process %
+	$\bar\nu_e+p\rightarrow n+e^+$ has a energy threshold of \np{1.81}~MeV and the interaction %
+	$\nu_\mu+n\rightarrow p+\mu^-$ has the threshold of \np{110.16}~MeV, because of the muon mass.}, %
+but only MeV-scale neutrinos can be observed in a Cherenkov detector.
+
+
+\subsection{Gadolinium neutron capture}
+\label{sec:gdcap}
+\textcolor{red}{to be improved.}
+
+Current multi-kiloton scale water Cherenkov detectors, like Super-Kamiokande (SK), have provided %
+many clues in the experimental understanding of the neutrino, be it originated in solar, atmospheric, or %
+accelerator reactions.
+However, in spite of the large lifetime of the experiment, some analyses are still limited by statistical uncertainty, %
+and would benefit from increasing exposure.
+Other analyses suffer from background contamination, as in the case of the supernova relic neutrinos (SRN) search, %
+and would benefit more from the development of new background suppression techniques.
+This hindrance can be overcome by studying the yield of neutrons in neutrino interactions, such as the %
+\emph{inverse beta decay} (the antineutrino CCQE scattering).
+It would allow a handle on antineutrinos rate, and possibly a method of background reduction for other studies.
+
+Since neutrons are chargeless, they cannot interact with matter by means of the Coulomb force, %
+which dominates the energy loss mechanisms for charged particles, described by the Bethe formula.
+Neutrons can interact with nuclei in various way, depending on the energy:
+\begin{itemize}
+	\item elastic and inelastic scattering;
+	\item transmutation;
+	\item neutron activation;
+	\item spallation reaction;
+	\item neutron-induced fission;
+\end{itemize}
+
+As a result of the interaction, the neutron may either be absorbed, or change its energy and direction significantly.
+In this way the average energy of a neutron beam can be completely or partly reduced up to thermal energies, %
+close to \np{0.025}~eV.
+In this range of energy, the neutron presents a different and often much larger effective neutron absorption %
+cross-section for a given nuclide, compared to, for instance, fast neutrons, hence \emph{thermalisation} can %
+result in a \emph{neutron activation} process.
+This occurs when atomic nuclei capture free thermal neutrons, creating heavier nuclei, often in an excited state.
+The excited nucles decays almost instantaneously emitting usually gamma rays.
+
+The neutron energy distribution is adopted to the Maxwellian distribution known for thermal motion.
+The time required by the thermalisation of neutrons follows an exponential, and the time constant is largely %
+studied, [ref needed], amongst all the thermalisation in water.
+It was found that neutron thermalisation in water has a time constant of 5$\mu$s [fujino, sumita, shiba].
+Neutrons can be captured by either the hydrogen or the oxygen.
+Free neutron will capture on a hydrogen nucleus, releasing a 2.2 MeV gamma.
+In SK, for instance, this gamma results in about seven photo-electrons, and thus only detectable with $\simeq$20\,\% %
+efficiency.
+
+Gadolinium-157 has the highest thermal neutron capture cross-section among any stable %
+nuclides: 259,000 barns.
+Dissolving gadolinium compounds in water could considerably increase the neutron capture probability.
+The neutron in water thermalises quickly and can thus be captured by a Gd nucleus with a probability of 90\,\%.
+Upon capturing a neutron the Gd emits 3-4 gamma rays having a total energy of about 8 MeV.
+The time and spatial correlation of the positron and neutron capture events ($20~\mu$s and 4~cm) %
+can significantly reduce the backgrounds, and hence enhance the nu e signal events.
+Even moderately energetic neutrons ranging from tens to hundreds of MeV will quickly lose energy %
+by collisions with free protons and oxygen nuclei in water. 
+Once thermalised, the neutrons undergo radiative capture, combining with a nearby nucleus to %
+produce a more tightly bound final state, with excess energy released in a gamma-ray ( ) cascade. 
+Gd-doped water enhances the capture cross-section compared to pure water %
+(49,000 barns compared with 0.3 barns on a free proton) and, since the cascade happens %
+at higher energies (8 MeV vs 2.2 MeV), it produces enough optical light to be reliably detected in %
+a large target volume.
+
+
+\section{Neutrino Production}
+\label{sec:prod}
+
+Numerous are the neutrino sources at the reach of neutrino experiments.
+Neutrinos are produced in CC interactions, which can happen in nuclear reaction, as for \emph{solar} %
+or \emph{reactor} neutrinos, or in cosmic rays impacts with the Earth's atmosphere, %
+conveying energetic \emph{atmospheric} neutrinos.
+
+Artificial neutrinos are also yielded in high-energy proton accelerators.
+Accelerator neutrino beams are fundamental instrumental discovery tools in particle physics, in that more control %
+less variables are involved.
+Neutrino beams are derived from the decays of charged $\pi$ and $K$ mesons, which in turn are created from %
+proton beams striking thick nuclear targets.
+The precise selection and manipulation of the $\pi/K$ beam control the energy spectrum and type of neutrino beam.
+
+The $\pi^{\pm}$ mesons have a mass of \np{139.6}~MeV and a mean lifetime of \np{2.6e-8}~s.
+The primary decay mode of a pion, with a branching fraction of \np{99,9877}\,\%, is a leptonic %
+decay into a muon and a muon neutrino:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		\pi^+ &\rightarrow \mu^+ + \nu_\mu \\
+		\pi^- &\rightarrow \mu^- + \bar{\nu}_\mu
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{pion_muon}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i2,i1}
+			\fmfright{o2,o1}
+			\fmf{fermion}{i1,v1,i2}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmf{photon, label=$W^\pm$}{v1,v2}
+			\fmflabel{$\pi$}{v1}
+			\fmflabel{$u,d$}{i1}
+			\fmflabel{$\bar{d},\bar{u}$}{i2}
+			\fmflabel{$\mu^\pm$}{o1}
+			\fmflabel{$\nu_\mu,\bar{\nu}_\mu$}{o2}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+The second most common decay mode of a pion, is the leptonic decay into an electron and the %
+corresponding neutrino, $\pi^\pm \rightarrow \nu_e + e$.
+In spite of the considerable differences in the space momentum, this process is suppressed %
+with respect to the muonic one.
+This effect is called \emph{helicity suppression} and is due to the great mass of the muon %
+($m_\mu = \np{105.658}$~MeV) compared to the electron's ($m_e = \np{0.510}$~MeV); this results in a %
+stronger helicity-chirality correspondence for the electron rather than for the muon.
+Given that the $\pi$ mesons are spinless, neutrinos are left-handed, and antineutrinos are %
+right-handed, the muonic channel is preferred because of spin and linear momentum preservation.
+The suppression of the electronic decay mode with respect to the muonic one is given %
+approximately within radiative corrections by the ratio:
+\begin{equation}
+	R_\pi = \Bigl ( \frac{m_e}{m_\mu} \Bigr )^2 
+	\Bigl (\frac{m_\pi^2 - m_e^2}{m_\pi^2 - m_\mu^2} \Bigr )
+	= \np{1.283e-4}
+\end{equation}
+The measured branching ratio of the electronic decay is indeed $(\np{1.23}\pm{0.02})\times10^{-4}$.
+
+As far as the charged $K$ meson is concerned, it mainly decays in a muon and its correspective neutrino, %
+with a branching ratio of \np{63.55}\,\%:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		K^+ &\rightarrow \mu^+ + \nu_\mu \\
+		K^- &\rightarrow \mu^- + \bar{\nu}_\mu
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{kaon_muon}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i2,i1}
+			\fmfright{o2,o1}
+			\fmf{fermion}{i1,v1,i2}
+			\fmf{photon, label=$W^\pm$}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmflabel{$K$}{v1}
+			\fmflabel{$u,s$}{i1}
+			\fmflabel{$\bar{s},\bar{u}$}{i2}
+			\fmflabel{$\mu^\pm$}{o1}
+			\fmflabel{$\nu_\mu,\bar{\nu}_\mu$}{o2}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+The second most frequent decay (\np{20.66}\,\%) is the decay into two pions, $K^{\pm} \rightarrow \pi^0 + \pi^\pm$.
+Other decays have a branching ratio of 5\,\% or less and are listed in table Tab.~\ref{tab:kaons}.
+On the contrary, the decays of the neutral kaon produce neutrino in few cases.
+Because of the oscillation phenomenon given by the mixing between $K^0$ and $\bar K^0$, the neutral kaon has two %
+manifestations, the short kaon $K_S$ and the long kaon $K_L$, named after their lifetimes.
+While the $K$-short decays only in two pions ($2 \pi^0$ or $\pi^+ + \pi^-$), the $K$-long has a wider variety %
+of final state combination, all of them involving three particles.
+Among these, neutrinos are produced in the processes:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		K^0_L &\rightarrow \pi^\pm + \mu^\mp + \overset{(-)}{\nu}_\mu \\
+		K^0_L &\rightarrow \pi^\pm + e^\mp + \overset{(-)}{\nu}_e 
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{kaonlong}
+		\begin{fmfgraph*}(70,70)
+			\fmfleft{h,i}
+			\fmfright{k,o3,o2,o1}
+			\fmf{fermion}{i,v1,o3}
+			\fmf{fermion}{h,w,k}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmflabel{$d$}{h}
+			\fmflabel{$d$}{k}
+			\fmflabel{$s$}{i}
+			\fmflabel{$\nu_\mu$}{o3}
+			\fmflabel{$e^\pm$}{o2}
+			\fmflabel{$\nu_e$}{o1}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+\begin{table}
+	\caption{Decay mode for a charged kaon, $K^\pm$, sorted by branching ration (in percent).}
+	\label{tab:kaons}
+	\[
+		\begin{array}{lr}
+			\toprule
+			\mu^\pm + \overset{(-)}{\nu}_\mu	&	\np{65.55}\pm\np{0.11}	\\
+			\midrule
+			\pi^\pm + \pi^0			&	\np{20.66}\pm\np{0.08}	\\
+			\midrule
+			\pi^+ + \pi^\pm + \pi^-		&	\np{5.59}\pm\np{0.04}	\\
+			\midrule
+			\pi^0 + e^\pm + \overset{(-)}{\nu}_e	&	\np{5.07}\pm\np{0.04}	\\
+			\midrule
+			\pi^0 + \mu^\pm + \overset{(-)}{\nu}_\mu	&	\np{3.35}\pm\np{0.03}	\\
+			\midrule
+			\pi^\pm + \pi^0 + \pi^0		&	\np{1.76}\pm\np{0.02}	\\
+			\bottomrule
+		\end{array}
+	\]
+\end{table}
+
+Neutrinos are also produced by the decay of muons.
+Muons are unstable elementary particles and decay via the weak interaction. 
+The dominant decay mode, called \emph{Michel decay}, is also the simplest possible:
+because lepton numbers must be conserved, one of the product neutrinos of muon decay %
+must be a muonic neutrino and the other an electronic antineutrino, along with an electron, %
+because of the charge preservation.
+Vice versa, an antimuon decay produces the corresponding antiparticles.
+These two decays are:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		\label{eq:mupdecay}
+		\mu^- &\rightarrow e^- + \bar\nu_e + \nu_\mu \\
+		\label{eq:mundecay}
+		\mu^+ &\rightarrow e^+ + \nu_e + \bar\nu_\mu
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3.5cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{mudecay}
+		\begin{fmfgraph*}(70,70)
+			\fmfleft{i}
+			\fmfright{o3,o2,o1}
+			\fmf{fermion}{i,v1,o3}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmflabel{$\mu^\pm$}{i}
+			\fmflabel{$\nu_\mu$}{o3}
+			\fmflabel{$e^\pm$}{o2}
+			\fmflabel{$\nu_e$}{o1}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+The neutrino source provided by the muon decay, is more of a nuisance background, because of the long lifetime, %
+which give rise to electronic component in neutrino spectrum.
+Usually a beam absorbed is located at the end of the decay region of an accelerator line, to stop the hadronic and %
+muonic component of the beam, and only an almost pure neutrino beam pointing towards %
+te
+\chapter*{Chapter 1}
+
+This is chapter 1.
+
+\lorem

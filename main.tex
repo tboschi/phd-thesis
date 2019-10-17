@@ -1,0 +1,134 @@
+%my phd thesis
+%Tommaso Boschi
+
+\documentclass[a4paper, 11pt, oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian, english]{babel}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+
+%for printing use this
+%\usepackage[left=1.5in,right=.75in,top=.75in,bottom=.75in]{geometry}
+%for digital version, use this
+\usepackage[left=0.75in,right=.75in,top=.75in,bottom=.75in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[numbers,compress]{natbib}
+\RequirePackage{color}
+\RequirePackage[colorlinks=true
+,urlcolor=blue
+,anchorcolor=blue
+,citecolor=blue
+,filecolor=blue
+,linkcolor=blue
+,menucolor=blue
+,pagecolor=blue
+,linktocpage=true
+,pdfproducer=medialab
+,pdfa=true
+]{hyperref}
+
+%\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{booktabs}
+
+
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{feynmp-auto}
+\usepackage{textcomp}
+\usepackage[np]{numprint}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xcolor,soul}
+\usepackage{booktabs}
+\usepackage{indentfirst,rotating}
+
+\npthousandsep{\,}
+\npdecimalsign{.}
+\npproductsign{\times}
+\npfourdigitnosep
+
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
+
+\newcommand{\eg}{\emph{e.g.}\ }
+\newcommand{\ie}{\emph{i.e.}\ }
+\newcommand{\tapi}{\textsuperscript}
+\newcommand{\tped}{\textsubscript}
+
+\newcommand{\refeq}[1]{Eq.~(\ref{#1})}
+\newcommand{\refeqs}[2]{Eqs.~(\ref{#1})~and~(\ref{#2})}
+\newcommand{\refeqss}[3]{Eqs.~(\ref{#1}), (\ref{#2})~and~(\ref{#3})}
+\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+\newcommand{\reffigs}[2]{Figs.~\ref{#1}~and~\ref{#2}}
+\newcommand{\refsec}[1]{Section~\ref{#1}}
+\newcommand{\refapp}[1]{Appendix~\ref{#1}}
+\newcommand{\reftab}[1]{Tab.~\ref{#1}}
+\newcommand{\refref}[1]{Ref.~\cite{#1}}
+%\newcommand{\refrefs}[2]{Refs.~\cite{#1}~and~\cite{#2}}
+\newcommand{\refrefs}[1]{Refs.~\cite{#1}}
+
+\renewcommand{\baselinestretch}{1.5} 
+
+
+\newcommand{\lorem}{Lorem ipsum dolor sit amet, constetur
+adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum.}
+
+\begin{document}
+
+%%front page
+\pagestyle{empty}
+
+\input{front.tex}
+
+%%%everything else
+\pagestyle{headings}
+
+\input{original.tex}
+\input{abstract.tex}
+
+\tableofcontents
+
+%Main
+%\mainmatter
+
+%\pagestyle{fancy}
+%\fancyfoot[LE,RO]{\thepage}
+%\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+%\fancyhf{}
+%\fancyhead[LE]{\scshape Phase I of the ANNIE experiment}
+%\fancyhead[RO]{\scshape \leftmark}
+%%\fancyheadoffset[LE,RO]{14pt}
+%\fancyfoot[CE,CO]{\thepage}
+
+\input{chp1.tex}
+\input{chp2.tex}
+\input{chp3.tex}
+
+\appendix
+\input{app1.tex}
+\input{app2.tex}
+\input{app3.tex}
+
+%Back
+%\backmatter
+
+%Biblio
+\bibliographystyle{plain}
+\bibliography{collection}
+%\printbibliography
+
+\end{document}
