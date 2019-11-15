@@ -1,5 +1,7 @@
 %my phd thesis
 %Tommaso Boschi
+
+
 \documentclass[a4paper, 11pt, oneside]{book}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -12,57 +14,50 @@
 %for digital version, use this
 \usepackage[left=0.75in,right=.75in,top=.75in,bottom=.75in]{geometry}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{epsfig}
 \usepackage{graphicx}
-\usepackage[numbers,compress]{natbib}
-\RequirePackage{color}
-\RequirePackage[colorlinks=true
-,urlcolor=blue
-,anchorcolor=blue
-,citecolor=blue
-,filecolor=blue
-,linkcolor=blue
-,menucolor=blue
-,pagecolor=blue
-,linktocpage=true
-,pdfproducer=medialab
-,pdfa=true
-]{hyperref}
+\usepackage{color}
+\usepackage[colorlinks=true,urlcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,linkcolor=blue,
+	    menucolor=blue,pagecolor=blue,linktocpage=true,pdfproducer=medialab,pdfa=true]{hyperref}
 
 %\usepackage{fancyhdr}
 \usepackage{indentfirst}
 \usepackage{wrapfig}
 \usepackage{pdfpages}
-\usepackage{caption}
+
 \usepackage{booktabs}
+\usepackage{caption}
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
 
-
-\usepackage{physics}
-\usepackage{slashed}
-\usepackage{feynmp-auto}
 \usepackage{textcomp}
-\usepackage[np]{numprint}
 \usepackage{multirow}
 \usepackage{array}
-\usepackage{xcolor,soul}
-\usepackage{booktabs}
-\usepackage{indentfirst,rotating}
 
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{inspire}
+
+\usepackage[np]{numprint}
 \npthousandsep{\,}
 \npdecimalsign{.}
 \npproductsign{\times}
 \npfourdigitnosep
 
-\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
-\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
 
-\newcommand{\eg}{\emph{e.g.}\ }
-\newcommand{\ie}{\emph{i.e.}\ }
-\newcommand{\tapi}{\textsuperscript}
-\newcommand{\tped}{\textsubscript}
+%maths command
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{feynmp-auto}
 
+\newcommand{\cj}{\overline}
+\newcommand{\sh}{\slashed}
+\newcommand{\pd}{\partial}
+\newcommand{\spd}{\sh{\pd}}
+\newcommand{\kallen}{\lambda^{\frac{1}{2}}\qty}
+
+%references
 \newcommand{\refeq}[1]{Eq.~(\ref{#1})}
 \newcommand{\refeqs}[2]{Eqs.~(\ref{#1})~and~(\ref{#2})}
 \newcommand{\refeqss}[3]{Eqs.~(\ref{#1}), (\ref{#2})~and~(\ref{#3})}
@@ -75,9 +70,19 @@
 %\newcommand{\refrefs}[2]{Refs.~\cite{#1}~and~\cite{#2}}
 \newcommand{\refrefs}[1]{Refs.~\cite{#1}}
 
-\renewcommand{\baselinestretch}{1.5} 
+%others
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\tapi}{\textsuperscript}
+\newcommand{\tped}{\textsubscript}
+\mathchardef\mhyphen="2D
 
 
+
+%line spacing
+\renewcommand{\baselinestretch}{1.2} 
+
+%filler
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, constetur
 adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -113,9 +118,11 @@ id est laborum.}
 %%\fancyheadoffset[LE,RO]{14pt}
 %\fancyfoot[CE,CO]{\thepage}
 
-\input{chp1.tex}
-\input{chp2.tex}
-\input{chp3.tex}
+\input{neutrino_physics.tex}
+\input{gadolinium.tex}
+\input{californium.tex}
+\input{hk_sensitivity.tex}
+\input{dune_hnl.tex}
 
 \appendix
 \input{app1.tex}
@@ -126,22 +133,9 @@ id est laborum.}
 %\backmatter
 
 %Biblio
-\bibliographystyle{plain}
-\bibliography{collection}
+\bibliography{/home/tboschi/Uni/Biblio.bib}
+%\bibliographystyle{plain}
+%\bibliography{collection}
 %\printbibliography
-=======
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-
-\title{phd-thesis}
-\author{boschi.tommaso }
-\date{October 2019}
-
-\begin{document}
-
-\maketitle
-
-\section{Introduction}
->>>>>>> 2b0997f3dacccf1276ec9e36e9dc8ab8a533d479
 
 \end{document}
