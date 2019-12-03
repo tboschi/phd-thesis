@@ -1,15 +1,78 @@
 \clearpage
 \chapter{Continuous gadolinium measurement}
 
+In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
+will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
+Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
+The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
+Capture of a thermal neutron on hydrogen has a cross section of $\np{332.6}\pm\np{0.7}$~\,b, %
+characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
+After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
+compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
+However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
+The detectable light following neutron capture on Gd (in thin foils) in possible discrete counters was carefully simulated %
+for the SNO heavy water Cerenkov detector.
+The equivalent single electron energy was found to peak at about 5 MeV, and range over 3--8\,MeV.
+This spread reflects the intrinsic variation in the gamma cascades and the detector energy
+resolution (the simulation had 5 photoelectrons per MeV of electron energy, compared to 6 in SK-I)~\cite{hep-ph/0309300}.
+The energy threshold for SK is 5\,MeV, and the search of hydrogen-tagged neutrons is not efficient (20\%).
+a long time window in which to look for the hydrogen signal, 
+Capture on gadolinium has a cross section of $\np{49e3}$~b, which de-excites emitting a $\sim\np{8}$~MeV gamma-ray cascade.
+By adding 0.2\,\% by mass of the Gd salt as Gd\tped{2}(SO\tped{4})\tped{3}, the characteristic time of capture is %
+$\sim30$~\textmu s and an efficiency of 90\,\% can be achieved.
+The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
+respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
+Hydrogen alone has a cross section of \np{3.321e-1}\,b.
 
-In the next phase of the Super-Kamiokande experiment, gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3} will be added to the detector,
-which will improve the ability of the detector to identify neutrons, and therefore low energy $\nu_e$ %
-through inverse beta decay (IBD).
+One of the main motivation to detect neutrons is to be able to detect relic supernova neutrinos, %
+also know as Diffuse Supernova Neutrino Background (DSNB), produced from all previous core-collapse supernova expolosions in the Universe.
+This measurement will provide very important information on, for example, the mean energy spectrum %
+of core collapse supernovae and the star formation rate of the universe.
+This measurement is largely affected by irreducible backgrounds, like invisible muon decay at low energies---%
+muons below Cherenkov threshold that decay into electrons---and at high energies by atmospheric neutrinos.
+The lower energy threshold is defined by our ability to remove spallation events and solar neutrinos, %
+that can be excluded effectively with neutron tagging.
+The energy of these neutrinos should be around a few tens of MeV.
+The largest cross section in this search corresponds to IBD, %
+which is two orders of magnitude larger than $\nu_e$ elastic scattering.
+The predictions provide with several limits but although SK has the best world limit, %
+DSNB has not been detected yet.
+However, if we could detect neutrons efficiently, these backgrounds could be reduced significantly and thus, %
+making the detection of the DSNB possible for the first time.
+
+Another motivation is searches of galactic supernova burst.
+When a massive star at the end of its life collapses to a neutron star, %
+it radiates almost all of its binding energy in the form of neutrinos, %
+most of which have energies in the range 10 to 30\,MeV, and are emitted over a timescale of several tens of seconds.
+These neutrinos are released just after core collapse, whereas the photon signal may take hours %
+or days to emerge from the stellar envelope.
+SK will acquire a huge number of neutrino events if the supernova is inside out galaxy, %
+providing much information about early stages of the core-collapse process, %
+its spectrum and time profile.
+Start that are at the onset of their collapse, just after carbon ignition, will release most of its energy through neutrinos.
+During the silicon burning stage, the neutrino luminosity is eight orders of magnitude less than %
+in the peak at core-collapse, but while the later lasts just a few seconds, %
+the Si burning phase takes several days.
+During the Si burning phase roughly 1\,\% of the total energy of core-collapse are emitted through
+``pre-supernova'' neutrinos with a monotonically increasing rate.
+
+Improved neutron tagging will also be helpful to understand atmospheric and accelerator neutrino interactions and final states.
+Also the separation of neutrino and antineutrino at the GeV scale will benefit from neutron tagging.
+Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
+
+%Addition of water-soluble gadolinium salt Gd\tped{2}(SO\tped{4})\tped{3} %
+%enables a water Cherenkov detector to efficient identification of low energy anti-neutrinos, %
+%one of the main component of the Supernova Relic Neutrino (SNR) signal.
+%
+%Capture of a thermal neutron on hydrogen has a cross section of $\np{332.6}\pm\np{0.7}$~mb, %
+%characteristic time of $\sim200$~\textmu s in water, emitting $\np{2.2}$~MeV gammas.
+%Capture on gadolinium has a cross section of $\np{49e3}$~b, emitting~$\sim\np{8}$~MeV gammas.
+%Characteristic time of $\sim30$~\textmu s for \np{0.2}\,\% Gd-water solution. 
 
 \begin{figure}
 	\centering
 	\begin{fmffile}{ibd}
-		\begin{fmfgraph*}(80,50)
+		\begin{fmfgraph*}(100,75)
 			\fmfset{arrow_len}{3mm}
 			\fmfleft{i2,i1}
 			\fmfright{o2,o1}
@@ -33,48 +96,75 @@ through inverse beta decay (IBD).
 			\end{fmfgroup}
 		\end{fmfgraph*}
 	\end{fmffile}
+	\smallskip
 	\caption{Inverse beta decay.}
-\end{column}
+\end{figure}
 
-One motivation to detect those neutrons is the search for relic SN neutrinos also know as
-Diffuse Supernova Neutrino Background (DSNB) from all previous ccSNe in the universe. The
-energy of these neutrinos should be around a few tens of MeV. The largest cross section in this
-search corresponds to inverse beta decay (IBD): ν¯e + p → e
-+ +n which is two orders of magnitude
-larger than νe elastic scattering. Theoretical predictions provide with several limits but although
-SK has the best world limit [1], DSNB has not been detected yet. The reason for that are the
-current irreducible backgrounds: at low energies by invisible muon decay (muons below Cherenkov
-threshold that decay into electrons) and at high energies by atmospheric neutrinos. The lower
-energy threshold is defined by our ability to remove spallation events. Because we can detect the
-positron with high efficiency only, this search is severely limited by these backgrounds. However,
-if we could detect neutrons efficiently, these backgrounds could be reduced significantly and thus,
-making the detection of the DSNB possible for the first time.
 
-The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
-respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
-Hydrogen alone has a cross section of \np{3.321e-1}\,b.
+\section{Gadolinium sulfate}
 
-Addition of water-soluble gadolinium salt Gd\tped{2}(SO\tped{4})\tped{3} %
-enables a water Cherenkov detector to efficient identification of low energy anti-neutrinos, %
-one of the main component of the Supernova Relic Neutrino (SNR) signal.
+In the original proposal by John Beacom and Mark Vagins, gadolinium trichloride GdCl\tped{3} was proposed, %
+but the current full-scal plan has steered on gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3} %
+as the salt of choice (other candidate could be gadolinium nitrate Gd(NO\tped{3})\tped{3}.
+There are a few requirements which a Gd compound must meet in order to become a good candidate for a full scale test.
+The compound must be water soluble, and it should not be too difficult to dissolve large amounts.
+The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
+needing stirring to fully dissolve, while the Gd2(SO4)3, can be forced into solution with the addition of %
+a small amount of sulfuric acid, about 380 ml of acid for 28 kg of Gd2(SO4)3 in 14 tons of water (test done at EGADS).
+So, this solubility requirement does not immediately rule out any of these three compounds.
+Next, if the compound is to be used inside a very large water Cherenkov detector, such as SK, it must be safe for
+the detectors components and tank, and it should be a non-toxic chemical, so it may be easily put into existing detectors.
+While none of the above salts are toxic, they do have very different corrosive properties, due to the different anions of the molecule.
+The nitrate and the sulfate turn out to be non-corrosive, and do not seem to affect detectors components much, if at all.
+An extensive soak test study was carried out in Japan, with each of the 31 different materials inside the SK detector %
+being soaked in both pure water and Gd2(SO4)3 solution.
+Only the rubber used for the PMT pressure housing showed any difference between the pure water and the Gd2(SO4)3 solution, %
+with further studies showing the rubber is unaffected by the Gd solution, if the temperature is kept below 15\,${}^\circ$C, %
+which it is in the case of SK.
+However, the chloride is corrosive, so for this reason the GdCl3 has been ruled out as a full scale test candidate.
+Last the Gd compound solution must maintain a high level of optical transparency, %
+so that light can be seen from the opposite side of the detector.
+Although the GdCl3 has fairly good optical properties, it has been ruled out by the above.
+Gd(NO3)3 is opaque in the UV region of the electromagnetic (EM) spectrum, for wavelengths less than 350\,nm, %
+and this unfortunately is where a large fraction of Cherenkov light is detected in SK PMTs, %
+so it cannot be a good full scale test candidate either.
+This leaves Gd2(SO4)3, and it turns out to have good transparency in the UV and optical regions of the EM spectrum, %
+leaving it as the best candidate for the EGADS test facility.
+This is in fact the choice that has been made by the EGADS group, and the remaining studies described in this paper %
+have been done using, or under the assumption that, Gd2(SO4)3 will be used.
+One last exceptionally nice quality about this compound is today it costs only 5 US dollars per kilogram, %
+meaning it would only be about 500,000 US dollars to dope SK [11], a price which is on the scale of such a major experiment.~\cite{1201.1017}.
 
-Capture of a thermal neutron on \textbf{hydrogen} has a cross section of %
-$\np{332.6}\pm\np{0.7}$~mb, %
-characteristic time of $\sim200$~\textmu s in water, emitting $\np{2.2}$~MeV gammas.
-Capture on gadolinium has a cross section of $\np{49e3}$~b, emitting~$\sim\np{8}$~MeV gammas.
-Characteristic time of $\sim30$~\textmu s for \np{0.2}\,\% Gd-water solution. 
+\section{Gadolinium purity}
 
-The concentration of Gd in water affects the \textbf{efficiency} and \textbf{timing} of neutron captures, %
-antineutrino measurements depends on this.
+\section{Gadolinium concentration}
 
-It is fundamental to measure the concentration \textbf{regularly}: %
-it can change in time inside the tank (\textbf{temperature} and \textbf{flow} dependency).
+The concentration of Gd in water affects the efficiency and timing of neutron captures, antineutrino measurements depends on this.
+It is fundamental to measure the concentration regularly, as this can change in time inside the tank.
+On such a large scale, it is not a trivial task to predict temperature and flow dependency of the dissolved Gd.
+At the moment, the Evaluating Gadolinium's Action on Detector Systems (EGADS) keeps track of the Gd concentration
+with a Zeeman atomic absorption spectrometer, located near the experiment.
+Water samples are collected from the EGADS tank, diluted and atomised inside the AAS machine.
+The amount of Gd is then compared to known samples of Gd loaded water to determine the concentration.
 
-Measure absorption lines of Gd, around 275~nm.
-Use a UV source and a spectrometer.
-Extract the absorbance $A$.
-Absorption is directly proportional to Gd\%.
+We propose an alternative method, which still uses atomic absorption lines of Gd, but in solution in water.
+Gadolinium presents strong emission/absorption lines in the UV region~\cite{NIST}.
+Using a UV source and a spectrometer it would be possible to measure the absorption by gadolinium dissolved in water.
+The absorption in directly proportional to the amount of gadolinium and therefore the concentration, %
+where absorption is defined as
+\begin{equation}
+	\mathcal{A}(x) = \log_{10} \frac{I_0 (x)}{I(x)}\ ,
+\end{equation}
+where $I_0(x)$ is the reference intensity of the light source at wavelength $x$ and $I(x)$ %
+is the measured intensity at the same wavelength.
+The reference intensity would be using a pure water sample.
 
+Using two absorption peaks the measurement could be improved by taking the difference of the absorption, %
+as any effect which is wavelength independent is removed.
+\begin{equation}
+	\Delta \mathcal{A} = \mathcal{A}(x_1) - \mathcal{A}(x_2) = %
+	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ ,
+\end{equation}
 
 The automated Gadolinium absorbance detector (GAD) is progressing well.
 The first prototype based on a 10 cm cell for 0.2$\%$ Gadolinium sulphate doping achieved %
@@ -88,4 +178,3 @@ sensitivity to $0.02\%$, by increasing the volume to $\approx 1$ meter.
 
 This prototype has been successfully built and tested and shown a concentration measurement %
 resolution of $1\%$ at both $0.02\%$ and $0.2\%$ doping.
-Figure~\ref{fig:gad2} shows the new system and Figure~\ref{fig:gad2perf} shows the performance of the new system.
