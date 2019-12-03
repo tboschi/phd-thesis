@@ -2,6 +2,58 @@
 \chapter{Continuous gadolinium measurement}
 
 
+In the next phase of the Super-Kamiokande experiment, gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3} will be added to the detector,
+which will improve the ability of the detector to identify neutrons, and therefore low energy $\nu_e$ %
+through inverse beta decay (IBD).
+
+\begin{figure}
+	\centering
+	\begin{fmffile}{ibd}
+		\begin{fmfgraph*}(80,50)
+			\fmfset{arrow_len}{3mm}
+			\fmfleft{i2,i1}
+			\fmfright{o2,o1}
+			\fmf{fermion}{v1,i1}
+			\fmf{fermion}{o1,v1}
+			\fmf{boson, l.d = 1pt, l.s=left, label=$\!\!W^-\!\!$}{v1,v2}
+			\fmf{fermion}{i2,v2}
+			\fmf{fermion}{v2,o2}
+			\fmfv{l=$\cj{\nu}_e$, l.d=2pt}{i1}
+			\fmfv{l=$e^+$, l.d=2pt}{o1}
+			\fmfv{l=$p$, l.d=3pt}{i2}
+			\fmfv{l=$n$, l.d=3pt}{o2}
+			\fmffreeze
+			\begin{fmfgroup}
+				\fmfset{arrow_len}{1.8mm}
+				\fmfpen{0.6thick}
+				\fmfi{fermion}{vpath (__i2,__v2) shifted (thick*(0,-2))}
+				\fmfi{fermion}{vpath (__i2,__v2) shifted (thick*(0,-4))}
+				\fmfi{fermion}{vpath (__v2,__o2) shifted (thick*(0,-2))}
+				\fmfi{fermion}{vpath (__v2,__o2) shifted (thick*(0,-4))}
+			\end{fmfgroup}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\caption{Inverse beta decay.}
+\end{column}
+
+One motivation to detect those neutrons is the search for relic SN neutrinos also know as
+Diffuse Supernova Neutrino Background (DSNB) from all previous ccSNe in the universe. The
+energy of these neutrinos should be around a few tens of MeV. The largest cross section in this
+search corresponds to inverse beta decay (IBD): ν¯e + p → e
++ +n which is two orders of magnitude
+larger than νe elastic scattering. Theoretical predictions provide with several limits but although
+SK has the best world limit [1], DSNB has not been detected yet. The reason for that are the
+current irreducible backgrounds: at low energies by invisible muon decay (muons below Cherenkov
+threshold that decay into electrons) and at high energies by atmospheric neutrinos. The lower
+energy threshold is defined by our ability to remove spallation events. Because we can detect the
+positron with high efficiency only, this search is severely limited by these backgrounds. However,
+if we could detect neutrons efficiently, these backgrounds could be reduced significantly and thus,
+making the detection of the DSNB possible for the first time.
+
+The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
+respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
+Hydrogen alone has a cross section of \np{3.321e-1}\,b.
+
 Addition of water-soluble gadolinium salt Gd\tped{2}(SO\tped{4})\tped{3} %
 enables a water Cherenkov detector to efficient identification of low energy anti-neutrinos, %
 one of the main component of the Supernova Relic Neutrino (SNR) signal.
@@ -23,3 +75,17 @@ Use a UV source and a spectrometer.
 Extract the absorbance $A$.
 Absorption is directly proportional to Gd\%.
 
+
+The automated Gadolinium absorbance detector (GAD) is progressing well.
+The first prototype based on a 10 cm cell for 0.2$\%$ Gadolinium sulphate doping achieved %
+a $3\%$ concentration measurement resolution ($1\%$ neutron capture efficiency) %
+at the target concentration in comparison to the $3.5\%$ currently achieved via a manual mass spectrometer method.
+
+This device was intended for deployment in EGADS in Japan but the Gadolinium sulphate %
+concentration was changed to $0.02\%$ in preparation for Super-K phase 1 loading.
+Therefore work progressed to building the version 2 prototype of GAD for %
+sensitivity to $0.02\%$, by increasing the volume to $\approx 1$ meter.
+
+This prototype has been successfully built and tested and shown a concentration measurement %
+resolution of $1\%$ at both $0.02\%$ and $0.2\%$ doping.
+Figure~\ref{fig:gad2} shows the new system and Figure~\ref{fig:gad2perf} shows the performance of the new system.
