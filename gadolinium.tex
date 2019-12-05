@@ -105,7 +105,7 @@ Finally, the background in proton decay searches can be reduced, since it requir
 
 In the original proposal by John Beacom and Mark Vagins, gadolinium trichloride GdCl\tped{3} was proposed, %
 but the current full-scal plan has steered on gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3} %
-as the salt of choice (other candidate could be gadolinium nitrate Gd(NO\tped{3})\tped{3}.
+as the salt of choice (other candidate could be gadolinium nitrate Gd(NO\tped{3})\tped{3}).
 There are a few requirements which a Gd compound must meet in order to become a good candidate for a full scale test.
 The compound must be water soluble, and it should not be too difficult to dissolve large amounts.
 The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
@@ -150,23 +150,98 @@ The amount of Gd is then compared to known samples of Gd loaded water to determi
 We propose an alternative method, which still uses atomic absorption lines of Gd, but in solution in water.
 Gadolinium presents strong emission/absorption lines in the UV region~\cite{NIST}.
 Using a UV source and a spectrometer it would be possible to measure the absorption by gadolinium dissolved in water.
-The absorption in directly proportional to the amount of gadolinium and therefore the concentration, %
-where absorption is defined as
+The absorbance in directly proportional to the amount of gadolinium and therefore to the concentration, %
+where absorbance is defined as
 \begin{equation}
-	\mathcal{A}(x) = \log_{10} \frac{I_0 (x)}{I(x)}\ ,
+	\mathcal{A}(x) = \log_{10} \frac{I_0 (x)}{I_\text{Gd}(x)}\ .
 \end{equation}
-where $I_0(x)$ is the reference intensity of the light source at wavelength $x$ and $I(x)$ %
-is the measured intensity at the same wavelength.
-The reference intensity would be using a pure water sample.
+The spectrum $I_0$ of a reference sample of pure water is taken before the gadolinium loaded water sample $I_\text{Gd}$.
+These two spectrum are then compared at a given wavelength.
+The gadolinium absorbance spectrum presents a series of lines in the 270\,nm -- 275\,nm region.
+The height of one peak is related to the concentration, as the amount of light surviving the sample is related to
+\begin{equation}
+	I_\text{Gd}(x) = I_0(x) e^{-\flatfrac{\ell}{\lambda}}\ ,
+\end{equation}
+with $\lambda$ the attenuantion length and $\ell$ the sample length.
+For a fixed cross-section volume and a fixed-length sample, the attenuation length will %
+decrease with the amount of Gd in the sample $m_\text{Gd}$, or since the volume is constant, with the concentration of Gd $\rho_\text{Gd}$.
+\begin{equation}
+	\rho_\text{Gd} = \frac{m_\text{Gd}}{X\,\ell}\ .
+\end{equation}
+The Beer-Lambert law relates the optical attenuation of a physical material containing a single attenuating species %
+of uniform concentration to the optical path length through the sample and absorptivity of the species.
+\begin{equation}
+	\mathcal{A} = \varepsilon\, \ell\, \rho = \log_{10} (e) \frac{\ell}{\lambda}\ ,
+\end{equation}
+where $\varepsilon$ is the molar attenuation coefficient, or absorptivity, of the attenuating species.
+The Beer-Lambert law agrees with the expectation of decreasing attenuation length with increasing concentration.
 
+In an absorbance measurement, however, there could be other sources of absorption.
+In a real setup, a light source and a photo sensor are needed, in addition to optical interfaces with the %
+sample to measure; the solvent of the sample will also contribute to the overall absorbance.
+The Beer-Lamber law can be generalised to a generic $N$ number of attenuating elements
+\begin{equation}
+	\mathcal{A} = \sum_{i = 1}^N \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = %
+	\varepsilon \ell \rho_0 +  \sum_{i = 1}^{N-1} \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = a + b \, \rho_0\ ,
+\end{equation}
+where the attenuating species of interest has been isolated: %
+if the other elements are constant, there is a linear law with measured absorbance and concentration.
+The absorbance will also depend on the solvent, \ie water, purity and other factors, \eg optical interfaces etc.
+The measurement of absorption could also be biased by the presence of wavelength-independent factors, %
+or at least independent in the portion of the spectrum of interest.
+Examples of these factors could are micro-bubbles or other impurities in the samples.
+Micro-bubbles will scatter or block light, thus adding a bias on teh absorbance measurement.
 Using two absorption peaks the measurement could be improved by taking the difference of the absorption, %
 as any effect which is wavelength independent is removed.
 \begin{equation}
 	\Delta \mathcal{A} = \mathcal{A}(x_1) - \mathcal{A}(x_2) = %
+	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ .
+\end{equation}
+Supposing the intensity of the reference sample is reduced by a factor $\eta$, %
+whereas the intensity of the study sample is reduced by a factor $\zeta$, we would have
+\begin{equation}
+	\Delta \mathcal{A} = %
+	\log_{10} \frac{\eta I_0 (x_1)}{\zeta I(x_1)} - \log_{10} \frac{\eta I_0 (x_2)}{\zeta I(x_2)} = %
 	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ ,
 \end{equation}
+since the difference of two logarithmic elements is taken.
+The drawback of this method is that two measurements are needed at the two wavelengths $x_1$ and $x_2$, %
+and therefore the error on the measurement will increase by a factor $\sim \sqrt{2}$.
 
-The automated Gadolinium absorbance detector (GAD) is progressing well.
+\begin{figure}
+	\centering
+	\caption{}
+	\label{}
+\end{figure}
+
+\section{Gadolinium Absorbance Detector}
+
+The first concept of tracking gadolinium concentration in water using absorbance spectrum %
+was tested using a 1\,cm cell in a commercial spectrophotometer Shimadzu UV2600, %
+in which an initial sample of 0.2\,\% Gd water is diluited to obtain different concentration levels.
+The gadolinium loaded sample is compared to a pure water one to compute the absorbance spectrum.
+The result is...? And linear fit.
+The Shimadzu spectrophotometer uses a grating system to select very narrow windows of electromagnetic spectrum %
+both at the source and at the detection, which is done by a photomultiplier.
+The source at UV wavelengths is provided by a deuterium lamp, integrated in the spectrometer.
+The advantage of this technique is that very high resolution can be achieved, %
+but a scan wavelength per wavelength is done, taking one measurement at the time.
+This process can be quite slow and the gain from the resolution is not so relevant.
+We tested different model of other commercial spectrometers, without integrated source and %
+with a grating system such that the input light is spread out on a linear CCD.
+Doing so, the whole spectrum to which the spectroemter is sensitive to, is taken simultaneously.
+The measurement is then only limited to the reading speed rate of the spectrometer.
+A set of consecutive measurement can be taken and averaging them the error can also be estimated.
+After testing different models from different companies, we purchased an Ocean HDX spectrometer.
+The advantage of this spectrometer is a very high light throughput thanks to a toroidal mirroring system %
+which reduces stray light and maximises the input light.
+In addition to this, the sensor has a high dynamic range, which is the determing factor %
+on the absorbance measurement.
+Wavelength resolution is not as important, because we use the relative position of the gadolinium peaks %
+to determine the absorbance.
+
+
+
 The first prototype based on a 10 cm cell for 0.2$\%$ Gadolinium sulphate doping achieved %
 a $3\%$ concentration measurement resolution ($1\%$ neutron capture efficiency) %
 at the target concentration in comparison to the $3.5\%$ currently achieved via a manual mass spectrometer method.
