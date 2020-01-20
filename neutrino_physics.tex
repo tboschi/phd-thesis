@@ -1,32 +1,50 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		CHAP 1		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
-\chapter{Neutrino in the Standard Model}
+\chapter{Neutrinos in the Standard Model and Beyond}
 \label{cha:intro}
 
-The Standard Model (SM) is a gauge theory that describes the strong, electromagnetic, and weak interactions %
+The Standard Model (SM) is a renormalisable Yang-Mills theory~\ref{} that describes the strong, electromagnetic, and weak interactions %
 of elementary particles in the framework of quantum field theory.
-The theory is based on the local symmetry group 
+It is based on the local gauge symmetry group 
 \begin{equation}
 	\label{eq:smgroup}
-	\mathrm{SU(3)}_C \otimes \mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y
+	\text{SU(3)}_C \otimes \text{SU(2)}_L \otimes \text{U(1)}_Y
 \end{equation}
-where $C$, $L$ and $Y$ denote color, left-handed chirality and weak hypercharge, respectively.
+where $C$, $L$ and $Y$ denote respectively color, left-handed chirality and weak hypercharge.
 The gauge group uniquely determines the interactions and the number of %
 vector gauge bosons that correspond to the generators of the group.
-They are eight massless gluons that mediate strong interactions, %
-corresponding to the eight generators of SU(3)$_C$, and four gauge bosons, %
-of which three are massive ($W^\pm$ and $Z$) and one is massless, corresponding %
-to the three generators of SU(2)$_L$ and one generator of U(1)$_Y$, responsible for %
-electroweak interactions.
-The symmetry group of the SM fixes the interactions, i.e. the number and properties of the %
-vector gauge bosons, with only three independent unknown parameters: the three coupling constants of %
-the SU(3)$_C$, SU(2)$_L$, and U(1)$_Y$ groups, all of which must be determined from experiments.
+%
+The electroweak subgroup $\text{SU(2)}_L \otimes \text{U(1)}_Y$ undergoes a spontaneous symmetry breaking process %
+out of which three of the four vector bosons acquire mass ($W^\pm$ and $Z$~bosons) and the last one, the photon, remains massless.
+The colour section is unbroken and does not mix with the electroweak sector: %
+the generators of the algebra of $\text{SU(3)}_C$ corresponds to eight massless gluons.
+%
+%%In the SM, electroweak interactions can be studied separately from strong interactions, %
+%%because the symmetry under the color group is unbroken and there is no mixing %
+%%between the SU(3)$_C$ and the $\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$ sectors.
+%%On the other hand, the Glashow, Salam, and Weinberg theory well explains the group mixing between %
+%%electromagnetic and weak interactions caused by a symmetry breaking process.
+%%They are eight massless gluons that mediate strong interactions, %
+%%corresponding to the eight generators of SU(3)$_C$, and four gauge bosons, %
+%%of which three are massive ($W^\pm$ and $Z$) and one is massless, corresponding %
+%%to the three generators of SU(2)$_L$ and one generator of U(1)$_Y$, responsible for %
+%%electroweak interactions.
+Since the number and properties of the gauge bosons is determined by the SM group, %
+the only independent parameters left are the coupling constants of the interactions, which can be determined by the experiments.
+The spontanous breaking symmetry requires at least one scalar boson thanks to the Higgs mechanism.
+The recent discovery of the Higgs boson is the crowning achievemnt of the SM~\ref{}.
+%The symmetry group of the SM fixes the interactions, i.e. the number and properties of the %
+%vector gauge bosons, with only three independent unknown parameters: the three coupling constants of %
+%the SU(3)$_C$, SU(2)$_L$, and U(1)$_Y$ groups, all of which must be determined from experiments.
 On the contrary, the number and properties of scalar bosons and fermions are left unconstrained, %
 except for the fact that they must transform according to the representations of the symmetry group, %
 while the fermion representations must lead to the cancellation of quantum anomalies.
+
 The known elementary fermions are divided in two categories, quarks and
-leptons, according to the scheme:
+leptons.
+They are distinguished by the fact that quarks participate in all the interactions % 
+whereas leptons participate only in the electroweak interactions.
 \begin{center}
 	\small
 	\begin{tabular}{lccc}
@@ -41,19 +59,16 @@ leptons, according to the scheme:
 		\bottomrule
 	\end{tabular}
 \end{center}
-and their respective antiparticles.
-They are distinguished by the fact that quarks participate in all the interactions % 
-whereas leptons participate only in the electroweak interactions.
 
-In the SM, electroweak interactions can be studied separately from strong interactions, %
-because the symmetry under the color group is unbroken and there is no mixing %
-between the SU(3)$_C$ and the $\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$ sectors.
-On the other hand, the Glashow, Salam, and Weinberg theory well explains the group mixing between %
-electromagnetic and weak interactions caused by a symmetry breaking process.
-This model and the discovery of the predicted $W$ and $Z$ bosons, in addition to the gluon, %
-the top, and charm quarks, made the fortune of the Standard Model.
-Their redicted properties were experimentally confirmed with good precision and %
-the recent discovery of the Higgs Boson is the last crowning achievement of SM.
+%In the SM, electroweak interactions can be studied separately from strong interactions, %
+%because the symmetry under the color group is unbroken and there is no mixing %
+%between the SU(3)$_C$ and the $\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$ sectors.
+%On the other hand, the Glashow, Salam, and Weinberg theory well explains the group mixing between %
+%electromagnetic and weak interactions caused by a symmetry breaking process.
+%This model and the discovery of the predicted $W$ and $Z$ bosons, in addition to the gluon, %
+%the top, and charm quarks, made the fortune of the Standard Model.
+%Their redicted properties were experimentally confirmed with good precision and %
+%the recent discovery of the Higgs Boson is the last crowning achievement of SM.
 
 Despite being the most successful theory of particle physics to date, the SM is actually limited %
 in its approximation to reality, in that some clear evidences cannot be explained.
@@ -71,29 +86,218 @@ is of vital importance to the future development of particle physics, %
 in particular through precision measurement of their interactions.
 A deep understanding of neutrino interactions, and neutrino-nucleon interactions in particular, %
 could lead to a great impact on long-baseline experiments, proton decay search, and supernova detection.
+Since the SM is a renormalizable theory, even its quantum corrections are insensitive to the physics beyond the SM.
+Because of this reason, the SM is pheomenologically very successful and so far has been able to describe all the known
+phenomena, except for the indications in favor of neutrino oscillations that we will discuss in the following chapters.
 
-\section{Neutrino interactions}
+\section{Electroweak sector}
 \label{sec:inter}
 
-Neutrinos are colourless and chargless particles, thus sensitive only to weak interactions.
-Because of their nature, these leptons have small cross-sections and are difficult to measure.
-All the interactions are described by the the electroweak part of the SM, based on the symmetry group %
-$\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$, and are governed by the lagrangian %
-$\mathcal{L} = \mathcal{L}^{(CC)} + \mathcal{L}^{(NC)}$.
-In fact, neutrinos are mediated by the $W^\pm$ for charged-current (CC) interactions and by the $Z$ boson for %
-neutral-current (NC) ones, whose respective lagrangians are:
+The electroweak (EW) sector of the SM is formed by the direct product of the weak isospin group $\text{SU(2)}_L$ and %
+the hypercharge group $\text{U(1)}_Y$.
+The two groups are connected by the Gell-Mann--Nishijima relation which connects the $I_3$ component of the %
+weak isospin operator and the hypercharge operator $Y$  with the charge operator $Q$ as
+\begin{equation}
+	\label{eq:gellmann}
+	Q = I_3 + \frac{Y}{2}\ .
+\end{equation}
+Left-handed chiral components of the fermion fields form doublets under $\text{SU(2)}_L$
+\begin{equation}
+	\label{eq:doublets}
+	L_{\alpha L} = \mqty(\nu_{\alpha L} \\ \ell_{\alpha L}) \quad, \quad
+	Q_{\alpha L} = \mqty(q^U_{\alpha L} \\ q^D_{\alpha L}) \ ,
+\end{equation}
+where $q^U$ and $q^D$ represent respectively the up quark and down quark families.
+The right-handed fields, $\ell_{\alpha R}$, $q^U_{\alpha R}$, and $q^D_{\alpha R}$, transform as singlets.
+Note that the right-handed components of the neutrino fields, $\nu_{\alpha R}$, are not historically considered in the SM %
+because the neutrinos were believed massless until recent times~\ref{}.
+As such, neutrinos are assumed to be massless in the SM.
+The EW lagrangian is therefore the most general renormalizable Lagrangian invariant %
+under the local symmetry $\text{SU(2)}_L \otimes \text{U(1)}_Y$:
 \begin{align}
-	\label{eq:cc}
-	\mathcal{L}^{(CC)} &= - \frac{g}{2\sqrt{2}} \big (j^\mu_{W,L}W_\mu +\mathrm{h.c} \big ) \\
-	\label{eq:nc}
-	\mathcal{L}^{(NC)} &= - \frac{g}{2\cos\vartheta_{\mathrm{W}}} j^\mu_{Z,\nu}Z_\mu\,,
+	\label{eq:ew_lagrangian}
+	\mathcal{L} =\  &i\, \cj{L}_{\alpha L} \sh{D} L_{\alpha L} + i\, \cj{Q}_{\alpha L} \sh{D} Q_{\alpha L} + %
+			 i\, \cj{\ell}_{\alpha R} \sh{D} \ell_{\alpha R} + i\, \cj{q^D}_{\alpha R} \sh{D} q^D_{\alpha R} + %
+			 i\, \cj{q^U}_{\alpha R} \sh{D} q^U_{\alpha R} \\ 
+			&-\frac{1}{4} B_{\mu\nu} B^{\mu\nu} - \frac{1}{4} \vb{A}_{\mu\nu} \vb{A}^{\mu\nu} 
+		      + (D_\mu H)^\dagger (D^\mu H) - \mu^2 H^\dagger H - \lambda (H^\dagger H)^2  \notag \\
+		      &-\qty(Y^\ell_{\alpha \beta}\,\cj{L}_{\alpha L} H \ell_{\beta R} 
+		      +Y^D_{\alpha \beta}\,\cj{Q}_{\alpha L} H q^D_{\beta R} 
+		      +Y^U_{\alpha \beta}\,\cj{Q}_{\alpha L} \tilde{H} q^U_{\beta R} +\ \text{h.c.})\ ,
 \end{align}
-where the two currents are given by
+where the covariant derivative is 
+\begin{equation}
+	\label{eq:covariant}
+	D_\mu = \pd_\mu + i g\, \vb{A}_\mu \cdot \vb{I} + i g'\, B_\mu \frac{Y}{2}\ ,
+\end{equation}
+which satisfies gauge invariance, %
+and $\tilde{H} = i \sigma_2 H^*$ is the cojugate Higgs field. % thanks to the transformations
+It is important to note that Dirac mass terms for fermion fields other than neutrinos %
+are anyway forbidden by the gauge symmetry.
+These terms will become manifest once the symmetry is broken through the Higgs mechanism (\refeq{sec:eq_higgs}).
+%\begin{align}
+%	\label{eq:gauge}
+%	\vb{A}_\mu \cdot \vb{I} \longmapsto 
+%\end{align}
+The vector boson fields $\vb{A}^\mu = (A_1^\mu, A_2^\mu, A_3^\mu)$ and $B^\mu$ corresponds respectively %
+to the three generators $\vb{I} = (I_1, I_2, I_3)$ of the $\text{SU(2)}_L$ group %
+and the generator $Y$ of the $\text{U(1)}_Y$ group.
+The $\text{SU(2)}_L$ generators are $I_a = \sigma_a / 2$, where $\sigma_a$ are the Pauli matrices, %
+and thus satify the commutation relation
+\begin{equation}
+	\label{eq:generators}
+	[I_a, I_b] = i \varepsilon_{a b c} I_c\ ,
+\end{equation}
+with $\varepsilon_{a b c}$ the Levi-Civita tensor.
+
+\subsection{Electroweak interactions}
+\label{sec:ew_interactions}
+
+Expanding the covariant derivative and ignoring the kinetic terms, we can retrieve the interaction term %
+for the leptonic sector
+\begin{equation}
+	\label{eq:interaction}
+	\mathcal{L}_\text{int} = -\frac{1}{2} \sum_\alpha %
+		\mqty(\cj{\nu}_{\alpha L} & \cj{\ell}_{\alpha L}) %
+		\mqty( g \sh{A}_3 - g' \sh{B} & g(\sh{A}_1 - i \sh{A}_2) \\
+		       g(\sh{A}_1 + i \sh{A}_2) & - g \sh{A}_3 - g' \sh{B}  ) %
+		\mqty(\nu_{\alpha L} \\ \ell_{\alpha L} ) + g' \cj{\ell}_{\alpha R} \sh{B} \ell_{\alpha R}\ .
+\end{equation}
+Defining the combinations
 \begin{align}
-	j^\mu_{W,L}   &= 2 \sum_{\alpha = e, \mu, \tau} \overline{\nu_{\alpha L}} \gamma^\mu l_{\alpha L} \\
-	j^\mu_{Z,\nu}   & = \sum_{\alpha = e, \mu, \tau} \overline{\nu_{\alpha L}} \gamma^\mu \nu_{\alpha L}\,,
+	\label{eq:fields}
+	W^\mu &= \flatfrac{\qty(A_1^\mu - i A_2^\mu)}{\sqrt{2}} \\
+	Z^\mu &= \cos \vartheta_\text{W} A_3^\mu - \cos \vartheta_\text{W} B^\mu \\
+	A^\mu &= \sin \vartheta_\text{W} A_3^\mu + \cos \vartheta_\text{W} B^\mu \ ,
 \end{align}
-and $\vartheta_{\mathrm{W}} = \np{28.7}^\circ$ is the Weinberg angle.
+the electromagnetic field $A^\mu$ is expressed as a rotation of $A_e^\mu$ and $B^\mu$, thus recovering QED; %
+the new field $Z^\mu$ also describes a neutral current process.
+The lagrangian in \refeq{eq:interaction} can therefore be divided into two parts, %
+$\mathcal{L}_\text{int} = \mathcal{L}^{(CC)} + \mathcal{L}^{(NC)}$, %
+describing charged-current (CC) and neutral-current (NC) interactions.
+These are
+\begin{align}
+	\label{eq:lagrangian_cc}
+	\mathcal{L}_\text{CC} &= - \frac{g}{2\sqrt{2}} \sum_\alpha \cj{\nu}_{\alpha} \sh{W} (1-\gamma^5) \ell_{\alpha} + \text{h.c} \\
+	\label{eq:lagrangian_nc}
+	\mathcal{L}_\text{NC} &= - \frac{g}{2\cos\vartheta_\text{W}} %
+		\sum_\alpha \qty[ \cj{\nu}_\alpha \sh{Z} (g^\nu_V - g^\nu_A \gamma^5) \nu_\alpha + %
+				\cj{\ell}_\alpha \sh{Z} (g^\nu_v-g^\nu_A\gamma^5) \ell_\alpha] \notag \\
+		&\hphantom{=} + g\sin\vartheta_\text{W} \sum_\alpha \cj{\ell}_\alpha \sh{A} \ell_\alpha \ .
+\end{align}
+where $g'$ has been re-written in terms of $g$ and $\vartheta_\text{W}$ by setting to zero the coupling of neutrinos %
+to the electromagnetic field for neutrinos, which gives
+\begin{equation}
+	g \sin \vartheta_\text{W} = g' \cos \vartheta_\text{W}\ .
+\end{equation}
+Another important relation comes from the charged lepton couplings with the electromagnetic field which must coincide %
+the QED lagrangian: we have that $g \sin\vartheta_\text{W} = q_e$ and so $g^2 + g'^2 = q_e^2$.
+The~constants $g_V$ and $g_A$, introduced in \refeq{eq:lagrangian_nc}, can be defined for any fermion $f$ as
+\begin{align}
+	g_V^f &= I_3^f - 2 q^f \sin^2 \vartheta_\text{W} \\
+	g_A^f &= I_3^f\ .
+\end{align}
+Thanks to this notation, the interaction lagrangian for the quark sector can be written in the same form of %
+\refeqs{eq:lagrangian_cc}{eq:lagrangian_nc}, being careful of substituting the lepton fields with the quark fields.
+
+\subsection{Higgs mechanism}
+\label{sec:ew_higgs}
+
+In the EW lagrangian in \refeq{eq:ew_lagrangian}, the Higgs $H$ is a complex scalar field and an $SU(2)_L$ doublet %
+\begin{equation}
+	\label{eq:higgs}
+	H(x) = \mqty( H^+(x) \\ H^0(x) ) \ ,
+\end{equation}
+the potential of which can spontaneously break if $\lambda > 0$ and $\mu^2 < 0$, in
+\begin{equation}
+	\label{eq:higgs_potential}
+	V(H) = \mu^2 H^\dagger H + \lambda (H^\dagger H)^2 \ .
+\end{equation}
+Defining
+\begin{equation}
+	\label{eq:vev}
+	v \equiv \sqrt{- \frac{\mu^2}{\lambda}}\ ,
+\end{equation}
+the potential $V(H)$ shows a minimum for $H^\dagger H = v^2 / 2$, which %
+corresponds to the lowest energy state, or vacuum.
+In general, fermion and non-zero spin boson fields must have a vanishing vacuum expectation value (vev), %
+so as to to preserve the Lorentz symmetries of space and time.
+The same applies to charged scalar fields, as the vacuum is electrically chargeless.
+On the other hand, neutral scalar fields can have a nonzero value in vacuum, and so the vev %
+of the Higgs field could be given by
+\begin{equation}
+	\expval{H} = \frac{1}{\sqrt{2}} \mqty( 0 \\ v )\ .
+\end{equation}
+This value spontaneously breaks the EW group $\text{SU(2)}_L \times \text{U(1)}_Y$, %
+but it remains invariant under the gauge transformations from the $\text{U(1)}_Q$ group, %
+with $Q$ from \refeq{eq:gellmann}, which guarantees the existence of a massless gauge boson %
+associated with the photon.
+We can expand the scalar field around its vev and by choosing the unitary gauge three of the four real scalar fields %
+can be rotated away being unphysical, simplifying to
+\begin{equation}
+	\label{eq:vev_higgs}
+	\expval{H} = \frac{1}{\sqrt{2}} e^{} \mqty( 0 \\ v + h(x) )\ .
+\end{equation}
+Using the definition of the EW fields in \refeq{eq:fields}, %
+the covariant derivative of \refeq{eq:covariant} applied to the Higgs is 
+\begin{equation}
+	\label{eq:d_higgs}
+	D_\mu H(x) = \frac{1}{\sqrt{2}} %
+		\mqty ( i \frac{g}{\sqrt{2}} W_\mu (x) \qty[v + h(x)] \\ %
+			\pd_\mu h(x) - i \frac{g}{2\cos \vartheta_\text{W}} Z_\mu(x) [v+h(x)] )\ .
+\end{equation}
+The lagrangian terms with the Higgs field therefore becomes 
+\begin{align}
+	\label{eq:all_higgs}
+	\mathcal{L}_\text{Higgs} =&\ \frac{1}{2} (\pd h)^2 - v^2 \lambda h^2 - \lambda h^3 - \frac{\lambda}{4} h^4 + %
+			\frac{g^2 v^2}{4} W^\dagger_\mu W^\mu + \frac{g^2 v^2}{8\cos^2\vartheta_\text{W}} Z_\mu Z^\mu \notag \\
+			& +\frac{g^2 v}{2} W^\dagger_\mu W^\mu h +\frac{g^2 v}{4\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h 
+			 +\frac{g^2}{4} W^\dagger_\mu W^\mu h^2 +  \frac{g^2}{8\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h^2\ .
+\end{align}
+The second term of the first line is a mass term for the scalar fields, %
+from which the mass of the Higgs boson is determined to be $m_H = v \sqrt(2\lambda) = \sqrt{-2 \mu^2}$, %
+a value recentely measured~\ref{}.
+The fifth and sixth terms represent the mass terms for the $W$ and $Z$ bosons, namely
+\begin{equation}
+	m_W = \frac{gv}{2} \quad, \quad m_Z = \frac{gv}{2\cos\vartheta_\text{W}}\ ,
+\end{equation}
+and the following parameter
+\begin{equation}
+	\rho = \frac{m_W^2}{m_Z^2 \cos^2\vartheta_\text{W}}
+\end{equation}
+is predicted to be $\rho = 1$ in the SM: experimentally it is measured to be $\rho = 0.999999$.
+The other terms of \ref{eq:all_higgs} describe self-interactions of the Higgs and %
+interactions with the $W$ and $Z$ vector bosons.
+
+Applying the same expansion of \refeq{eq:vev_higgs} to the Yukawa terms of the SM lagriangian, %
+we obtain a Dirac mass terms and trilinear couplings of the fermions with the Higgs.
+After diagonalising the Yukawa coupling $Y_{\alpha \beta} = y_\alpha \delta^\alpha_\beta$, we have in the lepton sector
+\begin{equation}
+	\label{eq:fermion_mass}
+	\mathcal{L}_{H, L} = - \sum_\alpha \frac{y_\alpha^\ell v}{\sqrt{2}} \cj{\ell}_\alpha \ell_\alpha %
+			     - \sum_\alpha \frac{y_\alpha^\ell}{\sqrt{2}} \cj{\ell}_\alpha \ell_\alpha\,h \ ,
+\end{equation}
+where the mass of the charged leptons is given by 
+\begin{equation}
+	\label{eq:dirac_mass}
+	m_\alpha = \frac{y_\alpha^\ell\ v}{\sqrt{2}}\ .
+\end{equation}
+The same is found in the quark sector, where the right Yukawa couplings should be used with the corresponding diagonalisation.
+
+
+\section{Neutrino oscillations}
+\label{sec:neutrino_oscillations}
+
+Without diagonal Yukawa couplings, the fermion masses are not defined.
+Being a generic complex matrix, the diagonalization can be achived by a biunitary tranformation
+\begin{equation} 
+	V_L^\dagger Y'_{\alpha \beta} V_R = Y_{\alpha}\ ,
+\end{equation} 
+where $V_L$ and $V_R$ are unitary matrices.
+
+
+\section{Neutrino interactions}
+\label{sec:neutrino_interactions}
 
 The easiest interaction that can be studied is the neutrino-electron elastic scattering
 \begin{equation}
