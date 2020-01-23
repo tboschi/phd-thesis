@@ -104,11 +104,23 @@ weak isospin operator and the hypercharge operator $Y$  with the charge operator
 Left-handed chiral components of the fermion fields form doublets under $\text{SU(2)}_L$
 \begin{equation}
 	\label{eq:doublets}
-	L_{\alpha L} = \mqty(\nu_{\alpha L} \\ \ell_{\alpha L}) \quad, \quad
-	Q_{\alpha L} = \mqty(q^U_{\alpha L} \\ q^D_{\alpha L}) \ ,
+	\bs{L}_L = \mqty(\bs{\nu}_L \\ \bs{\ell}_L) \quad, \quad
+	\bs{Q}_L = \mqty(\bs{q}_L^U \\ \bs{q}_L^D) \ ,
 \end{equation}
-where $q^U$ and $q^D$ represent respectively the up quark and down quark families.
-The right-handed fields, $\ell_{\alpha R}$, $q^U_{\alpha R}$, and $q^D_{\alpha R}$, transform as singlets.
+where the left-handed fields in bold-face represent the fermion families
+\begin{equation}
+	\bs{\nu}_L  = \mqty(\nu_{eL} \\ \nu_{\mu L} \\ \nu_{\tau L}) \quad , \quad
+	\bs{\ell}_L = \mqty(e_L \\ \mu_L \\ \tau_L) \quad , \quad
+	\bs{q}^D_L  = \mqty(d_L \\ s_L \\ b_L) \quad \text{, and} \quad
+	\bs{q}^U_L  = \mqty(u_L \\ c_L \\ t_L)\ .
+\end{equation}
+%$\bs{q}^U$ and $\bs{q}^D$ represent respectively the up quark and down quark families.
+The right-handed fields, instead, transform simply as singlets and they are
+\begin{equation}
+	\bs{\ell}_R = \mqty(e_R \\ \mu_R \\ \tau_R) \quad , \quad
+	\bs{q}^D_R  = \mqty(d_R \\ s_R \\ b_R) \quad \text{, and} \quad
+	\bs{q}^U_R  = \mqty(u_R \\ c_R \\ t_R)\ .
+\end{equation}
 Note that the right-handed components of the neutrino fields, $\nu_{\alpha R}$, are not historically considered in the SM %
 because the neutrinos were believed massless until recent times~\ref{}.
 As such, neutrinos are assumed to be massless in the SM.
@@ -116,25 +128,25 @@ The EW lagrangian is therefore the most general renormalizable Lagrangian invari
 under the local symmetry $\text{SU(2)}_L \otimes \text{U(1)}_Y$:
 \begin{align}
 	\label{eq:ew_lagrangian}
-	\mathcal{L} =\  &i\, \cj{L}_{\alpha L} \sh{D} L_{\alpha L} + i\, \cj{Q}_{\alpha L} \sh{D} Q_{\alpha L} + %
-			 i\, \cj{\ell}_{\alpha R} \sh{D} \ell_{\alpha R} + i\, \cj{q^D}_{\alpha R} \sh{D} q^D_{\alpha R} + %
-			 i\, \cj{q^U}_{\alpha R} \sh{D} q^U_{\alpha R} \notag \\ 
+	\mathcal{L} =\  &i\, \cj{\bs{L}}_L\, \sh{D}\, \bs{L}_L + i\, \cj{\bs{Q}}_L\, \sh{D}\, \bs{Q}_L + %
+			 i\, \cj{\bs{\ell}}_R\, \sh{D}\, \bs{\ell}_R + i\, \cj{\bs{q}}^D_R\, \sh{D}\, \bs{q}^D_R + %
+			 i\, \cj{\bs{q}}^U_R\, \sh{D}\, \bs{q}^U_R \notag \\ 
 			&-\frac{1}{4} B_{\mu\nu} B^{\mu\nu} - \frac{1}{4} \vb{A}_{\mu\nu} \vb{A}^{\mu\nu} 
 		      + (D_\mu H)^\dagger (D^\mu H) - \mu^2 H^\dagger H - \lambda (H^\dagger H)^2  \notag \\
-		      &-\qty(Y^\ell_{\alpha \beta}\,\cj{L}_{\alpha L} H \ell_{\beta R} 
-		      +Y^D_{\alpha \beta}\,\cj{Q}_{\alpha L} H q^D_{\beta R} 
-		      +Y^U_{\alpha \beta}\,\cj{Q}_{\alpha L} \tilde{H} q^U_{\beta R} +\ \text{h.c.})\ ,
+		      &- \qty( \cj{\bs{L}}_L\, Y^\ell H \,\bs{\ell}_R 
+		      	     + \cj{\bs{Q}}_L\, Y^D    H \,\bs{q}^D_R 
+		      	     + \cj{\bs{Q}}_L\, Y^U    \widetilde{H}\, \bs{q}^U_R \ +\ \text{h.c.})\ ,
 \end{align}
-where the covariant derivative is 
+where the covariant derivative is defined as 
 \begin{equation}
 	\label{eq:covariant}
 	D_\mu = \pd_\mu + i g\, \vb{A}_\mu \cdot \vb{I} + i g'\, B_\mu \frac{Y}{2}\ ,
 \end{equation}
-which satisfies gauge invariance, %
-and $\tilde{H} = i \sigma_2 H^*$ is the cojugate Higgs field. % thanks to the transformations
+and satisfies gauge invariance, %
+and $\widetilde{H} = i \sigma_2 H^*$ is the conjugate Higgs field. % thanks to the transformations
 It is important to note that Dirac mass terms for fermion fields other than neutrinos %
 are anyway forbidden by the gauge symmetry.
-These terms will become manifest once the symmetry is broken through the Higgs mechanism (\refeq{sec:eq_higgs}).
+These terms will become manifest once the symmetry is broken through the Higgs mechanism (see \refsec{sec:ew_higgs}).
 %\begin{align}
 %	\label{eq:gauge}
 %	\vb{A}_\mu \cdot \vb{I} \longmapsto 
@@ -161,8 +173,9 @@ for the leptonic sector
 		\mqty(\cj{\nu}_{\alpha L} & \cj{\ell}_{\alpha L}) %
 		\mqty( g \sh{A}_3 - g' \sh{B} & g(\sh{A}_1 - i \sh{A}_2) \\
 		       g(\sh{A}_1 + i \sh{A}_2) & - g \sh{A}_3 - g' \sh{B}  ) %
-		\mqty(\nu_{\alpha L} \\ \ell_{\alpha L} ) + g' \cj{\ell}_{\alpha R} \sh{B} \ell_{\alpha R}\ .
+		\mqty(\nu_{\alpha L} \\ \ell_{\alpha L} ) + g'\, \cj{\ell}_{\alpha R}\, \sh{B} \, \ell_{\alpha R}\ ,
 \end{equation}
+where $\alpha$ is a familiy generation index.
 Defining the combinations
 \begin{align}
 	\label{eq:fields}
@@ -178,12 +191,12 @@ describing charged-current (CC) and neutral-current (NC) interactions.
 These are
 \begin{align}
 	\label{eq:lagrangian_cc}
-	\mathcal{L}_\text{CC} &= - \frac{g}{2\sqrt{2}} \sum_\alpha \cj{\nu}_{\alpha} \sh{W} (1-\gamma^5) \ell_{\alpha} + \text{h.c} \\
+	\mathcal{L}_\text{CC} &= - \frac{g}{2\sqrt{2}}\ \cj{\bs{\nu}}\, \sh{W}\, (1-\gamma^5)\, \bs{\ell}\  +\  \text{h.c} \\
 	\label{eq:lagrangian_nc}
-	\mathcal{L}_\text{NC} &= - \frac{g}{2\cos\vartheta_\text{W}} %
-		\sum_\alpha \qty[ \cj{\nu}_\alpha \sh{Z} (g^\nu_V - g^\nu_A \gamma^5) \nu_\alpha + %
-				\cj{\ell}_\alpha \sh{Z} (g^\nu_v-g^\nu_A\gamma^5) \ell_\alpha] \notag \\
-		&\hphantom{=} + g\sin\vartheta_\text{W} \sum_\alpha \cj{\ell}_\alpha \sh{A} \ell_\alpha \ .
+	\mathcal{L}_\text{NC} &= - \frac{g}{2\cos\vartheta_\text{W}}\ %
+		\qty[ \cj{\bs{\nu}}\, \sh{Z}\, (g^\nu_V - g^\nu_A \gamma^5)\, \bs{\nu} + %
+		      \cj{\bs{\ell}}\, \sh{Z}\, (g^\nu_v-g^\nu_A\gamma^5)\, \bs{\ell}] %
+		     + g\sin\vartheta_\text{W}\  \cj{\bs{\ell}}\, \sh{A}\, \bs{\ell} \ .
 \end{align}
 where $g'$ has been re-written in terms of $g$ and $\vartheta_\text{W}$ by setting to zero the coupling of neutrinos %
 to the electromagnetic field for neutrinos, which gives
@@ -236,7 +249,7 @@ We can expand the scalar field around its vev and by choosing the unitary gauge 
 can be rotated away being unphysical, simplifying to
 \begin{equation}
 	\label{eq:vev_higgs}
-	\expval{H} = \frac{1}{\sqrt{2}} e^{} \mqty( 0 \\ v + h(x) )\ .
+	\expval{H} = \frac{1}{\sqrt{2}} \mqty( 0 \\ v + h(x) )\ .
 \end{equation}
 Using the definition of the EW fields in \refeq{eq:fields}, %
 the covariant derivative of \refeq{eq:covariant} applied to the Higgs is 
@@ -270,52 +283,76 @@ The other terms of \ref{eq:all_higgs} describe self-interactions of the Higgs an
 interactions with the $W$ and $Z$ vector bosons.
 
 Applying the same expansion of \refeq{eq:vev_higgs} to the Yukawa terms of the SM lagrangian, %
-we obtain a Dirac mass terms and trilinear couplings of the fermions with the Higgs.
-There is no principle by which the Yukawa coupling matrices $Y_{\alpha \beta}$ should be diagonal \emph{a priori}, %
-but without a diagonal matrix the fermion masses are not defined.
-Being a generic complex matrix, the diagonalization can be achived by a biunitary transformation
-\begin{equation} 
-	V_L^\dagger\ \frac{v}{\sqrt{2}} Y'_{\alpha \beta}\ V_R = \frac{v}{\sqrt{2}} Y_{\alpha} = m_\alpha\, \delta_{\alpha \beta}\\ ,
-\end{equation} 
-where $V_L$ and $V_R$ are unitary matrices.
-This transformation acts on the fermionic fields as
-\begin{align}
-	\ell_L = V_L^\dagger \ell_L' \quad , \quad \ell_R = V_R^\dagger \ell_R' \\ 
-	\ell_Q = V_L^\dagger \ell_L' \quad , \quad \ell_R = V_Q^\dagger \ell_R' \\ 
-\end{align}
-
-After diagonalising the Yukawa coupling $Y_{\alpha \beta} = y_\alpha \delta^\alpha_\beta$, we have in the lepton sector
+we direct coupling between left and right chiral fields and trilinear couplings of the fermions with the Higgs.
+We have in the lepton section
 \begin{equation}
 	\label{eq:lepton_mass}
-	\mathcal{L}_{H, L} = - \sum_\alpha \frac{y_\alpha^\ell v}{\sqrt{2}}\ \cj{\ell}_\alpha\, \ell_\alpha %
-			     - \sum_\alpha \frac{y_\alpha^\ell}{\sqrt{2}}\   \cj{\ell}_\alpha\, \ell_\alpha\,h \ ,
+	\mathcal{L}_{H, L} = - \frac{v}{\sqrt{2}}\ \cj{\bs{\ell}}_L\,Y^\ell\, \bs{\ell}_R %
+			     - \frac{1}{\sqrt{2}}\ \cj{\bs{\ell}}_L\,Y^\ell\, \bs{\ell}_R\,h \ + \ \text{h.c.}\ ,
 \end{equation}
-where the mass of the charged leptons is given by 
-\begin{equation}
-	\label{eq:dirac_mass}
-	m_\alpha = \frac{y_\alpha^\ell\ v}{\sqrt{2}}\ .
-\end{equation}
-The same is found in the quark sector, where the right Yukawa couplings should be used with the corresponding diagonalisation:
+The same is found in the quark sector:
 \begin{equation}
 	\label{eq:quark_mass}
-	\mathcal{L}_{H, Q} = - \sum_\alpha \qty(\frac{y_\alpha^D v}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha %
-					      + \frac{y_\alpha^U v}{\sqrt{2}}\ \cj{q}^U_\alpha\, q^U_\alpha) %
-			     - \sum_\alpha \qty(\frac{y_\alpha^D}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha\,h %
-			     		      + \frac{y_\alpha^U}{\sqrt{2}}\ \cj{q}^U_\alpha\, q^U_\alpha\,h) \ ,
+	\mathcal{L}_{H, Q} = - \qty(\frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D %
+			          + \frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U) %
+			     - \qty(\frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D\ h %
+			          + \frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U\ h) \,+\,\text{h.c.}\ .
 \end{equation}
-with masses
+
+The terms in the lagrangians of \refeqs{eq:lepton_mass}{eq:quark_mass} proportional to $\cj{f}_L f_R = \cj{f} f$ %
+are Dirac mass terms for the fermion $f$.
+However, there is no principle by which the Yukawa coupling matrices $Y^f$ should be diagonal \emph{a priori}, %
+but without a diagonal matrix the fermion masses are not properly defined.
+Being a generic complex matrix, the diagonalization can be performed via a biunitary transformation
+\begin{equation} 
+	V^{f\dagger}_L\ \qty(\frac{v}{\sqrt{2}} Y^f)\ V^f_R = \frac{v}{\sqrt{2}} \hat{Y}^f_{\alpha} = %
+	\text{diag}\qty(\frac{y^f_\alpha v}{\sqrt{2}})\ ,
+\end{equation} 
+where $V_L$ and $V_R$ are both unitary matrices and the fermion masses are defined by the Yukawa couplings
 \begin{equation}
 	\label{eq:dirac_mass}
-	m_\alpha = \frac{y_\alpha^D\ v}{\sqrt{2}} \quad \text{and} \quad  %
-	m_\beta = \frac{y_\beta^U\ v}{\sqrt{2}} 
+	m^f_\alpha \equiv \frac{y^f_\alpha v}{\sqrt{2}}\ ,
 \end{equation}
-for $\alpha = d,\,s,\,b$ and $\beta = u,\,c,\,t$.
+with $\alpha$ a familiy generation idex.
+The biunitary transformation acts on the lepton fields as
+\begin{equation}
+	\label{eq:lepton_eigenmass}
+	\hat{\bs{\ell}}_L = V^{\ell\dagger}_L\, \bs{\ell}_L \quad , \quad \hat{\bs{\ell}}_R = V^{\ell\dagger}_R\, \bs{\ell}_R
+\end{equation}
+and on the quark fields as 
+\begin{align}
+	\hat{\bs{q}}^D_L &= V^{D\dagger}_L\, \bs{q}^D_L \quad , \quad \hat{\bs{q}}^D_R = V^{D\dagger}_R\, \bs{q}^D_R  \\
+	\hat{\bs{q}}^U_L &= V^{U\dagger}_L\, \bs{q}^U_L \quad , \quad \hat{\bs{q}}^U_R = V^{U\dagger}_R\, \bs{q}^U_R\ ,
+\end{align}
+Dropping the ``hat notation'' to indicate mass eigenfields, we obtain in the lepton sector
+\begin{equation}
+	\label{eq:lepton_diag}
+	\mathcal{L}_\text{mass} = -\! \sum_{\alpha=e, \mu, \tau} \frac{y_\alpha^\ell v}{\sqrt{2}}\ \cj{\ell}_\alpha\, \ell_\alpha %
+				= -\! \sum_{\alpha=e, \mu, \tau} m_\alpha\ \cj{\ell}_\alpha\, \ell_\alpha \ ,%
+\end{equation}
+and in the quark sector
+\begin{equation}
+	\label{eq:quark_diag}
+	\mathcal{L}_\text{mass} = -\!\! \sum_{\alpha=d,s,b} \!\qty(\frac{y_\alpha^D v}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha) %
+				  -\!\! \sum_{\beta=u,c,t}  \!\qty(\frac{y_\alpha^U v}{\sqrt{2}}\ \cj{q}^U_\beta\,  q^U_\beta) %
+				= -\!\! \sum_{\alpha=d,s,b} \!\qty(m_\alpha\ \cj{q}^D_\alpha\, q^D_\alpha) %
+				  -\!\! \sum_{\beta=u,c,t}  \!\qty(m_\beta \ \cj{q}^U_\beta\,  q^U_\beta)\ . %
+\end{equation}
 
-
-\section{Neutrino oscillations}
+\section{Neutrino mixing and oscillations}
 \label{sec:neutrino_oscillations}
 
-
+The same transformations of \refeq{eq:lepton_eigenmass} should be equally applied to all the parts of the electroweak lagrangian.
+Let us start from the CC interactions espressed in \refeq{eq:lagrangian_cc}
+\begin{align}
+	\label{eq:lagrangian_cc}
+	\mathcal{L}_\text{CC} &= -\frac{g}{\sqrt{2}}\ \cj{\bs{\nu}}_L\, \sh{W}\, \bs{\ell}_\ +\  \text{h.c} \\
+	\label{eq:lagrangian_nc}
+	\mathcal{L}_\text{NC} &= - \frac{g}{2\cos\vartheta_\text{W}}\ %
+		\qty[ \cj{\bs{\nu}}\, \sh{Z}\, (g^\nu_V - g^\nu_A \gamma^5)\, \bs{\nu} + %
+		      \cj{\bs{\ell}}\, \sh{Z}\, (g^\nu_v-g^\nu_A\gamma^5)\, \bs{\ell}] %
+		     + g\sin\vartheta_\text{W}\  \cj{\bs{\ell}}\, \sh{A}\, \bs{\ell} \ .
+\end{align}
 
 \section{Neutrino interactions}
 \label{sec:neutrino_interactions}
@@ -663,4 +700,5 @@ The neutrino source provided by the muon decay, is more of a nuisance background
 which give rise to electronic component in neutrino spectrum.
 Usually a beam absorbed is located at the end of the decay region of an accelerator line, to stop the hadronic and %
 muonic component of the beam, and only an almost pure neutrino beam pointing towards te.
+
 
