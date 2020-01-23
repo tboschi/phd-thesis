@@ -118,7 +118,7 @@ under the local symmetry $\text{SU(2)}_L \otimes \text{U(1)}_Y$:
 	\label{eq:ew_lagrangian}
 	\mathcal{L} =\  &i\, \cj{L}_{\alpha L} \sh{D} L_{\alpha L} + i\, \cj{Q}_{\alpha L} \sh{D} Q_{\alpha L} + %
 			 i\, \cj{\ell}_{\alpha R} \sh{D} \ell_{\alpha R} + i\, \cj{q^D}_{\alpha R} \sh{D} q^D_{\alpha R} + %
-			 i\, \cj{q^U}_{\alpha R} \sh{D} q^U_{\alpha R} \\ 
+			 i\, \cj{q^U}_{\alpha R} \sh{D} q^U_{\alpha R} \notag \\ 
 			&-\frac{1}{4} B_{\mu\nu} B^{\mu\nu} - \frac{1}{4} \vb{A}_{\mu\nu} \vb{A}^{\mu\nu} 
 		      + (D_\mu H)^\dagger (D^\mu H) - \mu^2 H^\dagger H - \lambda (H^\dagger H)^2  \notag \\
 		      &-\qty(Y^\ell_{\alpha \beta}\,\cj{L}_{\alpha L} H \ell_{\beta R} 
@@ -269,31 +269,52 @@ is predicted to be $\rho = 1$ in the SM: experimentally it is measured to be $\r
 The other terms of \ref{eq:all_higgs} describe self-interactions of the Higgs and %
 interactions with the $W$ and $Z$ vector bosons.
 
-Applying the same expansion of \refeq{eq:vev_higgs} to the Yukawa terms of the SM lagriangian, %
+Applying the same expansion of \refeq{eq:vev_higgs} to the Yukawa terms of the SM lagrangian, %
 we obtain a Dirac mass terms and trilinear couplings of the fermions with the Higgs.
+There is no principle by which the Yukawa coupling matrices $Y_{\alpha \beta}$ should be diagonal \emph{a priori}, %
+but without a diagonal matrix the fermion masses are not defined.
+Being a generic complex matrix, the diagonalization can be achived by a biunitary transformation
+\begin{equation} 
+	V_L^\dagger\ \frac{v}{\sqrt{2}} Y'_{\alpha \beta}\ V_R = \frac{v}{\sqrt{2}} Y_{\alpha} = m_\alpha\, \delta_{\alpha \beta}\\ ,
+\end{equation} 
+where $V_L$ and $V_R$ are unitary matrices.
+This transformation acts on the fermionic fields as
+\begin{align}
+	\ell_L = V_L^\dagger \ell_L' \quad , \quad \ell_R = V_R^\dagger \ell_R' \\ 
+	\ell_Q = V_L^\dagger \ell_L' \quad , \quad \ell_R = V_Q^\dagger \ell_R' \\ 
+\end{align}
+
 After diagonalising the Yukawa coupling $Y_{\alpha \beta} = y_\alpha \delta^\alpha_\beta$, we have in the lepton sector
 \begin{equation}
-	\label{eq:fermion_mass}
-	\mathcal{L}_{H, L} = - \sum_\alpha \frac{y_\alpha^\ell v}{\sqrt{2}} \cj{\ell}_\alpha \ell_\alpha %
-			     - \sum_\alpha \frac{y_\alpha^\ell}{\sqrt{2}} \cj{\ell}_\alpha \ell_\alpha\,h \ ,
+	\label{eq:lepton_mass}
+	\mathcal{L}_{H, L} = - \sum_\alpha \frac{y_\alpha^\ell v}{\sqrt{2}}\ \cj{\ell}_\alpha\, \ell_\alpha %
+			     - \sum_\alpha \frac{y_\alpha^\ell}{\sqrt{2}}\   \cj{\ell}_\alpha\, \ell_\alpha\,h \ ,
 \end{equation}
 where the mass of the charged leptons is given by 
 \begin{equation}
 	\label{eq:dirac_mass}
 	m_\alpha = \frac{y_\alpha^\ell\ v}{\sqrt{2}}\ .
 \end{equation}
-The same is found in the quark sector, where the right Yukawa couplings should be used with the corresponding diagonalisation.
+The same is found in the quark sector, where the right Yukawa couplings should be used with the corresponding diagonalisation:
+\begin{equation}
+	\label{eq:quark_mass}
+	\mathcal{L}_{H, Q} = - \sum_\alpha \qty(\frac{y_\alpha^D v}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha %
+					      + \frac{y_\alpha^U v}{\sqrt{2}}\ \cj{q}^U_\alpha\, q^U_\alpha) %
+			     - \sum_\alpha \qty(\frac{y_\alpha^D}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha\,h %
+			     		      + \frac{y_\alpha^U}{\sqrt{2}}\ \cj{q}^U_\alpha\, q^U_\alpha\,h) \ ,
+\end{equation}
+with masses
+\begin{equation}
+	\label{eq:dirac_mass}
+	m_\alpha = \frac{y_\alpha^D\ v}{\sqrt{2}} \quad \text{and} \quad  %
+	m_\beta = \frac{y_\beta^U\ v}{\sqrt{2}} 
+\end{equation}
+for $\alpha = d,\,s,\,b$ and $\beta = u,\,c,\,t$.
 
 
 \section{Neutrino oscillations}
 \label{sec:neutrino_oscillations}
 
-Without diagonal Yukawa couplings, the fermion masses are not defined.
-Being a generic complex matrix, the diagonalization can be achived by a biunitary tranformation
-\begin{equation} 
-	V_L^\dagger Y'_{\alpha \beta} V_R = Y_{\alpha}\ ,
-\end{equation} 
-where $V_L$ and $V_R$ are unitary matrices.
 
 
 \section{Neutrino interactions}
@@ -433,7 +454,6 @@ quasielastic scattering processes.
 On the contrary, measurements of the neutral-current elastic scattering cross-section give information %
 on the \emph{strange} form factors of the nucleon, whose main contribute comes from the strange quark.
 
-
 The low $Q^2$ region also presents an inelastic scattering contribution mostly affected by resonance production, %
 where the nucleon is excited into a baryonic resonance before decaying.
 At high $Q^2$, inelastic scattering is dominated by deep inelastic scattering (DIS), because the neutrino can scatter %
@@ -442,3 +462,205 @@ In between these extreme scenarios, an additional contribution comes from intera
 system is neither completely fragmented nor forms a recognisable resonance.
 These interactions are referred to as ``shallow inelastic scattering'', and there is no clear model for dealing %
 with them.
+
+\section{Neutrino sources}
+\label{sec:prod}
+
+Numerous are the neutrino sources at the reach of neutrino experiments.
+Neutrinos are produced in CC interactions, which can happen in nuclear reaction, as for \emph{solar} %
+or \emph{reactor} neutrinos, or in cosmic rays impacts with the Earth's atmosphere, %
+conveying energetic \emph{atmospheric} neutrinos.
+
+Artificial neutrinos are also yielded in high-energy proton accelerators.
+Accelerator neutrino beams are fundamental instrumental discovery tools in particle physics, in that more control %
+less variables are involved.
+Neutrino beams are derived from the decays of charged $\pi$ and $K$ mesons, which in turn are created from %
+proton beams striking thick nuclear targets.
+The precise selection and manipulation of the $\pi/K$ beam control the energy spectrum and type of neutrino beam.
+
+The $\pi^{\pm}$ mesons have a mass of \np{139.6}~MeV and a mean lifetime of \np{2.6e-8}~s.
+The primary decay mode of a pion, with a branching fraction of \np{99,9877}\,\%, is a leptonic %
+decay into a muon and a muon neutrino:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		\pi^+ &\rightarrow \mu^+ + \nu_\mu \\
+		\pi^- &\rightarrow \mu^- + \bar{\nu}_\mu
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{pion_muon}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i2,i1}
+			\fmfright{o2,o1}
+			\fmf{fermion}{i1,v1,i2}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmf{photon, label=$W^\pm$}{v1,v2}
+			\fmflabel{$\pi$}{v1}
+			\fmflabel{$u,d$}{i1}
+			\fmflabel{$\bar{d},\bar{u}$}{i2}
+			\fmflabel{$\mu^\pm$}{o1}
+			\fmflabel{$\nu_\mu,\bar{\nu}_\mu$}{o2}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+The second most common decay mode of a pion, is the leptonic decay into an electron and the %
+corresponding neutrino, $\pi^\pm \rightarrow \nu_e + e$.
+In spite of the considerable differences in the space momentum, this process is suppressed %
+with respect to the muonic one.
+This effect is called \emph{helicity suppression} and is due to the great mass of the muon %
+($m_\mu = \np{105.658}$~MeV) compared to the electron's ($m_e = \np{0.510}$~MeV); this results in a %
+stronger helicity-chirality correspondence for the electron rather than for the muon.
+Given that the $\pi$ mesons are spinless, neutrinos are left-handed, and antineutrinos are %
+right-handed, the muonic channel is preferred because of spin and linear momentum preservation.
+The suppression of the electronic decay mode with respect to the muonic one is given %
+approximately within radiative corrections by the ratio:
+\begin{equation}
+	R_\pi = \Bigl ( \frac{m_e}{m_\mu} \Bigr )^2 
+	\Bigl (\frac{m_\pi^2 - m_e^2}{m_\pi^2 - m_\mu^2} \Bigr )
+	= \np{1.283e-4}
+\end{equation}
+The measured branching ratio of the electronic decay is indeed $(\np{1.23}\pm{0.02})\times10^{-4}$.
+
+As far as the charged $K$ meson is concerned, it mainly decays in a muon and its correspective neutrino, %
+with a branching ratio of \np{63.55}\,\%:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		K^+ &\rightarrow \mu^+ + \nu_\mu \\
+		K^- &\rightarrow \mu^- + \bar{\nu}_\mu
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{kaon_muon}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{i2,i1}
+			\fmfright{o2,o1}
+			\fmf{fermion}{i1,v1,i2}
+			\fmf{photon, label=$W^\pm$}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmflabel{$K$}{v1}
+			\fmflabel{$u,s$}{i1}
+			\fmflabel{$\bar{s},\bar{u}$}{i2}
+			\fmflabel{$\mu^\pm$}{o1}
+			\fmflabel{$\nu_\mu,\bar{\nu}_\mu$}{o2}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+The second most frequent decay (\np{20.66}\,\%) is the decay into two pions, $K^{\pm} \rightarrow \pi^0 + \pi^\pm$.
+Other decays have a branching ratio of 5\,\% or less and are listed in table Tab.~\ref{tab:kaons}.
+On the contrary, the decays of the neutral kaon produce neutrino in few cases.
+Because of the oscillation phenomenon given by the mixing between $K^0$ and $\bar K^0$, the neutral kaon has two %
+manifestations, the short kaon $K_S$ and the long kaon $K_L$, named after their lifetimes.
+While the $K$-short decays only in two pions ($2 \pi^0$ or $\pi^+ + \pi^-$), the $K$-long has a wider variety %
+of final state combination, all of them involving three particles.
+Among these, neutrinos are produced in the processes:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		K^0_L &\rightarrow \pi^\pm + \mu^\mp + \overset{(-)}{\nu}_\mu \\
+		K^0_L &\rightarrow \pi^\pm + e^\mp + \overset{(-)}{\nu}_e 
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{kaonlong}
+		\begin{fmfgraph*}(70,70)
+			\fmfleft{h,i}
+			\fmfright{k,o3,o2,o1}
+			\fmf{fermion}{i,v1,o3}
+			\fmf{fermion}{h,w,k}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmflabel{$d$}{h}
+			\fmflabel{$d$}{k}
+			\fmflabel{$s$}{i}
+			\fmflabel{$\nu_\mu$}{o3}
+			\fmflabel{$e^\pm$}{o2}
+			\fmflabel{$\nu_e$}{o1}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+\begin{table}
+	\caption{Decay mode for a charged kaon, $K^\pm$, sorted by branching ration (in percent).}
+	\label{tab:kaons}
+	\[
+		\begin{array}{lr}
+			\toprule
+			\mu^\pm + \overset{(-)}{\nu}_\mu	&	\np{65.55}\pm\np{0.11}	\\
+			\midrule
+			\pi^\pm + \pi^0			&	\np{20.66}\pm\np{0.08}	\\
+			\midrule
+			\pi^+ + \pi^\pm + \pi^-		&	\np{5.59}\pm\np{0.04}	\\
+			\midrule
+			\pi^0 + e^\pm + \overset{(-)}{\nu}_e	&	\np{5.07}\pm\np{0.04}	\\
+			\midrule
+			\pi^0 + \mu^\pm + \overset{(-)}{\nu}_\mu	&	\np{3.35}\pm\np{0.03}	\\
+			\midrule
+			\pi^\pm + \pi^0 + \pi^0		&	\np{1.76}\pm\np{0.02}	\\
+			\bottomrule
+		\end{array}
+	\]
+\end{table}
+
+Neutrinos are also produced by the decay of muons.
+Muons are unstable elementary particles and decay via the weak interaction. 
+The dominant decay mode, called \emph{Michel decay}, is also the simplest possible:
+because lepton numbers must be conserved, one of the product neutrinos of muon decay %
+must be a muonic neutrino and the other an electronic antineutrino, along with an electron, %
+because of the charge preservation.
+Vice versa, an antimuon decay produces the corresponding antiparticles.
+These two decays are:
+
+%%
+\begin{minipage}[c][3cm][c]{0.5\textwidth}
+	\centering
+	\begin{align}
+		\label{eq:mupdecay}
+		\mu^- &\rightarrow e^- + \bar\nu_e + \nu_\mu \\
+		\label{eq:mundecay}
+		\mu^+ &\rightarrow e^+ + \nu_e + \bar\nu_\mu
+	\end{align}
+\end{minipage}
+%
+\begin{minipage}[c][3.5cm][c]{0.5\textwidth}
+	\centering
+	\begin{fmffile}{mudecay}
+		\begin{fmfgraph*}(70,70)
+			\fmfleft{i}
+			\fmfright{o3,o2,o1}
+			\fmf{fermion}{i,v1,o3}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmflabel{$\mu^\pm$}{i}
+			\fmflabel{$\nu_\mu$}{o3}
+			\fmflabel{$e^\pm$}{o2}
+			\fmflabel{$\nu_e$}{o1}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{minipage}
+%%
+
+The neutrino source provided by the muon decay, is more of a nuisance background, because of the long lifetime, %
+which give rise to electronic component in neutrino spectrum.
+Usually a beam absorbed is located at the end of the decay region of an accelerator line, to stop the hadronic and %
+muonic component of the beam, and only an almost pure neutrino beam pointing towards te.
+

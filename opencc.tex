@@ -1,0 +1,125 @@
+\clearpage
+\chapter{Open charm production}
+\label{sec:opencc}
+
+\begin{figure}
+	\centering
+	\begin{fmffile}{qq}
+		\begin{fmfgraph*}(80,50)
+			\fmfset{arrow_len}{2.5mm}
+			\fmfleft{q1,q0}
+			\fmfright{c1,c0}
+			\fmflabel{$q$}{q0}
+			\fmflabel{$\cj{q}$}{q1}
+			\fmflabel{$c$}{c0}
+			\fmflabel{$\cj{c}$}{c1}
+			\fmf{fermion}{q0,vl,q1}
+			\fmf{gluon}{vl,vr}
+			\fmf{fermion}{c1,vr,c0}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\hspace{0.2em}
+	\raisebox{2em}{,}
+	\hspace{0.2em}
+	\begin{fmffile}{gg_0}
+		\begin{fmfgraph*}(80,50)
+			\fmfset{arrow_len}{2.5mm}
+			\fmfleft{g1,g0}
+			\fmfright{c1,c0}
+			\fmflabel{$g$}{g0}
+			\fmflabel{$g$}{g1}
+			\fmflabel{$c$}{c0}
+			\fmflabel{$\cj{c}$}{c1}
+			\fmf{gluon}{g0,vl}
+			\fmf{gluon}{g1,vl}
+			\fmf{gluon}{vr,vl}
+			\fmf{fermion}{c1,vr,c0}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\hspace{0.1em}
+	\raisebox{2em}{$+$}
+	\hspace{0.1em}
+	\begin{fmffile}{gg_1}
+		\begin{fmfgraph*}(80,50)
+			\fmfset{arrow_len}{2.5mm}
+			\fmfleftn{g}{2}
+			\fmfrightn{c}{2}
+			\fmf{fermion}{c1,vt,vb,c2}
+			\fmf{gluon}{g1,vt}
+			\fmf{gluon}{g2,vb}
+			\fmflabel{$g$}{g1}
+			\fmflabel{$g$}{g2}
+			\fmflabel{$\cj{c}$}{c1}
+			\fmflabel{$c$}{c2}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\hspace{0.1em}
+	\raisebox{2em}{$+$}
+	\hspace{0.1em}
+	\begin{fmffile}{gg_2}
+		\begin{fmfgraph*}(80,50)
+			\fmfset{arrow_len}{2.5mm}
+			\fmfleftn{g}{2}
+			\fmfrightn{c}{2}
+			\fmf{gluon}{g1,vt}
+			\fmf{gluon}{g2,vb}
+			\fmf{phantom}{c2,vb,vt,c1}
+			\fmf{fermion,tension=0}{c1,vb,vt,c2}
+			\fmflabel{$g$}{g1}
+			\fmflabel{$g$}{g2}
+			\fmflabel{$\cj{c}$}{c1}
+			\fmflabel{$c$}{c2}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\vspace{1em}
+	\caption{These are the four diagrams contributing to the hard process in open charm production.
+		The diagrams with gluons in the initial state interfere with each other giving rise to %
+		cross terms in the colour structure.}
+	\label{fig:parton}
+\end{figure}
+
+Following the same procedure as the one described in~\refref{Alekhin:2015byh}, %
+we estimate the number of strange $D$ mesons to be
+\begin{equation}
+	\mathcal{N}_{D_s} = \frac{\sigma_{c \cj{c}}}{\sigma_{p A}} f_{D_s} = (2.8 \pm 0.2) \times \np{e-6}\ ,
+\end{equation}
+where $\sigma_{c \cj{c}} = \np{12}\pm\np{1}$\,\textmu b is the proton-target open charm cross section, %
+$\sigma_{p A} = \np{331.4}\pm\np{3.4}$\,mb is the total inelastic proton-target on carbon ($A =$ \tapi{12}C)~\cite{RamanaMurthy:1975vfu} %
+cross section, and $f_{D_s} = \np{7.7}\,\%$ is the $D_s$ fragmentation fraction~\cite{Abramowicz:2013eja}.
+%where $\sigma_{c \cj{c}}$ is the proton-target open charm cross section, $\sigma_{p A}$ is the total inelastic %
+%proton-target inelastic cross section, and $f_{D_s}$ is the $D_s$ fragmentation fraction.[h]
+We calculate the open charm production cross section at the leading order in perturbation theory, with a %
+graphite fixed target and a 80\,GeV proton $p$.
+The correct process to consider is the proton--nucleon interaction, therefore %
+\begin{equation*}
+	\sigma_{c \cj{c}} \equiv \sigma(pA \to c \cj{c} + X) \approx A\,\sigma(pN \to c \cj{c} +X)\ , %
+\end{equation*}
+using the correct Parton Distribution Function (PDF) for a bound nucleon $N$ in the nucleus $A$.
+There are four diagrams, shown in figure~\reffig{fig:parton}, that contributes to the cross section, %
+but three of them interfere with each other.
+These cross sections are well-known SM calculations and can be found in~\refref{PDG}.
+The integrated cross section is:
+\begin{multline}
+	\sigma(pN \to c \cj{c} + X) = \int_{\tau_0}^1 \dd{x_1} \int_{\frac{\tau_0}{x_1}}^1 \dd{x_2} \int \dd{\Omega} %
+	\bigg[\qty(f_{g/p}^1\, f_{g/A}^2 + f_{g/p}^2\, f_{g/A}^1) \dv{\sigma_{gg \to c \cj{c}}}{\Omega} \\
+	+\sum_{q=u,d,s} \qty(f_{q/p}^1\, f_{\cj{q}/A}^2 + f_{q/p}^2\, f_{\cj{q}/A}^1 + %
+	f_{\cj{q}/p}^1\, f_{q/A}^2 + f_{\cj{q}/p}^2\, f_{q/A}^1) \dv{\sigma_{q\cj{q} \to c \cj{c}}}{\Omega}\bigg]\ ,
+\end{multline}
+with $\tau_0 = \hat{s}_0 / s$ and $\hat{s}_0$ being the threshold energy at the partonic level and %
+$s = 2 m_p ( m_p + E_p)$ is the centre of mass energy, given that $m_p \simeq m_n$.
+The partonic structure of the nucleus is described by the functions $f_{\rho/\eta}^i = f_{\rho/\eta}(x_i, M_F)$, %
+which are interpreted as the probability of finding a parton $\rho$ in the particle $\eta$ %
+carrying a $x_i$ fraction of the momentum of $\eta$, at the energy scale $M_F$.	
+The two momentum fractions are related by $x_1\,x_2\,s = \hat{s}$, where the hat symbol denotes the energy %
+of the parton-level process.
+
+
+
+We adopt a factorisation scale of $M_F = 2.1\, m_c$ for the computation of $\sigma_{c \cj{c}}$, 
+while the renormalisation scale of $\alpha_s$ is set to $\mu_R = 1.6\, m_c$, and the charm mass has the value %
+\mbox{$m_c = (\np{1.28}\pm\np{0.03})$\,GeV}.
+The integration is regulated for $|\cos \theta| < 0.8$, with $\theta$ the angle in the centre of mass frame.
+The theoretical curve in Fig.~7.4(a) of~\refref{Alekhin:2015byh} was used to check our evaluation, %
+and it was successfully reproduced up to NLO corrections.
+For~the calculation we employed LHAPDF~\cite{Buckley:2014ana} and the nCTEQ15 PDF set~\cite{Kovarik:2015cma}, %
+resulting in $\sigma_{pA \to c \cj{c}} = (\np{12}\pm1)\,\mu$b, for an 80\,GeV protons on a graphite target.

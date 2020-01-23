@@ -1,0 +1,255 @@
+\clearpage
+\chapter{List of integrals and identities}
+\label{app:integrals}
+
+In presenting the differential and total decay rates in~\refsec{sec:decay} and~\ref{sec:production}, %
+we have used a series of simplifying integrals and functions of the particle masses.
+We report them jointly here.
+The letters $x$, $y$, and $z$ denote squared ratios of masses, while $s$, $t$, and $u$ are the corresponding Mandelstam variables for three body decays.
+
+\subsection{Decay widths}
+
+In~\cite{Atre:2009rg}, the following functions are used to express the total rates of two-body decays  
+%
+\begin{align*}
+	%
+	I_1 (x, y) &= \kallen(1, x, y)\, \qty[(1-x)^2 - y(1+x)]\ ,\\
+	%
+	I_2 (x, y) &= \kallen(1, x, y)\, \qty[(1+x-y)(1+x+2y)-4x]\ ,
+	%
+\end{align*}
+%
+and the rate of three-body decays can be expressed in terms of two more functions \cite{Atre:2009rg}, 
+%
+\begin{align*}
+	I_1(x,y,z) &= 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\! %
+	\frac{\dd{s}}{s} (s-x-y)\,(1+z-s)\kallen(1,x,y)\kallen(1,s,z)\ ,\\
+	%
+	I_2(x,y,z)&=24\,\sqrt{yz} \int\limits_{\qty(\sqrt{y}+\sqrt{z})^2}^{\qty(1-\sqrt{x})^2}\!\! %
+	\frac{\dd{s}}{s}(1+x-s)\kallen(s,y,z)\kallen(1,s,x)\ .
+\end{align*}
+%
+In this work we have introduced two differential generalisations of the two-body formulae,
+%
+\begin{align*}
+	I^\pm_1 (x, y; \theta) &= \frac{1}{4\pi}\kallen(1, x, y) \qty[(1-x)^2 - y\,(1+x) \pm (x-1)\kallen(1, x, y) \cos\theta]\ ,\\
+	%
+	I^\pm_2 (x, y;\theta) &= \frac{1}{4\pi}\kallen(1, x, y) \qty[(1+x-y)\,(1+x+2y)-4x \pm (x+2y-1)\kallen(1, x, y) \cos\theta]\ .
+\end{align*}
+%
+Our expressions satisfy the normalisation conditions,  
+%
+\begin{align*}     
+	\int_0^{2\pi} \!\! \dd{\varphi}\!\int_{-1}^1\!\!\dd{\cos\theta}\, I^\pm_1(x,y;\theta)&= I_1(x,y)\ ,\\
+	%
+	\int_0^{2\pi} \!\! \dd{\varphi}\!\int_{-1}^1\!\!\dd{\cos\theta}\, I^\pm_2(x,y;\theta) &= I_2(x,y)\ . 
+\end{align*}
+%
+We also note the following integrals which are necessary in deriving the total decay rate for the three-body leptonic modes, 
+% 
+\begin{align}   
+	\int\!\! \dd{s_1}\!\! \int\!\! \dd{s_2}\, (s_2-\xi^2_3)(1+\xi^2_4-s_2) &= \frac{I_1(0,\xi^2_3,\xi_4^2)}{12}\ ,\label{eq:threebody_int1}\\ 
+	%
+	\int\!\! \dd{s_1}\!\! \int\!\! \dd{s_2}\, (s_1-\xi^2_4)(1+\xi^2_3-s_1) &= \frac{I_1(0,\xi^2_4,\xi_3^2)}{12}\ ,\label{eq:threebody_int2}\\ 
+	%\
+	\int\!\! \dd{s_1}\!\! \int\!\! \dd{s_2}\ 2\xi_3\,\xi_4(s_1+s_2-\xi^2_3-\xi^2_3) &= %
+	\frac{I_2(0,\xi^2_3,\xi_4^2)}{12}\ ,\label{eq:threebody_int3}
+\end{align}
+where $\xi_i$ have the same meanings of \refeqs{eq:threebody_1}{eq:threebody_2}.
+%\begin{align}   
+%%
+%\int\!\! ds_1\!\!\int\!\! ds_2\, (s_2-\xi^2_3)(1+\xi^2_4-s_2) &= \int_{\xi^2_3}^{(1-\xi_4)^2}\!\! \frac{ds_2}{s_2}\, (s_2-\xi^2_3)^2(1+\xi^2_4-s_2)\lambda^\frac{1}{2}(1,s_2,\xi^2_4), \nonumber\\
+%%
+%&= \frac{I_1(0,\xi^2_3,\xi_4^2)}{12},\label{eq:threebody_int1}\\ 
+%%
+%\int\!\! ds_1\!\!\int\!\! ds_2\, (s_1-\xi^2_4)(1+\xi^2_3-s_1) &= \int_{\xi^2_4}^{(1-\xi_3)^2}\!\! \frac{ds_1}{s_1}\, (s_1-\xi^2_4)^2(1+\xi^2_3-s_1)\lambda^\frac{1}{2}(1,s_1,\xi^2_3),\nonumber\\ 
+%%
+%&= \frac{I_1(0,\xi^2_4,\xi_3^2)}{12},\label{eq:threebody_int2}\\ 
+%%
+%\int\!\! ds_1\!\!\int\!\! ds_2\, 2\xi_3\xi_4(s_1+s_2-\xi^2_3-\xi^2_3) &=2\xi_3\xi_4\int_{(\xi_3+\xi_4)^2}^{1}\!\! \frac{ds_3}{s_3}\, (1-s_3)^2\lambda^\frac{1}{2}(s_3,\xi^2_3,\xi^2_4),\nonumber\\
+%%
+%&= \frac{I_2(0,\xi^2_3,\xi_4^2)}{12}.\label{eq:threebody_int3}
+%%
+%\end{align*}
+
+\subsection{Scaling factors for three body-decays}
+
+%The following integrals are used in \refsec{sec:production} to 
+%\subsubsection{Production from leptons}
+
+%The decay rates for leptons needs the following two
+Three-body lepton decays can produce neutrinos in two ways, depending on whether the neutrino mixes with %
+the initial or with the final flavour.
+The expressions presented in~\refsec{sec:production} make use of the following integrals:
+\begin{align*}
+	I^\pm_\ell(x, y, z) = 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\!  \frac{\dd{s}}{s} % 
+	%I^\pm_\ell(x, y, z) = 12 \int\limits_{(x+y)^2}^{(1-z)^2}\!\!
+	&\qty(1 + z - s) \qty[s - x - y \mp \kallen(s, x, y) ] \\
+	&\times \kallen(s, x, y) \kallen(1, s, z)\ ,
+\end{align*}
+% 
+\begin{align*}
+	I^\pm_{\cj{\ell}}(x, y, z) = 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\!  \frac{\dd{s}}{s} % 
+	%I^\pm_{\cj{\ell}}(x, y, z) = 12 \int\limits_{(x+y)^2}^{(1-z)^2}\!\! \frac{\dd{s}}{s} %
+	&\qty[1 + z - s \mp \kallen(1, s, z) ] \qty(s - x - y) \\
+	&\times \kallen(s, y, z) \kallen(1, s, z)\ .
+\end{align*}
+%
+When averaging over the helicity states, these two functions become identical and, because of symmetry crossing, %
+also identical to the integral $I_1(x, y, z)$, expressed above.
+
+%\subsubsection{Production from mesons}
+
+In~\refsec{sec:production}, the three-body decay rate of pseudoscalar meson requires the following integral:
+\begin{align*}
+	I^\pm_h(x, y, z) = \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\!
+	%I^\pm_h(x, y, z) = \int\limits_{(x+y)^2}^{(1-z)^2}\!\!
+	\dd{s} \int_{t_-}^{t_+}\!\! %
+	\dd{t} \qty[ F^2 A^\pm(s, t) + G^2 B^\pm(s, t) - \Re(F^* G)\,C^\pm(s, t) ]\ , \\
+	\text{with}\quad t_\pm = x + z + \frac{ (1-s-z)(s - y + x) \pm \kallen(s, y, z)\kallen(1, s, z) }{2 s}\ ,
+\end{align*}
+where $F$ and $G$ are convenient combinations of hadronic form factors $f^{(h,h')}$.
+From lattice QCD considerations, form factors should carry the correct Clebsch-Gordan, %
+but here we drop them as they are irrelevant when studying scale factors.
+The combinations $F$ and $G$ are
+\begin{align*}
+	F &= 2\ f_+^{(h,h')}(u) = f_+^{(h,h')}(0)%
+	\qty(1 + \lambda^{(h,h')}_+ \frac{u}{x})\ , \\
+	G &= f_+^{(h,h')}(u) - f_-^{(h,h')}(u) = f_+^{(h,h')}(0)%
+	\qty[1 + \lambda^{(h,h')}_+ \frac{u}{x} - %
+	\qty(\lambda^{(h,h')}_+ - \lambda^{(h,h')}_0) \qty( 1 + \frac{1}{x})]\ ,
+\end{align*}
+with $\lambda$ parametrising the linear dependence~\cite{PDG} of the form factors %
+with respect the momentum transfer between the two mesons, $u$, %
+directly connected to the other Mandelstam variables, $s$ and $t$:
+\begin{equation*}
+	u = 1 + x + y + z - s - t\ .
+\end{equation*}
+The values of $\lambda_{+,0}$ is determined experimentally~\cite{PDG}.
+The functions $A$, $B$, and $C$ are
+\begin{align*}
+	A^\pm(s, t) &= \frac{1}{2}(1 + y - t) \qty[ 1 + z - s \mp \kallen(1, z, s) ] - %
+	\frac{1}{2}\qty[u - y - z \mp \kallen(u, y, z)]\ , \\
+	B^\pm(s, t) &= \frac{1}{2}(y + z) (u - y - z) + 2 y z \mp (y - z) \frac{\kallen(u, y, z)}{2}\ , \\
+	C^\pm(s, t) &= z (1 + y - t) + \qty[y \pm \frac{\kallen(u, y, z)}{2}] (1 + z - s)\ . 
+\end{align*}
+When summing over helicity states, the kinematic simplifies to
+\begin{align*}
+	A(s, t) &= (1 + y - t)( 1 + z - s) - (u - y - z)\ , \\
+	B(s, t) &= (y + z) (u - y - z) + 4\, y\, z\ , \\
+	C(s, t) &= 2\, z\, (1 + y - t) + 2\, y\, (1 + z - s)\ .
+\end{align*}
+
+\section{Polarised $N\to\nu \ell_\alpha^-\ell^+_\beta$ distributions}
+\label{app:threebody_dist}
+
+%The differential decay rate for the process $N(k_1) \to \nu(k_2) e_\alpha^-(k_3)e^+_\beta(k_4)$ depends on five phase space variables. We choose to write the results in the form 
+%%
+%\[  d\Gamma_\pm = \frac{G_F^2 m_N^5}{16 \pi^3} |A_\pm|^2 ds_1ds_2\frac{d^2\Omega_3}{4\pi}\frac{d\varphi_{43}}{2\pi}, \]
+%%
+%with $|A_\pm|$ denoting the ampltude for the decay of a heavy neutrino with helicity $h=\pm1$. 
+%%
+%The integration is done over the reduced Mandelstam variables $(k_2+k_3)^2=m_N^2s_1$ and $(k_2+k_4)^2=m_N^2s_2$ as well as three angular variables defined by the lab-frame direction of $e^-_\alpha$, $\Omega_3 = (\theta_3, \phi_3)$, and the relative azimuthal between $e^-_\alpha$ and $e^+_\beta$, $\varphi_{43}$. Which take values over the full (solid-)angular range.
+%%
+%%The ranges of the Mandelstam variables are
+%%%
+%%\[  \xi_4^2 \le s_1 \le (1-\xi_3)^2 \qquad \text{and} \qquad \xi_4^2 \le s_2 \le (1-\xi_3)^2, \]
+%%%
+%%or equivalently, 
+%%
+%
+%
+%Depending on the nature of the neutrino and the flavours the distribution will change. However, all decays can be expressed in terms of a common functional form. We define two functions, representing the isotropic and angular parts of the amplitude,
+%%
+%\begin{align*}   
+%%
+% |A_0|^2 &\equiv C_1(s_2-\xi^2_3)(1+\xi^2_4-s_2) + C_2(s_1-\xi^2_4)(1+\xi^2_3-s_1) + 2C_3\xi_3\xi_4(s_1+s_2 - \xi^2_3 - \xi^2_4), \\
+%%
+%|A_1|^2 &\equiv \left[ C_4(s_2-\xi_3^2) - 2C_6\xi_3\xi_4\right]\lambda^\frac{1}{2}(1,s_2,\xi_4^2)\cos\theta_4 + \left[C_5(s_1-\xi_4^2) - 2C_6\xi_3\xi_4\right]\lambda^\frac{1}{2}(1,s_1,\xi_3^2)\cos\theta_3. 
+%%
+%\end{align*}
+%%
+%where $\xi_i = m_i^2/m_N^2$ with $m_i^2 = k_i^2$. The coefficients $\{C_i\}$ are polynomials in chiral couplings and PMNS matrix elements and are given on a case by case basis in the sections below. Although $\cos\theta_4$ is not a parameter in our parameterization, its use simplifies the presentation of the distribution and can be easily related to the fundamental variables $(s_1,s_2,\theta_3,\varphi_3, \varphi_{43})$.
+%
+%On integration over the angular coordinates, only the terms in $|A_0|^2$ remain and we recover the standard expression for the total decay rates through the identities given in Eqs.~(\ref{eq:threebody_int1}), (\ref{eq:threebody_int2}) and (\ref{eq:threebody_int3}). 
+%%
+%The general expression for the total decay rate is
+%%
+%\[  \Gamma_\pm =  \frac{G_F^2 m_N^5}{192 \pi^3} \left[ C_1I_1(0,\xi_3^2,\xi_4^2) +  C_2I_1(0,\xi_4^2,\xi_3^2) + C_3I_2(0,\xi_3^2,\xi_4^2) \right]. \]
+%
+%
+\subsection{Dirac $\nu_i$} 
+%
+The coefficients for a Dirac neutrino decay are given by 
+%
+\begin{align*}
+	C^\nu_1 &= C^\nu_4= \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[\delta_{\alpha\beta} g_L^2+ %
+	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\\ 
+	%
+	C^\nu_2 &= C^\nu_5= \delta_{\alpha\beta}\,g^2_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2\ ,\\ 
+	%
+	C^\nu_3 &= C^\nu_6= \delta_{\alpha\beta}\,g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\gamma\beta} + g_L)\ ,
+\end{align*}
+%
+where the chiral couplings for charged leptons are given by $g_L = -\frac{1}{2} + \sin^2\theta_\text{W}$ 
+and \mbox{$g_R = \sin^2\theta_\text{W}$}.
+
+\subsection{Dirac $\overline{\nu}_i$}  
+%
+The coefficients for the Dirac antineutrino decay---which involve some vital minus signs compared %
+to the neutrino case---are given by 
+%
+\begin{align*}
+	C^{\cj{\nu}}_1 &= -C^{\overline{\nu}}_4 = \delta_{\alpha\beta}\,g^2_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2\ ,\\
+	%
+	C^{\cj{\nu}}_2 &= -C^{\overline{\nu}}_5 = \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 %
+	\qty[ \delta_{\alpha\beta} g_L^2+ \delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\\
+	%
+	C^{\cj{\nu}}_3 &= -C^{\overline{\nu}}_6 = \delta_{\alpha \beta}\, g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\alpha\gamma} + g_L)\ ,
+\end{align*}
+%
+where the chiral couplings $g_L$ and $g_R$ have the same meaning.
+
+\subsection{Majorana $N_i$}  
+%
+The amplitude for Majorana decay is the sum of the Dirac neutrino and Dirac antineutrino amplitudes given above:%
+\footnote{In general, there are interference terms between ``neutrino'' and ``antineutrino'' diagrams; %
+	however all such contributions are suppressed by the mass scale of the outgoing light neutrino, %
+	which is taken to be zero in these calculations.}
+%
+\begin{equation*}
+	|A_\pm|^2 = |A^\nu_\pm|^2 + |A^{\cj{\nu}}_\pm|^2\ .
+\end{equation*} 
+%
+%& = |A_0^\nu|^2 + |A^{\overline{\nu}}_0|^2 \pm \left( |A_1^\nu|^2 - |A^{\overline{\nu}}_1|^2  \right).\end{align*}
+%
+Crucially, this means that the coefficients in the isotropic terms are the sum of those for a neutrino and antineutrino while the coefficients in the angular terms are the difference, leading to cancellations.
+%
+All in all, we find
+%
+\begin{equation*}
+	|A_\pm|^2 = |A_0|^2 \pm |A_1|^2\ , 
+\end{equation*}
+%
+with the coefficients
+%
+\begin{align*}
+	C_1&=C_1^\nu + C_1^{\cj{\nu}} = \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ (g_L^2+g_R^2)\delta_{\alpha\beta} + %
+	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\\
+	%
+	C_2&=C_2^\nu + C_2^{\cj{\nu}} = \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ (g_L^2+g_R^2)\delta_{\alpha\beta} + %
+	\delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\\
+	%
+	C_3&=C_3^\nu + C_3^{\cj{\nu}} = 2\delta_{\alpha\beta}\,g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\alpha\gamma} + g_L)\ ,\\
+	%
+	C_4&=C_1^\nu -C_1^{\cj{\nu}} = \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ \delta_{\alpha\beta}(g_L^2-g_R^2) + %
+	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\\
+	%
+	C_5&=C_2^\nu - C_2^{\cj{\nu}} = -\sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ \delta_{\alpha\beta}(g_L^2-g_R^2) + %
+	\delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\\
+	%
+	C_6&= C_3^\nu - C_3^{\cj{\nu}} = 0\ .
+\end{align*}
+%
+Note that for the three-body decays, the decay is not isotropic in the Majorana limit; however, the quantity $g_L^2 - g_R^2 \approx 0.02$, suppresses the angular terms in the pure NC case. 
+
