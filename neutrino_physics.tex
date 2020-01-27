@@ -199,9 +199,9 @@ These are
 where the $W$ and $Z$ vector bosons have been factorised out, leaving the fermionic currents
 \begin{align}
 	\label{eq:lepton_cc}
-	j^\mu_\text{CC,L} &= - \cj{\bs{\nu}}\, \gamma^\mu(1-\gamma^5)\, \bs{\ell} \\
+	j^\mu_\text{CC,L} &= \cj{\bs{\nu}}\, \gamma^\mu(1-\gamma^5)\, \bs{\ell} \\
 	\label{eq:lepton_nc}
-	j^\mu_\text{NC,L} &= - \cj{\bs{\nu}}\, \gamma^\mu\, (g^\nu_V - g^\nu_A \gamma^5)\, \bs{\nu} + %
+	j^\mu_\text{NC,L} &= \cj{\bs{\nu}}\, \gamma^\mu\, (g^\nu_V - g^\nu_A \gamma^5)\, \bs{\nu} + %
 		      \cj{\bs{\ell}}\, \gamma^\mu\, (g^\ell_V-g^\ell_A\gamma^5)\, \bs{\ell}\ .
 \end{align}
 The constant $g'$ has been re-written in terms of $g$ and $\vartheta_\text{W}$ by setting to zero the coupling of neutrinos %
@@ -211,11 +211,12 @@ to the electromagnetic field for neutrinos, which gives
 \end{equation}
 Another important relation comes from the charged lepton couplings with the electromagnetic field which must coincide %
 the QED Lagrangian: we have that $g \sin\vartheta_\text{W} = q_e$ and so $g^2 + g'^2 = q_e^2$.
-The~constants $g_V$ and $g_A$, introduced in \refeq{eq:Lagrangian_nc}, can be defined for any fermion $f$ as
-\begin{align}
-	g_V^f &= I_3^f - 2 q^f \sin^2 \vartheta_\text{W} \\
-	g_A^f &= I_3^f\ .
-\end{align}
+The~constants $g_V$ and $g_A$, introduced in \refeq{eq:lagrangian_nc}, can be defined for any fermion $f$ as
+\begin{equation}
+	\label{eq:gv_ga}
+	g_V^f = I_3^f - 2 q^f \sin^2 \vartheta_\text{W} \quad \text{and} \quad
+	g_A^f = I_3^f\ .
+\end{equation}
 Thanks to this notation, the interaction Lagrangian for the quark sector can be written in the same form of %
 \refeq{eq:currents_ccnc}, where the fermionic currents of \refeqs{eq:lepton_cc}{eq:lepton_nc} now become
 \begin{align}
@@ -289,6 +290,7 @@ The fifth and sixth terms represent the mass terms for the $W$ and $Z$ bosons, n
 \end{equation}
 and the following parameter
 \begin{equation}
+	\label{eq:magic_ratio}
 	\rho = \frac{m_W^2}{m_Z^2 \cos^2\vartheta_\text{W}}
 \end{equation}
 is predicted to be $\rho = 1$ in the SM: experimentally it is measured to be $\rho = 0.999999$.
@@ -361,6 +363,7 @@ The same transformations of \refeqs{eq:lepton_eigenmass}{eq:quark_eigenmass} sho
 equally applied to all the parts of the EW Lagrangian.
 Let us start from the quark CC current expressed in \refeq{eq:quark_cc}
 \begin{equation}
+	\label{eq:real_quark_cc}
 	j^\mu_\text{CC,Q} = 2\ \cj{\bs{q}}^U_L\, \gamma^\mu\, \bs{q}^D_L %
 			  = 2\ \cj{\hat{\bs{q}}}^U_L V^{U\dagger}_L\, \gamma^\mu\, V_L^D\hat{\bs{q}}^D_L % 
 			  = 2\ \cj{\hat{\bs{q}}}^U_L\, \gamma^\mu\, V\, \hat{\bs{q}}^D_L\ ,
@@ -372,6 +375,7 @@ The same mixing matrix, however, does not appear in the NC current of \refeq{eq:
 defining the couplings $2 g_L^f = g_V^f + g_A^f$ and $2 g_R^f = g_V^f - g_A^f$, the current with mass eigenstates %
 becomes
 \begin{align}
+	\label{eq:real_quark_nc}
 	j^\mu_\text{NC,Q} &= 2 g^U_L\ \cj{\bs{q}}^U_L\, \gamma^\mu\, \bs{q}^U_L %
 			   + 2 g^U_R\ \cj{\bs{q}}^U_R\, \gamma^\mu\, \bs{q}^U_R %
 			   + 2 g^D_L\ \cj{\bs{q}}^D_L\, \gamma^\mu\, \bs{q}^D_L %
@@ -583,69 +587,170 @@ where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$.
 The angle $\delta_\text{CP}$ is the physical phase. % which is responsible for CP violation.
 %whereas the additional phases $\gamma_1$ and $\gamma_2$ bring about CP violation if the neutrinos are Majorana.
 
+\subsection{Propagation of neutrinos in matter}
+\label{sec:neutrino_matter}
+
+
+
+
 
 
 \section{Neutrino interactions}
 \label{sec:neutrino_interactions}
 
-The easiest interaction that can be studied is the neutrino-electron elastic scattering
-\begin{equation}
-	\nu_\alpha + e^- \rightarrow \nu_\alpha + e^-\,,
-\end{equation}
-and its antineutrino counterpart\footnote{In terms of Feynman diagrams, the \emph{t}-channel diagram is %
-	replaced by the \emph{s}-channel diagram.}.
-For the electronic neutrino, both CC and NC interactions are allowed, while for $\alpha = \mu, \tau$ the %
-charged-current interactions are forbidden.
-The respective Feynman diagrams are shown in Fig.~\ref{fig:nescat} and~\ref{nutscat}.
-For low neutrino energies, where the effects of the $W$ and $Z$ propagators can be neglected, %
-the above processes are described by the effective charged-current and neutral-current Lagrangian
+Neutrino interactions in their flavour states are described by \refeqs{eq:lepton_cc}{eq:lepton_nc}.
+Replacing the values of $g^\nu_V$ and $g^\nu_A$ for a neutrino, the relevant lagrangian terms are
 \begin{align}
-	\mathcal{L}_\mathrm{eff}(\nu_e e^- \rightarrow \nu_e e^-) &= - \frac{G_F}{\sqrt{2}} %
-	[\overline{\nu_e}\gamma^\mu(1-\gamma^5)\nu_e][\bar{e}\gamma_\mu((1+g_V^l)-(1+g_A^l)\gamma^5)e] \\
-	\mathcal{L}_\mathrm{eff}(\nu_\alpha e^- \rightarrow \nu_\alpha e^-) &= - \frac{G_F}{\sqrt{2}} %
-	[\overline{\nu_\alpha}\gamma^\mu(1-\gamma^5)\nu_\alpha][\bar{e}\gamma_\mu(g_V^l-g_A^l)\gamma^5)e] %
-	\quad (\alpha = \mu,\tau)\,.
+	\mathcal{L}_{\text{CC},\nu} &= -\frac{g}{2\sqrt{2}}\ 	      %
+	\sum_{\alpha=e,\mu,\tau} \cj{\nu}_\alpha \sh{W} (1-\gamma^5) \ell_\alpha + \text{h.c.} \\
+	\mathcal{L}_{\text{NC},\nu} &= -\frac{g}{4\cos\vartheta_\text{W}}\ %
+	\sum_{\alpha=e,\mu,\tau} \cj{\nu}_\alpha \sh{Z} (1-\gamma^5) \nu_\alpha \ .
+\end{align}
+For energies below the $W$ and $Z$ mass, the allowed tree-level interactions involving at least one neutrino %
+are any allowed variation of the processes represented in \reffig{fig:neutrino_tree}.
+The vector bosons cannot be produced on-shell and so their field operator must contract with some other external field.
+The amplitudes of the processes shown in \reffig{fig:neutrino_tree} are
+\begin{align}
+	i \mathcal{M}_\text{CC} &= i\, \frac{g^2}{8}\ \cj{u}_{\ell_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
+						    \,\frac{\eta_{\mu\nu}}{k^2 - m_W^2+i\varepsilon}
+						    \,\cj{u}_{f_2} \gamma^\nu (1-\gamma^5)\,V_{12}\, u_{f_1} \\
+	i \mathcal{M}_\text{NC} &= i\, \frac{g^2}{8\cos\vartheta}\ \cj{u}_{\nu_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
+						    \,\frac{\eta_{\mu\nu}}{k^2 - m_Z^2+i\varepsilon}
+						    \,\cj{u}_{f} \gamma^\nu (g^f_V-g^f_A\gamma^5) u_{f}\ ,
+\end{align}
+where $k$ is the momentum of the propagator and $V_{12}$ a possible mixing between generic fermions $f_1$ and $f_2$.
+Because of the tyipical energies involved, the momentum propagating between the particles is small %
+compared to the masses of the intermediate bosons and therefore this mass is typically factorised out, %
+resulting in
+\begin{align}
+	i \mathcal{M}_\text{CC} &\simeq i\,  \frac{G_F^2}{\sqrt{2}}\ \cj{u}_{\ell_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
+						    \,\cj{u}_{f_2} \gamma^\mu (1-\gamma^5)\,V_{12}\, u_{f_1} \\
+	i \mathcal{M}_\text{NC} &\simeq i\,  \frac{G_F^2}{\sqrt{2}}\ \cj{u}_{\nu_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
+						    \,\cj{u}_{f} \gamma^\mu (g^f_V-g^f_A\gamma^5) u_{f}\ ,
+\end{align}
+where the relation in \refeq{eq:magic_ratio} was used and a new constant was introduced 
+\begin{equation}
+	\label{eq:fermi_const}
+	\frac{G_F}{\sqrt{2}} = \frac{g^2}{8\ m_W^2}\ .
+\end{equation}
+The constant in \refeq{eq:fermi_const} is called Fermi's constant and the interactions %
+can be described by effective four-point Lagrangians.
+%\begin{align}
+%	\mathcal{L}_\text{eff, CC} &= - \frac{G_F}{\sqrt{2}} \qty[\cj{\ell}_\alpha \gamma^\mu(1-\gamma^5)\nu_\alpha] %
+%							     \qty[\cj{f}_2\gamma_\mu(1 - \gamma^5) f_1] \\
+%	\mathcal{L}_\text{eff, CC} &= - \frac{G_F}{\sqrt{2}} \qty[\cj{\nu}_\alpha \gamma^\mu(1-\gamma^5)\nu_\alpha] %
+%							     \qty[\cj{f}\gamma_\mu(g^F_V - g^F_A \gamma^5) f]
+%\end{align}
+						    
+\begin{figure}
+	\centering
+	\medskip
+	\begin{fmffile}{neutrino_CC}
+		\begin{fmfgraph*}(80,60)
+			\fmfleft{f1,nu}
+			\fmfright{f2,ell}
+			\fmf{fermion}{nu,v1,ell}
+			\fmf{fermion}{f1,v2,f2}
+			\fmf{photon, label=$W$}{v1,v2}
+			\fmflabel{$f_1$}{f1}
+			\fmflabel{$f_2$}{f2}
+			\fmflabel{$\nu_\alpha$}{nu}
+			\fmflabel{$\ell_\alpha$}{ell}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\qquad
+	\raisebox{2.5em}{,}
+	\qquad
+	\begin{fmffile}{neutrino_NC}
+		\begin{fmfgraph*}(80,60)
+			\fmfleft{f1,nu1}
+			\fmfright{f2,nu2}
+			\fmf{fermion}{nu1,v1,nu2}
+			\fmf{fermion}{f1,v2,f2}
+			\fmf{photon, label=$Z$}{v1,v2}
+			\fmflabel{$f$}{f1}
+			\fmflabel{$f$}{f2}
+			\fmflabel{$\nu_\alpha$}{nu1}
+			\fmflabel{$\nu_\alpha$}{nu2}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\bigskip
+	\caption{Generic CC (right) and NC (left) tree-level interactions with neutrinos involved.
+		Note that these diagrams have illustration purpose only, and that's why time flow convention is not respected. }
+	\label{fig:neutrino_tree}
+\end{figure}
+
+In the following sections we will review the most important neutrino interactions with matter.
+
+\subsection{Elastic scattering}
+
+The easiest interaction that can occur between neutrinos and matter components at low energies %
+is the neutrino--electron elastic scattering
+\begin{equation}
+	\overset{(-)}{\nu}_\alpha + e^- \rightarrow \overset{(-)}{\nu}_\alpha + e^-\ .
+\end{equation}
+For the electron neutrino $\nu_e$, both CC and NC interactions are allowed and %
+for the electron antineutrino $\cj{\nu}_e$ the $s$-channel and $t$-channel diagrams are swapped,
+whereas for $\alpha = \mu, \tau$ only neutral-current interactions exist.
+%The respective Feynman diagrams are shown in Fig.~\ref{fig:nescat} and~\ref{nutscat}.
+%The effective lagrangian 
+%\begin{align}
+%	\mathcal{L}_\mathrm{eff}(\nu_e e^- \rightarrow \nu_e e^-) &= - \frac{G_F}{\sqrt{2}} %
+%	[\overline{\nu_e}\gamma^\mu(1-\gamma^5)\nu_e][\bar{e}\gamma_\mu((1+g_V^l)-(1+g_A^l)\gamma^5)e] \\
+%	\mathcal{L}_\mathrm{eff}(\nu_\alpha e^- \rightarrow \nu_\alpha e^-) &= - \frac{G_F}{\sqrt{2}} %
+%	[\overline{\nu_\alpha}\gamma^\mu(1-\gamma^5)\nu_\alpha][\bar{e}\gamma_\mu(g_V^l-g_A^l)\gamma^5)e] %
+%	\quad (\alpha = \mu,\tau)\,.
+%\end{align}
+Using the effective four-point Lagrangians, one can calculate the differential cross-sections in the laboratory frame %
+with an initial electron at rest:
+\begin{equation}
+	\label{eq:nu_elastic_xsec}
+	\dv{\sigma}{q^2} = \frac{G_F^2}{\pi} \qty[\kappa_1^2 + \kappa_2^2 
+		\qty(1 - \frac{q^2}{2\,(p_\nu \cdot p_e)} )^2 - \kappa_1\, \kappa_2\, m_e^2\, \frac{q^2}{2\, (p_\nu \cdot p_e)^2} ] \ ,
+\end{equation}
+where $-q^2 = t$ and the quantities $\kappa_1$ and $\kappa_2$ %
+depend on the neutrino flavour and embeds CC and NC contributions.
+Using the vector and axial coupling of \refeq{eq:gv_ga} they read
+\begin{align*}
+	&\kappa_1^{\nu_e} = \kappa_2^{\cj{\nu}_e} = 1 + \frac{g_V^\ell + g_A^\ell}{2} = \frac{1}{2} + \sin^2\vartheta_W \\
+	&\kappa_2^{\nu_e} = \kappa_1^{\cj{\nu}_e} = \frac{g_V^\ell - g_A^\ell}{2} = \sin^2\vartheta_W \\
+	&\kappa_1^{\nu_{\mu,\tau}} = \kappa_2^{\cj{\nu}_{\mu,\tau}} = \frac{g_V^\ell + g_A^\ell}{2} = -\frac{1}{2} + \sin^2\vartheta_W \\
+	&\kappa_2^{\nu_{\mu,\tau}} = \kappa_1^{\cj{\nu}_{\mu,\tau}} = \frac{g_V^\ell - g_A^\ell}{2} = \sin^2\vartheta_W \ .
+\end{align*}
+
+The variable $t$ is the squared difference between the four-momentum of the initial and final electrons, 
+and denoting $T_e = E_e - m_e$ as the kinetic energy of the outgoing electron, we see that
+\begin{equation}
+	-t = q^2 = 2\,m_e\,T_e\ .
+\end{equation}
+With some simple kinematics the kinetic energy is found to be
+\begin{equation}
+	T_e = \frac{2\,m_e\,E_\nu^2 \cos^2 \theta}{(m_e + E_\nu)^2 - E_\nu^2 \cos^2\theta}\ ,
+\end{equation}
+and so the differential cross-section in \refeq{eq:nu_elastic_xsec} can be given as a function of the %
+electron scattering angle $\theta$ with respect to the incoming neutrino with energy $E_\nu$:
+\begin{align}
+	\dv{\sigma}{\cos\theta} =&\ \frac{2 G_F^2 m_e}{\pi} %
+			\frac{4 E_\nu^2 (m_e+E_\nu)^2 \cos \theta}{\qty[(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta ]^2} \quad \times \notag \\
+			&\qty[g_1^2 + g_2^2\qty(1 - \frac{2 m_e E_\nu \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} )^2
+		- g_1\, g_2\, \frac{2m_e^2 \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta}]\ .
 \end{align}
 
-The differential cross-section with respect to the momentum transfer $Q^2$
-\begin{equation}
-	\frac{\mathrm{d}\sigma}{\mathrm{d}Q^2} = \frac{G_F^2}{\pi}\bigg[g_1^2 + g_2^2\bigg(1 - %
-	\frac{Q^2}{2p_\nu \cdot p_e} \bigg)^2 - g_1 g_2 m_e^2 \frac{Q^2}{2 (p_\nu \cdot p_e)^2} \bigg]\,.
-\end{equation}
-The quantities $g_1$ and $g_2$ depend on the flavour of the neutrino and related to the vector and axial couplings, %
-$g_V$ and $g_A$.
-They are:
-\begin{align}
-	g_1^{\nu_e} &= \frac{1}{2} + \sin^2\vartheta_W \quad , \quad
-	g_2^{\nu_e} = \sin^2\vartheta_W \\
-	g_1^{\nu_{\mu,\tau}} &= -\frac{1}{2} + \sin^2\vartheta_W \quad , \quad
-	g_2^{\nu_{\mu,\tau}} = \sin^2\vartheta_W\,.
-\end{align}
+\subsection{Coherent elastic neutrino-nucleus scattering}
 
-The differential cross-section as a function of the electron scattering angle in the laboratory frame is
-\begin{equation}
-	\begin{split}
-		\frac{\mathrm{d}\sigma}{\mathrm{d}\cos\theta} = \sigma_0 \frac{4 E_\nu^2 (m_e+E_\nu)^2 \cos \theta}%
-		{\big[(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta \big]^2} \bigg[&g_1^2 + g_2^2\bigg(1 - %
-		\frac{2 m_e E_\nu \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} \bigg)^2 \\
-		- &g_1 g_2 \frac{2m_e^2 \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} \bigg]\,,
-	\end{split}
-\end{equation}
-where 
-\begin{equation}
-	\sigma_0 = \frac{2 G_F^2 m_e^2}{\pi}\,.
-\end{equation}
+\subsection{Neutrino-nucleon scattering}
 
-For what concern the experiments, neutrino interactions with nucleons are easier to study thanks to the %
-much larger cross-section and a more diverse range of processes, despite being less straightforward to %
-deal with theoretically.
+Neutrinos can also interact with hadrons in matter, namely proton and neutrons, %
+as the quark components of these baryons couple to the $W$ and $Z$ vector bosons according to %
+the currents of \refeqs{eq:real_quark_cc}{eq:real_quark_nc}.
+The compoEven though
 In general, these processes can be categorised according to the momentum transfer.
-At small $Q^2$, elastic interactions dominate and may be brought about by both charged and neutral currents.
+At small $q^2$, elastic interactions dominate and may be brought about by both charged and neutral currents.
 When this occurs via neutral currents, all flavour of neutrinos and anti-neutrinos can scatter off %
 both neutrons and protons in what is referred to as ``NC elastic'' scattering.
 The process is:
 \begin{align}
-	\nu_l + N \rightarrow \nu_l + N\,,
+	\nu_\alpha + N \rightarrow \nu_\alpha + N\,,
 	\bar\nu_l + N \rightarrow \bar\nu_l + N\,,
 \end{align}
 
