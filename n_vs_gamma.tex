@@ -1,0 +1,141 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolortrue
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktexttrue
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(14400.00,7632.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%%
+      \put(444,440){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(444,1789){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(444,3138){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(444,4486){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(444,5835){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(444,7184){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(576,220){\makebox(0,0){\strut{}$0$}}%
+      \put(2304,220){\makebox(0,0){\strut{}$10$}}%
+      \put(4032,220){\makebox(0,0){\strut{}$20$}}%
+      \put(5759,220){\makebox(0,0){\strut{}$30$}}%
+      \put(4032,3812){\makebox(0,0)[l]{\strut{}BGO scintillator}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%%
+      \put(-172,3980){\rotatebox{-270}{\makebox(0,0){\strut{}Percentage (\%)}}}%
+      \put(4031,-110){\makebox(0,0){\strut{}Size (cm)}}%
+      \csname LTb\endcsname%%
+      \put(6896,1273){\makebox(0,0)[r]{\strut{}Gamma aborsbed energy (\%)}}%
+      \csname LTb\endcsname%%
+      \put(6896,1053){\makebox(0,0)[r]{\strut{}Neutron surviving (\%)}}%
+      \csname LTb\endcsname%%
+      \put(6896,833){\makebox(0,0)[r]{\strut{}Cube}}%
+      \csname LTb\endcsname%%
+      \put(6896,613){\makebox(0,0)[r]{\strut{}Cylinder}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%%
+      \put(7356,440){\makebox(0,0)[r]{\strut{}}}%
+      \put(7356,1789){\makebox(0,0)[r]{\strut{}}}%
+      \put(7356,3138){\makebox(0,0)[r]{\strut{}}}%
+      \put(7356,4486){\makebox(0,0)[r]{\strut{}}}%
+      \put(7356,5835){\makebox(0,0)[r]{\strut{}}}%
+      \put(7356,7184){\makebox(0,0)[r]{\strut{}}}%
+      \put(14399,220){\makebox(0,0){\strut{}$40$}}%
+      \put(7488,220){\makebox(0,0){\strut{}$0$}}%
+      \put(9216,220){\makebox(0,0){\strut{}$10$}}%
+      \put(10944,220){\makebox(0,0){\strut{}$20$}}%
+      \put(12671,220){\makebox(0,0){\strut{}$30$}}%
+      \put(10944,3812){\makebox(0,0)[l]{\strut{}Plastic scintillator}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%%
+      \put(10943,-110){\makebox(0,0){\strut{}Size (cm)}}%
+      \csname LTb\endcsname%%
+      \put(13808,7348){\makebox(0,0)[r]{\strut{}Gamma aborsbed energy (\%)}}%
+      \csname LTb\endcsname%%
+      \put(13808,7128){\makebox(0,0)[r]{\strut{}Neutron surviving (\%)}}%
+      \csname LTb\endcsname%%
+      \put(13808,6908){\makebox(0,0)[r]{\strut{}Cube}}%
+      \csname LTb\endcsname%%
+      \put(13808,6688){\makebox(0,0)[r]{\strut{}Cylinder}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{n_vs_gamma}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup
