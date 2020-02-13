@@ -3,22 +3,9 @@
 \label{sec:cp_hk}
 %\chapter{Hyper-Kamiokande sensitivity to $\delta_\text{CP}$}
 
-The violation of the CP symmetry is a well-known process in the quark sector of the standard model (SM),
-giving clear evidence that the Cabibbo-Kobayashi-Maskawa matrix is complex.
-As~three generations exist, an entirely analogous phenomenon is expected to arise in the lepton sector.
-The leptonic mass mixing matrix, the Pontecorvo--Maki--Nakagawa--Sakata (PMNS) matrix, is usually parameterised as %
-%\vspace{-0.2em}
-\begin{equation}
-	\label{eq:pmns}
-	U = \mqty( 1 & 0 & 0 \\ 0 & c_{23} & s_{23} \\ 0 & -s_{23} & c_{23} ) %
-	\mqty( c_{13} & 0 & s_{13}e^{-i\delta_\text{CP}} \\ 0 & 1 & 0 \\ -s_{13}e^{i\delta_\text{CP}} & 0 & c_{13} ) %
-	\mqty( c_{12} & s_{12} & 0 \\ -s_{12} & c_{12} & 0 \\ 0 & 0 & 1 ) %
-	\mqty( 1 & 0 & 0 \\ 0 & e^{i\gamma_1} & 0 \\ 0 & 0 & e^{i\gamma_2} ) %
-%\vspace{-0.2em}
-\end{equation}
-where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$.
-The angle $\delta_\text{CP}$ is the phase responsible for CP violation, %
-whereas the additional phases $\gamma_1$ and $\gamma_2$ bring about CP violation if the neutrinos are Majorana.
+The violation of the CP--symmetry is a well-known process in the quark sector of the standard model (SM),
+
+[explain what CP transoformation on a field is]
 
 C and CP violation are some of the conditions required in order to generate %
 an asymmetry between matter and antimatter particles, together with %
@@ -36,10 +23,61 @@ right-handed Majorana neutrinos to the SM, which can violate lepton number.
 This elegant solution to explain the baryon asymmetry is a strong motivation %
 for searches of signals of CP violation in the lepton~sector.
 
-\section{CP violation in neutrino oscillations}
 
+It has been extensively observed~\cite{Christenson:1964fg,Aubert:2001sp, Abe:2001xe, Aaij:2013iua, Aaij:2019kcg}, %
+giving clear evidence that the Cabibbo-Kobayashi-Maskawa (CKM) matrix is complex.
+The CKM matrix arises from mixing of quarks in charged-current interactions (see \refeq{eq:real_quark_cc}), %
+when describing the fermion fields in the mass basis.
+
+It is a generic $N \times N$ unitary matrix, where $N$ is the number of fermion generations.
+The $N^2$ independent real parameters which describe the matrix are typically categorised into 
+\begin{align*}
+	\frac{N(N-1)}{2} &\quad \text{mixing angles} \\
+	\frac{N(N+1)}{2} &\quad \text{phases}\ ,
+\end{align*}
+even though, not all the phases are observables, or give physical effects.
+Excluding the CC term, the SM Lagrangian is invariant under a global phase transformation %
+of the quark fields, such as
+\begin{equation}
+	q_\alpha^{U,D} \longmapsto e^{i \phi_\alpha^{U,D}} q_\alpha^{U,D}\ .
+\end{equation}
+Applying this to the CC Lagrangian of \refeq{eq:real_quark_cc}, we can factorise %
+a common phase outside:
+\begin{align*}
+	%\label{eq:real_quark_cc}
+	j^\mu_\text{CC,Q}&= 2 \sum_{\shortstack{$\scriptstyle \alpha = u, c, t$ \\ $\scriptstyle \beta = d, s, b$}} %
+			    \cj{q}^U_{L\alpha}\, \gamma^\mu e^{-i\phi_\alpha^U} \, V_{\alpha \beta}\, e^{i \phi_\beta^D} q^D_{L\beta} \\
+			 &= 2 e^{-i (\phi_t^U - \phi_b^D)} \sum_{\shortstack{$\scriptstyle \alpha = u, c, t$ \\ $\scriptstyle \beta = d, s, b$}} 
+			    \cj{q}^U_{L\alpha}\, \gamma^\mu e^{-i(\phi_\alpha^U-\phi_t^U)} \, V_{\alpha \beta}\, %
+			    e^{i (\phi_\beta^D-\phi_b^D)} q^D_{L\beta}\ ,
+\end{align*}
+showing that there are $2 N -1$ phases that can be reabsorbed in a redefinition of the fields.
+A common rephasing would leave the charged current unchanged.
+It follows that the physical phases are
+\begin{equation}
+	\frac{N(N+1)}{2} - 2N +1 = \frac{(N-1)(N-2)}{2}
+\end{equation}
+and the total physical parameters are
+\begin{equation}
+	\frac{N(N-1)}{2} + \frac{(N-1)(N-2)}{2} = (N-1)^2
+\end{equation}
+In the case of three generations, there are four physical parameters, divided %
+amongst three angles and one complex phase.
+The complex phase is responsible for CP violation.
+From a model building point of view, the complex phase may arise from complex Yukawa couplings %
+and/or from a relative CP-violating phase in the vacuum expectation values of Higgs fields.
+
+As three generations exist also in the lepton sector, %
+an entirely analogous phase is expected in mixing matrix of lepton mass.
 The~best probe to discovery CP violation is neutrino oscillation, being a purely weak process in which %
 \mbox{CP--con}\-ju\-gate processes can be easily studied.
+
+
+\section{CP violation in neutrino oscillations}
+\label{sec:cp_oscillation}
+
+The Pontecorvo--Maki--Nakagawa--Sakata (PMNS) matrix, is usually parameterised as in \refeq{eq:pmns}, %
+with the addition of two more phases if the neutrino is Majorana.
 The PMNS matrix relates flavour states $\alpha = e, \mu, \tau$ with mass eigenstates $i = 1, 2, 3$  %
 as $\ket{\nu_\alpha} = \sum_i U^*_{\alpha i} \ket{\nu_i}$.
 The probability of flavour oscillation in vacuum is hence computed as
@@ -103,13 +141,17 @@ The effect of the CP--violating phase on the asymmetry of Eq.~\ref{eq:asymmetry}
 
 \section{Hyper-Kamiokande experiment}
 
-Hyper-Kamiokande (HK)~\cite{Abe:2018uyc} will be the next-generation water Cherenkov detector, starting taking data from 2027.
-Similar in concept to its predecessor, Super-Kamiokande (SK), the cylindrical tank of HK will be %
-72\,m high and 68\,m in diameter, with a fiducial volume of 188.4\,kton, around 8.4 times the fiducial volume of SK.
-The photo-coverage of the inner detector region will be 40\,\%, the same of SK, but it translates to roughly forty thousands %
-photo\-multi\-pliers~(PMTs).
-New PMTs, with twice the quantum efficiency of the previous generation  and improved charge %
+Hyper-Kamiokande (HK)~\cite{Abe:2018uyc} will be the next-generation water Cherenkov detector, %
+superseding its predecessor, Super-Kamiokande (SK).
+The design does not deviate much from SK.
+The cylindrical tank of HK will be 72\,m high and 68\,m in diameter, with a fiducial volume of 188.4\,kton, %
+around 8.4 times the fiducial volume of SK.
+The photo-coverage of the inner detector region will be 40\,\%, the same of SK, %
+but it translates to roughly forty thousands photomultipliers (PMTs).
+New 20'' PMTs, with twice the quantum efficiency of the previous generation and improved charge %
 and timing resolution, will be employed.
+A study for implementing multi PMT modules, containing each 23 3'' PMT, is being carried out
+
 Thanks to incredible statistics and cutting edge resolutions, HK will be capable of a vast variety of physics studies, %
 from accelerator and atmospheric neutrinos to solar and supernova neutrinos.
 Besides detecting proton decay, the main goal of HK is to measure~$\delta_\text{CP}$ and constrain the other oscillation parameters %
@@ -129,7 +171,7 @@ around 1\,km from the target.
 
 HK will take data for ten years, collecting a total of \np{2.7e22} Protons On Target, %
 divided between $\nu$ and $\cj{\nu}$ beam modes.
-%Studies have shown that CP violation discovery is not very sensitive to the time ratio between the two modes (ref?).
+Studies have shown that CP violation discovery is not very sensitive to the time ratio between the two modes (ref?).
 Assuming $\nu:\cj{\nu} = 1:3$ and $\delta_\text{CP} = 0$, %
 the expected number of fully-contained events in the fiducial volume for the channels %
 $\nu_\mu \to \nu_e$ and $\cj{\nu}_\mu \to \cj{\nu}_e$ %
@@ -139,74 +181,177 @@ Deviations from these expected numbers could be indication of CP violation.
 A preliminary study for the HK design report~\cite{Abe:2018uyc}, using a different analysis, %
 estimated a significance well-above $5\,\sigma$ after ten years of data taking, as can be seen in Fig.~\ref{fig:hkdr}.
 
-\section{Sensitivity to $\delta_\text{CP}$}
+The project has been recentely approved by japanese goverment and data taking is expected commencing by 2027.
 
-The sensitivity of HK to oscillation parameters is assessed by a combined fit of beam and atmospheric samples.
-%are fitted together.
-For the atmospheric part, SK atmospheric Monte Carlo (MC) is adapted and scaled to HK statistics.
+\section{Sensitivity studies}
+
+\begin{table}
+	\centering
+	\caption{Samples event for atmospheric data. They are categorised as fully-contained sub-GeV (FC sub-GeV), %
+		fully-contained multi-GeV (FC multi-GeV), partially-contained (PC) and upward-going muons (UP-$\mu$).}
+	\label{tab:atmo_samples}
+	\begin{tabular}{llcc}
+		\toprule
+		Event type	&	Sample	&	Bins $\log p$	& Bins $\cos\theta$  \\
+		\midrule
+		\multirow{7}{*}{\bf FC sub-GeV}	& one ring $e$-like and 0 decay-$e$	& 13 & 20 \\
+						& one ring $e$-like and 1 decay-$e$	& 13 & 2 \\
+						& one ring $\mu$-like and 0 decay-$e$	& 13 & 20 \\
+						& one ring $\mu$-like and 1 decay-$e$	& 13 & 20\\
+						& one ring $\mu$-like and 2 decay-$e$	& 13 & 2 \\
+						& one ring $\pi^0$			& 13 & 2 \\
+						& two rings $\pi^0$			& 5 & 2 \\
+		\midrule
+		\multirow{7}{*}{\bf FC multi-GeV}& one ring $\nu_e$-like     	& 10 & 20 \\
+						& one ring $\cj{\nu}_e$-like    & 10 & 20 \\
+						& one ring $\nu_\mu$-like       & 5 & 20 \\
+						& multi ring $\nu_e$-like       & 8 & 20 \\
+						& multi ring $\cj{\nu}_e$-like  & 8 & 20 \\
+						& multi ring $\nu_\mu$-like     & 4 & 20 \\
+						& multi ring other		& 10 & 20 \\
+		\midrule
+		\multirow{2}{*}{\bf PC}		& stopping 			& 4 & 20 \\
+						& through-going 		& 5 & 20 \\
+		\midrule
+		\multirow{3}{*}{\bf UP-$\mu$}	& stopping 			& 4 & 20 \\
+						& through-going, not showering 	& 1 & 20 \\
+						& through-going, showering 	& 1 & 20 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+It is important to asses the impact of systematic errors on the total sensitivity of HK.
+To this end, a combined fitting framework is used to study Monte Carlo simulation of beam and atmospheric samples. 
+For the study, SK atmospheric Monte Carlo (MC) is adapted and scaled to HK statistics to compose the atmospheric sample.
 A total of \np{2224} bins are used, divided in several two-dimensional histograms of $\log p$ and $\cos\vartheta$, %
 where $\vartheta$ is the azimuthal angle.
-The beam sample uses four histograms in reconstructed energy with 87 bins %
-for each of the four event samples, 1~ring \mbox{$e$-like} and 1~ring $\mu$-like events in $\nu$ and $\cj{\nu}$ mode.
-The event rates at the far detector are estimated with a flux prediction tuned with near detector constraints %
-and smeared to obtain the reconstructed energy spectra.
-The event distributions are then weighted by the corresponding oscillation probabilities for each point %
-of the oscillation space, using the true neutrino energy.
+These are divided in the usual categories of fully-contained, partially-contained, and upward-going muons, %
+and are summarised in~\reftab{tab:atmo_samples}~\cite{Jiang:2019xwn}.
+The beam sample, instead, is created using the far detector flux predicted with NEUT.
+From the flux prediction, fully-contained candidate events in the fiducial volume are grouped %
+as appeareance signal, i.e.\ $\nu_\mu\to\nu_e$ and $\cj{\nu}_\mu\to\cj{\nu}_e$, %
+and background, i.e.\ unoscillated neutrinos.
+Signal and background distributions in true energy (98 bins) undergo event selection criteria %
+to obtain the distributions in reconstructed energy (87 bins) for the four event samples:
+\begin{multicols}{2}
+	\begin{itemize}
+		\item one ring $e$-like in $\nu$-mode,
+		\item one ring $\mu$-like in $\nu$-mode,
+		\item one ring $e$-like in $\cj{\nu}$-mode,
+		\item one ring $\mu$-like in $\cj{\nu}$-mode.
+	\end{itemize}
+\end{multicols}
+A set of 2D smearing matrices, produced by the T2K fitting framework VALOR, %
+simulates and replaces the correct event selection process, including tuning of the flux with near detector constraints.
+These smearing matrices are provided for all samples, acting on signal (CCQE and CCnQE) %
+and background (CCQE, CCnQE, and NC) distributions.
 
+\begin{table}
+	\centering
+	\caption{Oscillation space.}
+	\label{tab:osc_space}
+	\begin{tabular}{cccc}
+		\toprule
+		Parameter				& Nominal	& Range	& Points \\
+		\midrule
+		$\Delta m_{12}^2/\np{e-5}\,\text{eV}^2$	& 7.53		& --			& fixed	\\
+		$\sin^2 2\theta_{12}$			& 0.8463	& --			& fixed	\\
+		\midrule
+		$\Delta m_{23}^2/\np{e-3}\,\text{eV}^2$	& 2.509		& [2.464:2.554]		& 13	\\
+		$\sin^2 2\theta_{13}$			& 0.085		& [0.070:0.100]		& 13	\\
+		$\sin^2 \theta_{23}$			& 0.528		& [0.426:0.579]		& 19	\\
+		$\delta_\text{CP}$			& $-\pi/2$	& [$-\pi$:$\pi$]	& 61	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Both the atmospheric and beam distributions are weighted by the corresponding oscillation probabilities.
+For the study of this thesis, the oscillation parameters are scanned over the space
 The oscillation space spans four variables, $\Delta m^2_{32}$, $\sin^2 2\theta_{13}$, $\sin^2 \theta_{23}$, and %
-$\delta_\text{CP}$, on a grid of respectively $13\,\times\,13\,\times\,13\,\times\,61$ points.
-The CP phase is varied on the interval $[-\pi, +\pi]$, whereas the other three parameters are centred %
-around the best fit points from T2K~\cite{Abe:2017vif} and reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
-The number of events on each point of such space is compared to the number of events of a selected point, %
-which is referred to as the \emph{true} set of oscillation parameters.
-A $\chi^2$-test is used to test CP conservation.
-The sensitivity of HK to exclude the null hypothesis, \ie~$\delta_\text{CP} = 0,\,\pm\pi$, is quantified by %
-changing the \emph{true} value of $\delta_\text{CP}$ and by computing
+$\delta_\text{CP}$, on a grid of respectively $13\,\times\,13\,\times\,19\,\times\,61$ points.
+The solar squared mass difference and the solar angle are fixed.
+Apart from $\delta_\text{CP}$ which is scanned over all possible values, %
+the intervals for the other parameters are built around ``Asimov A'', the nominal T2K best fit point~\cite{Abe:2017vif} .
+For the atmospheric suqared mass difference and the reactor angle, the range is chosen such that it covers %
+a $[-3\sigma, +3\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
+the range for $\sin^2\theta_{23}$ spans over $[-6\sigma:+3\sigma]$ so that both octants are covered.
+Reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
+At each point of this space, the event distributions are weighted with the correct oscillation probability %
+for appearance or disappearance channels.
+A special point of the parameter space is chosen as a \emph{true} combination of oscillation parameters %
+to perform sensitivity studies using a $\chi^2$-test statistics.
+By changing the \emph{true} point, it is possible to define the exclusion regions for CP violation, %
+by comparing the $\chi^2$ at any value of $\delta_\text{CP}$ with the $\chi^2$ computed at %
+the null hypothesis, i.e.\ CP conservation.
+The sensitivity to exclude the $\sin \delta_\text{CP} = 0$ as a function of \emph{true} $\delta_\text{CP}$ %
+is quantified by %
 \begin{equation}
-	%\sigma = \sqrt{\qty|\chi^2_\text{true} - \min_{\delta_\text{CP} = 0,\pm\pi}|} \chi^2
 	\sigma = \sqrt{\min_{\delta_\text{CP} = 0,\pm\pi}\! \chi^2\  -\,\chi^2_\text{\emph{true}}}\ ,
-	\vspace{-0.3em}
 \end{equation}
-for each point, where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
+where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
 
-The test statistics of this analysis %is profiled with respect to the systematics.
-is defined as a ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}, in the following way
+The test statistics of this analysis is defined as a ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}, in the following way
 %\begin{align}
-%	\chi^2_\text{tot} &=\ \chi^2_\text{obs}\ +\ \chi^2_\text{syst} \\
-%	&= \overset{\text{obs}}{2 \sum_n \qty[E_n(1+\sum_j f_j^n \varepsilon_j) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
-%	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,\notag
+%	\chi^2_\text{tot} &=\ \chi^2_\text{obs}\ +\ \chi^2_\text{syst} \notag\\
+%	&= \overset{\text{obs}}{2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
+%	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,
 %\end{align}
-\vspace{-0.4em}
 \begin{equation}
-	\chi^2_\text{tot} = %
-	\overset{\text{obs}}{2 \sum_n \qty[E_n(1+\textstyle\sum f_j^n \varepsilon_j) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
-	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,
-%\vspace{-0.3em}
+	\chi^2 = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\vartheta;\uj{\varepsilon})\,]\ ,
+\end{equation}
+with $\vartheta$ the oscillation parameters and $\uj{\varepsilon}$ the full set of $j$ systematic errors, and
+\begin{equation}
+	\label{eq:chi2}
+	\chi^2(\vartheta;\uj{\epsilon})  = 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
+		O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})] + %
+		\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ ,
 \end{equation}
 where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin and~$\rho^{-1}$ %
 is the inverse of the correlation matrix of the systematic errors.
+As there is no real data, the ``observed'' events are replaced by a prediction at the \emph{true} oscillation point.
 The systematic uncertainties are embedded in the $f_j^n$ term, which is the fractional change %
 induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic;
 the amount of the shift is quantified by the ``pull'' $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
-For most of the systematic parameters, a linear response is assumed. %in the~MC.
+For most of the systematic parameters, a linear response is assumed in the~MC.
 This means that varying of the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$, %
-the number of expected events changes as $E_n \to E_n ( 1 + \varepsilon_j f_n^j )$.
-%\begin{align*}
-%	\beta_j\ \overset{\scriptstyle \text{MC}}{\longmapsto}\ E_n %
-%	%\qquad \overset{\varepsilon_j \sigma_j}{\Longrightarrow} \qquad %
-%	\qquad \Longrightarrow \qquad %
-%	\beta_j + \varepsilon_j\sigma_j\ \overset{\text{MC}}{\longmapsto}\ E_n ( 1 + \varepsilon_j f_n ^j )\ .
-%	%&\hspace{0.4em}\text{\scriptsize MC} \\
-%	%\text{\scriptsize MC\ :} \hspace{1em} \Downarrow & \hspace{3.5em} \Downarrow	\\	
-%\end{align*}
-Certain systematic uncertainties %, such as the CCQE axial-mass scaling factor, the Fermi momentum for \tapi{16}O, %
-%or some of the RPA coefficients\footnote{The Random Phase Approximation (RPA) method is applied to calculate the total cross sections %
-	%of electron neutrinos on nuclei.}, 
+the number of expected events changes:
+\begin{align*}
+	\beta_j\ \overset{\scriptstyle \text{MC}}{\longmapsto}\ E_n %
+	%\qquad \overset{\varepsilon_j \sigma_j}{\Longrightarrow} \qquad %
+	\qquad \Longrightarrow \qquad %
+	\beta_j + \varepsilon_j\sigma_j\ \overset{\text{MC}}{\longmapsto}\ E_n ( 1 + \varepsilon_j f_n ^j )\ .
+	%&\hspace{0.4em}\text{\scriptsize MC} \\
+	%\text{\scriptsize MC\ :} \hspace{1em} \Downarrow & \hspace{3.5em} \Downarrow	\\	
+\end{align*}
+Certain systematic uncertainties, such as the CCQE axial-mass scaling factor, the Fermi momentum for \tapi{16}O, %
+or some of the RPA coefficients\footnote{The Random Phase Approximation (RPA) method is applied to calculate the total cross sections %
+	of electron neutrinos on nuclei.}, 
 do not present a linear behaviour for small values of $\varepsilon$ %
-and they are better described by a linear interpolation between four different~$f_j^n$ histograms, computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$.
-For each point of the oscillation parameter space, the $\chi^2$ is profiled %, \ie~minimised, %
-with respect to the pulls. %$\varepsilon$.
-This leads to a set of $j$ non-linear equations, which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
+and they are better described by a four-point linear interpolation of different~$f_j^n$ histograms, %
+computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic parameter.
+Given a \emph{true} point, the $\chi^2$ is computed at each point of the oscillation parameter space %
+and it is minimised with respect to the pulls $\varepsilon$.
+This leads to a set of $j$ non-linear equations %, which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
+\begin{equation}
+	\pdv{\chi^2(\vartheta;\uj{\varepsilon})}{\varepsilon_j} = 0\ .
+\end{equation}
+The system can be solved with the Newton's method by finding the Hessian of the $\chi^2$.
+This gives a linear system, which can be iterated until sufficient precision is achieved
+\begin{equation}
+	\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
+	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
+	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
+\end{equation}
+with $(n)$ the iteration index.
+To account for future constraints from other experiments, a gaussian penalty terms is added %
+to the $\chi^2$ definition of \refeq{eq:chi2}
+\begin{equation}
+	\chi^2_\text{penalty} = \frac{(\vartheta - \hat{\vartheta})^2}{\sigma_\vartheta^2}\ .
+\end{equation}
+The current constraint applied is the measurement of $\theta_{13}$ by future reactor experiments, %
+that will achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
+
+
 
 We adopt 67 systematics for the atmospheric sample %are adopted %
 from SK atmospheric studies~\cite{Abe:2017aap}.
@@ -236,7 +381,7 @@ Among these, one systematic describes the energy scale uncertainty.
 %1 ring $e$-like and 1 ring $\mu$-like in both $\nu$ and $\cj{\nu}$ modes.
 %One systematic is adopted to describe the energy scale uncertainty at the far detector.
 
-\section{Systematic studies and conclusions}
+\section{Systematic variations}
 
 It is expected that larger systematic errors will result in a worse sensitivity,
 but certain uncertainties affect the measurement of CP violation more than others.
