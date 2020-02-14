@@ -72,6 +72,11 @@ an entirely analogous phase is expected in mixing matrix of lepton mass.
 The~best probe to discovery CP violation is neutrino oscillation, being a purely weak process in which %
 \mbox{CP--con}\-ju\-gate processes can be easily studied.
 
+CP violation in the leptonic sector is plausible and it is also a necessary ingredient for leptogenesis.
+Neutrino oscillation experiments can lead to the discovery of CP violation, and it is %
+foreseen that HK will determine the value of~$\delta_\text{CP}$, %
+a milestone which requires precise measurements and a deep understanding of the systematic errors.
+
 
 \section{CP violation in neutrino oscillations}
 \label{sec:cp_oscillation}
@@ -185,6 +190,10 @@ The project has been recentely approved by japanese goverment and data taking is
 
 \section{Sensitivity studies}
 
+It is important to asses the impact of systematic errors on the total sensitivity of HK.
+
+\subsection{Event samples}
+
 \begin{table}
 	\centering
 	\caption{Samples event for atmospheric data. They are categorised as fully-contained sub-GeV (FC sub-GeV), %
@@ -220,7 +229,6 @@ The project has been recentely approved by japanese goverment and data taking is
 	\end{tabular}
 \end{table}
 
-It is important to asses the impact of systematic errors on the total sensitivity of HK.
 To this end, a combined fitting framework is used to study Monte Carlo simulation of beam and atmospheric samples. 
 For the study, SK atmospheric Monte Carlo (MC) is adapted and scaled to HK statistics to compose the atmospheric sample.
 A total of \np{2224} bins are used, divided in several two-dimensional histograms of $\log p$ and $\cos\vartheta$, %
@@ -265,6 +273,43 @@ and background (CCQE, CCnQE, and NC) distributions.
 	\end{tabular}
 \end{table}
 
+
+\subsection{Systematic model}
+
+There are 67 systematics for the atmospheric sample, adopted from SK atmospheric studies~\cite{Abe:2017aap}.
+List systematics.
+A more accurate systematic study for the atmospheric analysis of HK is expected in the future.
+The atmospheric systematics are initally uncorrelated with the beam systematics.
+The focus of this work is the beam sample.
+
+For the beam part, the T2K 2018 error model is employed~\cite{Abe:2018wpn}.
+There are 74 uncertainties for flux and cross-section parameters, from near detector constraints, %
+known as the BANFF fit. %
+divided in $25\times 2$ systematics, for each beam mode, for the four main flux components, %
+They are grouped in 50 systematics---25 for the $\nu$ mode and 25 for the $\cj{\nu}$~mode---%
+for the main flux components ($\nu_e$, $\nu_\mu$, $\cj{\nu}_e$, and $\cj{\nu}_\mu$), % 
+and 24 systematics for cross-section parameters.
+There are also 45 uncertainties for SK detector efficiencies and Final State Interactions,
+which parameterise the uncertainties on the four final state event selections at the far detector: %
+1 ring $e$-like and 1 ring $\mu$-like in both $\nu$ and $\cj{\nu}$ modes.
+The 1 ring $e$-like + 1 electron decay sample is not treated in this study.
+Among these, one systematic describes the energy scale uncertainty.
+It consists of 25 systematic uncertainities, constrained by near detector fits, for each beam mode---neutrino or antineutrino---describing %
+are described by 25 systematics for each beam mode---neutrino or antineutrino.
+There are 24 errors that describe cross section parameters, also constrained by near detector data.
+from flux and cross-section parameters constrained by near detector fits.
+Among the flux and cross-section parameters, These For the four main flux components 
+25 uncertainties for the beam in neutrino mode and 25 for the antineutrino mode.
+($2p2h$ normalisation and shape for \tapi{16}O, CCQE axial-mass scaling factor, CC and NC interaction normalisations, %
+RPA coefficients, binding energy on oxygen).
+In addition, there are 45 systematics from SK detector efficiencies and Final State Interactions, %
+which parameterise the uncertainties on the four final state interaction types %
+at the far detector: %
+1 ring $e$-like and 1 ring $\mu$-like in both $\nu$ and $\cj{\nu}$ modes.
+One systematic is adopted to describe the energy scale uncertainty at the far detector.
+
+\subsection{Oscillation space}
+
 Both the atmospheric and beam distributions are weighted by the corresponding oscillation probabilities.
 For the study of this thesis, the oscillation parameters are scanned over the space
 The oscillation space spans four variables, $\Delta m^2_{32}$, $\sin^2 2\theta_{13}$, $\sin^2 \theta_{23}$, and %
@@ -272,7 +317,7 @@ $\delta_\text{CP}$, on a grid of respectively $13\,\times\,13\,\times\,19\,\time
 The solar squared mass difference and the solar angle are fixed.
 Apart from $\delta_\text{CP}$ which is scanned over all possible values, %
 the intervals for the other parameters are built around ``Asimov A'', the nominal T2K best fit point~\cite{Abe:2017vif} .
-For the atmospheric suqared mass difference and the reactor angle, the range is chosen such that it covers %
+For the atmospheric squared mass difference and the reactor angle, the range is chosen such that it covers %
 a $[-3\sigma, +3\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
 the range for $\sin^2\theta_{23}$ spans over $[-6\sigma:+3\sigma]$ so that both octants are covered.
 Reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
@@ -289,6 +334,8 @@ is quantified by %
 	\sigma = \sqrt{\min_{\delta_\text{CP} = 0,\pm\pi}\! \chi^2\  -\,\chi^2_\text{\emph{true}}}\ ,
 \end{equation}
 where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
+
+\subsection{$\chi^2$ test}
 
 The test statistics of this analysis is defined as a ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}, in the following way
 %\begin{align}
@@ -351,53 +398,39 @@ to the $\chi^2$ definition of \refeq{eq:chi2}
 The current constraint applied is the measurement of $\theta_{13}$ by future reactor experiments, %
 that will achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
 
-
-
-We adopt 67 systematics for the atmospheric sample %are adopted %
-from SK atmospheric studies~\cite{Abe:2017aap}.
-%An more accurate systematic study for HK is expected in the future.
-For~the beam part, the T2K (2018) error model is employed~\cite{Abe:2018wpn}, %
-initially uncorrelated with the atmospheric systematic set.
-There are 74 uncertainties for flux and cross-section parameters, from near detector constraints. %
-%divided in $25\times 2$ systematics, for each beam mode, for the four main flux components, %
-They are grouped in 50 systematics---25 for the $\nu$ mode and 25 for the $\cj{\nu}$~mode---%
-for the main flux components ($\nu_e$, $\nu_\mu$, $\cj{\nu}_e$, and $\cj{\nu}_\mu$), % 
-and 24 systematics for cross-section parameters.
-There are also 45 uncertainties for SK detector efficiencies and Final State Interactions,
-which parameterise the uncertainties on the four final state event selections at the far detector: %
-1 ring $e$-like and 1 ring $\mu$-like in both $\nu$ and $\cj{\nu}$ modes.
-Among these, one systematic describes the energy scale uncertainty.
-%It consists of 25 systematic uncertainities, constrained by near detector fits, for each beam mode---neutrino or antineutrino---describing %
-%are described by 25 systematics for each beam mode---neutrino or antineutrino.
-%There are 24 errors that describe cross section parameters, also constrained by near detector data.
-%from flux and cross-section parameters constrained by near detector fits.
-%Among the flux and cross-section parameters, These For the four main flux components 
-%25 uncertainties for the beam in neutrino mode and 25 for the antineutrino mode.
-%($2p2h$ normalisation and shape for \tapi{16}O, CCQE axial-mass scaling factor, CC and NC interaction normalisations, %
-%RPA coefficients, binding energy on oxygen).
-%In addition, there are 45 systematics from SK detector efficiencies and Final State Interactions, %
-%which parameterise the uncertainties on the four final state interaction types %
-%at the far detector: %
-%1 ring $e$-like and 1 ring $\mu$-like in both $\nu$ and $\cj{\nu}$ modes.
-%One systematic is adopted to describe the energy scale uncertainty at the far detector.
-
-\section{Systematic variations}
+\section{Systematic studies}
 
 It is expected that larger systematic errors will result in a worse sensitivity,
-but certain uncertainties affect the measurement of CP violation more than others.
-For example, these can be the $\nu_e$ and $\cj{\nu}_e$ charged-current cross sections, %
-the transverse flux model, the pion absorption probability, %
-the total energy scale in SK, or the flux alignment.
-We study the impact of these selected systematics by modifying them %
-one by one with respect to the nominal model and comparing the overall sensitivities to CP violation %
-in these different scenarios.
+but certain uncertainties affect the measurement of the oscillation parameters more than others.
+For example, these can be the uncertainties on $\nu_e$ and $\cj{\nu}_e$ charged-current cross sections, %
+the transverse flux model, the pion absorption probability, the total energy scale in SK, or the flux alignment.
+We study the impact of some selected systematics by modifying the nominal systematic model %
+and analysing the overall predicted sensitivity of the experiment in these different scenarios.
 Doing so, it is possible to determine which systematics have the most important repercussion on the sensitivity,
 since it is fundamental to understand their effect at all phases of the experiment.
 
-CP violation in the leptonic sector is plausible and it is also a necessary ingredient for leptogenesis.
-Neutrino oscillation experiments can lead to the discovery of CP violation, and it is %
-foreseen that HK will determine the value of~$\delta_\text{CP}$, %
-a milestone which requires precise measurements and a deep understanding of the systematic errors.
-%The can be measured thanks to neutrino oscillation experiments
-%Framework to perform combined fits with beam and atmospheric data.
+\subsection{Validation of the fitter}
 
+To validate the fitting framework a special systematic set for the beam sample is used.
+It is composed of just two systematics: the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties.
+These two errors are correlated, anti-correlated (and uncorrelated) %
+and they are tested at different magnitudes: 1\%, 2\%, 3\%, 4\%, and 5\%.
+This means a total of 15 fits.
+Given the definition of $\chi^2$ in \refeq{eq:chi2}, %
+at fixed magnitude the difference between the sets is just the correlation matrix, whereas at fixed correlation matrix %
+the differencea are the $1\sigma$ histograms.
+\begin{equation}
+	\rho = \mqty(1 & 1 // 1 & 1) \quad,\quad
+	\rho = \mqty(1 & -1 // -1 & 1) \quad,\quad
+	\rho = \mqty(1 & 0 // 0 & 1)\ .
+\end{equation}
+The correlation matrices written as above are singular and so not invertible.
+In order to get the inverted matrix, an offset of \np{e-5} is added to off-diagonal terms.
+
+\subsection{Variations to the nominal model}
+
+A series of modifications are performed on the nominal systematic model is modified:
+
+\section{Dependencies on exclusion of CP}
+
+Unknown mass hierachy, statistics ecc, octant determination.
