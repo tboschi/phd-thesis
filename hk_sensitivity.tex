@@ -101,7 +101,7 @@ The~\mbox{CP--con}\-jugate of a neutrino with negative helicity is an antineutri
 which, in terms of neutrino oscillations, means transforming the $\nu_\alpha \to \nu_\beta$ oscillation channel %
 into the $\cj{\nu}_\alpha \to \cj{\nu}_\beta$ channel.
 The violation of CP in neutrino oscillation can be quantified by the asymmetry in oscillation probabilities %
-between neutrinos and antineutrinos
+between neutrinos and antineutrinos, which in vacuum reads as
 \vspace{-0.5em}
 \begin{equation}
 	\label{eq:asymmetry}
@@ -110,9 +110,59 @@ between neutrinos and antineutrinos
 \vspace{-0.3em}
 \end{equation}
 %with $t \simeq L$ and $\Delta m^2_{ij} = m_i^2 - m_j^2$.
+The quartic product $U_{i\alpha}^* U_{\beta i} U_{\alpha j} U_{j \beta}^*$ wich $\alpha\neq\beta$ %
+and $i \neq j$ is a physical observable and so it is invariant under a reparameterization of the mixing matrix.
+The imaginary part of the quartic products is antisymmetric on the indices $\alpha,\beta$ and $i, j$ and %
+they are all equal up to a sign.
+We can prove this by starting with the unitarity of the mixing matrix, for example $U\,U^\dagger = 1$,
+\begin{equation}
+	\sum_{i=1}^3 U_{\alpha i} U_{\beta i}^* = \delta_{\alpha\beta} 
+\end{equation}
+and multiplying it by $U_{\alpha j}^* U_{\beta j}$.
+We can write the new relation as
+\begin{equation}
+	|U_{\alpha j}|^2 |U_{\beta j}|^2 + \sum_{i\neq j} U_{\alpha i} U_{\beta j} U_{\beta i}^* U_{\alpha j}^* = %
+		\delta_{\alpha\beta} |U_{\alpha j}|^2\ ,
+\end{equation}
+and by taking the imaginary part of left-hand and right-hand sides of the equation it follows that
+\begin{equation}
+	\sum_{\alpha \neq \beta} \imaginary\qty[U_{\alpha i} U_{\beta j} U_{\beta i}^* U_{\beta j}^*] = 0\ .
+\end{equation}
+This condition and the anti-symmetry of the indices reveal that th quartic product are all equal up to a sign.
+This value is called \emph{Jarlskog invariant} and using the parametrisation of the PMNS matrix in Eq.~\ref{eq:pmns} %
+it is equal to~\cite{Jarlskog:1985ht}
+\begin{equation}
+	\label{eq:jarlskog}
+	J = \imaginary\qty[U_{\mu 3} U_{e 2} U_{\mu 2}^* U_{e 3}^*] = %
+	    \frac{1}{8} \cos\theta_{13} \sin(2\theta_{12}) \sin(2\theta_{13}) \sin(2\theta_{23}) \sin \delta_\text{CP}\ .
+\end{equation}
 It follows that CP violation can only be measured in ``appearance'' channels, as %
 the argument of the imaginary part of Eq.~\ref{eq:asymmetry} is real for $\alpha = \beta$. % and so $A^\text{CP}_{\alpha\alpha} = 0$.
-Furthermore, given the parametrisation in Eq.~\ref{eq:pmns}, %
+For example, for the main channel of interest for long beaseline experiments (LBL), $\nu_\mu \to \nu_e$, %
+the asymmetry looks like:
+\begin{align}
+	\mathcal{A}_{\mu e}^\text{CP} =&\ \frac{1}{2} \cos\theta_{13} \sin(2\theta_{12}) %
+		\sin(2\theta_{13}) \sin(2\theta_{23}) \sin \delta_\text{CP} \notag \\
+		&\times \qty[\sin \Delta_{12} - \sin \Delta_{13} + \sin \Delta_{23}]\ ,
+\end{align}
+where $\Delta_{ij} = \flatfrac{\Delta m_{ij}^2 L }{4 E}$.
+Including matter effects
+\begin{align}
+	P(&\nu_\mu \to \nu_e) = %
+	\ 4 c_{13}^2 s_{13}^2 s_{23}^2\,\sin^2 \Delta_{31}^2\notag  \\
+	&\ + 8 c_{13}^2 s_{12} s_{13} s_{23}\, (c_{12} c_{23}\, \uj{\cos\delta_\text{CP}} -s_{12}s_{13}s_{23}) %
+	\,      \cos\Delta_{32} \sin \Delta_{31} \sin\Delta_{21}\notag  \\
+	&\ - 8 c_{13}^2 c_{12} c_{23} s_{12} s_{13} s_{23}\, \uj{\sin\delta_\text{CP}} %
+	\sin\Delta_{32} \sin \Delta_{31} \sin\Delta_{21} \notag \\
+	&\ + 4 s_{12}^2 c_{13}^2\,(c_{12}^2 c_{23}^2 + s_{12}^2 s_{13}^2 s_{23}^2 - %
+	2c_{12}c_{13} s_{12} s_{23} s_{13}\,\underline{\cos\delta_\text{CP}}) \sin^2\Delta_{21} \notag \\
+	&\ - 8 c_{13}^2 s_{13}^2 s_{23}^2 \qty[\frac{aL}{4 E} (1-2s_{13}^2) \cos\Delta_{32} \sin\Delta_{31} %\\
+	- \frac{a}{\Delta m_{31}^2} (1-2s_{13}^2) \sin^2\Delta_{31}]\ ,
+\end{align}
+where $s_{ij} = \sin \theta_{ij}$, $c_{ij} = \cos\theta_{ij}$,
+and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron density of the medium.
+
+Given the parametrisation in Eq.~\ref{eq:pmns}, %
 this asymmetry is not measurable if the phase is trivial, \ie~$\delta_\text{CP} = 0$~or~$\pm \pi$, %
 or if $\theta_{13}$ is vanishing.
 From a model building point of view, however, a successful leptogenesis requires the parameters to satisfy %
