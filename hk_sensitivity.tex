@@ -146,7 +146,28 @@ the asymmetry looks like:
 		&\times \qty[\sin \Delta_{12} - \sin \Delta_{13} + \sin \Delta_{23}]\ ,
 \end{align}
 where $\Delta_{ij} = \flatfrac{\Delta m_{ij}^2 L }{4 E}$.
-Including matter effects
+Because of the above discussion, all the CP asymmetries, measured on each channel, are equal up to a sign:
+\begin{equation}
+	\mathcal{A}_{\mu e} = \mathcal{A}_{\tau \mu} = \mathcal{A}_{e \tau} = %
+	- \mathcal{A}_{e \mu} = - \mathcal{A}_{\mu \tau} = - \mathcal{A}_{\tau e}  \ .
+\end{equation}
+Including matter effects, we can focus on the limit where the effects of the atmospheric mass difference dominates.
+This holds to LBL experiments and leads to helpful cancellations in the evolution equation which reads
+\begin{equation}
+	i \dv{}{x} \mqty(\psi_{\alpha 1} \\ \psi_{\alpha 2} \\ \psi_{\alpha 3}) =
+		\frac{1}{2E} \mqty (s_{13}^2 \Delta m_{31}^2 + a & 0 & c_{13} s_{13} \Delta m_{31}^2 \\
+				    0				 & 0 &  0			     \\
+				    c_{13} s_{13} \Delta m_{31}^2 & 0 & c_{13}^2 \Delta m_{31}^2) %
+				    \mqty(\psi_{\alpha 1} \\ \psi_{\alpha 2} \\ \psi_{\alpha 3})\ ,
+\end{equation}
+which depends only on the mixing angle $\theta_{13}$ and is independent of the CP-violating phase.
+Hence, CP violation is not observable in experiments which are only sensitivite to $\Delta m_{31}^2$, %
+just by looking at neutrino oscillations in matter, as well as in vacuum.
+This is easily understandable, as the limit dictated by \refeq{eq:hierarchy} corresponds to an effective %
+two-flavour oscillation.
+However, the oscillation probabilities of neutrinos and antineutrinos in matter are not the same, %
+because the medium is not CP-invariant and it induces CP violation in the oscillation probabilities.
+\iffalse
 \begin{align}
 	P(&\nu_\mu \to \nu_e) = %
 	\ 4 c_{13}^2 s_{13}^2 s_{23}^2\,\sin^2 \Delta_{31}^2\notag  \\
@@ -161,20 +182,8 @@ Including matter effects
 \end{align}
 where $s_{ij} = \sin \theta_{ij}$, $c_{ij} = \cos\theta_{ij}$,
 and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron density of the medium.
+\fi
 
-Given the parametrisation in Eq.~\ref{eq:pmns}, %
-this asymmetry is not measurable if the phase is trivial, \ie~$\delta_\text{CP} = 0$~or~$\pm \pi$, %
-or if $\theta_{13}$ is vanishing.
-From a model building point of view, however, a successful leptogenesis requires the parameters to satisfy %
-$\qty|\sin\theta_{13} \sin\delta_\text{CP}| \gtrsim 0.09$
-%\begin{equation}
-%	\label{eq:leptogenesis}
-%	\qty|\sin\theta_{13} \sin\delta_\text{CP}| \gtrsim 0.09\ ,
-%\end{equation}
-when the Majorana phases are vanishing~\cite{Pascoli:2006ci}.
-The value of $\theta_{13}$ has been measured to be non-zero~\cite{Abe:2011sj,Abe:2011fz,An:2012eh,Ahn:2012nd} %
-and for this reason it is expected that on-going and future generation neutrino experiments %
-will also constrain the value of $\delta_\text{CP}$.
 The effect of the CP--violating phase on the asymmetry of Eq.~\ref{eq:asymmetry} can be appreciated from the plot in Fig.~\ref{fig:mass}.
 
 \begin{figure}
@@ -194,18 +203,40 @@ The effect of the CP--violating phase on the asymmetry of Eq.~\ref{eq:asymmetry}
 	\end{minipage}
 \end{figure}
 
+
+Given the parametrisation in Eq.~\ref{eq:pmns}, %
+this asymmetry is not measurable if the phase is trivial, \ie~$\delta_\text{CP} = 0$~or~$\pm \pi$, %
+or if $\theta_{13}$ is vanishing.
+From a model building point of view, however, a successful leptogenesis requires the parameters to satisfy %
+$\qty|\sin\theta_{13} \sin\delta_\text{CP}| \gtrsim 0.09$
+%\begin{equation}
+%	\label{eq:leptogenesis}
+%	\qty|\sin\theta_{13} \sin\delta_\text{CP}| \gtrsim 0.09\ ,
+%\end{equation}
+when the Majorana phases are vanishing~\cite{Pascoli:2006ci}.
+The value of $\theta_{13}$ has been measured to be non-zero~\cite{Abe:2011sj,Abe:2011fz,An:2012eh,Ahn:2012nd} %
+and for this reason it is expected that on-going and future generation neutrino experiments %
+will also constrain the value of $\delta_\text{CP}$.
+
+
+
 \section{Hyper-Kamiokande experiment}
 
 Hyper-Kamiokande (HK)~\cite{Abe:2018uyc} will be the next-generation water Cherenkov detector, %
 superseding its predecessor, Super-Kamiokande (SK).
-The design does not deviate much from SK.
-The cylindrical tank of HK will be 72\,m high and 68\,m in diameter, with a fiducial volume of 188.4\,kton, %
+Employing ring-imaging technique, the rare interactions of neutrinos can be detected, %
+as well as the possible spontaneous decay of nucleons.
+The design of HK does not deviate much from SK and Kamiokande.
+The cylindrical tank of HK will be 72\,m high and 68\,m in diameter, with a fiducial volume of 188.4\,kton (total volume 257.8\,kton), %
 around 8.4 times the fiducial volume of SK.
 The photo-coverage of the inner detector region will be 40\,\%, the same of SK, %
 but it translates to roughly forty thousands photomultipliers (PMTs).
-New 20'' PMTs, with twice the quantum efficiency of the previous generation and improved charge %
-and timing resolution, will be employed.
+New 20''box and line PMTs will be employed, with improved charge and riming resolution, thanks to the increased quantum efficiency %
+which is almost twice the QE of previous PMT generation.
+It also has the high pressure tolerance for the usage below 60 m depth of water.
 A study for implementing multi PMT modules, containing each 23 3'' PMT, is being carried out
+The detector will be located underground at Kamioka mine in Gifu Prefecture, %
+with an overburden of approximately 650 meters or more of rock, which is equivalent to \np{1750} meters or more of water.
 
 Thanks to incredible statistics and cutting edge resolutions, HK will be capable of a vast variety of physics studies, %
 from accelerator and atmospheric neutrinos to solar and supernova neutrinos.
@@ -215,6 +246,8 @@ This is achievable by studying accelerator neutrinos, and to this end the possib
 at the secondary oscillation peak, is being investigated.
 
 HK will be located 295\,km away from the target and $2.5^\circ$ off-axis with respect to the beamline.
+The detector cavity is planed to be excavated in Mt. Nijugo-yama in the Tochibora-mine in Gifu Prefecture, %
+which is approximately 8\,km south from SK.
 The neutrino beam is generated by a 30\,GeV proton beam colliding on a fixed graphite target; %
 a`focusing horn selects positively charged ($\nu$ mode) or negatively charged ($\cj{\nu}$ mode) pions, %
 which decay leptonically, to obtain an almost pure muon neutrino or antineutrino beam, peaking at 600\,MeV.
@@ -238,9 +271,26 @@ estimated a significance well-above $5\,\sigma$ after ten years of data taking, 
 
 The project has been recentely approved by japanese goverment and data taking is expected commencing by 2027.
 
+The uncertainty of the Earth’s density between Tokai and Kamioka is estimated to be at most 6\% [181].
+Because the matter effect contribution to the total $\nu_\mu \to \nu_e$ appearance probability is %
+less than 10\% for 295km baseline, the uncertainty from the matter density is estimated to be less
+than 0.6\% and neglected in the following analysis.
+
+
 \section{Sensitivity studies}
 
-It is important to asses the impact of systematic errors on the total sensitivity of HK.
+At any stage of the experiment it is important to asses the impact of systematic errors on the total sensitivity of HK.
+One of the main goal is to constrain with high precision oscillation parameters, especially $\delta_\text{CP}$ and %
+and the octant determination.
+Even if real data is not available, it is possible to understand whether the statistics collected have %
+enough constraining power to achieve the target precision.
+The oscillation parameters and systematic uncertainties are input to a Monte Carlo simulation %
+to build expected distribution of events.
+This expected data is then compared to simulated \emph{observed data}, which is created by selecting %
+a combination of oscillation parameters in order to mimic the real distributions of event that will be collected eventually.
+Scanning over the oscillation parameters, the resolution of HK to oscillation parameters and, more importantly, %
+the influence of the systematic uncertainties can be studied.
+%To this end, a fitting framework is employed, capable of performing to study Monte Carlo simulation of beam and atmospheric samples. 
 
 \subsection{Event samples}
 
@@ -279,7 +329,6 @@ It is important to asses the impact of systematic errors on the total sensitivit
 	\end{tabular}
 \end{table}
 
-To this end, a combined fitting framework is used to study Monte Carlo simulation of beam and atmospheric samples. 
 For the study, SK atmospheric Monte Carlo (MC) is adapted and scaled to HK statistics to compose the atmospheric sample.
 A total of \np{2224} bins are used, divided in several two-dimensional histograms of $\log p$ and $\cos\vartheta$, %
 where $\vartheta$ is the azimuthal angle.
@@ -430,7 +479,7 @@ Given a \emph{true} point, the $\chi^2$ is computed at each point of the oscilla
 and it is minimised with respect to the pulls $\varepsilon$.
 This leads to a set of $j$ non-linear equations %, which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
 \begin{equation}
-	\pdv{\chi^2(\vartheta;\uj{\varepsilon})}{\varepsilon_j} = 0\ .
+	\pdv{\chi^2}{\varepsilon_j} (\vartheta;\uj{\varepsilon}) = 0\ .
 \end{equation}
 The system can be solved with the Newton's method by finding the Hessian of the $\chi^2$.
 This gives a linear system, which can be iterated until sufficient precision is achieved
@@ -470,9 +519,9 @@ Given the definition of $\chi^2$ in \refeq{eq:chi2}, %
 at fixed magnitude the difference between the sets is just the correlation matrix, whereas at fixed correlation matrix %
 the differencea are the $1\sigma$ histograms.
 \begin{equation}
-	\rho = \mqty(1 & 1 // 1 & 1) \quad,\quad
-	\rho = \mqty(1 & -1 // -1 & 1) \quad,\quad
-	\rho = \mqty(1 & 0 // 0 & 1)\ .
+	\rho = \mqty(1 & 1 \\ 1 & 1) \quad,\quad
+	\rho = \mqty(1 & -1 \\ -1 & 1) \quad,\quad
+	\rho = \mqty(1 & 0 \\ 0 & 1)\ .
 \end{equation}
 The correlation matrices written as above are singular and so not invertible.
 In order to get the inverted matrix, an offset of \np{e-5} is added to off-diagonal terms.

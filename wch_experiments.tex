@@ -1,112 +1,92 @@
 \chapter{Gadolinium-loaded water Cherenkov detector}
 
 Being electrically neutral and uncoloured particles, neutrinos can only interact through weak interactions.
-For this reason, coupled with the small cross-sections typical of the weak force, the study of neutrino results %
-in a challenging task.
-Direct observation is unfeasible, thus detection must rely on weak interactions with matter, where %
-their SU(2) charged counterparts are either produced or scattered, by CC or NC interactions respectively.
-The physics is mediated by the lagrangians in Eq.~\ref{eq:cc} and~\ref{eq:nc}.
+The typical cross-section of a 1\,GeV neutrino is around \np{e-38}\,cm\tapi{2} %
+which makes its study a challening task.
+Neutrino experiments usually compensate the small cross-section by instrumenting large active volumes.
+In this way, a statistical significant amount of neutrino interactions with matter can be captured, %
+and by studying the final state particles some knowledge on the incoming neutrino is retrieved.
+For this reason, coupled with the small cross-sections typical of the weak force, %
+the study of neutrino is a challenging task.
+Large volumes are solely not enough to study neutrinos, but active or passive countermeasures
+to reduce backgrounds must be put into place.
 
-Large active volumes have to be employed, such that a significant number of neutrino can be considered and %
-interaction probability is thus increased.
-These apparatus are often built underground to shield the detector from cosmic rays and other barckground radiation.
-Apart from providing matter to interact with, at the same time these volumes must be capable of detecting %
-the scattered charged leptons.
-Many are the materials or substances that can be used, like chlorine, gallium, solid or liquid scintillators.
+Neutrino physics has greatly progressed in recent times, thanks to massive active detectors and %
+improvements in the detection technologies.
+The most emblematic example of neutrino experiment is the ring-imaging water Cherenkov technique.
+Examples of such experiments are SNO~\cite{} and Super-Kamiokande
+which respectively demonstrated solar~\cite{Aharmim:2005gt} and atmospheric~\cite{Fukuda:1998mi} neutrino oscillations.
+The picture of three-flavour neutrino oscillations has been since intensively studied %
+by numerous experiments with atmospheric, solar, reactor and accelerator neutrinos.
 
-One of the most promising techniques is to combine liquid argon with time projection chambers.
-As with most other liquefied noble gases, argon has a high scintillation light yield %
-(ca 51~photons/keV[arXiv:1004.0373]), is transparent to its own scintillation light, and is relatively easy to purify.
-Compared to xenon, argon is also cheaper and has a distinct scintillation time profile which allows the separation %
-of electronic recoils from nuclear recoils.
-
-A more dated and better-known technology is the \emph{water Cherenkov} method, where the detector is used to %
-record the Cherenkov light produced when the particles pass through pass through tanks full of purified water. 
-
-\section{Water cherenkov}
+\section{Water cherenkov detector}
 \label{sec:wch}
 
-The speed of light in vacuum is a universal constant, $c$, and it is a physical limit of the propagation %
-of information, as stated by the special theory of Relativity.
-However, when in a medium, light may travel at speed significantly less than $c$.
-This reduction of speed depends on the relative permittivity, $\varepsilon$, of the material in which light is %
-propagating.
-Because of the non-zero real part of the dielectric constant, the electromagnetic (EM) field is modified and %
-the phase velocity of light changes into
-\begin{equation}
-	\label{eq:light}
-	v_P = \frac{c}{\sqrt{\varepsilon(\lambda)}} = \frac{c}{n(\lambda)}\,,
-\end{equation}
-where $n(\lambda) > 1$ is the \emph{refractive index} of the medium and %
-depends on the wavelenght (energy) of the wave.
+%One of the most promising techniques is to combine liquid argon with time projection chambers.
+%As with most other liquefied noble gases, argon has a high scintillation light yield %
+%(ca 51~photons/keV[arXiv:1004.0373]), is transparent to its own scintillation light, and is relatively easy to purify.
+%Compared to xenon, argon is also cheaper and has a distinct scintillation time profile which allows the separation %
+%of electronic recoils from nuclear recoils.
 
-A charged particles moving at a constant velocity in a dielectric medium disrupts the local electromagnetic field, %
-by deforming its molecules and temporarily polarising the material.
-The dipoles are restored almost instantaneously and thus become impulsive sources of EM waves.
-If the velocity of the passing particle, $v = \beta c$, is less than the speed of the light in the medium %
-as expressed in Eq.~\ref{eq:light}, i.e.\ $\beta < 1/n$, then the total energy flux of the excited %
-field is zero and EM waves are not irradiated.
-On the contrary, if $\beta > 1/n$, the perturbance left by the passage of the particle is such that %
-the energy is released coherently.
-The result is that the field is different from zero in a cone coaxial with respect to the direction of %
-the charged particle, whose direction is opposite to the particle motion.
-As far as the photons are concerned, these are emitted coherently to a fixed angle with respect %
-to the particle motion.
-With the help of Fig.~\ref{fig:cherenkov}, it is easy to find that:
-\begin{align}
-	\sin \alpha &= \frac{1}{\beta n}\,\\
-	\cos \theta &= \frac{1}{\beta n}\,.
-\end{align}
-where $\alpha$ is the apex angle of the cone and $\theta$ is the photon angle with respect to the particle direction.
-For an ultra-relativistic particle, for which $\beta \sim 1$, there is a maximum angle of emission, given by:
+Light travelling through a transparent material undergoes a reduction of its phase velocity %
+due to a superposition with the electromagnetic fields of the electrons in the medium, which can be %
+polarized both electrically and mangetically.
+The ratio of the new phase velocity and the speed of light in vacuum defines the ``refractive index''
 \begin{equation}
-	\cos \theta_{\mathrm{MAX}} = \frac{1}{n}\,.
+	\label{eq:ref_index}
+	n = \frac{c}{v_P} = \sqrt{\varepsilon_r \mu_r}\ ,
 \end{equation}
+where $\varepsilon_r$ and $\mu_r$ are the relative permettivity and permeability of the material.
+It follows that $n(\lambda) > 1$, but the value depends on the wavelength of the incoming light.
 
-The phenomenon is called \emph{Cherenkov effect}, and it occurs everytime a charged particle passes through a %
-dielectric medium at a speed:
+A charged particles moving at a velocity faster than the speed of light in a medium %
+emits a coherent electromagnetic radiation, called ``Cherenkov radiation'', %
+As the particle is moving faster than $c / n$, the front wave of the EM radiation forms a cone following the %
+charged particle.
+Given that the length of the track of the particle in the medium is large compared to the emitted wavelength %
+and that the speed of the particle is constant with respect to the period of emission $\frac{\lambda}{c}$,
+the radiation is produced when
 \begin{equation}
 	\label{eq:cherenkov}
-	\beta > \frac{1}{n}\,.
+	\beta = \frac{v}{c} > \frac{1}{n}\ ,
 \end{equation}
-According to the theory of electromagnetic waves, a charged particle moving uniformly does not irradiate %
-and this proves that the Cherenkov radiation is not related with Bremsstrahlung. 
-
-This condition can be expressed in terms of the particle energy, given that $E^2 = p^2+m^2$ and %
-$\beta = p/E$\footnote{For this calculation, the convention $c = 1$ is adopted.}.
-The threshold becomes:
+where $v$ is the velocity of the particle.
+The energy of the particle at the limit of this condition is usually referred to as the \emph{Cherenkov threshold}, %
+and it reads
 \begin{equation}
-	\label{eq:ch_Eth}
-	\frac{E}{m} > \frac{1}{\sqrt{1-1/n^2}}\,,
+	\label{eq:cherenkov_threshold}
+	E_\text{thr} = m\ \sqrt{1 + \frac{1}{n^2-1}}\ ,
 \end{equation}
 with $m$ the mass of the charged particle.
+The cone of light formed by the Cherenkov light has an angular aperture $\theta$ given by
+\begin{equation}
+	\cos \theta = \frac{1}{n\,\beta} \ ,
+\end{equation}
+which has a maximum for ultra-relativistic particles, i.e.\ when $\beta \simeq 1$.
+The charged particle will typically lose energy in the medium due to ionization, %
+therefore slowing until the condition of \refeq{eq:cherenkov} does not hold anymore.
+The particle stops emitting radiation and therefore the cone of radiation reduces to a ring when %
+projected onto a plane.
+
 
 The radiation is emitted in the visible and near visible regions of the EM spectrum, for which $ n > 1$.
 A real medium is always dispersive and radiation is restricted to those frequencies bands for which %
 $n(\nu) > \frac{1}{\beta}$.
 In the x-ray region, for instance, $n(\nu)$ is always less than one and radiation is forbidden at this energies, %
 because Eq.~\ref{eq:cherenkov} cannot be satisfied.
-
-Truly, coherent emission of light needs two more conditions to be fulfilled:
-\begin{itemize}
-	\item the length of the track of the particle in the medium should be large compared with the wavelength, %
-		$\lambda$, of the radiation in question, otherwise diffraction effects will become dominant;
-	\item the velocity of the particle must be constant during its passage through the medium, or, %
-		to be more specific, the differences in the times for particle to traverse successive $\lambda$ distances %
-		should be small compared with the period $\frac{\lambda}{c}$ of the emitted light.
-\end{itemize}
-
-The number of photons emitted by a charged particle of charge $Ze$ per unit path length and per unit %
-energy interval, or equivalently to $\lambda$, of the photons is equal to:
+The number of photons emitted by a charged particle of charge $z$ per unit path length and per unit %
+energy interval, or equivalently to $\lambda$, follows the Frank-Tamm formula 
 \begin{equation}
-	\label{eq:ch_ph}
-	\frac{\mathrm{d}^2N}{\mathrm{d}x\mathrm{d}\lambda} = \frac{2\pi\alpha Z^2}{\lambda^2} %
-	\bigg(1-\frac{1}{\beta^2 n^2(\lambda)} \bigg)\,.
+	\label{eq:franktamm}
+	\pdv{N}{x}{\lambda} = \frac{2\,\pi\,\alpha\,z^2}{\lambda^2} %
+	\qty(1-\frac{1}{\beta^2 n^2(\lambda)}) = %
+	\frac{2\,\pi\,\alpha\,z^2}{\lambda^2} \sin^2\theta\ ,
 \end{equation}
-This means that the greater part of Cherenkov photons are emitted in the ultraviolet range, because of the %
-proportionality to $1/\lambda^2$.
+with $\alpha$ the fine structure constant.
+Due to the inverse dependence on $\lambda^2$, most of the Cherenkov photons are typically emitted in the ultraviolet region.
 
-\emph{Cherenkov detectors} take advantage of this effect, detecting the light produced by charge particles.
+Many particle phsycis experiments take advantage of this effect, to convert the passage of %
+charged particles into detectable light.
 A large volume of transparent material, such as water, ice, or liquid scintillator, can be %
 surrounded by lightsensitive detectors in order to capture the Cherenkov radiation.
 This technique is largely used in neutrino detection, since they cannot be detected directly: the charged lepton, %
@@ -120,7 +100,7 @@ Not every neutrino energy allows the production of a charged lepton\footnote{For
 	$\bar\nu_e+p\rightarrow n+e^+$ has a energy threshold of \np{1.81}~MeV and the interaction %
 	$\nu_\mu+n\rightarrow p+\mu^-$ has the threshold of \np{110.16}~MeV, because of the muon mass.}, %
 but only MeV-scale neutrinos can be observed in a Cherenkov detector.
-
+The maximum angle is $\theta \simeq 41^\circ$ in water, where $n = 1.33$.
 
 \section{The gadolinium phase of Super-Kamiokande}
 
@@ -436,7 +416,7 @@ This prototype has been successfully built and tested and shown a concentration 
 resolution of $1\%$ at both $0.02\%$ and $0.2\%$ doping.
 
 
-\section{Calibration with a californium source}
+\section{Neutron calibration}
 
 %https://arxiv.org/pdf/0811.0735.pdf
 %https://www.sno.phy.queensu.ca/sno/papers/labranche_phd.pdf
