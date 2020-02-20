@@ -1,4 +1,5 @@
-\chapter{Gadolinium-loaded water Cherenkov detector}
+\chapter{The gadolinium phase of Super-Kamiokande}
+\label{sec:skgd}
 
 Being electrically neutral and uncoloured particles, neutrinos can only interact through weak interactions.
 The typical cross-section of a 1\,GeV neutrino is around \np{e-38}\,cm\tapi{2} %
@@ -14,12 +15,12 @@ to reduce backgrounds must be put into place.
 Neutrino physics has greatly progressed in recent times, thanks to massive active detectors and %
 improvements in the detection technologies.
 The most emblematic example of neutrino experiment is the ring-imaging water Cherenkov technique.
-Examples of such experiments are SNO~\cite{} and Super-Kamiokande
+Examples of such experiments are SNO and Super-Kamiokande
 which respectively demonstrated solar~\cite{Aharmim:2005gt} and atmospheric~\cite{Fukuda:1998mi} neutrino oscillations.
 The picture of three-flavour neutrino oscillations has been since intensively studied %
 by numerous experiments with atmospheric, solar, reactor and accelerator neutrinos.
 
-\section{Water cherenkov detector}
+\section{Cherenkov detectors}
 \label{sec:wch}
 
 %One of the most promising techniques is to combine liquid argon with time projection chambers.
@@ -29,80 +30,119 @@ by numerous experiments with atmospheric, solar, reactor and accelerator neutrin
 %of electronic recoils from nuclear recoils.
 
 Light travelling through a transparent material undergoes a reduction of its phase velocity %
-due to a superposition with the electromagnetic fields of the electrons in the medium, which can be %
-polarized both electrically and mangetically.
-The ratio of the new phase velocity and the speed of light in vacuum defines the ``refractive index''
+due to a superposition with the electromagnetic fields of the electrons in the medium. %, which can be %
+The change in velocity will therefore depend on the frequency of the incoming photons.
+%polarized both electrically and mangetically.
+The ratio of the new phase velocity and the speed of light in vacuum defines the \emph{refractive index} %
+of the material:
 \begin{equation}
 	\label{eq:ref_index}
-	n = \frac{c}{v_P} = \sqrt{\varepsilon_r \mu_r}\ ,
+	n(\lambda) = \frac{c}{v_P(\lambda)}\ ,
 \end{equation}
-where $\varepsilon_r$ and $\mu_r$ are the relative permettivity and permeability of the material.
-It follows that $n(\lambda) > 1$, but the value depends on the wavelength of the incoming light.
+which by definition is greater than one.
 
 A charged particles moving at a velocity faster than the speed of light in a medium %
-emits a coherent electromagnetic radiation, called ``Cherenkov radiation'', %
-As the particle is moving faster than $c / n$, the front wave of the EM radiation forms a cone following the %
-charged particle.
-Given that the length of the track of the particle in the medium is large compared to the emitted wavelength %
-and that the speed of the particle is constant with respect to the period of emission $\frac{\lambda}{c}$,
+emits a coherent electromagnetic radiation, called ``Cherenkov radiation''. %
+As the particle is moving faster than $c / n$, the front wave of the EM radiation forms a cone %
+which follows behind the charged particle.
+Provided that the length of the track of the particle in the medium is large compared to the emitted wavelength %
+and that the speed of the particle is constant with respect to the period of emission $\tilde{t} = \frac{\lambda}{c}$,
 the radiation is produced when
 \begin{equation}
 	\label{eq:cherenkov}
 	\beta = \frac{v}{c} > \frac{1}{n}\ ,
 \end{equation}
 where $v$ is the velocity of the particle.
-The energy of the particle at the limit of this condition is usually referred to as the \emph{Cherenkov threshold}, %
-and it reads
+The minimum energy of the particle to reach this condition is therefore
 \begin{equation}
 	\label{eq:cherenkov_threshold}
 	E_\text{thr} = m\ \sqrt{1 + \frac{1}{n^2-1}}\ ,
 \end{equation}
 with $m$ the mass of the charged particle.
-The cone of light formed by the Cherenkov light has an angular aperture $\theta$ given by
+Particles of mass $m$ with energy above the threshold will radiate Cherenkov light in the shape of a cone, %
+which has an angular aperture $\theta$ given by
 \begin{equation}
-	\cos \theta = \frac{1}{n\,\beta} \ ,
+	\cos \theta = \frac{1}{n\,\beta} \ .
 \end{equation}
-which has a maximum for ultra-relativistic particles, i.e.\ when $\beta \simeq 1$.
-The charged particle will typically lose energy in the medium due to ionization, %
-therefore slowing until the condition of \refeq{eq:cherenkov} does not hold anymore.
-The particle stops emitting radiation and therefore the cone of radiation reduces to a ring when %
-projected onto a plane.
+The maximum angle is reached by ultra-relativistic particle with $\beta \simeq 1$.
+The charged particle, however, will typically lose energy in the medium due to ionization, %
+slowing down until its energy falls below the threshold $E_\text{thr}$.
+As soon as the condition of \refeq{eq:cherenkov_threshold} does not hold anymore, %
+the particle stops emitting radiation and the cone of radiation reduces to a truncated cone, %
+which forms a ring when projected onto a surface.
 
-
-The radiation is emitted in the visible and near visible regions of the EM spectrum, for which $ n > 1$.
-A real medium is always dispersive and radiation is restricted to those frequencies bands for which %
-$n(\nu) > \frac{1}{\beta}$.
-In the x-ray region, for instance, $n(\nu)$ is always less than one and radiation is forbidden at this energies, %
-because Eq.~\ref{eq:cherenkov} cannot be satisfied.
+Many particle phsycis experiments take advantage of this effect, to convert the passage of %
+charged particles into detectable light.
+A large volume of transparent material, such as water, ice, aerogel, or a liquid scintillator, %
+can be surrounded by photodetectors in order to capture the Cherenkov radiation.
 The number of photons emitted by a charged particle of charge $z$ per unit path length and per unit %
-energy interval, or equivalently to $\lambda$, follows the Frank-Tamm formula 
+energy interval, or equivalently to $\lambda$, has a distribution that follows the Frank-Tamm formula:
 \begin{equation}
 	\label{eq:franktamm}
 	\pdv{N}{x}{\lambda} = \frac{2\,\pi\,\alpha\,z^2}{\lambda^2} %
 	\qty(1-\frac{1}{\beta^2 n^2(\lambda)}) = %
 	\frac{2\,\pi\,\alpha\,z^2}{\lambda^2} \sin^2\theta\ ,
 \end{equation}
-with $\alpha$ the fine structure constant.
-Due to the inverse dependence on $\lambda^2$, most of the Cherenkov photons are typically emitted in the ultraviolet region.
+where $\alpha$ is the fine structure constant and $z$ is the charge of the particle..
+Due to the inverse dependence on $\lambda^2$, most of the Cherenkov photons are emitted at shorter wavelengths.
+A real medium is always dispersive and allowed frequencies are restricted to the region for which $n(\lambda) > \frac{1}{\beta}$.
+The radiation is hence typically emitted in the near visible and ultraviolet regions of the EM spectrum.
+At higher frequencies, for example in the x-ray region, the refractive index drops below one and %
+Cherenkov photons cannot be produced at such short wavelengths.
+Experiments exploiting Cherenkov light try to match the sensitivity band of photodetectors to the radiation region.
+Photomultipliers (PMT) are the detectors of choice, thanks to their low noise and capability of single photodetection.
+[add picture of PMT qe R3600-02\_20?]
 
-Many particle phsycis experiments take advantage of this effect, to convert the passage of %
-charged particles into detectable light.
-A large volume of transparent material, such as water, ice, or liquid scintillator, can be %
-surrounded by lightsensitive detectors in order to capture the Cherenkov radiation.
-This technique is largely used in neutrino detection, since they cannot be detected directly: the charged lepton, %
-yeilded in CC or NC interactions, is observed.
-From the light collected, it is possibile to reconstruct information on the interaction, such as the velocity %
-of the charged particle, which is somehow related to the energy of the incident neutrino, or the position %
-of the interaction vertex.
-If the charged lepton drop under the Cherenkov threshold, the light is emitted in the shape of a ring, which %
-further data can be inferred from.
-Not every neutrino energy allows the production of a charged lepton\footnote{For instance, the CCQE process %
-	$\bar\nu_e+p\rightarrow n+e^+$ has a energy threshold of \np{1.81}~MeV and the interaction %
-	$\nu_\mu+n\rightarrow p+\mu^-$ has the threshold of \np{110.16}~MeV, because of the muon mass.}, %
-but only MeV-scale neutrinos can be observed in a Cherenkov detector.
+This technique is largely used in neutrino detection, since it allows to easily instrument large volumes.
+Amongst the most notable examples, Super-Kamiokande uses water as a medium, IceCube uses Antarctia's ice, %
+SNO+ liquid scintillator. 
+Charged-current interactions of neutrinos on a nucleon produce charged leptons %
+that are likely to acquire most of the incoming neutrino momentum thanks to the heavy mass of the nucleon.
+If the outgoing lepton has sufficient energy, above the threshold of \refeq{eq:cherenkov_threshold}, %
+the radiation produced is used to to reconstruct the interacting neutrino, with some limited resolution.
+The photons collected on the light sensors are correlated to the charged lepton energy, %
+whereas the timing between the hits of the photodetectors is used to reconstruct the vertex and the direction %
+of the interaction.
+Certain Cherenkov detectors are also capable of particle identification.
+In IceCube, for example, events are classified in the following categories:
+\begin{itemize}
+	\item ``cascades'', typically generated by CC interactions of $\nu_e$ or NC interactions;
+	\item ``tracks'', produced by very energetic muons;
+	\item and ``double bangs'', the results of a $\nu_\tau$ producing a tau lepton, which decays inside the detector.
+\end{itemize}
+In Super-Kamiokande, particle identification electrons and muons can be easily distinguished thanks to their different mass.
+The walls of the tank are lined with PMTs which collects ring of Cherenkov radiation: %
+a muon would typically leave
+For example, the topology of the rings
 The maximum angle is $\theta \simeq 41^\circ$ in water, where $n = 1.33$.
 
-\section{The gadolinium phase of Super-Kamiokande}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{Electron.pdf}
+	\includegraphics[width=0.45\textwidth]{Muon.pdf}
+	\caption{Fully-contained events in the fiducial volume of Super-Kamiokande.}
+	\label{fig:sk_events}
+\end{figure}
+
+The Cherenkov photons then reach the wall and are detected by the PMTs, forming ring patterns.
+The ring pattern looks different by the particle type, the particle momentum, the multiplicity, and so on.
+For example, the electron-induced ring is likely to be fuzzier than the muon-induced ring because of electromagnetic cascades.
+Figure 4.3 gives an example of the Cherenkov ring observed in SK.
+
+The Super-Kamiokande detector utilizes spring water in the mine as the medium in the tank.
+The water used in the tank is purified with a flow rate of 60 ton/hour by the water purification %
+system continuously for a high purity.
+Furthermore, the radioactive impurities in the water, especially radon, which is one of the background sources for
+the observation of neutrino in the MeV energy region such as solar neutrino, are also
+removed by the water purification system.
+To prevent the radon in air dissolving into the purified water, radon-free air produced
+by air purification system is pumped into the space above the water surface in the
+tank continuously. Radon contamination in the radon-free air is suppressed to less
+than 3 mBq/m3.
+As a comparison, a typical radon concentration in the mine tunnel air without any purification %
+in summer is about 1200 Bq/m3, which is five orders of magnitude higher than the value after purification.
+
+\section{Neutron tagging in Super-Kamiokande}
 
 In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
 will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
