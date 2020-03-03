@@ -1,13 +1,13 @@
 \chapter{The gadolinium phase of Super-Kamiokande}
 \label{cha:skgd}
 
-As studied in the previous chapter, the typical total cross-section for an accelerator neutrino ($\sim1$\,GeV) %
+As studied in the previous chapter, the typical total cross-section for an accelerator neutrino \mbox{($\sim1$\,GeV)} %
 is of the order of \np{e-38}\,cm\tapi{2} and for a solar neutrino ($\lesssim10$\,MeV) %
 it is one order of magnitude lower.
-These small values makes the detection of neutrinos a challening task.
-Neutrino experiments usually compensate the small cross-section by instrumenting large active volumes.
-In this way, a statistical significant amount of neutrino interactions with matter can be captured, %
-and by studying the final state particles some knowledge on the incoming neutrino is retrieved.
+These small values make the detection of neutrinos a challening task.
+Neutrino experiments usually compensate the small cross-section by instrumenting large active volumes, %
+so that a statistical significant amount of neutrino interactions with matter can be recorded.
+By studying the final state particles some knowledge on the incoming neutrino may be retrieved.
 Large volumes are, however, prone to higher background, either from cosmic rays or natural radioactivity.
 and passive or active techniques to reduce such undesired events must be put into place.
 Neutrino physics has greatly progressed in recent times, thanks to both massive active detectors and %
@@ -15,7 +15,7 @@ improvements in the detection technologies.
 The most emblematic example of neutrino experiments are SNO and Super-Kamiokande (SK) %
 which respectively demonstrated solar~\cite{Aharmim:2005gt} and atmospheric~\cite{Fukuda:1998mi} neutrino oscillations.
 The picture of three-flavour neutrino oscillations has been since intensively studied %
-by numerous experiments with not only atmospheric and solar neutrinos, but also with reactor and accelerator ones.
+by numerous experiments with not only atmospheric and solar neutrinos, but also with neutrinos from reactors and accelerators.
 Current and future neutrino experiments rely on the experimental techniques that were pioneered and perfectioned %
 by these two successful experiments.
 
@@ -33,13 +33,14 @@ events is becoming a more and more crucial requisite for detectors.
 One of the most promising approach is the addition of gadolinium to the active medium of the detector.
 Certain isotopes of gadolinium (Gd) have a very high-cross section for thermal neutron capture %
 accompanied with the emission of high energy photons, which makes neutron detection more efficient.
-Many existing neutrino experiments are already using Gd-loaded water or scintillator for neutron tagging, %
-and future experiments are planning to use the same principle. [list of experiments?]
+Many existing neutrino experiments are already using Gd-loaded water or scintillator for neutron tagging %
+(EGADS, ANNIE, RENO), %
+and future experiments are planning to use the same principle.
 After a summer-long refurbishment in 2018, Super-Kamiokande will become the largest Gd-doped water Cherenkov detector.
 
 In this chapter, we will review the working principle of a generic Cherenkov detector in \refsec{sec:wch}, %
 before illustrating in more detail the Super-Kamiokande experiment (\refsec{sec:sk}).
-We will then justify the importance for neutron tagging (\refsec{sec:sk_neutron} and \refsec{sec:sk_calibration}) %
+We will then justify the importance for neutron tagging in \refsec{sec:sk_neutron} %
 and the benefits of gadolinium-doping (\refsec{sec:gadolinium} and \refsec{sec:gad}).
 
 \section{Cherenkov detectors}
@@ -179,14 +180,20 @@ for example, an electron travelling in the water is more likely to be scattered 
 that on the other hand will follow a more straight path, and as a consquence %
 the electron-induced ring is less defined and fuzzier than the muon-induced one.
 This can be appreciated on the reconstructed events of \reffig{fig:sk_events}.
+Pions usually interact hadronically nuclei with oxygen nuclei, and therefore they have shorter %
+and the Cherenkov rings are also less defined than a muon ones.
+Muon and pion events can be accompanied by secondary rings from the electrons produced in their decays.
+Energetic gamma rays can also be detected, as for instance the ones from $\pi^0$ decays, %
+through rings of electrons accelerated by compton scattering.
+
 
 As part of the strategies to tackle backgrounds, typically only events originating at the centre %
 of the ID are considered to be valid.
-The materials of the walls of the tank contains radioactive material which can mimic a signal event %
-in the MeV energy region, crucial for solar neutrino studies.
-If the vertex of the reconstructed event is less than 200\,cm away from the ID walls, %
-then the selection algorithm discards it.
-This criteria defines a fiducial volume (FV) which is around 22.5\,kt in water mass.
+The materials of the walls of the tank, and particulary the glass of PMTs, contains radioactive material, %
+such as isotopes of thorium, uranium and potassium.
+These impurities can mimic a signal event in the MeV energy region, crucial for solar neutrino studies.
+The selection algorithm simply discards any reconstructed event the vertex of which is less than 200\,cm away from the ID walls.
+This criteria defines a fiducial volume (FV), which is around 22.5\,kt in water mass.
 The water used to fill the tank may also contain impurities, among which radon, that cause background events.
 The water in the tank is continuously filtered at a flow rate of 60\,t/hour by a water purification system.
 An air purification system pumps radon-free air into the SK area inside the mine.
@@ -194,28 +201,59 @@ This prevents radon in the air to dissolve in the purified water.
 Radon contamination is usually less than 3\,mBq/m\tapi{3}, compared to unpurifies air that can peak %
 at about 1200\,Bq/m\tapi{3}.
 Thanks to these precautions the current energy threshold for SK is \np{3.5}\,MeV.
+The main oscillation analyses of SK consider only events originating inside the FV and fully-contained, %
+i.e.\ that do not propagate in the OD, as this is signature is given mostly by neutrino interactions.
 
 \section{Neutrons in Super-Kamiokande}
+\label{sec:sk_neutron}
+
 
 Super-Kamiokande and other large scale water Cherenkov detectors have provided %
 many evidences in the experimental understanding of neutrinos, %
 be it originated in solar, atmospheric, or accelerator facilities.
 Despite the large exposure of the experiment, some studies are still curbed by statistical uncertainty %
 and would benefit from simply collecting more data.
-Other searches, instead, suffer from irreducible background events, %
-as for example proton decay and supernova relic neutrinos (SRN) analyses, %
-and could avail of improved background suppression techniques.
-Among these background sources, flasher events\footnote{A flasher event refers to the phenomena %
-	where a PMT may misfire and result in many repetitive internal discharges, of both itself and nearby PMTs.
-	Flasher events tend to have a broader hit timing distribution than neutrino events} %
-and cormic ray muons are of particular importance for proton decay, %
-whereas SRN searches are affected by atmospheric neutrinos, which dominate the region of interest %
-$14\,\text{MeV} < E_\nu < 30\,\text{MeV}$, and muon-induced spallation.
-These hindrances can be overcome by studying the yield of neutrons in neutrino interactions, such as the %
-\emph{inverse beta decay} (the antineutrino CCQE scattering).
-It would allow a handle on antineutrinos rate, and possibly a method of background reduction for other studies.
-An important limitation comes from insufficient neutron tagging.
+Other searches, instead, suffer from irreducible background events, as for example the detection of Relic Supernova Neutrinos (SNR), %
+%One of the main motivation to detect neutrons is to be able to detect relic supernova neutrinos, %
+also know as Diffuse Supernova Neutrino Background (DSNB), an incoherent background spectrum %
+produced from all previous core-collapse supernova explosions in the Universe (see \refsec{sec:nu_sun_sn}).
+The observation of SNR would be of great importance for improving our knowledge on the population of core-collapse SN %
+and the rate of star formation.
+The predictions provide with several limits but although SK has the best world limit, no SRN has been detected yet.
+The average energies of these neutrinos are around a few tens of MeV, at which the largest cross section %
+corresponds to inverse beta decay (IBD, see \refsec{sec:ibd}).
+%which is two orders of magnitude larger than $\nu_e$ elastic scattering.
+This measurement is afflicted at low energies by invisible muon decay%
+---muons below Cherenkov threshold that decay into electrons---and at high energies, %
+between $14\,\text{MeV} < E_\nu < 30\,\text{MeV}$, by atmospheric neutrinos.
+The energy threshold is also limited by muon-induced spallation events and solar neutrinos, that could be successfully %
+rejected with neutron tagging.
+If we could detect neutrons efficiently, these backgrounds could be reduced significantly and thus, %
+making the detection of the DSNB possible for the first time.
 
+Searches of galactic supernova burst could also avail of an improved background suppression.
+SK will be exposed to a huge number of neutrino events if a core-collapse supernova occurs inside our galaxy, %
+providing not only an early warning system for other observatories (see \refsec{sec:nu_sun_ns}), %
+but also information about early stages of the core-collapse process, its spectrum and time profile.
+Start that are at the onset of their collapse, just after carbon ignition, will release most of its energy through neutrinos.
+During the silicon burning stage, the neutrino luminosity is eight orders of magnitude less than %
+in the peak at core-collapse, but while the later lasts just a few seconds, %
+the Si burning phase takes several days.
+During the Si burning phase roughly 1\,\% of the total energy of core-collapse are emitted through
+``pre-supernova'' neutrinos with a monotonically increasing rate.
+The majority of neutrinos emitted are actually antineutrinos in the energies where IBD cross-section dominates.
+Detecting the neutron in the final state can be fundamental in distinguishing whether the incoming particle is %
+a neutrino or an antineutrino.
+
+Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states, %
+thanks to the capability of separating neutrino and antineutrino interactions.
+Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
+
+%Among these background sources, flasher events\footnote{A flasher event refers to the phenomenon %
+%	in which a PMT mis-fires and many repetitive internal discharges are triggered also on nearby PMTs.
+%	Flasher events tend to have a broader hit timing distribution than neutrino events.} %
+
+\subsection{Neutron tagging}
 
 Since neutrons are chargeless, they cannot interact with matter by means of the Coulomb force, %
 which dominates the energy loss mechanisms for charged particles, described by the Bethe formula.
@@ -245,55 +283,6 @@ Neutrons can be captured by either the hydrogen or the oxygen.
 Free neutron will capture on a hydrogen nucleus, releasing a 2.2 MeV gamma.
 In SK, for instance, this gamma results in about seven photo-electrons, and thus only detectable with $\simeq$20\,\% %
 efficiency.
-
-In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
-will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
-Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
-The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
-Capture of a thermal neutron on hydrogen has a cross section of $\np{332.6}\pm\np{0.7}$~\,b, %
-characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
-After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
-compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
-However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
-
-One of the main motivation to detect neutrons is to be able to detect relic supernova neutrinos, %
-also know as Diffuse Supernova Neutrino Background (DSNB), produced from all previous core-collapse supernova expolosions in the Universe.
-This measurement will provide very important information on, for example, the mean energy spectrum %
-of core collapse supernovae and the star formation rate of the universe.
-This measurement is largely affected by irreducible backgrounds, like invisible muon decay at low energies---%
-muons below Cherenkov threshold that decay into electrons---and at high energies by atmospheric neutrinos.
-The lower energy threshold is defined by our ability to remove spallation events and solar neutrinos, %
-that can be excluded effectively with neutron tagging.
-The energy of these neutrinos should be around a few tens of MeV.
-The largest cross section in this search corresponds to IBD, %
-which is two orders of magnitude larger than $\nu_e$ elastic scattering.
-The predictions provide with several limits but although SK has the best world limit, %
-DSNB has not been detected yet.
-However, if we could detect neutrons efficiently, these backgrounds could be reduced significantly and thus, %
-making the detection of the DSNB possible for the first time.
-
-Another motivation is searches of galactic supernova burst.
-When a massive star at the end of its life collapses to a neutron star, %
-it radiates almost all of its binding energy in the form of neutrinos, %
-most of which have energies in the range 10 to 30\,MeV, and are emitted over a timescale of several tens of seconds.
-These neutrinos are released just after core collapse, whereas the photon signal may take hours %
-or days to emerge from the stellar envelope.
-SK will acquire a huge number of neutrino events if the supernova is inside out galaxy, %
-providing much information about early stages of the core-collapse process, %
-its spectrum and time profile.
-Start that are at the onset of their collapse, just after carbon ignition, will release most of its energy through neutrinos.
-During the silicon burning stage, the neutrino luminosity is eight orders of magnitude less than %
-in the peak at core-collapse, but while the later lasts just a few seconds, %
-the Si burning phase takes several days.
-During the Si burning phase roughly 1\,\% of the total energy of core-collapse are emitted through
-``pre-supernova'' neutrinos with a monotonically increasing rate.
-
-\subsection{Neutron tagging}
-
-Improved neutron tagging will also be helpful to understand atmospheric and accelerator neutrino interactions and final states.
-Also the separation of neutrino and antineutrino at the GeV scale will benefit from neutron tagging.
-Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
-
 \begin{figure}
 	\centering
 	\begin{fmffile}{ibd}
@@ -490,7 +479,17 @@ in a water Cherenkov detector.
 
 
 \section{Gadolinium neutron capture}
-\label{sec:gdcap}
+\label{sec:gadolinium}
+
+In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
+will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
+Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
+The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
+Capture of a thermal neutron on hydrogen has a cross section of $\np{332.6}\pm\np{0.7}$~\,b, %
+characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
+After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
+compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
+However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
 
 The detectable light following neutron capture on Gd (in thin foils) in possible discrete counters was carefully simulated %
 for the SNO heavy water Cerenkov detector.
@@ -556,6 +555,7 @@ One last exceptionally nice quality about this compound is today it costs only 5
 meaning it would only be about 500,000 US dollars to dope SK [11], a price which is on the scale of such a major experiment.~\cite{1201.1017}.
 
 \section{Monitoring gadolinium concentration}
+\label{sec:gad}
 
 The concentration of Gd in water affects the efficiency and timing of neutron captures, antineutrino measurements depends on this.
 It is fundamental to measure the concentration regularly, as this can change in time inside the tank.
