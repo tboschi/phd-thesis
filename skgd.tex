@@ -239,9 +239,11 @@ The majority of neutrinos emitted are actually antineutrinos in the energies whe
 Detecting the neutron in the final state can be fundamental in distinguishing whether the incoming particle is %
 a neutrino or an antineutrino.
 
-Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states, %
-thanks to the capability of separating neutrino and antineutrino interactions.
-Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
+Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states.
+At energies $E_\nu > 1$\,GeV, the number of CCQE interactions decreases and often additional neutrons or pions %
+are also released by secondary hadronic interaction.
+The capability of separating neutrinos and antineutrinos can still produce anti-neutrino enriched samples
+ Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
 
 %Among these background sources, flasher events\footnote{A flasher event refers to the phenomenon %
 %	in which a PMT mis-fires and many repetitive internal discharges are triggered also on nearby PMTs.
@@ -350,16 +352,48 @@ the mean free path decreases with the neutron's velocity, and the possibility of
 These captures would affect the relative neutron flux around the energy of the resonance peaks, which %
 might be widened by the Doppler broadening effect.
 
-From the considerations above, we can deduce that water is a good moderator for thermalising fast neutrons.
-This value for water is $\xi_{\text{H}_2\text{O}} \simeq 0.93$ in the thermalisation regions, %
-where the kinetic energy of the neutron is $2.5\,\text{meV} \lesssim T \lesssim 0.1\,\text{MeV}$.
-Neutrons that reach sub-eV energies enter the $1/v$ regions in which the capture probabilities increases as $T^{-1}$.
-Hydrogen presents a relative high cross-section for neutron capture, as it can be seen from~\reffig{fig:}: %
-the cross-section for a thermal neutron on hydrogen is measured to be $\np{332.6}$~\,mb~\cite{ZERKIN201831}. %
-The hydrogen capture is followed by the emission of a $\np{2.2}$\,MeV gammas from the deexctiation of the newly-formed deuterium.
-The thermalisation process in water has a characteristic time of $\sim200$\,\textmu s.
-that after the production of the neutron 
+\begin{figure}
+	\centering
+	\resizebox{\linewidth}{!}{\input{neutron_xsec.tex}}
+	\caption{Neutron cross-sections on hydrogen (left) and gadolinium (right) as a function of energy. %
+	       The dominant component for \tapi{1}H is elastic scattering, despite neutron capture %
+	       reaches relative high cross-section values for sub-thermal neutrons ($T < 2.5$\,meV).
+	       Fast neutrons interact on \tapi{155}Gd via elastic scattering, but for lower energies %
+	       the main contribution comes from neutron capture cross-section.
+	       The $1/v$ dependency can be appreciated in both cases.
+	       The inset shows a detail of the resonance region of the cross-section, %
+	       between 10\,eV and 100\,eV.}
+	\label{fig:n_xsec}
+\end{figure}
 
+
+From the considerations above, we can deduce that water is a good moderator for thermalising fast neutrons.
+The energy decrease for water is $\xi_{\text{H}_2\text{O}} \simeq 0.93$, %
+when the kinetic energy of the neutron is in the range $2.5\,\text{meV} \lesssim T \lesssim 0.1\,\text{MeV}$.
+Neutrons that reach sub-thermal energies enter the $1/v$ regions in which the capture probabilities increases as $T^{-1}$.
+Hydrogen presents a relative high cross-section for neutron capture, as it can be seen from~\reffig{fig:n_xsec}: %
+the cross-section for a thermal neutron on hydrogen is measured to be $\np{332.6}$~\,mb~\cite{ZERKIN201831}. %
+The cross-section of capture on the oxygen nucleus \tapi{16}O is around $0.19$~\,mb, four orders of magnitude smaller %
+than the capture on hydrogen.
+The hydrogen capture is followed by the emission of a $\np{2.2}$\,MeV gammas from the %
+deexctiation of the newly-formed deuterium.
+The characteristic time for Maxwellian nuetrons with energy below 10\,MeV to thermalise and being captured %
+by hydrogen in water has been measured to be $(\np{204.8}\pm\np{0.4})$\,\textmu s~\cite{Cokinos:1977zz}.
+The typical time and energy of this event require special triggers and dedicated analysis %
+to correctly identify the neutron capture on hydrogen in SK.
+Since the SK-IV phase, after any primary events above a fixed, higher threshold is detected, 
+a time window of 535\,\textmu s is saved with no threshold requirement, so that approximately the 92\,\% %
+of neutron capture signals are collected.
+The 2.2\,MeV $\gamma$, on average, produces 7$\sim$8 PMT hits, which are difficult to reconstruct accurately.
+The PMT hits are expected to happen in a narrow timing distribution and to be anisotropic.
+A 10\,ns sliding window is used to look for $\gamma$ candidates with more than 7 hits and less than 50 %
+to avoid high energy backgrounds.
+With these simple selection criteria, an efficiency of 33.2\,\% is obtained from a simulation of neutron capture events, %
+with an expected 4.5 background events per neutrino event.
+The background rejection is improved by feeding the simulated data of the selected candidates %
+to a neural network, wich retains an overall efficiency of 20.5\,\% with \np{0.018} backgrounds per signal event~\cite{TristanJamesIrvine_Thesis}.
+The efficiency is found to be highly dependent on the distance travelled by the released neutron, %
+due to the fact that knowning the location of the capture significantly reduce the background.
 
 %follows an exponential and the time constant is largely studied amongst all the thermalisation in water.
 %It was found that neutron thermalisation in water has a time constant of 5$\mu$s [fujino, sumita, shiba].
@@ -374,22 +408,26 @@ that after the production of the neutron
 %https://www.sno.phy.queensu.ca/sno/papers/labranche_phd.pdf
 %https://www.sno.phy.queensu.ca/sno/papers/lyon_phd.pdf
 
-To measure neutron tagging efficiency, an americium-beryllium (Am-Be) source is placed inside
-a bismuth germanite (BGO) crystal scintillator and the whole device is usually deployed %
-at the centre of the water Cherenkov detector.
-The americium-241 goes through $\alpha$ decay with a half-life of 432.6\,y. [100\% ?]
+Neutron tagging efficiency in SK has been measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
+In an AmBe source, \tapi{214}Am decays 100\,\% of the times into \tapi{237}Np via $\alpha$ emission, %
+with a half-life of 432.6\,y.
 The $\alpha$ particle is captured by the \tapi{9}Be nuclei to become \tapi{12}C\tapi{*} with the emission of a neutron.
-The carbon de-excites to the ground state with sometimes the emission of a 4.43\,MeV photon.
-The gamma ray is promptly captured by the BGO crystal, and the scintillation light triggers the detector.
-The neutron thermalises in the water with an average time of roughly 200\,\textmu s, %
-before begin captured on a hydrogen nucleus with the release of a 2.2\,MeV photon.
-Neutron tagging efficiency on hydrogen in SK was measured to be $(19.0\pm0.2)$\,\%, %
-using a unbinned maximum likelihood fitting~\cite{}.
+The carbon deexcites to the ground state with sometimes the emission of a 4.43\,MeV photon.
+This gamma is used to trigger the neutron emission.
+The AmBe source is placed at the centre of a cube of bismuth germanite (BGO) crystal scintillator and %
+the device is lowered inside the water Cherenkov tank.
+The gamma ray from the beryllium neutron capture is promptly absorbed by the BGO crystal, %
+with the release of scintillation light that triggers the detectors. 
+Around a thousands of photoelectrons were typically observed.
+Forced triggers were imposed during the SK-III phase to extend the acquisition time window.
+A similary analysis to the simulation study is then applied to search for candidates of %
+neutron captures on hydrogen.
 Neutrons released by beryllium have an energy ranging from 2-10 MeV, %
 much less than the average neutron energy following atmospheric neutrino interactions.
 Thus, we can make the assumption that the location of the Am-Be apparatus is roughly the same %
 as the neutron capture vertex.
-
+The efficiency measured in \refref{Watanabe:2008ru} range from 13.1\,\% to 24.5\,\%, %
+the exact value of which is position dependent.
 
 Another possible source for neutron calibration is californium-252, which %
 undergoes $\alpha$-emissions (96.91\%) and spontaneous fission (SF) (3.09\%).
