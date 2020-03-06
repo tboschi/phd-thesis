@@ -448,28 +448,73 @@ where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
 
 \subsection{$\chi^2$ test}
 
-The test statistics of this analysis is defined as a ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}, in the following way
+The test statistics of this analysis is defined as a ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}, %
+starting from a Poissonian likelihood
+\begin{equation}
+	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} O_n^{E_n}}{O_n!}\ ,
+\end{equation}
+where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin, %
+which are built with oscillation parameters $\vartheta$.
+and the product runs over the total number of bins.
+The $\chi^2$ is the following log-likelihood ratio
+\begin{equation}
+	\label{eq:log_ratio}
+	\chi^2(\vartheta) = -2 \log \qty[\frac{\mathfrak{L}(E_n, O_n)}{\mathfrak{L}(E_n, O_n)}] =
+		2 \sum_n \qty[E_n - O_n + O_n \log \qty(\frac{E_n}{O_n})]\ ,
+\end{equation}
+to which ``pull'' parameters $\uj{\varepsilon}$ are introduced to account for systematic uncertainties, %
+by replacing
+\begin{equation}
+	\label{eq:pull}
+	E_n\ \longrightarrow\ E_n\,\qty(1 + \textstyle\sum_j f_j^n \varepsilon_j)\ 
+\end{equation}
+and adding the variances and covariances of such parameters.
+The $\chi^2$ becomes the following
 %\begin{align}
 %	\chi^2_\text{tot} &=\ \chi^2_\text{obs}\ +\ \chi^2_\text{syst} \notag\\
 %	&= \overset{\text{obs}}{2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
 %	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,
 %\end{align}
 \begin{equation}
-	\chi^2 = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\vartheta;\uj{\varepsilon})\,]\ ,
-\end{equation}
-with $\vartheta$ the oscillation parameters and $\uj{\varepsilon}$ the full set of $j$ systematic errors, and
-\begin{equation}
 	\label{eq:chi2}
 	\chi^2(\vartheta;\uj{\epsilon})  = 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
 		O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})] + %
 		\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ ,
 \end{equation}
-where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin and~$\rho^{-1}$ %
-is the inverse of the correlation matrix of the systematic errors.
+where $\rho^{-1}$ is the inverse of the correlation matrix of the systematic errors.
+The effect of the systematic uncertainties on the event distributions are embedded in the $f_j^n$ parameters, %
+defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic.
+The amount of the shift is quantified by the ``pull'' $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
+However, being $\rho$ the correlation matrix, the $\varepsilon$ are promoted to denote the systematic uncertainties, %
+which must be minimised.
 As there is no real data, the ``observed'' events are replaced by a prediction at the \emph{true} oscillation point.
-The systematic uncertainties are embedded in the $f_j^n$ term, which is the fractional change %
-induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic;
-the amount of the shift is quantified by the ``pull'' $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
+Once defined the observed sample, the $\chi^2$ is then computed at each point of the oscillation parameter space %
+by profiling it with respect to the pulls $\varepsilon$:
+\begin{equation}
+	\label{eq:chi2_min}
+	\chi^2(\vartheta) = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\vartheta;\uj{\varepsilon})\,]\ ,
+\end{equation}
+The minimisation of the $\chi^2$ leads to a set of $j$ non-linear equations %,
+which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
+\begin{equation}
+	\pdv{\chi^2}{\varepsilon_j} (\vartheta;\uj{\varepsilon}) = 0\ .
+\end{equation}
+The system can be solved with the Newton's method by finding the Hessian of the $\chi^2$.
+This gives a linear system, which can be iterated until sufficient precision is achieved
+\begin{equation}
+	\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
+	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
+	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
+\end{equation}
+with $(n)$ the iteration index.
+To account for future constraints from other experiments, a gaussian penalty terms is added %
+to the minimised value of $\chi^2$ from \refeq{eq:chi2_min}
+\begin{equation}
+	\chi^2_\text{penalty} = \frac{(\vartheta - \hat{\vartheta})^2}{\sigma_\vartheta^2}\ .
+\end{equation}
+The current constraint applied is the measurement of $\theta_{13}$ by future reactor experiments, %
+that will achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
+
 For most of the systematic parameters, a linear response is assumed in the~MC.
 This means that varying of the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$, %
 the number of expected events changes:
@@ -487,27 +532,6 @@ or some of the RPA coefficients\footnote{The Random Phase Approximation (RPA) me
 do not present a linear behaviour for small values of $\varepsilon$ %
 and they are better described by a four-point linear interpolation of different~$f_j^n$ histograms, %
 computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic parameter.
-Given a \emph{true} point, the $\chi^2$ is computed at each point of the oscillation parameter space %
-and it is minimised with respect to the pulls $\varepsilon$.
-This leads to a set of $j$ non-linear equations %, which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
-\begin{equation}
-	\pdv{\chi^2}{\varepsilon_j} (\vartheta;\uj{\varepsilon}) = 0\ .
-\end{equation}
-The system can be solved with the Newton's method by finding the Hessian of the $\chi^2$.
-This gives a linear system, which can be iterated until sufficient precision is achieved
-\begin{equation}
-	\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
-	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
-	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
-\end{equation}
-with $(n)$ the iteration index.
-To account for future constraints from other experiments, a gaussian penalty terms is added %
-to the $\chi^2$ definition of \refeq{eq:chi2}
-\begin{equation}
-	\chi^2_\text{penalty} = \frac{(\vartheta - \hat{\vartheta})^2}{\sigma_\vartheta^2}\ .
-\end{equation}
-The current constraint applied is the measurement of $\theta_{13}$ by future reactor experiments, %
-that will achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
 
 \section{Systematic studies}
 

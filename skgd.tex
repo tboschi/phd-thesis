@@ -409,12 +409,12 @@ due to the fact that knowning the location of the capture significantly reduce t
 %https://www.sno.phy.queensu.ca/sno/papers/lyon_phd.pdf
 
 Neutron tagging efficiency in SK has been measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
-In an AmBe source, \tapi{214}Am decays 100\,\% of the times into \tapi{237}Np via $\alpha$ emission, %
+In an Am-Be source, \tapi{214}Am decays 100\,\% of the times into \tapi{237}Np via $\alpha$ emission, %
 with a half-life of 432.6\,y.
 The $\alpha$ particle is captured by the \tapi{9}Be nuclei to become \tapi{12}C\tapi{*} with the emission of a neutron.
 The carbon deexcites to the ground state with sometimes the emission of a 4.43\,MeV photon.
 This gamma is used to trigger the neutron emission.
-The AmBe source is placed at the centre of a cube of bismuth germanite (BGO) crystal scintillator and %
+The Am-Be source is placed at the centre of a cube of bismuth germanite (BGO) crystal scintillator and %
 the device is lowered inside the water Cherenkov tank.
 The gamma ray from the beryllium neutron capture is promptly absorbed by the BGO crystal, %
 with the release of scintillation light that triggers the detectors. 
@@ -422,37 +422,40 @@ Around a thousands of photoelectrons were typically observed.
 Forced triggers were imposed during the SK-III phase to extend the acquisition time window.
 A similary analysis to the simulation study is then applied to search for candidates of %
 neutron captures on hydrogen.
-Neutrons released by beryllium have an energy ranging from 2-10 MeV, %
-much less than the average neutron energy following atmospheric neutrino interactions.
-Thus, we can make the assumption that the location of the Am-Be apparatus is roughly the same %
-as the neutron capture vertex.
+Neutrons from beryllium have energies below 10\,MeV, as seen in \reffig{fig:spectra}, %
+less than the typical neutron energy resulting from an atmospheric neutrino interactions.
+In the calibration analysis, the neutron capture vertex is assumed to be roughly at the same location %
+of the Am-Be source.
 The efficiency measured in \refref{Watanabe:2008ru} range from 13.1\,\% to 24.5\,\%, %
 the exact value of which is position dependent.
 
-Another possible source for neutron calibration is californium-252, which %
-undergoes $\alpha$-emissions (96.91\%) and spontaneous fission (SF) (3.09\%).
-With a half-life of 2.645\,y, a \tapi{252}Cf source has a higher activity compared to an Am-Be source %
+Another possibility as a source for neutron calibration is using californium-252, which %
+undergoes $\alpha$ emissions (96.91\%) or spontaneous fission (SF) (3.09\%).
+Thanks to a shorter half-life of 2.645\,y, a \tapi{252}Cf source presents a higher activity compared to an Am-Be source %
 with the same number of nucleons.
 Furthermore, the SF process emits an average of 3.75 neutrons per fission and an average of 10.3 photons %
-having a total energy of 8.2\,Mev.
-As for the case of Am-Be, the photons can be collected by a scintillating material to tag the %
-emission of neutrons.
-After this trigger signal, multiple neutron captures on hydrogen are expected, %
-separated by short intervals in time.
-The yield of multiple neutrons is another advantage of \tapi{252}Cf that %
-the SNO collaboration exploited to develop a method, called \emph{Time Series Analysis} method that uses %
-multiplicity and time intervals between the detected events %
+summing up for a total energy of 8.2\,Mev.
+As for the case of the Am-Be calibrating source, the photons can be collected by a scintillating material %
+and tag the emission of neutrons.
+After the trigger signal, multiple neutron captures on hydrogen are expected, separated by short intervals in time.
+The yield of multiple neutrons is an advantage that the SNO collaboration exploited to develop a method, %
+called \emph{Time Series Analysis} method that uses multiplicity and time intervals between the detected events %
 to find the neutron detection efficiency, the neutron mean life inside the detector, %
-and activity from non-fission events.
-The fast-neutron and photon energy spectra are shown in \ref{fig:spectra}: %
+and activity from non-fission events~\cite{HENDRICK_LABRANCHE}.
+Differently from an Am-Be source the activity of which must be known precisely, with a californium %
+source the neutron tagging calibration can be done in principle regardless of that information.
+The fast-neutron and photon energy spectra from \tapi{252}Cf are shown in \ref{fig:spectra}: %
 the neutrons are emitted with a most-probable energy of 0.7\,MeV and an average energy of 2.1\,MeV.
+Thus, it is reasonable to assume that the capture on hydrogen occurs in the proximity of the source, %
+bringing about an even more accurate calibration.
 
 \begin{figure}
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
-		\resizebox{\textwidth}{!}{\input{spectrum.tex}}
-		\caption{Normalised energy distribution of neutron and photons emitted %
-			by SF events of a \tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.}
+		\resizebox{\textwidth}{!}{\input{source_spectrum.tex}}
+		\caption{Normalised energy distribution of neutrons emitted by an AmBe source~\cite{PMID:4744412} %
+			and neutrons and photons emitted by spontaneous fission of a %
+			\tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.}
 		\label{fig:spectra}
 	\end{minipage}
 	\hfill
