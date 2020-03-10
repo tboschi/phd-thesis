@@ -348,29 +348,11 @@ to obtain the distributions in reconstructed energy (87 bins) for the four event
 		\item one ring $\mu$-like in $\cj{\nu}$-mode.
 	\end{itemize}
 \end{multicols}
+We do not consider the one $e$-like + one electron decay sample in this study.
 A set of 2D smearing matrices, produced by the T2K fitting framework VALOR, %
 simulates and replaces the correct event selection process, including tuning of the flux with near detector constraints.
 These smearing matrices are provided for all samples, acting on signal (CCQE and CCnQE) %
 and background (CCQE, CCnQE, and NC) distributions.
-
-\begin{table}
-	\centering
-	\caption{Oscillation space.}
-	\label{tab:osc_space}
-	\begin{tabular}{cccc}
-		\toprule
-		Parameter				& Nominal	& Range	& Points \\
-		\midrule
-		$\Delta m_{12}^2/\np{e-5}\,\text{eV}^2$	& 7.53		& --			& fixed	\\
-		$\sin^2 2\theta_{12}$			& 0.8463	& --			& fixed	\\
-		\midrule
-		$\Delta m_{23}^2/\np{e-3}\,\text{eV}^2$	& 2.509		& [2.464:2.554]		& 13	\\
-		$\sin^2 2\theta_{13}$			& 0.085		& [0.070:0.100]		& 13	\\
-		$\sin^2 \theta_{23}$			& 0.528		& [0.426:0.579]		& 19	\\
-		$\delta_\text{CP}$			& $-\pi/2$	& [$-\pi$:$\pi$]	& 61	\\
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 
 \subsection{Systematic model}
@@ -421,6 +403,26 @@ Momentum distribution of decay electron (-- 40MeV/c).
 
 \subsection{Oscillation space}
 
+\begin{table}
+	\centering
+	\caption{Oscillation space.}
+	\label{tab:osc_space}
+	\begin{tabular}{cccc}
+		\toprule
+		Parameter				& Nominal	& Range	& Points \\
+		\midrule
+		$\Delta m_{12}^2/\np{e-5}\,\text{eV}^2$	& 7.53		& --			& fixed	\\
+		$\sin^2 2\theta_{12}$			& 0.8463	& --			& fixed	\\
+		\midrule
+		$\Delta m_{23}^2/\np{e-3}\,\text{eV}^2$	& 2.509		& [2.464:2.554]		& 13	\\
+		$\sin^2 2\theta_{13}$			& 0.085		& [0.070:0.100]		& 13	\\
+		$\sin^2 \theta_{23}$			& 0.528		& [0.426:0.579]		& 19	\\
+		$\delta_\text{CP}$			& $-\pi/2$	& [$-\pi$:$\pi$]	& 61	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
 Both the atmospheric and beam distributions are weighted by the corresponding oscillation probabilities.
 For the study of this thesis, the oscillation parameters are scanned over the space
 The oscillation space spans four variables, $\Delta m^2_{32}$, $\sin^2 2\theta_{13}$, $\sin^2 \theta_{23}$, and %
@@ -428,9 +430,10 @@ $\delta_\text{CP}$, on a grid of respectively $13\,\times\,13\,\times\,19\,\time
 The solar squared mass difference and the solar angle are fixed.
 Apart from $\delta_\text{CP}$ which is scanned over all possible values, %
 the intervals for the other parameters are built around ``Asimov A'', the nominal T2K best fit point~\cite{Abe:2017vif} .
+The oscillation space is listed in \reftab{tab:osc_space}.
 For the atmospheric squared mass difference and the reactor angle, the range is chosen such that it covers %
 a $[-3\sigma, +3\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
-the range for $\sin^2\theta_{23}$ spans over $[-6\sigma:+3\sigma]$ so that both octants are covered.
+the range for $\sin^2\theta_{23}$ spans over $[-6\sigma, +3\sigma]$ so that both octants are covered.
 Reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
 At each point of this space, the event distributions are weighted with the correct oscillation probability %
 for appearance or disappearance channels.
@@ -448,27 +451,29 @@ where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
 
 \subsection{$\chi^2$ test}
 
-The test statistics of this analysis is defined as a ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}, %
-starting from a Poissonian likelihood
+We define the following likelihood
 \begin{equation}
 	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} O_n^{E_n}}{O_n!}\ ,
 \end{equation}
 where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin, %
-which are built with oscillation parameters $\vartheta$.
-and the product runs over the total number of bins.
-The $\chi^2$ is the following log-likelihood ratio
+which are built using oscillation parameters $\vartheta$.
+The expected events are defined by a prediction of events at the far detector weighted by the oscillation probabilities %
+for parameters $\vartheta$, and, since there is no real data yet, the ``observed'' events are also given by %
+a prediction at the \emph{true} oscillation point $\vartheta_\text{true}$.
+%and the product runs over the total number of bins.
+The $\chi^2$ is hence the following log-likelihood ratio
 \begin{equation}
 	\label{eq:log_ratio}
-	\chi^2(\vartheta) = -2 \log \qty[\frac{\mathfrak{L}(E_n, O_n)}{\mathfrak{L}(E_n, O_n)}] =
+	\chi^2(\vartheta) = -2 \log \qty[\frac{\mathfrak{L}(E_n, O_n)}{\mathfrak{L}(O_n, O_n)}] =
 		2 \sum_n \qty[E_n - O_n + O_n \log \qty(\frac{E_n}{O_n})]\ ,
 \end{equation}
-to which ``pull'' parameters $\uj{\varepsilon}$ are introduced to account for systematic uncertainties, %
-by replacing
+and it is modified following the ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}: %
+the parameters $\uj{\varepsilon}$ are introduced to account for systematic uncertainties, by replacing
 \begin{equation}
 	\label{eq:pull}
-	E_n\ \longrightarrow\ E_n\,\qty(1 + \textstyle\sum_j f_j^n \varepsilon_j)\ 
+	E_n\ \longrightarrow\ E_n\,\qty(1 + \textstyle\sum_j f_j^n \varepsilon_j)\ ,
 \end{equation}
-and adding the variances and covariances of such parameters.
+and a penalty term that includes variances and covariances of such parameters is added to the likelihood.
 The $\chi^2$ becomes the following
 %\begin{align}
 %	\chi^2_\text{tot} &=\ \chi^2_\text{obs}\ +\ \chi^2_\text{syst} \notag\\
@@ -484,12 +489,10 @@ The $\chi^2$ becomes the following
 where $\rho^{-1}$ is the inverse of the correlation matrix of the systematic errors.
 The effect of the systematic uncertainties on the event distributions are embedded in the $f_j^n$ parameters, %
 defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic.
-The amount of the shift is quantified by the ``pull'' $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
-However, being $\rho$ the correlation matrix, the $\varepsilon$ are promoted to denote the systematic uncertainties, %
-which must be minimised.
-As there is no real data, the ``observed'' events are replaced by a prediction at the \emph{true} oscillation point.
-Once defined the observed sample, the $\chi^2$ is then computed at each point of the oscillation parameter space %
-by profiling it with respect to the pulls $\varepsilon$:
+The amount of change is therefore parametrised by $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
+However, being $\rho$ the correlation matrix, the $\varepsilon_j$ are promoted to embody the systematic uncertainties.
+Once defined the observed sample, the oscillation parameters $\vartheta$ are scanned over the oscillation %
+space defined in \reftab{tab:osc_space} and the $\chi^2$ is then profiled it with respect to the parameters $\vec\varepsilon$:
 \begin{equation}
 	\label{eq:chi2_min}
 	\chi^2(\vartheta) = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\vartheta;\uj{\varepsilon})\,]\ ,
@@ -501,6 +504,7 @@ which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1
 \end{equation}
 The system can be solved with the Newton's method by finding the Hessian of the $\chi^2$.
 This gives a linear system, which can be iterated until sufficient precision is achieved
+%The algorithm is stabilised by means of the Levenberg-Marquardt algorithm
 \begin{equation}
 	\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
 	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
@@ -512,8 +516,8 @@ to the minimised value of $\chi^2$ from \refeq{eq:chi2_min}
 \begin{equation}
 	\chi^2_\text{penalty} = \frac{(\vartheta - \hat{\vartheta})^2}{\sigma_\vartheta^2}\ .
 \end{equation}
-The current constraint applied is the measurement of $\theta_{13}$ by future reactor experiments, %
-that will achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
+The current constraint applied comes from the measurement of $\theta_{13}$ by future reactor experiments, %
+that are predicted to achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
 
 For most of the systematic parameters, a linear response is assumed in the~MC.
 This means that varying of the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$, %
