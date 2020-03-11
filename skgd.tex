@@ -150,7 +150,7 @@ The rock overburden of $\sim\np{1000}$\,m (\np{2700}\,m.w.e.), shields very effi
 and only cosmic-rays with energies above 1.3\,TeV can reach the detector: %
 the muon flux at SK is about \np{6e-8}\,cm\tapi{-2}s\tapi{-1}sr\tapi{-1}, which translates to a rate of 2\,Hz.
 The detector consists of a cylindrical stainless steel tank, with a height of 41.4\,m and a diameter of 39.3\,m, %
-and it is filled with 50\,kt of ultra pure water ($18$\,M$\Omega$).
+and it is filled with 50\,kt of ultra pure water.
 The water region is separated into two concentric cylindrical regions, %
 called the inner detector (ID, 33.8\,m in diameter) and the outer detector (OD), the latter working as passive and active veto.
 The two regions are separated a 55\,cm insensitive region containing the support structure for the PMTs and their cables.
@@ -184,7 +184,7 @@ Pions usually interact hadronically nuclei with oxygen nuclei, and therefore the
 and the Cherenkov rings are also less defined than a muon ones.
 Muon and pion events can be accompanied by secondary rings from the electrons produced in their decays.
 Energetic gamma rays can also be detected, as for instance the ones from $\pi^0$ decays, %
-through rings of electrons accelerated by compton scattering.
+through rings of electrons accelerated by Compton scattering.
 
 
 As part of the strategies to tackle backgrounds, typically only events originating at the centre %
@@ -195,7 +195,7 @@ These impurities can mimic a signal event in the MeV energy region, crucial for 
 The selection algorithm simply discards any reconstructed event the vertex of which is less than 200\,cm away from the ID walls.
 This criteria defines a fiducial volume (FV), which is around 22.5\,kt in water mass.
 The water used to fill the tank may also contain impurities, among which radon, that cause background events.
-The water in the tank is continuously filtered at a flow rate of 60\,t/hour by a water purification system.
+The water in the tank is continuously filtered at a flow rate of 60\,t/hour by a water purification system (see \refsec{sec:gadolinium}).
 An air purification system pumps radon-free air into the SK area inside the mine.
 This prevents radon in the air to dissolve in the purified water.
 Radon contamination is usually less than 3\,mBq/m\tapi{3}, compared to unpurifies air that can peak %
@@ -414,7 +414,7 @@ with a half-life of 432.6\,y.
 The $\alpha$ particle is captured by the \tapi{9}Be nuclei to become \tapi{12}C\tapi{*} with the emission of a neutron.
 The carbon deexcites to the ground state with sometimes the emission of a 4.43\,MeV photon.
 This gamma is used to trigger the neutron emission.
-The Am-Be source is placed at the centre of a cube of bismuth germanite (BGO) crystal scintillator and %
+The Am-Be source is placed at the centre of a 5\,cm cube of bismuth germanite (BGO) crystal scintillator and %
 the device is lowered inside the water Cherenkov tank.
 The gamma ray from the beryllium neutron capture is promptly absorbed by the BGO crystal, %
 with the release of scintillation light that triggers the detectors. 
@@ -460,11 +460,11 @@ and tag the emission of neutrons.
 After the trigger signal, multiple neutron captures on hydrogen are expected, separated by short intervals in time %
 of the order of milliseconds.
 The yield of multiple neutrons is an advantage that the SNO collaboration exploited to develop a method, %
-called \emph{Time Series Analysis} method that uses multiplicity and time intervals between the detected events %
+called \emph{Time Series Analysis}, that uses multiplicity and time intervals between the detected events %
 to find the neutron detection efficiency, the neutron mean life inside the detector, %
 and activity from non-fission events~\cite{Labranche:2004sya}.
-Differently from an Am-Be source the activity of which must be known precisely, with a californium %
-source the neutron tagging calibration can be done in principle regardless of that information.
+Differently from an Am-Be source, the activity of which must be known precisely, the neutron tagging calibration %
+with a californium source can be done in principle regardless of that information.
 The fast-neutron and photon energy spectra from \tapi{252}Cf are shown in \ref{fig:spectra}: %
 the neutrons are emitted with a most-probable energy of 0.7\,MeV and an average energy of 2.1\,MeV.
 It is reasonable to assume that the capture on hydrogen occurs in the proximity of the source, %
@@ -475,16 +475,17 @@ We performed some preliminary studies with the aim to develop a device for neutr
 of a generic water Cherenkov detector.
 For laboratory measurement, we used a \tapi{252}Cf source with an activity of 4.3\,kBq at the time of its production.
 %measured on the 28\tapi{th} of July, 2017.
-The californium is encapsulated in a double hull stainless steel cylinder, 9.5\,mm in diameter and 37.5\,mm high.
-The source is placed in a simple device, shown in \reffig{fig:setup}, consisting of a cylindrical plastic scintillator %
-(EJ-200), coated with mylar to contain optical photons, and optically mounted on a ET Enterprise 9902B series~PMT.
+The californium is encapsulated in a double-hull stainless steel cylinder, 9.5\,mm in diameter and 37.5\,mm high.
+The source is placed in a simple prototype of the device, shown in \reffig{fig:setup}, %
+consisting of a cylindrical plastic scintillator (EJ-200), coated with mylar to contain optical photons, %
+and optically mounted on a ET Enterprise 9902B series~PMT.
 A hole, coaxial to the plastic cylinder, allows to insert the source in the middle of the scintillator.
 The cylinder is 3\,in in length and 1.5\,in in diameter.
 The rate of photons emitted by the \tapi{252}Cf source is measured with this setup; %
 the signal from the PMT is amplified and cleaned by NIM modules and finally recorded with a 14-bit VME digitiser.
 %to count the number of photon triggers from the PMT and %
 %a daisy-chain of NIM amplifier, threshold, and discriminator is used before the digitiser to optimise the signal.
-Without the source inside the scintillator, an event rate of 1.633\,Hz is measured, %
+Without the source inside the scintillator, a dark rate of 1.633\,Hz is measured, %
 whereas with the source the rate increases to 41.395\,Hz.
 The distributions of the PMT peaks collected by the digitiser are shown in Fig.~\ref{fig:source}.
 A predicted activity of 3.1\,kBq is expected on the day of the measurement---446 days after the production of the source--- %
@@ -509,28 +510,43 @@ The SF tagging efficiency with this setup is therefore estimated to be around~41
 	\end{minipage}
 \end{figure}
 
-We also performed a GEANT4~\cite{Agostinelli:2002hh} simulation of the setup, with the aim of optimising the calibration device.
-An ideal calibration device would absorb all the photons converting them into visible light without affecting the neutrons.
+We performed a GEANT4~\cite{Agostinelli:2002hh} simulation of the setup, with the aim of optimising the calibration instrument.
+An ideal device would absorb all the photons converting them into visible light without affecting the neutrons.
 The plot in \reffig{fig:QE} shows the correct implementation of the scintillator and PMT efficiencies in the simulation: %
 there is good agreement with the MC distribution and the expected optical photon spectrum.
-Different volumes and materials are tested for the scintillator in the simulation: BGO crystal and a generic vinyltouluene as scintillating materials, %
-and a cube and cylinder with equal diameter and height are chosen.
-The size is varied from 1\,cm to 40\,cm.
-The simulation tracks the energy deposited in the scintillator by the photons and the number of neutrons escaping the device.
-The result is shown in Fig.~\ref{fig:geant4}.
-Unsurprisingly, the BGO crystal performs better than the plastic scintillator, %
-with the optimal volume being a cube with 12\,cm sides.
-The hydrogen in the plastic thermalises neutrons, which can have an impact on the thermalisation time %
-in a water Cherenkov detector.
+Different volumes and materials are tested for the scintillator in the simulation.
+As materials, BGO crystal and a generic vinyltouluene are chosen.
+The selected shapes of the volume are a cube, and cylinder with a diameter-height-ratio 1:1 and 1:2.
+The latter shape models the protoype tested in the laboratory.
+The characteristic size, i.e.\ the side for the cube and the height for the cylinders, is swept from 1\,cm to 40\,cm.
+The simulation tracks the energy deposited in the scintillator by the photons and the number of neutrons escaping the device, %
+from a simulation of \np{10000} SF events.
+The result is shown in Fig.~\ref{fig:geant4}, where, for both photons and neutrons, %
+the average value of the fraction of absorbed energy with respect to the initial one is plotted against the size.
+In terms of materials, the BGO crystal unsurprisingly performs better than the plastic scintillator, %
+absorbing almost the entirity of photons and leaving the neutrons mainly unaffected.
+A part from not being as efficient as scintillator, the hydrogen in the plastic thermalises the neutrons, %
+and this might have an impact on the capture time in a water Cherenkov detector.
+In terms of sizes and shapes, a BGO cube of $4--6$\,cm sides seems to maximise photon absorption and minimise %
+the energy loss of neutrons.
+This is in line with the choice for the calibrating device for SK, which is a 5\,cm BGO cube.
+Both the cylindrical shapes are optimal when the height is $7\sim11$\,cm, but more crystal would be required %
+increasing the cost of the device.
+As far as the plastic scintillator is concerned, it is more difficult to define an optimal size/shape figure:
+a cubic scintillator is more efficient in collecting photons, but being the form with the largest volume %
+per given size, it is also more effective in slowing down neutrons.
+The two cylinder shapes have similar performances, proportionally to their volumes.
 
 \begin{figure}
 	\centering
 	\resizebox{0.9\textwidth}{!}{\input{n_vs_gamma_2.tex}}
 	\caption{Result of the GEANT4 simulation, showing the performance of different scintillators.
-		Two shapes are tested: a cube (solid lines) and a cylinder with equal diameter and hie hgt (dashed lines).
-		The percentage of energy absorbed by the scintillator (purple) and the percentage of neutrons escaping the %
-		scintillators (green) are estimated for every simulation.
-		Left: BGO is used as scintillating material. Right: a generic vinyltouluene plastic is used.}
+		The fraction of absorbed energy per initial energy of neutrons (solid) and photons (dashed) %
+		is averaged and plotted against the scintillator size.
+		Three shapes are tested: a cube (green), a cylinder with diameter-height-ratio of 1:1 (blue), %
+		and a cylinder with ratio 1:2 (red).
+		On the left, the scintillating material is BGO crystal; on the right, %
+		a generic vinyltouluene plastic is used.}
 	\label{fig:geant4}
 \end{figure}
 
@@ -583,79 +599,130 @@ in a water Cherenkov detector.
 \section{Gadolinium neutron capture}
 \label{sec:gadolinium}
 
-In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
-will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
-Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
-The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
-Capture of a thermal neutron on hydrogen has a cross-section of $\np{332.6}\pm\np{0.7}$~\,b, %
-characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
-After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
-compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
-However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
+%In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
+%will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
+%Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
+%The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
+%Capture of a thermal neutron on hydrogen has a cross-section of $\np{332.6}\pm\np{0.7}$~\,b, %
+%characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
+%After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
+%compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
+%However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
+%
+%The detectable light following neutron capture on Gd (in thin foils) in possible discrete counters was carefully simulated %
+%for the SNO heavy water Cerenkov detector.
+%The equivalent single electron energy was found to peak at about 5 MeV, and range over 3--8\,MeV.
+%This spread reflects the intrinsic variation in the gamma cascades and the detector energy
+%resolution (the simulation had 5 photoelectrons per MeV of electron energy, compared to 6 in SK-I)~\cite{Beacom:2003nk}.
+%The energy threshold for SK is 5\,MeV, and the search of hydrogen-tagged neutrons is not efficient (20\%).
+%a long time window in which to look for the hydrogen signal, 
+%Capture on gadolinium has a cross-section of $\np{49e3}$~b, which de-excites emitting a $\sim\np{8}$~MeV gamma-ray cascade.
+%By adding 0.2\,\% by mass of the Gd salt as Gd\tped{2}(SO\tped{4})\tped{3}, the characteristic time of capture is %
+%$\sim30$~\textmu s and an efficiency of 90\,\% can be achieved.
+%The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
+%respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
+%Hydrogen alone has a cross-section of \np{3.321e-1}\,b.
 
-The detectable light following neutron capture on Gd (in thin foils) in possible discrete counters was carefully simulated %
-for the SNO heavy water Cerenkov detector.
-The equivalent single electron energy was found to peak at about 5 MeV, and range over 3--8\,MeV.
-This spread reflects the intrinsic variation in the gamma cascades and the detector energy
-resolution (the simulation had 5 photoelectrons per MeV of electron energy, compared to 6 in SK-I)~\cite{Beacom:2003nk}.
-The energy threshold for SK is 5\,MeV, and the search of hydrogen-tagged neutrons is not efficient (20\%).
-a long time window in which to look for the hydrogen signal, 
-Capture on gadolinium has a cross-section of $\np{49e3}$~b, which de-excites emitting a $\sim\np{8}$~MeV gamma-ray cascade.
-By adding 0.2\,\% by mass of the Gd salt as Gd\tped{2}(SO\tped{4})\tped{3}, the characteristic time of capture is %
-$\sim30$~\textmu s and an efficiency of 90\,\% can be achieved.
-The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
-respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
-Hydrogen alone has a cross-section of \np{3.321e-1}\,b.
+
+Gadolinium-157 has the highest thermal neutron capture cross-section among any stable nuclides.
+It is estimated to be \np{2.537E5}\,b, but the natural abundance of \tapi{157}Gd is around 15.65\,\%.
+Another isotope of gadolinium with similar abundance is \tapi{155}Gd, at 14.80\,\%, %
+which also presents a very high neutron capture cross-section \np{6.074E4}\,b.
+Dissolving gadolinium compounds in water could therefore considerably increase the neutron capture %
+probability, as proposed for the first time in \refref{Beacom:2003nk}.
+Gd-doped water enhances the capture cross-section, with an effective cross-section of \np{49e3}\,b, %
+compared to pure water with $\sim$0.3\,b on a free proton.
+Upon capturing a neutron, the Gd emits three to four gamma rays having a total energy of about 8\,MeV.
+Such energetic photons can produce Cherenkov light via Compton-scattering and therefore they can be 
+reliably detected in a large detector volume.
+The neutron in gadolinium-loaded water thermalises quicker than in just pure water, with a %
+characteristic time of $\sim$30\,\textmu s, and it can be captured by a Gd nucleus with an %
+estimated efficiency of 90\,\%~\cite{Beacom:2003nk} for a 0.2\,\% Gd solution (see \reffig{fig:gd_conc}).
+%The time and spatial correlation of the positron and neutron capture events ($20~\mu$s and 4~cm) %
+%can significantly reduce the backgrounds, and hence enhance the nu e signal events.
+%Even moderately energetic neutrons ranging from tens to hundreds of MeV will quickly lose energy %
+%by collisions with free protons and oxygen nuclei in water. 
+%Once thermalised, the neutrons undergo radiative capture, combining with a nearby nucleus to %
+%produce a more tightly bound final state, with excess energy released in a gamma-ray ( ) cascade. 
 
 
-Gadolinium-157 has the highest thermal neutron capture cross-section among any stable %
-nuclides: 259,000 barns.
-Dissolving gadolinium compounds in water could considerably increase the neutron capture probability.
-The neutron in water thermalises quickly and can thus be captured by a Gd nucleus with a probability of 90\,\%.
-Upon capturing a neutron the Gd emits 3-4 gamma rays having a total energy of about 8 MeV.
-The time and spatial correlation of the positron and neutron capture events ($20~\mu$s and 4~cm) %
-can significantly reduce the backgrounds, and hence enhance the nu e signal events.
-Even moderately energetic neutrons ranging from tens to hundreds of MeV will quickly lose energy %
-by collisions with free protons and oxygen nuclei in water. 
-Once thermalised, the neutrons undergo radiative capture, combining with a nearby nucleus to %
-produce a more tightly bound final state, with excess energy released in a gamma-ray ( ) cascade. 
-Gd-doped water enhances the capture cross-section compared to pure water %
-(49,000 barns compared with 0.3 barns on a free proton) and, since the cascade happens %
-at higher energies (8 MeV vs 2.2 MeV), it produces enough optical light to be reliably detected in %
-a large target volume.
+\begin{figure}
+	\centering
+	\resizebox{0.5\linewidth}{!}{\input{gdconcentration.tex}}
+	\caption{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
+		concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
+		increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
+	\label{fig:gd_conc}
+\end{figure}
 
-In the original proposal by John Beacom and Mark Vagins, gadolinium trichloride GdCl\tped{3} was proposed, %
-but the current full-scal plan has steered on gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3} %
-as the salt of choice (other candidate could be gadolinium nitrate Gd(NO\tped{3})\tped{3}).
-There are a few requirements which a Gd compound must meet in order to become a good candidate for a full scale test.
-The compound must be water soluble, and it should not be too difficult to dissolve large amounts.
-The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
-needing stirring to fully dissolve, while the Gd2(SO4)3, can be forced into solution with the addition of %
-a small amount of sulfuric acid, about 380 ml of acid for 28 kg of Gd2(SO4)3 in 14 tons of water (test done at EGADS).
-So, this solubility requirement does not immediately rule out any of these three compounds.
-Next, if the compound is to be used inside a very large water Cherenkov detector, such as SK, it must be safe for
-the detectors components and tank, and it should be a non-toxic chemical, so it may be easily put into existing detectors.
-While none of the above salts are toxic, they do have very different corrosive properties, due to the different anions of the molecule.
-The nitrate and the sulfate turn out to be non-corrosive, and do not seem to affect detectors components much, if at all.
-An extensive soak test study was carried out in Japan, with each of the 31 different materials inside the SK detector %
-being soaked in both pure water and Gd2(SO4)3 solution.
-Only the rubber used for the PMT pressure housing showed any difference between the pure water and the Gd2(SO4)3 solution, %
-with further studies showing the rubber is unaffected by the Gd solution, if the temperature is kept below 15\,${}^\circ$C, %
-which it is in the case of SK.
-However, the chloride is corrosive, so for this reason the GdCl3 has been ruled out as a full scale test candidate.
-Last the Gd compound solution must maintain a high level of optical transparency, %
-so that light can be seen from the opposite side of the detector.
-Although the GdCl3 has fairly good optical properties, it has been ruled out by the above.
-Gd(NO3)3 is opaque in the UV region of the electromagnetic (EM) spectrum, for wavelengths less than 350\,nm, %
+
+In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound %
+will be dissolved in the detector to improve the ability to identify neutrons.
+This is possible thanks to extensive R\&D performed with the EGADS experiment~\cite{Ikeda:2019pcm}.
+In \refref{Beacom:2003nk}, gadolinium trichloride GdCl\tped{3} was proposed, %
+but the current full-scale plan for SK and EGADS has setteled on using gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3}.
+%---another candidate being 
+This choice was determined by a few requirements by which a Gd compound canditate must comply.
+In addition to the aforementioned salts, a third option could have been gadolinium nitrate Gd(NO\tped{3})\tped{3}).
+The candidate compound must be water soluble, also in large amounts, but all of the three gadolinium salts %
+easily dissolve in water.
+%The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
+%needing stirring to fully dissolve, while the Gd2(SO4)3, can be forced into solution with the addition of %
+%a small amount of sulfuric acid, about 380 ml of acid for 28 kg of Gd2(SO4)3 in 14 tons of water (test done at EGADS).
+%So, this solubility requirement does not immediately rule out any of these three compounds.
+If used in very large quantities, as it will be for SK, the compund must be safe for %
+%Next, if the compound is to be used inside a very large water Cherenkov detector, such as SK, it must be safe for
+the detectors components and it should be non-toxical. %it may be easily put into existing detectors.
+None of the above salts are toxic, but GdCl\tped{3} is corrosive and not suitable for a full scale test.
+Soak tests in a Gd solution at $25^\circ$C showed that the rubber friction pads used to hold the ID PMT %
+is susceptible to the sulfate, even though they seem to be affected also by pure water.
+In over twenty years of operation of SK, the effect has never been noticed, meaning the filtration system %
+removes the impurities from this material with great success.
+Taking in account the different scales of the detector and the test and that the typical temperature %
+of the water in SK is around $13^\circ$C, the case was deemed not to be a potential problem.
+%they show different corrosive properties, due to the different anions of the molecule.
+%The nitrate and the sulfate turn out to be non-corrosive, and do not seem to affect detectors components much, if at all.
+%An extensive soak test study was carried out in Japan, with each of the 31 different materials inside the SK detector %
+%being soaked in both pure water and Gd2(SO4)3 solution.
+%Only the which it is in the case of SK.
+%However, the chloride is corrosive, so for this reason the GdCl3 has been ruled out as a full scale test candidate.
+It is also necessary that the gadolinium solution maintains a high level of optical transparency, %
+so that optical photons of Cherenkov radiation can propagate inside the tank without attenuation.
+The Gd(NO3)3 is opaque in the UV region of the electromagnetic spectrum, for wavelengths less than 350\,nm, %
 and this unfortunately is where a large fraction of Cherenkov light is detected in SK PMTs, %
 so it cannot be a good full scale test candidate either.
-This leaves Gd2(SO4)3, and it turns out to have good transparency in the UV and optical regions of the EM spectrum, %
-leaving it as the best candidate for the EGADS test facility.
-This is in fact the choice that has been made by the EGADS group, and the remaining studies described in this paper %
-have been done using, or under the assumption that, Gd2(SO4)3 will be used.
-One last exceptionally nice quality about this compound is today it costs only 5 US dollars per kilogram, %
-meaning it would only be about 500,000 US dollars to dope SK, a price which is on the scale of such a major %
-experiment~\cite{1201.1017}[conference].
+This leaves Gd2(SO4)3 as the only choice possible, having good transparency in the UV and optical regions.
+%This is in fact the choice that has been made by the EGADS group, and the remaining studies described in this paper %
+%have been done using, or under the assumption that, Gd2(SO4)3 will be used.
+%One last exceptionally nice quality about this compound is today it costs only 5 US dollars per kilogram, %
+%meaning it would only be about 500,000 US dollars to dope SK, a price which is on the scale of such a major %
+%experiment~\cite{1201.1017}[conference].
+
+The most challenging aspect of a gadolinium-loaded water Cherenkov detector is the filtration system.
+The SK water purification system produces ultrapure water, close to the theoretical maximum, %
+with a resistivity around $18$\,M$\Omega\cdot$cm.
+This high purity is achieved thanks to several filtration stages, including microfilters, %
+ultrafilters (less than 0.1\,\textmu m), UV lamps for bacterial growth, reverse osmosis,  vacuum and membrane degasifiers, and anion-exchange resins.
+The current process, without modifications, would completely remove dissolved gadolinium.
+Therefore, in order to keep good water quality and high transparency, it is necessary to adapt the purification system %
+such that it can remove all impurities, ions included, except Gd\tapi{3+} and its anionic partner (SO\tped{4})\tapi{2-}.
+A new filtration system, called ``band-pass filtration system'', has been devised for EGADS and for later use in SK.
+A schematic can be found in \reffig{fig:egads}.
+The water from the water Cherenkov tank is first cleaned by microfilters and UV light.
+The Gd solution is then cooled down, as the sulfate dissolves better at lower temperatures, %
+before passing through an ultafilter.
+At this stage, a series of nanofilters splits up the water line into Gd-enriched water and %
+water with less than one part-per-milion of gadolinium.
+The concentrated line goes directly back to a buffer collection tank, whereas the gadolinium-free line %
+is first cleaned by deionisation and reverse osmosis.
+In the collection tank, dissolved air is removed by a membrane degassifier and resins are used %
+for the final purification.
+After full loading up to a concentration of 0.2\,\% of Gd, the water transparency is found to within typical SK values %
+thanks to the water filtration system which can maintain good water quality and minimises gadolinium losses.
+
+The water system for the gadolinium phase of SK will be essentially a scaled version of the EGADS filtration system.
+During the first stage, a solution of 0.02\,\% in Gd\tped{2}(SO\tped{4})\tped{3} mass will be loaded in SK, %
+to progressively increase it up to 0.2\,\% after the first comissioning.
 
 \section{Monitoring gadolinium concentration}
 \label{sec:gad}
