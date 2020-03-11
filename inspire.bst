@@ -75,6 +75,7 @@ ENTRY
     doi
     archive
     eprint
+    url
     report
     collaboration
     archivePrefix
@@ -919,6 +920,26 @@ FUNCTION {article}
         %write$
         newline$
 }
+
+FUNCTION {phdthesis}
+{
+        output.bibitem
+        write$
+        format.authors " (" *
+        write$
+        format.date "). " *
+        write$
+        format.title 
+        write$
+        url empty$
+        { "Doctoral dissertation." }
+        { "\href{" url * "}{Doctoral dissertation}." * }
+        if$
+        write$
+        newline$
+}
+
+FUNCTION {mastersthesis} {phdthesis}
 
 FUNCTION {default.type} { article }
 
