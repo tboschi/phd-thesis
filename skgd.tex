@@ -431,21 +431,22 @@ the exact value of which is position dependent.
 The values agree with the simulation analysis.
 
 \begin{figure}
-	\begin{minipage}[t]{0.45\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\resizebox{\textwidth}{!}{\input{source_spectrum.tex}}
 		\caption{Normalised energy distribution of neutrons emitted by an AmBe source~\cite{PMID:4744412} %
-			and neutrons and photons emitted by spontaneous fission of a %
+			and neutrons and photons from the spontaneous fission of a %
 			\tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.}
 		\label{fig:spectra}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{0.56\textwidth}
+	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\includegraphics[width=0.4\linewidth]{device.png}
-		\raisebox{2.5em}{\includegraphics[width=0.4\linewidth]{device_in.png}}
-		\captionof{figure}{Setup used to test the californium source.}
-		\label{fig:setup}
+		\resizebox{\textwidth}{!}{\input{QE.tex}}
+		\captionof{figure}{Plot showing PMT quantum efficiency (red), the scintillator yield (blue), %
+			their correlation (magenta) and the distributions of photon collected by the PMT in the GEANT4 %
+			simulation of optical photons (black).}
+		\label{fig:QE}
 	\end{minipage}
 \end{figure}
 
@@ -493,20 +494,19 @@ which translates to a SF rate of 96.46\,Hz.
 The SF tagging efficiency with this setup is therefore estimated to be around~41\,\%.
 
 \begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
+	\begin{minipage}[t]{0.54\textwidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{device.png}
+		\raisebox{2.5em}{\includegraphics[width=0.4\linewidth]{device_in.png}}
+		\captionof{figure}{Setup used to test the californium source.}
+		\label{fig:setup}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.46\textwidth}
 		\centering
 		\resizebox{\textwidth}{!}{\input{peaksources.tex}}
 		\captionof{figure}{Distribution of PMT peaks measured with source inside (black) and source removed from the scintillator~(red).}
 		\label{fig:source}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\resizebox{\textwidth}{!}{\input{QE.tex}}
-		\captionof{figure}{Plot showing PMT quantum efficiency (red), the scintillator yield (blue), %
-			their correlation (magenta) and the distributions of photon collected by the PMT in the GEANT4 %
-			simulation of optical photons (black).}
-		\label{fig:QE}
 	\end{minipage}
 \end{figure}
 
@@ -645,15 +645,40 @@ estimated efficiency of 90\,\%~\cite{Beacom:2003nk} for a 0.2\,\% Gd solution (s
 %Once thermalised, the neutrons undergo radiative capture, combining with a nearby nucleus to %
 %produce a more tightly bound final state, with excess energy released in a gamma-ray ( ) cascade. 
 
+%\iffalse
+\begin{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\resizebox{0.9\linewidth}{!}{\input{gdconcentration.tex}}
+		\captionof{figure}{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
+			concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
+			increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
+		\label{fig:gd_conc}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{bandpass.pdf}
+		\captionof{figure}{Schematic of the band-pass filtration system and the fast recirculation loop, %
+			where the main components of the system are highlighted: anion-exchange resins (AE), %
+			ultraviolet lamp (UV), total organic compung lamp (TOC), deionising system (DI), %
+			reverse osmosis stage (RO). See text and \refref{Ikeda:2019pcm} for details. }
+		\label{fig:egads}
+	\end{minipage}
+\end{figure}
+%\fi
 
+\iffalse
 \begin{figure}
 	\centering
 	\resizebox{0.5\linewidth}{!}{\input{gdconcentration.tex}}
+	\includegraphics[width=0.45\textwidth]{bandpass.pdf}
 	\caption{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
 		concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
 		increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
 	\label{fig:gd_conc}
 \end{figure}
+\fi
 
 
 In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound %
@@ -688,7 +713,7 @@ of the water in SK is around $13^\circ$C, the case was deemed not to be a potent
 %However, the chloride is corrosive, so for this reason the GdCl3 has been ruled out as a full scale test candidate.
 It is also necessary that the gadolinium solution maintains a high level of optical transparency, %
 so that optical photons of Cherenkov radiation can propagate inside the tank without attenuation.
-The Gd(NO3)3 is opaque in the UV region of the electromagnetic spectrum, for wavelengths less than 350\,nm, %
+The Gd(NO\tped{3})\tped{3} is opaque in the UV region of the electromagnetic spectrum, for wavelengths less than 350\,nm, %
 and this unfortunately is where a large fraction of Cherenkov light is detected in SK PMTs, %
 so it cannot be a good full scale test candidate either.
 This leaves Gd2(SO4)3 as the only choice possible, having good transparency in the UV and optical regions.
@@ -706,8 +731,9 @@ ultrafilters (less than 0.1\,\textmu m), UV lamps for bacterial growth, reverse 
 The current process, without modifications, would completely remove dissolved gadolinium.
 Therefore, in order to keep good water quality and high transparency, it is necessary to adapt the purification system %
 such that it can remove all impurities, ions included, except Gd\tapi{3+} and its anionic partner (SO\tped{4})\tapi{2-}.
-A new filtration system, called ``band-pass filtration system'', has been devised for EGADS and for later use in SK.
-A schematic can be found in \reffig{fig:egads}.
+A new filtration system, called ``band-pass filtration system'', has been devised for EGADS and runs in parallel to %
+the fast-recirculation loop~\cite{Ikeda:2019pcm}.
+The schematic is illustrated in \reffig{fig:egads}.
 The water from the water Cherenkov tank is first cleaned by microfilters and UV light.
 The Gd solution is then cooled down, as the sulfate dissolves better at lower temperatures, %
 before passing through an ultafilter.
