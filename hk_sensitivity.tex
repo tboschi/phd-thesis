@@ -552,23 +552,165 @@ since it is fundamental to understand their effect at all phases of the experime
 
 To validate the fitting framework a special systematic set for the beam sample is used.
 It is composed of just two systematics: the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties.
-These two errors are correlated, anti-correlated (and uncorrelated) %
-and they are tested at different magnitudes: 1\%, 2\%, 3\%, 4\%, and 5\%.
-This means a total of 15 fits.
+These two errors are either correlated or anti-correlated %
+and they are tested at different value (1\%, 2\%, 3\%, 4\%, and 5\%) for a total of ten fits.
 Given the definition of $\chi^2$ in \refeq{eq:chi2}, %
-at fixed magnitude the difference between the sets is just the correlation matrix, whereas at fixed correlation matrix %
-the differencea are the $1\sigma$ histograms.
+the difference in the fits is just the correlation matrix at a given relative error, %
+whereas the difference is provided by the $1\sigma$ histograms at fixed correlation.
+The correlation matrices used are simply
 \begin{equation}
-	\rho = \mqty(1 & 1 \\ 1 & 1) \quad,\quad
-	\rho = \mqty(1 & -1 \\ -1 & 1) \quad,\quad
-	\rho = \mqty(1 & 0 \\ 0 & 1)\ .
+	\rho = \mqty(1 & 1 \\ 1 & 1) \quad\text{and}\quad
+	\rho = \mqty(1 & -1 \\ -1 & 1) \ ,
 \end{equation}
-The correlation matrices written as above are singular and so not invertible.
-In order to get the inverted matrix, an offset of \np{e-5} is added to off-diagonal terms.
+but they both are singular and not invertible.
+A small offset of \np{e-5} is added to off-diagonal terms to allow the calculation of the $\chi^2$.
 
-\subsection{Variations to the nominal model}
+The prediction of the one ring $e$-like samples in $\nu$-mode and $\cj{\nu}$-mode are shown in \reffigs{fig:nue_CC}{fig_nuebar_CC} %
+for respectively the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties applied individually.
+The effect of the systematic error at different magnitudes of the relative error scales linearly.
 
-A series of modifications are performed on the nominal systematic model is modified:
+The importance of this systematic set can be appreciated in \reffig{fig:nuenorm_sensitivity}.
+When the two CC cross-sections are anti-correlated, the increment of one error brings about the decrement of the other.
+This results in an effective fluctuation of the number of events, exhibiting a CP violation--like phenomenon.
+A large systematic uncertainty of such anti-correlated cross-section parameters can therefore only aggravate the %
+overall sensitivity to $\delta_\text{CP}$.
+
+\begin{figure}
+	\centering
+	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_FHC_sys0.tex}}
+	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_RHC_sys0.tex}}
+	\caption{ Left: $\nu_e$ CC -- $\nu$ mode 1R $e$. Right: $\nu_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	\label{fig:nue_CC}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_FHC_sys1.tex}}
+	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_RHC_sys1.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	\label{fig:nuebar_CC}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_dCP.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S13.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S23.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	%\label{fig:nuebar_CC}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S13_dCP.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S23_dCP.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S13_M23.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S23_M23.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S13_S23.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	%\label{fig:nuebar_CC}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_dCP.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S13.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S23.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	%\label{fig:nuebar_CC}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_dCP_M23.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S13_dCP.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S23_dCP.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S13_M23.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S23_M23.tex}}
+	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S13_S23.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	%\label{fig:nuebar_CC}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_sensitivity.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_sensitivity.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	\label{fig:nuenorm_sensitivity}
+\end{figure}
+
+
+%%%% matrix plot
+\iffalse
+\begin{figure}
+	\centering
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_dCP.tex}}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	%
+
+	   \hspace{0.24\linewidth}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_M23.tex}}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	%
+
+	   \hspace{0.24\linewidth}
+	   \hspace{0.24\linewidth}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_S23.tex}}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
+	%
+
+	   \hspace{0.24\linewidth}
+	   \hspace{0.24\linewidth}
+	   \hspace{0.24\linewidth}
+	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_S13.tex}}
+	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	% \label{fig:nuebar_CC}
+\end{figure}
+\fi
+
+\subsection{Variations of the nominal model}
+
+\begin{table}
+	\centering
+	\caption{Variations of the nominal systematic model.}
+	\label{tab:variations}
+	\begin{tabular}{rcl}
+		\toprule
+		%Label				& Modification	& Note \\
+		%\midrule
+		0	& $=$	& Nominal T2K model \\
+		1a	& $+$ 	& $\nu_e$ CC cross sections: $0.1\,\text{GeV} < E_\text{true} < 0.6\,\text{GeV}$ \\
+		1b	& $+$ 	& $\nu_e$ CC cross sections: $0.6\,\text{GeV} < E_\text{true} < 1.0\,\text{GeV}$ \\
+		2a	& $+$ 	& $\cj{\nu}_e$ CC cross sections: $0.1\,\text{GeV} < E_\text{true} < 0.6\,\text{GeV}$ \\
+		2b	& $+$ 	& $\cj{\nu}_e$ CC cross sections: $0.6\,\text{GeV} < E_\text{true} < 1.0\,\text{GeV}$ \\
+		6a	& $-$	& $\nu$ 2p2h normalisation parameter \\
+		7a	& $-$	& $\cj{\nu}$ 2p2h normalisation parameter \\
+		67	& $-$	& $\nu$ and $\cj{\nu}$ 2p2h normalisation parameters \\
+		8	& $=$	& Nominal T2K model increased $\nu_e$ flux uncertainty in $\nu$-mode beam (2\%) \\
+		9	& $+$	& CC1$\pi^\pm$ and CC-coh xsec for $\nu_e$ and $\cj{\nu}_e$. \\
+		10	& $+$	& CC1$\pi^\pm$ and CC-coh xsec for $\nu_\mu$ and $\cj{\nu}_\mu$ %
+			  $ $     		at $2\,\text{GeV} < E_\text{true} < 10\,\text{GeV}$ \\
+		11a	& $=$	& Nominal T2K model increased SK energy scale (2.4\% $\to$ 2.9\%, uncorrelated) \\
+		11b	& $=$	& Nominal T2K model decreased SK energy scale (2.4\% $\to$ 1.9\%, uncorrelated) \\
+		flux	& $=$	& Nominal T2K with flux model additions \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+A series of modifications are performed on the nominal systematic and new systematic sets are created.
+Performing a sensitivity study with these variations of the nominal model, we can determine %
+if certain systematic errors needs more control than other.
+All of the produced sets are listed in \reftab{tab:variations}, however only a subset is discussed in this work; %
+the remaining ones will be studied in the future.
 
 \section{Dependencies on exclusion of CP}
 
