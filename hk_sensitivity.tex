@@ -358,10 +358,19 @@ and background (CCQE, CCnQE, and NC) distributions.
 \subsection{Systematic model}
 
 There are 67 systematics for the atmospheric sample, adopted from SK atmospheric studies~\cite{Abe:2017aap}.
-List systematics.
+List systematics in appendix.
 A more accurate systematic study for the atmospheric analysis of HK is expected in the future.
 The atmospheric systematics are initally uncorrelated with the beam systematics.
 The focus of this work is the beam sample.
+
+\begin{figure}
+	\centering
+	\resizebox{0.9\linewidth}{!}{\input{matrixplot.tex}}
+	\caption{Correlation matrix of the beam systematic model.
+		The two main blocks correspond to respectively the BANFF errors and the far detector %
+		Final State interaction errors.}
+	\label{fig:correlation}
+\end{figure}
 
 For the beam part, the T2K 2018 error model is employed~\cite{Abe:2018wpn}.
 There are 74 uncertainties for flux and cross-section parameters, from near detector constraints, %
@@ -377,7 +386,7 @@ The 1 ring $e$-like + 1 electron decay sample is not treated in this study.
 Among these, one systematic describes the energy scale uncertainty.
 It consists of 25 systematic uncertainities, constrained by near detector fits, for each beam mode---neutrino or antineutrino---describing %
 are described by 25 systematics for each beam mode---neutrino or antineutrino.
-There are 24 errors that describe cross section parameters, also constrained by near detector data.
+There are 24 errors that describe cross-section parameters, also constrained by near detector data.
 from flux and cross-section parameters constrained by near detector fits.
 Among the flux and cross-section parameters, These For the four main flux components 
 25 uncertainties for the beam in neutrino mode and 25 for the antineutrino mode.
@@ -451,7 +460,7 @@ where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
 
 \subsection{Test statistic}
 
-We define the following likelihood
+We define the likelihood
 \begin{equation}
 	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} O_n^{E_n}}{O_n!}\ ,
 \end{equation}
@@ -467,7 +476,7 @@ The $\chi^2$ is hence the following log-likelihood ratio
 	\chi^2(\vartheta) = -2 \log \qty[\frac{\mathfrak{L}(E_n, O_n)}{\mathfrak{L}(O_n, O_n)}] =
 		2 \sum_n \qty[E_n - O_n + O_n \log \qty(\frac{E_n}{O_n})]\ ,
 \end{equation}
-and it is modified following the ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}: %
+and it is modified according to the ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}: %
 the parameters $\uj{\varepsilon}$ are introduced to account for systematic uncertainties, by replacing
 \begin{equation}
 	\label{eq:pull}
@@ -531,7 +540,7 @@ the number of expected events changes:
 	%\text{\scriptsize MC\ :} \hspace{1em} \Downarrow & \hspace{3.5em} \Downarrow	\\	
 \end{align*}
 Certain systematic uncertainties, such as the CCQE axial-mass scaling factor, the Fermi momentum for \tapi{16}O, %
-or some of the RPA coefficients\footnote{The Random Phase Approximation (RPA) method is applied to calculate the total cross sections %
+or some of the RPA coefficients\footnote{The Random Phase Approximation (RPA) method is applied to calculate the total cross-sections %
 	of electron neutrinos on nuclei.}, 
 do not present a linear behaviour for small values of $\varepsilon$ %
 and they are better described by a four-point linear interpolation of different~$f_j^n$ histograms, %
@@ -541,7 +550,7 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 
 It is expected that larger systematic errors will result in a worse sensitivity,
 but certain uncertainties affect the measurement of the oscillation parameters more than others.
-For example, these can be the uncertainties on $\nu_e$ and $\cj{\nu}_e$ charged-current cross sections, %
+For example, these can be the uncertainties on $\nu_e$ and $\cj{\nu}_e$ charged-current cross-sections, %
 the transverse flux model, the pion absorption probability, the total energy scale in SK, or the flux alignment.
 We study the impact of some selected systematics by modifying the nominal systematic model %
 and analysing the overall predicted sensitivity of the experiment in these different scenarios.
@@ -562,10 +571,10 @@ The correlation matrices used are simply
 	\rho = \mqty(1 & 1 \\ 1 & 1) \quad\text{and}\quad
 	\rho = \mqty(1 & -1 \\ -1 & 1) \ ,
 \end{equation}
-but they both are singular and not invertible.
+but they are both singular and not invertible.
 A small offset of \np{e-5} is added to off-diagonal terms to allow the calculation of the $\chi^2$.
 
-The prediction of the one ring $e$-like samples in $\nu$-mode and $\cj{\nu}$-mode are shown in \reffigs{fig:nue_CC}{fig_nuebar_CC} %
+The prediction of the one ring $e$-like samples in $\nu$-mode and $\cj{\nu}$-mode are shown in \reffig{fig:nuenorm_prediction} %
 for respectively the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties applied individually.
 The effect of the systematic error at different magnitudes of the relative error scales linearly.
 
@@ -577,130 +586,116 @@ overall sensitivity to $\delta_\text{CP}$.
 
 \begin{figure}
 	\centering
-	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_FHC_sys0.tex}}
-	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_RHC_sys0.tex}}
-	\caption{ Left: $\nu_e$ CC -- $\nu$ mode 1R $e$. Right: $\nu_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	\label{fig:nue_CC}
-\end{figure}
+	\resizebox{0.475\linewidth}{!}{\input{nuenorm_E_FHC_sys0.tex}}
+	\hfill
+	\resizebox{0.475\linewidth}{!}{\input{nuenorm_E_RHC_sys0.tex}}
 
-\begin{figure}
-	\centering
-	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_FHC_sys1.tex}}
-	\resizebox{0.45\linewidth}{!}{\input{nuenorm_E_RHC_sys1.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	\label{fig:nuebar_CC}
+	\medskip
+	\resizebox{0.475\linewidth}{!}{\input{nuenorm_E_FHC_sys1.tex}}
+	\hfill
+	\resizebox{0.475\linewidth}{!}{\input{nuenorm_E_RHC_sys1.tex}}
+	\caption{Prediction of events at the far detector for the one ring $e$-like sample in %
+		$\nu$-mode (left) and $\cj{\nu}$-mode (right).
+		The $\nu_e$ (top) and $\cj{\nu}_e$ (bottom) CC cross-section systematics are varied to reach relative errors %
+		between 1,\% and 5\,\%.
+		In each figure, the top panel shows how the event distribution is affected, and the bottom panel shows %
+		the variation with respect to the prediction without errors applied, which is by definition %
+		the $1\sigma$ histogram, $1 + f^n$ (see \refeq{eq:chi2}). }
+	\label{fig:nuenorm_prediction}
 \end{figure}
-
 
 \begin{figure}
 	\centering
 	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S23.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	%\label{fig:nuebar_CC}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S13_dCP.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S23_dCP.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S13_M23.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S23_M23.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_corr_cont_S13_S23.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	%\label{fig:nuebar_CC}
-\end{figure}
-
-\begin{figure}
-	\centering
 	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S23.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	%\label{fig:nuebar_CC}
+	\caption{$\chi^2$ profile for $\delta_\text{CP}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_dCP}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_dCP_M23.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S13_dCP.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S23_dCP.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S13_M23.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S23_M23.tex}}
-	\resizebox{0.32\linewidth}{!}{\input{nuenorm_anti_cont_S13_S23.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	%\label{fig:nuebar_CC}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_M23.tex}}
+	\caption{$\chi^2$ profile for $\Delta m_{32}^2$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_M23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S13.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S13.tex}}
+	\caption{$\chi^2$ profile for $\sin^2 2\theta_{13}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_S13}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S23.tex}}
+	\caption{$\chi^2$ profile for $sin^2 \theta_{23}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_S23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_cont_S23_M23.tex}}
+	\caption{Contour plot of the $\chi^2$ profile for $\Delta m_{23}^2$ vs.\  $sin^2 \theta_{23}$ %
+		for correlated (left) and anticorrelated (right) systematics. 
+		The inner contour and outer contour corresponds respectively to the $1\sigma$ and $3\sigma$ %
+		contour lines.}
+	\label{fig:nuenorm_S23_M23}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_sensitivity.tex}}
 	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_sensitivity.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
+	\caption{Expected signifcance to exclude $\sin\delta_\text{CP} = 0$ for correlated (left) and anticorrelated (right) systematics.
+		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
+       		masks the resolution power to distinguihsing neutrino from anti-neutrino events. }
 	\label{fig:nuenorm_sensitivity}
 \end{figure}
 
 
-%%%% matrix plot
-\iffalse
-\begin{figure}
-	\centering
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_dCP.tex}}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	%
-
-	   \hspace{0.24\linewidth}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_M23.tex}}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	%
-
-	   \hspace{0.24\linewidth}
-	   \hspace{0.24\linewidth}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_S23.tex}}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_cont_dCP_M23.tex}}
-	%
-
-	   \hspace{0.24\linewidth}
-	   \hspace{0.24\linewidth}
-	   \hspace{0.24\linewidth}
-	\resizebox{0.24\linewidth}{!}{\input{nuenorm_corr_chi2_S13.tex}}
-	\caption{ Left: $\cj{\nu}_e$ CC -- $\nu$ mode 1R $e$. Right: $\cj{\nu}_e$ CC -- $\cj{\nu}$ mode 1R $e$}
-	% \label{fig:nuebar_CC}
-\end{figure}
-\fi
 
 \subsection{Variations of the nominal model}
 
 \begin{table}
 	\centering
-	\caption{Variations of the nominal systematic model.}
+	\caption{Variations of the nominal systematic model, labelled \textbf{0}.
+		The second column speficy the modification applied to the reference model:
+		the sets in the first block have one or more parameters added, %
+		whereas one or more parameters are removed in the variations of the second block.
+		The systematic models in the last group have the same number of parameters of the nominal model, %
+		with the modifications speficied.}
 	\label{tab:variations}
-	\begin{tabular}{rcl}
+	\begin{tabular}{rr@{\quad}l}
 		\toprule
-		%Label				& Modification	& Note \\
+		%Label		& & Modification \\
 		%\midrule
-		0	& $=$	& Nominal T2K model \\
-		1a	& $+$ 	& $\nu_e$ CC cross sections: $0.1\,\text{GeV} < E_\text{true} < 0.6\,\text{GeV}$ \\
-		1b	& $+$ 	& $\nu_e$ CC cross sections: $0.6\,\text{GeV} < E_\text{true} < 1.0\,\text{GeV}$ \\
-		2a	& $+$ 	& $\cj{\nu}_e$ CC cross sections: $0.1\,\text{GeV} < E_\text{true} < 0.6\,\text{GeV}$ \\
-		2b	& $+$ 	& $\cj{\nu}_e$ CC cross sections: $0.6\,\text{GeV} < E_\text{true} < 1.0\,\text{GeV}$ \\
-		6a	& $-$	& $\nu$ 2p2h normalisation parameter \\
-		7a	& $-$	& $\cj{\nu}$ 2p2h normalisation parameter \\
-		67	& $-$	& $\nu$ and $\cj{\nu}$ 2p2h normalisation parameters \\
-		8	& $=$	& Nominal T2K model increased $\nu_e$ flux uncertainty in $\nu$-mode beam (2\%) \\
-		9	& $+$	& CC1$\pi^\pm$ and CC-coh xsec for $\nu_e$ and $\cj{\nu}_e$. \\
-		10	& $+$	& CC1$\pi^\pm$ and CC-coh xsec for $\nu_\mu$ and $\cj{\nu}_\mu$ %
-			  $ $     		at $2\,\text{GeV} < E_\text{true} < 10\,\text{GeV}$ \\
-		11a	& $=$	& Nominal T2K model increased SK energy scale (2.4\% $\to$ 2.9\%, uncorrelated) \\
-		11b	& $=$	& Nominal T2K model decreased SK energy scale (2.4\% $\to$ 1.9\%, uncorrelated) \\
-		flux	& $=$	& Nominal T2K with flux model additions \\
+		\textbf{0}	& 	& Nominal T2K model \\
+		\midrule
+		\textbf{1a}	& $=\quad\bs{0}\quad+$ 	& $\nu_e$ CC cross-sections for $0.1\,\text{GeV} < E_\text{true} < 0.6\,\text{GeV}$ \\
+		\textbf{1b}	& $=\quad\bs{0}\quad+$ 	& $\nu_e$ CC cross-sections for $0.6\,\text{GeV} < E_\text{true} < 1.0\,\text{GeV}$ \\
+		\textbf{2a}	& $=\quad\bs{0}\quad+$ 	& $\cj{\nu}_e$ CC cross-sections for $0.1\,\text{GeV} < E_\text{true} < 0.6\,\text{GeV}$ \\
+		\textbf{2b}	& $=\quad\bs{0}\quad+$ 	& $\cj{\nu}_e$ CC cross-sections for $0.6\,\text{GeV} < E_\text{true} < 1.0\,\text{GeV}$ \\
+		\textbf{9}	& $=\quad\bs{0}\quad+$	& CC1$\pi^\pm$ and CC-coh cross-sections for $\nu_e$ and $\cj{\nu}_e$. \\
+		\textbf{10}	& $=\quad\bs{0}\quad+$	& CC1$\pi^\pm$ and CC-coh cross-sections for $\nu_\mu$ and $\cj{\nu}_\mu$ \\
+				&   			  & \hfill	for $2\,\text{GeV} < E_\text{true} < 10\,\text{GeV}$ \\
+		\midrule
+		\textbf{6a}	& $=\quad\bs{0}\quad-$	& $\nu$ 2p2h normalisation \\
+		\textbf{7a}	& $=\quad\bs{0}\quad-$	& $\cj{\nu}$ 2p2h normalisation \\
+		\textbf{67}	& $=\quad\bs{0}\quad-$	& $\nu$ and $\cj{\nu}$ 2p2h normalisation \\
+		\midrule
+		\textbf{8}	& $=\quad\bs{0}\quad\times$	& increased $\nu_e$ flux uncertainty in $\nu$-mode beam (2\%) \\
+		\textbf{11a}	& $=\quad\bs{0}\quad\times$	& increased SK energy scale (2.4\% $\to$ 2.9\%) \\
+		\textbf{11b}	& $=\quad\bs{0}\quad\times$	& decreased SK energy scale (2.4\% $\to$ 1.9\%) \\
+		\textbf{flux}	& $=\quad\bs{0}\quad\times$	& flux model additions from INGRID studies \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -709,8 +704,68 @@ overall sensitivity to $\delta_\text{CP}$.
 A series of modifications are performed on the nominal systematic and new systematic sets are created.
 Performing a sensitivity study with these variations of the nominal model, we can determine %
 if certain systematic errors needs more control than other.
-All of the produced sets are listed in \reftab{tab:variations}, however only a subset is discussed in this work; %
-the remaining ones will be studied in the future.
+All of the produced sets are listed in \reftab{tab:variations}, however only a subset is discussed in this work %
+and these are the the sets labelled \textbf{8}, \textbf{11a}, and \textbf{11b} (see \reftab{tab:variations} %
+for the meaning of the labels).
+The remaining ones will be studied in the future.
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_dCP.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_dCP.tex}}
+	\caption{$\chi^2$ profile for $\delta_\text{CP}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_dCP}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_M23.tex}}
+	\caption{$\chi^2$ profile for $\Delta m_{32}^2$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_M23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S13.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S13.tex}}
+	\caption{$\chi^2$ profile for $\sin^2 2\theta_{13}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_S13}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_chi2_S23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_chi2_S23.tex}}
+	\caption{$\chi^2$ profile for $sin^2 \theta_{23}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_S23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_cont_S23_M23.tex}}
+	\caption{Contour plot of the $\chi^2$ profile for $\Delta m_{23}^2$ vs.\  $sin^2 \theta_{23}$ %
+		for correlated (left) and anticorrelated (right) systematics. 
+		The inner contour and outer contour corresponds respectively to the $1\sigma$ and $3\sigma$ %
+		contour lines.}
+	\label{fig:nuenorm_S23_M23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_corr_sensitivity.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{nuenorm_anti_sensitivity.tex}}
+	\caption{Expected signifcance to exclude $\sin\delta_\text{CP} = 0$ for correlated (left) and anticorrelated (right) systematics.
+		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
+       		masks the resolution power to distinguihsing neutrino from anti-neutrino events. }
+	\label{fig:nuenorm_sensitivity}
+\end{figure}
+
 
 \section{Dependencies on exclusion of CP}
 
