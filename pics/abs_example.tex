@@ -1,0 +1,155 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolortrue
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktexttrue
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(7200.00,5040.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%%
+      \put(849,595){\makebox(0,0)[r]{\strut{}$0$}}%
+      \csname LTb\endcsname%%
+      \put(849,1465){\makebox(0,0)[r]{\strut{}$5000$}}%
+      \csname LTb\endcsname%%
+      \put(849,2335){\makebox(0,0)[r]{\strut{}$10000$}}%
+      \csname LTb\endcsname%%
+      \put(849,3206){\makebox(0,0)[r]{\strut{}$15000$}}%
+      \csname LTb\endcsname%%
+      \put(849,4076){\makebox(0,0)[r]{\strut{}$20000$}}%
+      \csname LTb\endcsname%%
+      \put(849,4946){\makebox(0,0)[r]{\strut{}$25000$}}%
+      \csname LTb\endcsname%%
+      \put(951,409){\makebox(0,0){\strut{}$260$}}%
+      \csname LTb\endcsname%%
+      \put(1607,409){\makebox(0,0){\strut{}$265$}}%
+      \csname LTb\endcsname%%
+      \put(2263,409){\makebox(0,0){\strut{}$270$}}%
+      \csname LTb\endcsname%%
+      \put(2918,409){\makebox(0,0){\strut{}$275$}}%
+      \csname LTb\endcsname%%
+      \put(3574,409){\makebox(0,0){\strut{}$280$}}%
+      \csname LTb\endcsname%%
+      \put(4230,409){\makebox(0,0){\strut{}$285$}}%
+      \csname LTb\endcsname%%
+      \put(4886,409){\makebox(0,0){\strut{}$290$}}%
+      \csname LTb\endcsname%%
+      \put(5541,409){\makebox(0,0){\strut{}$295$}}%
+      \csname LTb\endcsname%%
+      \put(6197,409){\makebox(0,0){\strut{}$300$}}%
+      \csname LTb\endcsname%%
+      \put(6299,595){\makebox(0,0)[l]{\strut{}$0$}}%
+      \csname LTb\endcsname%%
+      \put(6299,1030){\makebox(0,0)[l]{\strut{}$0.1$}}%
+      \csname LTb\endcsname%%
+      \put(6299,1465){\makebox(0,0)[l]{\strut{}$0.2$}}%
+      \csname LTb\endcsname%%
+      \put(6299,1900){\makebox(0,0)[l]{\strut{}$0.3$}}%
+      \csname LTb\endcsname%%
+      \put(6299,2335){\makebox(0,0)[l]{\strut{}$0.4$}}%
+      \csname LTb\endcsname%%
+      \put(6299,2771){\makebox(0,0)[l]{\strut{}$0.5$}}%
+      \csname LTb\endcsname%%
+      \put(6299,3206){\makebox(0,0)[l]{\strut{}$0.6$}}%
+      \csname LTb\endcsname%%
+      \put(6299,3641){\makebox(0,0)[l]{\strut{}$0.7$}}%
+      \csname LTb\endcsname%%
+      \put(6299,4076){\makebox(0,0)[l]{\strut{}$0.8$}}%
+      \csname LTb\endcsname%%
+      \put(6299,4511){\makebox(0,0)[l]{\strut{}$0.9$}}%
+      \csname LTb\endcsname%%
+      \put(6299,4946){\makebox(0,0)[l]{\strut{}$1$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%%
+      \put(153,2770){\rotatebox{-270}{\makebox(0,0){\strut{}Intensity}}}%
+      \csname LTb\endcsname%%
+      \put(6911,2770){\rotatebox{-270}{\makebox(0,0){\strut{}Absorbance}}}%
+      \csname LTb\endcsname%%
+      \put(3574,130){\makebox(0,0){\strut{}Wavelength (nm)}}%
+      \csname LTb\endcsname%%
+      \put(5613,4779){\makebox(0,0)[r]{\strut{}Pure water}}%
+      \csname LTb\endcsname%%
+      \put(5613,4593){\makebox(0,0)[r]{\strut{}Gd water}}%
+      \csname LTb\endcsname%%
+      \put(5613,4407){\makebox(0,0)[r]{\strut{}Absorbance}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{pics/abs_example}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup

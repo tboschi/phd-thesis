@@ -753,17 +753,20 @@ to progressively increase it up to 0.2\,\% after the first comissioning.
 \section{Monitoring gadolinium concentration}
 \label{sec:gad}
 
-The concentration of Gd in water affects the efficiency and timing of neutron captures, antineutrino measurements depends on this.
-It is fundamental to measure the concentration regularly, as this can change in time inside the tank.
-On such a large scale, it is not a trivial task to predict temperature and flow dependency of the dissolved Gd.
-At the moment, the Evaluating Gadolinium's Action on Detector Systems (EGADS) keeps track of the Gd concentration
-with a Zeeman atomic absorption spectrometer, located near the experiment.
-Water samples are collected from the EGADS tank, diluted and atomised inside the AAS machine.
+The concentration of Gd in water affects the efficiency and timing of neutron captures, %
+which must be known for an accurate measurement of antineutrino rate.
+It is fundamental, therefore, to measure the concentration regularly, as this can change in time inside the detector.
+On large scales like for SK, it is not a trivial task to predict the temperature and the flow dependency %
+of the dissolved Gd.
+At the moment, the EGADS experiment keeps track of the Gd concentration with a Zeeman atomic absorption spectrometer (AAS), %
+located near the experiment.
+Water samples are collected monthly from the water tank, diluted and atomised inside the AAS machine.
 The amount of Gd is then compared to known samples of Gd loaded water to determine the concentration.
 
-We propose an alternative method, which still uses atomic absorption lines of Gd, but in solution in water.
-Gadolinium presents strong emission/absorption lines in the UV region~\cite{NIST}.
-Using a UV source and a spectrometer it would be possible to measure the absorption by gadolinium dissolved in water.
+We propose an alternative method for monitoring gadolinium concentration, %
+which still uses atomic absorption lines of Gd, but in solution in water.
+Gadolinium presents strong emission/absorption lines in the UV region~\cite{Morton_2000}.
+Using a UV source and a spectrometer it is possible to measure the absorption by gadolinium dissolved in water.
 The absorbance in directly proportional to the amount of gadolinium and therefore to the concentration, %
 where absorbance is defined as
 \begin{equation}
@@ -789,6 +792,16 @@ of uniform concentration to the optical path length through the sample and absor
 \end{equation}
 where $\varepsilon$ is the molar attenuation coefficient, or absorptivity, of the attenuating species.
 The Beer-Lambert law agrees with the expectation of decreasing attenuation length with increasing concentration.
+
+
+\begin{figure}
+	\centering
+	\resizebox{0.45\linewidth}{!}{\input{pics/shimadzu_20.tex}}
+	\resizebox{0.45\linewidth}{!}{\input{pics/hdxabs.tex}}
+	\caption{Gadolinium absorption lines. }
+	\label{fig:gad_lines}
+\end{figure}
+
 
 In an absorbance measurement, however, there could be other sources of absorption.
 In a real setup, a light source and a photo sensor are needed, in addition to optical interfaces with the %
@@ -822,6 +835,21 @@ since the difference of two logarithmic elements is taken.
 The drawback of this method is that two measurements are needed at the two wavelengths $x_1$ and $x_2$, %
 and therefore the error on the measurement will increase by a factor $\sim \sqrt{2}$.
 
+\begin{figure}
+	\centering
+	\resizebox{0.8\linewidth}{!}{\input{pics/gad_10cm.tex}}
+	\caption{Gadolinium absorption lines.}
+	\label{fig:gad_10cm}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.6\linewidth}{!}{\input{pics/abs_example.tex}}
+	\caption{Gadolinium absorption lines.}
+	\label{fig:gad_10cm}
+\end{figure}
+
+
 The first concept of tracking gadolinium concentration in water using absorbance spectrum %
 was tested using a 1\,cm cell in a commercial spectrophotometer Shimadzu UV2600, %
 in which an initial sample of 0.2\,\% Gd water is diluited to obtain different concentration levels.
@@ -845,6 +873,13 @@ In addition to this, the sensor has a high dynamic range, which is the determing
 on the absorbance measurement.
 Wavelength resolution is not as important, because we use the relative position of the gadolinium peaks %
 to determine the absorbance.
+
+\begin{figure}
+	\centering
+	\resizebox{\linewidth}{!}{\input{pics/polyfit.tex}}
+	\caption{Gadolinium absorption lines.}
+	\label{fig:gad_fit}
+\end{figure}
 
 The first prototype based on a 10 cm cell for 0.2$\%$ Gadolinium sulphate doping achieved %
 a $3\%$ concentration measurement resolution ($1\%$ neutron capture efficiency) %
