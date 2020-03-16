@@ -1,7 +1,11 @@
+\clearpage
 \chapter{Neutrino mass generation}
 \label{cha:neutrino_mass}
 
 [check PDG http://pdg.lbl.gov/2019/reviews/rpp2019-rev-neutrino-mixing.pdf]
+
+\section{Introduction}
+\label{sec:introduction}
 
 The evidence for three neutrino flavour oscillation is well established~\cite{Fukuda:1998mi,Aharmim:2005gt} %
 and can be accounted for only if neutrino mass splittings are non zero~\cite{nufit}.
@@ -27,7 +31,7 @@ So far, some possible hints in favour of heavy neutrinos have emerged in neutrin
 specifically LSND~\cite{Aguilar:2001ty} and MiniBooNE~\cite{Aguilar-Arevalo:2012fmn, Aguilar-Arevalo:2013pmq, Aguilar-Arevalo:2018gpe} %
 but are disfavoured by disappearance experiments~\cite{TheIceCube:2016oqi, Adamson:2017uda, Aartsen:2017bap}, %
 unless non-standard effects are present~\cite{Liao:2016reh, Liao:2018mbg, Esmaili:2018qzu, Denton:2018dqq}. Further hints 
-in the same mass range have been reported for mixing with electron neutrinos in the so-called reactor anomaly~\cite{Mueller:2011nm, Mention:2011rk, Huber:2011wv, Ko:2016owz, Alekseev:2018efk} and in the less statistically significant Gallium one~\cite{Abdurashitov:2005tb, Laveder:2007zz, Giunti:2006bj}.
+in the same mass range have been reported for mixing with electron neutrinos in the so-called reactor anomaly~\cite{Mueller:2011nm, Mention:2011rk, Huber:2011wv, Ko:2016owz, Alekseev:2018efk} and in the less statistically significant gallium one~\cite{Abdurashitov:2005tb, Laveder:2007zz, Giunti:2006bj}.
 Explanations of the MiniBooNE low energy excess invoking GeV-scale HNLs with non-standard interactions~\cite{Gninenko:2009ks, Gninenko:2010pr, %
 	Masip:2012ke, Bertuzzo:2018itn, Ballett:2018ynz}, %
 have also been put forward. In these models, heavy neutral fermions are produced by neutrino up-scattering in the detector and subsequently decaying into photons or electrons, which mimic an electron neutrino interaction.
@@ -35,7 +39,8 @@ The interpretation of the current experimental results is still largely debated 
 Searches both for electron-like signatures in MicroBooNE, the SBN programme at Fermilab~\cite{Antonello:2015lea}, %
 and in short baseline reactor neutrino experiments, such as DANNS~\cite{Alekseev:2018efk}, NEOS~\cite{Ko:2016owz}, %
 PROSPECT~\cite{Ashenfelter:2018iov}, STEREO~\cite{Almazan:2018wln}, NEUTRINO-4~\cite{Serebrov:2018vdw}, %
-will shed further light on these possibilities.
+will shed further light on these possibilities, %
+whereas experiments like KATRIN~\cite{Mertens:2018vuu} will be able to exclude the gallium anomalies.
 
 Apart from these controversial hints, no positive evidence of heavy neutrinos has been found to date in laboratory searches.
 A thorough review of the current constraints can be found in~\refrefs{Atre:2009rg, Drewes:2015iva}. 
@@ -108,10 +113,16 @@ in close proximity to a very intense neutrino beam and cutting-edge event recons
 These will allow DUNE ND to undertake valuable searches for BSM physics in a entirely complementary way %
 to the central oscillation physics programme. 
 
+
+
 In this article, we present a detailed analysis of the sensitivity of DUNE ND to HNL in beam dump style searches.
-Differently from previous sensitivity studies \cite{Krasnov:2019kdc, Adams:2013qkq},  %
-we ground our discussion in theoretically consistent models, in which sterile neutrinos are associated with neutrino %
-mass generation via a low-scale seesaw mechanism. %, such as inverse seesaw (ISS) mechanisms.
+We ground our discussion in theoretically consistent models, in which sterile neutrinos %
+are associated with neutrino mass generation via a low-scale seesaw mechanism.
+We extend and refine previous analysis~\cite{Krasnov:2019kdc, Adams:2013qkq}, %
+using the latest configuration of the DUNE ND~\cite{DUNETDR:2019, DUNEND:2019}.
+%Differently from previous sensitivity studies
+%we ground our discussion in theoretically consistent models, in which sterile neutrinos are associated with neutrino %
+%mass generation via a low-scale seesaw mechanism. %, such as inverse seesaw (ISS) mechanisms.
 We note that the range of masses and mixing angles testable at DUNE~ND is of interest for the generation of %
 the baryon asymmetry in the context of the ASR mechanism~\cite{Akhmedov:1998qx, Asaka:2005pn, Hernandez:2015wna, Hernandez:2016kel, Drewes:2017zyw}.
 We consider both Majorana and pseudo-Dirac states and calculate their decay and production rates, 
@@ -142,13 +153,12 @@ the expected signal and the impact of backgrounds.
 In \refsec{sec:results}, we quantify the sensitivity of DUNE ND to decays of heavy neutrino and, %
 in \refsec{sec:combined}, its ability to constrain the parameter space of low-scale seesaw models.
 Our concluding remarks are made in \refsec{sec:conclusions}.
-
 \section{Heavy neutrinos in seesaw models}
 \label{sec:model}
 
 The lightness of the observed neutrino masses can be explained in a range of different scenarios. %
 New SM-gauge singlet fermions are a feature common to many of them. 
-The~most general Lagrangian  including a set of right-chiral gauge singlets 
+The~most general Lagrangian including a set of right-chiral gauge singlets 
 $\{{\cal{N}}_i\}$ is given by 
 %
 \begin{equation}
@@ -180,8 +190,7 @@ Low-scale solutions are also possible by taking the Yukawa couplings to be simil
 or smaller than the other SM lepton Yukawa couplings, \eg if $m_D$ takes values in the keV range, %
 new nearly-sterile states would exist with masses around a GeV.
 %
-Although the mass scale for the heavy neutrino can span many orders of magnitude, %
-the resulting mixing is constrained by the contribution given to light neutrino masses
+ The resulting mixing is constrained by the contribution given to light neutrino masses and naively one can expect to have
 %
 \begin{equation}
 	\label{eq:TypeI_mixing_bound}
@@ -190,15 +199,33 @@ the resulting mixing is constrained by the contribution given to light neutrino 
 \end{equation}
 %
 where we have taken $m_\nu\lesssim 0.1$\,eV.
-These suppressed mixing angles make experimental searches for heavy neutrinos in this range particularly challenging, %
-and beyond the capabilities of most experiments to-date.
+Specific models in which low energy neutrino masses and mixing angles are derived from the see-saw parameters %
+allow for a broader range of values, invoking specific structures for the Yukawa couplings.
+For example, it has been pointed out that in some cases a lower bound on different combinations of %
+$|U_{ \alpha N}|^2$ can be found, depending on the number and mass hierarchy of heavy neutrinos %
+and the value of the lightest neutrino masses (see \refref{Gorbunov:2013dta,Drewes:2019mhg}).
+Values larger than the ones naively expected from \refeq{eq:TypeI_mixing_bound} can be obtained %
+by advocating specific cancellations in the heavy neutrino contribution to light neutrino masses.
+For instance, in analogy to \refref{Moffat:2018wke}, one can use the Casas-Ibarra parametrisation~\cite{Casas:2001sr}
+\begin{equation}
+	\label{eq:CasasIbarra}
+	m_D \simeq i \ \mathcal{U} \ m_\text{diag}^{1/2}\ R\ M_R^{-1/2}\ ,
+\end{equation}
+where $\mathcal{U}$ is the usual $3\times 3$ PMNS mixing matrix %
+which diagonalises $m_\nu$ into the diagonal matrix containing the three light neutrinos $m_\text{diag}$, %
+and $R$ is an arbitrary complex orthogonal matrix.
+We notice that the values of the entries of $R$ are not bounded and could be much larger than one.
+Consequently, the mixing angles between the active and heavy sterile neutrinos, %
+which scale as $m_D\, M_{R}^{-1}$, can be enhanced without violating the bound from neutrino masses, %
+in which $R$ does not enter.
+Differently from \refref{Moffat:2018wke}, one loop corrections are negligible at the GeV scale and do not introduce additional fine-tuning. 
 
-In recent years a lot of interest has focused on more complex models with multiple new fermion states, %
+Without advocating specific forms of the Yukawa coupling, %
+the bound in Eq.~(\ref{eq:TypeI_mixing_bound}) can be avoided in presence of more than three sterile neutrinos %
+thanks to the cancellation between their contributions to neutrino masses.
+In recent years, a lot of interest has focused on these type of models %
 \eg the Inverse Seesaw~(ISS)~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}, extended seesaw~\cite{Barr:2003nn} %
 and linear seesaw models~\cite{Malinsky:2005bi,Kang:2006sn}.
-%
-In these cases the bound in Eq.~(\ref{eq:TypeI_mixing_bound}) can be avoided because of the cancellation between %
-the contributions to neutrino masses by a different sterile neutrino.
 For~definiteness, we will focus on the ISS model.
 In this case, a quasi-preserved lepton number guarantees the specific texture of $M_R$ and $m_D$ %
 and its small breaking is natural in the 't Hooft sense~\cite{tHooft:1980xss}.
@@ -260,9 +287,6 @@ We disregard lepton number violating effects and therefore the distinction betwe
 Feynman rules for Majorana states derived from \refeq{eq:model} can be found in~\cite{Atre:2009rg},
 or constructed using the techniques of \refref{Denner:1992me}. 
 For an explicit comparison between Dirac versus Majorana Feynman rules for heavy neutrinos, see~\refref{Abada:2016plb}.
-
-
-
 \section{Heavy neutrino decay}
 \label{sec:decay}
 
@@ -392,7 +416,7 @@ FeynCalc~\cite{Shtabovenko:2016sxi,Mertig:1990an}.
 
 \begin{figure}
 	\centering
-	%\resizebox{\textwidth}{!}{\input{pics/multiBranch.tex}}
+	\resizebox{\textwidth}{!}{\input{pics/multiBranch.tex}}
 	\footnotesize
 	\caption{The branching ratios for HNL decays, integrated over the angular variables, are shown above %
 		as functions of the mass.
@@ -826,8 +850,6 @@ to the equivalent Majorana process; however, the major difference we see between
 is that these NC channels are dependent on the angular variables.
 These differences in the distributions of the final state particles could be in principle exploited to identify %
 the fermionic nature of the decaying HNL~\cite{Balantekin:2018ukw}.
-
-
 \section{Heavy neutrino production}
 \label{sec:production}
 
@@ -964,7 +986,7 @@ as it happens with the electron decay of $D_s$, the enhancement of which is arou
 
 \begin{figure}[t]
 	\centering
-	%{\resizebox{\linewidth}{!}{\input{pics/multiScale.tex}}}
+	{\resizebox{\linewidth}{!}{\input{pics/multiScale_2.tex}}}
 	\footnotesize
 	\caption{The scale factors separated by helicity components are shown.
 		In two-body decays (left), the $h=-1$ components (dashed) for all channels %
