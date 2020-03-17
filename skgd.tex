@@ -762,6 +762,7 @@ At the moment, the EGADS experiment keeps track of the Gd concentration with a Z
 located near the experiment.
 Water samples are collected monthly from the water tank, diluted and atomised inside the AAS machine.
 The amount of Gd is then compared to known samples of Gd loaded water to determine the concentration.
+This method reaches currently an accuracy of $\sim3$\,\%.
 
 We propose an alternative method for monitoring gadolinium concentration, %
 which still uses atomic absorption lines of Gd, but in solution in water.
@@ -770,35 +771,54 @@ Using a UV source and a spectrometer it is possible to measure the absorption by
 The absorbance in directly proportional to the amount of gadolinium and therefore to the concentration, %
 where absorbance is defined as
 \begin{equation}
+	\label{eq:abs}
 	\mathcal{A}(x) = \log_{10} \frac{I_0 (x)}{I_\text{Gd}(x)}\ .
 \end{equation}
-The spectrum $I_0$ of a reference sample of pure water is taken before the gadolinium loaded water sample $I_\text{Gd}$.
-These two spectrum are then compared at a given wavelength.
-The gadolinium absorbance spectrum presents a series of lines in the 270\,nm -- 275\,nm region.
-The height of one peak is related to the concentration, as the amount of light surviving the sample is related to
+The spectrum $I_0$ is the intensity of a luminous source at a wavelength $x$ filtering through %
+a reference sample of pure water, whereas $I_\text{Gd}$ is the intensity of the same source at the same wavelength %
+for a gadolinium loaded water sample.
+%The two intesnities spectra are then compared at a given wavelength.
+The gadolinium absorption spectrum presents a series of lines in the region between 270\,nm and 275\,nm and
+the height of one peak is related to the Gd concentration, thanks to the exponential law %
+%as the intensity of light surviving the sample %
+%follows
 \begin{equation}
+	\label{eq:expo}
 	I_\text{Gd}(x) = I_0(x) e^{-\flatfrac{\ell}{\lambda}}\ ,
 \end{equation}
-with $\lambda$ the attenuantion length and $\ell$ the sample length.
-For a fixed cross-section volume and a fixed-length sample, the attenuation length will %
-decrease with the amount of Gd in the sample $m_\text{Gd}$, or since the volume is constant, with the concentration of Gd $\rho_\text{Gd}$.
+with $\lambda$ the attenuation length and $\ell$ the length of the sample.
+This is illustrated in \reffig{fig:gad_lines}.
+For a fixed cross-section $S$ and a fixed length, the attenuation length will %
+decrease with the quantity of Gd, $m_\text{Gd}$, dissolved in the solution, or with the concentration of Gd $\rho_\text{Gd}$, %
+since the volume is constant between the pure water and Gd-loaded water measurements:
 \begin{equation}
-	\rho_\text{Gd} = \frac{m_\text{Gd}}{X\,\ell}\ .
+	\rho_\text{Gd} = \frac{m_\text{Gd}}{S\,\ell}\ .
 \end{equation}
-The Beer-Lambert law relates the optical attenuation of a physical material containing a single attenuating species %
-of uniform concentration to the optical path length through the sample and absorptivity of the species.
+The Beer-Lambert law relates the optical attenuation of a physical material, containing a single attenuating species %
+of uniform concentration, as linearly dependent to the optical path length via a material-specific constant
 \begin{equation}
-	\mathcal{A} = \varepsilon\, \ell\, \rho = \log_{10} (e) \frac{\ell}{\lambda}\ ,
+	\label{eq:beerlambert}
+	\mathcal{A} = \varepsilon\, \ell\, \rho \ ,
 \end{equation}
-where $\varepsilon$ is the molar attenuation coefficient, or absorptivity, of the attenuating species.
+where $\varepsilon$ is the molar attenuation coefficient, or \emph{absorptivity} of the attenuating species.
+By comparing \refeq{eq:beerlambert} with \refeqs{eq:abs}{eq:expo}, we can related the attenuation length $\lambda$
+to concentration and absorptivity
+\begin{equation}
+	\lambda = \frac{\log_{10} (e)}{\varepsilon\, \rho }\ .
+\end{equation}
 The Beer-Lambert law agrees with the expectation of decreasing attenuation length with increasing concentration.
-
 
 \begin{figure}
 	\centering
 	\resizebox{0.45\linewidth}{!}{\input{pics/shimadzu_20.tex}}
 	\resizebox{0.45\linewidth}{!}{\input{pics/hdxabs.tex}}
-	\caption{Gadolinium absorption lines. }
+	\caption{Gadolinium absorption spectrum between 270\,nm and 280\,nm.
+		On the left, the spectrum taken with a high-resolution integrated spectrophotometer %
+		Shimadzu UV-2600, revealing numeours peaks in the region of interest for an acqueous solution %
+		of 0.2\,\% gadolinium sulfate.
+		On the right, the spectrum taken with a fast spectrometer Ocean HDX, varying the concentration 
+		between 0.2\,\% down to 0.02\,\%: the height of the peaks scales linearly with the concentration.
+		The absorbance is normalised to the length of the sample.}
 	\label{fig:gad_lines}
 \end{figure}
 
@@ -806,73 +826,114 @@ The Beer-Lambert law agrees with the expectation of decreasing attenuation lengt
 In an absorbance measurement, however, there could be other sources of absorption.
 In a real setup, a light source and a photo sensor are needed, in addition to optical interfaces with the %
 sample to measure; the solvent of the sample will also contribute to the overall absorbance.
-The Beer-Lamber law can be generalised to a generic $N$ number of attenuating elements
+The Beer-Lamber law can be generalised to a generic number of attenuating elements
 \begin{equation}
+	\label{eq:linear_bl}
 	\mathcal{A} = \sum_{i = 1}^N \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = %
-	\varepsilon \ell \rho_0 +  \sum_{i = 1}^{N-1} \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = a + b \, \rho_0\ ,
+	\ell\,\varepsilon_0\,\rho_0 +  \sum_{i = 2}^N \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = a + b \, \rho_0\ ,
 \end{equation}
 where the attenuating species of interest has been isolated: %
 if the other elements are constant, there is a linear law with measured absorbance and concentration.
-The absorbance will also depend on the solvent, \ie water, purity and other factors, \eg optical interfaces etc.
-The measurement of absorption could also be biased by the presence of wavelength-independent factors, %
-or at least independent in the portion of the spectrum of interest.
-Examples of these factors could are micro-bubbles or other impurities in the samples.
-Micro-bubbles will scatter or block light, thus adding a bias on teh absorbance measurement.
-Using two absorption peaks the measurement could be improved by taking the difference of the absorption, %
-as any effect which is wavelength independent is removed.
+The absorbance will also depend on the purity of the solvent---in this case water---and other factors, %
+such as the optical interfaces.
+It follows that absoroption measurements taken with different setup cannot be compared unless the %
+effect of other absorbing elements is well understood.
+Namely this would require to know the factors $a$ and $b$ of \refeq{eq:linear_bl}, %
+and so calibration of the measurement apparatus is required.
+The absorption can also be biased by the presence of wavelength-independent factors, %
+or at least independent in the region of the spectrum of interest.
+Examples of these factors could are micro-bubbles or other impurities in the samples which %
+can scatter or block the probing light, thus adding a bias on the measurement.
+The estimation of the absorbance can be improved by using two lines and taking the difference of the absorption peaks %
 \begin{equation}
 	\Delta \mathcal{A} = \mathcal{A}(x_1) - \mathcal{A}(x_2) = %
-	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ .
+	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ ,
 \end{equation}
-Supposing the intensity of the reference sample is reduced by a factor $\eta$, %
-whereas the intensity of the study sample is reduced by a factor $\zeta$, we would have
+as any wavelength-independent effect is removed.
+Supposing the true intensity of the reference sample is modified by a factor $\eta$, %
+and the intensity of the study sample is varied by a factor $\zeta$, we would have
 \begin{equation}
 	\Delta \mathcal{A} = %
 	\log_{10} \frac{\eta I_0 (x_1)}{\zeta I(x_1)} - \log_{10} \frac{\eta I_0 (x_2)}{\zeta I(x_2)} = %
 	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ ,
 \end{equation}
-since the difference of two logarithmic elements is taken.
+thanks to the difference of the logarithm.
 The drawback of this method is that two measurements are needed at the two wavelengths $x_1$ and $x_2$, %
-and therefore the error on the measurement will increase by a factor $\sim \sqrt{2}$.
+and therefore the error on the measurement will increase by a factor $\sim\sqrt{2}$.
+
+\begin{figure}
+	\begin{minipage}[t]{0.44\textwidth}
+		\centering
+		\raisebox{1.5em}{\resizebox{\linewidth}{!}{\input{pics/abs_example.tex}}}
+		\captionof{figure}{Gadolinium absorption measurement taken with the Ocean HDX spectrometer and a 10\,cm water sample.
+			The profile of the UV LED is shown when pure water (blue) and Gd-loaded water (black) are used.
+			The absorbance (red) is then extracted from the two intensity measurement.}
+		\label{fig:uv_led}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.54\textwidth}
+		\centering
+		\resizebox{\textwidth}{!}{\input{pics/gad_10cm.tex}}
+		\captionof{figure}{The inverse linear fit (red) between concentration and absorption is shown togwther with data (blue) %
+			on the top panel. The absolute values of the errors is roughly constant with concentration, as it is mostly dominated by %
+	      		the uncertainties on the linear fit: the relative error (bottom panel) increases with lower concentrations.
+			The rightmost point corresponds to a 0.2\,\% concentration, the relative error %
+			of which is around 3\,\%.}
+		\label{fig:gad_10cm}
+	\end{minipage}
+\end{figure}
+
+The concept of tracking gadolinium concentration in water using absorbance spectrum %
+was proved using a 10\,cm cell in a high-resolution spectrophotometer Shimadzu UV2600 %
+and a fast spectrometer Ocean HDX.
+The Shimadzu spectrophotometer uses two grating systems to select very narrow windows of the electromagnetic spectrum %
+both at the source and at the detection, which is performed by a photomultiplier.
+A deuterium lamp, integrated in the spectrometer, generates light at UV wavelengths.
+This machine can reach very high resolutions in wavelengths, however it scans over each wavelengths %
+taking one measurement at the time and resulting in a slow process.
+%This process can be quite slow and the gain from the resolution is not so relevant.
+The Ocean HDX spectrometer does not have an intergrated UV source, %
+but the grating system refracts the light input on a linear CCD, recording the whole %
+electromagnetic spectrum simultaneously.
+The speed of the measurement with such a spectrometer is only limited by the integration time %
+and reading rate of the CCD.
+A set of consecutive traces is taken and the error on the measurement can also be estimated.
+On of the advantage of the Ocean HDX spectrometer is that it can reach a very high light throughput %
+thanks to a toroidal mirroring system which reduces stray light and maximises the dynamic range.
+We find that these are the deciding factors for our application of determining gadolinium concentration, %
+in addition to speed of the absorbance measurement.
+Wavelength resolution is not as important, because the relative position of the lines is sufficient %
+to identify them and so compute the absorbance.
+A UV-LED, with emission centered at 275\,nm, is used as an illuminating source.
+The profile is reported in \reffig{fig:gad_10cm}.
 
 \begin{figure}
 	\centering
-	\resizebox{0.8\linewidth}{!}{\input{pics/gad_10cm.tex}}
+	\includegraphics[width=0.5\linewidth]{pics/Device.pdf}
 	\caption{Gadolinium absorption lines.}
-	\label{fig:gad_10cm}
+	\label{fig:gad_1m}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\resizebox{0.6\linewidth}{!}{\input{pics/abs_example.tex}}
-	\caption{Gadolinium absorption lines.}
-	\label{fig:gad_10cm}
-\end{figure}
-
-
-The first concept of tracking gadolinium concentration in water using absorbance spectrum %
-was tested using a 1\,cm cell in a commercial spectrophotometer Shimadzu UV2600, %
-in which an initial sample of 0.2\,\% Gd water is diluited to obtain different concentration levels.
-The gadolinium loaded sample is compared to a pure water one to compute the absorbance spectrum.
-The result is...? And linear fit.
-The Shimadzu spectrophotometer uses a grating system to select very narrow windows of electromagnetic spectrum %
-both at the source and at the detection, which is done by a photomultiplier.
-The source at UV wavelengths is provided by a deuterium lamp, integrated in the spectrometer.
-The advantage of this technique is that very high resolution can be achieved, %
-but a scan wavelength per wavelength is done, taking one measurement at the time.
-This process can be quite slow and the gain from the resolution is not so relevant.
-We tested different model of other commercial spectrometers, without integrated source and %
-with a grating system such that the input light is spread out on a linear CCD.
-Doing so, the whole spectrum to which the spectroemter is sensitive to, is taken simultaneously.
-The measurement is then only limited to the reading speed rate of the spectrometer.
-A set of consecutive measurement can be taken and averaging them the error can also be estimated.
-After testing different models from different companies, we purchased an Ocean HDX spectrometer.
-The advantage of this spectrometer is a very high light throughput thanks to a toroidal mirroring system %
-which reduces stray light and maximises the input light.
-In addition to this, the sensor has a high dynamic range, which is the determing factor %
-on the absorbance measurement.
-Wavelength resolution is not as important, because we use the relative position of the gadolinium peaks %
-to determine the absorbance.
+In order to estimate the accuracy of the gadolinium concentration measurement, %
+we tested a prototype based on a 10\,cm cell starting with a 0.2\,\% Gadolinium sulfate concentration %
+which is diluted down to achieve lower concentrations.
+At each known value of concentration, the absorption is calculated by averaging one thousands spectra %
+taken with the Gd-loaded water and the pure water samples.
+In this way, the error on the abosorbance is defined as the standard error of the mean.
+Following \refeq{eq:linear_bl}, a linear interpolation is performed between the difference of the absorption peaks %
+$\Delta \mathcal{A}$ and the concentration $\rho_\text{Gb}$: 
+\begin{equation}
+	\Delta \mathcal{A} = a + b\,\rho_\text{Gd}\ .
+\end{equation}
+The relation above is then inverted, such that uncertainties from the absorbance measurement %
+can be propagated to the concentration value
+\begin{equation}
+	\rho_\text{Gd} = \frac{\Delta \mathcal{A} - a}{b}\ .
+\end{equation}
+The result of the fit is shown in \reffig{fig:gad_10cm}, from which a relative error of $\sim3$\,\% %
+is achieved on the concentration measurement of 0.2\,\%.
+According to \reffig{fig:gd_conc}, this uncertainty translated to a $\sim1$\,\% error on the neutron capture efficiency.
+This method based on a 10\,cm performs similarly to the AAS spectrometry employed in EGADS.
 
 \begin{figure}
 	\centering
@@ -881,16 +942,26 @@ to determine the absorbance.
 	\label{fig:gad_fit}
 \end{figure}
 
-The first prototype based on a 10 cm cell for 0.2$\%$ Gadolinium sulphate doping achieved %
-a $3\%$ concentration measurement resolution ($1\%$ neutron capture efficiency) %
-at the target concentration in comparison to the $3.5\%$ currently achieved via a manual mass spectrometer method.
-
-This device was intended for deployment in EGADS in Japan but the Gadolinium sulphate %
-concentration was changed to $0.02\%$ in preparation for Super-K phase 1 loading.
-Therefore work progressed to building the version 2 prototype of GAD for %
-sensitivity to $0.02\%$, by increasing the volume to $\approx 1$ meter.
-
-This prototype has been successfully built and tested and shown a concentration measurement %
-resolution of $1\%$ at both $0.02\%$ and $0.2\%$ doping.
+In the first stage of the gadolinium phase of Super-Kamiokande, a concentration of 0.02\,\$ gadolinium sulfate %
+will be loaded, and therefore sensitivity on this low value is also required.
+To achieve better sensitivities, a longer water sample can be used to increase absorbance by gadolinium.
+Thanks to the high light throughput of the Ocean HDX spectrometer, we developed a automated device %
+with a 100\,cm water cell which is remotely operated to circulate the water.
+At this scale, effects from optics, LED and spectrometer alignment, and water purity start becoming important.
+As it can be seen from \reffig{fig:gad_fit}, measurements of the absorption at different concentration levels %
+present a non-flat baseline that can bias the concentration estimation.
+We use a five-degree polynomial to fit the baseline and remove it, to keep the measurement consistent in time.
 
 
+\begin{figure}
+	\centering
+	\resizebox{0.9\textwidth}{!}{\input{pics/gad_1m.tex}}
+	\caption{The inverse linear fit (red) between concentration and absorption %
+		is shown togwther with data (blue) on the top panel for the 1,m water sample.
+		The absolute values of the errors is enlarged by a factor of 20.
+		The linear fit is done only with the six leftmost points.
+		The beahviour appears to be quadratic (green) than linear.
+		The relative error (bottom panel) is well below the 3\,\% limit, %
+		even for concentration of 0.02\,\%.}
+	\label{fig:gad_1m}
+\end{figure}
