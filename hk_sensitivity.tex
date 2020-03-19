@@ -6,36 +6,68 @@
 The Dirac Lagrangian is invariant under three fundamental transformation of the fermion fields, %
 and these are charge conjugation $\mathcal{C}$, parity $P$, and time reversal $T$.
 The spinor field $\psi$ and $\cj{\psi}$ transform under charge conjugation as
-\begin{align}
-	\psi(x) &\longmapsto \psi^C(x) = \xi_C\, \mathcal{C}\,\cj{\psi}^T (x) \\
-	\psi(x) &\longmapsto \cj{\psi^C}(x) = - \xi_C^*\,\psi^T (x)\,\mathcal{C}^\dagger\ ,
-\end{align}
-where $\xi_C$ is a unitary phase and $\mathcal{C}$ is the charge conjugation operator.
+\begin{equation}
+	\psi(x) \longmapsto \psi^C(x) = \xi_C\, \mathcal{C}\,\cj{\psi}^T (x) \quad , \quad
+	\psi(x) \longmapsto \cj{\psi^C}(x) = - \xi_C^*\,\psi^T (x)\,\mathcal{C}^\dagger\ ,
+\end{equation}
+where $\mathcal{C}$ is the charge conjugation operator and %
+since applying the charge conjugation twice returns the same initial field, %
+$\xi_C$ is a unitary phase, or $\abs{\xi_C}^2 = 1$. 
 The parity transformation, instead, inverts spatial coordinates and acts on spinor fields as
-\begin{align}
-	\psi(x) &\longmapsto \psi^P(x') = \xi_P\, \gamma^0 \,\psi(x) \\
-	\psi(x) &\longmapsto \cj{\psi^P}(x') = \xi_P^*\,\cj{\psi}(x)\,\gamma^0\ ,
-\end{align}
-where $\gamma^0$ is on of the Dirac matrices.
+\begin{equation}
+	\psi(x) \longmapsto \psi^P(x') = \xi_P\, \gamma^0 \,\psi(x) \quad , \quad
+	\psi(x) \longmapsto \cj{\psi^P}(x') = \xi_P^*\,\cj{\psi}(x)\,\gamma^0\ .
+\end{equation}
 With two two consecutive parity transformations the coordinate system is restored and therefore %
 the unitary phase $\xi_P$ is constrained to be $\pm1$ or $\pm i$.
-Vector currents $\cj{\psi}_a \gamma^\mu \psi_b$ and axial currents $\cj{\psi}_a \gamma^\mu \gamma^5 \psi_b$ %
-transforms oppositely under charge conjugation and spatial inversion, and therefore the $V-A$ structure %
+Vector and axial covariants, respectively $\cj{\psi}_a \gamma^\mu \psi_b$ and $\cj{\psi}_a \gamma^\mu \gamma^5 \psi_b$r, %
+transforms oppositely under charge conjugation and spatial inversion, unless $a = b$, and therefore the $V-A$ structure %
 of weak interactions (see \refeq{eq:currents_ccnc}) violates $\mathcal{C}$ and $\mathcal{P}$ individually.
 The combined transformation of charge conjugation and parity, reffered to as CP transformation, %
 is applied to the fields as
+\begin{equation}
+	\psi(x) \longmapsto \psi^{CP}(x) = -\xi_{CP}\, \mathcal{C}\,\psi^* (x) \quad , \quad
+	\psi(x) \longmapsto \cj{\psi^{CP}}(x) = - \xi_{CP}^*\,\psi^T (x)\,\mathcal{C}^\dagger \gamma^0\ ,
+\end{equation}
+where the CP phase $\xi_\text{CP}$ is also unitary.
+A CP transformation presents the same coefficient on vector and axial bilinear terms, %
+and so $V-A$ Lagrangian terms are invariant under CP.
+The weak interactions of the SM is CP--symmetric if the phase of the $W$ boson is chosen accordingly.
+In the case of the generation mixing, the invariance in the quark sector is obtained when
+\begin{equation}
+	j^\mu_\text{CC, Q} W_\mu \mapsto \qty(j^\mu_\text{CC, Q} W_\mu)^\dagger \quad %
+	\Leftrightarrow \quad %
+	- \xi^W \bs{\xi}_D V^T \bs{\xi}_U^\dagger = V^\dagger\ ,
+\end{equation}
+where we have promoted the CP phases for quarks into diagonal matrices $\bs{\xi}_{D, U}$, %
+and $V$ is the CKM matrix.
+The Lagrangian must be a real scalar, hence by conjugating the conditions in the equation above %
+it follows that $\bs{\xi}_{D, U}^\dagger = \bs{\xi}_{D, U}^{-1}$ and that the diagonal matrices %
+are unitary, or
+\begin{equation}
+	\bs{\xi}_{D,U} = e^{i \xi_{\delta,\upsilon}}\ ,
+\end{equation}
+where the indeces $\delta$ and $\upsilon$ refer respectively to down and up quarks.
+The condition for CP invariance now becomes that
+\begin{equation}
+	e^{i \xi_\upsilon}\, V_{\upsilon \delta} e^{-i \xi_\delta} = V_{\upsilon \delta}^*\ .
+\end{equation}
+This condition cannot be satisfied with an arbitrary choice of the CP phases for the quark fields %
+if the mixing matrix is not real, or $V = V^*$.
 
-The violation of the CP--symmetry is a well-known process in the quark sector of the standard model (SM).
+We have seen that if the mixing matrix presents a non-zero complex phase, %
+the quark charged-current weak interactions break the CP symmetry of the SM Lagrangian.
+The violation of CP is indeed a well-known process in the quark sector of the standard model.
 It has been extensively observed~\cite{Christenson:1964fg,Aubert:2001sp, Abe:2001xe, Aaij:2013iua, Aaij:2019kcg}, %
 giving clear evidence that the Cabibbo-Kobayashi-Maskawa (CKM) matrix is complex.
 The CKM matrix arises from mixing of quarks in charged-current interactions (see \refeq{eq:real_quark_cc}), %
 when describing the fermion fields in the mass basis.
 It is a generic $N \times N$ unitary matrix, where $N$ is the number of fermion generations.
 The $N^2$ independent real parameters which describe the matrix are typically categorised into 
-\begin{align*}
-	\frac{N(N-1)}{2} &\quad \text{mixing angles} \\
-	\frac{N(N+1)}{2} &\quad \text{phases}\ ,
-\end{align*}
+\begin{equation*}
+	\frac{N(N-1)}{2} \quad \text{mixing angles and} \quad
+	\frac{N(N+1)}{2} \quad \text{phases}\ ,
+\end{equation*}
 even though, not all the phases are observables, or give physical effects.
 Excluding the CC term, the SM Lagrangian is invariant under a global phase transformation %
 of the quark fields, such as
@@ -111,7 +143,7 @@ The probability of flavour oscillation in vacuum is hence computed as
 \end{equation}
 where $\mathcal{H}$ is the Hamiltonian, $t \simeq L$ and $\Delta m^2_{ij} = m_i^2 - m_j^2$, %
 and it depends on the physical angles and phases of the PMNS matrix, %
-with the exception of the Majorana phases $\gamma_{1,2}$.
+with the exception of the Majorana phases.
 The~\mbox{CP--con}\-jugate of a neutrino with negative helicity is an antineutrino with positive helicity, %
 which, in terms of neutrino oscillations, means transforming the $\nu_\alpha \to \nu_\beta$ oscillation channel %
 into the $\cj{\nu}_\alpha \to \cj{\nu}_\beta$ channel.
@@ -218,15 +250,6 @@ and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron den
 	\label{fig:baseball}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.6\linewidth]{pics/HKDRcpSens.png}
-	\caption{Expected significance to exclude CP conservation, %
-		in case of normal hierarchy, where the mass hierarchy is assumed to %
-		be known~\cite{Abe:2018uyc}.}
-	\label{fig:hkdr}
-\end{figure}
-
 Given the parametrisation in Eq.~\ref{eq:pmns}, %
 this asymmetry is not measurable if the phase is trivial, \ie~$\delta_\text{CP} = 0$~or~$\pm \pi$, %
 or if $\theta_{13}$ is vanishing.
@@ -242,8 +265,14 @@ and for this reason it is expected that on-going and future generation neutrino 
 will also constrain the value of $\delta_\text{CP}$.
 
 
-
 \section{Hyper-Kamiokande experiment}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{pics/hkonlytank.png}
+	\caption{Cut-view of the Hyper-Kamiokande experiment.}
+	\label{fig:hkdr}
+\end{figure}
 
 Hyper-Kamiokande (HK)~\cite{Abe:2018uyc} will be the next-generation water Cherenkov detector, %
 superseding its predecessor, Super-Kamiokande (SK).
@@ -289,9 +318,8 @@ $\nu_\mu \to \nu_e$ and $\cj{\nu}_\mu \to \cj{\nu}_e$ %
 are respectively \np{1643} and \np{15} in $\nu$ mode and \np{206} and \np{1183} in $\cj{\nu}$ mode, %
 assuming CP conservation.
 Deviations from these expected numbers could be indication of CP violation.
-A preliminary study for the HK design report~\cite{Abe:2018uyc}, using a different analysis, %
-estimated a significance well-above $5\,\sigma$ after ten years of data taking, as can be seen in Fig.~\ref{fig:hkdr}.
-
+%A preliminary study for the HK design report~\cite{Abe:2018uyc}, using a different analysis, %
+%estimated a significance well-above $5\,\sigma$ after ten years of data taking, as can be seen in Fig.~\ref{fig:hkdr}.
 The project has been recentely approved by japanese goverment and data taking is expected commencing by 2027.
 
 The uncertainty of the Earth’s density between Tokai and Kamioka is estimated to be at most 6\% [181].
@@ -543,7 +571,7 @@ defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ vari
 The amount of change is therefore parametrised by $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
 However, being $\rho$ the correlation matrix, the $\varepsilon_j$ are promoted to embody the systematic uncertainties.
 Once defined the observed sample, the oscillation parameters $\vartheta$ are scanned over the oscillation %
-space defined in \reftab{tab:osc_space} and the $\chi^2$ is then profiled it with respect to the parameters $\vec\varepsilon$:
+space defined in \reftab{tab:osc_space} and the $\chi^2$ is then profiled it with respect to the parameters $\uj{\varepsilon}$:
 \begin{equation}
 	\label{eq:chi2_min}
 	\chi^2(\vartheta) = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\vartheta;\uj{\varepsilon})\,]\ ,
@@ -562,13 +590,31 @@ This gives a linear system, which can be iterated until sufficient precision is 
 	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
 \end{equation}
 with $(n)$ the iteration index.
+The Gauss-Newton's algorithm can sometimes be unstable, especially with a large number of parameters, %
+due to its fast convergence.
+The algorithm is typically improved by adopting the Lavenberg-Marquardt method~\cite{Levenberg_1944, Marquardt_1963} %
+which modifies the Hessian in the following way
+\begin{equation}
+	\qty[\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
+	+ \lambda \max \qty(\text{diag} \pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j}) \mathbb{1}]
+	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
+	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
+\end{equation}
+where $\lambda$ is a parameter chosen dynamically: if the cost function $\chi^2$ decreases %
+after an iteratio nstep, then $\lambda$ is reduced; otherwise $\lambda$ is increased and the step re-computed.
+In the limit $\lambda \to 0$, the algorithm approximates the Gauss-Newton's method and its fast convergence.
+When $\lambda$ is large, the linear system resembles a gradient descent with small steps of the order of $\lambda^{-1}$, %
+but a more stable convergence.
+We adopt a ``delayed-gratification scheme'' for $\lambda$~\cite{Transtrum2012}, using an inital value of $\lambda^{(0)} = 1$ and finding %
+an optimal increment and decrement of respectively $\lambda^{(n+1)} = 5\,\lambda^{(n)}$ and $\lambda^{(n+1)} = \lambda^{(n)} / 10$.
+
 To account for future constraints from other experiments, a gaussian penalty terms is added %
 to the minimised value of $\chi^2$ from \refeq{eq:chi2_min}
 \begin{equation}
 	\chi^2_\text{penalty} = \frac{(\vartheta - \hat{\vartheta})^2}{\sigma_\vartheta^2}\ .
 \end{equation}
 The current constraint applied comes from the measurement of $\theta_{13}$ by future reactor experiments, %
-that are predicted to achieve $\sin^2 2\theta_{13} = 0.085 \pm 0.005$.
+that are predicted to achieve $\sigma(\sin^2 2\theta_{13}) = 0.005$.
 
 For most of the systematic parameters, a linear response is assumed in the~MC.
 This means that varying of the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$, %
