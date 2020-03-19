@@ -2,24 +2,21 @@
 \chapter{Neutrino mass generation}
 \label{cha:neutrino_mass}
 
-[check PDG http://pdg.lbl.gov/2019/reviews/rpp2019-rev-neutrino-mixing.pdf]
-
-\section{Introduction}
-\label{sec:introduction}
+%[check PDG http://pdg.lbl.gov/2019/reviews/rpp2019-rev-neutrino-mixing.pdf]
 
 The evidence for three neutrino flavour oscillation is well established~\cite{Fukuda:1998mi,Aharmim:2005gt} %
-and can be accounted for only if neutrino mass splittings are non zero~\cite{nufit}.
+and can be accounted for only if neutrino mass splittings are non zero~\cite{Esteban:2018azc}.
 This implies that neutrinos are massive and mix, forcing to consider extensions %
 of the Standard Model (SM) to explain their origin. 
 A simple means of doing so is to introduce the right-handed counterpart of SM neutrinos, which are %
 singlet with respect to all SM gauge symmetries.
 The Lagrangian includes a Yukawa coupling between these sterile states, the Higgs boson and the leptonic doublet, %
-which generates Dirac mass-terms below the scale of Electroweak Symmetry Breaking (EWSB), 
+which generates Dirac mass-terms below the scale of EW symmetry breaking, 
 and Majorana mass terms for the new singlet states.
 On diagonalisation of the resulting neutrino mass matrix, the heavy neutrino states, %
 commonly known as nearly-sterile neutrinos or Heavy Neutral Leptons (HNLs) in experimental contexts, %
 remain mainly in the sterile neutrino direction and have sub-weak interactions suppressed by %
-elements of the extended Pontecorvo-Maki-Nakagawa-Sakata (PMNS) mixing matrix. 
+elements of the extended PMNS mixing matrix. 
 
 These states have been connected to a vast range of phenomenological behaviours and %
 even to cosmological implications (for a recent review on sterile neutrinos, see \eg \refref{Abazajian:2012ys}).
@@ -64,8 +61,7 @@ in narrow ranges of HNLs masses~\cite{Atre:2009rg}.
 %
 %
 The tightest constraints come from searches for the direct production and subsequent decays of heavy neutrinos %
-in \emph{beam dump} experiments and at colliders.
-%
+in \emph{beam dump} experiments (see \refsec{cha:beamdump}) and at colliders.
 The strongest limits were set by the PS191 experiment~\cite{Bernardi:1985ny, Bernardi:1987ek}, %
 a beam dump experiment which ran at CERN in 1984.
 Its most stringent upper bounds on the novel mixing angles are \mbox{$|U_{e4}|^2, |U_{\mu4}|^2 \leq \np{e-8} \text{\,--\,} \np{e-9}$} %
@@ -91,31 +87,9 @@ as well as collider ones, from LHCb~\cite{Aaij:2014aba}, ATLAS~\cite{Aaboud:2018
 %in~\cite{Atre:2009rg, Drewes:2015iva}.
 %
 
-It is exciting to note that current and upcoming neutrino oscillation
-experiments will be able to perform beam dump style measurements \cite{Kusenko:2004qc, Asaka:2012bb, Abe:2019kgx}. 
-%
-A crucial difference between oscillation detectors and dedicated beam dump searches of the past is that %
-the former tries to maximise its Standard Model neutrino scattering rate, while the latter goes to lengths %
-to suppress it in order to reduce backgrounds.
-%
-However, for some of the current and future accelerator neutrino experiments, %
-such as the Short Baseline Neutrino (SBN) program~\cite{Antonello:2015lea}, %
-the strong particle reconstruction capabilities of Liquid Argon detectors and distinctive kinematics %
-of neutrino decays have been shown to allow competitive bounds on heavy neutrinos %
-to be made despite naively large backgrounds \cite{Ballett:2016opr}. 
-%
-Long baseline oscillation experiments, such as the upcoming Deep Underground Neutrino Experiment (DUNE)~\cite{Abi:2018dnh}, %
-will see a greatly diluted flux of nearly-sterile neutrinos at their far detectors and consequently poor sensitivity.
-However, the DUNE Near Detector (DUNE ND), placed \np{574}\,m from the target, has a great potential %
-for searches for new physics~\cite{Adams:2013qkq}.
-Even if the final design of the ND has not been confirmed as yet, the options being considered combine a large active volume, %
-in close proximity to a very intense neutrino beam and cutting-edge event reconstruction capabilities.
-These will allow DUNE ND to undertake valuable searches for BSM physics in a entirely complementary way %
-to the central oscillation physics programme. 
 
 
-
-In this article, we present a detailed analysis of the sensitivity of DUNE ND to HNL in beam dump style searches.
+In this chapter, we present a detailed analysis of the sensitivity of DUNE ND to HNL in beam dump style searches.
 We ground our discussion in theoretically consistent models, in which sterile neutrinos %
 are associated with neutrino mass generation via a low-scale seesaw mechanism.
 We extend and refine previous analysis~\cite{Krasnov:2019kdc, Adams:2013qkq}, %
@@ -138,21 +112,23 @@ We show that bounds can be put also on the mixing with tau neutrinos, thanks to 
 %our predictions from DUNE can be correlated with constraints from other experiments such as searches for LNV and NSIs/non-unitarity. 
 %
 
-The article is organised as follows.
-In \refsec{sec:model} we discuss neutrino mass generation and its consequences for heavy neutrinos in the mass range of interest.
-%%%% SWAP %%%%
-%%original%%
-%In \refsec{sec:production} and \refsec{sec:decay}, we present the sterile neutrino production and decay rates accounting for both
-%%new vers%%
-In \refsec{sec:decay} and \refsec{sec:production}, we present the nearly-sterile neutrino decay and production rates accounting for both %
-Majorana/(pseudo-)Dirac states and fully incorporating helicity effects and distributional information about the final-state observables. 
-In \refsec{sec:experiment}, we turn to DUNE~ND, describing our assumptions about the experimental apparatus, %
-our neutrino flux modelling, including a $\nu_\tau/\cj{\nu}_\tau$ simulation, %
-the expected signal and the impact of backgrounds.
-%
-In \refsec{sec:results}, we quantify the sensitivity of DUNE ND to decays of heavy neutrino and, %
-in \refsec{sec:combined}, its ability to constrain the parameter space of low-scale seesaw models.
-Our concluding remarks are made in \refsec{sec:conclusions}.
+%The article is organised as follows.
+%In \refsec{sec:model} we discuss neutrino mass generation and its consequences for heavy neutrinos in the mass range of interest.
+%%%%% SWAP %%%%
+%%%original%%
+%%In \refsec{sec:production} and \refsec{sec:decay}, we present the sterile neutrino production and decay rates accounting for both
+%%%new vers%%
+%In \refsec{sec:decay} and \refsec{sec:production}, we present the nearly-sterile neutrino decay and production rates accounting for both %
+%Majorana/(pseudo-)Dirac states and fully incorporating helicity effects and distributional information about the final-state observables. 
+%In \refsec{sec:experiment}, we turn to DUNE~ND, describing our assumptions about the experimental apparatus, %
+%our neutrino flux modelling, including a $\nu_\tau/\cj{\nu}_\tau$ simulation, %
+%the expected signal and the impact of backgrounds.
+%%
+%In \refsec{sec:results}, we quantify the sensitivity of DUNE ND to decays of heavy neutrino and, %
+%in \refsec{sec:combined}, its ability to constrain the parameter space of low-scale seesaw models.
+%Our concluding remarks are made in \refsec{sec:conclusions}.
+
+
 \section{Heavy neutrinos in seesaw models}
 \label{sec:model}
 
@@ -287,8 +263,36 @@ We disregard lepton number violating effects and therefore the distinction betwe
 Feynman rules for Majorana states derived from \refeq{eq:model} can be found in~\cite{Atre:2009rg},
 or constructed using the techniques of \refref{Denner:1992me}. 
 For an explicit comparison between Dirac versus Majorana Feynman rules for heavy neutrinos, see~\refref{Abada:2016plb}.
-\section{Heavy neutrino decay}
+
+\section{Majorana neutrino decay}
 \label{sec:decay}
+
+
+\begin{figure}
+	\centering
+	\begin{fmffile}{twobody}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{N}
+			\fmfright{o3,o2,o1}
+			\fmf{fermion}{N,v1,o3}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmf{photon, label=$W^\pm$}{v1,v2}
+			\fmflabel{$N$}{N}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\hfill
+	\begin{fmffile}{threebody}
+		\begin{fmfgraph*}(80,50)
+			\fmfleft{N}
+			\fmfright{o3,o2,o1}
+			\fmf{fermion}{N,v1,o3}
+			\fmf{photon}{v1,v2}
+			\fmf{fermion}{o1,v2,o2}
+			\fmf{photon, label=$W^\pm$}{v1,v2}
+		\end{fmfgraph*}
+	\end{fmffile}
+\end{figure}
 
 In this section we compute the heavy neutrino decay rates and polarised %
 distributions necessary for the simulation of beam dump searches.
@@ -432,14 +436,10 @@ FeynCalc~\cite{Shtabovenko:2016sxi,Mertig:1990an}.
 	\label{fig:branch}
 \end{figure}
 
-\subsection{Polarised Majorana neutrino decay}
-
 Although spin-averaged Majorana neutrino decay rates are well known in the literature~\cite{Atre:2009rg,Gorbunov:2007ak,Helo:2010cw} %
 (see also Ref.~\cite{Bondarenko:2018ptm}), to the best of our knowledge the polarised rates are not.
 These are necessary to correctly describe the distributions of observables in a beam dump experiment, %
 and in this section we present formulae for these differential decay rates. 
-
-\newpage
 Note that we stay agnostic as to the final nature and flavours of outgoing %
 neutrinos, and in all cases sum over any possible outgoing states to define a %
 semi-inclusive decay rate into the visible particle(s) $X'$, \ie 
@@ -468,7 +468,7 @@ We also find that the distribution of events, the role of helicity and the heavy
 In contrast, by summing over all outgoing states, our formulae are insensitive to the Majorana/Dirac nature of the light neutrinos, %
 and are the physically relevant rates necessary for comparison with beam dump experiments, as outgoing neutrinos are not reconstructed.
 
-\subsubsection{Pseudoscalar mesons}
+\subsection{Pseudoscalar mesons}
 \label{sec:pseudoscalar}
 
 The semi-leptonic meson decays are some of the most important channels identified in previous studies~\cite{Atre:2009rg, %
@@ -554,7 +554,7 @@ but above $\eta$ and $\eta'$ can be allowed in the final state.
 %Above this limit, the channels with an $\eta$ or an $\eta'$ in the final state become allowed.
 %The majority of neutral pseudoscalar mesons decay electromagnetically into two photons or multi-pion final states. 
 
-\subsubsection{Vector mesons}
+\subsection{Vector mesons}
 
 Although only for higher masses, HNL can also decay into vector mesons $V$, %
 both via charged current, $N \to \ell^\mp V^\pm$, and neutral current, $N \to \nu V^0$.
@@ -613,12 +613,15 @@ For these neutral particles, the $\kappa_V$ factors read
 %Vector mesons usually into a multi-state of pseudoscalar mesons, depending on the initial flavour content,
 %sometimes accompanied by photon emission making their reconstruction challenging from an experimental point of view.
 
-\subsubsection{Charged lepton pairs}
+\subsection{Charged lepton pairs}
+
+%%INSERT FIGURE HERE
 
 %The differential decay rates for these modes are more complicated to write
 %down, but we give compact formulae for these channels in
 %App.~\ref{app:threebody_dist}. 
 %
+
 We assign the momenta to the particles in the three-body decay as follows
 %
 \[
@@ -701,7 +704,7 @@ and correct a typographical mistake in the rates presented in \refref{Ballett:20
 All possible combinations of charged leptons except $\nu \tau^- \tau^+$ are allowed for masses below~$m_{D_s}$.
 However, because of the limited phase space, the decays into $\nu \tau^\mp e^\pm$ and $\nu \tau^\mp \mu^\pm$ can be neglected.	
 
-\subsubsection{Other decays}
+\subsection{Other decays}
 
 There are some other decay rates relevant to this study but not as viable observable channels.
 First, the total decay width of the process $N \to \nu \bar{\nu} \nu$, mediated by the $Z$ boson, reads
@@ -728,7 +731,50 @@ In the mass models considered in this work, it has a branching ratio of below $1
 We also neglect the multi-pion decay modes discussed in \refref{Bondarenko:2018ptm}, %
 which are estimated to have at most a percent level branching ratio and a challenging hadronic final state for reconstruction. 
 
-\subsection{Polarised (pseudo-)Dirac neutrino decay}
+\section{Pseudo-Dirac neutrino decay}
+
+A pseudo-Dirac particle or anti-particle are coherent superpositions of paired Majorana mass eigenstates, 
+\[
+	N_\text{P} = U_{s 4}\nu_4 + U_{s 5}\nu_5 \qquad\text{and}\qquad %
+	\cj{N}_\text{P} = U^*_{s 4}\nu_4 + U^*_{s 5}\nu_5\ .
+\]
+Thanks to this decomposition, the decay rate calculation can be recovered from the treatment of a pure Majorana state %
+by summing coherently over the constituent Majorana contributions.
+In a true Dirac pair, the two components have identical masses and PMNS matrix elements, %
+which obey $U_{\alpha 4} = \pm i U_{\alpha 5}$.
+On coherent summation, this leads to perfect cancellation in any LNV process.
+For a pseudo-Dirac particle, the constituent states have both a mass difference and mixing angles %
+usually proportional to the LNV parameters introduced in \refeq{eq:lagrangian_LNV}, %
+therefore of slightly different magnitudes.
+This leads to an imperfect cancellation in LNV modes.
+
+For a pseudo-Dirac particle the LNV decays are present, but subdominant compared to pure Majorana states.
+Expanding in the mass splitting $\Delta m = m_4-m_5$ and difference in PMNS matrix elements %
+$|\Delta U|^2 \equiv U_{\alpha 4}^2 + U_{\alpha 5}^2 = |U_{\alpha 4}|^2 - |U_{\alpha 5}|^2$ ,
+the leading order decay rates of a pseudo-Dirac state $N_\text{P}$ into a charged pseudoscalar is:
+%
+\begin{align}
+	\Gamma_\pm \qty(N_P \to \ell_\alpha^- P^+) &= %
+	|U|^2 |V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2 m_N^3}{16\pi} I^\pm_1 (\xi^2_\alpha, \xi^2_P)\ ,\\
+	\Gamma_\pm \qty(N_P \to \ell_\alpha^+ P^-) &= %
+	|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2m_N^3}{16\pi} \bigg[|\Delta U|^2I^\mp_1 (\xi^2_\alpha, \xi^2_P)\ + \\
+	&\hphantom{|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2m_N^3}{16\pi}} %
+	\qquad \frac{\Delta m}{2m_N}|U|^2(1-\xi^2_\alpha)(3+\xi^2_\alpha - \xi^2_P)\bigg]\ . \notag
+\end{align}
+%
+where $|U|^2 \equiv |U_{\alpha 4}|^2+|U_{\alpha 5}|^2$ is the equivalent mixing
+angle expected for a pure Dirac state.
+%
+The contributions to the subdominant rate are suppressed by either the mass %
+splitting or the difference in mixing angles, both of which are governed by the %
+small LNV parameter in a low-scale seesaw models.
+Although present, it seems unlikely that such subdominant channels would be of experimental relevance in %
+the near future as they are always accompanied by dominant decay modes with oppositely-charged final states.
+However, if evidence for a sterile neutrino is found, and significant statistics collected, this could in principle provide %
+evidence of the Majorana or pseudo-Dirac nature of a sterile.
+Moreover, it would allow the measurement of the small LNV parameter behind the model, %
+which should correlate with the scale of light-neutrino masses, %
+providing an important test of the relationship between the novel particle and neutrino mass generation.
 
 In this section we compute the decay rates for pseudo-Dirac pairs.
 It is unlikely that any effect driven by the LNV parameter will be relevant for the discovery potential of DUNE ND %
@@ -850,6 +896,7 @@ to the equivalent Majorana process; however, the major difference we see between
 is that these NC channels are dependent on the angular variables.
 These differences in the distributions of the final state particles could be in principle exploited to identify %
 the fermionic nature of the decaying HNL~\cite{Balantekin:2018ukw}.
+
 \section{Heavy neutrino production}
 \label{sec:production}
 
@@ -1106,3 +1153,4 @@ however this channel is introduced only at the phase space level.
 The scale factors for the two helicity components are therefore assumed to be identical, %
 $\mathcal{K}_\pm = \smash[b]{\frac{1}{2}}$, such that the neutrino flux sub-component coming from this decay %
 consists of equal number of heavy neutrinos with helicity $h=+1$ and $h=-1$.
+

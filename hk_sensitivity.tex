@@ -3,31 +3,33 @@
 \label{cha:cp_hk}
 %\chapter{Hyper-Kamiokande sensitivity to $\delta_\text{CP}$}
 
-The violation of the CP--symmetry is a well-known process in the quark sector of the standard model (SM),
+The Dirac Lagrangian is invariant under three fundamental transformation of the fermion fields, %
+and these are charge conjugation $\mathcal{C}$, parity $P$, and time reversal $T$.
+The spinor field $\psi$ and $\cj{\psi}$ transform under charge conjugation as
+\begin{align}
+	\psi(x) &\longmapsto \psi^C(x) = \xi_C\, \mathcal{C}\,\cj{\psi}^T (x) \\
+	\psi(x) &\longmapsto \cj{\psi^C}(x) = - \xi_C^*\,\psi^T (x)\,\mathcal{C}^\dagger\ ,
+\end{align}
+where $\xi_C$ is a unitary phase and $\mathcal{C}$ is the charge conjugation operator.
+The parity transformation, instead, inverts spatial coordinates and acts on spinor fields as
+\begin{align}
+	\psi(x) &\longmapsto \psi^P(x') = \xi_P\, \gamma^0 \,\psi(x) \\
+	\psi(x) &\longmapsto \cj{\psi^P}(x') = \xi_P^*\,\cj{\psi}(x)\,\gamma^0\ ,
+\end{align}
+where $\gamma^0$ is on of the Dirac matrices.
+With two two consecutive parity transformations the coordinate system is restored and therefore %
+the unitary phase $\xi_P$ is constrained to be $\pm1$ or $\pm i$.
+Vector currents $\cj{\psi}_a \gamma^\mu \psi_b$ and axial currents $\cj{\psi}_a \gamma^\mu \gamma^5 \psi_b$ %
+transforms oppositely under charge conjugation and spatial inversion, and therefore the $V-A$ structure %
+of weak interactions (see \refeq{eq:currents_ccnc}) violates $\mathcal{C}$ and $\mathcal{P}$ individually.
+The combined transformation of charge conjugation and parity, reffered to as CP transformation, %
+is applied to the fields as
 
-[explain what CP transoformation on a field is]
-
-C and CP violation are some of the conditions required in order to generate %
-an asymmetry between matter and antimatter particles, together with %
-baryon number violation and interactions out of thermal equilibrium~\cite{Sakharov:1967dj}.
-%The observed baryon asymmetry in our Universe amounts to~\cite{Tanabashi:2018oca, Aghanim:2018eyx}
-%\begin{equation*}
-%	\eta = \frac{n_{B}}{n_\gamma}\quad,\quad \np{5.8e-10} \leq \eta \leq \np{6.6e-10}\quad\text{at}\ 95\% \text{C.L.}
-%\end{equation*}
-The amount of CP violation in the quark sector is not enough %
-to describe the observed baryon asymmetry within the SM.
-An asymmetry in the lepton sector, however, could be translated into baryogenesis, %
-via non-perturbative sphaleronic processes~\cite{Fukugita:1986hr}.
-This process, called \emph{leptogenesis}, would be allowed by the addition of %
-right-handed Majorana neutrinos to the SM, which can violate lepton number.
-This elegant solution to explain the baryon asymmetry is a strong motivation %
-for searches of signals of CP violation in the lepton~sector.
-
+The violation of the CP--symmetry is a well-known process in the quark sector of the standard model (SM).
 It has been extensively observed~\cite{Christenson:1964fg,Aubert:2001sp, Abe:2001xe, Aaij:2013iua, Aaij:2019kcg}, %
 giving clear evidence that the Cabibbo-Kobayashi-Maskawa (CKM) matrix is complex.
 The CKM matrix arises from mixing of quarks in charged-current interactions (see \refeq{eq:real_quark_cc}), %
 when describing the fermion fields in the mass basis.
-
 It is a generic $N \times N$ unitary matrix, where $N$ is the number of fermion generations.
 The $N^2$ independent real parameters which describe the matrix are typically categorised into 
 \begin{align*}
@@ -66,11 +68,25 @@ The complex phase is responsible for CP violation.
 From a model building point of view, the complex phase may arise from complex Yukawa couplings %
 and/or from a relative CP-violating phase in the vacuum expectation values of Higgs fields.
 
+C and CP violation are some of the conditions required in order to generate %
+an asymmetry between matter and antimatter particles, together with %
+baryon number violation and interactions out of thermal equilibrium~\cite{Sakharov:1967dj}.
+%The observed baryon asymmetry in our Universe amounts to~\cite{Tanabashi:2018oca, Aghanim:2018eyx}
+%\begin{equation*}
+%	\eta = \frac{n_{B}}{n_\gamma}\quad,\quad \np{5.8e-10} \leq \eta \leq \np{6.6e-10}\quad\text{at}\ 95\% \text{C.L.}
+%\end{equation*}
+The amount of CP violation in the quark sector is not enough %
+to describe the observed baryon asymmetry within the SM.
+An asymmetry in the lepton sector, however, could be translated into baryogenesis, %
+via non-perturbative sphaleronic processes~\cite{Fukugita:1986hr}.
+This process, called \emph{leptogenesis}, would be allowed by the addition of %
+right-handed Majorana neutrinos to the SM, which can violate lepton number.
+This elegant solution to explain the baryon asymmetry is a strong motivation %
+for searches of signals of CP violation in the lepton~sector.
 As three generations exist also in the lepton sector, %
 an entirely analogous phase is expected in mixing matrix of lepton mass.
 The~best probe to discovery CP violation is neutrino oscillation, being a purely weak process in which %
-\mbox{CP--con}\-ju\-gate processes can be easily studied.
-
+CP--conjugate processes can be easily studied.
 CP violation in the leptonic sector is plausible and it is also a necessary ingredient for leptogenesis.
 Neutrino oscillation experiments can lead to the discovery of CP violation, and it is %
 foreseen that HK will determine the value of~$\delta_\text{CP}$, %
@@ -166,6 +182,9 @@ This is easily understandable, as the limit dictated by \refeq{eq:hierarchy} cor
 two-flavour oscillation.
 However, the oscillation probabilities of neutrinos and antineutrinos in matter are not the same, %
 because the medium is not CP-invariant and it induces CP violation in the oscillation probabilities.
+The effect of the CP--violating phase on the asymmetry of Eq.~\ref{eq:asymmetry} can be %
+appreciated from the plot in Fig.~\ref{fig:baseball}.
+
 \iffalse
 \begin{align}
 	P(&\nu_\mu \to \nu_e) = %
@@ -183,25 +202,30 @@ where $s_{ij} = \sin \theta_{ij}$, $c_{ij} = \cos\theta_{ij}$,
 and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron density of the medium.
 \fi
 
-The effect of the CP--violating phase on the asymmetry of Eq.~\ref{eq:asymmetry} can be appreciated from the plot in Fig.~\ref{fig:mass}.
 
 \begin{figure}
-	\begin{minipage}[t]{0.44\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{pics/CPsensitivityHKDR.pdf}
-		\captionof{figure}{Effect of $\delta_\text{CP}$ on the normalised asym\-metry from Eq.~\ref{eq:asymmetry}.}
-		\label{fig:mass}
-	\end{minipage}
+	\centering
+	\resizebox{0.45\linewidth}{!}{\input{pics/base_ball.tex}}
 	\hfill
-	\begin{minipage}[t]{0.52\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{pics/HKDRcpSens.png}
-		\captionof{figure}{Expected significance to exclude CP conservation, %
-			in case of normal hierarchy, where the mass hierarchy is assumed to be known~\cite{Abe:2018uyc}.}
-		\label{fig:hkdr}
-	\end{minipage}
+	\raisebox{2em}{\resizebox{0.50\linewidth}{!}{\input{pics/norm_asymm.tex}}}
+	\caption{Effect of $\delta_\text{CP}$ on the oscillation probability.
+		The oscillation probabilities for neutrinos and antineutrinos are plotted %
+		against each other (left), while the CP phase is varied between $-\pi$ and $\pi$.
+		The effect of $\sin^2\theta_{23}$ is also emphasised.
+		The mass hierarchy has a non-negligible behaviour only if matter oscillation is %
+		considered.
+		The normalised asymmetry from Eq.~\ref{eq:asymmetry} is shown on the right.}
+	\label{fig:baseball}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/HKDRcpSens.png}
+	\caption{Expected significance to exclude CP conservation, %
+		in case of normal hierarchy, where the mass hierarchy is assumed to %
+		be known~\cite{Abe:2018uyc}.}
+	\label{fig:hkdr}
+\end{figure}
 
 Given the parametrisation in Eq.~\ref{eq:pmns}, %
 this asymmetry is not measurable if the phase is trivial, \ie~$\delta_\text{CP} = 0$~or~$\pm \pi$, %
@@ -395,23 +419,42 @@ In addition, there are 45 systematics from SK detector efficiencies and Final St
 which parameterise the uncertainties on the four final state interaction types %
 at the far detector: %
 1 ring $e$-like and 1 ring $\mu$-like in both $\nu$ and $\cj{\nu}$ modes.
-One systematic is adopted to describe the energy scale uncertainty at the far detector.
 
-The momentum reconstruction of neutrino event is mainly based on the charge observed
-by the PMTs in the tank. The factors discussed above, including water property or
-PMT gain will affect the performance of momentum reconstruction. On the other hand,
-the precise momentum determination of the neutrino event is necessary for the neutrino
-oscillation analysis since the oscillation probability is highly related to the energy of
-neutrinos. Four well-known independent control samples are used for the energy scale
-calibration [6] and systematic evaluation in different momentum range:
-Track length of high energy stopping muons (1 -- 10 GeV/c)
-Cherenkov angle of low energy stopping muons (200 -- 500 MeV/c)
-Invariant mass of $\pi^0$ produced by neutrino interactions (-- 130 MeV/c)
-Momentum distribution of decay electron (-- 40MeV/c).
+One systematic is adopted to describe the energy scale uncertainty at the far detector.
+The reconstruction of the momenta in a neutrino event is mainly based on the charge collected by the PMTs, %
+and therefore the resolution is limited by water quality and PMT gain.
+A precise momentum determination of the incoming neutrino is a necessary requirement for oscillation analysis.
+The calibration of the energy scale of SK is performed using four well-known independent control samples~\cite{Abe:2017aap}.
+%from 1\,GeV to 10\,GeV by high energy stopping muons; from 200\,MeV to 500\,MeV by low energy stopping muons;
+%around 130\,MeV by neutral pions from neutrino interactions; %
+%around 40\,MeV from decay electrons.
+Since the energy loss $\dv*{E}{x}$ is approximately constant, %
+the ratio between reconstructed momentum and track length of high energy stopping muon  %
+is used to regulate the energy scale for energes in the range 1--10\,GeV.
+The track is estimated from the entering position of the muon and the vertex of the detected Michel electron, %
+both of which are assumed to be independent on the reconstruction mehtod.
+The momentum of low-energy stopping muons with energies from 200\,MeV to 500\,MeV are estimated by determining the %
+Cherenkov angle using \refeqs{eq:cherenkov_threshold}{eq:cherenkov_angle}; %
+only events with a clear Cherenkov ring and optimal reconstruction are selected, %
+and the purity of the sample is improved by requiring the detection of the decay electron in the fiducial volume.
+The single neutral pions produced in NC interactions of atmospheric neutrinos are reconstructed %
+by looking at the invariant mass of the final state photons
+\begin{equation}
+	m_{\pi^0}^2 = 2\,p_{\gamma_1}\,p_{\gamma_2} (1-\cos\theta)\ ,
+\end{equation}
+with $\theta$ the opening angle between $\gamma_1$ and $\gamma_2$.
+The error of the energy scale at around 130\,MeV comes from comparing the peak positions of $m_{\pi^0}$ %
+between data and simulation.
+Finally, the distribution of decay electron events from stopping cosmic muons is used at energies around 40\,MeV.
+This sample is used to test whether the detector response is uniform, since %
+verteces and the direction of the electrons distribute homogenously and isotropically in the fiducial volume.
+The stability in time of the energy scale is instead validated by the high energy stopping muons.
+
 
 \subsection{Oscillation space}
 
 \begin{table}
+	\small
 	\centering
 	\caption{Oscillation space.}
 	\label{tab:osc_space}
