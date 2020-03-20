@@ -556,23 +556,48 @@ can take is
 with $N$ the number of massive neutrinos.
 Under these circumstances, the elements of the mixing matrix have all the same absolute, called \emph{N-maximal mixing}.
 This corresponds to minimal average disappearance probability and maximal %
-average appearance probability, equal to 1/N in each possible channel.
+average appearance probability, equal to $1/N$ in each possible channel.
 
-Apart from this limit scenario, the PMNS matrix (and the CKM matrix) are generic unitary $N \times N$ matrices, %
-where $N$ is the number of fermion generations.
+Apart from this limit scenario, the PMNS matrix---and the CKM matrix---are generic %
+unitary $N \times N$ matrices, where $N$ is the number of fermion generations.
 A matrix with this characteristics depends on $N^2$ independent real parameters, divided among 
 \begin{equation}
-	\frac{N(N-1)}{2} \  \text{angles}  \quad \text{and} \quad
-	\frac{N(N+1)}{2} \  \text{phases}\ .
+	\frac{N(N-1)}{2} \quad \text{mixing angles and} \quad
+	\frac{N(N+1)}{2} \quad \text{phases}\ ,
 \end{equation}
-Due to the unitarity of the neutral currents, only the weak charged current can manifest these phases, %
-even though not all of them are observable: $2N-1$ phases can be reabsorbed by a redefinition of the fermion fields.
-The physical phases are therefore just
+even though, not all the phases are observables, or give physical effects.
+Due to the unitarity of the neutral currents, only the weak charged current can manifest these phases; %
+$2N-1$ phases can be reabsorbed by a redefinition of the fermion fields.
+Excluding the CC term, the SM Lagrangian is invariant under a global phase transformation %
+of the lepton and quark fields, such as
 \begin{equation}
-	\frac{(N-1)(N-2)}{2}\ ,
+	f_\alpha \longmapsto e^{i \phi_\alpha^f} f_\alpha\ .
 \end{equation}
-meaning that with three generations the PMNS matrix (and the CKM matrix) can be described by three mixing angles %
-and one physical phase.
+Applying this to the CC current of \refeq{eq:lepton_cc_lagrangian}, we can factorise %
+a common phase outside:
+\begin{align*}
+	%\label{eq:real_quark_cc}
+	j^\mu_\text{CC,L}&= 2 \sum_{i = 1}^3 \sum_{\alpha = e, \mu, \tau} %
+			    \cj{\nu}_{L i}\, \gamma^\mu e^{-i\phi_i^\nu} \, V_{\alpha i}^*\, e^{i \phi_\alpha^\ell} \ell_{L\alpha} \\
+			 &= 2 e^{-i (\phi_3^\nu - \phi_\tau^\ell)} \sum_{i = 1}^3 \sum_{\alpha = e, \mu, \tau} %
+			    \cj{\nu}_{L i}\, \gamma^\mu e^{-i(\phi_i^\nu - \pi_3^\nu)} \, V_{\alpha i}^*\, %
+			    e^{i (\phi_\alpha^\ell - \phi_\tau^\ell)} \ell_{L\alpha} \ ,
+\end{align*}
+showing that there are $2 N -1$ phases that can be reabsorbed in a redefinition of the fields.
+A common rephasing would leave the charged current unchanged.
+It follows that the physical phases are
+\begin{equation}
+	\frac{N(N+1)}{2} - 2N +1 = \frac{(N-1)(N-2)}{2}
+\end{equation}
+and the total physical parameters are
+\begin{equation}
+	\frac{N(N-1)}{2} + \frac{(N-1)(N-2)}{2} = (N-1)^2 \ .
+\end{equation}
+meaning that with three generations 
+In the case of three generations, the PMNS matrix (and the CKM matrix) can be described by three mixing angles %
+and just one physical phase.
+From a model building point of view, the complex phase may arise from complex Yukawa couplings %
+and/or from a relative CP--violating phase in the vacuum expectation values of Higgs fields.
 The PMNS matrix is typically parameterised as follows
 %\vspace{-0.2em}
 \begin{equation}
@@ -585,7 +610,16 @@ The PMNS matrix is typically parameterised as follows
 \end{equation}
 where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$.
 The angle $\delta_\text{CP}$ is the physical phase which is responsible for CP violation (see \refsec{sec:cp_oscillation}).
-%whereas the additional phases $\gamma_1$ and $\gamma_2$ bring about CP violation if the neutrinos are Majorana.
+It is important to note that in the case neutrinos were Majorana ferions, there would be two additional %
+physical phases and the mixing matrix would be parametrised as 
+\begin{equation}
+	\label{eq:pmns}
+	U' = U \ \mqty( 1 & 0 & 0 \\ 0 & e^{-i \gamma_1} & 0 \\ 0 & 0 & e^{-i\gamma_2} ) \ ,
+\end{equation}
+where $U$ is the same matrix of \refeq{eq:pmns}.
+The CKM matrix can be parametresid in an analogous way.
+
+
 
 \subsection{Propagation of neutrinos in matter}
 \label{sec:neutrino_matter}
@@ -624,19 +658,6 @@ The phenomenon can be seen as a refreactive index that modifies the mixing of ne
 %Coherence also allows decoupling the evolution equation of the neutrinos from those of the medium.
 %In this limit the effect of the medium is introduced in the evolution equation for the neutrinos %
 %in the form of an effective potential which depends on the density and composition of the matter.
-It was found in \refrefs{801, 802} that it is possible to have a resonant flavor transitions %
-when neutrinos propagate in a medium with varying density, with the effective mixing angle %
-passing through the maximal mixing value of $\pi/4$.
-In general, the discussion of oscillations in matter for three neutrino mixing is quite complicated, %
-because of the possible interplay of the effects of the different mass squared differences.
-Fortunately, in the case of the hierarchy of squared-mass differences, for which
-\begin{equation}
-	\label{eq:hierarchy}
-	\Delta m^2_\text{sol} = \Delta m^2_{21} \ll \Delta m^2_\text{atm} = |\Delta m^2_{31}|\ ,
-\end{equation}
-the effects of the large and small squared-mass differences can be separated out, %
-leading to a considerable simplification of the discussion and a clear understanding of the %
-physical mechanisms at work in experiments.
 
 The forward scattering possible for neutrinos in matter are CC interactions of %
 $\nu_e$ on electrons and NC interactions of any neutrino on electron, protons, and neutrons.
@@ -665,8 +686,8 @@ Averging, finally, over the helicities of the fermions, we obtain terms proporti
 \end{align}
 where the effective potentials are
 \begin{align}
-	V_\text{CC} &= \sqrt{2} G_F n_e \\
-	V^f_\text{NC} &= \sqrt{2} G_F n_f g_V^f \ .
+	V_\text{CC} &= \sqrt{2} G_F\, n_e \\
+	V^f_\text{NC} &= \sqrt{2} G_F\, n_f g_V^f \ .
 \end{align}
 The vector constant for electrons and protons is equal and opposite
 \begin{equation}
@@ -679,8 +700,6 @@ and since they are chargeless, we have
 	V_\text{NC} = -\frac{\sqrt{2}}{2} G_F n_f \ .
 \end{equation}
 
-In analogy with the derivation of \refsec{sec:oscillation}, we can consider the propagation of neutrinos %
-in matter.
 The total Hamiltonian is $\mathcal{H} = \mathcal{H}_0 + \mathcal{H}_\text{m}$, %
 where $\mathcal{H}_0$ is the Hamiltonian in vacuum (see \refeq{eq:hamilton}).
 The operator $\mathcal{H}_\text{m}$ acts on neutrino flavour state as
@@ -690,17 +709,143 @@ The operator $\mathcal{H}_\text{m}$ acts on neutrino flavour state as
 and we have defined the total potential as
 \begin{equation}
 	V_\alpha = V_\text{CC} \delta_{\alpha e} + V_\text{NC} = %
-		   \sqrt{2} G_F \qty( n_e \delta_{alpha e} - \frac{1}{2} n_n)\ .
+		   \sqrt{2} G_F \qty( n_e \delta_{\alpha e} - \frac{1}{2} n_n)\ .
 \end{equation}
+The massive neutrino states are eigenstates of the free Hamiltonian, but %
+for $\mathcal{H}_m$ the description in the flavour basis is easier.
+It is convenient to define the transition amplitude as
+\begin{equation}
+	\phi_{\alpha \beta} (t) = \braket{\nu_\beta}{\nu_\alpha (t)}\ ,
+\end{equation}
+from which the transition probability is simply
+\begin{equation}
+	P(\nu_\alpha \to \nu_\beta) = \qty|\phi_{\alpha \beta} (t)|^2\ .
+\end{equation}
+We have therefore that 
+\begin{equation}
+	\mathcal{H} \phi_{\alpha \beta} (t) = %
+		\sum_\rho \qty(\sum_i U_{\beta i} E_i U^*_{\rho i} + \delta_{\beta \rho} V_\beta)
+		\phi_{\alpha \rho} (t)\ .
+\end{equation}
+We can now consider the propagation of neutrinos in matter, in complete analogy with the oscillation in vacuum.
+The evolution of neutrino states in time comes from solving the Schrodinger's equation and %
+the probability of flavour transition can be computed.
+Using the same approximations introduced for vacuum oscillations, the evolution equation becomes
+\begin{equation}
+	i \dv{}{x} \psi_{\alpha \beta}(x) = %
+		\sum_\rho \qty(\sum_i U_{\beta i} \frac{\Delta m_{k1}^2}{2E} U^*_{\rho i} + %
+			\delta_{\beta e} \delta_{\rho e} V_\text{CC}) \psi_{\alpha \rho} (x)\ .
+\end{equation}
+We have removed the term
+\begin{equation}
+	p + \frac{m_1^2}{2E} + V_\text{NC} \psi_{\alpha \beta}(x)
+\end{equation}
+which generates a common phase to all flavours and so it is irrelevant to flavor transitions.
 
+The discussion of oscillations in matter for three neutrino mixing, however, is quite complicated, %
+because of the possible interplay of the effects of the different mass squared differences.
+Fortunately, in the case of the hierarchy of squared-mass differences, for which
+\begin{equation}
+	\label{eq:hierarchy}
+	\Delta m^2_\text{sol} = \Delta m^2_{21} \ll \Delta m^2_\text{atm} = |\Delta m^2_{31}|\ ,
+\end{equation}
+the effects of the large and small squared-mass differences can be separated out, %
+leading to a considerable simplification of the following discussion.
+%and a clear understanding of the physical mechanisms at work in experiments.
+We can therefore consider the simpler scenario of only two neutrino generations.
+Assuming the initial flavour being $\alpha = e$, the evolution equation is
+\begin{equation}
+	\label{eq:two_flav_evolution}
+	i \dv{}{x} \mqty(\psi_{e e} \\ \psi_{e \mu}) = %
+		\underset{\mathcal{H}_F}{\underbrace{
+		\frac{1}{4E} \mqty( -\Delta m^2 \cos 2\theta + A_\text{CC} & \Delta m^2 \sin 2\theta \\
+				    \Delta m^2 \sin 2\theta	& \Delta m^2 \cos 2\theta - A_\text{CC} )}} %
+		   \mqty(\psi_{e e} \\ \psi_{e \mu})\ ,
+\end{equation}
+where $\Delta m^2 = m_2^2 - m_1^2$ and $\theta$ is the mixing angle, as in
+\begin{equation}
+	\mqty(\nu_e \\ \nu_\mu)  =
+		\mqty ( \cos \theta & \sin \theta \\ -\sin\theta & \cos\theta ) %
+	\mqty(\nu_1 \\ \nu_2)\ ,
+\end{equation}
+and we have called
+\begin{equation}
+	A_\text{CC} \equiv 2 \sqrt{2} E\,G_F\,n_e\ .
+\end{equation}
+The effective Hamiltonian $\mathcal{H}_F$ of \refeq{eq:two_flav_evolution} can be diagonalised by means of %
+an orthogonal transformation
+\begin{equation}
+	O_M = \mqty ( \cos \theta_M & \sin \theta_M \\ -\sin\theta_M & \cos\theta_M )\ ,
+\end{equation}
+to obtain 
+\begin{equation}
+	\mathcal{H}_M = O_M^T \mathcal{H}_F O_M = \frac{1}{4E} \text{diag} (-\Delta m^2_M, \Delta m^2_M)\ .
+\end{equation}
+The effective mixing angle $\theta_M$ is given by
+\begin{equation}
+	\tan 2\theta_M = \frac{\tan 2\theta}{1 - \displaystyle\frac{A_\text{CC}}{\Delta m^2 \cos 2\theta}}
+\end{equation}
+and the effective mass squared difference $\Delta m_M^2$ reads
+\begin{equation}
+	\qty(\Delta m^2_M)^2 = (\Delta m^2 \cos 2\theta - A_\text{CC})^2 + (\Delta m^2 \sin\theta)^2\ .
+\end{equation}
+It was found in \refrefs{801, 802} that it is possible to have a resonant flavor transitions %
+when neutrinos propagate in a medium with varying density, with the effective mixing angle %
+passing through the maximal mixing value of $\pi/4$.
+This resonance condition is achieved when 
+\begin{equation}
+	A_\text{CC} = \Delta m^2 \cos2\theta
+	\quad\text{or}\quad
+	n_e = \frac{\Delta m^2 \cos2\theta}{2\sqrt{2} E\,G_F }\ ,
+\end{equation}
+Transforming the transition probability as $\bs{\psi}_e = U_M^\dagger\, \bs{\psi}_e$ in the mass basis, %
+the evolution equation reads
+\begingroup
+\renewcommand*{\arraystretch}{1.25}
+\begin{equation}
+	\label{eq:two_flav_evolution_diag}
+	i \dv{}{x} \mqty(\psi'_{e 1} \\ \psi'_{e 2}) = %
+		\mqty(\displaystyle -\frac{\Delta m^2_M}{4E}  &\displaystyle -i \dv{\theta_M}{x}  \\
+		\displaystyle i \dv{\theta_M}{x}  &\displaystyle \frac{\Delta m^2_M}{4E}) %
+		   \mqty(\psi'_{e e} \\ \psi'_{e \mu})\ .
+\end{equation}
+\endgroup
+It is interesting to note that if the matter profile is constant, then $\dv*{\theta_M}{x} = 0$ %
+and the structure of the oscillation probability simplifies to a two-flavour oscillation in vacuum, %
+with effective mixing angle $\theta_M$ and mass squared difference $\Delta m^2_M$.
+On the other hand, if the matter density is not constant, the variation of $\theta_M$ %
+must be taken into account, which is
+\begin{equation}
+	\dv{\theta_M}{x} = \frac{\sin 2\theta_M}{2\Delta m^2} \dv{A_\text{CC}}{x}\ .
+\end{equation}
+If the variation of the effective matter angle is small compared to the diagonal terms of %
+the Hamiltonian of \refeq{eq:two_flav_evolution_diag}, then the transition %
+between neutrino mass states in matter is negligible.
+With the condition
+\begin{equation}
+	\frac{\Delta m_M^2}{4E} \qty|\dv{\theta_M}{x}|^{-1} = %
+	\frac{(\Delta m_M^2)^2}{2E \sin2\theta_M} \qty|\dv{a_\text{CC}}{x}|^{-1} \gg 1
+\end{equation}
+satisfied along the nuetrino path, the transition is said to be \emph{adiabatic} %
+and flavour conversion occurs without oscillation between states.
 
-
+The condition of adiabaticity is typically met for solar and supernova neutrinos, %
+for which the medium profile smoothly changes from the high density of the core %
+to the vacuum or the density of the detector, which is practically negligible.
+Neutrinos are produced in astrophysical sources in the electron flavour (see \refsec{sec:nu_prod}), %
+at which the effective mixing angle $\theta_M \simeq \pi/2$.
+This means that the $\nu_e$ are produced mostly as $\nu_2$, but as the neutrino travels to %
+regions of lower density crossing the resonance adiabatically, %
+the final mixing angle in matter tends to the mixing angle in vacuum and %
+so $\nu_2 = \sin\theta \nu_e + \cos\theta \nu_\mu$.
+When the vacuum angle $\theta$ is small, the overall effect is a smooth conversion from $\nu_e$ to $\nu_\mu$.
+This mechanism is known as Mikheev-Smirnov-Wolfenstein (MSW) effect.
 
 \section{Neutrino production}
-\label{sec:prod}
+\label{sec:nu_prod}
 
 Neutrinos are the most abundant fermion in the Universe.
-With the expansion and cooling of the Universe, the rate of weak interaction primordial neutrinos %
+With the expansion and cooling of the Universe, the rate of the interactions of primordial neutrinos %
 decreased below the expansion rate, resulting in a decoupling of the neutrinos from the other particles.
 These \emph{relic netruinos} form what is called the Cosmic Neutrino Background (C$\nu$B), %
 a radiation analogous to the Cosmic Microwave Background (CMB) which decoupled at early stages of the Universe.
@@ -767,13 +912,76 @@ Neutrinos produced in the core of the Sun were the first astrophysical source of
 They are yielded in thermonuclear reaction in the solar core.
 Being a G-type star in the main sequence, the Sun's energy is powered mostly from proton--proton ($pp$) chain %
 and partly by the carbon--nitrogen--oxygen (CNO) cycle.
-In both these processes, the net result is the conversion of four protons and two electrons into an $\alpha$-particle, %
-of \tapi{4}He nucles, and two neutrinos
+In both these processes, the net result is the conversion of four protons and two electrons into an $\alpha$-particle %
+and two electron neutrinos
 \begin{equation}
 	\label{eq:sun_net}
 	4\,p\ +\ 2\,e^- \longrightarrow {}^4\text{He}\ +\ 2\, \nu_e\ ,
 \end{equation}
 along with the release of $\np{26.731}$\,MeV in the form of photons or kinetic energy of the neutrinos.
+The processes of the $pp$ chain and CNO cycle releasing neutrinos are reported in \reftab{tab:pp_cno}.
+Due to their elusive nature and low energy, solar neutrinos are difficult to detect in detail and %
+therefore a reliable theoretical model describing the solar nuclear reactions is needed.
+The standard solar model (SSM), developed by Bahcall and collaborators~\cite{142}, perfectly agrees with %
+data from helioseismology, such as the speed of sound and the density profile of the Sun, %
+and for this reason it considered to provide a credible estimate of the flux of neutrinos produced in the Sun.
+The first neutrino experiments, such as Homestake~\cite{323}, GALLEX/GNO~\cite{77}, and SAGE~\cite{19,20}, %
+were in strong disagreement with the predictions of the SSM.
+The so-called \emph{solar neutrino problem} was later solved by the SNO experiment~\cite{Aharmim:2005gt}, %
+which demonstrated the presence of flavour transition, explained theoretically by the MSW effect (see \refsec{sec:}).
+
+decribes the Sun mathematically thermonuclear reactions is a “solar model that is constructed with the
+best available physics and input data” [145] and is “required to fit the observed
+luminosity and radius of the Sun at the present epoch, as well as the observed
+heavy-element-to-hydrogen ratio at the surface of the Sun” (see Table 10.1).
+In recent years, several experiments have tested the SSMs by measuring p-
+mode oscillations of the Sun (were p stands for pressure). The science that studies
+these oscillations is called helioseismology. It has become of primary importance for
+understanding the physics of the Sun, since the helioseismological observations give
+detailed information on the sound speed and matter density in the interior of the
+Sun. It is important to note that the large amount of available helioseismological
+data is not used in the construction of SSMs. Therefore, the beautiful agreement of
+SSM predictions with helioseismological data is indeed an impressive success (see
+Ref. [145]).
+Many SSMs have been constructed by several groups and updated in the course
+of time as the understanding of the physics of the Sun, the quality and quantity of
+input data, and computational power have improved. The SSMs that have played
+the major role in neutrino physics are those developed by Bahcall and collabor
+in an impressive series of papers starting in 1962 [142]
+
+\begin{table}
+	\small
+	\centering
+	\captionof{table}{Processes occuring in the $pp$ chain (left) and CNO cyles (right) that emits $\nu_e$.
+		The first column of the $pp$ chain table lists the typical label with which the %
+		processes are referred to; the neutrinos of the CNO cycle are labelled with the name of the decaying nuclide. 
+		In both tables, the maximum neutrino energy is also reported~\cite{137, 141, 147, 138}.}
+	\label{tab:pp_cno}
+
+	\begin{tabular}{lr@{\quad$\longrightarrow$\quad}lr}
+		\toprule
+		Label	& \multicolumn{2}{c}{Process}	& $E_\text{max}$ \\ %(MeV)	\\
+		\midrule
+		$\bs{pp}$	    & $p + p$		 & \tapi{2}H $+ e^+ + \nu_e$		& 0.423\,MeV\\
+		$\bs{pep}$	    & $p + e^- + p$	 & \tapi{2}H $+ \nu_e$			& 1.445\,MeV\\
+		$\bs{hep}$	    & \tapi{3}He $+ p$   & \tapi{4}He $+ e^+ + \nu_e$		& 18.778\,MeV\\
+		\textbf{\tapi{7}Be} & \tapi{7}Be $+ e^-$ & \tapi{7}Li $+ \nu_e$			& 0.386\,MeV\\
+		\textbf{\tapi{8}Be} & \tapi{8}Be	 & \tapi{8}Be\tapi{*} $+ e^+ + \nu_e$	& 0.862\,MeV\\
+				    &			 & 2\,\tapi{4}He $+ e^+ + \nu_e$ 	& $\sim$15\,MeV\\
+		\bottomrule
+	\end{tabular}
+	\hfill
+	\raisebox{1.85em}{
+	\begin{tabular}{r@{\quad$\longrightarrow$\quad}lr}
+		\toprule
+		\multicolumn{2}{c}{Process}	& $E_\text{max}$ \\%(MeV)	\\
+		\midrule
+		\tapi{13}N    & \tapi{13}C $+ e^+ + \nu_e$ & 1.198\,MeV \\
+		\tapi{15}O    & \tapi{15}N $+ e^+ + \nu_e$ & 1.732\,MeV \\
+		\tapi{17}F    & \tapi{17}F $+ e^+ + \nu_e$ & 1.736\,MeV \\
+		\bottomrule
+	\end{tabular}}
+\end{table}
 
 When a massive star at the end of its life collapses to a neutron star, %
 it radiates almost all of its binding energy in the form of neutrinos, %
@@ -987,8 +1195,10 @@ These two decays are:
 Neutrino interactions in their flavour states are described by \refeqs{eq:lepton_cc}{eq:lepton_nc}.
 Replacing the values of $g^\nu_V$ and $g^\nu_A$ for a neutrino, the relevant lagrangian terms are
 \begin{align}
+	%\label{eq:real_lepton_cc}
 	\mathcal{L}_{\text{CC},\nu} &= -\frac{g}{2\sqrt{2}}\ 	      %
 	\sum_{\alpha=e,\mu,\tau} \cj{\nu}_\alpha \sh{W} (1-\gamma^5) \ell_\alpha + \text{h.c.} \\
+	%\label{eq:real_lepton_nc}
 	\mathcal{L}_{\text{NC},\nu} &= -\frac{g}{4\cos\vartheta_\text{W}}\ %
 	\sum_{\alpha=e,\mu,\tau} \cj{\nu}_\alpha \sh{Z} (1-\gamma^5) \nu_\alpha \ .
 \end{align}
