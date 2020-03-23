@@ -4,8 +4,9 @@
 \chapter{Neutrinos in the Standard Model}
 \label{cha:intro}
 
-The Standard Model (SM) is a renormalisable Yang-Mills theory~\ref{} that describes the strong, electromagnetic, and weak interactions %
-of elementary particles in the framework of quantum field theory.
+The Standard Model (SM) is a renormalisable Yang-Mills theory~\cite{Yang:1954ek} that describes the strong, %
+electromagnetic, and weak interactions of elementary particles in the framework of quantum field %
+theory~\cite{Glashow:1961tr, Weinberg:1967tq, Salam:1968rm}.
 It is based on the local gauge symmetry group 
 \begin{equation}
 	\label{eq:smgroup}
@@ -17,9 +18,15 @@ vector gauge bosons that correspond to the generators of the group.
 %
 The electroweak subgroup $\text{SU(2)}_L \otimes \text{U(1)}_Y$ undergoes a spontaneous symmetry breaking process %
 out of which three of the four vector bosons acquire mass ($W^\pm$ and $Z$~bosons) and the last one, the photon, remains massless.
+This process requires at least one scalar boson with a non-zero vacuum expectation value~\cite{Higgs:1964pj, Higgs:1964ia}.
 The colour section is unbroken and does not mix with the electroweak sector: %
 the generators of the algebra of $\text{SU(3)}_C$ corresponds to eight massless gluons.
 %
+The gauge and scalar bosons are coupled to fermion fields, which are irreducible representation of %
+the Poincaré group.
+The known elementary fermions are divided in two categories: quarks and leptons.
+They are distinguished by the fact that quarks participate in all the interactions % 
+whereas leptons participate only in the electroweak interactions.
 %%In the SM, electroweak interactions can be studied separately from strong interactions, %
 %%because the symmetry under the color group is unbroken and there is no mixing %
 %%between the SU(3)$_C$ and the $\mathrm{SU(2)}_L \otimes \mathrm{U(1)}_Y$ sectors.
@@ -32,19 +39,16 @@ the generators of the algebra of $\text{SU(3)}_C$ corresponds to eight massless 
 %%electroweak interactions.
 Since the number and properties of the gauge bosons is determined by the SM group, %
 the only independent parameters left are the coupling constants of the interactions, which can be determined by the experiments.
-The spontaneous breaking symmetry requires at least one scalar boson thanks to the Higgs mechanism.
-The recent discovery of the Higgs boson is the crowning achievement of the SM~\ref{}.
+%The spontaneous breaking symmetry requires at least one scalar boson thanks to the Higgs mechanism.
+%The recent discovery of the Higgs boson is the crowning achievement of the SM~\ref{}.
 %The symmetry group of the SM fixes the interactions, i.e. the number and properties of the %
 %vector gauge bosons, with only three independent unknown parameters: the three coupling constants of %
 %the SU(3)$_C$, SU(2)$_L$, and U(1)$_Y$ groups, all of which must be determined from experiments.
-On the contrary, the number and properties of scalar bosons and fermions are left unconstrained, %
+On the contrary, the number and the masses of scalar bosons and fermions are left unconstrained, %
 except for the fact that they must transform according to the representations of the symmetry group, %
 while the fermion representations must lead to the cancellation of quantum anomalies.
 
-The known elementary fermions are divided in two categories, quarks and
-leptons.
-They are distinguished by the fact that quarks participate in all the interactions % 
-whereas leptons participate only in the electroweak interactions.
+\iffalse
 \begin{center}
 	\small
 	\begin{tabular}{lccc}
@@ -59,6 +63,7 @@ whereas leptons participate only in the electroweak interactions.
 		\bottomrule
 	\end{tabular}
 \end{center}
+\fi
 
 %In the SM, electroweak interactions can be studied separately from strong interactions, %
 %because the symmetry under the color group is unbroken and there is no mixing %
@@ -71,13 +76,15 @@ whereas leptons participate only in the electroweak interactions.
 %the recent discovery of the Higgs Boson is the last crowning achievement of SM.
 
 Despite being the most successful theory of particle physics to date, the SM is actually limited %
-in its approximation to reality, in that some clear evidences cannot be explained.
+in its description to reality, in that some evidences are not explained nor addressed.
 The most outstanding breakthrough is the neutrino oscillations, which was awarded the Nobel Prize in Physics in 2015 %
 and has proved that the neutrinos are not all massless, as it is assumed by theory.
-Mass terms for the neutrinos can be included in the SM, with the implications of theoretical problems.
+Mass terms for the neutrinos can be included in the SM, with the implications of theoretical and naturalness problems.
 Likewise, the SM is unable to provide an explanation of the observed asymmetry between matter and anti-matter.
 It was noted by Sakharov that a solution to this puzzle would require some form of C and CP violation %
-in the early Universe, along with Baryon number violation and out-of-equilibrium interactions.
+in the early Universe, along with Baryon number violation and out-of-equilibrium interactions~\cite{Sakharov:1967dj}.
+Multiple are also the evidences suggesting the presence of dark matter in the Universe~\cite{Zwicky:1933gu, Rubin:1970zza, Aghanim:2018eyx}, %
+as well as the efforts of the scientific community to implement it a comprehensive theory.
 These facts suggest that the Standard Model is not a complete theory and additional physics %
 Beyond the Standard Model (BSM) is required.
 
@@ -95,8 +102,9 @@ phenomena, except for the indications in favour of neutrino oscillations that we
 
 The electroweak (EW) sector of the SM is formed by the direct product of the weak isospin group $\text{SU(2)}_L$ and %
 the hyper-charge group $\text{U(1)}_Y$.
-The two groups are connected by the Gell-Mann--Nishijima relation which connects the $I_3$ component of the %
-weak isospin operator and the hyper-charge operator $Y$  with the charge operator $Q$ as
+The two groups are connected by the Gell-Mann--Nishijima~\cite{Nakano:1953zz, Gell-Mann:1956iqa} %
+relation which connects the $I_3$ component of the weak isospin operator and the hyper-charge operator $Y$ %
+with the charge operator $Q$ as
 \begin{equation}
 	\label{eq:gellmann}
 	Q = I_3 + \frac{Y}{2}\ .
@@ -121,9 +129,8 @@ The right-handed fields, instead, transform simply as singlets and they are
 	\bs{q}^D_R  = \mqty(d_R \\ s_R \\ b_R) \quad \text{, and} \quad
 	\bs{q}^U_R  = \mqty(u_R \\ c_R \\ t_R)\ .
 \end{equation}
-Note that the right-handed components of the neutrino fields, $\nu_{\alpha R}$, are not historically considered in the SM %
-because the neutrinos were believed massless until recent times~\ref{}.
-As such, neutrinos are assumed to be massless in the SM.
+The right-handed components of the neutrino fields, $\nu_{\alpha R}$, are not historically considered in the SM %
+because the neutrinos are assumed to be massless and the $\nu_R$ components are \emph{sterile} under any charge of the SM.
 The EW Lagrangian is therefore the most general renormalisable Lagrangian invariant %
 under the local symmetry $\text{SU(2)}_L \otimes \text{U(1)}_Y$:
 \begin{align}
@@ -211,11 +218,11 @@ to the electromagnetic field for neutrinos, which gives
 \end{equation}
 Another important relation comes from the charged lepton couplings with the electromagnetic field which must coincide %
 the QED Lagrangian: we have that $g \sin\vartheta_\text{W} = q_e$ and so $g^2 + g'^2 = q_e^2$.
-The~constants $g_V$ and $g_A$, introduced in \refeq{eq:lepton_nc}, can be defined for any fermion $f$ as
+The~constants $g_V$ and $g_A$, introduced in \refeq{eq:lepton_nc}, can be defined for any fermion $\ferm$ as
 \begin{equation}
 	\label{eq:gv_ga}
-	g_V^f = I_3^f - 2 q^f \sin^2 \vartheta_\text{W} \quad \text{and} \quad
-	g_A^f = I_3^f\ .
+	g_V^\ferm = I_3^\ferm - 2 q^\ferm \sin^2 \vartheta_\text{W} \quad \text{and} \quad
+	g_A^\ferm = I_3^\ferm\ .
 \end{equation}
 Thanks to this notation, the interaction Lagrangian for the quark sector can be written in the same form of %
 \refeq{eq:currents_ccnc}, where the fermionic currents of \refeqs{eq:lepton_cc}{eq:lepton_nc} now become
@@ -263,10 +270,10 @@ We can expand the scalar field around its vev and by choosing the unitary gauge 
 can be rotated away being unphysical, simplifying to
 \begin{equation}
 	\label{eq:vev_higgs}
-	\expval{H} = \frac{1}{\sqrt{2}} \mqty( 0 \\ v + h(x) )\ .
+	H (x) = \frac{1}{\sqrt{2}} \mqty( 0 \\ v + h(x) )\ .
 \end{equation}
 Using the definition of the EW fields in \refeq{eq:fields}, %
-the covariant derivative of \refeq{eq:covariant} applied to the Higgs is 
+the covariant derivative of \refeq{eq:covariant} applied to the Higgs field is 
 \begin{equation}
 	\label{eq:d_higgs}
 	D_\mu H(x) = \frac{1}{\sqrt{2}} %
@@ -293,40 +300,40 @@ and the following parameter
 	\label{eq:magic_ratio}
 	\rho = \frac{m_W^2}{m_Z^2 \cos^2\vartheta_\text{W}}
 \end{equation}
-is predicted to be $\rho = 1$ in the SM: experimentally it is measured to be $\rho = 0.999999$.
+is predicted to be $\rho = 1$ in the SM. %: experimentally it is measured to be $\rho = 0.999999$.
 The other terms of \ref{eq:all_higgs} describe self-interactions of the Higgs and %
 interactions with the $W$ and $Z$ vector bosons.
 
 Applying the same expansion of \refeq{eq:vev_higgs} to the Yukawa terms of the SM Lagrangian, %
-we direct coupling between left and right chiral fields and trilinear couplings of the fermions with the Higgs.
+we obtain coupling between left and right chiral fields and trilinear couplings of the fermions with the Higgs.
 We have in the lepton section
 \begin{equation}
 	\label{eq:lepton_mass}
 	\mathcal{L}_{H, L} = - \frac{v}{\sqrt{2}}\ \cj{\bs{\ell}}_L\,Y^\ell\, \bs{\ell}_R %
 			     - \frac{1}{\sqrt{2}}\ \cj{\bs{\ell}}_L\,Y^\ell\, \bs{\ell}_R\,h \ + \ \text{h.c.}\ ,
 \end{equation}
-The same is found in the quark sector:
+and the same is found in the quark sector:
 \begin{equation}
 	\label{eq:quark_mass}
 	\mathcal{L}_{H, Q} = - \qty(\frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D %
 			          + \frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U) %
 			     - \qty(\frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D\ h %
-			          + \frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U\ h) \,+\,\text{h.c.}\ .
+			          + \frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U\ h) \,+\,\text{h.c.}
 \end{equation}
 
-The terms in the Lagrangians of \refeqs{eq:lepton_mass}{eq:quark_mass} proportional to $\cj{f}_L f_R = \cj{f} f$ %
-are Dirac mass terms for the fermion $f$.
-However, there is no principle by which the Yukawa coupling matrices $Y^f$ should be diagonal \emph{a priori}, %
+The terms in the Lagrangians of \refeqs{eq:lepton_mass}{eq:quark_mass} proportional to $\cj{\ferm}_L \ferm_R = \cj{\ferm}\, \ferm$ %
+are Dirac mass terms for the fermion $\ferm$.
+However, there is no principle by which the Yukawa coupling matrices $Y^\ferm$ should be diagonal \emph{a priori}, %
 but without a diagonal matrix the fermion masses are not properly defined.
 Being a generic complex matrix, the diagonalisation can be performed via a biunitary transformation
 \begin{equation} 
-	V^{f\dagger}_L\ \qty(\frac{v}{\sqrt{2}} Y^f)\ V^f_R = \frac{v}{\sqrt{2}} \hat{Y}^f_{\alpha} = %
-	\text{diag}\qty(\frac{y^f_\alpha v}{\sqrt{2}})\ ,
+	V^{\ferm\dagger}_L\ \qty(\frac{v}{\sqrt{2}} Y^\ferm)\ V^\ferm_R = \frac{v}{\sqrt{2}} \hat{Y}^\ferm_{\alpha} = %
+	\text{diag}\qty(\frac{y^\ferm_\alpha v}{\sqrt{2}})\ ,
 \end{equation} 
 where $V_L$ and $V_R$ are both unitary matrices and the fermion masses are defined by the Yukawa couplings
 \begin{equation}
 	\label{eq:dirac_mass}
-	m^f_\alpha \equiv \frac{y^f_\alpha v}{\sqrt{2}}\ ,
+	m^\ferm_\alpha \equiv \frac{y^\ferm_\alpha v}{\sqrt{2}}\ ,
 \end{equation}
 with $\alpha$ a family generation index.
 The biunitary transformation acts on the lepton fields as
@@ -354,7 +361,7 @@ and in the quark sector
 				= -\!\! \sum_{\alpha=d,s,b} \!\qty(m_\alpha\ \cj{q}^D_\alpha\, q^D_\alpha) %
 				  -\!\! \sum_{\beta=u,c,t}  \!\qty(m_\beta \ \cj{q}^U_\beta\,  q^U_\beta)\ . %
 \end{equation}
-As noted previously, in the SM there are no mass terms for neutrino fields.
+As stressed previously, in the SM there are no mass terms for neutrino fields.
 
 \subsection{Fermion mixing}
 \label{sec:fermion_mixing}
@@ -372,22 +379,22 @@ where the unitary matrix $V = V^{U\dagger}_L V^D_L$, called Cabibbo-Kobayashi-Ma
 describes the mixing between quark fields in weak interaction processes when initial and final states %
 represent particles with definite masses.
 The same mixing matrix, however, does not appear in the NC current of \refeq{eq:quark_nc}; %
-defining the couplings $2 g_L^f = g_V^f + g_A^f$ and $2 g_R^f = g_V^f - g_A^f$, the current with mass eigenstates %
+defining the couplings $2\,g_L^\ferm = g_V^\ferm + g_A^\ferm$ and $2\,g_R^\ferm = g_V^\ferm - g_A^\ferm$, the current with mass eigenstates %
 becomes
 \begin{align}
 	\label{eq:real_quark_nc}
-	j^\mu_\text{NC,Q} &= 2 g^U_L\ \cj{\bs{q}}^U_L\, \gamma^\mu\, \bs{q}^U_L %
-			   + 2 g^U_R\ \cj{\bs{q}}^U_R\, \gamma^\mu\, \bs{q}^U_R %
-			   + 2 g^D_L\ \cj{\bs{q}}^D_L\, \gamma^\mu\, \bs{q}^D_L %
-			   + 2 g^D_R\ \cj{\bs{q}}^D_R\, \gamma^\mu\, \bs{q}^D_R \notag \\
-			  &= 2 g^U_L\ \cj{\hat{\bs{q}}}^U_L V^{U\dagger}_L\, \gamma^\mu\, V^U_L \hat{\bs{q}}^U_L %
-			   + 2 g^U_R\ \cj{\hat{\bs{q}}}^U_R V^{U\dagger}_R\, \gamma^\mu\, V^U_R \hat{\bs{q}}^U_R %
-			   + 2 g^D_L\ \cj{\hat{\bs{q}}}^D_L V^{D\dagger}_L\, \gamma^\mu\, V^D_L \hat{\bs{q}}^D_L %
-			   + 2 g^D_R\ \cj{\hat{\bs{q}}}^D_R V^{D\dagger}_R\, \gamma^\mu\, V^D_R \hat{\bs{q}}^D_R \notag \\
-			  &= 2 g^U_L\ \cj{\hat{\bs{q}}}^U_L \, \gamma^\mu\, \hat{\bs{q}}^U_L %
-			   + 2 g^U_R\ \cj{\hat{\bs{q}}}^U_R \, \gamma^\mu\, \hat{\bs{q}}^U_R %
-			   + 2 g^D_L\ \cj{\hat{\bs{q}}}^D_L \, \gamma^\mu\, \hat{\bs{q}}^D_L %
-			   + 2 g^D_R\ \cj{\hat{\bs{q}}}^D_R \, \gamma^\mu\, \hat{\bs{q}}^D_R \ .
+	j^\mu_\text{NC,Q} &= 2\,g^U_L\ \cj{\bs{q}}^U_L\, \gamma^\mu\, \bs{q}^U_L %
+			   + 2\,g^U_R\ \cj{\bs{q}}^U_R\, \gamma^\mu\, \bs{q}^U_R %
+			   + 2\,g^D_L\ \cj{\bs{q}}^D_L\, \gamma^\mu\, \bs{q}^D_L %
+			   + 2\,g^D_R\ \cj{\bs{q}}^D_R\, \gamma^\mu\, \bs{q}^D_R \notag \\
+			  &= 2\,g^U_L\ \cj{\hat{\bs{q}}}^U_L V^{U\dagger}_L\, \gamma^\mu\, V^U_L \hat{\bs{q}}^U_L %
+			   + 2\,g^U_R\ \cj{\hat{\bs{q}}}^U_R V^{U\dagger}_R\, \gamma^\mu\, V^U_R \hat{\bs{q}}^U_R %
+			   + 2\,g^D_L\ \cj{\hat{\bs{q}}}^D_L V^{D\dagger}_L\, \gamma^\mu\, V^D_L \hat{\bs{q}}^D_L %
+			   + 2\,g^D_R\ \cj{\hat{\bs{q}}}^D_R V^{D\dagger}_R\, \gamma^\mu\, V^D_R \hat{\bs{q}}^D_R \notag \\
+			  &= 2\,g^U_L\ \cj{\hat{\bs{q}}}^U_L \, \gamma^\mu\, \hat{\bs{q}}^U_L %
+			   + 2\,g^U_R\ \cj{\hat{\bs{q}}}^U_R \, \gamma^\mu\, \hat{\bs{q}}^U_R %
+			   + 2\,g^D_L\ \cj{\hat{\bs{q}}}^D_L \, \gamma^\mu\, \hat{\bs{q}}^D_L %
+			   + 2\,g^D_R\ \cj{\hat{\bs{q}}}^D_R \, \gamma^\mu\, \hat{\bs{q}}^D_R \ .
 \end{align}
 The neutral current with massive fields has the same form of the neutral current with un-rotated fields.
 This is true also for the electromagnetic current of the EW Lagrangian.
@@ -571,7 +578,7 @@ $2N-1$ phases can be reabsorbed by a redefinition of the fermion fields.
 Excluding the CC term, the SM Lagrangian is invariant under a global phase transformation %
 of the lepton and quark fields, such as
 \begin{equation}
-	f_\alpha \longmapsto e^{i \phi_\alpha^f} f_\alpha\ .
+	\ferm_\alpha \longmapsto e^{i \phi_\alpha^\ferm} \ferm_\alpha\ .
 \end{equation}
 Applying this to the CC current of \refeq{eq:lepton_cc_lagrangian}, we can factorise %
 a common phase outside:
@@ -668,7 +675,7 @@ are, up to Fierz re-ordering,
 		 	      				\qty[\cj{e}\gamma_\mu(1 - \gamma^5) e] \\
 	\mathcal{H}_\text{NC} &= \frac{G_F}{\sqrt{2}} \sum_{\alpha=e, \mu, \tau} %
 							\qty[\cj{\nu}_\alpha \gamma^\mu(1-\gamma^5)\nu_\alpha] %
-							\sum_{f = e, p, n} \qty[\cj{f}\gamma_\mu(g^F_V - g^F_A \gamma^5) f]\ .
+							\sum_{\ferm = e, p, n} \qty[\cj{\ferm}\gamma_\mu(g^F_V - g^F_A \gamma^5) \ferm]\ .
 \end{align}
 The fermions, either electrons, neutrons, or protons, must have identical four-momenta and helicities %
 in their intial and final states, thanks to the coherent nature of the scattering.
@@ -676,18 +683,18 @@ We can therefore average the effective Hamiltonian on the fermion background usi
 a statistical distribution $\rho$ of the fermion energy at a given temperature of the medium, %
 which normalises to the total number of particles
 \begin{equation}
-	\int \dd[3]{p} \rho(E_f, T) = N_f\ .
+	\int \dd[3]{p} \rho(E_\ferm, T) = N_\ferm\ .
 \end{equation}
 Averging, finally, over the helicities of the fermions, we obtain terms proportional to the current
 \begin{align}
 	\expval{\mathcal{H}_\text{CC}} &= V_\text{CC} \cj{\nu}_\text{eL} \gamma^0 \nu_{eL} \\
-	\expval{\mathcal{H}_\text{NC}} &= \sum_{f = e, p, n} V^f_\text{NC} %
+	\expval{\mathcal{H}_\text{NC}} &= \sum_{\ferm = e, p, n} V^\ferm_\text{NC} %
 					 \sum_{\alpha=e, \mu, \tau} \cj{\nu}_{\alpha L} \gamma^0\nu_{\alpha L} \ ,
 \end{align}
 where the effective potentials are
 \begin{align}
 	V_\text{CC} &= \sqrt{2} G_F\, n_e \\
-	V^f_\text{NC} &= \sqrt{2} G_F\, n_f g_V^f \ .
+	V^\ferm_\text{NC} &= \sqrt{2} G_F\, n_\ferm g_V^\ferm \ .
 \end{align}
 The vector constant for electrons and protons is equal and opposite
 \begin{equation}
@@ -697,7 +704,7 @@ but due to the neutrality of matter, $n_e = n_p$ and so their contributions canc
 Neutrons are the only particles providing an overall potential to neutrino NC interactions %
 and since they are chargeless, we have
 \begin{equation}
-	V_\text{NC} = -\frac{\sqrt{2}}{2} G_F n_f \ .
+	V_\text{NC} = -\frac{\sqrt{2}}{2} G_F n_\ferm \ .
 \end{equation}
 
 The total Hamiltonian is $\mathcal{H} = \mathcal{H}_0 + \mathcal{H}_\text{m}$, %
@@ -1196,22 +1203,22 @@ The amplitudes of the processes shown in \reffig{fig:neutrino_tree} are
 \begin{align}
 	i \mathcal{M}_\text{CC} &= i\, \frac{g^2}{8}\ \cj{u}_{\ell_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
 						    \,\frac{\eta_{\mu\nu}}{k^2 - m_W^2+i\varepsilon}
-						    \,\cj{u}_{f_2} \gamma^\nu (1-\gamma^5)\,V_{12}\, u_{f_1} \\
+						    \,\cj{u}_{\ferm_2} \gamma^\nu (1-\gamma^5)\,V_{12}\, u_{\ferm_1} \\
 	i \mathcal{M}_\text{NC} &= i\, \frac{g^2}{8\cos\vartheta}\ \cj{u}_{\nu_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
 						    \,\frac{\eta_{\mu\nu}}{k^2 - m_Z^2+i\varepsilon}
-						    \,\cj{u}_{f} \gamma^\nu (g^f_V-g^f_A\gamma^5) u_{f}\ ,
+						    \,\cj{u}_{\ferm} \gamma^\nu (g^\ferm_V-g^\ferm_A\gamma^5) u_{\ferm}\ ,
 \end{align}
-where $k$ is the momentum of the propagator and $V_{12}$ a possible mixing between generic fermions $f_1$ and $f_2$.
+where $k$ is the momentum of the propagator and $V_{12}$ a possible mixing between generic fermions $\ferm_1$ and $\ferm_2$.
 Because of the typical energies involved, the momentum propagating between the particles is small %
 compared to the masses of the intermediate bosons and therefore their mass can be factorised out, %
 resulting in the four-point interactions
 \begin{align}
 	\label{eq:fermi_cc}
 	i \mathcal{M}_\text{CC} &\simeq i\,  \frac{G_F^2}{\sqrt{2}}\ \cj{u}_{\ell_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
-						    \,\cj{u}_{f_2} \gamma^\mu (1-\gamma^5)\,V_{12}\, u_{f_1} \\
+						    \,\cj{u}_{\ferm_2} \gamma^\mu (1-\gamma^5)\,V_{12}\, u_{\ferm_1} \\
 	\label{eq:fermi_nc}
 	i \mathcal{M}_\text{NC} &\simeq i\,  \frac{G_F^2}{\sqrt{2}}\ \cj{u}_{\nu_\alpha} \gamma^\mu (1-\gamma^5)\, u_{\nu_\alpha}
-						    \,\cj{u}_{f} \gamma^\mu (g^f_V-g^f_A\gamma^5) u_{f}\ ,
+						    \,\cj{u}_{\ferm} \gamma^\mu (g^\ferm_V-g^\ferm_A\gamma^5) u_{\ferm}\ ,
 \end{align}
 where the relation in \refeq{eq:magic_ratio} was used and a new constant was introduced 
 \begin{equation}
@@ -1237,8 +1244,8 @@ can be described by effective four-point Lagrangians.
 			\fmf{fermion}{nu,v1,ell}
 			\fmf{fermion}{f1,v2,f2}
 			\fmf{photon, label=$W$}{v1,v2}
-			\fmflabel{$f_1$}{f1}
-			\fmflabel{$f_2$}{f2}
+			\fmflabel{$\ferm_1$}{f1}
+			\fmflabel{$\ferm_2$}{f2}
 			\fmflabel{$\nu_\alpha$}{nu}
 			\fmflabel{$\ell_\alpha$}{ell}
 		\end{fmfgraph*}
@@ -1253,8 +1260,8 @@ can be described by effective four-point Lagrangians.
 			\fmf{fermion}{nu1,v1,nu2}
 			\fmf{fermion}{f1,v2,f2}
 			\fmf{photon, label=$Z$}{v1,v2}
-			\fmflabel{$f$}{f1}
-			\fmflabel{$f$}{f2}
+			\fmflabel{$\ferm$}{f1}
+			\fmflabel{$\ferm$}{f2}
 			\fmflabel{$\nu_\alpha$}{nu1}
 			\fmflabel{$\nu_\alpha$}{nu2}
 		\end{fmfgraph*}
@@ -1485,32 +1492,38 @@ apart from the mixing term $|V_{ud}|^2$ and the corresponding neutral-current fo
 			2 \sin^2 \theta_W F_{1,2}^N - \frac{1}{2} F_{1,2}^N\ ,
 \end{equation}
 where the plus sign is for $N = p$ and the minus sign for $N = n$.
-
-CCQE interactions are particularly important to neutrino physics for mainly two reasons:
-\begin{itemize}
-	\item measurements of the differential cross-section in Eq.~\ref{eq:cc_xsec_q} give information on the %
-		nucleon form-factors, which are difficult to measure; 
-	\item their nature as two-body interactions enable the kinematics to be completely reconstructed, %
-		and hence the initial neutrino energy determined which is critical for measuring the oscillation parameters.
-\end{itemize}
-
+CCQE interactions are of vital importance for neutrino physics, because %
+the measurement of its differential cross-section give precious information on the nucleon form-factors, %
+which are difficult to measure with a different probe.
+Also, the two-body nature of the interactions is such that the kinemtic properties of the %
+incoming neutrino can be determined with good precision.
+This is relevant especially for oscillation experiments, in which the energy of the neutrino %
+can be estimated as
 In fact, if the target nucleon is at rest, at least compared to the neutrino energy, %
 then this can be calculated as:
 \begin{equation}
-	E_\nu = \frac{m_n E_l + \frac{1}{2}\big ( m_p^2-m_n^2-m_l^2)}{m_n - E_l+p_l \cos \theta_l}\,,
+	E_\nu = \frac{m_n E_\ell + \frac{1}{2}\big ( m_p^2-m_n^2-m_\ell^2)}{m_n - E_\ell+p_\ell \cos \theta_\ell}\ ,
 \end{equation}
-where the measurement of the momentum, $p_l$ and the angle with respect to the neutrino, $\theta_l$, of the %
-outgoing charged lepton are only required.
+if the target nucleon is at rest: the measurement of the momentum of the outgoing charge lepton $p_l$ %
+and its angle with the direction of the neutrino $\theta_l$ are only needed.
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{pics/qe_xsec.pdf}
+	\caption{Total neutrino (left) and antineutrino (right) cross-section measurements and predictions for an isoscalar target %
+		as a function of energy. The contributions from quasi-elastic (QE, red), resonance (RES, blue), %
+		and deep-inelastic-scattering (DIS, green) are highlighted.
+		Takend from~\refref{Formaggio:2013kya}.}
+	\label{fig:xsec}
+\end{figure}
 
-
-For neutrino energies above 1\,GeV the cross-section drops as the available $Q^2$ increases; 
-At higher energies, inelastic scatterings and processes such as $np-nh$ or resonance productions become relevant.
-In this interactions, the nucleon is excited into a baryonic resonance before decaying and emitting %
-a charged or a neutral pion.
-At high $Q^2$, inelastic scattering is dominated by deep inelastic scattering (DIS), %
-as the neutrino has enough energy to scatter directly off a constituent quark, fragmenting the original nucleon.
-In between these extreme scenarios, an additional contribution comes from interactions where the hadronic %
-system is neither completely fragmented nor forms a recognisable resonance.
-These interactions are referred to as ``shallow inelastic scattering'', %
-and there is no clear model for dealing with them.
+The behaviour of neutrino cross-sections with hadrons is shown in 
+As shown in \reffig{fig:xsec}, the QE cross-section drops for neutrino energies above 1\,GeV as the available $Q^2$ increases; 
+At higher energies, processes such as multinucleon emission or baryon resonance become relevant.
+In these kind of interactions, correlated pair of nucleons inside the nucleus ($2p2h$) are both ejected or %
+the nucleon itself gets excited into a baryonic resonance before decaying and emitting a charged or a neutral pion.
+Many are the models implementing these multi-body interactions used in the scientific %
+community~\cite{Rein:1980wg, Martini:2009uj, Nieves:2011pp}, %
+due to the difficulty of the measurement being dominated by highly inelastic interactions.
+In fact, at high $Q^2$ deep inelastic scattering (DIS) is the dominant mode, since %
+the neutrino has enough energy to scatter directly off a constituent quark, fragmenting the original nucleon.
