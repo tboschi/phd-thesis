@@ -154,37 +154,63 @@ it amounts to~\cite{Jarlskog:1985ht}
 	J = \imaginary\qty[U_{\mu 3} U_{e 2} U_{\mu 2}^* U_{e 3}^*] = %
 	    \frac{1}{8} \cos\theta_{13} \sin(2\theta_{12}) \sin(2\theta_{13}) \sin(2\theta_{23}) \sin \delta_\text{CP}\ .
 \end{equation}
-For example, for the main channel of interest for long beaseline experiments (LBL), $\nu_\mu \to \nu_e$, %
-the asymmetry looks like:
+
+The main channel of interest for long baseline experiments (LBL) is the appeareance channel $\nu_\mu \to \nu_e$.
+This is for two main reasons: the attainable flux in accelerator experiments is principally composed of muon neutrinos, %
+and the achieved energies are not enough to produce $\tau$ leptons at the detection site.
+For this channel, the asymmetry looks like:
 \begin{align}
 	\mathcal{A}_{\mu e}^\text{CP} =&\ \frac{1}{2} \cos\theta_{13} \sin(2\theta_{12}) %
 		\sin(2\theta_{13}) \sin(2\theta_{23}) \sin \delta_\text{CP} \notag \\
 		&\times \qty[\sin \Delta_{12} - \sin \Delta_{13} + \sin \Delta_{23}]\ ,
 \end{align}
-where $\Delta_{ij} = \flatfrac{\Delta m_{ij}^2 L }{4 E}$.
-Because of the above discussion, all the CP asymmetries, measured on each channel, are equal up to a sign:
+where $\Delta_{ij} = \flatfrac{\Delta m_{ij}^2 L }{4 E}$,
+even though the CP asymmetries for each channel are all equal up to a sign:
 \begin{equation}
 	\mathcal{A}_{\mu e} = \mathcal{A}_{\tau \mu} = \mathcal{A}_{e \tau} = %
 	- \mathcal{A}_{e \mu} = - \mathcal{A}_{\mu \tau} = - \mathcal{A}_{\tau e}  \ .
 \end{equation}
-Including matter effects, we can focus on the limit where the effects of the atmospheric mass difference dominates.
-This holds to LBL experiments and leads to helpful cancellations in the evolution equation which reads
+The energies and baselines of LBL experiments are such that
+\begin{equation}
+	\frac{|\Delta m_{31}^2|}{2} \frac{L}{E} \sim \pi\ ,
+\end{equation}
+and the hierarchy of the squared mass differences is
+\begin{equation}
+	\label{eq:hierarchy}
+	\Delta m^2_\text{sol} = \Delta m^2_{21} \ll \Delta m^2_\text{atm} = |\Delta m^2_{31}|\ .
+\end{equation}
+In the regime of LBL physics, the atmospheric mass difference dominates, meaning that the oscillation probability in vacuum %
+can be well-approximated by an effective two-flavour scenario
+\begin{equation}
+	P(\nu_\alpha \to \nu_\beta) = \sin^2 2\theta_\text{eff}\, \sin^2\qty(\frac{\Delta m^2_{31} L}{4E})\ ,
+\end{equation}
+for $\alpha \neq \beta$.
+It turns out that the effective mixing angle $\theta_\text{eff}$ is invariant under the CP transformation and %
+so the asymmetry $\mathcal{A}_{\alpha \beta} = 0$.
+The data collected by LBL experiments to date does not provide sufficient statistics to be sensitive %
+to the effects of $\Delta m_{21}^2$ and the measured neutrino--antineutrino asymmetries cannot be constrained %
+(see for example \refref{Abe:2018wpn}).
+Remaining in the limit of \refeq{eq:hierarchy}, the evolution equation including matter effects %
+receives helpful cancellations and it reads
 \begin{equation}
 	i \dv{}{x} \mqty(\psi_{\alpha 1} \\ \psi_{\alpha 2} \\ \psi_{\alpha 3}) =
-		\frac{1}{2E} \mqty (s_{13}^2 \Delta m_{31}^2 + a & 0 & c_{13} s_{13} \Delta m_{31}^2 \\
+		\frac{1}{2E} \mqty (s_{13}^2 \Delta m_{31}^2 + A_\text{CC} & 0 & c_{13} s_{13} \Delta m_{31}^2 \\
 				    0				 & 0 &  0			     \\
 				    c_{13} s_{13} \Delta m_{31}^2 & 0 & c_{13}^2 \Delta m_{31}^2) %
-				    \mqty(\psi_{\alpha 1} \\ \psi_{\alpha 2} \\ \psi_{\alpha 3})\ ,
+				    \mqty(\psi_{\alpha 1} \\ \psi_{\alpha 2} \\ \psi_{\alpha 3})\ .
 \end{equation}
-which depends only on the mixing angle $\theta_{13}$ and is independent of the CP-violating phase.
-Hence, CP violation is not observable in experiments which are only sensitivite to $\Delta m_{31}^2$, %
-just by looking at neutrino oscillations in matter, as well as in vacuum.
-This is easily understandable, as the limit dictated by \refeq{eq:hierarchy} corresponds to an effective %
-two-flavour oscillation.
+It is important to observe that the equation depends only on the mixing angle $\theta_{13}$, %
+but it is independent of $\delta_\text{CP}$.
+If the experiment is only sensitivite to $\Delta m_{31}^2$, an effective two-neutrino mixing is in place. 
+%Hence, CP violation is not observable in experiments which are 
+%just by taking in account oscillations in matter, as well as in vacuum. ?
+%This is understandable because the limit given by the approximation of \refeq{eq:hierarchy} %
+%corresponds to an effective two-flavour oscillation: with two generations only one angle is sufficient to %
+%describe neutrino mixing.
 However, the oscillation probabilities of neutrinos and antineutrinos in matter are not the same, %
-because the medium is not CP-invariant and it induces CP violation in the oscillation probabilities.
-The effect of the CP--violating phase on the asymmetry of Eq.~\ref{eq:asymmetry} can be %
-appreciated from the plot in Fig.~\ref{fig:baseball}.
+because the medium is not CP--invariant and so it induces a CP violation in the oscillation probabilities.
+The effect of $\delta_\text{CP}$ on the asymmetry of \refeq{eq:asymmetry} can be %
+appreciated from the plot in \reffig{fig:baseball}.
 
 \iffalse
 \begin{align}
@@ -244,21 +270,24 @@ will also constrain the value of $\delta_\text{CP}$.
 \end{figure}
 
 Hyper-Kamiokande (HK)~\cite{Abe:2018uyc} will be the next-generation water Cherenkov detector, %
-superseding its predecessor, Super-Kamiokande (SK).
-Employing ring-imaging technique, the rare interactions of neutrinos can be detected, %
-as well as the possible spontaneous decay of nucleons.
-The design of HK does not deviate much from SK and Kamiokande.
+studying neutrino interactions and searching for nucleon decays, employing ring-imaging technique.
+The detector will be located in the Tochibora mine, under Mt.\, Nijugo-yama in the Gifu Prefecture, Japan, 
+just 8\,km south from Super-Kamiokande.
+At this location, the rock overburden is equivalent to 1750\,m.
+%superseding its predecessor, Super-Kamiokande (SK).
+%, the rare interactions of neutrinos can be detected, %
+%as well as the possible spontaneous decay of nucleons.
+The design of HK is similar to the one of SK and Kamiokande, with size being the biggest difference.
 The cylindrical tank of HK will be 72\,m high and 68\,m in diameter, with a fiducial volume of 188.4\,kton (total volume 257.8\,kton), %
 around 8.4 times the fiducial volume of SK.
 The photo-coverage of the inner detector region will be 40\,\%, the same of SK, %
 but it translates to roughly forty thousands photomultipliers (PMTs).
-New 20''box and line PMTs will be employed, with improved charge and riming resolution, thanks to the increased quantum efficiency %
-which is almost twice the QE of previous PMT generation.
-It also has the high pressure tolerance for the usage below 60 m depth of water.
-A study for implementing multi PMT modules, containing each 23 3'' PMT, is being carried out
-The detector will be located underground at Kamioka mine in Gifu Prefecture, %
-with an overburden of approximately 650 meters or more of rock, which is equivalent to \np{1750} meters or more of water.
-
+New 20'' box and line PMTs will be employed, with improved charge and timing resolution, %
+and an increased quantum efficiency which is almost twice as much that of the previous generation of PMTs.
+The new photosensors must also have a high pressure tolerance for the usage below 60 m depth of water.
+A study for implementing multi PMT modules, containing each 23 3'' PMT, is being carried out.
+%The detector will be located underground at Kamioka mine in Gifu Prefecture, %
+%with an overburden of approximately 650 meters or more of rock, which is equivalent to \np{1750} meters or more of water.
 Thanks to incredible statistics and cutting edge resolutions, HK will be capable of a vast variety of physics studies, %
 from accelerator and atmospheric neutrinos to solar and supernova neutrinos.
 Besides detecting proton decay, the main goal of HK is to measure~$\delta_\text{CP}$ and constrain the other oscillation parameters %
@@ -266,11 +295,9 @@ with high precision.
 This is achievable by studying accelerator neutrinos, and to this end the possibility of installing a second detector in Korea, %
 at the secondary oscillation peak, is being investigated.
 
-HK will be located 295\,km away from the target and $2.5^\circ$ off-axis with respect to the beamline.
-The detector cavity is planed to be excavated in Mt. Nijugo-yama in the Tochibora-mine in Gifu Prefecture, %
-which is approximately 8\,km south from SK.
+As SK, HK will be located 295\,km away from the target and $2.5^\circ$ off-axis with respect to the beamline.
 The neutrino beam is generated by a 30\,GeV proton beam colliding on a fixed graphite target; %
-a`focusing horn selects positively charged ($\nu$ mode) or negatively charged ($\cj{\nu}$ mode) pions, %
+a focusing horn selects positively charged ($\nu$ mode) or negatively charged ($\cj{\nu}$ mode) pions, %
 which decay leptonically, to obtain an almost pure muon neutrino or antineutrino beam, peaking at 600\,MeV.
 The accelerator facility at J-PARC will undergo a planned upgrade to increase the beam power up to 1.3\,MW, %
 before HK starts operation.
