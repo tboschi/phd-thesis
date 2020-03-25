@@ -8,35 +8,36 @@ These small values make the detection of neutrinos a challening task.
 Neutrino experiments usually compensate the small cross-section by instrumenting large active volumes, %
 so that a statistical significant amount of neutrino interactions with matter can be recorded.
 By studying the final state particles some knowledge on the incoming neutrino may be retrieved.
-Large volumes are, however, prone to higher background, either from cosmic rays or natural radioactivity.
-and passive or active techniques to reduce such undesired events must be put into place.
+Large volumes are, however, prone to intense background too, either from cosmic rays or natural radioactivity.
+Passive or active techniques to reduce such undesired events must be put into place.
 Neutrino physics has greatly progressed in recent times, thanks to both massive active detectors and %
 improvements in the detection technologies.
-The most emblematic example of neutrino experiments are SNO and Super-Kamiokande (SK) %
+The most emblematic example of neutrino experiments are Sudbury Neutrino Observatory (SNO) and Super-Kamiokande (SK) %
 which respectively demonstrated solar~\cite{Aharmim:2005gt} and atmospheric~\cite{Fukuda:1998mi} neutrino oscillations.
-The picture of three-flavour neutrino oscillations has been since intensively studied %
+The picture of three-flavour neutrino oscillations has been since studied in depth %
 by numerous experiments with not only atmospheric and solar neutrinos, but also with neutrinos from reactors and accelerators.
 Current and future neutrino experiments rely on the experimental techniques that were pioneered and perfectioned %
 by these two successful experiments.
 
 SK and SNO are both water Cherenkov detectors, in which a large body of water is surrounded by %
-photodetectors to capture Cherenkov radiation emitted by the charged leptons produced in neutrinos CC and NC interactions.
+photodetectors to capture Cherenkov radiation emitted by the charged leptons produced in neutrino CC and NC interactions.
 The volumes of SNO and SK are located in mines so as to take advantage of the thick rock overburden, %
 which acts as a passive shield to cosmic muons.
-An outer detector system provides a passive and active veto to the fiducial region in both experiment.
-These simple measurements are responsible for the suppression of the majority of background.
-The most difficult background to control is given by neutrons, which are typically produced by spallation events %
+An outer detector system provides a passive and active veto to the fiducial region of both experiment.
+These simple measures are responsible for the suppression of the majority of background.
+The most difficult background to control, however, is given by neutrons which are typically produced by spallation events %
 induced by cosmic rays or by the decay chains of radioactive elements---such as uranium and thorium---naturally %
 present in the detector's components.
 As we are entering a precision era for neutrino experiments, the capabaility of tagging neutron %
 events is becoming a more and more crucial requisite for detectors.
 One of the most promising approach is the addition of gadolinium to the active medium of the detector.
-Certain isotopes of gadolinium (Gd) have a very high cross-section for thermal neutron capture %
+Certain isotopes of Gd have a very high cross-section for thermal neutron capture %
 accompanied with the emission of high energy photons, which makes neutron detection more efficient.
-Many existing neutrino experiments are already using Gd-loaded water or scintillator for neutron tagging %
-(EGADS, ANNIE, RENO), %
+Many existing neutrino experiments are already using Gd-loaded water or scintillator for neutron tagging, %
+e.g.\ EGADS~\cite{Ikeda:2019pcm}, ANNIE~\cite{Back:2019aqi}, and RENO~\cite{Ahn:2010vy}, %
 and future experiments are planning to use the same principle.
-After a summer-long refurbishment in 2018, Super-Kamiokande will become the largest Gd-doped water Cherenkov detector.
+In the next phase of SK, hundred tons of gadolinium sulfated will be dissolved in water, making %
+Super-Kamiokande the largest Gd-doped water Cherenkov detector.
 
 In this chapter, we will review the working principle of a generic Cherenkov detector in \refsec{sec:wch}, %
 before illustrating in more detail the Super-Kamiokande experiment (\refsec{sec:sk}).
@@ -69,8 +70,8 @@ emits a coherent electromagnetic radiation, called \emph{Cherenkov radiation}. %
 As the particle is moving faster than $c / n$, the front wave of the EM radiation forms a cone %
 which follows behind the charged particle.
 Provided that the length of the track of the particle in the medium is large compared to the emitted wavelength %
-and that the speed of the particle is constant with respect to the period of emission $\tilde{t} = \frac{\lambda}{c}$,
-the radiation is produced when
+and that the speed of the particle is constant with respect to the period of emission $\tau = \frac{\lambda}{c}$,
+the radiation is produced when~\cite{Cerenkov:1937vh}
 \begin{equation}
 	\label{eq:cherenkov}
 	\beta = \frac{v}{c} > \frac{1}{n}\ ,
@@ -91,7 +92,7 @@ which has an angular aperture $\theta$ given by
 The maximum angle is reached by ultra-relativistic particle with $\beta \simeq 1$.
 The charged particle, however, will typically lose energy in the medium due to ionization, %
 slowing down until its energy falls below the threshold $E_\text{thr}$.
-As soon as the condition of \refeq{eq:cherenkov_threshold} does not hold anymore, %
+As soon as the condition of \refeq{eq:cherenkov} does not hold anymore, %
 the particle stops emitting radiation and the cone of light reduces to a truncated cone, %
 which forms a ring when projected onto a surface.
 
@@ -100,26 +101,26 @@ charged particles into detectable light.
 A volume of transparent material, such as water, ice, aerogel, or a liquid scintillator, %
 can be instrumented with photodetectors to capture the Cherenkov radiation.
 The number of photons emitted by a charged particle of charge $z$ per unit path length and per unit %
-energy interval, or equivalently to $\lambda$, has a distribution that follows the Frank-Tamm formula:
+energy interval, or equivalently to $\lambda$, has a distribution that follows the Frank-Tamm formula~\cite{Frank:1937fk}:
 \begin{equation}
 	\label{eq:franktamm}
 	\pdv{N}{x}{\lambda} = \frac{2\,\pi\,\alpha\,z^2}{\lambda^2} %
 	\qty(1-\frac{1}{\beta^2 n^2(\lambda)}) = %
 	\frac{2\,\pi\,\alpha\,z^2}{\lambda^2} \sin^2\theta\ ,
 \end{equation}
-where $\alpha$ is the fine structure constant and $z$ is the charge of the particle..
+where $\alpha$ is the fine structure constant and $z$ is the charge of the particle.
 Due to the inverse dependence on $\lambda^2$, most of the Cherenkov photons are emitted at shorter wavelengths.
-A real medium is always dispersive and allowed frequencies are restricted to the region for which $n(\lambda) > \frac{1}{\beta}$.
+However, a real medium is always dispersive and allowed frequencies are restricted to the region for which $n(\lambda) > \frac{1}{\beta}$.
 The radiation is hence typically emitted in the near visible and ultraviolet regions of the EM spectrum.
 At higher frequencies, for example in the x-ray region, the refractive index drops below one and %
 Cherenkov photons cannot be produced at such short wavelengths.
 Experiments exploiting Cherenkov light try to match the sensitivity band of photodetectors to the radiation region.
 Photomultipliers (PMT) are the detectors of choice, thanks to their low noise and capability of single photodetection, %
-but silicon photomultipliers (SiPM) are also employed.
+but silicon photomultipliers (SiPM) can also be employed.
 
 This technique is largely used in neutrino detection, since it allows to easily %
 transform large volumes of some transparent medium into a detector sensitive to charged particles.
-Amongst the most notable examples, the IceCube experiment is the largest Cherenkov detector, %
+Amongst the most notable examples, the IceCube experiment is the largest Cherenkov detector~\cite{Abbasi:2008aa}, %
 in which more than five thousands PMTs are deployed into the Antarctic ice, covering a volume of one cubic kilometer.
 Charged-current interactions of neutrinos on a nucleon produce charged leptons %
 that are likely to acquire most of the incoming neutrino momentum thanks to the heavy mass of the nucleon.
@@ -150,24 +151,35 @@ the results of a $\nu_\tau$ producing a tau lepton, which decays inside the dete
 
 The Super-Kamiokande experiment (SK) is a water Cherenkov detector, %
 located in the Kamioka mine, under Mt.\ Ikeno in the Gifu prefecture, Japan.
-A schematic is shown in~\reffig{fig:sk_scheme}.
+A schematic of the cavern is shown in~\reffig{fig:sk_scheme}.
 The rock overburden of $\sim\np{1000}$\,m (\np{2700}\,m.w.e.), shields very efficiently the experiment %
 and only cosmic-rays with energies above 1.3\,TeV can reach the detector: %
-the muon flux at SK is about \np{6e-8}\,cm\tapi{-2}s\tapi{-1}sr\tapi{-1}, which translates to a rate of 2\,Hz.
+the muon flux at SK is about \np{6e-8}\,cm\tapi{-2}s\tapi{-1}sr\tapi{-1}, which translates to a rate of 2\,Hz %
+in the fiducial volume.
 The detector consists of a cylindrical stainless steel tank, with a height of 41.4\,m and a diameter of 39.3\,m, %
 and it is filled with 50\,kt of ultra pure water.
-The water region is separated into two concentric cylindrical regions, %
-called the inner detector (ID, 33.8\,m in diameter) and the outer detector (OD), the latter working as passive and active veto.
-The two regions are separated a 55\,cm insensitive region containing the support structure for the PMTs and their cables.
+The water region is separated in two concentric cylindrical regions, %
+called the inner detector (ID, 33.8\,m in diameter) and the outer detector (OD), the latter working as a passive and active veto.
+The two regions are separated by a 55\,cm insensitive region containing the support structure for the PMTs and their cables.
 The ID is instrumented with \np{11129} 20'' Hamamatsu R3600 PMTs, facing towards the inside of the tank.
 Since the 2001 implosion accident, the photocathode of the PMTs are protected by UV--transparent acrylic domes %
-and the side with fiber-reinforced plastic.
+and their sides with fiber-reinforced plastic.
 The photo coverage of the inner surface is around 40\,\%; the remaining surface not occupied by a PMT is %
 lined with black sheet to reduce light reflection.
 The main goal of the OD is to tag events originating or finishing outside the ID.
 It is instrumented with \np{1885} 8'' Hamamatsu R1408 PMTs which are optically coupled to wavelength shifting plates %
-to increase light collectionto increases light collection.
-Sheets of white tyvek maximise the propagation of photons inside the ID and helps the reconstruction of corner-clipping events.
+to increase light collection.
+Sheets of white tyvek maximise the propagation of photons inside the OD and helps the reconstruction of corner-clipping events.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{pics/Electron.pdf}
+	\includegraphics[width=0.45\textwidth]{pics/Muon.pdf}
+	\caption{Reconstructed fully-contained events in the fiducial volume of Super-Kamiokande.
+		Electron rings (left) are less defined than muon ones (right) because they are scattered more %
+		along their path.}
+	\label{fig:sk_events}
+\end{figure}
 
 The refractive index of water in the visible and ultraviolet region is $n \geq 1.33$, %
 and so a charged particle can emit Cherenkov radiation if it is travelling %
@@ -181,41 +193,31 @@ such as vertex, direction, and energy.
 %High energy events, for which $\beta \simeq 1$, generates Cherenkov rings with the same conic angle, %
 %which is $\theta \simeq 41^\circ$ in water. 
 The same algorithm performs particle identification by looking at the topology and the multiplicity of the ring patterns: %
-for example, an electron travelling in the water is more likely to be scattered compared to a muon, %
-that on the other hand will follow a more straight path, and as a consquence %
-the electron-induced ring is less defined and fuzzier than the muon-induced one.
+for example, an electron travelling in the water is more likely to be scattered compared to a muon %
+which, on the other hand, will follow a more straight path.
+The electron-induced ring is less defined and fuzzier than the muon-induced one.
 This can be appreciated on the reconstructed events of \reffig{fig:sk_events}.
-Pions usually interact hadronically nuclei with oxygen nuclei, and therefore they have shorter %
-and the Cherenkov rings are also less defined than a muon ones.
+Pions usually interact hadronically with oxygen nuclei, and therefore they cover shorter tracks %
+and their Cherenkov rings are also less defined than a muon ones.
 Muon and pion events can be accompanied by secondary rings from the electrons produced in their decays.
 Energetic gamma rays can also be detected, as for instance the ones from $\pi^0$ decays, %
 through rings of electrons accelerated by Compton scattering.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.45\textwidth]{pics/Electron.pdf}
-	\includegraphics[width=0.45\textwidth]{pics/Muon.pdf}
-	\caption{Fully-contained events in the fiducial volume of Super-Kamiokande.}
-	\label{fig:sk_events}
-\end{figure}
-
 
 As part of the strategies to tackle backgrounds, typically only events originating at the centre %
 of the ID are considered to be valid.
-The materials of the walls of the tank, and particulary the glass of PMTs, contains radioactive material, %
+The materials of the walls of the tank, and particulary the glass of the PMTs, contains radioactive material, %
 such as isotopes of thorium, uranium and potassium.
 These impurities can mimic a signal event in the MeV energy region, crucial for solar neutrino studies.
-The selection algorithm simply discards any reconstructed event the vertex of which is less than 200\,cm away from the ID walls.
+The selection algorithm in most of the SK analyses simply discards any reconstructed event the vertex of which is less than 200\,cm away from the ID walls.
 This criteria defines a fiducial volume (FV), which is around 22.5\,kt in water mass.
 The water used to fill the tank may also contain impurities, among which radon, that cause background events.
 The water in the tank is continuously filtered at a flow rate of 60\,t/hour by a water purification system (see \refsec{sec:gadolinium}).
 An air purification system pumps radon-free air into the SK area inside the mine.
-This prevents radon in the air to dissolve in the purified water.
-Radon contamination is usually less than 3\,mBq/m\tapi{3}, compared to unpurifies air that can peak %
+This prevents radon in the air to dissolve in the clean water.
+Radon contamination is usually less than 3\,mBq/m\tapi{3}, compared to unpurified air that can peak %
 at about 1200\,Bq/m\tapi{3}.
-Thanks to these precautions the current energy threshold for SK is \np{3.5}\,MeV.
-The main oscillation analyses of SK consider only events originating inside the FV and fully-contained, %
-i.e.\ that do not propagate in the OD, as this is signature is given mostly by neutrino interactions.
+Thanks to these precautions and state-of-the-art electronics~\cite{Nishino:2009zu}, the current energy threshold for SK is \np{3.5}\,MeV.
 
 \section{Neutrons in Super-Kamiokande}
 \label{sec:sk_neutron}
@@ -227,13 +229,12 @@ Despite the large exposure of the experiment, some studies are still curbed by s
 and would benefit from simply collecting more data.
 Other searches, instead, suffer from irreducible background events, as for example the detection of Relic Supernova Neutrinos (SNR), %
 %One of the main motivation to detect neutrons is to be able to detect relic supernova neutrinos, %
-also know as Diffuse Supernova Neutrino Background (DSNB), an incoherent background spectrum %
-produced from all previous core-collapse supernova explosions in the Universe (see \refsec{sec:nu_sun_sn}).
+an incoherent background spectrum produced from all previous core-collapse supernova explosions in the Universe (see \refsec{sec:nu_sun_sn}).
 The observation of SNR would be of great importance for improving our knowledge on the population of core-collapse SN %
 and the rate of star formation.
-The predictions provide with several limits but although SK has the best world limit, no SRN has been detected yet.
+The predictions provide with several limits but although SK has the best world limit, no SRN has been detected yet~\cite{Bays:2011si, Zhang:2013tua}.
 The average energies of these neutrinos are around a few tens of MeV, at which the largest cross-section %
-corresponds to inverse beta decay (IBD, see \refsec{sec:ibd}).
+corresponds to inverse beta decay (see \refsec{sec:ccqe}).
 %which is two orders of magnitude larger than $\nu_e$ elastic scattering.
 This measurement is afflicted at low energies by invisible muon decay%
 ---muons below Cherenkov threshold that decay into electrons---and at high energies, %
@@ -243,20 +244,19 @@ rejected with neutron tagging.
 If we could detect neutrons efficiently, these backgrounds could be reduced significantly and thus, %
 making the detection of the DSNB possible for the first time.
 
-Searches of galactic supernova burst could also avail of an improved background suppression.
-SK will be exposed to a huge number of neutrino events if a core-collapse supernova occurs inside our galaxy, %
-providing not only an early warning system for other observatories (see \refsec{sec:nu_sun_sn}), %
+Searches of galactic supernova bursts could also avail of an improved background suppression.
+SK will be exposed to a huge number of neutrino events if a core-collapse supernova occurs inside our galaxy.
+Such an event would provide not only an early warning system for other observatories, %
 but also information about the neutrino spectrum, time profile, and information about early stages of the core-collapse process, %
-such as pre-supernova neutrinos from the silicon burning phase~\cite{Simpson:2019xwo}.
-The majority of neutrinos emitted are actually antineutrinos in the energies where IBD cross-section dominates.
+like pre-supernova neutrinos from the silicon burning phase~\cite{Simpson:2019xwo}.
+A sizeable amount of the neutrinos emitted are actually antineutrinos in the energies where the IBD cross-section dominates.
 Detecting the neutron in the final state can be fundamental in distinguishing whether the incoming particle is %
 a neutrino or an antineutrino.
-
 Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states.
-At energies $E_\nu > 1$\,GeV, the number of CCQE interactions decreases and often additional neutrons or pions %
-are also released by secondary hadronic interaction.
-The capability of separating neutrinos and antineutrinos can still produce anti-neutrino enriched samples
- Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
+At energies $E_\nu > 1$\,GeV, the number of CCQE interactions decreases and often additional neutrons ($2p2h$) or pions (baryon resonance) %
+are also released in the scattering process.
+The capability of separating neutrinos and antineutrinos can still produce anti-neutrino enriched samples.
+Finally, the background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
 
 %Among these background sources, flasher events\footnote{A flasher event refers to the phenomenon %
 %	in which a PMT mis-fires and many repetitive internal discharges are triggered also on nearby PMTs.
@@ -264,10 +264,10 @@ The capability of separating neutrinos and antineutrinos can still produce anti-
 
 \subsection{Neutron tagging}
 
-Neutrons have a relative long lifetime and since they cannot directly emit Cherenkov radiation, %
-these particles can travel quite some distance from they production point.
+Neutrons have a relative long lifetime and, since they cannot directly emit Cherenkov radiation, %
+these particles can travel quite some distance from they production point without being detected.
 Neutrons interact with nuclei in various way, depending on their energy and the target nuclues.
-The interactions are divided in three typologies: scattering, which can elastic or inelastic, %
+The interactions are divided in three typologies: scattering, which can be elastic or inelastic, %
 absorptions, such as radiative capture or fission, and nucleon transfer reactions.
 The kinetic energy of the neutron $T$, sometimes referred to as the \emph{detection temperature}, %
 is the main factor in determining the dominant cross-section of these interactions.
@@ -279,29 +279,29 @@ The elastic scattering cross-sections at energies below 1\,MeV is almost indepen
 This is true for most light isotopes, but some intermediate and heavy elements presents some specific %
 behaviour at higher energy.
 Neutrons for which $T \simeq \np{0.0025}$\,eV are called \emph{thermal neutrons} because %
-a Maxwell-Boltzmann distribution at a temperature 290\,K peaks at that energy; %
-such neutrons are therefore in thermal equilibrium with the surrounding medium.
-At thermal energies and below the most important interaction is neutron absorption and the cross-section follows the ``$1/v$ law'', %
-with $v$ the velocity of the neutron.
+a Maxwell-Boltzmann distribution at the temperature of 290\,K peaks at that energy; %
+such neutrons are in thermal equilibrium with the surrounding medium.
+At thermal energies and below, the most important interaction is neutron absorption, %
+the cross-section of which follows the ``$1/v$ law'', with $v$ the velocity of the neutron.
 In this region, absorption cross-section increases as the velocity, or the detection temperature, of the neutron decreases
 \begin{equation}
 	\label{eq:abs_xsec}
-	\sigma \sim \frac{1}{v} \sim \frac{1}{T}
+	\sigma \sim \frac{1}{v} \sim \frac{1}{T}\ .
 \end{equation}
 Being in thermal equilibrium and having a lower kinetic energy allows the neutron to form %
 a compound nucleus with the target, which might undergo fission or radiation emission if it is a non-fissile nuclide.
-For energies between a few eV and hundreds of keV, resonances in the capture cross-section occurs and these %
+For energies between a few eV and hundreds of keV there are resonances in the capture cross-section which %
 are strongly dependent on the target isotope, but also on the temperature of the material.
-The thermal motions of the target relative to the incident neutron broadens the resonance peaks, %
+In fact, the thermal motions of the target relative to the incident neutron broadens the resonance peaks, %
 despite the integrated cross-section over the energy remains constant.
-This effect is called \emph{Doppler broadening}, and results in a decreased likelihood of capture or fission %
+This effect is called \emph{doppler broadening}, and results in a decreased likelihood of capture or fission %
 when the target material has a wide energy distribution.
 
 %%https://doi.org/10.1016/j.nds.2018.02.001
-%Brown:2018jhj,
+%BBrown:2018jhjrown:2018jhj,
 
 Fast neutrons slow down to thermal energies via subsequent elastic collisions, until %
-the free neutron is captured by some nuclei.
+the free neutron is captured by some nucleus.
 This process is called \emph{thermalisation}.
 Considering a scattering between a neutron and a nucleus, $n + A \to n + A$, %
 the final state energy of the neutron depends on the outgoing angle $\hat\theta$ %
@@ -316,7 +316,7 @@ is the following kinematic factor
 	\label{eq:n_alpha}
 	\zeta = \frac{(m_n - M_A)^2}{(m_n + M_A)^2} \simeq \frac{(1 - A)^2}{(1 + A)^2}\ .
 \end{equation}
-Using classic mechanics, in the laboratory frame the scattering angle $\theta$ is given by
+Using classic mechanics, the scattering angle $\theta$ in the laboratory frame is given by
 \begin{equation}
 	\label{eq:lab_angle}
 	\cos\theta = \frac{A\,\cos\hat\theta + 1}{\sqrt{1 + 2\,A\,\cos\hat\theta + A^2}}\ ,
@@ -347,7 +347,7 @@ energy decrease in log-scale, which on average equals to
 	\expval{\xi} = \frac{\displaystyle \int \dd{\Omega} \log\qty(\frac{E_\text{i}}{E_\text{f}})}{\displaystyle \int\dd{\Omega}} %
 		     = \frac{\zeta - \zeta \log \zeta -1 }{\zeta - 1} = 1 + \frac{(A-1)^2}{2A} \log \frac{A-1}{A+1}\ .
 \end{equation}
-With the expression, we can compute the average number of collisions a neutron undergoes when %
+With this expression, we can compute the average number of collisions a neutron undergoes when %
 propagating in a medium.
 Because of the dependency of $\xi$ on $A$, lighter nuclides are more effective than heavier ones.
 For example, the number of interactions for a fast neutron to slow down to thermal energies in lead ($A = 208$) %
@@ -362,20 +362,19 @@ their respective elastic cross-sections
 In this simplified scenario we overlooked the impact of resonance capture, which manifests at around the keV energy range.
 While fast neutrons with energies above 1\,MeV are being slowed down to thermal energies, %
 the mean free path decreases with the neutron's velocity, and the possibility of resonance capture increases.
-These captures would affect the relative neutron flux around the energy of the resonance peaks, which %
+These captures affect the relative neutron flux around the energy of the resonance peaks, which %
 might be widened by the Doppler broadening effect.
 
 \begin{figure}
 	\centering
 	\resizebox{\linewidth}{!}{\input{pics/neutron_xsec.tex}}
-	\caption{Neutron cross-sections on hydrogen (left) and gadolinium (right) as a function of energy. %
+	\caption{Neutron cross-sections on hydrogen (left) and gadolinium (right) as a function of energy from \refref{Brown:2018jhj}. %
 	       The dominant component for \tapi{1}H is elastic scattering, despite neutron capture %
 	       reaches relative high cross-section values for sub-thermal neutrons ($T < 2.5$\,meV).
-	       Fast neutrons interact on \tapi{155}Gd via elastic scattering, but for lower energies %
+	       Fast neutrons interact on \tapi{157}Gd via elastic scattering, but for lower energies %
 	       the main contribution comes from neutron capture cross-section.
 	       The $1/v$ dependency can be appreciated in both cases.
-	       The inset shows a detail of the resonance region of the cross-section, %
-	       between 10\,eV and 100\,eV.}
+	       The inset shows a detail of the resonance region of the cross-section, between 10\,eV and 100\,eV.}
 	\label{fig:n_xsec}
 \end{figure}
 
@@ -394,10 +393,10 @@ The characteristic time for Maxwellian nuetrons with energy below 10\,MeV to the
 by hydrogen in water has been measured to be $(\np{204.8}\pm\np{0.4})$\,\textmu s~\cite{Cokinos:1977zz}.
 The typical time and energy of this event require special triggers and dedicated analysis %
 to correctly identify the neutron capture on hydrogen in SK.
-Since the SK-IV phase, after any primary events above a fixed, higher threshold is detected, 
+Since the SK-IV phase, after any primary events above the standard higher energy threshold is detected, 
 a time window of 535\,\textmu s is saved with no threshold requirement, so that approximately the 92\,\% %
 of neutron capture signals are collected.
-The 2.2\,MeV $\gamma$, on average, produces 7$\sim$8 PMT hits, which are difficult to reconstruct accurately.
+The 2.2\,MeV photon produces on average 7$\sim$8 PMT hits, which are difficult to reconstruct accurately.
 The PMT hits are expected to happen in a narrow timing distribution and to be anisotropic.
 A 10\,ns sliding window is used to look for $\gamma$ candidates with more than 7 hits and less than 50 %
 to avoid high energy backgrounds.
@@ -406,7 +405,7 @@ with an expected 4.5 background events per neutrino event.
 The background rejection is improved by feeding the simulated data of the selected candidates %
 to a neural network, wich retains an overall efficiency of 20.5\,\% with \np{0.018} backgrounds per signal event~\cite{Irvine:2014hja}.
 The efficiency is found to be highly dependent on the distance travelled by the released neutron, %
-due to the fact that knowning the location of the capture significantly reduce the background.
+due to the fact that knowning the location of the capture significantly reduces the background.
 
 %follows an exponential and the time constant is largely studied amongst all the thermalisation in water.
 %It was found that neutron thermalisation in water has a time constant of 5$\mu$s [fujino, sumita, shiba].
@@ -421,7 +420,7 @@ due to the fact that knowning the location of the capture significantly reduce t
 %https://www.sno.phy.queensu.ca/sno/papers/labranche_phd.pdf
 %https://www.sno.phy.queensu.ca/sno/papers/lyon_phd.pdf
 
-Neutron tagging efficiency in SK has been measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
+Neutron tagging efficiency in SK is measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
 In an Am-Be source, \tapi{214}Am decays 100\,\% of the times into \tapi{237}Np via $\alpha$ emission, %
 with a half-life of 432.6\,y.
 The $\alpha$ particle is captured by the \tapi{9}Be nuclei to become \tapi{12}C\tapi{*} with the emission of a neutron.
@@ -434,7 +433,7 @@ with the release of scintillation light that triggers the detectors.
 Around a thousands of photoelectrons are typically observed by the PMTs from the BGO emission; %
 this intense signal triggers the search for neutron captures on hydrogen.
 %Forced triggers were imposed during the SK-III phase to extend the acquisition time window.
-The candidates are selected by an analysis similary to the simulation study.
+The candidates are selected by an analysis similar to the simulation of \refref{Irvine:2014hja}.
 Neutrons from beryllium have energies below 10\,MeV, as seen in \reffig{fig:spectra}, %
 less than the typical neutron energy resulting from an atmospheric neutrino interactions.
 For this reason, in the calibration analysis the neutron capture vertex is assumed to be roughly at the same location %
@@ -469,7 +468,7 @@ Thanks to a shorter half-life of 2.645\,y, a \tapi{252}Cf source presents a high
 with the same number of nucleons.
 Furthermore, the SF process emits an average of 3.75 neutrons per fission and an average of 10.3 photons %
 summing up for a total energy of 8.2\,Mev~\cite{PhysRev.104.699}.
-As for the case of the Am-Be calibrating source, the photons can be collected by a scintillating material %
+As for the case of the Am-Be calibrating device, the photons can be collected by a scintillating material %
 and tag the emission of neutrons.
 After the trigger signal, multiple neutron captures on hydrogen are expected, separated by short intervals in time %
 of the order of milliseconds.
@@ -477,7 +476,7 @@ The yield of multiple neutrons is an advantage that the SNO collaboration exploi
 called \emph{Time Series Analysis}, that uses multiplicity and time intervals between the detected events %
 to find the neutron detection efficiency, the neutron mean life inside the detector, %
 and activity from non-fission events~\cite{Labranche:2004sya}.
-Differently from an Am-Be source, the activity of which must be known precisely, the neutron tagging calibration %
+Differently from the Am-Be source, the activity of which must be known precisely, the neutron tagging calibration %
 with a californium source can be done in principle regardless of that information.
 The fast-neutron and photon energy spectra from \tapi{252}Cf are shown in \ref{fig:spectra}: %
 the neutrons are emitted with a most-probable energy of 0.7\,MeV and an average energy of 2.1\,MeV.
@@ -492,7 +491,7 @@ For laboratory measurement, we used a \tapi{252}Cf source with an activity of 4.
 The californium is encapsulated in a double-hull stainless steel cylinder, 9.5\,mm in diameter and 37.5\,mm high.
 The source is placed in a simple prototype of the device, shown in \reffig{fig:setup}, %
 consisting of a cylindrical plastic scintillator (EJ-200), coated with mylar to contain optical photons, %
-and optically mounted on a ET Enterprise 9902B series~PMT.
+and optically coupled to an ET Enterprise 9902B series~PMT.
 A hole, coaxial to the plastic cylinder, allows to insert the source in the middle of the scintillator.
 The cylinder is 3\,in in length and 1.5\,in in diameter.
 The rate of photons emitted by the \tapi{252}Cf source is measured with this setup; %
@@ -528,10 +527,10 @@ An ideal device would absorb all the photons converting them into visible light 
 The plot in \reffig{fig:QE} shows the correct implementation of the scintillator and PMT efficiencies in the simulation: %
 there is good agreement with the MC distribution and the expected optical photon spectrum.
 Different volumes and materials are tested for the scintillator in the simulation.
-As materials, BGO crystal and a generic vinyltouluene are chosen.
-The selected shapes of the volume are a cube, and cylinder with a diameter-height-ratio 1:1 and 1:2.
+As far as materials are concerned, BGO crystal and a generic vinyltouluene are chosen.
+The selected shapes for the volume are a cube and cylinders with a diameter-height-ratio 1:1 and 1:2.
 The latter shape models the protoype tested in the laboratory.
-The characteristic size, i.e.\ the side for the cube and the height for the cylinders, is swept from 1\,cm to 40\,cm.
+The characteristic size, i.e.\ the side for the cube and the height for the cylinders, is varied from 1\,cm to 40\,cm.
 The simulation tracks the energy deposited in the scintillator by the photons and the number of neutrons escaping the device, %
 from a simulation of \np{10000} SF events.
 The result is shown in Fig.~\ref{fig:geant4}, where, for both photons and neutrons, %
@@ -539,8 +538,8 @@ the average value of the fraction of absorbed energy with respect to the initial
 In terms of materials, the BGO crystal unsurprisingly performs better than the plastic scintillator, %
 absorbing almost the entirity of photons and leaving the neutrons mainly unaffected.
 A part from not being as efficient as scintillator, the hydrogen in the plastic thermalises the neutrons, %
-and this might have an impact on the capture time in a water Cherenkov detector.
-In terms of sizes and shapes, a BGO cube of $4--6$\,cm sides seems to maximise photon absorption and minimise %
+which would impacts the capture time in a water Cherenkov detector.
+In terms of sizes and shapes, a BGO cube of $4\sim6$\,cm sides seems to maximise photon absorption and minimise %
 the energy loss of neutrons.
 This is in line with the choice for the calibrating device for SK, which is a 5\,cm BGO cube.
 Both the cylindrical shapes are optimal when the height is $7\sim11$\,cm, but more crystal would be required %
@@ -549,6 +548,7 @@ As far as the plastic scintillator is concerned, it is more difficult to define 
 a cubic scintillator is more efficient in collecting photons, but being the form with the largest volume %
 per given size, it is also more effective in slowing down neutrons.
 The two cylinder shapes have similar performances, proportionally to their volumes.
+Further R\&D is in place to build an optimal device for neutron calibration.
 
 \begin{figure}
 	\centering
@@ -696,12 +696,12 @@ estimated efficiency of 90\,\%~\cite{Beacom:2003nk} for a 0.2\,\% Gd solution (s
 
 In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound %
 will be dissolved in the detector to improve the ability to identify neutrons.
-This is possible thanks to extensive R\&D performed with the EGADS experiment~\cite{Ikeda:2019pcm}.
+This is possible thanks to extensive R\&D performed by the EGADS experiment~\cite{Ikeda:2019pcm}.
 In \refref{Beacom:2003nk}, gadolinium trichloride GdCl\tped{3} was proposed, %
 but the current full-scale plan for SK and EGADS has setteled on using gadolinium sulfate Gd\tped{2}(SO\tped{4})\tped{3}.
 %---another candidate being 
 This choice was determined by a few requirements by which a Gd compound canditate must comply.
-In addition to the aforementioned salts, a third option could have been gadolinium nitrate Gd(NO\tped{3})\tped{3}).
+In addition to the aforementioned salts, a third option could have been gadolinium nitrate Gd(NO\tped{3})\tped{3}.
 The candidate compound must be water soluble, also in large amounts, but all of the three gadolinium salts %
 easily dissolve in water.
 %The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
@@ -716,7 +716,7 @@ Soak tests in a Gd solution at $25^\circ$C showed that the rubber friction pads 
 is susceptible to the sulfate, even though they seem to be affected also by pure water.
 In over twenty years of operation of SK, the effect has never been noticed, meaning the filtration system %
 removes the impurities from this material with great success.
-Taking in account the different scales of the detector and the test and that the typical temperature %
+Taking in account the different scales between the detector and the test and that the typical temperature %
 of the water in SK is around $13^\circ$C, the case was deemed not to be a potential problem.
 %they show different corrosive properties, due to the different anions of the molecule.
 %The nitrate and the sulfate turn out to be non-corrosive, and do not seem to affect detectors components much, if at all.
@@ -728,7 +728,7 @@ It is also necessary that the gadolinium solution maintains a high level of opti
 so that optical photons of Cherenkov radiation can propagate inside the tank without attenuation.
 The Gd(NO\tped{3})\tped{3} is opaque in the UV region of the electromagnetic spectrum, for wavelengths less than 350\,nm, %
 and this unfortunately is where a large fraction of Cherenkov light is detected in SK PMTs, %
-so it cannot be a good full scale test candidate either.
+so it must be rejected as a good full scale candidate.
 This leaves Gd2(SO4)3 as the only choice possible, having good transparency in the UV and optical regions.
 %This is in fact the choice that has been made by the EGADS group, and the remaining studies described in this paper %
 %have been done using, or under the assumption that, Gd2(SO4)3 will be used.
@@ -740,7 +740,8 @@ The most challenging aspect of a gadolinium-loaded water Cherenkov detector is t
 The SK water purification system produces ultrapure water, close to the theoretical maximum, %
 with a resistivity around $18$\,M$\Omega\cdot$cm.
 This high purity is achieved thanks to several filtration stages, including microfilters, %
-ultrafilters (less than 0.1\,\textmu m), UV lamps for bacterial growth, reverse osmosis,  vacuum and membrane degasifiers, and anion-exchange resins.
+ultrafilters discarding particles with a size less than 0.1\,\textmu m, UV lamps for bacterial growth, %
+reverse osmosis, vacuum and membrane degasifiers, and anion-exchange resins.
 The current process, without modifications, would completely remove dissolved gadolinium.
 Therefore, in order to keep good water quality and high transparency, it is necessary to adapt the purification system %
 such that it can remove all impurities, ions included, except Gd\tapi{3+} and its anionic partner (SO\tped{4})\tapi{2-}.
@@ -756,12 +757,15 @@ The concentrated line goes directly back to a buffer collection tank, whereas th
 is first cleaned by deionisation and reverse osmosis.
 In the collection tank, dissolved air is removed by a membrane degassifier and resins are used %
 for the final purification.
-After full loading up to a concentration of 0.2\,\% of Gd, the water transparency is found to within typical SK values %
-thanks to the water filtration system which can maintain good water quality and minimises gadolinium losses.
+After full loading up to a concentration of 0.2\,\% of Gd, the water transparency is found to be within typical SK values %
+thanks to the water filtration system which can maintain good water quality and minimise gadolinium losses.
 
 The water system for the gadolinium phase of SK will be essentially a scaled version of the EGADS filtration system.
 During the first stage, a solution of 0.02\,\% in Gd\tped{2}(SO\tped{4})\tped{3} mass will be loaded in SK, %
 to progressively increase it up to 0.2\,\% after the first comissioning.
+When the experiment will be de-comissioned in the future, the gadolinium will be extracted from the water system %
+to avoid disperding it in the environment.
+This process was also tested successfully by the EGADS experiment.
 
 \section{Monitoring gadolinium concentration}
 \label{sec:gad}
@@ -772,13 +776,13 @@ It is fundamental, therefore, to measure the concentration regularly, as this ca
 On large scales like for SK, it is not a trivial task to predict the temperature and the flow dependency %
 of the dissolved Gd.
 At the moment, the EGADS experiment keeps track of the Gd concentration with a Zeeman atomic absorption spectrometer (AAS), %
-located near the experiment.
+located near the site of the experiment.
 Water samples are collected monthly from the water tank, diluted and atomised inside the AAS machine.
 The amount of Gd is then compared to known samples of Gd loaded water to determine the concentration.
 This method reaches currently an accuracy of $\sim3$\,\%.
 
 We propose an alternative method for monitoring gadolinium concentration, %
-which still uses atomic absorption lines of Gd, but in solution in water.
+which still uses atomic absorption lines of Gd, but in solution in water and more frequently.
 Gadolinium presents strong emission/absorption lines in the UV region~\cite{Morton_2000}.
 Using a UV source and a spectrometer it is possible to measure the absorption by gadolinium dissolved in water.
 The absorbance in directly proportional to the amount of gadolinium and therefore to the concentration, %
@@ -802,13 +806,13 @@ the height of one peak is related to the Gd concentration, thanks to the exponen
 with $\lambda$ the attenuation length and $\ell$ the length of the sample.
 This is illustrated in \reffig{fig:gad_lines}.
 For a fixed cross-section $S$ and a fixed length, the attenuation length will %
-decrease with the quantity of Gd, $m_\text{Gd}$, dissolved in the solution, or with the concentration of Gd $\rho_\text{Gd}$, %
+decrease with the absolute quantity of Gd dissolved in the solution, $m_\text{Gd}$, or rather with the concentration $\rho_\text{Gd}$, %
 since the volume is constant between the pure water and Gd-loaded water measurements:
 \begin{equation}
 	\rho_\text{Gd} = \frac{m_\text{Gd}}{S\,\ell}\ .
 \end{equation}
 The Beer-Lambert law relates the optical attenuation of a physical material, containing a single attenuating species %
-of uniform concentration, as linearly dependent to the optical path length via a material-specific constant
+of uniform concentration, as linearly dependent to the optical path length via a material-specific constant~\cite{Beer_1852}
 \begin{equation}
 	\label{eq:beerlambert}
 	\mathcal{A} = \varepsilon\, \ell\, \rho \ ,
@@ -845,25 +849,26 @@ The Beer-Lamber law can be generalised to a generic number of attenuating elemen
 	\mathcal{A} = \sum_{i = 1}^N \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = %
 	\ell\,\varepsilon_0\,\rho_0 +  \sum_{i = 2}^N \varepsilon_i \int_0^\ell \dd{z} \rho_i (x) = a + b \, \rho_0\ ,
 \end{equation}
-where the attenuating species of interest has been isolated: %
+where the attenuating species of interest, labelled ``0'', has been isolated: %
 if the other elements are constant, there is a linear law with measured absorbance and concentration.
 The absorbance will also depend on the purity of the solvent---in this case water---and other factors, %
 such as the optical interfaces.
-It follows that absoroption measurements taken with different setup cannot be compared unless the %
+It follows that absorption measurements taken with different setup cannot be compared unless the %
 effect of other absorbing elements is well understood.
 Namely this would require to know the factors $a$ and $b$ of \refeq{eq:linear_bl}, %
 and so calibration of the measurement apparatus is required.
 The absorption can also be biased by the presence of wavelength-independent factors, %
 or at least independent in the region of the spectrum of interest.
-Examples of these factors could are micro-bubbles or other impurities in the samples which %
+Examples of these factors are micro-bubbles or other impurities in the samples which %
 can scatter or block the probing light, thus adding a bias on the measurement.
-The estimation of the absorbance can be improved by using two lines and taking the difference of the absorption peaks %
+An unbiased estimation of the absorbance can therefore be achieved by using two absorption lines %
+and taking the difference of the peaks %
 \begin{equation}
 	\Delta \mathcal{A} = \mathcal{A}(x_1) - \mathcal{A}(x_2) = %
-	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ ,
+	\log_{10} \frac{I_0 (x_1)}{I(x_1)} - \log_{10} \frac{I_0 (x_2)}{I(x_2)}\ .
 \end{equation}
-as any wavelength-independent effect is removed.
-Supposing the true intensity of the reference sample is modified by a factor $\eta$, %
+In this way, any wavelength-independent effect is removed.
+Supposing the true intensity of the reference sample is modified by a factor $\eta$ %
 and the intensity of the study sample is varied by a factor $\zeta$, we would have
 \begin{equation}
 	\Delta \mathcal{A} = %
@@ -910,21 +915,29 @@ but the grating system refracts the light input on a linear CCD, recording the w
 electromagnetic spectrum simultaneously.
 The speed of the measurement with such a spectrometer is only limited by the integration time %
 and reading rate of the CCD.
-A set of consecutive traces is taken and the error on the measurement can also be estimated.
-On of the advantage of the Ocean HDX spectrometer is that it can reach a very high light throughput %
+A set of consecutive traces is taken and the error on the measurement is estimated by taking the mean.
+One of the advantage of the Ocean HDX spectrometer is that it can reach a very high light throughput %
 thanks to a toroidal mirroring system which reduces stray light and maximises the dynamic range.
-We find that these are the deciding factors for our application of determining gadolinium concentration, %
-in addition to speed of the absorbance measurement.
+We find that these are the deciding factors for our application of monitoring gadolinium concentration, %
+in addition to the speed of the measurement.
 Wavelength resolution is not as important, because the relative position of the lines is sufficient %
-to identify them and so compute the absorbance.
+to identify them and to compute the correct absorbance.
 A UV-LED, with emission centered at 275\,nm, is used as an illuminating source.
 The profile is reported in \reffig{fig:gad_10cm}.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{pics/Device.pdf}
-	\caption{Gadolinium absorption lines.}
-	\label{fig:gad_1m}
+	\includegraphics[width=0.7\linewidth]{pics/Device.pdf}
+	\caption{Schematic of the device used for testing the 100\,cm water sample in laboratory.
+		The diaphragm pump circulates the water in the cell and interfaces the device with the main water system.
+		We noticed during the test that the pump was leaving a considerable amount of microbubbles in the sample.
+		Waiting 15 minutes between measurement was found to be sufficient to restore the intensity of the light at %
+		the spectrometer.
+		The pump, however, might not be needed when the device will be installed in EGADS or SK as the %
+		pressure of the water system will be enough to circulate water and fill the 100\,cm cell.
+		This scenario is favourable since the amount of undesired microbubbles is minimised and the %
+		measurement can be taken more frequently.}
+	\label{fig:gad_device}
 \end{figure}
 
 In order to estimate the accuracy of the gadolinium concentration measurement, %
@@ -932,9 +945,9 @@ we tested a prototype based on a 10\,cm cell starting with a 0.2\,\% Gadolinium 
 which is diluted down to achieve lower concentrations.
 At each known value of concentration, the absorption is calculated by averaging one thousands spectra %
 taken with the Gd-loaded water and the pure water samples.
-In this way, the error on the abosorbance is defined as the standard error of the mean.
+In this way, the error on the absorbance is defined as the standard error of the mean.
 Following \refeq{eq:linear_bl}, a linear interpolation is performed between the difference of the absorption peaks %
-$\Delta \mathcal{A}$ and the concentration $\rho_\text{Gb}$: 
+$\Delta \mathcal{A}$ and the concentration~$\rho_\text{Gb}$: 
 \begin{equation}
 	\Delta \mathcal{A} = a + b\,\rho_\text{Gd}\ .
 \end{equation}
@@ -955,26 +968,35 @@ This method based on a 10\,cm performs similarly to the AAS spectrometry employe
 	\label{fig:gad_fit}
 \end{figure}
 
-In the first stage of the gadolinium phase of Super-Kamiokande, a concentration of 0.02\,\$ gadolinium sulfate %
-will be loaded, and therefore sensitivity on this low value is also required.
+In the first stage of the gadolinium phase of Super-Kamiokande, a concentration of 0.02\,\% gadolinium sulfate %
+will be loaded, and therefore a good sensitivity on this low value is also required.
 To achieve better sensitivities, a longer water sample can be used to increase absorbance by gadolinium.
-Thanks to the high light throughput of the Ocean HDX spectrometer, we developed a automated device %
-with a 100\,cm water cell which is remotely operated to circulate the water.
-At this scale, effects from optics, LED and spectrometer alignment, and water purity start becoming important.
+The resolution should scale with the absolute quantity of Gd, or the length in this case.
+Thanks to the high light throughput of the Ocean HDX spectrometer, %
+we successfully studied absorbance spectra using a 100\,cm water sample.
+In order to deal with a larger water volume, we also developed an automated device which is remotely operated to circulate the water.
+This device will be eventually installed in EGADS and SK to monitor the gadolinium concentration.
+A schematic of the prototype used in laboratory is shown in \reffig{fig:gad_device}.
+At this long scale, effects from optics, LED and spectrometer alignment, and water purity become important.
 As it can be seen from \reffig{fig:gad_fit}, measurements of the absorption at different concentration levels %
 present a non-flat baseline that can bias the concentration estimation.
 We use a five-degree polynomial to fit the baseline and remove it, to keep the measurement consistent in time.
+The same analysis of the 10\,cm water sample is performed on the 100\,cm measurement and the result is reported in \reffig{fig:gad_1m}.
+The relative error on the measurement is improved tenfold compared to the 10\,cm test.
+For a concentration of 0.2\,\% the error is estimated to ~0.3\,\%, whereas for a 0.02\,\% concentration the error is around 1.5\,\%.
+The calibration procedure, however, needs further investagation since the concentration seems to follow a quadratic law %
+with the absorbance.
 
 
 \begin{figure}
 	\centering
 	\resizebox{0.9\textwidth}{!}{\input{pics/gad_1m.tex}}
 	\caption{The inverse linear fit (red) between concentration and absorption %
-		is shown togwther with data (blue) on the top panel for the 1,m water sample.
+		is shown togwther with data (blue) on the top panel for the 100\,cm water sample.
 		The absolute values of the errors is enlarged by a factor of 20.
 		The linear fit is done only with the six leftmost points.
 		The beahviour appears to be quadratic (green) than linear.
 		The relative error (bottom panel) is well below the 3\,\% limit, %
-		even for concentration of 0.02\,\%.}
+		even for a concentration of 0.02\,\%.}
 	\label{fig:gad_1m}
 \end{figure}

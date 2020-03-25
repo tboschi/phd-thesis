@@ -6,30 +6,30 @@
 %\chapter{Hyper-Kamiokande sensitivity to $\delta_\text{CP}$}
 
 The Dirac Lagrangian is invariant under three fundamental transformation of the fermion fields, %
-and these are charge conjugation $\mathcal{C}$, parity $P$, and time reversal $T$.
+and these are charge conjugation C, parity P, and time reversal T.
 The spinor field $\psi$ and $\cj{\psi}$ transform under charge conjugation as
 \begin{equation}
-	\psi(x) \longmapsto \psi^C(x) = \xi_C\, \mathcal{C}\,\cj{\psi}^T (x) \quad , \quad
-	\psi(x) \longmapsto \cj{\psi^C}(x) = - \xi_C^*\,\psi^T (x)\,\mathcal{C}^\dagger\ ,
+	\psi(x) \longmapsto \psi^\text{C}(x) = \xi_\text{C}\, \mathcal{C}\,\cj{\psi}^T (x) \quad , \quad
+	\psi(x) \longmapsto \cj{\psi^\text{C}}(x) = - \xi_\text{C}^*\,\psi^T (x)\,\mathcal{C}^\dagger\ ,
 \end{equation}
-where $\mathcal{C}$ is the charge conjugation operator and %
-since applying the charge conjugation twice returns the same initial field, %
-$\xi_C$ is a unitary phase, or $\abs{\xi_C}^2 = 1$. 
+where $\mathcal{C}$ is the charge conjugation operator.
+Applying the charge conjugation twice returns the same initial field, %
+so $\xi_\text{C}$ is a unitary phase, or $\abs{\xi_\text{C}}^2 = 1$. 
 The parity transformation, instead, inverts spatial coordinates and acts on spinor fields as
 \begin{equation}
-	\psi(x) \longmapsto \psi^P(x') = \xi_P\, \gamma^0 \,\psi(x) \quad , \quad
-	\psi(x) \longmapsto \cj{\psi^P}(x') = \xi_P^*\,\cj{\psi}(x)\,\gamma^0\ .
+	\psi(x) \longmapsto \psi^\text{P}(x') = \xi_\text{P}\, \gamma^0 \,\psi(x) \quad , \quad
+	\psi(x) \longmapsto \cj{\psi^\text{P}}(x') = \xi_\text{P}^*\,\cj{\psi}(x)\,\gamma^0\ .
 \end{equation}
 With two consecutive parity transformations the coordinate system is restored and therefore %
-the unitary phase $\xi_P$ is constrained to be $\pm1$ or $\pm i$.
-Vector and axial covariants, respectively $\cj{\psi}_a \gamma^\mu \psi_b$ and $\cj{\psi}_a \gamma^\mu \gamma^5 \psi_b$r, %
+the unitary phase $\xi_\text{P}$ is constrained to be $\pm1$ or $\pm i$.
+Vector and axial covariants, respectively $\cj{\psi}_a \gamma^\mu \psi_b$ and $\cj{\psi}_a \gamma^\mu \gamma^5 \psi_b$, %
 transforms oppositely under charge conjugation and spatial inversion, unless $a = b$, and therefore the $V-A$ structure %
-of weak interactions (see \refeq{eq:currents_ccnc}) violates $\mathcal{C}$ and $\mathcal{P}$ individually.
+of weak interactions (see \refeq{eq:currents_ccnc}) violates C and P individually.
 The combined transformation of charge conjugation and parity, reffered to as CP transformation, %
 is applied to the fields as
 \begin{equation}
-	\psi(x) \longmapsto \psi^{CP}(x) = -\xi_{CP}\, \mathcal{C}\,\psi^* (x) \quad , \quad
-	\psi(x) \longmapsto \cj{\psi^{CP}}(x) = - \xi_{CP}^*\,\psi^T (x)\,\mathcal{C}^\dagger \gamma^0\ ,
+	\psi(x) \longmapsto \psi^\text{CP}(x) = -\xi_\text{CP}\, \mathcal{C}\,\psi^* (x) \quad , \quad
+	\psi(x) \longmapsto \cj{\psi^\text{CP}}(x) = - \xi_\text{CP}^*\,\psi^T (x)\,\mathcal{C}^\dagger \gamma^0\ ,
 \end{equation}
 where the CP phase $\xi_\text{CP}$ is also unitary.
 A CP transformation presents the same coefficient on vector and axial bilinear terms, %
@@ -37,7 +37,7 @@ and so $V-A$ Lagrangian terms are invariant under CP.
 The weak interactions of the SM is CP--symmetric if the phase of the $W$ boson is chosen accordingly.
 In the case of the generation mixing, the invariance in the quark sector is obtained when
 \begin{equation}
-	j^\mu_\text{CC, Q} W_\mu \mapsto \qty(j^\mu_\text{CC, Q} W_\mu)^\dagger \quad %
+	j^\mu_\text{CC, Q} W_\mu \longmapsto \qty(j^\mu_\text{CC, Q} W_\mu)^\dagger \quad %
 	\Leftrightarrow \quad %
 	- \xi^W \bs{\xi}_D V^T \bs{\xi}_U^\dagger = V^\dagger\ ,
 \end{equation}
@@ -50,7 +50,7 @@ are unitary, or
 	\bs{\xi}_{D,U} = e^{i \xi_{\delta,\upsilon}}\ ,
 \end{equation}
 where the indeces $\delta$ and $\upsilon$ refer respectively to down and up quarks.
-The condition for CP invariance now becomes that
+The condition for CP invariance now becomes 
 \begin{equation}
 	e^{i \xi_\upsilon}\, V_{\upsilon \delta} e^{-i \xi_\delta} = V_{\upsilon \delta}^*\ .
 \end{equation}
@@ -59,12 +59,14 @@ if the mixing matrix is not real, or $V = V^*$.
 
 We have seen that if the mixing matrix presents a non-zero complex phase, %
 the quark charged-current weak interactions break the CP symmetry of the SM Lagrangian.
-The violation of CP is indeed a well-known process in the quark sector of the standard model.
+The violation of CP is indeed a known process in the quark sector of the standard model.
 It has been extensively observed~\cite{Christenson:1964fg,Aubert:2001sp, Abe:2001xe, Aaij:2013iua, Aaij:2019kcg}, %
-giving clear evidence that the Cabibbo-Kobayashi-Maskawa (CKM) matrix is complex.
+giving a clear evidence that the Cabibbo-Kobayashi-Maskawa (CKM) matrix is complex.
 The CKM matrix arises from mixing of quarks in charged-current interactions (see \refeq{eq:real_quark_cc}), %
 when describing the fermion fields in the mass basis.
-
+The symmetry is restored when considering the time reversal symmetry.
+Consecutive transformation of C, P, and T leave invariant all possible covariant bilinears, in accordance with %
+the \emph{CPT theorem}.
 
 C and CP violation are some of the conditions required in order to generate %
 an asymmetry between matter and antimatter particles, together with %
@@ -81,13 +83,13 @@ This process, called \emph{leptogenesis}, would be allowed by the addition of %
 right-handed Majorana neutrinos to the SM, which can violate lepton number.
 This elegant solution to explain the baryon asymmetry is a strong motivation %
 for searches of signals of CP violation in the lepton~sector.
-As three generations exist also in the lepton sector, %
+As three generations exist also among the leptons, %
 an entirely analogous phase is expected in mixing matrix of lepton mass.
 The~best probe to discovery CP violation is neutrino oscillation, being a purely weak process in which %
-CP--conjugate processes can be easily studied.
+CP--conjugate processes are well-defined.
 CP violation in the leptonic sector is plausible and it is also a necessary ingredient for leptogenesis.
 Neutrino oscillation experiments can lead to the discovery of CP violation, and it is %
-foreseen that HK will determine the value of~$\delta_\text{CP}$, %
+foreseen that next-generation experiments, such as Hyper-Kamiokande, will determine the value of~$\delta_\text{CP}$, %
 a milestone which requires precise measurements and a deep understanding of the systematic errors.
 
 
@@ -98,19 +100,19 @@ The Pontecorvo--Maki--Nakagawa--Sakata (PMNS) matrix, is usually parameterised a
 with the addition of two more phases if the neutrino is Majorana.
 The PMNS matrix relates flavour states $\alpha = e, \mu, \tau$ with mass eigenstates $i = 1, 2, 3$  %
 as $\ket{\nu_\alpha} = \sum_i U^*_{\alpha i} \ket{\nu_i}$.
-The probability of flavour oscillation in vacuum is hence computed as
-%$P(\nu_\alpha \to \nu_\beta)$ is computed as $\qty|\mel{\nu_\alpha}{e^{-i\mathcal{H}t}}{\nu_\beta}|^2$ %
-\vspace{-0.4em}
-\begin{equation}
-	P(\nu_\alpha \to \nu_\beta) \equiv \qty|\mel{\nu_\alpha}{e^{-i\mathcal{H}t}}{\nu_\beta}| ^2 = %
-	\sum_{ij} U_{i\alpha}^* U_{\beta i} U_{\alpha j} U_{j\beta}^* %
-	\exp \qty(-i \frac{\Delta m_{ij}^2 L}{2 E})\ ,
-\vspace{-0.4em}
-\end{equation}
-where $\mathcal{H}$ is the Hamiltonian, $t \simeq L$ and $\Delta m^2_{ij} = m_i^2 - m_j^2$, %
-and it depends on the physical angles and phases of the PMNS matrix, %
-with the exception of the Majorana phases.
-The~\mbox{CP--con}\-jugate of a neutrino with negative helicity is an antineutrino with positive helicity, %
+The probability of flavour oscillation in vacuum is given in \refeq{eq:oscillation_probability}.
+%%$P(\nu_\alpha \to \nu_\beta)$ is computed as $\qty|\mel{\nu_\alpha}{e^{-i\mathcal{H}t}}{\nu_\beta}|^2$ %
+%\vspace{-0.4em}
+%\begin{equation}
+%	P(\nu_\alpha \to \nu_\beta) \equiv \qty|\mel{\nu_\alpha}{e^{-i\mathcal{H}t}}{\nu_\beta}| ^2 = %
+%	\sum_{ij} U_{i\alpha}^* U_{\beta i} U_{\alpha j} U_{j\beta}^* %
+%	\exp \qty(-i \frac{\Delta m_{ij}^2 L}{2 E})\ ,
+%\vspace{-0.4em}
+%\end{equation}
+%where $\mathcal{H}$ is the Hamiltonian, $t \simeq L$ and $\Delta m^2_{ij} = m_i^2 - m_j^2$, %
+%and it depends on the physical angles and phases of the PMNS matrix, %
+%with the exception of the Majorana phases.
+The CP--conjugate of a neutrino with negative helicity is an antineutrino with positive helicity, %
 which, in terms of neutrino oscillations, means transforming the $\nu_\alpha \to \nu_\beta$ oscillation channel %
 into the $\cj{\nu}_\alpha \to \cj{\nu}_\beta$ channel.
 The violation of CP in neutrino oscillation can be quantified by the asymmetry in oscillation probabilities %
@@ -123,34 +125,35 @@ between neutrinos and antineutrinos, which in vacuum reads as
 \vspace{-0.3em}
 \end{equation}
 %with $t \simeq L$ and $\Delta m^2_{ij} = m_i^2 - m_j^2$.
-The quartic product $U_{i\alpha}^* U_{\beta i} U_{\alpha j} U_{j \beta}^*$ wich $\alpha\neq\beta$ %
-and $i \neq j$ is a physical observable and so it is invariant under a reparameterization of the mixing matrix.
-The imaginary part of the quartic products is antisymmetric on the indices $\alpha,\beta$ and $i, j$ and %
-they are all equal up to a sign.
-We can prove this by starting with the unitarity of the mixing matrix, for example $U\,U^\dagger = 1$,
+The quartic product $U_{i\alpha}^* U_{\beta i} U_{\alpha j} U_{j \beta}^*$, %
+which can be complex only if $\alpha\neq\beta$ and $i \neq j$, is a physical observable %
+and as such it is invariant under a reparameterization of the mixing matrix.
+For this reason, CP violation can only be measured in ``appearance'' channels.
+The imaginary part of the quartic products is antisymmetric on the indices $\alpha,\beta$ and $i, j$.
+%and %
+%they are all equal up to a sign.
+Starting from the unitarity of the mixing matrix, for example $U\,U^\dagger = 1$, we have
 \begin{equation}
 	\sum_{i=1}^3 U_{\alpha i} U_{\beta i}^* = \delta_{\alpha\beta} 
 \end{equation}
-and multiplying it by $U_{\alpha j}^* U_{\beta j}$.
-We can write the new relation as
+and multiplying it by $U_{\alpha j}^* U_{\beta j}$ %
+we can write the new relation as
 \begin{equation}
 	|U_{\alpha j}|^2 |U_{\beta j}|^2 + \sum_{i\neq j} U_{\alpha i} U_{\beta j} U_{\beta i}^* U_{\alpha j}^* = %
-		\delta_{\alpha\beta} |U_{\alpha j}|^2\ ,
+		\delta_{\alpha\beta} |U_{\alpha j}|^2\ .
 \end{equation}
-and by taking the imaginary part of left-hand and right-hand sides of the equation it follows that
+By taking the imaginary part of left-hand and right-hand sides of the equation it follows that
 \begin{equation}
 	\sum_{\alpha \neq \beta} \imaginary\qty[U_{\alpha i} U_{\beta j} U_{\beta i}^* U_{\beta j}^*] = 0\ .
 \end{equation}
-This condition and the anti-symmetry of the indices reveal that th quartic product are all equal up to a sign.
-This value is called \emph{Jarlskog invariant} and using the parametrisation of the PMNS matrix in Eq.~\ref{eq:pmns} %
-it is equal to~\cite{Jarlskog:1985ht}
+This condition with the anti-symmetry of the indices reveals that the quartic products are all equal up to a sign.
+The value is called \emph{Jarlskog invariant} and using the parametrisation of the PMNS matrix in Eq.~\ref{eq:pmns} %
+it amounts to~\cite{Jarlskog:1985ht}
 \begin{equation}
 	\label{eq:jarlskog}
 	J = \imaginary\qty[U_{\mu 3} U_{e 2} U_{\mu 2}^* U_{e 3}^*] = %
 	    \frac{1}{8} \cos\theta_{13} \sin(2\theta_{12}) \sin(2\theta_{13}) \sin(2\theta_{23}) \sin \delta_\text{CP}\ .
 \end{equation}
-It follows that CP violation can only be measured in ``appearance'' channels, as %
-the argument of the imaginary part of Eq.~\ref{eq:asymmetry} is real for $\alpha = \beta$. % and so $A^\text{CP}_{\alpha\alpha} = 0$.
 For example, for the main channel of interest for long beaseline experiments (LBL), $\nu_\mu \to \nu_e$, %
 the asymmetry looks like:
 \begin{align}
