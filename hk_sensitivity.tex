@@ -241,7 +241,10 @@ and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron den
 		The effect of $\sin^2\theta_{23}$ is also emphasised.
 		The mass hierarchy has a non-negligible behaviour only if matter oscillation is %
 		considered.
-		The normalised asymmetry from Eq.~\ref{eq:asymmetry} is shown on the right.}
+		The normalised asymmetry from Eq.~\ref{eq:asymmetry} is shown on the right.
+		When not specified, both graphs are created with the oscillation parameters $\Delta m^2_{21} = \np{7.6e-5}$\,eV\tapi{2}, %
+		$|\Delta m^2_{32}| = \np{2.4e-3}$\,eV\tapi{2}, $\sin^2 2\theta_{12} = 0.32$, $\sin^2 2\theta_{13} = 0.10$, %
+		$\sin^2 \theta_{23} = 0.50$, $\delta_\text{CP} = 0$~\cite{Abe:2018uyc}.}
 	\label{fig:baseball}
 \end{figure}
 
@@ -324,9 +327,10 @@ The project has been recentely approved by japanese goverment and data taking is
 
 
 \section{Sensitivity studies}
+\label{sec:sensitivity}
 
 At any stage of the experiment it is important to asses the impact of systematic errors on the total sensitivity of HK.
-One of the main goal is to constrain with high precision oscillation parameters, especially $\delta_\text{CP}$ and %
+One of the main goal is to constrain with high precision oscillation parameters, especially $\delta_\text{CP}$ %
 and the octant determination.
 Even if real data is not available, it is possible to understand whether the statistics collected have %
 enough constraining power to achieve the target precision.
@@ -339,6 +343,7 @@ the influence of the systematic uncertainties can be studied.
 To this end, a fitting framework capable of performing a simultaneous study of beam and atmospheric samples was employed. 
 
 \subsection{Event samples}
+\label{sec:event_samples}
 
 \begin{table}
 	\centering
@@ -380,7 +385,7 @@ A total of \np{2224} bins are used, divided in several two-dimensional histogram
 where $\vartheta$ is the azimuthal angle.
 These are summarised in~\reftab{tab:atmo_samples} where they are divided in the usual categories of fully-contained (FC), %
 partially-contained (PC), and upward-going muons (UP-$\mu$)~\cite{Jiang:2019xwn}.
-The beam sample, instead, is created using the far detector flux predicted with NEUT.
+The beam sample, instead, is created using the far detector flux predicted as explained in \refsec{sec:prediction}.
 From the flux prediction, fully-contained candidate events in the fiducial volume are grouped %
 as appeareance signal, i.e.\ $\nu_\mu\to\nu_e$ and $\cj{\nu}_\mu\to\cj{\nu}_e$, %
 and background from the disappearance channels.
@@ -394,10 +399,373 @@ A set of 2D smearing matrices, produced by the T2K fitting framework VALOR, %
 simulates and replaces the correct event selection process, including tuning of the flux with near detector constraints.
 These smearing matrices are provided for all samples, acting on signal (CCQE and CCnQE) %
 and background (CCQE, CCnQE, and NC) distributions.
-We do not consider the one $e$-like + one electron decay sample in this study.
+We do not consider the one $e$-like with one electron decay sample in this study.
+
+
+
+
+\subsection{Oscillation space}
+\label{sec:osc_space}
+
+\begin{table}
+	\small
+	\centering
+	\caption{Oscillation space.}
+	\label{tab:asimovA}
+	\begin{tabular}{cccc}
+		\toprule
+		Parameter				& Nominal	& Range	& Points \\
+		\midrule
+		$\Delta m_{12}^2/\np{e-5}\,\text{eV}^2$	& 7.53		& --			& fixed	\\
+		$\sin^2 2\theta_{12}$			& 0.8463	& --			& fixed	\\
+		\midrule
+		$\Delta m_{23}^2/\np{e-3}\,\text{eV}^2$	& 2.509		& [2.464:2.554]		& 13	\\
+		$\sin^2 2\theta_{13}$			& 0.085		& [0.070:0.100]		& 13	\\
+		$\sin^2 \theta_{23}$			& 0.528		& [0.426:0.579]		& 19	\\
+		$\delta_\text{CP}$			& $-\pi/2$	& [$-\pi$:$\pi$]	& 61	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+Both the atmospheric and beam distributions are weighted by the corresponding oscillation probabilities.
+The oscillation parameters are scanned over the space defined by the four variables %
+\begin{equation}
+	\Delta m^2_{32} \times \sin^2 2\theta_{13} \times \sin^2 \theta_{23} \times \delta_\text{CP}
+\end{equation}
+on a grid of respectively $13\,\times\,13\,\times\,19\,\times\,61$ points.
+The solar squared mass difference and the solar angle $\theta_{12}$ are fixed.
+Apart from $\delta_\text{CP}$ which is scanned over all possible values, %
+the intervals for the other parameters are built around ``Asimov A'', the nominal T2K best fit point~\cite{Abe:2017vif} .
+The details of the oscillation space are listed in \reftab{tab:asimovA}.
+For the atmospheric squared mass difference and $\sin^2 2\theta_{13}$, the range is chosen such that it covers %
+a $[-3\sigma, +3\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
+the range for $\sin^2\theta_{23}$ spans over $[-6\sigma, +3\sigma]$ so that both octants are covered symmetrically.
+%Reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
+At each point of this space, the event distributions are weighted with the correct oscillation probability %
+for appearance or disappearance channels.
+The Asimov A point is chosen to be the \emph{true} combination of oscillation parameters %
+to perform sensitivity studies using a $\chi^2$-test statistics.
+By changing the \emph{true} value of the CP phase, it is possible to define the exclusion regions for CP violation, %
+by comparing the $\chi^2$ at any value of $\delta_\text{CP}$ with the $\chi^2$ computed at %
+the null hypothesis, i.e.\ CP conservation or $\delta_\text{CP} = 0, \pm\pi$.
+The sensitivity to exclude the $\sin \delta_\text{CP} = 0$ as a function of \emph{true} $\delta_\text{CP}$ %
+is quantified by %
+\begin{equation}
+	\sigma = \sqrt{\min_{\delta_\text{CP} = 0,\pm\pi}\! \chi^2\  -\,\chi^2_\text{\emph{true}}}\ ,
+\end{equation}
+where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
+
+
+
+
+\subsection{Test statistic}
+\label{sec:x2}
+
+We define the likelihood
+\begin{equation}
+	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} O_n^{E_n}}{O_n!}\ ,
+\end{equation}
+where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin, %
+which are built using a combination of oscillation parameters %
+$\Theta = (\Delta m^2_{32}, \sin^2 2\theta_{13}, \sin^2 \theta_{23}, \delta_\text{CP})$.
+The expected events are defined by a prediction of events at the far detector weighted by the oscillation probabilities %
+for parameters $\Theta$, and, since there is no real data yet, the ``observed'' events are also given by %
+a prediction at the \emph{true} oscillation point $\Theta_\text{true}$.
+%and the product runs over the total number of bins.
+The $\chi^2$ is hence the following log-likelihood ratio
+\begin{equation}
+	\label{eq:log_ratio}
+	\chi^2(\Theta) = -2 \log \qty[\frac{\mathfrak{L}(E_n, O_n)}{\mathfrak{L}(O_n, O_n)}] =
+		2 \sum_n \qty[E_n - O_n + O_n \log \qty(\frac{E_n}{O_n})]\ ,
+\end{equation}
+which is modified according to the ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}: %
+the parameters $\uj{\varepsilon}$ are introduced to account for systematic uncertainties, by replacing
+\begin{equation}
+	\label{eq:pull}
+	E_n\ \longrightarrow\ E_n\,\qty(1 + \textstyle\sum_j f_j^n \varepsilon_j)\ ,
+\end{equation}
+and a penalty term that includes variances and covariances of such parameters is added to the likelihood.
+The $\chi^2$ becomes the following
+%\begin{align}
+%	\chi^2_\text{tot} &=\ \chi^2_\text{obs}\ +\ \chi^2_\text{syst} \notag\\
+%	&= \overset{\text{obs}}{2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
+%	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,
+%\end{align}
+\begin{equation}
+	\label{eq:chi2}
+	\chi^2(\Theta;\uj{\varepsilon})  = 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
+		O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})] + %
+		\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ ,
+\end{equation}
+where $\rho^{-1}$ is the inverse of the correlation matrix of the systematic errors.
+The effect of the systematic uncertainties on the event distributions are embedded in the $f_j^n$ parameters, %
+defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic.
+The amount of change is therefore parametrised by $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
+However, being $\rho$ the correlation matrix, the $\varepsilon_j$ are promoted to embody the systematic uncertainties.
+Once defined the observed sample, the oscillation parameters $\Theta$ are scanned over the oscillation %
+space defined in \reftab{tab:asimovA} and the $\chi^2$ is then profiled it with respect to the parameters $\uj{\varepsilon}$:
+\begin{equation}
+	\label{eq:chi2_min}
+	\chi^2(\Theta) = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\Theta;\uj{\varepsilon})\,]\ .
+\end{equation}
+Fixing the parameters $\Theta$ and dropping the symbol from the notation, %
+the minimisation of the $\chi^2$ leads to the following set of $j$ non-linear equations %,
+\begin{equation}
+	\pdv{\chi^2}{\varepsilon_j} (\uj{\varepsilon}) = 0\ 
+\end{equation}
+which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
+The system can be solved with the Gauss-Newton's method by finding the Hessian of the $\chi^2$.
+This gives a linear system, which can be iterated until sufficient precision is achieved
+%The algorithm is stabilised by means of the Levenberg-Marquardt algorithm
+\begin{equation}
+	\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
+	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
+	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
+\end{equation}
+with $(n)$ the iteration index.
+The Gauss-Newton's algorithm can sometimes be unstable, especially with a large number of parameters, %
+due to its fast convergence.
+The algorithm is typically improved by adopting the Lavenberg-Marquardt method~\cite{Levenberg_1944, Marquardt_1963} %
+which modifies the Hessian such that the equation becomes
+\begin{equation}
+	\qty[\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
+	+ \lambda \max \qty(\text{diag} \pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j}) \mathbb{1}]
+	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
+	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ .
+\end{equation}
+The parameter $\lambda$ is chosen dynamically: if the cost function $\chi^2$ decreases %
+after an iteration step, then $\lambda$ is reduced; otherwise $\lambda$ is increased and the step re-computed.
+In the limit $\lambda \to 0$, the algorithm approximates the Gauss-Newton's method and its fast convergence.
+When $\lambda$ is large, the linear system resembles a gradient descent with small steps of the order of $\lambda^{-1}$, %
+but with a more stable convergence.
+We adopt a ``delayed-gratification scheme'' for $\lambda$~\cite{Transtrum2012}, using an inital value of $\lambda^{(0)} = 1$ and finding %
+an optimal increment and decrement of respectively $\lambda^{(n+1)} = 5\,\lambda^{(n)}$ and $\lambda^{(n+1)} = \lambda^{(n)} / 10$.
+
+To account for future constraints from other experiments, a gaussian penalty terms is added %
+to the minimised value of $\chi^2$ from \refeq{eq:chi2_min}
+\begin{equation}
+	\chi^2_\text{penalty} = \frac{(\Theta - \hat{\Theta})^2}{\sigma_\Theta^2}\ .
+\end{equation}
+The current constraint applied comes from the measurement of $\theta_{13}$ by future reactor experiments, %
+that are predicted to achieve $\sigma(\sin^2 2\theta_{13}) = 0.005$.
+
+For most of the systematic parameters, a linear response is assumed in the~MC.
+This means that varying of the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$, %
+the number of expected events changes accordingly:
+\begin{align*}
+	\beta_j\ \overset{\scriptstyle \text{MC}}{\longmapsto}\ E_n %
+	%\qquad \overset{\varepsilon_j \sigma_j}{\Longrightarrow} \qquad %
+	\qquad \Longrightarrow \qquad %
+	\beta_j + \varepsilon_j\sigma_j\ \overset{\text{MC}}{\longmapsto}\ E_n ( 1 + \varepsilon_j f_n ^j )\ .
+	%&\hspace{0.4em}\text{\scriptsize MC} \\
+	%\text{\scriptsize MC\ :} \hspace{1em} \Downarrow & \hspace{3.5em} \Downarrow	\\	
+\end{align*}
+Certain systematic uncertainties, such as the CCQE axial-mass scaling factor, the Fermi momentum for \tapi{16}O, %
+or some of the RPA coefficients, %
+%\footnote{The Random Phase Approximation (RPA) method is applied to calculate the total cross-sections %
+	%of electron neutrinos on nuclei.}, 
+do not present a linear behaviour for small values of $\varepsilon$ %
+and they are better described by a four-point linear interpolation of different~$f_j^n$ histograms, %
+computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic parameter.
+
+
+
+
+\subsection{Far detector prediction}
+\label{sec:prediction}
+
+\begin{figure}[t]
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_app_fhc.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_app_rhc.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/asim_app_fhc.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/asim_app_rhc.tex}}
+	\caption{The predicted distribution of one ring $e$-like events with respect to reconstructed energy at HK %
+		are shown here for $\nu$-mode (left) and $\cj{\nu}$-mode.
+		The appearance signals $\nu_\mu \to \nu_e$ and $\cj{\nu}_\mu \to \cj{\nu}_e$ are compared to the %
+		background events.
+		The spectra on the top panel are generated using the oscillation parameters %
+		$\Delta m^2_{21} = \np{7.6e-5}$\,eV\tapi{2}, $\Delta m^2_{32} = \np{2.4e-3}$\,eV\tapi{2}, %
+		$\sin^2 2\theta_{12} = 0.32$, $\sin^2 2\theta_{13} = 0.10$, $\sin^2 \theta_{23} = 0.50$, $\delta_\text{CP} = 0$~\cite{Abe:2018uyc}.
+		The spectra on the bottom panel are generated using Asimov A oscillation parameters (see \reftab{tab:asimovA}).}
+	\label{fig:reco_spectra_e}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_dis_fhc.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_dis_rhc.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/asim_dis_fhc.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/asim_dis_rhc.tex}}
+	\caption{The predicted distribution of one ring $\mu$-like events with respect to reconstructed energy at HK %
+		are shown here for $\nu$-mode (left) and $\cj{\nu}$-mode.
+		The disappearance events $\nu_\mu \to \nu_\mu$ and $\cj{\nu}_\mu \to \cj{\nu}_\mu$ %
+		are compared to the small contributions from electron neutrinos.
+		The spectra on the top panel are generated using the oscillation parameters %
+		$\Delta m^2_{21} = \np{7.6e-5}$\,eV\tapi{2}, $\Delta m^2_{32} = \np{2.4e-3}$\,eV\tapi{2}, %
+		$\sin^2 2\theta_{12} = 0.32$, $\sin^2 2\theta_{13} = 0.10$, $\sin^2 \theta_{23} = 0.50$, $\delta_\text{CP} = 0$~\cite{Abe:2018uyc}.
+		The spectra on the bottom panel are generated using Asimov A oscillation parameters (see \reftab{tab:asimovA}).}
+	\label{fig:reco_spectra_mu}
+\end{figure}
+
+The simulation of the HK detector heavily relies on the techniques established with the current experiments.
+The neutrinos interactions are generated using NEUT~\cite{Hayato:2002sd}, also used in SK and T2K.
+The response of the detector is simulated using the SK-IV full Monte Carlo simulation, which uses the GEANT3 engine~\cite{Brun:1994aa}.
+Events are reconstructed with the Super-K reconstruction software, which gives a realistic estimate of the Hyper-K performance.
+The criteria to select neutrino candidates in MC simulations follows a similar prescription to the one used in SK.
+Only fully contained events within the inner detector are considered, provided that the reconstructed vertex %
+is more than 1.5\,m away from the ID walls (fiducial volume) and that the collected charge from the PMTs $E_\text{vis}$ %
+amounts to an energy greater than 30\,MeV.
+The purity of the data sample is controlled by requiring the detection of a single Cherenkov ring.
+In this way, the chance of selecting only CCQE events is enhanced.
+The neutrino energy is reconstructed from the energy of the final state charged lepton and %
+the angle between the neutrino beam and the charged lepton direction, applying \refeq{eq:e_reco}.
+Electron-flavour events are selected by requiring an $e$-like ring, $100\,\text{MeV} < E_\text{vis} < 1.25\,\text{GeV}$, %
+and there is no decay electron associated, typical of a muon decay.
+The muon sample is built by requiring a $\mu$-like ring, a reconstructed muon momentum greater than $200$\,MeV %
+and the presence of the electron from the Michel decay.
+The simulation is run assuming an integrated beam power of 13\,MW, corresponding to \np{2.7e22} protons on target (POT) %
+collected over 10 years with a 30\,GeV proton beam.
+The neutrino and anti-neutrino mode beam running time ratio is set to $1:3$.
+The reconstructed spectra from the simulations are shown in \reffigs{fig:reco_spectra_e}{fig:reco_spectra_mu} %
+where two different oscillation parameter combinations are compared to illustrate the effect of neutrino oscillation.
+
+
+
+
+\subsection{Validation of the fitter}
+\label{sec:nuenorm}
+
+To validate the fitting framework a special systematic set for the beam sample is used.
+It is composed of just two systematics: the $\nu_e$ and the $\cj{\nu}_e$ CC cross-section uncertainties.
+These two errors are either correlated or anti-correlated %
+and they are tested at different value (1\%, 2\%, 3\%, 4\%, and 5\%) for a total of ten fits.
+Given the definition of $\chi^2$ in \refeq{eq:chi2}, %
+the difference in the fits is just the correlation matrix at a given relative error, %
+whereas the difference is provided by the $1\sigma$ histograms at fixed correlation.
+The correlation matrices used are simply
+\begin{equation}
+	\rho = \mqty(\hphantom{-}1 & \hphantom{-}1 \\ \hphantom{-}1 & \hphantom{-}1) \quad\text{and}\quad
+	\rho = \mqty(\hphantom{-}1 & -1 \\ -1 & \hphantom{-}1) \ ,
+\end{equation}
+but they are both singular and not invertible.
+A small offset of \np{e-5} is added to off-diagonal terms to allow the calculation of the $\chi^2$.
+
+The prediction of the one ring $e$-like samples in $\nu$-mode and $\cj{\nu}$-mode are shown in \reffig{fig:nuenorm_prediction} %
+for respectively the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties applied individually.
+The effect of the systematic error at different magnitudes of the relative error scales linearly.
+The $\chi^2$ profiles with respect to $\delta_\text{CP}$, $\Delta m_{32}^2$, $\sin^2 2\theta_{13}$, and $\sin^2 \theta_{23}$ are
+shown respectively in \reffig{fig:nuenorm_dCP}, \ref{fig:nuenorm_M23}, \ref{fig:nuenorm_S13}, and \ref{fig:nuenorm_S23} %
+for correlated and anti-correlated errors.
+The CP phase is the parameter which shows more difference between correlation and anti-correlation.
+When the two CC cross-sections are anti-correlated, the increment of one error brings about the decrement of the other.
+This results in an effective fluctuation of the number of events, exhibiting a CP violation--like phenomenon.
+The other parameters are not very sensitivie to this effect.
+In \reffig{fig:nuenorm_S23_M23}, the contour levels of the $\chi^2$ versus $\Delta m_{32}^2$ and $\sin^2 \theta_{23}$ %
+are shown for this specific test: at $1\sigma$ level of confidence the determination of the $\theta_{23}$ octant %
+is slowly lost as the uncertainity increases.
+The importance of this study set can also be appreciated in \reffig{fig:nuenorm_sensitivity}.
+A large systematic uncertainty of anti-correlated cross-section parameters can therefore only aggravate the %
+overall sensitivity to $\delta_\text{CP}$.
+On the other hand, different values of correlated systematics do not degrade the exclusion power to $\sin \delta_\text{CP} = 0$.
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys0.tex}}
+	\hfill
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys0.tex}}
+
+	\medskip
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys1.tex}}
+	\hfill
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys1.tex}}
+	\caption{Prediction of events at the far detector for the one ring $e$-like sample in %
+		$\nu$-mode (left) and $\cj{\nu}$-mode (right).
+		The $\nu_e$ (top) and $\cj{\nu}_e$ (bottom) CC cross-section systematics are varied to reach relative errors %
+		between 1\,\% and 5\,\%.
+		In each figure, the top panel shows how the event distribution is affected, and the bottom panel shows %
+		the variation with respect to the prediction without errors applied, which is by definition %
+		the $1\sigma$ histogram, $1 + f^n$ (see \refeq{eq:chi2}). }
+	\label{fig:nuenorm_prediction}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_dCP.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_dCP.tex}}
+	\caption{$\chi^2$ profile for $\delta_\text{CP}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_dCP}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_M23.tex}}
+	\caption{$\chi^2$ profile for $\Delta m_{32}^2$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_M23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S13.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S13.tex}}
+	\caption{$\chi^2$ profile for $\sin^2 2\theta_{13}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_S13}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S23.tex}}
+	\caption{$\chi^2$ profile for $\sin^2 \theta_{23}$ for correlated (left) and anticorrelated (right) systematics. 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nuenorm_S23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_cont_S23_M23.tex}}
+	\caption{Contour plot of the $\chi^2$ profile for $\Delta m_{23}^2$ vs.\  $sin^2 \theta_{23}$ %
+		for correlated (left) and anticorrelated (right) systematics. 
+		The inner contour and outer contour corresponds respectively to the $1\sigma$ and $3\sigma$ %
+		contour lines.}
+	\label{fig:nuenorm_S23_M23}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_sensitivity.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_sensitivity.tex}}
+	\caption{Expected signifcance to exclude $\sin\delta_\text{CP} = 0$ for correlated (left) and anticorrelated (right) systematics.
+		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
+       		masks the resolution power to distinguihsing neutrino from anti-neutrino events. }
+	\label{fig:nuenorm_sensitivity}
+\end{figure}
+
+
+
+
+
+\section{Systematic studies}
+\label{sec:syst_studies}
+
+It is expected that larger systematic errors will result in a worse sensitivity,
+but certain uncertainties affect the measurement of the oscillation parameters more than others.
+For example, these can be the uncertainties on $\nu_e$ and $\cj{\nu}_e$ charged-current cross-sections, %
+the transverse flux model, the pion absorption probability, the total energy scale in SK, or the flux alignment.
+We study the impact of some selected systematics by modifying the nominal systematic model %
+and analysing the overall predicted sensitivity of the experiment in these different scenarios.
+Doing so, it is possible to determine which systematics have the most important repercussion on the sensitivity,
+since it is fundamental to understand their effect at all phases of the experiment.
 
 
 \subsection{Systematic model}
+\label{sec:syst_model}
 
 There are 67 systematics for the atmospheric sample, adopted from SK atmospheric studies~\cite{Abe:2017aap}.
 These are listed in \refapp{cha:systematics}.
@@ -405,7 +773,7 @@ The atmospheric systematics in this study are uncorellated between each other an
 A more accurate systematic study for the atmospheric analysis of HK is expected in the future.
 The main focus of this work is the beam sample.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
 	\resizebox{0.8\linewidth}{!}{\input{pics/matrixplot.tex}}
 	\caption{Correlation matrix of the beam systematic model.
@@ -471,341 +839,27 @@ verteces and the direction of the electrons distribute homogenously and isotropi
 The stability in time of the energy scale is instead validated by the high energy stopping muons.
 
 
-\subsection{Oscillation space}
-
-\begin{table}
-	\small
-	\centering
-	\caption{Oscillation space.}
-	\label{tab:osc_space}
-	\begin{tabular}{cccc}
-		\toprule
-		Parameter				& Nominal	& Range	& Points \\
-		\midrule
-		$\Delta m_{12}^2/\np{e-5}\,\text{eV}^2$	& 7.53		& --			& fixed	\\
-		$\sin^2 2\theta_{12}$			& 0.8463	& --			& fixed	\\
-		\midrule
-		$\Delta m_{23}^2/\np{e-3}\,\text{eV}^2$	& 2.509		& [2.464:2.554]		& 13	\\
-		$\sin^2 2\theta_{13}$			& 0.085		& [0.070:0.100]		& 13	\\
-		$\sin^2 \theta_{23}$			& 0.528		& [0.426:0.579]		& 19	\\
-		$\delta_\text{CP}$			& $-\pi/2$	& [$-\pi$:$\pi$]	& 61	\\
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 
-Both the atmospheric and beam distributions are weighted by the corresponding oscillation probabilities.
-The oscillation parameters are scanned over the space defined by the four variables %
-\begin{equation}
-	\Delta m^2_{32} \times \sin^2 2\theta_{13} \times \sin^2 \theta_{23} \times \delta_\text{CP}
-\end{equation}
-on a grid of respectively $13\,\times\,13\,\times\,19\,\times\,61$ points.
-The solar squared mass difference and the solar angle $\theta_{12}$ are fixed.
-Apart from $\delta_\text{CP}$ which is scanned over all possible values, %
-the intervals for the other parameters are built around ``Asimov A'', the nominal T2K best fit point~\cite{Abe:2017vif} .
-The details of the oscillation space are listed in \reftab{tab:osc_space}.
-For the atmospheric squared mass difference and $\sin^2 2\theta_{13}$, the range is chosen such that it covers %
-a $[-3\sigma, +3\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
-the range for $\sin^2\theta_{23}$ spans over $[-6\sigma, +3\sigma]$ so that both octants are covered symmetrically.
-%Reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
-At each point of this space, the event distributions are weighted with the correct oscillation probability %
-for appearance or disappearance channels.
-A special point of the parameter space is chosen as a \emph{true} combination of oscillation parameters %
-to perform sensitivity studies using a $\chi^2$-test statistics.
-By changing the \emph{true} point, it is possible to define the exclusion regions for CP violation, %
-by comparing the $\chi^2$ at any value of $\delta_\text{CP}$ with the $\chi^2$ computed at %
-the null hypothesis, i.e.\ CP conservation.
-The sensitivity to exclude the $\sin \delta_\text{CP} = 0$ as a function of \emph{true} $\delta_\text{CP}$ %
-is quantified by %
-\begin{equation}
-	\sigma = \sqrt{\min_{\delta_\text{CP} = 0,\pm\pi}\! \chi^2\  -\,\chi^2_\text{\emph{true}}}\ ,
-\end{equation}
-where $\chi^2_\text{\emph{true}}$ is evaluated at the \emph{true} point.
 
-\subsection{Test statistic}
-
-We define the likelihood
-\begin{equation}
-	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} O_n^{E_n}}{O_n!}\ ,
-\end{equation}
-where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin, %
-which are built using a combination of oscillation parameters %
-$\Theta = (\Delta m^2_{32}, \sin^2 2\theta_{13}, \sin^2 \theta_{23}, \delta_\text{CP})$.
-The expected events are defined by a prediction of events at the far detector weighted by the oscillation probabilities %
-for parameters $\Theta$, and, since there is no real data yet, the ``observed'' events are also given by %
-a prediction at the \emph{true} oscillation point $\Theta_\text{true}$.
-%and the product runs over the total number of bins.
-The $\chi^2$ is hence the following log-likelihood ratio
-\begin{equation}
-	\label{eq:log_ratio}
-	\chi^2(\Theta) = -2 \log \qty[\frac{\mathfrak{L}(E_n, O_n)}{\mathfrak{L}(O_n, O_n)}] =
-		2 \sum_n \qty[E_n - O_n + O_n \log \qty(\frac{E_n}{O_n})]\ ,
-\end{equation}
-which is modified according to the ``pull approach'' $\chi^2$~\cite{Fogli:2002pt}: %
-the parameters $\uj{\varepsilon}$ are introduced to account for systematic uncertainties, by replacing
-\begin{equation}
-	\label{eq:pull}
-	E_n\ \longrightarrow\ E_n\,\qty(1 + \textstyle\sum_j f_j^n \varepsilon_j)\ ,
-\end{equation}
-and a penalty term that includes variances and covariances of such parameters is added to the likelihood.
-The $\chi^2$ becomes the following
-%\begin{align}
-%	\chi^2_\text{tot} &=\ \chi^2_\text{obs}\ +\ \chi^2_\text{syst} \notag\\
-%	&= \overset{\text{obs}}{2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
-%	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,
-%\end{align}
-\begin{equation}
-	\label{eq:chi2}
-	\chi^2(\Theta;\uj{\varepsilon})  = 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
-		O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})] + %
-		\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ ,
-\end{equation}
-where $\rho^{-1}$ is the inverse of the correlation matrix of the systematic errors.
-The effect of the systematic uncertainties on the event distributions are embedded in the $f_j^n$ parameters, %
-defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic.
-The amount of change is therefore parametrised by $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
-However, being $\rho$ the correlation matrix, the $\varepsilon_j$ are promoted to embody the systematic uncertainties.
-Once defined the observed sample, the oscillation parameters $\Theta$ are scanned over the oscillation %
-space defined in \reftab{tab:osc_space} and the $\chi^2$ is then profiled it with respect to the parameters $\uj{\varepsilon}$:
-\begin{equation}
-	\label{eq:chi2_min}
-	\chi^2(\Theta) = \min_{\uj{\varepsilon}}\, \qty\Big[\,\chi^2(\Theta;\uj{\varepsilon})\,]\ .
-\end{equation}
-Fixing the parameters $\Theta$ and dropping the symbol from the notation, %
-the minimisation of the $\chi^2$ leads to the following set of $j$ non-linear equations %,
-\begin{equation}
-	\pdv{\chi^2}{\varepsilon_j} (\uj{\varepsilon}) = 0\ 
-\end{equation}
-which can be solved iteratively if the condition $\sum_j f^n_j \varepsilon_j < 1$~holds.
-The system can be solved with the Gauss-Newton's method by finding the Hessian of the $\chi^2$.
-This gives a linear system, which can be iterated until sufficient precision is achieved
-%The algorithm is stabilised by means of the Levenberg-Marquardt algorithm
-\begin{equation}
-	\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
-	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
-	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ ,
-\end{equation}
-with $(n)$ the iteration index.
-The Gauss-Newton's algorithm can sometimes be unstable, especially with a large number of parameters, %
-due to its fast convergence.
-The algorithm is typically improved by adopting the Lavenberg-Marquardt method~\cite{Levenberg_1944, Marquardt_1963} %
-which modifies the Hessian such that the equation becomes
-\begin{equation}
-	\qty[\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j} %
-	+ \lambda \max \qty(\text{diag} \pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}{\varepsilon_j}) \mathbb{1}]
-	\cdot \qty(\varepsilon_j^{(n+1)} - \varepsilon_j^{(n)}) = %
-	-\pdv{\chi^2(\uj{\varepsilon}^{(n)})}{\varepsilon_k}\ .
-\end{equation}
-The parameter $\lambda$ is chosen dynamically: if the cost function $\chi^2$ decreases %
-after an iteration step, then $\lambda$ is reduced; otherwise $\lambda$ is increased and the step re-computed.
-In the limit $\lambda \to 0$, the algorithm approximates the Gauss-Newton's method and its fast convergence.
-When $\lambda$ is large, the linear system resembles a gradient descent with small steps of the order of $\lambda^{-1}$, %
-but with a more stable convergence.
-We adopt a ``delayed-gratification scheme'' for $\lambda$~\cite{Transtrum2012}, using an inital value of $\lambda^{(0)} = 1$ and finding %
-an optimal increment and decrement of respectively $\lambda^{(n+1)} = 5\,\lambda^{(n)}$ and $\lambda^{(n+1)} = \lambda^{(n)} / 10$.
-
-To account for future constraints from other experiments, a gaussian penalty terms is added %
-to the minimised value of $\chi^2$ from \refeq{eq:chi2_min}
-\begin{equation}
-	\chi^2_\text{penalty} = \frac{(\Theta - \hat{\Theta})^2}{\sigma_\Theta^2}\ .
-\end{equation}
-The current constraint applied comes from the measurement of $\theta_{13}$ by future reactor experiments, %
-that are predicted to achieve $\sigma(\sin^2 2\theta_{13}) = 0.005$.
-
-For most of the systematic parameters, a linear response is assumed in the~MC.
-This means that varying of the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$, %
-the number of expected events changes accordingly:
-\begin{align*}
-	\beta_j\ \overset{\scriptstyle \text{MC}}{\longmapsto}\ E_n %
-	%\qquad \overset{\varepsilon_j \sigma_j}{\Longrightarrow} \qquad %
-	\qquad \Longrightarrow \qquad %
-	\beta_j + \varepsilon_j\sigma_j\ \overset{\text{MC}}{\longmapsto}\ E_n ( 1 + \varepsilon_j f_n ^j )\ .
-	%&\hspace{0.4em}\text{\scriptsize MC} \\
-	%\text{\scriptsize MC\ :} \hspace{1em} \Downarrow & \hspace{3.5em} \Downarrow	\\	
-\end{align*}
-Certain systematic uncertainties, such as the CCQE axial-mass scaling factor, the Fermi momentum for \tapi{16}O, %
-or some of the RPA coefficients, %
-%\footnote{The Random Phase Approximation (RPA) method is applied to calculate the total cross-sections %
-	%of electron neutrinos on nuclei.}, 
-do not present a linear behaviour for small values of $\varepsilon$ %
-and they are better described by a four-point linear interpolation of different~$f_j^n$ histograms, %
-computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic parameter.
-
-\section{Sensitivity with the nominal systematic model}
+\subsection{Sensitivity with the nominal systematic model}
 \label{sec:nominal}
 
-\begin{figure}[t]
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_app_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_app_rhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_app_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_app_rhc.tex}}
-	\caption{Wow no cow.}
-	\label{fig:reco_spectra_e}
-\end{figure}
-
-The simulation of the HK detector heavily relies on the techniques established with the current experiments.
-The neutrinos interactions are generated using NEUT~\cite{Hayato:2003sd}, also used in SK and T3K.
-The response of the detector is simulated using the SK-IV full Monte Carlo simulation, which uses the GEANT4 engine~\cite{Brun:1994aa}.
-Events are reconstructed with the Super-K reconstruction software, which gives a realistic estimate of the Hyper-K performance.
-The criteria to select neutrino candidates in MC simulations follows a similar prescription to the one used in SK.
-Only fully contained events within the inner detector are considered, provided that the reconstructed vertex %
-is more than 1.5 m away from the ID walls (fiducial volume) and that the collected charge from the PMTs $E_\text{vis}$ %
-amounts to an energy greater than 30\,MeV.
-The purity of the data sample is controlled by requiring the detection of a single Cherenkov ring.
-In this way, the chance of selecting only CCQE events is enhanced.
-The neutrino energy is reconstructed from the energy of the final state charged lepton and %
-the angle between the neutrino beam and the charged lepton direction, applying \refeq{eq:e_reco}.
-Electron-flavour events are selected by requiring an $e$-like ring, $100\,\text{MeV} < E_\text{vis} < 1.25\,\text{GeV}$, %
-and there is no decay electron associated, typical of a muon decay.
-The muon sample is built by requiring a $\mu$-like ring, a reconstructed muon momentum greater than $200$\,MeV %
-and the presence of the electron from the Michel decay.
-The simulation is run assuming an integrated beam power of 13\,MW, corresponding to \np{2.7e22} protons on target (POT) %
-collected over 10 years with a 30\,GeV proton beam.
-The neutrino and anti-neutrino mode beam running time ratio is set to $1:3$.
-The reconstructed spectra from the simulations are shown in \reffigs{fig:reco_spectra_e}{fig:reco_spectra_mu} %
-where two different oscillation parameter combinations are compared to illustrate the effect of neutrino oscillation.
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_dis_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_dis_rhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_dis_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_dis_rhc.tex}}
-	\caption{Wow no cow.}
-	\label{fig:reco_spectra_e}
-\end{figure}
-
-Using these predictions and fixing the true oscillation parameter combination to be Asimov A, %
-we can now calculate the $\chi^2$ profile with the method explained in the previous sections.
+Using these predictions from \refsec{sec:prediction} and fixing the \emph{true} oscillation parameter %
+combination at the Asimov A point (see \reftab{tab:asimovA}), %
+the $\chi^2$ profile can be now calculated with the method explained in the previous sections.
 A combined fit of the $\nu_e$ and $\nu_\mu$ samples allows to estimate the sensitivity of HK to the measurement %
 of the oscillation parameters.
-The four profiles against the variation of the oscillation parameters are shown in \reffig{fig:nominal_profile}.
+The four profiles against the variation of the oscillation parameters %
+$\Delta m^2_{32}$, $\sin^2 2\theta_{13}$, $\sin^2 \theta_{23}$, and $\delta_\text{CP}$ %
+are shown in \reffig{fig:nominal_profile}.
 The contour plots are shown in \reffig{fig:nominale_contour}.
 The lines show also the effect of the gaussian penalty term on the angle $\theta_{13}$ from reactor constraints.
-The sensitivity to CP violation is also shown.
 
+The sensitivity to CP violation is also shown.
 We show the effect of the collected statistics on the CP sensitivity.
 
 If the mass hierarchy is unknown, the sensitivity can be recovered by including the atmospheric sample.
-
-\section{Systematic studies}
-\label{sec:syst_studies}
-
-It is expected that larger systematic errors will result in a worse sensitivity,
-but certain uncertainties affect the measurement of the oscillation parameters more than others.
-For example, these can be the uncertainties on $\nu_e$ and $\cj{\nu}_e$ charged-current cross-sections, %
-the transverse flux model, the pion absorption probability, the total energy scale in SK, or the flux alignment.
-We study the impact of some selected systematics by modifying the nominal systematic model %
-and analysing the overall predicted sensitivity of the experiment in these different scenarios.
-Doing so, it is possible to determine which systematics have the most important repercussion on the sensitivity,
-since it is fundamental to understand their effect at all phases of the experiment.
-
-\subsection{Validation of the fitter}
-\label{sec:nuenorm}
-
-To validate the fitting framework a special systematic set for the beam sample is used.
-It is composed of just two systematics: the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties.
-These two errors are either correlated or anti-correlated %
-and they are tested at different value (1\%, 2\%, 3\%, 4\%, and 5\%) for a total of ten fits.
-Given the definition of $\chi^2$ in \refeq{eq:chi2}, %
-the difference in the fits is just the correlation matrix at a given relative error, %
-whereas the difference is provided by the $1\sigma$ histograms at fixed correlation.
-The correlation matrices used are simply
-\begin{equation}
-	\rho = \mqty(1 & 1 \\ 1 & 1) \quad\text{and}\quad
-	\rho = \mqty(1 & -1 \\ -1 & 1) \ ,
-\end{equation}
-but they are both singular and not invertible.
-A small offset of \np{e-5} is added to off-diagonal terms to allow the calculation of the $\chi^2$.
-
-The prediction of the one ring $e$-like samples in $\nu$-mode and $\cj{\nu}$-mode are shown in \reffig{fig:nuenorm_prediction} %
-for respectively the $\nu_e$ and the $\cj{\nu_e}$ CC cross-section uncertainties applied individually.
-The effect of the systematic error at different magnitudes of the relative error scales linearly.
-
-The importance of this systematic set can be appreciated in \reffig{fig:nuenorm_sensitivity}.
-When the two CC cross-sections are anti-correlated, the increment of one error brings about the decrement of the other.
-This results in an effective fluctuation of the number of events, exhibiting a CP violation--like phenomenon.
-A large systematic uncertainty of such anti-correlated cross-section parameters can therefore only aggravate the %
-overall sensitivity to $\delta_\text{CP}$.
-
-\begin{figure}
-	\centering
-	\resizebox{0.475\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys0.tex}}
-	\hfill
-	\resizebox{0.475\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys0.tex}}
-
-	\medskip
-	\resizebox{0.475\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys1.tex}}
-	\hfill
-	\resizebox{0.475\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys1.tex}}
-	\caption{Prediction of events at the far detector for the one ring $e$-like sample in %
-		$\nu$-mode (left) and $\cj{\nu}$-mode (right).
-		The $\nu_e$ (top) and $\cj{\nu}_e$ (bottom) CC cross-section systematics are varied to reach relative errors %
-		between 1,\% and 5\,\%.
-		In each figure, the top panel shows how the event distribution is affected, and the bottom panel shows %
-		the variation with respect to the prediction without errors applied, which is by definition %
-		the $1\sigma$ histogram, $1 + f^n$ (see \refeq{eq:chi2}). }
-	\label{fig:nuenorm_prediction}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_dCP.tex}}
-	\caption{$\chi^2$ profile for $\delta_\text{CP}$ for correlated (left) and anticorrelated (right) systematics. 
-		The bottom panels show the difference of the different lines with the no systematic profile.}
-	\label{fig:nuenorm_dCP}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_M23.tex}}
-	\caption{$\chi^2$ profile for $\Delta m_{32}^2$ for correlated (left) and anticorrelated (right) systematics. 
-		The bottom panels show the difference of the different lines with the no systematic profile.}
-	\label{fig:nuenorm_M23}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S13.tex}}
-	\caption{$\chi^2$ profile for $\sin^2 2\theta_{13}$ for correlated (left) and anticorrelated (right) systematics. 
-		The bottom panels show the difference of the different lines with the no systematic profile.}
-	\label{fig:nuenorm_S13}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S23.tex}}
-	\caption{$\chi^2$ profile for $sin^2 \theta_{23}$ for correlated (left) and anticorrelated (right) systematics. 
-		The bottom panels show the difference of the different lines with the no systematic profile.}
-	\label{fig:nuenorm_S23}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_cont_S23_M23.tex}}
-	\caption{Contour plot of the $\chi^2$ profile for $\Delta m_{23}^2$ vs.\  $sin^2 \theta_{23}$ %
-		for correlated (left) and anticorrelated (right) systematics. 
-		The inner contour and outer contour corresponds respectively to the $1\sigma$ and $3\sigma$ %
-		contour lines.}
-	\label{fig:nuenorm_S23_M23}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_sensitivity.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_sensitivity.tex}}
-	\caption{Expected signifcance to exclude $\sin\delta_\text{CP} = 0$ for correlated (left) and anticorrelated (right) systematics.
-		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
-       		masks the resolution power to distinguihsing neutrino from anti-neutrino events. }
-	\label{fig:nuenorm_sensitivity}
-\end{figure}
-
 
 
 \subsection{Variations of the nominal model}
@@ -850,43 +904,55 @@ overall sensitivity to $\delta_\text{CP}$.
 A series of modifications are performed on the nominal systematic and new systematic sets are created.
 Performing a sensitivity study with these variations of the nominal model, we can determine %
 if certain systematic errors needs more control than other.
-All of the produced sets are listed in \reftab{tab:variations}, however only a subset is discussed in this work %
-and these are the sets labelled \textbf{8}, \textbf{11a}, and \textbf{11b} (see \reftab{tab:variations} %
-for the meaning of the labels).
+All of the produced sets are listed in \reftab{tab:variations}.
+However, only some of the systematic models have been analysed for this thesis and these are:
+increment of the $\nu_e$ flux uncertainty in the $\nu$-mode beam by 2\%, labelled \textbf{8}; %
+increment of the SK energy scale uncertainty, from 2.4\,\% to 2.9\,\%, labelled \textbf{11a}; %
+decrement of the SK energy scale uncertainty, from 2.4\,\% to 1.9\,\%, labelled \textbf{11b}.
 The remaining ones will be studied in the future.
+The $\chi^2$ as a function of $\delta_\text{CP}$, in \reffig{fig:0_11a_11b_8_dCP_S13} changes slightly with a diffeerent flux uncertainty, %
+but it is not very much affected by a variation of the SK energy scale.
+This is true also the $\theta_{13}$, the $\chi^2$ profile of which is also in \reffig{fig:0_11a_11b_8_dCP_S13}.
+As it can be seen in \reffig{fig:0_11a_11b_8_M23_S23}, the outcome is opposite for %
+$\Delta m_{32}^2$ and $\theta_{23}$, which show a larger deviation from the nominal %
+model away from the best fit value.
+The contour plot of \reffig{fig:0_11a_11b_8_contour} confirms that no appreciable deviations from the nominal model %
+is seen for $\chi^2$ levels corresponding to $1\sigma$ and $3\sigma$.
+In terms of sensitivity, the variation induced by the modified systematic model is %
+less than 0.1\,\% at values of maximal violation of CP.
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_chi2_M23.tex}}
-	\caption{$\chi^2$ profile for $\delta_\text{CP}$ (left) and $\Delta m_{32}^2$ (right). 
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_dCP.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_S13.tex}}
+	\caption{$\chi^2$ profile for $\delta_\text{CP}$ (left) and $\sin^2 2\theta_{13}$ (right). 
 		The bottom panels show the difference of the different lines with the no systematic profile.}
-	\label{fig:0_11a_11b_8_dCP_M23}
+	\label{fig:0_11a_11b_8_dCP_S13}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_chi2_S23.tex}}
-	\caption{$\chi^2$ profile for $\sin^2 2\theta_{13}$ (left) and $sin^2 \theta_{23}$ (right). 
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_S23.tex}}
+	\caption{$\chi^2$ profile for $\Delta m_{32}^2$ (left) and $sin^2 \theta_{23}$ (right). 
 		The bottom panels show the difference of the different lines with the no systematic profile.}
-	\label{fig:0_11a_11b_8_S13_S23}
+	\label{fig:0_11a_11b_8_M23_S23}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
 	\caption{Contour plot of the $\chi^2$ profile for $\Delta m_{23}^2$ vs.\  $sin^2 \theta_{23}$ %
 		for correlated (left) and anticorrelated (right) systematics. 
 		The inner contour and outer contour corresponds respectively to the $1\sigma$ and $3\sigma$ %
 		contour lines.}
-	\label{fig:0_11a_11b_8_S23_M23}
+	\label{fig:0_11a_11b_8_contour}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_sensitivity.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/0_11a_11b_8_detail.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_sensitivity.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_detail.tex}}
 	\caption{Expected signifcance to exclude $\sin\delta_\text{CP} = 0$ for correlated (left) and anticorrelated (right) systematics.
 		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
        		masks the resolution power to distinguihsing neutrino from anti-neutrino events. }
