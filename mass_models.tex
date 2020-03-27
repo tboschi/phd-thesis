@@ -1,60 +1,69 @@
 \clearpage
-\chapter{Neutrino mass generation}
+\chapter{Phenomenology of heavy neutral leptons}
 \label{cha:mass_models}
 
 %[check PDG http://pdg.lbl.gov/2019/reviews/rpp2019-rev-neutrino-mixing.pdf]
 
-The evidence for three neutrino flavour oscillation is well established~\cite{Fukuda:1998mi,Aharmim:2005gt} %
-and can be accounted for only if neutrino mass splittings are non zero~\cite{Esteban:2018azc}.
-This implies that neutrinos are massive and mix, forcing to consider extensions %
-of the Standard Model (SM) to explain their origin. 
-A simple means of doing so is to introduce the right-handed counterpart of SM neutrinos, which are %
-singlet with respect to all SM gauge symmetries.
-The Lagrangian includes a Yukawa coupling between these sterile states, the Higgs boson and the leptonic doublet, %
-which generates Dirac mass-terms below the scale of EW symmetry breaking, 
-and Majorana mass terms for the new singlet states.
+The evidence for three neutrino flavour oscillation is well established~\cite{Fukuda:1998mi,Aharmim:2005gt, Esteban:2018azc} %
+and necessarily implies that the neutrino mass splittings are non zero, as seen in \refsec{sec:neutrino_vacuum}.
+Neutrinos are therefore massive and they mix, forcing to consider extensions of the Standard Model (SM) to explain their origin. 
+As done in \refsec{sec:neutrino_mixing}, a simple means of doing so is to introduce the right-handed counterpart of SM neutrinos,
+which are singlet with respect to all SM gauge symmetries.
+The new Lagrangian includes a Yukawa coupling between these sterile states, the Higgs boson and the leptonic doublet, %
+which generates Dirac mass-terms below the scale of EW symmetry breaking.
+Since any renormalisable term is should be included in the Lagrangian, Majorana mass terms for the new singlet states %
+are allowed and the Lagrangian becomes
+$\{{\cal{N}}_i\}$ is given by 
+%
+\begin{equation}
+	\label{eq:newmodel}
+	\mathcal{L}_{\text{SM}+\mathcal{N}} = \mathcal{L}_\text{SM} + i\, \cj{\mathcal{N}}_i \sh{\pd} \mathcal{N}_i + Y_{\alpha i} \cj{L}_\alpha \widetilde{H} \mathcal{N}_i + \frac{1}{2} (M_R)_{ij} \cj{\mathcal{N}^c}_i \mathcal{N}_j + \text{h.c.}\ ,
+	%\mathcal{L}_{\text{SM}+N} = \mathcal{L}_\text{SM} + i \cj{N}_i \sh{\pd} N_i + Y_{\alpha i} \cj{L}_\alpha \tilde{H} N_i %
+	%+ \frac{1}{2} (M_R)_{ij} \cj{N^c}_i N_j + \text{h.c.}\ ,
+\end{equation}
+%
+with $\mathcal{N}$ the new gauge singlets, $\mathcal{L}_\text{SM}$ denoting the SM Lagrangian %
+and the other symbols taking their conventional meaning.
 On diagonalisation of the resulting neutrino mass matrix, the heavy neutrino states, %
 commonly known as nearly-sterile neutrinos or Heavy Neutral Leptons (HNLs) in experimental contexts, %
 remain mainly in the sterile neutrino direction and have sub-weak interactions suppressed by %
 elements of the extended PMNS mixing matrix. 
 
 These states have been connected to a vast range of phenomenological behaviours and %
-even to cosmological implications (for a recent review on sterile neutrinos, see \eg \refref{Abazajian:2012ys}).
+even to cosmological implications (for a review on sterile neutrinos see e.g.\ \refref{Abazajian:2012ys}).
 For instance, nearly-sterile neutrinos in the keV region are viable warm Dark Matter candidates (see \eg \refref{Asaka:2005an}), %
-whereas heavier HNLs could play a role in leptogenesis~\cite{Fukugita:1986hr, Covi:1996wh, Pilaftsis:1997jf, Buchmuller:1997yu, %
-Pilaftsis:2003gt, Davidson:2008bu, Akhmedov:1998qx, Asaka:2005pn, Hernandez:2015wna, Hernandez:2016kel, %
-Hambye:2016sby, Hambye:2017elz, Drewes:2017zyw}.
+whereas heavier HNLs could play a role in leptogenesis~\cite{Fukugita:1986hr, Covi:1996wh, Pilaftsis:1997jf}.
+%Buchmuller:1997yu, %
+%Pilaftsis:2003gt, Davidson:2008bu, Akhmedov:1998qx, Asaka:2005pn, Hernandez:2015wna, Hernandez:2016kel, %
+%Hambye:2016sby, Hambye:2017elz, Drewes:2017zyw
 So far, some possible hints in favour of heavy neutrinos have emerged in neutrino appearance oscillation experiments, %
 specifically LSND~\cite{Aguilar:2001ty} and MiniBooNE~\cite{Aguilar-Arevalo:2012fmn, Aguilar-Arevalo:2013pmq, Aguilar-Arevalo:2018gpe} %
 but are disfavoured by disappearance experiments~\cite{TheIceCube:2016oqi, Adamson:2017uda, Aartsen:2017bap}, %
-unless non-standard effects are present~\cite{Liao:2016reh, Liao:2018mbg, Esmaili:2018qzu, Denton:2018dqq}. Further hints 
-in the same mass range have been reported for mixing with electron neutrinos in the so-called reactor anomaly~\cite{Mueller:2011nm, Mention:2011rk, Huber:2011wv, Ko:2016owz, Alekseev:2018efk} and in the less statistically significant gallium one~\cite{Abdurashitov:2005tb, Laveder:2007zz, Giunti:2006bj}.
-Explanations of the MiniBooNE low energy excess invoking GeV-scale HNLs with non-standard interactions~\cite{Gninenko:2009ks, Gninenko:2010pr, %
-	Masip:2012ke, Bertuzzo:2018itn, Ballett:2018ynz}, %
-have also been put forward. In these models, heavy neutral fermions are produced by neutrino up-scattering in the detector and subsequently decaying into photons or electrons, which mimic an electron neutrino interaction.
+unless non-standard effects are present~\cite{Liao:2016reh, Liao:2018mbg, Esmaili:2018qzu, Denton:2018dqq}.
+Further hints in the same mass range have been reported for mixing with electron neutrinos in the %
+so-called reactor anomaly~\cite{Mueller:2011nm, Mention:2011rk, Huber:2011wv, Ko:2016owz, Alekseev:2018efk} %
+and in the less statistically significant gallium one~\cite{Abdurashitov:2005tb, Laveder:2007zz, Giunti:2006bj}.
+Explanations of the MiniBooNE low energy excess invoking GeV-scale HNLs with non-standard %
+interactions~\cite{Gninenko:2009ks, Gninenko:2010pr, Masip:2012ke, Bertuzzo:2018itn, Ballett:2018ynz}, %
+have also been put forward.
+In these models, heavy neutral fermions are produced by neutrino up-scattering in the detector %
+and subsequently decaying into photons or electrons, which mimic an electron neutrino interaction.
 The interpretation of the current experimental results is still largely debated in the scientific community.
 Searches both for electron-like signatures in MicroBooNE, the SBN programme at Fermilab~\cite{Antonello:2015lea}, %
 and in short baseline reactor neutrino experiments, such as DANNS~\cite{Alekseev:2018efk}, NEOS~\cite{Ko:2016owz}, %
-PROSPECT~\cite{Ashenfelter:2018iov}, STEREO~\cite{Almazan:2018wln}, NEUTRINO-4~\cite{Serebrov:2018vdw}, %
+PROSPECT~\cite{Ashenfelter:2018iov}, STEREO~\cite{Almazan:2018wln}, \mbox{NEUTRINO-4}~\cite{Serebrov:2018vdw}, %
 will shed further light on these possibilities, %
 whereas experiments like KATRIN~\cite{Mertens:2018vuu} will be able to exclude the gallium anomalies.
 
 Apart from these controversial hints, no positive evidence of heavy neutrinos has been found to date in laboratory searches.
 A thorough review of the current constraints can be found in~\refrefs{Atre:2009rg, Drewes:2015iva}. 
-%
-%
-%
-%and studies of
-%$0\nu\beta\beta$~\cite{Benes:2005hn} 
-%
 Bounds critically depend on the HNL masses and the flavour with which they mix.
-Searches for kinks in Curie plots of $\beta$-decay
-spectra~\cite{Galeazzi:2001py, Hiddemann:1995ce, Holzschuh:1999vy,
-	Holzschuh:2000nj, Deutsch:1990ut} have placed bounds on the electronic
-mixing for HNL masses between the keV and MeV scales.  
+Searches for kinks in Curie plots of $\beta$-decay spectra~\cite{Galeazzi:2001py, Hiddemann:1995ce, Holzschuh:1999vy, %
+Holzschuh:2000nj, Deutsch:1990ut} have placed bounds on the electronic mixing for HNL masses between the keV and MeV scales.  
 %
-For masses from a few MeV to a few hundreds MeV, searches for monochromatic peaks in the lepton spectrum of decaying pions %
-and kaons place important bounds on the muonic and electronic mixing angles~\cite{Artamonov:2014urb, Britton:1992pg, Britton:1992xv, Aguilar-Arevalo:2017vlf, Aguilar-Arevalo:2019owf}.
+For masses from a few MeV to a few hundreds MeV, searches for monochromatic peaks %
+in the lepton spectrum of decaying pions and kaons place important bounds on the muonic and %
+electronic mixing angles~\cite{Artamonov:2014urb, Britton:1992pg, Britton:1992xv, Aguilar-Arevalo:2017vlf, Aguilar-Arevalo:2019owf}.
 Neutrinoless double beta decay indirectly constrains Majorana HNLs from the eV to the TeV scale %
 and lepton number violating meson and tau decays can be used to set limits on the mixing angle %
 in narrow ranges of HNLs masses~\cite{Atre:2009rg}. 
@@ -62,13 +71,14 @@ in narrow ranges of HNLs masses~\cite{Atre:2009rg}.
 %
 The tightest constraints come from searches for the direct production and subsequent decays of heavy neutrinos %
 in \emph{beam dump} experiments (see \refsec{cha:beamdump}) and at colliders.
-The strongest limits were set by the PS191 experiment~\cite{Bernardi:1985ny, Bernardi:1987ek}, %
-a beam dump experiment which ran at CERN in 1984.
-Its most stringent upper bounds on the novel mixing angles are \mbox{$|U_{e4}|^2, |U_{\mu4}|^2 \leq \np{e-8} \text{\,--\,} \np{e-9}$} %
-for neutrino masses between the pion and the kaon mass.
-Other bounds of this type can be found in~\refrefs{Abreu:1996pa, Adriani:1992pq, Vilain:1994vg, Vaitaitis:1999wq, Badier:1985wg, CooperSarkar:1985nh, Gallas:1994xp}
-as well as collider ones, from LHCb~\cite{Aaij:2014aba}, ATLAS~\cite{Aaboud:2018spl}, CMS~\cite{Sirunyan:2018mtv, Sirunyan:2018xiv}, BELLE~\cite{Liventsev:2013zz} %
-(see also \refref{Harrison:2015bja}).
+The strongest limits were set by the PS191 experiment~\cite{Bernardi:1985ny, Bernardi:1987ek}.
+%a beam dump experiment which ran at CERN in 1984.
+%Its most stringent upper bounds on the novel mixing angles are \mbox{$|U_{e4}|^2, |U_{\mu4}|^2 \leq \np{e-8} \text{\,--\,} \np{e-9}$} %
+%for neutrino masses between the pion and the kaon mass.
+Other bounds of this type can be found at LEP experiments~\cite{Abreu:1996pa, Adriani:1992pq}, CHARM II~\cite{Vilain:1994vg}, %
+NuTeV~\cite{Vaitaitis:1999wq}, and other ones~\cite{Badier:1985wg, CooperSarkar:1985nh, Gallas:1994xp}, %
+as well as collider ones, from LHCb~\cite{Aaij:2014aba}, ATLAS~\cite{Aaboud:2018spl}, CMS~\cite{Sirunyan:2018mtv, Sirunyan:2018xiv}, %
+BELLE~\cite{Liventsev:2013zz} (see also \refref{Harrison:2015bja}).
 
 % Similarly, peak searches in leptonic decays
 %at rest of pions and kaons have proved to be a very powerful probe of the
@@ -89,23 +99,6 @@ as well as collider ones, from LHCb~\cite{Aaij:2014aba}, ATLAS~\cite{Aaboud:2018
 
 
 
-In this chapter, we present a detailed analysis of the sensitivity of DUNE ND to HNL in beam dump style searches.
-We ground our discussion in theoretically consistent models, in which sterile neutrinos %
-are associated with neutrino mass generation via a low-scale seesaw mechanism.
-We extend and refine previous analysis~\cite{Krasnov:2019kdc, Adams:2013qkq}, %
-using the latest configuration of the DUNE ND~\cite{DUNETDR:2019, DUNEND:2019}.
-%Differently from previous sensitivity studies
-%we ground our discussion in theoretically consistent models, in which sterile neutrinos are associated with neutrino %
-%mass generation via a low-scale seesaw mechanism. %, such as inverse seesaw (ISS) mechanisms.
-We note that the range of masses and mixing angles testable at DUNE~ND is of interest for the generation of %
-the baryon asymmetry in the context of the ASR mechanism~\cite{Akhmedov:1998qx, Asaka:2005pn, Hernandez:2015wna, Hernandez:2016kel, Drewes:2017zyw}.
-We consider both Majorana and pseudo-Dirac states and calculate their decay and production rates, 
-with careful consideration given to helicity arguments.
-These formulae are then used to estimate the sensitivity of the experiment, %
-taking into account the beam and detector performance capabilities thanks to simulations of both event and background signals.
-We stress that DUNE will be able to extend the current limits on new fermionic singlets, %
-including those with masses above 500\,MeV, probing models of theoretical significance for the generation of neutrino mass.
-We show that bounds can be put also on the mixing with tau neutrinos, thanks to the high energy~beam.
 %Ultimately, we show that DUNE will mostly (but not exclusively) be sensitive to pseudo-Dirac states.
 %and this can have consequence for the signal and analysis strategies adopted by the collaboration.
 %Also by considering the relationship between low-scale steriles and neutrino masses, %
@@ -134,18 +127,7 @@ We show that bounds can be put also on the mixing with tau neutrinos, thanks to 
 
 The lightness of the observed neutrino masses can be explained in a range of different scenarios. %
 New SM-gauge singlet fermions are a feature common to many of them. 
-The~most general Lagrangian including a set of right-chiral gauge singlets 
-$\{{\cal{N}}_i\}$ is given by 
-%
-\begin{equation}
-	\label{eq:model}
-	\mathcal{L}_{\text{SM}+\mathcal{N}} = \mathcal{L}_\text{SM} + i\, \cj{\mathcal{N}}_i \sh{\pd} \mathcal{N}_i + Y_{\alpha i} \cj{L}_\alpha \widetilde{H} \mathcal{N}_i + \frac{1}{2} (M_R)_{ij} \cj{\mathcal{N}^c}_i \mathcal{N}_j + \text{h.c.}\ ,
-	%\mathcal{L}_{\text{SM}+N} = \mathcal{L}_\text{SM} + i \cj{N}_i \sh{\pd} N_i + Y_{\alpha i} \cj{L}_\alpha \tilde{H} N_i %
-	%+ \frac{1}{2} (M_R)_{ij} \cj{N^c}_i N_j + \text{h.c.}\ ,
-\end{equation}
-%
-with $\mathcal{L}_\text{SM}$ denoting the SM Lagrangian and the other symbols taking their conventional meaning.
-Without loss of generality, $M_R$ can be chosen to be diagonal.
+Without loss of generality, the mass matrix of \refeq{eq:newmodel} $M_R$ can be chosen to be diagonal.
 After electroweak symmetry breaking, a Dirac mass emerges for which we will use the notation $m_D \equiv v Y/\sqrt{2}$.
 %
 This term appears, for instance, in the famous Type I seesaw mechanism~\cite{Minkowski:1977sc,Mohapatra:1979ia,GellMann:1980vs,Yanagida:1979as}. %
@@ -163,8 +145,8 @@ Neglecting the matrix nature of these expressions for now, if $m_D$ takes values
 acceptable neutrino masses are produced when $M_R$ has values around the GUT scale, %
 suggestively connecting it to a high-scale breaking of $U(1)_{B-L}$~\cite{Minkowski:1977sc}.
 Low-scale solutions are also possible by taking the Yukawa couplings to be similar %
-or smaller than the other SM lepton Yukawa couplings, \eg if $m_D$ takes values in the keV range, %
-new nearly-sterile states would exist with masses around a GeV.
+or smaller than the other SM lepton Yukawa couplings.
+For example if $m_D$ takes values in the keV range, new nearly-sterile states would exist with masses around a GeV.
 %
  The resulting mixing is constrained by the contribution given to light neutrino masses and naively one can expect to have
 %
@@ -185,12 +167,11 @@ by advocating specific cancellations in the heavy neutrino contribution to light
 For instance, in analogy to \refref{Moffat:2018wke}, one can use the Casas-Ibarra parametrisation~\cite{Casas:2001sr}
 \begin{equation}
 	\label{eq:CasasIbarra}
-	m_D \simeq i \ \mathcal{U} \ m_\text{diag}^{1/2}\ R\ M_R^{-1/2}\ ,
+	m_D \simeq i \ U \ m_\text{diag}^{1/2}\ R\ M_R^{-1/2}\ ,
 \end{equation}
-where $\mathcal{U}$ is the usual $3\times 3$ PMNS mixing matrix %
-which diagonalises $m_\nu$ into the diagonal matrix containing the three light neutrinos $m_\text{diag}$, %
-and $R$ is an arbitrary complex orthogonal matrix.
-We notice that the values of the entries of $R$ are not bounded and could be much larger than one.
+where $U$ is the usual $3\times 3$ PMNS mixing matrix %
+which diagonalises $m_\nu$ into the diagonal matrix containing the three light neutrinos $m_\text{diag}$.
+$R$ is an arbitrary complex orthogonal matrix, the entires of which are not bounded and could be much larger than one.
 Consequently, the mixing angles between the active and heavy sterile neutrinos, %
 which scale as $m_D\, M_{R}^{-1}$, can be enhanced without violating the bound from neutrino masses, %
 in which $R$ does not enter.
@@ -199,21 +180,20 @@ Differently from \refref{Moffat:2018wke}, one loop corrections are negligible at
 Without advocating specific forms of the Yukawa coupling, %
 the bound in Eq.~(\ref{eq:TypeI_mixing_bound}) can be avoided in presence of more than three sterile neutrinos %
 thanks to the cancellation between their contributions to neutrino masses.
-In recent years, a lot of interest has focused on these type of models %
-\eg the Inverse Seesaw~(ISS)~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}, extended seesaw~\cite{Barr:2003nn} %
+In recent years, a lot of interest has focused on these type of models, like for example %
+the Inverse Seesaw~(ISS)~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}, extended seesaw~\cite{Barr:2003nn} %
 and linear seesaw models~\cite{Malinsky:2005bi,Kang:2006sn}.
-For~definiteness, we will focus on the ISS model.
+The work of this thesis focuses on the ISS model.
 In this case, a quasi-preserved lepton number guarantees the specific texture of $M_R$ and $m_D$ %
 and its small breaking is natural in the 't Hooft sense~\cite{tHooft:1980xss}.
 %We will refer to such models as ``symmetry-protected''.
-
 The physical spectrum of heavy neutrinos can be best understood in the Lepton Number Conserving (LNC) limit.
 We use ISS\,$(a,b)$ to denote the model with $a$ $(b)$, $a,b\neq 0$, new gauge singlets of lepton number $+1$ $(-1)$.
-Following \refeq{eq:model} and \refeq{eq:typeI}, the most general mass matrices are then given by 
+Following \refeq{eq:newmodel} and \refeq{eq:typeI}, the most general mass matrices are then given by 
 %
 \[
-	m_D = \qty( \begin{matrix} m, 0\end{matrix}) \qquad \text{and}\qquad M_R = %
-	\qty(\begin{matrix} 0 & M^\text{T} \\ M & 0 \end{matrix})\ ,
+	m_D = \mqty(m, 0) \qquad \text{and}\qquad M_R = %
+	\mqty(0 & M^\text{T} \\ M & 0)\ ,
 \]
 %
 where we introduce the $3\times a$ complex matrix $m$ and the $b\times a$ complex matrix $M$.
@@ -235,22 +215,22 @@ On the contrary, the introduction of a small Lepton Number Violating (LNV) param
 perturbs the LNC spectrum as well as the mixing.
 In general there are only two possible origins for a low-scale heavy neutrino: 
 %
- \begin{itemize}
-			%
-		\item A massless Weyl fermion in the LNC limit which is given non-zero mass proportional to the perturbation.
-			As the mixing between massless states is not defined in the LNC limit, the perturbation controls %
-			the induced mixing between the nearly-sterile state and the active ones.
-			We will refer to this state as a Majorana neutrino.
-			%
-		\item A massive Dirac pair at the low scale in the LNC limit, becoming a pseudo-Dirac pair after the perturbation, %
-			which regulates the mass splitting of the pair.
-			In the LNC limit, the mixing angles between Dirac pair and light neutrinos can be arbitrarily large,
-			and this property remains after the perturbation.
-			%
-	\end{itemize}
-	%
-	The first case only arises in models with an imbalanced number of new fields, %
-	\ie ISS\,$(a,b)$ such that $a\neq b$, while the second option can occur in any ISS model. 
+\begin{itemize}
+		%
+	\item A massless Weyl fermion in the LNC limit which is given non-zero mass proportional to the perturbation.
+		As the mixing between massless states is not defined in the LNC limit, the perturbation controls %
+		the induced mixing between the nearly-sterile state and the active ones.
+		We will refer to this state as a Majorana neutrino.
+		%
+	\item A massive Dirac pair at the low scale in the LNC limit, becoming a pseudo-Dirac pair after the perturbation, %
+		which regulates the mass splitting of the pair.
+		In the LNC limit, the mixing angles between Dirac pair and light neutrinos can be arbitrarily large,
+		and this property remains after the perturbation.
+		%
+\end{itemize}
+%
+The first case only arises in models with an imbalanced number of new fields, %
+\ie ISS\,$(a,b)$ such that $a\neq b$, while the second option can occur in any ISS model. 
 
 In this paper, we are interested in heavy states with masses in the MeV--GeV range.%
 \footnote{This is motivated by the kinematic limits on production from meson decays discussed in more detail in \refsec{sec:production}.} %
@@ -260,7 +240,7 @@ In what follows, we will compute the production and decay rates for Majorana sta
 and Dirac states and study their discovery potential at DUNE ND.
 We disregard lepton number violating effects and therefore the distinction between pseudo-Dirac and Dirac states will not be relevant.
 
-Feynman rules for Majorana states derived from \refeq{eq:model} can be found in~\cite{Atre:2009rg},
+Feynman rules for Majorana states derived from \refeq{eq:newmodel} can be found in~\cite{Atre:2009rg},
 or constructed using the techniques of \refref{Denner:1992me}. 
 For an explicit comparison between Dirac versus Majorana Feynman rules for heavy neutrinos, see~\refref{Abada:2016plb}.
 
