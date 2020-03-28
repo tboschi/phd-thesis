@@ -10,28 +10,17 @@ Neutrinos are therefore massive and they mix, forcing to consider extensions of 
 As done in \refsec{sec:neutrino_mixing}, a simple means of doing so is to introduce the right-handed counterpart of SM neutrinos,
 which are singlet with respect to all SM gauge symmetries.
 The new Lagrangian includes a Yukawa coupling between these sterile states, the Higgs boson and the leptonic doublet, %
-which generates Dirac mass-terms below the scale of EW symmetry breaking.
-Since any renormalisable term is should be included in the Lagrangian, Majorana mass terms for the new singlet states %
-are allowed and the Lagrangian becomes
-$\{{\cal{N}}_i\}$ is given by 
-%
-\begin{equation}
-	\label{eq:newmodel}
-	\mathcal{L}_{\text{SM}+\mathcal{N}} = \mathcal{L}_\text{SM} + i\, \cj{\mathcal{N}}_i \sh{\pd} \mathcal{N}_i + Y_{\alpha i} \cj{L}_\alpha \widetilde{H} \mathcal{N}_i + \frac{1}{2} (M_R)_{ij} \cj{\mathcal{N}^c}_i \mathcal{N}_j + \text{h.c.}\ ,
-	%\mathcal{L}_{\text{SM}+N} = \mathcal{L}_\text{SM} + i \cj{N}_i \sh{\pd} N_i + Y_{\alpha i} \cj{L}_\alpha \tilde{H} N_i %
-	%+ \frac{1}{2} (M_R)_{ij} \cj{N^c}_i N_j + \text{h.c.}\ ,
-\end{equation}
-%
-with $\mathcal{N}$ the new gauge singlets, $\mathcal{L}_\text{SM}$ denoting the SM Lagrangian %
-and the other symbols taking their conventional meaning.
+which generates Dirac mass-terms below the scale of EW symmetry breaking (EWSB).
+Since any renormalisable term is should be included in the Lagrangian, %
+Majorana mass terms for the new singlet states are allowed.
 On diagonalisation of the resulting neutrino mass matrix, the heavy neutrino states, %
 commonly known as nearly-sterile neutrinos or Heavy Neutral Leptons (HNLs) in experimental contexts, %
 remain mainly in the sterile neutrino direction and have sub-weak interactions suppressed by %
-elements of the extended PMNS mixing matrix. 
+elements of the extended mixing matrix. 
 
 These states have been connected to a vast range of phenomenological behaviours and %
-even to cosmological implications (for a review on sterile neutrinos see e.g.\ \refref{Abazajian:2012ys}).
-For instance, nearly-sterile neutrinos in the keV region are viable warm Dark Matter candidates (see \eg \refref{Asaka:2005an}), %
+even to cosmological implications (for a review on sterile neutrinos see \refref{Abazajian:2012ys}).
+For instance, nearly-sterile neutrinos in the keV region are viable warm Dark Matter candidates~\cite{Asaka:2005an}, %
 whereas heavier HNLs could play a role in leptogenesis~\cite{Fukugita:1986hr, Covi:1996wh, Pilaftsis:1997jf}.
 %Buchmuller:1997yu, %
 %Pilaftsis:2003gt, Davidson:2008bu, Akhmedov:1998qx, Asaka:2005pn, Hernandez:2015wna, Hernandez:2016kel, %
@@ -70,7 +59,7 @@ in narrow ranges of HNLs masses~\cite{Atre:2009rg}.
 %
 %
 The tightest constraints come from searches for the direct production and subsequent decays of heavy neutrinos %
-in \emph{beam dump} experiments (see \refsec{cha:beamdump}) and at colliders.
+in \emph{beam dump} experiments (see \refsec{cha:hnl_dune}) and at colliders.
 The strongest limits were set by the PS191 experiment~\cite{Bernardi:1985ny, Bernardi:1987ek}.
 %a beam dump experiment which ran at CERN in 1984.
 %Its most stringent upper bounds on the novel mixing angles are \mbox{$|U_{e4}|^2, |U_{\mu4}|^2 \leq \np{e-8} \text{\,--\,} \np{e-9}$} %
@@ -125,10 +114,173 @@ BELLE~\cite{Liventsev:2013zz} (see also \refref{Harrison:2015bja}).
 \section{Heavy neutrinos in seesaw models}
 \label{sec:model}
 
+With $n$ new SM singlets $\mathcal{N}_i$, the extendend Lagrangian becomes
+\begin{equation}
+	\label{eq:newmodel}
+	\mathcal{L}_{\text{SM}+\mathcal{N}} = \mathcal{L}_\text{SM} + i\, \cj{\mathcal{N}}_i\, \sh{\pd}\, \mathcal{N}_i + %
+			Y_{\alpha i}\, \cj{L}_\alpha\, \widetilde{H}\, \mathcal{N}_i + %
+			\frac{1}{2} (M_R)_{ij}\, \cj{\mathcal{N}^c}_i\, \mathcal{N}_j + \text{h.c.}\ ,
+	%\mathcal{L}_{\text{SM}+N} = \mathcal{L}_\text{SM} + i \cj{N}_i \sh{\pd} N_i + Y_{\alpha i} \cj{L}_\alpha \tilde{H} N_i %
+	%+ \frac{1}{2} (M_R)_{ij} \cj{N^c}_i N_j + \text{h.c.}\ ,
+\end{equation}
+with $\mathcal{L}_\text{SM}$ denoting the SM Lagrangian and the other symbols taking their conventional meaning.
+Below EWSB, mass terms for neutrino states become explicitly available
+\begin{equation}
+	- \mathcal{L}_\text{mass} = \frac{1}{2} \cj{\bs{\nu}} \mathcal{M} \bs{\nu}^C + h.c.\ ,
+\end{equation}
+where $\bs{\nu}$ is such that %
+\begin{equation}
+	P_L\,\bs{\nu} \equiv (\nu_e, \nu_\mu, \nu_\tau, N_1, ..., N_n)\ ,
+\end{equation}
+and $C$ denotes a charge-conjugation (see \refsec{cha:cp_hk}).
+If no additional field content is added and only renormalizable operators are included, %
+the low-scale mass terms will have the structure
+\begin{equation}
+	\label{eq:seesaw_mass_matrix}
+	\mathcal{M} = \mqty( 0	& m_D^T	\\ m_D	& M_R )\ ,
+\end{equation}
+where $m_D$ and $M_R$ are complex matrices of dimensions $n\times 3$ and $n \times n$, respectively.
+Under the assumption that $M_R$ is full rank, this model defines the Type I %
+seesaw~\cite{Minkowski:1977sc, Mohapatra:1979ia, GellMann:1980vs, Yanagida:1979as}.
+The light neutrino mass matrix is then retrieved by the expansion~\cite{Grimus:2000vj}
+\begin{equation}
+	\label{eq:typeI_seesaw}
+	m_\nu = m_D^TM_R^{-1}m_D + \mathcal{O}\qty(\qty[M_R^{-1}m_D]^2)\ .
+\end{equation}
+The top-left zero in \refeq{eq:seesaw_mass_matrix} arises as a consequence of $\text{SU(2)}_L$ symmetry, %
+and similar theoretical considerations often impose further textures and hierarchies on $m_D$ and $M_R$, %
+which in turn lead to specific correlations in the physical spectrum of states.
+The heavy neutrino masses are approximately given by the diagonal entries of $M_R$ and its corresponding eigenstates, %
+the heavy nearly-sterile neutrinos $N_i$, have suppressed mixing with active neutrinos and are mainly composed %
+by sterile fields.
+Neglecting the matrix nature of these expressions for now, if $m_D$ takes values around the electroweak scale, %
+acceptable neutrino masses are produced when $M_R$ has values around the GUT scale, %
+suggestively connecting it to a high-scale breaking of $U(1)_{B-L}$~\cite{Minkowski:1977sc}.
+Low-scale solutions are also possible by taking the Yukawa couplings to be similar %
+or smaller than the other SM lepton Yukawa couplings.
+For example if $m_D$ takes values in the keV range, new nearly-sterile states would exist with masses around a GeV.
+The resulting mixing is constrained by the contribution given to light neutrino masses and naively one can expect to have
+\begin{equation}
+	\label{eq:TypeI_mixing_bound}
+	\qty|U_{\alpha N}|^2 \lesssim \frac{m_\nu}{m_N} \lesssim  \np{e-10}\ \frac{1\,\mathrm{GeV}}{m_N}\ ,
+	%
+\end{equation}
+by taking $m_\nu\lesssim 0.1$\,eV as limit for light neutrino masses.
+Specific models in which low energy neutrino masses and mixing angles are derived from the see-saw parameters %
+allow for a broader range of values, invoking specific structures for the Yukawa couplings.
+Another way to avoid the bound of \refeq{eq:TypeI_mixing_bound} in presence of more than three sterile neutrinos %
+is by the cancellation between their contributions to neutrino masses.
+
+This is achieved in a class of models with apporixmate lepton number (LN), %
+which can lead to phenomenologically acceptable neutrino masses 
+Assuming that all of the $N_i$ states have lepton numbers of $Q_L = \pm1$,
+the right-handed fields $S_j = N_j^C$ are define for any state with $Q_L = -1$.
+The set of flavour states can then be ordered by lepton number
+\begin{equation}
+	P_L\,\bs{\nu} \equiv (\nu_\alpha, N_i, S^c_j)\ ,
+\end{equation}
+where $i = 1\ldots a$ and $j = 1 \ldots b$ such that $a+b=n$.
+These charge assignments forbid certain terms in the mass matrix, when LN is conserved.
+Following \refeq{eq:newmodel} and \refeq{eq:typeI}, the most general mass matrices are given when
+\begin{equation}
+	m_D = \mqty(m, 0) \qquad \text{and}\qquad M_R = %
+	\mqty(0 & M^\text{T} \\ M & 0)\ ,
+\end{equation}
+producing in the lepton number conserving (LNC) limit
+\begin{equation}
+	\label{eq:issmatrix}
+	\mathcal{M} = 
+	\mqty( 0	& m^T	& 0	\\
+	       m	& 0	    & M \\
+	       0	& M^T	& 0)\ ,
+\end{equation}
+where $m$ and $M$ are complex matrices with respectively dimensions $a\times 3$ and $a\times b$.
+This matrix preserves LN, and all flavour states have non-zero LN, %
+which implies that the spectrum must consist of~\cite{Wyler:1982dd}
+\begin{equation}
+	\label{eq:LNC_spectrum}
+      	\text{min}\{3+b,a\}~\text{Dirac pairs} \qquad\text{and}\qquad |3+b-a|~\text{massless Majorana states}, 
+\end{equation}
+and the Dirac pair masses are given by the non-zero singular values of the rectangular %
+$a \times (3+b)$ matrix $(m^\text{T}, M^\text{T})$. $\qty(m,M)$.	
+Although such a mass matrix can explain the neutrino data via three Dirac pairs with $(a=3,b=0)$, %
+this solution has no natural explanation of the observed smallness of the light neutrino masses.
+An alternative approach that seeks to address the scale of light neutrino mass is to perturb %
+the above mass matrix by a small lepton number violating (LNV) parameter.
+In this case, the specific texture of $M_R$ and $m_D$ guarantess a quasi-preserved LN if %
+the LNV parameters are natural in the 't Hooft sense~\cite{tHooft:1980xss}.
+This can lift eigenstates which are masslesss in the LNC limit to states %
+with small masses dictated by the perturbation.
+Under assumptions of renormalizability, the most general LNV Lagrangian must include the following terms,
+\begin{equation}
+	\label{eq:lagrangian_LNV}
+	\mathcal{L}_{(\Delta L = 2)} = - Y_{\alpha i}^\prime\cj{L_\alpha}H S_i %
+				-\frac{1}{2}\mu^\prime_{ij}\cj{N_i^C} N_j %
+				-\frac{1}{2}\mu_{ij}\cj{S_i^C} S_j\ .
+\end{equation}
+Each of the terms in this perturbation Lagrangian has historically been associated with a %
+simple independent implementation of the paradigm:
+the Inverse Seesaw~(ISS)~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}, %
+the linear seesaw models~\cite{Wyler:1982dd,Akhmedov:1995ip,Akhmedov:1995vm}.
+and the extended seesaw~\cite{Barr:2003nn, Kang:2006sn}.
+The focus of this thesis is on the ISS model.
+
+In the ISS, the texture of the perturbation assumes the values $Y^\prime = 0$ and $\mu^\prime=0$, %
+while $\mu$ controls the size of LNV effects.
+The mass matrix is there
+\begin{equation}
+	\label{eq:iss_matrix}
+	\mathcal{M} = 
+	\mqty(
+		0	& m_D^T	& 0	\\
+		m_D	& 0	& M^T_R	\\
+		0	& M_R	& \mu
+	)\ ,
+\end{equation}
+On diagonalization, the light neutrino masses are found to be suppressed by the size of $\mu$.
+Assuming $\mu \ll m , M$  and $a=b$, the light mass matrix takes the form~\cite{GonzalezGarcia:1988rw}
+\begin{equation}
+	m_\nu = m M^{-1} \mu \left(M^{-1}\right)^T m^T + \mathcal{O}(\mu^2)\ .
+\end{equation}
+It results that light neutrino masses are explained by Yukawa couplings of order one and %
+a new physics scale a little above the electroweak scale~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}. 
+For $a\neq b$, extra massless sterile states degenerate with the light neutrinos are present, %
+in addition to the set of Dirac pairs of arbitrary masses.
+Mixing involving these degenerate states is not defined
+In the LNC limit, there is no mixing defined that involves these degenerate states, %
+as any unitary map in the degenerate subspace is permitted.
+On the contrary, the introduction of the small LNV parameter $\mu$ perturbs the LNC spectrum as well as the mixing %
+for both light and heavy neutrinos.
+In general there are only two possible origins for a low-scale heavy neutrino.
+One scenario is when one of the massive Dirac pair is already at a low energy scale in the LNC limit %
+and it becomes a pseudo-Dirac pair after the perturbation.
+The degeneracy is resolved by the $\mu$ parameter, which regulates the mass splitting of the pair.
+Both in the LNC limit and in the LNV case, the mixing angles between Dirac pair and light neutrinos can be arbitrarily large.
+The other possibility can only occur with $a\neq b$ and it involves one of the massless Majorana fermion, %
+initially degenerate with the light neutrinoss.
+In the presence of LNV terms, this state is given a non-zero mass proportional to the perturbation.
+As the mixing between massless states is not defined in the LNC limit, the perturbation controls %
+the induced mixing between the nearly-sterile state and the active ones.
+
+%More generically, let's use ISS\,$(a,b)$ to denote the model with $a$ and $b$ new gauge singlets of, %
+%respectively, lepton number $+1$ and $-1$, and $a, b \neq 0$.
+
+
+The discussion above suggests that both Majorana states and (pseudo-)Dirac states should be considered, %
+covering all possible phenomenological aspects.
+In what follows, we will compute the decay and production rates for Majorana states and Dirac states.
+We disregard lepton number violating effects and therefore the distinction between pseudo-Dirac and Dirac states will not be relevant.
+The region of interest for the masses of heavy states is in the MeV--GeV range.%
+This is motivated by the kinematic limits on production from meson decays discussed in more detail in \refsec{sec:production}. %
+Feynman rules for Majorana states derived from \refeq{eq:newmodel} can be found in~\cite{Atre:2009rg},
+or constructed using the techniques of \refref{Denner:1992me}. 
+For an explicit comparison between Dirac versus Majorana Feynman rules for heavy neutrinos, see~\refref{Abada:2016plb}.
+
+\iffalse
 The lightness of the observed neutrino masses can be explained in a range of different scenarios. %
 New SM-gauge singlet fermions are a feature common to many of them. 
-Without loss of generality, the mass matrix of \refeq{eq:newmodel} $M_R$ can be chosen to be diagonal.
-After electroweak symmetry breaking, a Dirac mass emerges for which we will use the notation $m_D \equiv v Y/\sqrt{2}$.
+Without loss of generality, the mass matrix of $M_R$ \refeq{eq:newmodel} can be chosen to be diagonal.
+After electroweak symmetry breaking, a Dirac mass emerges for which the notation $m_D \equiv v Y/\sqrt{2}$ will be used.
 %
 This term appears, for instance, in the famous Type I seesaw mechanism~\cite{Minkowski:1977sc,Mohapatra:1979ia,GellMann:1980vs,Yanagida:1979as}. %
 Majorana masses for the light neutrinos arise and are given by
@@ -181,139 +333,82 @@ Without advocating specific forms of the Yukawa coupling, %
 the bound in Eq.~(\ref{eq:TypeI_mixing_bound}) can be avoided in presence of more than three sterile neutrinos %
 thanks to the cancellation between their contributions to neutrino masses.
 In recent years, a lot of interest has focused on these type of models, like for example %
-the Inverse Seesaw~(ISS)~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}, extended seesaw~\cite{Barr:2003nn} %
+the Inverse Seesaw~(ISS)~\cite{Mohapatra:1986bd, GonzalezGarcia:1988rw}, extended seesaw~\cite{Barr:2003nn}, %
 and linear seesaw models~\cite{Malinsky:2005bi,Kang:2006sn}.
-The work of this thesis focuses on the ISS model.
-In this case, a quasi-preserved lepton number guarantees the specific texture of $M_R$ and $m_D$ %
-and its small breaking is natural in the 't Hooft sense~\cite{tHooft:1980xss}.
-%We will refer to such models as ``symmetry-protected''.
-The physical spectrum of heavy neutrinos can be best understood in the Lepton Number Conserving (LNC) limit.
-We use ISS\,$(a,b)$ to denote the model with $a$ $(b)$, $a,b\neq 0$, new gauge singlets of lepton number $+1$ $(-1)$.
-Following \refeq{eq:newmodel} and \refeq{eq:typeI}, the most general mass matrices are then given by 
-%
-\[
-	m_D = \mqty(m, 0) \qquad \text{and}\qquad M_R = %
-	\mqty(0 & M^\text{T} \\ M & 0)\ ,
-\]
-%
-where we introduce the $3\times a$ complex matrix $m$ and the $b\times a$ complex matrix $M$.
-%
-The spectrum of physical states in the LNC limit for ISS\,$(a,b)$ is given by
-%
-\[	
-	%
-	\text{min}\{3+b,a\}~\text{Dirac pairs}\qquad\text{and}\qquad
-	|3 + b-a|~\text{massless Weyl states}.  
-	%
-\] 
-%
-The masses of the Dirac pairs are the non-zero singular values of the rectangular $a \times (3+b)$ matrix $(m^\text{T}, M^\text{T})$.
-Note that for $a\neq b$, in addition to a set of Dirac pairs of arbitrary masses, extra massless sterile states %
-degenerate with the light neutrinos are present.
-Mixing involving these degenerate states is not defined in the LNC limit, as any unitary map in the degenerate subspace is permissible.
-On the contrary, the introduction of a small Lepton Number Violating (LNV) parameter %
-perturbs the LNC spectrum as well as the mixing.
-In general there are only two possible origins for a low-scale heavy neutrino: 
-%
-\begin{itemize}
-		%
-	\item A massless Weyl fermion in the LNC limit which is given non-zero mass proportional to the perturbation.
-		As the mixing between massless states is not defined in the LNC limit, the perturbation controls %
-		the induced mixing between the nearly-sterile state and the active ones.
-		We will refer to this state as a Majorana neutrino.
-		%
-	\item A massive Dirac pair at the low scale in the LNC limit, becoming a pseudo-Dirac pair after the perturbation, %
-		which regulates the mass splitting of the pair.
-		In the LNC limit, the mixing angles between Dirac pair and light neutrinos can be arbitrarily large,
-		and this property remains after the perturbation.
-		%
-\end{itemize}
-%
-The first case only arises in models with an imbalanced number of new fields, %
-\ie ISS\,$(a,b)$ such that $a\neq b$, while the second option can occur in any ISS model. 
+The focus of this thesis is on the ISS model.
+\fi
 
-In this paper, we are interested in heavy states with masses in the MeV--GeV range.%
-\footnote{This is motivated by the kinematic limits on production from meson decays discussed in more detail in \refsec{sec:production}.} %
-Our discussion above suggests that both Majorana states and (pseudo-)Dirac states should be considered, %
-covering all possible phenomenological aspects.
-In what follows, we will compute the production and decay rates for Majorana states %
-and Dirac states and study their discovery potential at DUNE ND.
-We disregard lepton number violating effects and therefore the distinction between pseudo-Dirac and Dirac states will not be relevant.
 
-Feynman rules for Majorana states derived from \refeq{eq:newmodel} can be found in~\cite{Atre:2009rg},
-or constructed using the techniques of \refref{Denner:1992me}. 
-For an explicit comparison between Dirac versus Majorana Feynman rules for heavy neutrinos, see~\refref{Abada:2016plb}.
 
-\section{Majorana neutrino decay}
+
+
+\section{Heavy neutrino decay}
 \label{sec:decay}
 
+%\begin{figure}
+%	\centering
+%	\begin{fmffile}{twobody}
+%		\begin{fmfgraph*}(80,50)
+%			\fmfleft{N}
+%			\fmfright{o3,o2,o1}
+%			\fmf{fermion}{N,v1,o3}
+%			\fmf{photon}{v1,v2}
+%			\fmf{fermion}{o1,v2,o2}
+%			\fmf{photon, label=$W^\pm$}{v1,v2}
+%			\fmflabel{$N$}{N}
+%		\end{fmfgraph*}
+%	\end{fmffile}
+%	\hfill
+%	\begin{fmffile}{threebody}
+%		\begin{fmfgraph*}(80,50)
+%			\fmfleft{N}
+%			\fmfright{o3,o2,o1}
+%			\fmf{fermion}{N,v1,o3}
+%			\fmf{photon}{v1,v2}
+%			\fmf{fermion}{o1,v2,o2}
+%			\fmf{photon, label=$W^\pm$}{v1,v2}
+%		\end{fmfgraph*}
+%	\end{fmffile}
+%\end{figure}
 
-\begin{figure}
-	\centering
-	\begin{fmffile}{twobody}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{N}
-			\fmfright{o3,o2,o1}
-			\fmf{fermion}{N,v1,o3}
-			\fmf{photon}{v1,v2}
-			\fmf{fermion}{o1,v2,o2}
-			\fmf{photon, label=$W^\pm$}{v1,v2}
-			\fmflabel{$N$}{N}
-		\end{fmfgraph*}
-	\end{fmffile}
-	\hfill
-	\begin{fmffile}{threebody}
-		\begin{fmfgraph*}(80,50)
-			\fmfleft{N}
-			\fmfright{o3,o2,o1}
-			\fmf{fermion}{N,v1,o3}
-			\fmf{photon}{v1,v2}
-			\fmf{fermion}{o1,v2,o2}
-			\fmf{photon, label=$W^\pm$}{v1,v2}
-		\end{fmfgraph*}
-	\end{fmffile}
-\end{figure}
-
-In this section we compute the heavy neutrino decay rates and polarised %
-distributions necessary for the simulation of beam dump searches.
-We compute rates for both Majorana and (pseudo-)Dirac states, allowing us to consistently %
-explore the parameter space of low-scale seesaw models.
+%We compute the heavy neutrino decay rates and polarised distributions necessary for studies in experimental searches.
+%We compute rates for both Majorana and (pseudo-)Dirac states, allowing us to consistently explore the parameter space of low-scale seesaw models.
 %
-%If the new neutrinos are massive enough, their mass-splittings with the light
-%neutrinos could be larger than the wave packet energy-uncertainty associated
-%with the production mechanism and they no longer
-%oscillate~(see \eg\ \refref{Akhmedov:2009rb}). Instead, the neutrinos are stable enough to
-%propagate to a short-baseline detector and decay into visible SM particles.
 %%
 %In this section we discuss the decay rates of Majorana and (pseudo-)Dirac 
 %sterile neutrinos for their most promising signatures, taking particular care
 %over the polarization of the beam discussed in the previous section.
 
+%%%% THIS SHOULD GO SOMEHWERE
+%If the new neutrinos are massive enough, their mass-splittings with the light neutrinos %
+%could be larger than the wave packet energy-uncertainty associated with the production mechanism and they no longer %
+%oscillate~(see \eg\ \refref{Akhmedov:2009rb}).
+%Instead, the neutrinos are stable enough to propagate to a short-baseline detector and decay into visible SM particles.
+%%%
+
+
+In this section, the heavy neutrino decay rates and polarised distributions necessary for studies in experimental searches are presented.
 This analysis can be simplified by noting the following equivalences.
 A Majorana neutrino $N$ decaying via a charged current process has the same differential %
 decay rate as the Dirac neutrino $N_D$ with the appropriate lepton number, 
-\[
+\begin{equation}
 	\dd{\Gamma}(N\to \ell_\alpha^- X^+) = \dd{\Gamma}(N_D\to \ell_\alpha^- X^+) \quad\text{and}\quad
 	\dd{\Gamma}(N\to \ell_\alpha^+ X^-) = \dd{\Gamma}(\cj{N}_D\to \ell_\alpha^+ X^-)\ ,
-\]
-%
+\end{equation}
 where we assume identical mass and mixing angles for both Dirac and Majorana neutrinos. 
-%
-This equivalence can be seen directly from the Feynman rules for Dirac and Majorana fermions~\cite{Denner:1992me} %
-(see also \refref{Abada:2016plb}), but also explicitly in our formulae below.
-%
+This equivalence can be seen directly from the Feynman rules for Dirac and Majorana fermions~\cite{Denner:1992me,Abada:2016plb}, %
+but also explicitly in the formulae below.
 In a neutral current (NC) decay, however, the two contractions of the NC operator lead to another contribution,  
-%
-\begin{equation*}
-	%\label{eq:gamma_NC_sum}
+\begin{equation}
+	\label{eq:gamma_NC_sum}
 	\dd{\Gamma}(N \to \nu X') = \dd{\Gamma}(N_D\to \nu X') + \dd{\Gamma}(\cj{N}_D\to\cj{\nu} X')\ .
-\end{equation*}
-%
+\end{equation}
 These relations hold at the differential level if the kinematic variables are reinterpreted in the obvious way.
 In this sense, we can view the Majorana process as the sum of Dirac particle and antiparticle decays.%
-\footnote{In a general amplitude with Majorana states, there would also be an interference contribution between these two %
-	sub-processes. However, in all cases of interest, interference diagrams are proportional to the %
-	final-state light neutrino mass, which we take to be zero.} 
+It is important to observe that in a general amplitude with Majorana states, there would also be an interference %
+contribution between these two sub-processes.
+However, in all cases of interest, interference diagrams are proportional to the final-state light neutrino mass, %
+which we take to be zero.
 %
 %If we consider the total decay rates only, we can make a further
 %simplification if $Y$ is its own CP conjugate, $Y=\overline{Y}$. As CP
@@ -323,51 +418,72 @@ In this sense, we can view the Majorana process as the sum of Dirac particle and
 %\Gamma(\nu \to \nu Y)$.
 %
 Considering the total decay rates only, we find that the Majorana decay is larger by a factor of 2 compared to the Dirac case,
-\[
+\begin{equation}
 	\Gamma(N\to \nu X' ) = 2\Gamma(N_D \to \nu X')\ .
-\]
-%
-Note that this is true only for the total decay rates with massless final-state neutrinos.
+\end{equation}
+This is, however, only true for the total decay rates with massless final-state neutrinos.
 
 \begin{table}
 	\small
 	\centering
-	\begin{tabular}{lrlrlr}
+	\raisebox{0.6em}{
+	\begin{tabular}{lr}
 		\toprule                                    
-		Channel			& Threshold		    &      Channel			& Threshold		&   Channel			& Threshold		\\
-		\cmidrule(lr){1-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6}                                   
-		$\nu \nu \nu$		& \np{e-9}\,MeV	&  $e^\mp K^\pm$	    & \np{494}\,MeV		&   $\nu \eta'$		        & \np{958}\,MeV		\\
-		$\nu e^+ e^-$		& \np{1.02}\,MeV&  $\nu \eta$	        & \np{548}\,MeV		&   $\mu^\mp K^{*\pm}$		& \np{997}\,MeV		\\
-		$\nu e^\pm \mu^\mp$	& \np{105}\,MeV	&  $\mu^\mp K^\pm$      & \np{559}\,MeV		&   $\nu \phi$		        & \np{1019}\,MeV		\\
-		$\nu \pi^0$ 		& \np{135}\,MeV	&  $\nu \rho^0$	        & \np{776}\,MeV		&   $\nu e^\pm \tau^\mp$	& \np{1776}\,MeV		\\
-		$e^\mp \pi^\pm$		& \np{140}\,MeV	&  $e^\mp \rho^\pm$	    & \np{776}\,MeV		&   $e^\mp D^\pm$           & \np{1870}\,MeV		\\
-		$\nu \mu^+ \mu^-$	& \np{210}\,MeV	&  $\nu \omega$	        & \np{783}\,MeV		&   $\nu \mu^\pm \tau^\mp$	& \np{1880}\,MeV		\\
-		$\mu^\mp \pi^\pm$	& \np{245}\,MeV	&  $\mu^\mp \rho^\pm$	& \np{882}\,MeV		&   $\tau^\mp \pi^\pm$		& \np{1870}\,MeV		\\
-		&               &  $e^\mp K^{*\pm}$	    & \np{892}\,MeV		&                           &                       \\
+		Channel			& Threshold	\\	
+		\midrule
+		$\nu \nu \nu$		& \np{e-9}\,MeV		\\
+		$\nu e^+ e^-$		& \np{1.02}\,MeV	\\
+		$\nu e^\pm \mu^\mp$	& \np{105}\,MeV			\\
+		$\nu \pi^0$ 		& \np{135}\,MeV			\\
+		$e^\mp \pi^\pm$		& \np{140}\,MeV		\\
+		$\nu \mu^+ \mu^-$	& \np{210}\,MeV			\\
+		$\mu^\mp \pi^\pm$	& \np{245}\,MeV			\\
+		\bottomrule
+	\end{tabular}}
+	\hspace{2em}
+	\begin{tabular}{lr}
+		\toprule                                    
+		Channel			& Threshold	\\
+		\midrule
+		$e^\mp K^\pm$		& \np{494}\,MeV	\\
+		$\nu \eta$	        & \np{548}\,MeV	\\
+		$\mu^\mp K^\pm$		& \np{559}\,MeV	\\
+		$\nu \rho^0$	        & \np{776}\,MeV	\\
+		$e^\mp \rho^\pm$	& \np{776}\,MeV	\\
+		$\nu \omega$	        & \np{783}\,MeV	\\
+		$\mu^\mp \rho^\pm$	& \np{882}\,MeV	\\
+		$e^\mp K^{*\pm}$	& \np{892}\,MeV	\\
 		\bottomrule
 	\end{tabular}
-	\footnotesize
+	\hspace{2em}
+	\raisebox{0.6em}{
+	\begin{tabular}{lr}
+		\toprule                                    
+		Channel			& Threshold	\\
+		\midrule
+		$\nu \eta'$		& \np{958}\,MeV	\\
+		$\mu^\mp K^{*\pm}$	& \np{997}\,MeV	\\
+		$\nu \phi$		& \np{1019}\,MeV\\
+		$\nu e^\pm \tau^\mp$	& \np{1776}\,MeV\\
+		$e^\mp D^\pm$           & \np{1870}\,MeV	\\
+		$\nu \mu^\pm \tau^\mp$	& \np{1880}\,MeV\\
+		$\tau^\mp \pi^\pm$	& \np{1870}\,MeV	\\
+		\bottomrule
+	\end{tabular}}
 	\caption{All the available channels for a HNL with a mass below the $D_s^\pm$ mass are listed above, %
 		sorted by threshold mass.
 		The active neutrino is considered massless, when compared to the masses of the other particles.}
 	\label{tab:decays}
 \end{table}
 
-It is instructive to reconsider this result in the light of the \emph{practical Dirac--Majorana confusion theorem}~\cite{Kayser:1981nw, %
-	Kayser:1982br}.
+It is instructive to reconsider this result in the light of the %
+\emph{practical Dirac--Majorana confusion theorem}~\cite{Kayser:1981nw, Kayser:1982br}.
 In \refref{Kayser:1981nw}, the decomposition into particle and antiparticle processes was performed for %
 Majorana neutrino--electron scattering via neutral current, leading to a factor of two enhancement in the total rate.
 However, this enhancement was shown to be absent in practice due to the polarisation of the incoming neutrino, %
 which suppresses the $\Delta L = 2$ contributions by factors of the neutrino mass. 
-%
 In the present case of nearly-sterile decay, where mass effects are large and essential to the calculation, %
 there is no analogous effect: Dirac and Majorana neutrinos will have distinct total decay rates regardless of their polarisation. 
-%
-%In fact, we note that the helicity state of a massive fermion can never affect
-%its total decay rate.%
-%\footnote{This can be argued from the arbitrariness of the polarisation direction in the particle's rest frame, %
-%or from the frame dependence of helicity for massive particles.}
-%
 Therefore, the total decay rates of heavy neutrinos into observable final states could in principle allow us to determine %
 the Majorana/Dirac nature of the initial state.
 This is not a trivial effect: a pure Majorana state decays with equal probability into $e^-\pi^+$ as $e^+ \pi^-$, %
@@ -377,31 +493,21 @@ will only decay into $e^-\pi^+$.
 Assuming charge-identification is possible in the detector, distinguishing between the two total decay rates %
 should be possible with modest statistics. %
 %\footnote{Even if charged-ID is not available, some distributional distinctions can be made in principle, as we discuss later.}
-In a charge-blind search or for an NC channel, the total decay rate of Majorana neutrinos would appear to be twice as large as that of Dirac neutrinos.
+In a charge-blind search or for an NC channel, the total decay rate of Majorana neutrinos would appear %
+to be twice as large as that of Dirac neutrinos.
 However, being the mixing usually an unknown quantity, the difference between Majorana and Dirac nature cannot be deduced as easily.
-
 There is also a more subtle impact of the nature of the decaying neutrino.
-%
 Even though the total decay rate is not affected by the helicity of the initial neutrino, %
 the helicity does affect the distributions of final state particles, which will in turn influence the observability of %
 the signatures of neutrino decay. 
-%
-It is important that these polarisation effects are correctly implemented when studying the distributions of %
+Although spin-averaged Majorana neutrino decay rates are well known in the %
+literature~\cite{Atre:2009rg,Gorbunov:2007ak,Helo:2010cw,Bondarenko:2018ptm}, %
+it is important that these polarisation effects are correctly implemented when studying the distributions of %
 final state observables and subsequently when developing an analysis to tackle backgrounds. 
-
-In the remainder of this section, we present results for the polarised heavy neutrino decay rates %
-and distributions for Majorana and (pseudo-)Dirac neutrinos.
-The decay modes considered are listed in~\reftab{tab:decays} and the respective branching ratios as functions of %
-the neutrino mass are shown in~\reffig{fig:branch}.
-%
-The differential widths have been computed using the massive spinor helicity formalism %
-(see \eg \refrefs{Dittmaier:1998nn, Diaz-Cruz:2016ahc}), and checked numerically using %
-FeynCalc~\cite{Shtabovenko:2016sxi,Mertig:1990an}.
 
 \begin{figure}
 	\centering
 	\resizebox{\textwidth}{!}{\input{pics/multiBranch.tex}}
-	\footnotesize
 	\caption{The branching ratios for HNL decays, integrated over the angular variables, are shown above %
 		as functions of the mass.
 		They are grouped in CC-mediated decays (left) and NC-mediated decays (right), in the range from \np{0.01}\,MeV up to %
@@ -416,47 +522,47 @@ FeynCalc~\cite{Shtabovenko:2016sxi,Mertig:1990an}.
 	\label{fig:branch}
 \end{figure}
 
-Although spin-averaged Majorana neutrino decay rates are well known in the literature~\cite{Atre:2009rg,Gorbunov:2007ak,Helo:2010cw} %
-(see also Ref.~\cite{Bondarenko:2018ptm}), to the best of our knowledge the polarised rates are not.
-These are necessary to correctly describe the distributions of observables in a beam dump experiment, %
-and in this section we present formulae for these differential decay rates. 
-Note that we stay agnostic as to the final nature and flavours of outgoing %
-neutrinos, and in all cases sum over any possible outgoing states to define a %
-semi-inclusive decay rate into the visible particle(s) $X'$, \ie 
-%
-\[
-	\Gamma(N\to \nu X') \equiv \sum_{i=1}^3 \Gamma(N\to\nu_i X')\ .
-\]
-%
-The alternative, chosen by many other authors, is to treat light neutrinos as Dirac particles, %
+In calculating the decay rates, summing over any possible outgoing states as
+\begin{equation}
+	\Gamma(N\to \nu X') \equiv \sum_{i=1}^3 \Gamma(N\to\nu_i X')
+\end{equation}
+defines a semi-inclusive decay rate into the visible particle(s) $X'$, such that %
+discussions about the nature and flavours of final state neutrinos can be avoided.
+Many other authors treat light neutrinos as Dirac particles, %
 and construct the full decay width using arguments of CP invariance, %
 in practice amounting to adding some judicious factors of two~\cite{Atre:2009rg,Bondarenko:2018ptm}.
-Following this approach, our summed decay rate for $N\to\nu X'$ can be seen as 
-%
-\[
+Following this approach, the summed decay rate for $N\to\nu X'$ can be seen as 
+\begin{equation}
 	\Gamma(N\to \nu X') \equiv \sum_{\alpha=e}^\tau \qty[\Gamma(N\to\nu_\alpha X') + %
 	\Gamma(N\to\overline{\nu}_\alpha X')]\ .
-\]
-%
+\end{equation}
 The two approaches are identical mathematical procedures and can both be used to compute the differential decay rates; %
-however, we avoid the latter as the light neutrinos in most seesaw models are Majorana fermions, and making a distinction %
-between $\nu_\alpha$ and $\overline{\nu}_\alpha$ is physically misleading.%
-\footnote{The approach could be seen as a short-hand for decay rates into polarised massless neutrinos, %
-	but as we are particularly concerned with polarisation effects in the beam this only adds a further complication.}
-We also find that the distribution of events, the role of helicity and the heavy neutrino nature are obscured by this approach.
-%
-In contrast, by summing over all outgoing states, our formulae are insensitive to the Majorana/Dirac nature of the light neutrinos, %
-and are the physically relevant rates necessary for comparison with beam dump experiments, as outgoing neutrinos are not reconstructed.
+however, the light neutrinos in most seesaw models are Majorana fermions and making a distinction %
+between $\nu_\alpha$ and $\overline{\nu}_\alpha$ is physically misleading.
+The approach could be seen as a short-hand for decay rates into polarised massless neutrinos, %
+but this only adds a further complication when dealing with polarisation effects in the beam.
+The distribution of events, the role of helicity and the heavy neutrino nature are found to be obscured by this approach.
+In contrast, by summing over all outgoing states, the following formulae are insensitive to the Majorana/Dirac nature of the light neutrinos, %
+which are the physically relevant rates necessary for comparison with experimental searches, since outgoing neutrinos are not reconstructed.
 
-\subsection{Pseudoscalar mesons}
-\label{sec:pseudoscalar}
+In the remainder of this section, the polarised heavy neutrino decay rates and distributions %
+for Majorana and (pseudo-)Dirac neutrinos are presented.
+The decay modes considered are listed in~\reftab{tab:decays} and the respective branching ratios as functions of %
+the neutrino mass are shown in~\reffig{fig:branch}.
+The differential widths have been computed using the massive spinor helicity formalism~\cite{Dittmaier:1998nn, Diaz-Cruz:2016ahc}, %
+and checked numerically using FeynCalc~\cite{Shtabovenko:2016sxi,Mertig:1990an}.
 
-The semi-leptonic meson decays are some of the most important channels identified in previous studies~\cite{Atre:2009rg, %
-	Ballett:2016opr} (see also \refref{Asaka:2012bb}) %
+\subsection{Majorana neutrinos}
+\label{sec:decay_majorana}
+
+\subsubsection{Pseudoscalar mesons}
+\label{sec:decay_pseudoscalar}
+
+The semi-leptonic meson decays are some of the most important channels identified in previous %
+studies~\cite{Atre:2009rg, Ballett:2016opr, Asaka:2012bb} %
 thanks to their large branching ratios and distinctive final state particles.
 Both charged and neutral pseudo-scalar mesons are viable final state particles, namely $P^\pm$ and $P^0$, %
-and the decay widths are given in the Centre of Mass (CM) frame by
-%
+and the decay widths are given in the centre of mass (CM) frame by
 \begin{align}
 	\dv{\Gamma_\pm}{\Omega_{\ell_\alpha}} \qty(N \to \ell_\alpha^- P^+) &= %
 	|U_{\alpha N}|^2|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2 m_N^3}{16\pi} %
@@ -468,17 +574,20 @@ and the decay widths are given in the Centre of Mass (CM) frame by
 	\qty(\sum_{\alpha=e}^\tau| U_{\alpha N}|^2) \frac{G_\text{F}^2f_{P^0}^2m_N^3}{16\pi} %
 	\ \frac{I_1 \qty(0, \xi^2_P)}{4\pi}\ ,\label{eq:M_decay_pseudo_0}
 \end{align}
-%
 where $\Gamma_h$ is the decay rate for neutrinos of helicity $h$, %
 $V_{q \cj{q}}$ is the appropriate CKM matrix element for the considered meson, $f_P$ is its decay constant %
-and $\xi_i = m_i/m_N$ denotes the mass of the final state particle $i$ %
-as a fraction of the initial state mass. 
+and $\xi_i = m_i/m_N$ denotes the mass of the final state particle $i$ as a fraction of the initial state mass. 
 The solid angle elements $\Omega_{\ell_\alpha}$ and $\Omega_P$ refer respectively to the charged lepton and %
 pseudo-scalar meson angle with respect to the neutrino direction.
-%
-The kinematic function $I_1(x,y)$~\cite{Atre:2009rg} and its angular generalisation accounting for helicity, $I_1^\pm(x,y;\theta)$, %
-are defined in \refapp{app:integrals}.
-%
+The kinematic function
+\begin{equation}
+	I^\pm_1 (x, y; \theta) = \frac{1}{4\pi}\kallen(1, x, y) \qty[(1-x)^2 - y\,(1+x) \pm (x-1)\kallen(1, x, y) \cos\theta]
+\end{equation}
+is a generalisation of the function
+\begin{equation}
+	I_1 (x, y) = \kallen(1, x, y)\, \qty[(1-x)^2 - y(1+x)]\ ,
+\end{equation}
+introduced in~\refref{Atre:2009rg}.
 After integrating over the angular variables, we find that %
 both the pseudo-scalar meson decay rates do not depend on helicity, as expected,
 %
@@ -534,12 +643,12 @@ but above $\eta$ and $\eta'$ can be allowed in the final state.
 %Above this limit, the channels with an $\eta$ or an $\eta'$ in the final state become allowed.
 %The majority of neutral pseudoscalar mesons decay electromagnetically into two photons or multi-pion final states. 
 
-\subsection{Vector mesons}
+\subsubsection{Vector mesons}
+\label{sec:decay_vector}
 
 Although only for higher masses, HNL can also decay into vector mesons $V$, %
 both via charged current, $N \to \ell^\mp V^\pm$, and neutral current, $N \to \nu V^0$.
 We find the following polarised differential distributions in the heavy neutrino rest frame, 
-%
 \begin{align}
 	\dv{\Gamma_\pm}{\Omega_{\ell_\alpha}} \qty(N \to \ell_\alpha^- V^+) &= %
 	|U_{\alpha N}|^2 |V_{q\, \cj{q}}|^2 \frac{G_\text{F}^2f_V^2 m_N^3}{16\pi} %
@@ -551,27 +660,31 @@ We find the following polarised differential distributions in the heavy neutrino
 	\qty(\sum_{\alpha=e}^\tau| U_{\alpha N}|^2 ) %
 	\frac{G_\text{F}^2f_{V}^2\kappa_V^2m_N^3}{16\pi}\ \frac{I_2 \qty(0, \xi^2_V)}{4\pi}\label{eq:M_decay_vector_0}\ ,
 \end{align}
-%
-where $I_2(x,y)$ and $I_2^\pm(x,y;\theta)$ are defined in \refapp{app:integrals}.
-%
-We find the total decay widths given by
-%
+where
+\begin{equation}
+	I^\pm_2 (x, y;\theta) = \frac{1}{4\pi}\kallen(1, x, y) \qty[(1+x-y)\,(1+x+2y)-4x \pm (x+2y-1)\kallen(1, x, y) \cos\theta]\ 
+\end{equation}
+and
+\begin{equation}
+	I_2 (x, y) = \kallen(1, x, y)\, \qty[(1+x-y)(1+x+2y)-4x]\ ,
+\end{equation}
+also presented in~\refref{Atre:2009rg}.
+The total decay widths are given by
 \begin{align}
 	\Gamma\qty(N \to \ell_\alpha^- V^+) &=  \Gamma\qty(N \to \ell_\alpha^+ V^-) = %
 	|U_{\alpha N}|^2 |V_{q\,\cj{q}}|^2 \frac{G_F^2 f_V^2m_N^3}{16\pi}\ I_2\qty(\xi^2_\alpha,\xi^2_V)\ ,\\
 	\Gamma\qty(N \to \nu V^0)\hphantom{{}^-} &= \left(\sum_{\alpha = e}^\tau |U_{\alpha N}|^2\right) %
 	\frac{G_F^2f_V^2\kappa_V^2  m_N^3}{16\pi}\ I_2\qty(0,\xi^2_V)\ ,
 \end{align}
-%
-where the constants $\kappa_V$ are combinations of the Weinberg angle, depending on the flavour structure of $V^0$ (see below).
-Our charged pseudo-vector decay rates agrees with \refrefs{Bondarenko:2018ptm, Atre:2009rg, Helo:2010cw, Gorbunov:2007ak} while %
-our neutral pseudo-scalar calculation agrees with the corrected version presented in \refref{Bondarenko:2018ptm}.
+where the constants $\kappa_V$ are combinations of the Weinberg angle, depending on the flavour structure of $V^0$ %
+(see \refeq{eq:kappa_factors}).
+The charged pseudo-vector decay rates agrees with \refrefs{Bondarenko:2018ptm, Atre:2009rg, Helo:2010cw, Gorbunov:2007ak} %
+while the neutral pseudo-scalar calculation agrees with the corrected version presented in \refref{Bondarenko:2018ptm}.
 
 As with the pseudo-scalar meson decay rates, the Majorana nature leads to an isotropic decay into a neutral vector meson.
 An analogous effect holds for the charged vector meson decay if we assume that the charges of final state particles %
 are not distinguished.
 In this case, we find the physically relevant decay distribution in the particle rest frame to be given~by
-%
 \begin{align}
 	%
 	\dv{\Gamma_\pm}{\Omega_{\ell_\alpha}} \qty(N \to \ell_\alpha V) &\equiv \dv{\Gamma_\pm}{\Omega_{\ell_\alpha}} %
@@ -581,19 +694,20 @@ In this case, we find the physically relevant decay distribution in the particle
 	\ \frac{I_2 \qty(\xi^2_\alpha, \xi^2_V)}{2\pi}\ .
 	%
 \end{align}
-%
 There are no vector mesons lighter than the $K^0$, and these decays become relevant only for higher masses %
 for which decays into $\rho^\pm$ and $K^{*\pm}$, and for the neutral mode into $\rho^0$, $\omega$, and $\phi$ would be relevant.
 For these neutral particles, the $\kappa_V$ factors read
-\[
+\begin{equation}
+	\label{eq:kappa_factors}
 	\kappa_\rho   = 1-\sin^2\theta_W \quad,\quad
 	\kappa_\omega = \frac{4}{3} \sin^2\theta_W \quad,\quad
 	\kappa_\phi   = \frac{4}{3} \sin^2\theta_W -1\ .
-\]
+\end{equation}
 %Vector mesons usually into a multi-state of pseudoscalar mesons, depending on the initial flavour content,
 %sometimes accompanied by photon emission making their reconstruction challenging from an experimental point of view.
 
-\subsection{Charged lepton pairs}
+\subsubsection{Charged lepton pairs}
+\label{eq:decay_leptons}
 
 %%INSERT FIGURE HERE
 
@@ -602,34 +716,26 @@ For these neutral particles, the $\kappa_V$ factors read
 %App.~\ref{app:threebody_dist}. 
 %
 
-We assign the momenta to the particles in the three-body decay as follows
-%
-\[
+Let's assign the momenta to the particles in the three-body decay as follows
+\begin{equation}
 	N(k_1) \to \nu(k_2)\, \ell_\alpha^-(k_3)\,\ell^+_\beta(k_4)\ ,
-\] 
-%
+\end{equation}
 and denote $k_i^2 = m_i^2$.
 The five-dimensional phase space of the final-state particles can be parameterised using two scaled invariant masses,
-%
-\[
+\begin{equation}
 	s_1=\frac{(k_2+k_3)^2}{m_N^2} \qquad \text{and} \qquad s_2=\frac{(k_2+k_4)^2}{m_N^2}\ ,
-\] 
-%
+\end{equation}
 as well as three lab-frame angular variables, $(\theta_3, \phi_3)$, giving the direction of $\ell^-_\alpha$ and $\varphi_{43}$ %
 denoting the relative azimuthal angle between $\ell^-_\alpha$ and $\ell^+_\beta$. 
-%
 Although $\cos\theta_4$ is not an independent element of our parametrisation, it is a physically relevant quantity %
 and we use it to simplify the presentation of the distributions below.
 It can be easily related to the fundamental variables $s_1,s_2,\theta_3,\varphi_3, \varphi_{43}$.
-%
 The differential decay rate is expressed as
-%
 \begin{equation}  
 	\label{eq:threebody_dist_master}
 	\dd{\Gamma_\pm} = \frac{G_F^2 m_N^5}{16 \pi^3} \qty(|A_0|^2\pm|A_1|^2) %
 	\dd{s_1} \dd{s_2}\, \frac{\dd[2]{\Omega_3}}{4\pi}\ \frac{\dd{\varphi_{43}}}{2\pi}\ ,
 \end{equation}
-%
 where $\Omega_3$ assumes the conventional meaning and with
 \begin{align}
 	%
@@ -645,25 +751,52 @@ where $\Omega_3$ assumes the conventional meaning and with
 %
 %with $\Gamma_h$ denoting the decay rate of a heavy neutrino with
 %helicity $h$. 
-%
-The coefficients $\{C_i\}$ are polynomials in chiral couplings and extended PMNS matrix elements, %
-and are given for the decays of interest in \refapp{app:threebody_dist}. 
+The coefficients $C_i$ are polynomials in chiral couplings and extended PMNS matrix elements, %
+and they read
+\begin{align}
+	C_1 &= \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ (g_L^2+g_R^2)\delta_{\alpha\beta} + %
+	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\notag \\
+	%
+	C_2 &= \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ (g_L^2+g_R^2)\delta_{\alpha\beta} + %
+	\delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\notag \\
+	%
+	C_3 &= 2\delta_{\alpha\beta}\,g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\alpha\gamma} + g_L)\ ,\notag \\
+	%
+	C_4 &= \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ \delta_{\alpha\beta}(g_L^2-g_R^2) + %
+	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\notag \\
+	%
+	C_5 &= -\sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[ \delta_{\alpha\beta}(g_L^2-g_R^2) + %
+	\delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\notag \\
+	%
+	\label{eq:lepton_coefficient}
+	C_6 &= 0\ .
+\end{align}
 On integration over the angular coordinates, however, only the $|A_0|^2$ terms remain %
-and we recover the standard expression for the total decay rates through the %
-identities given in \refeqss{eq:threebody_int1}{eq:threebody_int2}{eq:threebody_int3}. 
-%
-The general expression for the total decay rate is again helicity independent and can be written as
-%
+and we recover the standard expression for the total decay rates through the identities
+\begin{align}   
+	\int\!\! \dd{s_1}\!\! \int\!\! \dd{s_2}\, (s_2-\xi^2_3)(1+\xi^2_4-s_2) &= \frac{I_1(0,\xi^2_3,\xi_4^2)}{12}\ ,\\ 
+	%
+	\int\!\! \dd{s_1}\!\! \int\!\! \dd{s_2}\, (s_1-\xi^2_4)(1+\xi^2_3-s_1) &= \frac{I_1(0,\xi^2_4,\xi_3^2)}{12}\ ,\\ 
+	%\
+	\int\!\! \dd{s_1}\!\! \int\!\! \dd{s_2}\ 2\xi_3\,\xi_4(s_1+s_2-\xi^2_3-\xi^2_3) &= %
+	\frac{I_2(0,\xi^2_3,\xi_4^2)}{12}\ .
+\end{align}
+The functions $I_1\qty(x,y,z)$ and $I_2\qty(x,y,z)$ are the following kinematic functions, coming from the %
+integration over the phase space
+\begin{align*}
+	I_1(x,y,z) &= 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\! %
+	\frac{\dd{s}}{s} (s-x-y)\,(1+z-s)\kallen(1,x,y)\kallen(1,s,z)\ ,\\
+	%
+	I_2(x,y,z)&=24\,\sqrt{yz} \int\limits_{\qty(\sqrt{y}+\sqrt{z})^2}^{\qty(1-\sqrt{x})^2}\!\! %
+	\frac{\dd{s}}{s}(1+x-s)\kallen(s,y,z)\kallen(1,s,x)\ .
+\end{align*}
+Thus, the general expression for the total decay rate is again helicity independent and can be written as
 \begin{equation}
 	\Gamma_\pm = \frac{G_F^2 m_N^5}{192 \pi^3}\,\qty[ C_1\ I_1\qty(0,\xi_3^2,\xi_4^2) + %
 	C_2\ I_1\qty(0,\xi_4^2,\xi_3^2) + C_3\ I_2\qty(0,\xi_3^2,\xi_4^2) ]\ .
 \end{equation}
-%
-The functions $I_1\qty(x,y,z)$ and $I_2\qty(x,y,z)$ are given in \refapp{app:integrals}. 
-%
-Using the expressions for $\{C_i\}$ in \refapp{app:threebody_dist}, %
-we find that the total decay rates are given to first order in the heavy-active mixing parameters $U_{\alpha N}$ by
-%
+Using the expressions for $C_i$ of \refeq{eq:lepton_coefficient} the total decay rates are given %
+to first order in the heavy-active mixing parameters $U_{\alpha N}$ by
 \begin{align}
 	%
 	&\Gamma_\pm\qty(N \to \nu \ell_\alpha^- \ell_\beta^+) = 
@@ -676,15 +809,15 @@ we find that the total decay rates are given to first order in the heavy-active 
 	&\hspace{15em}+ \qty[g_L^2 + g_R^2 + \delta_{\gamma \alpha} (1+2g_L)]%
 	\ I_1 \qty(0, \xi_\alpha^2, \xi_\alpha^2)\Big\}\ . 
 \end{align}	
-%
 where $\alpha \neq \beta$, $g_L = -1/2 + \sin^2\theta_\text{W}$ and $g_R =\sin^2\theta_\text{W}$.
-Our total decay rates agree with those in \refrefs{Bondarenko:2018ptm, Atre:2009rg, Helo:2010cw, Gorbunov:2007ak} %
+The total decay rates agree with those in \refrefs{Bondarenko:2018ptm, Atre:2009rg, Helo:2010cw, Gorbunov:2007ak} %
 and correct a typographical mistake in the rates presented in \refref{Ballett:2016opr}. 
 
 All possible combinations of charged leptons except $\nu \tau^- \tau^+$ are allowed for masses below~$m_{D_s}$.
 However, because of the limited phase space, the decays into $\nu \tau^\mp e^\pm$ and $\nu \tau^\mp \mu^\pm$ can be neglected.	
 
-\subsection{Other decays}
+\subsubsection{Other decays}
+\label{sec:decay_other}
 
 There are some other decay rates relevant to this study but not as viable observable channels.
 First, the total decay width of the process $N \to \nu \bar{\nu} \nu$, mediated by the $Z$ boson, reads
@@ -695,7 +828,7 @@ First, the total decay width of the process $N \to \nu \bar{\nu} \nu$, mediated 
 %
 Although this decay mode is experimentally invisible, it is the dominant channel up to the pion mass, %
 when two-body semi-leptonic decays open up, and plays a significant role in defining the branching ratios of the observable channels.
-Our expression agrees with \refrefs{Bondarenko:2018ptm,Atre:2009rg,Helo:2010cw,Gorbunov:2007ak}.
+The expression agrees with \refrefs{Bondarenko:2018ptm,Atre:2009rg,Helo:2010cw,Gorbunov:2007ak}.
 %
 Secondly, there are other decay modes with small branching ratios and/or complicated final states which we do not study further.
 These include the one-loop decay into a photon which has received some interest as an observable signature %
@@ -711,58 +844,56 @@ In the mass models considered in this work, it has a branching ratio of below $1
 We also neglect the multi-pion decay modes discussed in \refref{Bondarenko:2018ptm}, %
 which are estimated to have at most a percent level branching ratio and a challenging hadronic final state for reconstruction. 
 
+
+
 \section{Pseudo-Dirac neutrino decay}
+\label{sec:decay_dirac}
 
 A pseudo-Dirac particle or anti-particle are coherent superpositions of paired Majorana mass eigenstates, 
-\[
-	N_\text{P} = U_{s 4}\nu_4 + U_{s 5}\nu_5 \qquad\text{and}\qquad %
-	\cj{N}_\text{P} = U^*_{s 4}\nu_4 + U^*_{s 5}\nu_5\ .
-\]
+\begin{equation}
+	N_\text{P} = U_{s i}\, \nu_i + i\,U_{s j}\, \nu_j \qquad\text{and}\qquad %
+	\cj{N}_\text{P} = U^*_{s i}\,\nu_i + i\,U^*_{s j}\,\nu_j\ ,
+\end{equation}
+where $U_{s k}$ is the mixing between mass states and sterile flavour states.
 Thanks to this decomposition, the decay rate calculation can be recovered from the treatment of a pure Majorana state %
 by summing coherently over the constituent Majorana contributions.
 In a true Dirac pair, the two components have identical masses and PMNS matrix elements, %
-which obey $U_{\alpha 4} = \pm i U_{\alpha 5}$.
+which obey $U_{\alpha i} = \pm i\, U_{\alpha j}$.
 On coherent summation, this leads to perfect cancellation in any LNV process.
 For a pseudo-Dirac particle, the constituent states have both a mass difference and mixing angles %
 usually proportional to the LNV parameters introduced in \refeq{eq:lagrangian_LNV}, %
 therefore of slightly different magnitudes.
 This leads to an imperfect cancellation in LNV modes.
 
+%Expanding in the mass splitting $\Delta m = m_4-m_5$ and difference in PMNS matrix elements %
+%$|\Delta U|^2 \equiv U_{\alpha 4}^2 + U_{\alpha 5}^2 = |U_{\alpha 4}|^2 - |U_{\alpha 5}|^2$ ,
+%the leading order decay rates of a pseudo-Dirac state $N_\text{P}$ into a charged pseudoscalar is:
+%
+%\begin{align}
+%	\Gamma_\pm \qty(N_P \to \ell_\alpha^- P^+) &= %
+%	|U|^2 |V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2 m_N^3}{16\pi} I^\pm_1 (\xi^2_\alpha, \xi^2_P)\ ,\\
+%	\Gamma_\pm \qty(N_P \to \ell_\alpha^+ P^-) &= %
+%	|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2m_N^3}{16\pi} \bigg[|\Delta U|^2I^\mp_1 (\xi^2_\alpha, \xi^2_P)\ + \\
+%	&\hphantom{|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2m_N^3}{16\pi}} %
+%	\qquad \frac{\Delta m}{2m_N}|U|^2(1-\xi^2_\alpha)(3+\xi^2_\alpha - \xi^2_P)\bigg]\ . \notag
+%\end{align}
+%
+%where $|U|^2 \equiv |U_{\alpha 4}|^2+|U_{\alpha 5}|^2$ is the equivalent mixing
+%angle expected for a pure Dirac state.
+%
 For a pseudo-Dirac particle the LNV decays are present, but subdominant compared to pure Majorana states.
-Expanding in the mass splitting $\Delta m = m_4-m_5$ and difference in PMNS matrix elements %
-$|\Delta U|^2 \equiv U_{\alpha 4}^2 + U_{\alpha 5}^2 = |U_{\alpha 4}|^2 - |U_{\alpha 5}|^2$ ,
-the leading order decay rates of a pseudo-Dirac state $N_\text{P}$ into a charged pseudoscalar is:
-%
-\begin{align}
-	\Gamma_\pm \qty(N_P \to \ell_\alpha^- P^+) &= %
-	|U|^2 |V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2 m_N^3}{16\pi} I^\pm_1 (\xi^2_\alpha, \xi^2_P)\ ,\\
-	\Gamma_\pm \qty(N_P \to \ell_\alpha^+ P^-) &= %
-	|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2m_N^3}{16\pi} \bigg[|\Delta U|^2I^\mp_1 (\xi^2_\alpha, \xi^2_P)\ + \\
-	&\hphantom{|V_{q\, \cj{q}}|^2  \frac{G_\text{F}^2f_P^2m_N^3}{16\pi}} %
-	\qquad \frac{\Delta m}{2m_N}|U|^2(1-\xi^2_\alpha)(3+\xi^2_\alpha - \xi^2_P)\bigg]\ . \notag
-\end{align}
-%
-where $|U|^2 \equiv |U_{\alpha 4}|^2+|U_{\alpha 5}|^2$ is the equivalent mixing
-angle expected for a pure Dirac state.
-%
 The contributions to the subdominant rate are suppressed by either the mass %
 splitting or the difference in mixing angles, both of which are governed by the %
 small LNV parameter in a low-scale seesaw models.
 Although present, it seems unlikely that such subdominant channels would be of experimental relevance in %
 the near future as they are always accompanied by dominant decay modes with oppositely-charged final states.
+The signatures of these particles will be dominated by the leading order LNC effects and %
+as such a strict Dirac limit is taken in the calculations of the decay rates for (pseudo-)Dirac pairs.
 However, if evidence for a sterile neutrino is found, and significant statistics collected, this could in principle provide %
 evidence of the Majorana or pseudo-Dirac nature of a sterile.
 Moreover, it would allow the measurement of the small LNV parameter behind the model, %
 which should correlate with the scale of light-neutrino masses, %
 providing an important test of the relationship between the novel particle and neutrino mass generation.
-
-In this section we compute the decay rates for pseudo-Dirac pairs.
-It is unlikely that any effect driven by the LNV parameter will be relevant for the discovery potential of DUNE ND %
-and the signatures of these particles will be dominated by the leading order LNC effects.
-Accordingly, we take the strict Dirac limit in our calculations, rather than treating the states as pseudo-Dirac pairs.
-%It is worth bearing in mind that all mass eigenstates under consideration are strictly Majorana.
-
-\subsubsection{Dirac (anti)neutrino decays}
 
 The decay rates for a Dirac heavy (anti)neutrino are similar in form to those presented for the Majorana neutrino.
 The key differences are lepton number conservation, which acts to forbid certain channels, and differences in %
@@ -817,9 +948,30 @@ in the way shown by the following differential rates
 %
 
 For the three-body leptonic decays, the distribution is expressed in \refeq{eq:threebody_dist_master} %
-with the relevant coefficients from \refapp{app:threebody_dist}.
+with the relevant coefficients for a Dirac neutrino
+\begin{align*}
+	C^\nu_1 &= C^\nu_4= \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[\delta_{\alpha\beta} g_L^2+ %
+	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\\ 
+	%
+	C^\nu_2 &= C^\nu_5= \delta_{\alpha\beta}\,g^2_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2\ ,\\ 
+	%
+	C^\nu_3 &= C^\nu_6= \delta_{\alpha\beta}\,g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\gamma\beta} + g_L)\ .
+\end{align*}
+and for a Dirac antineutrino
+\begin{align*}
+	C^{\cj{\nu}}_1 &= -C^{\overline{\nu}}_4 = \delta_{\alpha\beta}\,g^2_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2\ ,\\
+	%
+	C^{\cj{\nu}}_2 &= -C^{\overline{\nu}}_5 = \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 %
+	\qty[ \delta_{\alpha\beta} g_L^2+ \delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\\
+	%
+	C^{\cj{\nu}}_3 &= -C^{\overline{\nu}}_6 = \delta_{\alpha \beta}\, g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\alpha\gamma} + g_L)\ .
+\end{align*}
+It is not surprising in view of \refeq{eq:gamma_NC_sum} to observe that these coefficient are related %
+to the ones for the Majorana case as
+\begin{equation}
+	C_i  = C^\nu_i + C^{\cj{\nu}}_i\ .
+\end{equation}
 The total decay rates are found to be
-%
 \begin{align}
 	%
 	\Gamma_\pm\qty(N_D \to \nu \ell_\alpha^- \ell_\beta^+) &= |U_{\alpha N}|^2\frac{G_F^2m_N^5}{192\pi^3} %
@@ -838,9 +990,8 @@ The total decay rates are found to be
 	\Gamma_\mp\qty(N_D \to \nu \ell_\alpha^- \ell_\alpha^+)\ ,
 	% 
 \end{align}	
-%
-where $\alpha \neq \beta$, $g_L = -1/2 + \sin^2\theta_\text{W}$ and $g_R =\sin^2\theta_\text{W}$.
-Our total decay rates agree with those in \refrefs{Bondarenko:2018ptm, Atre:2009rg, Helo:2010cw, Gorbunov:2007ak}.  
+where $\alpha \neq \beta$.
+The total decay rates agree with those in \refrefs{Bondarenko:2018ptm, Atre:2009rg, Helo:2010cw, Gorbunov:2007ak}.  
 %
 %For a Dirac antineutrino initial state we find, 
 %%
@@ -877,8 +1028,13 @@ is that these NC channels are dependent on the angular variables.
 These differences in the distributions of the final state particles could be in principle exploited to identify %
 the fermionic nature of the decaying HNL~\cite{Balantekin:2018ukw}.
 
+
+
+
+
 \section{Heavy neutrino production}
 \label{sec:production}
+
 
 Heavy neutrinos can be produced in a beam dump experiment via the same processes %
 that generate light neutrinos (see \refsec{sec:nu_atm_acc}).
@@ -910,9 +1066,9 @@ $\phi_{Q \to\nu_\alpha}$, summing over all existing parents and all allowed flav
 	\dv{\phi_N^\pm}{E} (E_N) \approx \sum_{Q, \alpha}  \mathcal{K}^{Q,\alpha}_\pm(m_N)\ \dv{\phi_{Q\to\nu_\alpha}}{E} (E_N - m_N)\ , %
 \end{equation}
 where
-\[
+\begin{equation}
 	\mathcal{K}^{Q,\alpha}_\pm(m_N) \equiv \frac{\Gamma_\pm(Q \to N Q')}{\Gamma(Q \to \nu_\alpha Q')}\ .
-\]
+\end{equation}
 %
 The ratio $\mathcal{K}$ is proportional to the mixing parameter $|U_{\alpha N}|^2$ and contains only kinematic %
 functions of the involved masses.
@@ -955,9 +1111,8 @@ These are responsible for correcting phase space and helicity terms.
 		& $\pi^+ \cj{\nu}_\tau$ 	& \np{10.82}	& \np{1637.29}	\\
 		\bottomrule
 	\end{tabular}
-	\footnotesize
 	\caption{Production channels at beam dump facilities yielding neutrinos, with the respective branching %
-		ratios (taken from \refref{PDG}).
+		ratios (taken from \refref{Tanabashi:2018oca}).
 		The last column shows the maximum neutrino mass allowed if a massive state is produced.
 		On the left, all the decays yielding $\nu_e$, $\nu_\mu$, and $\cj{\nu}_\mu$ up to the $K^0$ mass are shown.
 		On the right, the neutrino sources which depends on the $D_s^+$ decay chain are shown; only the first four %
@@ -1001,7 +1156,6 @@ as it happens with the electron decay of $D_s$, the enhancement of which is arou
 \begin{figure}[t]
 	\centering
 	{\resizebox{\linewidth}{!}{\input{pics/multiScale_2.tex}}}
-	\footnotesize
 	\caption{The scale factors separated by helicity components are shown.
 		In two-body decays (left), the $h=-1$ components (dashed) for all channels %
 		do not depend on the mass.
@@ -1028,9 +1182,9 @@ is given by the analytic expression:
 	{2 \xi_{\ell_\alpha}^2(1-\xi_{\ell_\alpha}^2)^2}\ ,
 \end{equation}
 where $\lambda$ is the K\"all\'en function:
-\[
+\begin{equation}
 	\lambda(a, b, c) = (a-b-c)^2-4\,b\,c\ ,
-\]
+\end{equation}
 and $\xi_i = \flatfrac{m_i}{m_X}$ is the mass ratio of the final state particle $i$ over the parent particle mass.
 When summing over the helicity states, the resulting factor coincides with the one computed in~\refref{Shrock:1981wq}:
 \begin{equation*}
@@ -1097,7 +1251,17 @@ Decays of muons and taus yield massive neutrinos with the following decay rate%\
 	|U_{\beta N}|^2\ I^\pm_{\cj{\ell}}\qty(0, \xi_{\ell_\beta}^2, \xi_N^2)]\ ,
 \end{align}
 %
-where the integrals $I_{\ell, \cj{\ell}}(x, y, z)$ are given in~\refapp{app:integrals}.
+where the integrals $I_{\ell, \cj{\ell}}(x, y, z)$ are given by
+\begin{align}
+	I^\pm_\ell(x, y, z) = 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\!  \frac{\dd{s}}{s} % 
+	%I^\pm_\ell(x, y, z) = 12 \int\limits_{(x+y)^2}^{(1-z)^2}\!\!
+	&\qty(1 + z - s) \qty[s - x - y \mp \kallen(s, x, y) ]\notag \\
+	&\times \kallen(s, x, y) \kallen(1, s, z) \\
+	I^\pm_{\cj{\ell}}(x, y, z) = 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\!  \frac{\dd{s}}{s} % 
+	%I^\pm_{\cj{\ell}}(x, y, z) = 12 \int\limits_{(x+y)^2}^{(1-z)^2}\!\! \frac{\dd{s}}{s} %
+	&\qty[1 + z - s \mp \kallen(1, s, z) ] \qty(s - x - y)\notag \\
+	&\times \kallen(s, y, z) \kallen(1, s, z)\ .
+\end{align}
 The helicity decompositions in $I_\ell$ and $I_{\cj{\ell}}$ are different, %
 but the spin-averaged decay width is the same. %\marcom{PB}{To be finished?}
 
@@ -1109,8 +1273,45 @@ The decay width of a pseudo-scalar meson $h_1$ to a lighter meson $h_2$ is given
 	\Gamma_\pm (h_1^{+,0} \to h_2^{0,+}\,\ell_\alpha^+ N) = \frac{G_F^2 m_h^5}{128 \pi^3} |U_{\alpha N}|^2 |V_{q\cj{q}}|^2\ %
 	I^\pm_{h_1} \qty(\xi_{h_2}^2, \xi_{\ell_\alpha}^2, \xi_N^2)\ .
 \end{equation}
-The integral $I_h(x, y, z)$ is reported in~\refapp{app:integrals} and consists of a combination %
-of kinematic elements with terms of hadronic form factors as coefficients.
+The integral $I_h(x, y, z)$ is
+\begin{align}
+	I^\pm_h(x, y, z) = \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\!
+	%I^\pm_h(x, y, z) = \int\limits_{(x+y)^2}^{(1-z)^2}\!\!
+	\dd{s} \int_{t_-}^{t_+}\!\! %
+	\dd{t} \qty[ F^2 A^\pm(s, t) + G^2 B^\pm(s, t) - \Re(F^* G)\,C^\pm(s, t) ]\ ,\notag \\
+	\text{with}\quad t_\pm = x + z + \frac{ (1-s-z)(s - y + x) \pm \kallen(s, y, z)\kallen(1, s, z) }{2 s}\ ,
+\end{align}
+where $F$ and $G$ are convenient combinations of hadronic form factors $f^{(h,h')}$.
+From lattice QCD considerations, form factors should carry the correct Clebsch-Gordan, %
+but here we drop them as they are irrelevant when studying scale factors.
+The combinations $F$ and $G$ are
+\begin{align}
+	F &= 2\ f_+^{(h,h')}(u) = f_+^{(h,h')}(0)%
+	\qty(1 + \lambda^{(h,h')}_+ \frac{u}{x})\ , \\
+	G &= f_+^{(h,h')}(u) - f_-^{(h,h')}(u) = f_+^{(h,h')}(0)%
+	\qty[1 + \lambda^{(h,h')}_+ \frac{u}{x} - %
+	\qty(\lambda^{(h,h')}_+ - \lambda^{(h,h')}_0) \qty( 1 + \frac{1}{x})]\ ,
+\end{align}
+with $\lambda$ parametrising the linear dependence~\cite{Tanabashi:2018oca} of the form factors %
+with respect the momentum transfer between the two mesons, $u$, %
+directly connected to the other Mandelstam variables, $s$ and $t$:
+\begin{equation}
+	u = 1 + x + y + z - s - t\ .
+\end{equation}
+The values of $\lambda_{+,0}$ is determined experimentally~\cite{Tanabashi:2018oca}.
+The functions $A$, $B$, and $C$ are
+\begin{align}
+	A^\pm(s, t) &= \frac{1}{2}(1 + y - t) \qty[ 1 + z - s \mp \kallen(1, z, s) ] - %
+	\frac{1}{2}\qty[u - y - z \mp \kallen(u, y, z)]\ , \\
+	B^\pm(s, t) &= \frac{1}{2}(y + z) (u - y - z) + 2 y z \mp (y - z) \frac{\kallen(u, y, z)}{2}\ , \\
+	C^\pm(s, t) &= z (1 + y - t) + \qty[y \pm \frac{\kallen(u, y, z)}{2}] (1 + z - s)\ . 
+\end{align}
+When summing over helicity states, the kinematic simplifies to
+\begin{align}
+	A(s, t) &= (1 + y - t)( 1 + z - s) - (u - y - z)\ , \\
+	B(s, t) &= (y + z) (u - y - z) + 4\, y\, z\ , \\
+	C(s, t) &= 2\, z\, (1 + y - t) + 2\, y\, (1 + z - s)\ .
+\end{align}
 The scale factor was checked numerically against the result of~\refref{Abada:2013aba}.
 %From lattice QCD considerations, the decay width is halved when the decay is into $\pi^0$, %
 %even though this is irrelevant for the scale factor.
@@ -1120,4 +1321,3 @@ however this channel is introduced only at the phase space level.
 The scale factors for the two helicity components are therefore assumed to be identical, %
 $\mathcal{K}_\pm = \smash[b]{\frac{1}{2}}$, such that the neutrino flux sub-component coming from this decay %
 consists of equal number of heavy neutrinos with helicity $h=+1$ and $h=-1$.
-

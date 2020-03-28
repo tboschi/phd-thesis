@@ -850,11 +850,36 @@ combination at the Asimov A point (see \reftab{tab:asimovA}), %
 the $\chi^2$ profile can be now calculated with the method explained in the previous sections.
 A combined fit of the $\nu_e$ and $\nu_\mu$ samples allows to estimate the sensitivity of HK to the measurement %
 of the oscillation parameters.
-The four profiles against the variation of the oscillation parameters %
+The $\chi^2$ profiles against the variation of the oscillation parameters %
 $\Delta m^2_{32}$, $\sin^2 2\theta_{13}$, $\sin^2 \theta_{23}$, and $\delta_\text{CP}$ %
 are shown in \reffig{fig:nominal_profile}.
-The contour plots are shown in \reffig{fig:nominale_contour}.
+The contour plots are also shown.
 The lines show also the effect of the gaussian penalty term on the angle $\theta_{13}$ from reactor constraints.
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_dCP.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_S13.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_M23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_S23.tex}}
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_cont_S13_dCP.tex}}	%%%%%%%%%%%this is important
+	\caption{$\chi^2$ profile for $\Delta m_{32}^2$ (left) and $sin^2 \theta_{23}$ (right). 
+		The bottom panels show the difference of the different lines with the no systematic profile.}
+	\label{fig:nominal_profile}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\resizebox{0.48\linewidth}{!}{\input{pics/just0_sensitivity.tex}}
+	%\resizebox{0.48\linewidth}{!}{\input{pics/just0_detail.tex}}
+	\caption{Expected signifcance to exclude $\sin\delta_\text{CP} = 0$ for correlated (left) and anticorrelated (right) systematics.
+		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
+       		masks the resolution power to distinguihsing neutrino from anti-neutrino events. }
+	\label{fig:nominal_sensitivity}
+\end{figure}
+
 
 The sensitivity to CP violation is also shown.
 We show the effect of the collected statistics on the CP sensitivity.
