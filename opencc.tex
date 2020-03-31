@@ -2,7 +2,7 @@
 \chapter{Open charm production}
 \label{cha:opencc}
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
 	\begin{fmffile}{qq}
 		\begin{fmfgraph*}(80,50)
@@ -79,7 +79,7 @@
 \end{figure}
 
 Following the same procedure as the one described in~\refref{Alekhin:2015byh}, %
-we estimate the number of strange $D$ mesons to be
+the number of strange $D$ mesons can be estimated as
 \begin{equation}
 	\mathcal{N}_{D_s} = \frac{\sigma_{c \cj{c}}}{\sigma_{p A}} f_{D_s} = (2.8 \pm 0.2) \times \np{e-6}\ ,
 \end{equation}
@@ -88,12 +88,12 @@ $\sigma_{p A} = \np{331.4}\pm\np{3.4}$\,mb is the total inelastic proton-target 
 cross section, and $f_{D_s} = \np{7.7}\,\%$ is the $D_s$ fragmentation fraction~\cite{Abramowicz:2013eja}.
 %where $\sigma_{c \cj{c}}$ is the proton-target open charm cross section, $\sigma_{p A}$ is the total inelastic %
 %proton-target inelastic cross section, and $f_{D_s}$ is the $D_s$ fragmentation fraction.[h]
-We calculate the open charm production cross section at the leading order in perturbation theory, with a %
-graphite fixed target and a 80\,GeV proton $p$.
+The open charm production cross section is computed at the leading order in perturbation theory, %
+with a graphite fixed target and a 80\,GeV proton $p$.
 The correct process to consider is the proton--nucleon interaction, therefore %
-\begin{equation*}
+\begin{equation}
 	\sigma_{c \cj{c}} \equiv \sigma(pA \to c \cj{c} + X) \approx A\,\sigma(pN \to c \cj{c} +X)\ , %
-\end{equation*}
+\end{equation}
 using the correct Parton Distribution Function (PDF) for a bound nucleon $N$ in the nucleus $A$.
 There are four diagrams, shown in figure~\reffig{fig:parton}, that contributes to the cross section, %
 but three of them interfere with each other.
@@ -115,11 +115,12 @@ of the parton-level process.
 
 
 
-We adopt a factorisation scale of $M_F = 2.1\, m_c$ for the computation of $\sigma_{c \cj{c}}$, 
+A factorisation scale of $M_F = 2.1\, m_c$ for the computation of $\sigma_{c \cj{c}}$ is adopted, 
 while the renormalisation scale of $\alpha_s$ is set to $\mu_R = 1.6\, m_c$, and the charm mass has the value %
 \mbox{$m_c = (\np{1.28}\pm\np{0.03})$\,GeV}.
 The integration is regulated for $|\cos \theta| < 0.8$, with $\theta$ the angle in the centre of mass frame.
-The theoretical curve in Fig.~7.4(a) of~\refref{Alekhin:2015byh} was used to check our evaluation, %
+The theoretical curve in Fig.~7.4(a) of~\refref{Alekhin:2015byh} was used to check this calculation, %
 and it was successfully reproduced up to NLO corrections.
-For~the calculation we employed LHAPDF~\cite{Buckley:2014ana} and the nCTEQ15 PDF set~\cite{Kovarik:2015cma}, %
+For the generation of PDF the LHAPDF libraries~\cite{Buckley:2014ana} %
+and the nCTEQ15 PDF set~\cite{Kovarik:2015cma} are used, %
 resulting in $\sigma_{pA \to c \cj{c}} = (\np{12}\pm1)\,\mu$b, for an 80\,GeV protons on a graphite target.

@@ -941,6 +941,39 @@ FUNCTION {phdthesis}
 
 FUNCTION {mastersthesis} {phdthesis}
 
+FUNCTION {cpp}
+{
+        output.bibitem
+        write$
+        format.authors " (" *
+        write$
+        format.date "). " *
+        write$
+        format.title 
+        write$
+        url empty$
+        { "C++ library." }
+        { "\href{" url * "}{C++ library}." * }
+        if$
+        write$
+        newline$
+}
+
+FUNCTION {private}
+{
+        output.bibitem
+        write$
+        format.authors 
+        write$
+        format.collaboration ", " *
+        write$
+        "Private communication ("
+        write$
+        format.date "). " *
+        write$
+        newline$
+}
+
 FUNCTION {default.type} { article }
 
 MACRO {jan} {"Jan."}

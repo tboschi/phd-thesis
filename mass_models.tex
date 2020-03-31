@@ -194,7 +194,7 @@ Following \refeq{eq:newmodel} and \refeq{eq:mass_matrix}, the most general mass 
 \end{equation}
 producing in the lepton number conserving (LNC) limit
 \begin{equation}
-	\label{eq:issmatrix}
+	\label{eq:iss_matrix_lnc}
 	\mathcal{M} = 
 	\mqty( 0	& m^T	& 0	\\
 	       m	& 0	    & M \\
@@ -235,7 +235,7 @@ In the ISS, the texture of the perturbation assumes the values $Y^\prime = 0$ an
 while $\mu$ controls the size of LNV effects.
 The mass matrix is therefore
 \begin{equation}
-	\label{eq:iss_matrix}
+	\label{eq:iss_matrix_lnv}
 	\mathcal{M} = 
 	\mqty(
 		0	& m_D^T	& 0	\\
@@ -788,13 +788,13 @@ and the standard expression for the total decay rates is recovered through the i
 \end{align}
 The functions $I_1\qty(x,y,z)$ and $I_2\qty(x,y,z)$ are the following kinematic functions, coming from the %
 integration over the phase space
-\begin{align*}
+\begin{align}
 	I_1(x,y,z) &= 12 \int\limits_{\qty(\sqrt{x}+\sqrt{y})^2}^{\qty(1-\sqrt{z})^2}\!\! %
 	\frac{\dd{s}}{s} (s-x-y)\,(1+z-s)\kallen(1,x,y)\kallen(1,s,z)\ ,\\
 	%
 	I_2(x,y,z)&=24\,\sqrt{yz} \int\limits_{\qty(\sqrt{y}+\sqrt{z})^2}^{\qty(1-\sqrt{x})^2}\!\! %
 	\frac{\dd{s}}{s}(1+x-s)\kallen(s,y,z)\kallen(1,s,x)\ .
-\end{align*}
+\end{align}
 Thus, the general expression for the total decay rate is again helicity independent and can be written as
 \begin{equation}
 	\Gamma_\pm(N \to \nu \ell_\alpha^- \ell_\beta^+) = \frac{G_F^2 m_N^5}{192 \pi^3}\,\qty[ C_1\ I_1\qty(0,\xi_3^2,\xi_4^2) + %
@@ -955,23 +955,23 @@ in the way shown by the following differential rates
 
 For the three-body leptonic decays, the distribution is expressed in \refeq{eq:threebody_dist_master} %
 with the relevant coefficients for a Dirac neutrino
-\begin{align*}
+\begin{align}
 	C^\nu_1 &= C^\nu_4= \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 \qty[\delta_{\alpha\beta} g_L^2+ %
 	\delta_{\gamma\alpha}(1+\delta_{\alpha\beta}g_L)]\ ,\\ 
 	%
 	C^\nu_2 &= C^\nu_5= \delta_{\alpha\beta}\,g^2_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2\ ,\\ 
 	%
 	C^\nu_3 &= C^\nu_6= \delta_{\alpha\beta}\,g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\gamma\beta} + g_L)\ ,
-\end{align*}
+\end{align}
 and for a Dirac antineutrino
-\begin{align*}
+\begin{align}
 	C^{\cj{\nu}}_1 &= -C^{\overline{\nu}}_4 = \delta_{\alpha\beta}\,g^2_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2\ ,\\
 	%
 	C^{\cj{\nu}}_2 &= -C^{\overline{\nu}}_5 = \sum_{\gamma =e}^\tau |U_{\gamma i}|^2 %
 	\qty[ \delta_{\alpha\beta} g_L^2+ \delta_{\gamma\beta}(1+\delta_{\alpha\beta}g_L)]\ ,\\
 	%
 	C^{\cj{\nu}}_3 &= -C^{\overline{\nu}}_6 = \delta_{\alpha \beta}\, g_R\sum_{\gamma = e}^\tau |U_{\gamma i}|^2(\delta_{\alpha\gamma} + g_L)\ .
-\end{align*}
+\end{align}
 It is not surprising in view of \refeq{eq:gamma_NC_sum} to observe that these coefficient are related %
 to the ones for the Majorana case as
 \begin{equation}
