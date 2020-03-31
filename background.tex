@@ -1,0 +1,213 @@
+\chapter{Background reduction}
+\label{cha:appbackground}
+
+The background evaluation is only performed for the decay channels with an important discovery potential, %
+and these are $N \to \nu e^+ e^-$, $\nu e^\pm \mu^\mp$, $\nu \mu^+\mu^-$, $\nu\pi^0$, $e^\mp\pi^\pm$, and $\mu^\mp\pi^\pm$. 
+In~order to reject background events, conservative event selection cuts are outlined using the differences %
+between kinematic properties of the final state particles from neutrino--nucleon interactions and %
+from the rare HNL in-flight decays.
+Simulations of signal events with a given mass inside either the LArTPC or the MPD are input to a %
+channel-specific algorithm that discards low energy events and %
+defines limits on angular and transverse momentum distributions.
+The algorithm aims at keeping an integrated signal efficiency $\widehat{W}_d$ greater than 30\,\%, where 
+\begin{equation}
+    \widehat{W}_d = \int \dd{E} W_d(E)\ ,
+\end{equation}
+where the signal efficiency $W_d(E)$ is introduced in \refsec{sec:numevt}.
+%%BETTER!!!!!!
+
+As an example of the selection process, the results of the background analysis for a heavy neutrino with mass $m_N = 450$\,MeV %
+is reported here.
+In the following tables the number of background events is reported %
+in the form ``$\mathcal{X} \to \mathcal{Y}\ \mathcal{Z}$'', %
+where $\mathcal{X}$ is the per mille (\np{e-3}) fraction of background events %
+from mis-identification and $\mathcal{Y}$ and $\mathcal{Z}$ are fractions of irreducible background %
+after the application of selection cuts to respectively Majorana and Dirac neutrino simulations.
+When the value $\np{0.000}$ is shown, less than one background event per million is expected.
+The average $\langle\nu\rangle$ is computed by weighting the flux components contribution to the background, %
+using the respective interaction rates as weights, reported in Tab.~\ref{tab:rate}.
+To obtain the number of background events, each fraction must be multiplied by the number of %
+SM neutrino--nucleon interactions expected in the ND during the experiment lifetime.
+It is assumed that the $\nu_\tau$ and $\cj{\nu}_\tau$ components are not responsible for background events, %
+therefore only the $\nu_e$, $\nu_\mu$, and $\cj{\nu}_\mu$ components are studied.
+The last row of the tables shows the integrated efficiency of the selection cuts.
+%It is interesting to report that if charge identification were possible, the background events would be %
+%drastically reduced. %EXTEND?
+%Because of the overwhelming background, the number of signal events are most of the time substantially influenced.
+
+The studied channels are grouped in three categories, which have similar kinematic features: %
+two-body decay, which are semi-leptonic, three-body decay channels, which are purely leptonic instead, and %
+decays which can be only detected via photon reconstruction.
+%We limit our analysis only for events with a total energy greater than 5~GeV, unless stated differently.
+
+\section{Two-body decays}
+
+The two-body decays $N \to e^\pm \pi^\mp$ and $N \to \mu^\pm \pi^\mp$ are the most promising channels for the detection %
+of a heavy neutrino, being the decay mode with the highest branching ratios.
+%The typical signal is a two charged particle tracks with a common vertex, in a $V^0$-like fashion.
+%Muons and pions leave a clean signature in the LArTPC and the MPD, %
+%and electrons are easily reconstructed.
+Since all final state particles are charged, direct information on the parent particle in easily reconstructed, %
+as for instance the mass of the decaying neutrino, which is the invariant mass of the process
+\begin{equation}
+    m_N^2 = s = m_\ell^2 + m_\pi^2 + 2E_\ell E_\pi - 2|\vb{p}_\ell| |\vb{p}_\pi| \cos \theta\ ,
+\end{equation}
+where $\theta$ is the opening angle between the lepton and the pion.
+In a two-body decay, the two particles are emitted back-to-back in the neutrino reference frame, %
+so in the laboratory frame the relative position on the perpendicular plane is mostly preserved %
+and $(\phi_\ell - \phi_\pi)$ is expected to be close to $\pm \pi$.
+Despite these distinctive signatures, these two channels are the ones with most background events, %
+coming from charged-current interactions of $\nu_e$, $\nu_\mu$, and $\cj{\nu_\mu}$ in which %
+additional pions can be easily emitted in coherent or deep inelastic scatterings.
+Background events typically peak at low energies and present more isotropic angular distributions.
+Therefore, a tight energy threshold on the energies of the charge particles is imposed to accept %
+70\,\% of the signal events and a threshold on the energy of the reconstructed neutrino is defined %
+by 90\,\% of the retained events.
+A cut is also placed on the reconstructed $m_N$ to retain 80\,\% of signal events, %
+as well as an upper limit on the transverse momenta and angles to the beamline %
+and a lower and an upper limit on the separation angle between the charged particles.
+After the cuts are applied, the background events are reduced up to a factor of 2500, %
+and the signal efficiency are $\sim$35\,\% for the electronic channel and $\sim$40\,\% %
+for the muonic channel, with little difference (respectively 1\,\% and 3\,\%) %
+between Dirac or Majorana selection windows.
+
+\begin{center}
+\smallskip
+	\small
+	\begin{tabular}{cr@{~}c@{~~}cr@{~}c@{~~}c}
+		%%%%%%
+	\toprule
+
+	& \multicolumn{3}{c}{$N\to e^\mp \pi^\pm$}		& \multicolumn{3}{c}{$N\to \mu^\mp \pi^\pm$}	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}   
+
+	& & Majorana		& Dirac	 & & Majorana	& Dirac	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7} 
+
+	$\nu_e$         &\np{19.090}~~$\to$ & \np{0.015} & \np{0.015}	&\np{ 0.007}~~$\to$ & \np{0.000} & \np{0.000}	\\
+	$\nu_\mu$       &\np{ 0.027}~~$\to$ & \np{0.000} & \np{0.000}	&\np{25.030}~~$\to$ & \np{0.011} & \np{0.012}	\\
+	$\cj{\nu}_\mu$  &\np{ 0.025}~~$\to$ & \np{0.000} & \np{0.000}	&\np{29.822}~~$\to$ & \np{0.046} & \np{0.053}	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+
+	$\langle\nu\rangle$		&\np{ 0.239}~~$\to$ & \np{0.000} & \np{0.000}	&\np{24.302}~~$\to$ & \np{0.013} & \np{0.014}	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+
+	$\widehat{W}_{\ell\pi}$&		& 36.4\,\%	& 35.2\,\%	&		& 43.3\,\%	& 40.2\,\% \\
+
+	\bottomrule
+		%%%%%%
+	\end{tabular}
+\medskip
+\end{center}
+
+\section{Three-body decays}
+
+The three-body decays studied are $N\to \nu e^- e^+$, $N\to \nu e^\mp \mu^\pm$, and $N\to \nu \mu^- \mu^+$.
+The event selection in this case is more challenging compared to two-body decays event, due the loss of the light neutrino %
+which precludes the reconstruction of the decaying HNL, and so cuts as rigorous cannot be defined.
+However, since two charged leptons are needed to identify these channels, the resulting background rate, %
+from mis-identified photons (from $\pi^0$ decays) and long-track pions, is low.
+Even in this case, only high energy events are considered, but with a lower threshold on the charged lepton energies.
+The invariant mass of the two leptons has as upper limit $m_N$ and this constrain helps with reducing the background.
+Lower and upper limits are also defined for the transverse momenta, as well as separation angles from the beamline.
+
+The background events are reduced from a factor of 40 up to a factor of 200, with the selection requirements %
+for Dirac neutrinos being more effective.
+The signal efficiency results to be better (6--8\,\% better) for Majorana neutrinos in the $N\to \nu e^- e^+$ and $\mu^-\mu^+$ %
+channels, whereas the Dirac neutrino have give a better efficiency in the $N\to e^\mp \mu^\pm$ channel.
+High efficiency and low background make these three channel competitive for HNL discovery, despite having %
+lower branching ratio and so weaker sensitivity.
+%\enlargethispage{\baselineskip}
+
+\begin{center}
+\smallskip
+	\small
+	\begin{tabular}{cr@{~}c@{~~}cr@{~}c@{~~}cr@{~}c@{~~}c}
+	%\begin{tabular}{cr@{~}r@{\ |\ }rr@{~}r@{\ |\ }rr@{~}r@{\ |\ }r}
+		%%%%%%
+	\toprule
+
+	%& \multicolumn{3}{c}{$N\to e^\mp \pi^\pm$}		& \multicolumn{3}{c}{$N\to \mu^\mp \pi^\pm$}	\\
+ & \multicolumn{3}{c}{$N\to \nu e^- e^+$}	& \multicolumn{3}{c}{$N\to \nu e^\mp \mu^\pm$}	& \multicolumn{3}{c}{$N\to \nu \mu^- \mu^+$} \\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}  \cmidrule(lr){8-10} 
+
+	& & Majorana		& Dirac	 & & Majorana	& Dirac & & Majorana & Dirac	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}    \cmidrule(lr){8-10}
+
+	$\nu_e$         &\np{0.190}~~$\to$ & \np{0.003} & \np{0.002}  &\np{0.078}~~$\to$ & \np{0.002} & \np{0.002}  &\np{0.000}~~$\to$ & \np{0.000} & \np{0.000} \\
+	$\nu_\mu$       &\np{0.193}~~$\to$ & \np{0.001} & \np{0.000}  &\np{0.092}~~$\to$ & \np{0.000} & \np{0.000}  &\np{0.081}~~$\to$ & \np{0.001} & \np{0.001} \\
+	$\cj{\nu}_\mu$  &\np{0.224}~~$\to$ & \np{0.003} & \np{0.002}  &\np{0.160}~~$\to$ & \np{0.000} & \np{0.000}  &\np{0.090}~~$\to$ & \np{0.008} & \np{0.006} \\
+                                                                                                                                                                  
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}    \cmidrule(lr){8-10}
+	$\langle\nu\rangle$		&\np{0.168}~~$\to$ & \np{0.001} & \np{0.000}  &\np{0.090}~~$\to$ & \np{0.000} & \np{0.000}  &\np{0.022}~~$\to$ & \np{0.000} & \np{0.000}\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}    \cmidrule(lr){8-10}
+
+	$\widehat{W}_{\nu\ell\ell}$	&	& 63.4\,\%	& 55.4\,\%	&	& 68.6\,\%	& 71.2\,\% &	& 74.0\,\%	& 68.4\,\%	\\
+
+	\bottomrule
+		%%%%%%
+	\end{tabular}
+\end{center}
+
+\section{EM--detected decays}
+
+The semi-leptonic decay $N \to \nu \pi^0$ may only be identified by a correct photon reconstruction, %
+since the neutral pion decays almost 100\,\% of the time in two photons.
+This particle is produced in NC1$\pi^0$ interactions and deep inelastic scattering interactions.
+Background events occur if only two final state photons from the neutral pion decay %
+are above detection threshold and properly reconstructed with an invariant mass equal to $m_{\pi^0}$.
+The energy of the reconstructed pion is the best discriminant against background events, %
+thanks to their high energy.
+Lower and upper limits can be placed on the $\pi^0$ transverse momentum and angle with the beamline, %
+but also a threshold on the energy of the photons as well as an upper limit on their angular distributions %
+help in defining the kinematics of the event.
+The residual background for this channel is the highest among the ones studied: only reduction factors up to 130 can be achieved, %
+with a notable difference between selection cuts for Majorana and Dirac HNL decays (the latter ones being more strict).
+The signal efficiency efficiency is $\sim$46\,\% for Majorana and $\sim$42\,\% for Dirac.
+It is, however, one of the decay modes with the highest branching ratio, %
+and with advanced and dedicated techniques~\cite{Ankowski:2008aa, Back:2012wc}
+the background rejection can be improved.
+
+\begin{center}
+\smallskip
+	\small
+	%\begin{tabular}{cr@{\ }r@{\ |\ }r}
+	\begin{tabular}{cr@{~}c@{~~}c}
+		%%%%%%
+	\toprule
+
+	& \multicolumn{3}{c}{$N\to \nu \pi^0$}	\\
+
+	\cmidrule(lr){1-4}
+
+	& & Majorana		& Dirac	 \\
+
+	\cmidrule(lr){2-4} 
+	%\cmidrule(lr){2-2} \cmidrule(lr){3-4}
+
+	$\nu_e$         &\np{4.135}~~$\to$ & \np{0.058}	& \np{0.048}	\\
+	$\nu_\mu$       &\np{5.862}~~$\to$ & \np{0.053}	& \np{0.039}	\\
+	$\cj{\nu}_\mu$  &\np{7.428}~~$\to$ & \np{0.179}	& \np{0.138}	\\
+
+	\cmidrule(lr){2-4} 
+	%\cmidrule(lr){2-2} \cmidrule(lr){3-4}
+
+	$\langle\nu\rangle$		&\np{5.797}~~$\to$ & \np{0.061}	& \np{0.045}	\\
+
+	\cmidrule(lr){2-4} 
+	%\cmidrule(lr){2-2} \cmidrule(lr){3-4}
+
+	$\widehat{W}_{\nu\pi^0}$	& & 46.3\,\%	& 42.3\,\%	 \\
+
+	\bottomrule
+		%%%%%%
+	\end{tabular}
+	\medskip
+\end{center}
