@@ -11,7 +11,9 @@
 %for printing use this
 %\usepackage[left=1.5in,right=.75in,top=1.25in,bottom=1.25in]{geometry}
 %for digital version, use this
-\usepackage[left=0.75in,right=.75in,top=1.25in,bottom=1.25in]{geometry}
+%\usepackage[left=1.5in,right=.75in,top=1.25in,bottom=1.25in]{geometry}
+\usepackage[reset, a4paper, bindingoffset=0.75in,left=0.75in,right=1.00in, top=1.25in, bottom=1.25in]{geometry}
+\usepackage{afterpage}
 
 \usepackage{epsfig}
 \usepackage{graphicx}
@@ -106,6 +108,16 @@
 \input{abstract.tex}
 
 \tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
 %Main
 %\mainmatter

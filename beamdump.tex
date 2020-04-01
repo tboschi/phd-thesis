@@ -60,7 +60,7 @@ carried out respectively in \refsec{sec:combined} and \refsec{sec:majorana_dirac
 %including those with masses above 500\,MeV, probing models of theoretical significance for the generation of neutrino mass.
 %We show that bounds can be put also on the mixing with tau neutrinos, thanks to the high energy~beam.
 
-\section{The Near Detector of DUNE}
+\section{The near detector of DUNE}
 \label{sec:dunend}
 
 DUNE~\cite{Abi:2018dnh} is a long-baseline oscillation experiment that %
@@ -88,7 +88,8 @@ All these exceptional properties make LArTPC a powerful tool for precision neutr
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/duneND.png}
-	\caption{Lateral view of the Near Detector complex of DUNE.}
+	\caption[View of the near detector complex of DUNE]%
+	{Lateral view of the near detector complex of DUNE.}
 	\label{fig:duneND}
 \end{figure}
 
@@ -166,6 +167,18 @@ with the beam in neutrino mode and the ND on-axis.
 
 \begin{table}
 	\centering
+	\caption[Exposures of major beam dump experiments]%
+		{Comparison between experiments mentioned in this work.
+		Using PS191 as a reference unit, the exposure is defined as %
+		POT$\times$Energy$\times$Volume$\times$Baseline\tapi{$-$2}, %
+		where ``Energy'' is the proton beam energy.
+		The NA62 and SHiP experiments are not directly comparable with SBND and DUNE ND, %
+		in that different technologies are involved;
+		the RICH detectors are adopted as fiducial volume for NA62, whereas %
+		the volume of SHiP is estimated as the cone contained in the ``hidden sector'' vacuum vessel. 
+		The volume is a driving feature in the definition of the total exposure and it is of utter importance %
+		for searches of decay-in-flight events.}
+	\label{tab:nd}
 	\small
 	\begin{tabular}{lccccc}
 		\toprule
@@ -179,17 +192,6 @@ with the beam in neutrino mode and the ND on-axis.
 		Exposure& 1.0 	        & 220.9         & 16.4	        & 8.5           & 5820          \\
 		\bottomrule
 	\end{tabular}
-	\caption{Comparison between experiments mentioned in this work.
-		Using PS191 as a reference unit, the exposure is defined as %
-		POT$\times$Energy$\times$Volume$\times$Baseline\tapi{$-$2}, %
-		where ``Energy'' is the proton beam energy.
-		The NA62 and SHiP experiments are not directly comparable with SBND and DUNE ND, %
-		in that different technologies are involved;
-		the RICH detectors are adopted as fiducial volume for NA62, whereas %
-		the volume of SHiP is estimated as the cone contained in the ``hidden sector'' vacuum vessel. 
-		The volume is a driving feature in the definition of the total exposure and it is of utter importance %
-		for searches of decay-in-flight events.}
-	\label{tab:nd}
 \end{table}
 
 A summary of the features of the ND system relevant for this analysis is reported in~\reftab{tab:nd}, %
@@ -227,7 +229,8 @@ FASER will consist of a 10\,m cylindrical decay volume located 480\,m downstream
 	\resizebox{.5\textwidth}{!}{\input{pics/fluxnubar.tex}}
 	\hspace{-1em}
 	\resizebox{.5\textwidth}{!}{\input{pics/fluxnutau.tex}}
-	\caption{The prediction of neutrino fluxes, in neutrino mode, divided by parentage at the ND are shown above, %
+	\caption[Prediction of neutrino fluxes at the near detector of DUNE]%
+		{The prediction of neutrino fluxes, in neutrino mode, divided by parentage at the ND are shown above, %
 		normalised to \np{e20}\,POT.
 		The $\nu_e$ component (top left) predominately originates from $\mu^+$ decays;
 		kaon decays are responsible for the high energy part of the spectrum.
@@ -262,7 +265,8 @@ and, as it will be explained in~\refsec{sec:numevt}, the most relevant for this 
 \begin{figure}[t]
 	\centering
 	\resizebox{\linewidth}{!}{\input{pics/modmulti.tex}}
-	\caption{The fluxes of heavy neutrinos from $D_s^+\to \tau^+ N$ (left) are presented %
+	\caption[Fluxes of heavy neutrinos from the decay channel $D_s^+\to \tau^+ N$]%
+		{The fluxes of heavy neutrinos from $D_s^+\to \tau^+ N$ (left) are presented %
 		for different neutrino masses and normalised to \np{e20}~POT at the ND.
 		Only phase space effects are considered here.
 		For each different value of the neutrino mass, information on the start and end point of the spectrum %
@@ -336,6 +340,15 @@ These effects are taken in account by modifying the scaled neutrino flux using i
 \begin{table}
 	\newcommand{\us}{\hphantom{${}^0$}}
 	\newcommand{\ms}{\hphantom{${}^-$}}
+	\caption[Expected rates for CC and NC interaction in the near detector of DUNE]%
+		{The expected rates for CC and NC interaction in the near detector are presented here, normalised to \np{e20}\,POT.
+		The values were computed starting from~\refeq{eq:numev}, convolving the fluxes of~\reffig{fig:fluxes} 
+		with the CC and NC cross-section predictions from GENIE~\cite{Andreopoulos:2009rq}.
+		Detector efficiencies are not applied.
+		The first columns show the total number of events per tonne of argon, the second ones %
+		the proportion of CC or NC events with respect to the totality, and the last columns the event frequencies %
+		assuming \np{1e14}\,POT/s.}
+	\label{tab:rate}
 	\centering
 	\small
 	\iffalse
@@ -375,15 +388,6 @@ These effects are taken in account by modifying the scaled neutrino flux using i
 	\np{5.2e-5}	& 45.3\,\%      & 2.6  & $\times\,10^{-3}$ & \np{6.1e-5}    & 54.7\,\% & 3.0 & $\times\,10^{-9}$	\\
 		\bottomrule
 	\end{tabular}
-	\caption{The expected rates for CC and NC interaction in the near detector are presented here, normalised to %
-		\np{e20}\,POT.
-		The values were computed starting from~\refeq{eq:numev}, convolving the fluxes of~\reffig{fig:fluxes} 
-		with the CC and NC cross-section predictions from GENIE~\cite{Andreopoulos:2009rq}.
-		Detector efficiencies are not applied.
-		The first columns show the total number of events per tonne of argon, the second ones %
-		the proportion of CC or NC events with respect to the totality, and the last columns the event frequencies %
-		assuming \np{1e14}\,POT/s.}
-	\label{tab:rate}
 \end{table}
 
 The number of SM neutrino--nucleon interactions expected at the DUNE ND, without considering detector effects, is calculated %
@@ -446,6 +450,16 @@ and used for both modules of the ND.
 
 \begin{table}
 	\centering
+	\caption[Detection thresholds and energy/momentum and angular resolutions used in the near detector simulation]%
+		{The table lists detection thresholds and energy/momentum and angular resolutions used in the fast MC, %
+		where ``EM'' delineates electro-magnetic showers and ``Hadron'' any other charged particle %
+		which is neither a lepton nor a pion.
+		The momenta of pions and muons are smeared according to the containment of their tracks.
+		If the particles enter the MPD in which they cover a length longer than the detector's diameter or %
+		if 80\,\% of the tracks are contained inside the LArTPC then the relative resolution on the momentum is 5\,\%, %
+		otherwise a resolution of 30\,\% is applied.
+		Neutrons are treated with ``Hadron'' resolutions, but with a 90\,\% detection efficiency. }
+	\label{tab:fastmc}
 	\small
 	\begin{tabular}{lccc}
 		\toprule
@@ -457,15 +471,6 @@ and used for both modules of the ND.
 		Pion	& 100\,MeV	& 1\% or 30\% of $|\vb{p}|$	& 0.3\textdegree	\\
 		\bottomrule
 	\end{tabular}
-	\caption{The table lists detection thresholds and energy/momentum and angular resolutions used in the fast MC, %
-		where ``EM'' delineates electro-magnetic showers and ``Hadron'' any other charged particle %
-		which is neither a lepton nor a pion.
-		The momenta of pions and muons are smeared according to the containment of their tracks.
-		If the particles enter the MPD in which they cover a length longer than the detector's diameter or %
-		if 80\,\% of the tracks are contained inside the LArTPC then the relative resolution on the momentum is 5\,\%, %
-		otherwise a resolution of 30\,\% is applied.
-		Neutrons are treated with ``Hadron'' resolutions, but with a 90\,\% detection efficiency. }
-	\label{tab:fastmc}
 \end{table}
 %
 A strong discriminant for background events is the presence of protons, neutrons, and other hadrons in the final states, %
@@ -679,7 +684,8 @@ the results of which are reported in~\refsec{sec:bimax}.
 	%{\resizebox{\linewidth}{!}{\input{pics/sensmulti_TW.tex}}}
 	{\resizebox{\linewidth}{!}{\input{pics/sensmulti_TW2_real.tex}}}
 
-	\caption{The 90\,\% C.L. sensitivity regions to individual channels for dominant mixings %
+	\caption[Sensitivity regions to individual channels for dominant mixings with background analysis]%
+		{The 90\,\% C.L. sensitivity regions to individual channels for dominant mixings %
 		$|U_{e N}|^2$ (top), $|U_{\mu N}|^2$ (middle), and $|U_{\tau N}|^2$ (bottom) are shown.
 		The solid lines correspond to the analysis before the background analysis, which is equivalent %
 		to a weighting factor $W_d = 1$ (see~\refeq{eq:event}).
@@ -756,12 +762,12 @@ for the $\nu e^- e^+$ channel and $|U_{\tau N}|^2 < \np{2.2e-6}$ for the $\nu \m
 
 	%{\resizebox{\linewidth}{!}{\input{pics/sens_T_V.tex}}}
 	{\resizebox{\linewidth}{!}{\input{pics/sensmulti_T_V2_real.tex}}}
-	\caption{The 90\,\% C.L. sensitivity regions to individual channels for dominant mixings %
+	\caption[Sensitivity regions to individual channels for dominant mixings without bakground analysis]%
+		{The 90\,\% C.L. sensitivity regions to individual channels for dominant mixings %
 		$|U_{e N}|^2$ (top left), $|U_{\mu N}|^2$ (top right), and $|U_{\mu N}|^2$ (bottom) are presented for Majorana (solid lines) %
 		and Dirac (dashed lines) neutrinos.
 		No background analysis was performed for the channels shown here (see text).
-		These channels become available only for masses above 0.5\,GeV.
-	}
+		These channels become available only for masses above 0.5\,GeV.  }
 	\label{fig:senseV}
 \end{figure}
 
@@ -791,7 +797,8 @@ $|U_{\tau N}|^2 < \np{1.86e-6}$, $\np{3.24e-6}$, and~$\np{1.60e-6}$.
 
 	%{\resizebox{\linewidth}{!}{\input{pics/sens_TE.tex}}}
 	{\resizebox{\linewidth}{!}{\input{pics/sensmulti_TE2_real.tex}}}
-	\caption{The 90\,\% C.L. sensitivity regions to individual channels for two dominant mixings %
+	\caption[Sensitivity regions to individual channels for two dominant mixings]%
+		{The 90\,\% C.L. sensitivity regions to individual channels for two dominant mixings %
 		$|U_{e N}^* U_{\mu N}|$ (top), $|U_{\mu N}^* U_{\tau N}|$ (middle), and $|U_{e N}^* U_{\tau N}|$ (bottom) are presented.
 		All the modes considered in this work are shown here, but no background analysis is reported.
 		As before, the solid lines correspond to the analysis with Majorana neutrinos, the dashed lines with Dirac neutrino.}
@@ -1005,7 +1012,8 @@ The sensitivity study is conducted for the two scenarios in which either a Major
 	{\resizebox{0.5\linewidth}{!}{\input{pics/DUNE_HNL_T_real.tex}}}
 	%
 	\vspace{-0.2em}
-	\caption{The 90\,\% C.L. sensitivity regions for dominant mixings %
+	\caption[Combined sensitivity for dominant mixings for channels with good discovery prospects]%
+		{The 90\,\% C.L. sensitivity regions for dominant mixings %
 		$|U_{e N}|^2$ (top left), $|U_{\mu N}|^2$ (top right), and $|U_{\tau N}|^2$ (bottom) are presented %
 		combining results for channels with good discovery prospects (see text).
 		The study is performed for Majorana neutrinos (solid) and Dirac neutrinos (dashed), %
@@ -1013,7 +1021,8 @@ The sensitivity study is conducted for the two scenarios in which either a Major
 		The region excluded by experimental constraints (grey) is obtained by combining the results from
 		PS191~\cite{Bernardi:1985ny, Bernardi:1987ek}, %
 		peak searches~\cite{Artamonov:2014urb, Britton:1992pg, Britton:1992xv, Aguilar-Arevalo:2017vlf, Aguilar-Arevalo:2019owf}, %
-		CHARM~\cite{Vilain:1994vg}, NuTeV~\cite{Vaitaitis:1999wq}, DELPHI~\cite{Abreu:1996pa}, and T2K~\cite{Abe:2019kgx}.
+		CHARM~\cite{Vilain:1994vg}, NuTeV~\cite{Vaitaitis:1999wq}, DELPHI~\cite{Abreu:1996pa}, and T2K~\cite{Abe:2019kgx}, %
+		with the lines reinterpreted for Majorana neutrinos (see \refref{Ruchayskiy:2011aa}).
 		The sensitivity for DUNE ND (black) is compared to the predictions of future experiments, %
 		SBN~\cite{Ballett:2016opr} (blue), %
 		SHiP~\cite{Alekhin:2015byh} (red), NA62~\cite{Drewes:2018irr} (green), MATHUSLA~\cite{Curtin:2018mvb} (purple), %
@@ -1077,10 +1086,13 @@ The sensitivity is not high enough to reach type I and Majorana state regions, w
 	%\hspace{-1em}
 	%{\resizebox{0.5\linewidth}{!}{\input{pics/oscUm.tex}}}
 	%
-	\caption{One of the two ISS\,(2,3) realisations considered presents a Majorana state at masses comparable with SBL experiments.
+	\caption[Comparison of ISS(2,3) with short baseline anomalies]%
+		{One of the two ISS\,(2,3) realisations considered presents a Majorana state at masses comparable with SBL experiments.
 		The results of the ISS\,(2,3) simulation (blue dots) for $\Delta m_{4 1}^2$ against combination of mixing angles and %
 		the experimental result at 90\,\% C.L. are shown.
-		$|U_{e 4}|^2$~(left) compared to Super-Kamiokande and IceCube combined~\cite{Dentler:2018sju} and DANSS~\cite{Alekseev:2018efk}, %
+		$|U_{e 4}|^2$~(left) compared to %
+		to DANSS~\cite{Alekseev:2018efk}, NEOS~\cite{Ko:2016owz}, STEREO~\cite{AlmazanMolina:2019qul}, %
+		and Super-Kamiokande and IceCube combined ~\cite{Dentler:2018sju};
 		\mbox{$\sin^2 2\theta{_\mu e} = 4|U_{e 4}|^2|U_{\mu 4}|^2$} (middle) compared to KARMEN2, OPERA and MiniBooNE~\cite{Aguilar-Arevalo:2018gpe},
 		and $|U_{\mu 4}|^2$ (right) compared to a combined $\nu_\mu$ disappearance analysis~\cite{Dentler:2018sju}.
 		Only the points generated by matrices which pass the experimental constraints are shown here.}
@@ -1209,7 +1221,8 @@ SM background can be accounted for by replacing $\sigma \to \sigma + b_\sigma$ a
 	\centering
 	\resizebox{.48\textwidth}{!}{\input{pics/lnvexp_E.tex}}
 	\resizebox{.48\textwidth}{!}{\input{pics/lnvexp_M.tex}}
-	\caption{The regions in which distinction between Majorana and Dirac HNL is %
+	\caption[Sensitivity to distinction between Majorana and Dirac HNL]%
+		{The regions in which distinction between Majorana and Dirac HNL is %
 		possible with 90\,\% C.L. are shown for dominant $|U_{e N}|^2$ (left) and $|U_{\mu N}|^2$ (right).
 		The channels $N \to e^\mp \pi^\pm$ and $\mu^\mp \pi^\pm$ are used, respectively.
 		The dashed line black line assumes 100\,\% charge identification, %

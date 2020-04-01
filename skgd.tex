@@ -144,10 +144,12 @@ the results of a $\nu_\tau$ producing a tau lepton, which decays inside the dete
 \begin{figure}
 	\centering
 	\includegraphics[width=0.50\textwidth]{pics/superk-schematic-tags.png}
+	\hfill
 	\includegraphics[width=0.40\textwidth]{pics/superk-internal.jpeg}
-	\caption{Cut-open view (left) of the Super-Kamiokande detector in Kamioka mine, %
-	       located at the centre of Mt.\ Ikeno.
-	       On the right, a wide-angle picture of the inside of the tank; each golden bulb is a 20'' PMT.}
+	\caption[View of the Super-Kamiokande detector]%
+	{Cut-open view (left) of the Super-Kamiokande detector in Kamioka mine, %
+	located at the centre of Mt.\ Ikeno.
+	On the right, a wide-angle picture of the inside of the tank; each golden bulb is a 20'' PMT.}
 	\label{fig:sk_scheme}
 \end{figure}
 
@@ -175,13 +177,15 @@ Sheets of white tyvek maximise the propagation of photons inside the OD and help
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{pics/Electron.pdf}
-	\includegraphics[width=0.45\textwidth]{pics/Muon.pdf}
-	\caption{Reconstructed fully-contained events in the fiducial volume of Super-Kamiokande.
-		Electron rings (left) are less defined than muon ones (right) because they are scattered more %
-		along their path.
-		The developed cylinders on the top right of each figure show the outer detector hits.
-		The histograms on the bottom right corners are the time distributions of the events.}
+	\includegraphics[width=0.48\textwidth]{pics/Electron.pdf}
+	\hfill
+	\includegraphics[width=0.48\textwidth]{pics/Muon.pdf}
+	\caption[Reconstructed fully-contained events in Super-Kamiokande]%
+	{Reconstructed fully-contained events in the fiducial volume of Super-Kamiokande.
+	Electron rings (left) are less defined than muon ones (right) because they are scattered more %
+	along their path.
+	The developed cylinders on the top right of each figure show the outer detector hits.
+	The histograms on the bottom right corners are the time distributions of the events.}
 	\label{fig:sk_events}
 \end{figure}
 
@@ -373,13 +377,14 @@ might be widened by the Doppler broadening effect.
 \begin{figure}
 	\centering
 	\resizebox{\linewidth}{!}{\input{pics/neutron_xsec.tex}}
-	\caption{Neutron cross-sections on hydrogen (left) and gadolinium (right) as a function of energy from \refref{Brown:2018jhj}. %
-	       The dominant component for \tapi{1}H is elastic scattering, despite neutron capture %
-	       reaches relative high cross-section values for sub-thermal neutrons ($T < 2.5$\,meV).
-	       Fast neutrons interact on \tapi{157}Gd via elastic scattering, but for lower energies %
-	       the main contribution comes from neutron capture cross-section.
-	       The $1/v$ dependency can be appreciated in both cases.
-	       The inset shows a detail of the resonance region of the cross-section, between 10\,eV and 500\,eV.}
+	\caption[Neutron cross-sections on hydrogen and gadolinium-157]%
+	{Neutron cross-sections on hydrogen (left) and gadolinium (right) as a function of energy from \refref{Brown:2018jhj}. %
+	The dominant component for \tapi{1}H is elastic scattering, despite neutron capture %
+	reaches relative high cross-section values for sub-thermal neutrons ($T < 2.5$\,meV).
+	Fast neutrons interact on \tapi{157}Gd via elastic scattering, but for lower energies %
+	the main contribution comes from neutron capture cross-section.
+	The $1/v$ dependency can be appreciated in both cases.
+	The inset shows a detail of the resonance region of the cross-section, between 10\,eV and 500\,eV.}
 	\label{fig:n_xsec}
 \end{figure}
 
@@ -448,21 +453,23 @@ the exact value of which is position dependent.
 These values agree overall with the simulation analysis.
 
 \begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
+	\begin{minipage}[t]{0.49\textwidth}
 		\centering
 		\resizebox{\textwidth}{!}{\input{pics/source_spectrum.tex}}
-		\caption{Normalised energy distribution of neutrons emitted by an AmBe source~\cite{PMID:4744412} %
-			and neutrons and photons from the spontaneous fission of a %
-			\tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.}
+		\captionof{figure}[Normalised energy distribution of AmBe and \tapi{252}Cf sources]%
+		{Normalised energy distribution of neutrons emitted by an AmBe source~\cite{PMID:4744412} %
+		and neutrons and photons from the spontaneous fission of a %
+		\tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.}
 		\label{fig:spectra}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
+	\begin{minipage}[t]{0.49\textwidth}
 		\centering
 		\resizebox{\textwidth}{!}{\input{pics/QE.tex}}
-		\captionof{figure}{Distributions showing PMT quantum efficiency (red), the scintillator yield (blue), %
-			their correlation (magenta), and the photons collected by the PMT in the GEANT4 %
-			simulation of optical photons (black).}
+		\captionof{figure}[Distribution of optical photons from the simulation of a neutron calibration device]{%
+		Distributions showing PMT quantum efficiency (red), the scintillator yield (blue), %
+		their correlation (magenta), and the photons collected by the PMT in the GEANT4 %
+		simulation of optical photons (black).}
 		\label{fig:QE}
 	\end{minipage}
 \end{figure}
@@ -515,17 +522,19 @@ The SF tagging efficiency with this setup is therefore estimated to be around~41
 		\centering
 		\includegraphics[width=0.48\linewidth]{pics/device.png}
 		\raisebox{2.8em}{\includegraphics[width=0.48\linewidth]{pics/device_in.png}}
-		\captionof{figure}{Setup used to test the californium source.
-			The plastic scintillator cylinder is encased in an aluminium structure %
-			connected to the PMT support (black).
-			The scintillator is optically coupled to the PMT.}
+		\captionof{figure}[Setup used to test a californium source]%
+		{Setup used to test the californium source.
+		The plastic scintillator cylinder is encased in an aluminium structure %
+		connected to the PMT support (black).
+		The scintillator is optically coupled to the PMT.}
 		\label{fig:setup}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.45\textwidth}
 		\centering
 		\resizebox{\textwidth}{!}{\input{pics/peaksources.tex}}
-		\captionof{figure}{Distribution of PMT peaks measured with source inside (black) and source removed from the scintillator~(red).}
+		\captionof{figure}[Distribution of PMT peaks measured with a californium source]%
+		{Distribution of PMT peaks measured with source inside (black) and source removed from the scintillator~(red).}
 		\label{fig:source}
 	\end{minipage}
 \end{figure}
@@ -560,15 +569,16 @@ Further R\&D is in place to build an optimal device for neutron calibration.
 
 \begin{figure}
 	\centering
-	\resizebox{0.9\textwidth}{!}{\input{pics/n_vs_gamma_2.tex}}
-	\caption{Result of the GEANT4 simulation (points), showing the performance of different scintillators.
-		The lines are a smooth inerpolation between simulation points.
-		The fraction of absorbed energy per initial energy of neutrons (solid) and photons (dashed) %
-		is averaged and plotted against the scintillator size.
-		Three shapes are tested: a cube (green), a cylinder with diameter-height-ratio of 1:1 (blue), %
-		and a cylinder with ratio 1:2 (red).
-		On the left, the scintillating material is BGO crystal; on the right, %
-		a generic vinyltouluene plastic is used.}
+	\resizebox{\textwidth}{!}{\input{pics/n_vs_gamma_2.tex}}
+	\caption[Performance of different scintillators from the simulation of a neutron calibration device]%
+	{Result of the GEANT4 simulation (points), showing the performance of different scintillators.
+	The lines are a smooth inerpolation between simulation points.
+	The fraction of absorbed energy per initial energy of neutrons (solid) and photons (dashed) %
+	is averaged and plotted against the scintillator size.
+	Three shapes are tested: a cube (green), a cylinder with diameter-height-ratio of 1:1 (blue), %
+	and a cylinder with ratio 1:2 (red).
+	On the left, the scintillating material is BGO crystal; on the right, %
+	a generic vinyltouluene plastic is used.}
 	\label{fig:geant4}
 \end{figure}
 
@@ -671,36 +681,26 @@ estimated efficiency of 90\,\%~\cite{Beacom:2003nk} for a 0.2\,\% Gd solution (s
 \begin{figure}
 	\begin{minipage}[t]{0.48\textwidth}
 		\centering
-		\resizebox{0.9\linewidth}{!}{\input{pics/gdconcentration.tex}}
-		\captionof{figure}{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
-			concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
-			increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
+		\resizebox{\linewidth}{!}{\input{pics/gdconcentration.tex}}
+		\captionof{figure}[Dependency of neutron capture efficiency with respect to gadolinium concentration]%
+		{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
+		concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
+		increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
 		\label{fig:gd_conc}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{pics/bandpass.pdf}
-		\captionof{figure}{Schematic of the band-pass filtration system and the fast recirculation loop, %
-			where the main components of the system are highlighted: anion-exchange resins (AE), %
-			ultraviolet lamp (UV), total organic compound lamp (TOC), de-ionising system (DI), %
-			reverse osmosis stage (RO). See text and \refref{Ikeda:2019pcm} for details. }
+		\raisebox{0.8em}{\includegraphics[width=\linewidth]{pics/bandpass.pdf}}
+		\captionof{figure}[Schematic of the band-pass filtration system and the fast recirculation loop in EGADS]%
+		{Schematic of the band-pass filtration system and the fast recirculation loop in EGADS, %
+		where the main components of the system are highlighted: anion-exchange resins (AE), %
+		ultraviolet lamp (UV), total organic compound lamp (TOC), de-ionising system (DI), %
+		reverse osmosis stage (RO). See text and \refref{Ikeda:2019pcm} for details. }
 		\label{fig:egads}
 	\end{minipage}
 \end{figure}
 %\fi
-
-\iffalse
-\begin{figure}
-	\centering
-	\resizebox{0.5\linewidth}{!}{\input{pics/gdconcentration.tex}}
-	\includegraphics[width=0.45\textwidth]{pics/bandpass.pdf}
-	\caption{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
-		concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
-		increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
-	\label{fig:gd_conc}
-\end{figure}
-\fi
 
 
 In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound %
@@ -836,15 +836,16 @@ The Beer-Lambert law agrees with the expectation of decreasing attenuation lengt
 
 \begin{figure}
 	\centering
-	\resizebox{0.45\linewidth}{!}{\input{pics/shimadzu_20.tex}}
-	\resizebox{0.45\linewidth}{!}{\input{pics/hdxabs.tex}}
-	\caption{Gadolinium absorption spectrum between 270\,nm and 280\,nm.
-		On the left, the spectrum is taken with a high-resolution integrated spectrophotometer %
-		Shimadzu UV-2600, revealing numerous peaks in the region of interest for an aqueous solution %
-		of 0.2\,\% gadolinium sulphate.
-		On the right, the spectrum is recorded with a fast spectrometer Ocean HDX, varying the concentration 
-		from 0.2\,\% down to 0.02\,\%: the height of the peaks scales linearly with the concentration.
-		In both figures, the absorbance is normalised to the length of the sample.}
+	\resizebox{0.49\linewidth}{!}{\input{pics/shimadzu_20.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/hdxabs.tex}}
+	\caption[Gadolinium absorption spectra]%
+	{Gadolinium absorption spectra between 270\,nm and 280\,nm.
+	On the left, the spectrum is taken with a high-resolution integrated spectrophotometer %
+	Shimadzu UV-2600, revealing numerous peaks in the region of interest for an aqueous solution %
+	of 0.2\,\% gadolinium sulphate.
+	On the right, the spectrum is recorded with a fast spectrometer Ocean HDX, varying the concentration 
+	from 0.2\,\% down to 0.02\,\%: the height of the peaks scales linearly with the concentration.
+	In both figures, the absorbance is normalised to the length of the sample.}
 	\label{fig:gad_lines}
 \end{figure}
 
@@ -888,26 +889,26 @@ The drawback of this method is that two measurements are needed at the two wavel
 and therefore the error on the measurement will increase by a factor $\sim\sqrt{2}$.
 
 \begin{figure}
-	\begin{minipage}[t]{0.44\textwidth}
-		\centering
-		\raisebox{1.5em}{\resizebox{\linewidth}{!}{\input{pics/abs_example.tex}}}
-		\captionof{figure}{Gadolinium absorption measurement taken with the Ocean HDX spectrometer and a 10\,cm water sample.
-			The profile of the UV LED is shown when pure water (blue) and Gd-loaded water (black) are used.
-			The absorbance (red) is then extracted from the two intensity measurement.}
-		\label{fig:uv_led}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.54\textwidth}
-		\centering
-		\resizebox{\textwidth}{!}{\input{pics/gad_10cm.tex}}
-		\captionof{figure}{The inverse linear fit (red) between concentration and absorption is shown together with data (blue) %
-			on the top panel. The absolute values of the errors are roughly constant with the concentration, %
-			as it is mostly dominated by the uncertainties on the linear fit.
-			The relative error (bottom panel) therefore increases with lower concentrations.
-			The rightmost point corresponds to a 0.2\,\% concentration, the relative error %
-			of which is around 3\,\%.}
-		\label{fig:gad_10cm}
-	\end{minipage}
+	\centering
+	\resizebox{0.7\linewidth}{!}{\input{pics/abs_example.tex}}
+	\caption[Ocean HDX spectra with a 10\,cm water sample]%
+		{Gadolinium absorption measurement taken with the Ocean HDX spectrometer and a 10\,cm water sample.
+		The profile of the UV LED is shown when pure water (blue) and Gd-loaded water (black) are used.
+		The absorbance (red) is then extracted from the two intensity measurement.}
+	\label{fig:uv_led}
+\end{figure}
+\begin{figure}
+	\centering
+	\resizebox{0.8\textwidth}{!}{\input{pics/gad_10cm.tex}}
+	\caption[Linear fit between Gd concentration and absorption with a 10\,cm water sample]%
+		{The inverse linear fit (red) between concentration and absorption for a 10\,cm water sample %
+		is shown together with data (blue) on the top panel.
+		The absolute values of the errors are roughly constant with the concentration, %
+		as it is mostly dominated by the uncertainties on the linear fit.
+		The relative error (bottom panel) therefore increases with lower concentrations.
+		The rightmost point corresponds to a 0.2\,\% concentration, the relative error %
+		of which is around~3\,\%.}
+	\label{fig:gad_10cm}
 \end{figure}
 
 The concept of tracking gadolinium concentration in water using absorbance spectrum %
@@ -937,7 +938,8 @@ The profile is reported in \reffig{fig:gad_10cm}.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{pics/Device.pdf}
-	\caption{Schematic of the device used for testing the 100\,cm water sample in laboratory.
+	\caption[Schematic of the device used for testing the 100\,cm water sample]%
+		{Schematic of the device used for testing the 100\,cm water sample in laboratory.
 		The diaphragm pump circulates the water in the cell and interfaces the device with the main water system.
 		During the test, the pump was leaving a considerable amount of micro-bubbles in the sample.
 		Waiting 15 minutes between measurement was found to be sufficient to restore the intensity of the light at %
@@ -973,7 +975,8 @@ This method based on a 10\,cm performs similarly to the AAS spectrometry employe
 \begin{figure}
 	\centering
 	\resizebox{\linewidth}{!}{\input{pics/polyfit.tex}}
-	\caption{Gadolinium absorption lines (right) taken with the automated device on the 100\,cm water sample.
+	\caption[Gadolinium absorption spectrum of the 100\,cm water sample]%
+		{Gadolinium absorption lines (right) taken with the automated device on the 100\,cm water sample.
 		The baseline of the absorption spectrum appears to be changing with the concentration.
 		This could be due to some contaminant in the Gd-enriched water, which is diluted with pure water %
 		at each step.
@@ -1007,7 +1010,8 @@ with the absorbance.
 \begin{figure}
 	\centering
 	\resizebox{0.9\textwidth}{!}{\input{pics/gad_1m.tex}}
-	\caption{The inverse linear fit (red) between concentration and absorption %
+	\caption[Linear fit between Gd concentration and absorption with a 100\,cm water sample]%
+		{The inverse linear fit (red) between concentration and absorption %
 		is shown together with data (blue) on the top panel for the 100\,cm water sample.
 		The error bars on the top panel are enlarged by a factor of 20.
 		The linear fit is done only with the six leftmost points, %

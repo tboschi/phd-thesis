@@ -396,10 +396,10 @@ The heavy neutrino decay rates and polarised distributions necessary for studies
 The calculation can be simplified by noting the following equivalences.
 A Majorana neutrino $N$ decaying via a charged current process has the same differential %
 decay rate as the Dirac neutrino $N_D$ with the appropriate lepton number, 
-\begin{equation}
-	\dd{\Gamma}(N\to \ell_\alpha^- X^+) = \dd{\Gamma}(N_D\to \ell_\alpha^- X^+) \quad\text{and}\quad
+\begin{align}
+	\dd{\Gamma}(N\to \ell_\alpha^- X^+) = \dd{\Gamma}(N_D\to \ell_\alpha^- X^+)\ , \\
 	\dd{\Gamma}(N\to \ell_\alpha^+ X^-) = \dd{\Gamma}(\cj{N}_D\to \ell_\alpha^+ X^-)\ ,
-\end{equation}
+\end{align}
 where identical mass and mixing angles for both Dirac and Majorana neutrinos are taken. 
 This equivalence can be seen directly from the Feynman rules for Dirac and Majorana fermions~\cite{Denner:1992me,Abada:2016plb}, %
 but also explicitly in the formulae below.
@@ -432,6 +432,11 @@ This is, however, only true for the total decay rates with massless final-state 
 \begin{table}
 	\small
 	\centering
+	\caption[Available channels for HNL decay with a mass below $D_s^\pm$]%
+	{All the available channels for a HNL with a mass below the $D_s^\pm$ mass are listed above, %
+		sorted by threshold mass.
+		The active neutrino is considered massless, when compared to the masses of the other particles.}
+	\label{tab:decays}
 	\raisebox{0.6em}{
 	\begin{tabular}{lr}
 		\toprule                                    
@@ -476,10 +481,6 @@ This is, however, only true for the total decay rates with massless final-state 
 		$\tau^\mp \pi^\pm$	& \np{1870}\,MeV	\\
 		\bottomrule
 	\end{tabular}}
-	\caption{All the available channels for a HNL with a mass below the $D_s^\pm$ mass are listed above, %
-		sorted by threshold mass.
-		The active neutrino is considered massless, when compared to the masses of the other particles.}
-	\label{tab:decays}
 \end{table}
 
 It is instructive to reconsider this result in the light of the %
@@ -514,7 +515,8 @@ final state observables and subsequently when developing an analysis to tackle b
 \begin{figure}
 	\centering
 	\resizebox{\textwidth}{!}{\input{pics/multiBranch.tex}}
-	\caption{The branching ratios for HNL decays, integrated over the angular variables, are shown above %
+	\caption[Branching ratios for HNL decays integrated over the angular variables]%
+		{The branching ratios for HNL decays, integrated over the angular variables, are shown above %
 		as functions of the mass.
 		They are grouped in CC-mediated decays (left) and NC-mediated decays (right), in the range from \np{0.01}\,MeV up to %
 		the maximum mass limit for neutrino production, near 2\,GeV. 
@@ -667,9 +669,10 @@ The polarised differential distributions in the heavy neutrino rest frame are
 	\frac{G_\text{F}^2f_{V}^2\kappa_V^2m_N^3}{16\pi}\ \frac{I_2 \qty(0, \xi^2_V)}{4\pi}\label{eq:M_decay_vector_0}\ ,
 \end{align}
 where
-\begin{equation}
-	I^\pm_2 (x, y;\theta) = \frac{1}{4\pi}\kallen(1, x, y) \qty[(1+x-y)\,(1+x+2y)-4x \pm (x+2y-1)\kallen(1, x, y) \cos\theta]\ 
-\end{equation}
+\begin{align}
+	I^\pm_2 (x, y;\theta) = \frac{1}{4\pi}\kallen(1, x, y) \Big[&(1+x-y)\,(1+x+2y)-4x \notag \\ %
+								&\pm (x+2y-1)\kallen(1, x, y) \cos\theta\Big]
+\end{align}
 and
 \begin{equation}
 	I_2 (x, y) = \kallen(1, x, y)\, \qty[(1+x-y)(1+x+2y)-4x]\ ,
@@ -796,10 +799,12 @@ integration over the phase space
 	\frac{\dd{s}}{s}(1+x-s)\kallen(s,y,z)\kallen(1,s,x)\ .
 \end{align}
 Thus, the general expression for the total decay rate is again helicity independent and can be written as
-\begin{equation}
-	\Gamma_\pm(N \to \nu \ell_\alpha^- \ell_\beta^+) = \frac{G_F^2 m_N^5}{192 \pi^3}\,\qty[ C_1\ I_1\qty(0,\xi_3^2,\xi_4^2) + %
-	C_2\ I_1\qty(0,\xi_4^2,\xi_3^2) + C_3\ I_2\qty(0,\xi_3^2,\xi_4^2) ]\ .
-\end{equation}
+\begin{align}
+	\Gamma_\pm(N \to \nu \ell_\alpha^- \ell_\beta^+) = %
+	\frac{G_F^2 m_N^5}{192 \pi^3}\,\Big[ &C_1\ I_1\qty(0,\xi_3^2,\xi_4^2) + %
+	C_2\ I_1\qty(0,\xi_4^2,\xi_3^2) \notag \\ %
+	&+ C_3\ I_2\qty(0,\xi_3^2,\xi_4^2) \Big]\ .
+\end{align}
 Using the expressions for $C_i$ of \refeq{eq:lepton_coefficient} the total decay rates are given %
 to first order in the heavy-active mixing parameters $U_{\alpha N}$ by
 \begin{align}
@@ -941,13 +946,13 @@ in the way shown by the following differential rates
 \begin{align}
 	%
 	\dv{\Gamma_\pm}{\Omega_P} \qty(N_D \to \nu P^0) &= %
-	\dv{\Gamma_\mp}{\Omega_P} \qty(\cj{N}_D \to \cj{\nu} P^0) = %
-	\left(\sum_{\alpha=e}^\tau| U_{\alpha N}|^2\right)\frac{G_\text{F}^2f_{P^0}^2m_N^3}{32\pi} %
+	\dv{\Gamma_\mp}{\Omega_P} \qty(\cj{N}_D \to \cj{\nu} P^0) \notag \\ %
+	&= \left(\sum_{\alpha=e}^\tau| U_{\alpha N}|^2\right)\frac{G_\text{F}^2f_{P^0}^2m_N^3}{32\pi} %
 	\ I_1^\pm \qty(0, \xi_P^2; \theta_P)\ ,\\
 	%  
 	\dv{\Gamma_\pm}{\Omega_V} \qty(N_D \to \nu V^0) &= %
-	\dv{\Gamma_\mp}{\Omega_V} \qty(\cj{N}_D \to \cj{\nu} V^0) = %
-	\left(\sum_{\alpha=e}^\tau| U_{\alpha N}|^2\right)\frac{G_\text{F}^2f_{V}^2\kappa_V^2m_N^3}{32\pi} %
+	\dv{\Gamma_\mp}{\Omega_V} \qty(\cj{N}_D \to \cj{\nu} V^0) \notag \\ %
+	&= \left(\sum_{\alpha=e}^\tau| U_{\alpha N}|^2\right)\frac{G_\text{F}^2f_{V}^2\kappa_V^2m_N^3}{32\pi} %
 	\ I^\mp_2 \qty(0, \xi_V^2;\theta_V)\ .
 	%
 \end{align}
@@ -989,7 +994,7 @@ The total decay rates are found to be
 	\Gamma_\pm\qty(N_D \to \nu \ell_\alpha^- \ell_\alpha^+) &= %
 	\frac{G_F^2 m_N^5}{192\pi^3} \sum_{\gamma=e}^\tau |U_{\gamma N}|^2 %
 	\Big\{\qty(g_L g_R + \delta_{\gamma \alpha} g_R)\ I_2 \qty(0, \xi_\alpha^2, \xi_\alpha^2) \notag \\
-	&\hspace{8em}+ \qty[g_L^2 + g_R^2 + \delta_{\gamma \alpha} \qty(1+2g_L)] %
+	&\hspace{5em}+ \qty[g_L^2 + g_R^2 + \delta_{\gamma \alpha} \qty(1+2g_L)] %
 	\ I_1 \qty(0, \xi_\alpha^2, \xi_\alpha^2)\Big\}\ ,\\ 
 	%
 	\Gamma_\pm\qty(\cj{N}_D \to \cj{\nu} \ell_\alpha^- \ell_\alpha^+) &= %
@@ -1077,6 +1082,14 @@ These are responsible for correcting phase space and helicity terms.
 %{\color{blue} I changed X and Y to Q and Q' as we have used X and Y earlier to indicate the decay products of the heavy neutrinos.}
 
 \begin{table}[t]
+	\caption[Production channels at beam dump facilities yielding neutrinos]%
+		{Production channels at beam dump facilities yielding neutrinos, with the respective branching %
+		ratios (taken from \refref{Tanabashi:2018oca}).
+		The last column shows the maximum neutrino mass allowed if a massive state is produced.
+		On the left, all the decays yielding $\nu_e$, $\nu_\mu$, and $\cj{\nu}_\mu$ up to the $K^0$ mass are shown.
+		On the right, the neutrino sources which depends on the $D_s^+$ decay chain are shown; only the first four %
+		decays of the $\tau$ lepton are considered in this work. }
+	\label{tab:branch}
 	\small
 	\centering
 	\begin{tabular}{clrr}
@@ -1112,13 +1125,6 @@ These are responsible for correcting phase space and helicity terms.
 		& $\pi^+ \cj{\nu}_\tau$ 	& \np{10.82}	& \np{1637.29}	\\
 		\bottomrule
 	\end{tabular}
-	\caption{Production channels at beam dump facilities yielding neutrinos, with the respective branching %
-		ratios (taken from \refref{Tanabashi:2018oca}).
-		The last column shows the maximum neutrino mass allowed if a massive state is produced.
-		On the left, all the decays yielding $\nu_e$, $\nu_\mu$, and $\cj{\nu}_\mu$ up to the $K^0$ mass are shown.
-		On the right, the neutrino sources which depends on the $D_s^+$ decay chain are shown; only the first four %
-		decays of the $\tau$ lepton are considered in this work. }
-	\label{tab:branch}
 \end{table}
 
 The helicity state plays a fundamental role in the production rate, in contrast with the case of neutrino decays, %
@@ -1161,9 +1167,10 @@ as it happens with the electron decay of $D_s$, the enhancement of which is arou
 \begin{figure}
 	\centering
 	{\resizebox{0.5\linewidth}{!}{\input{pics/multiRatio.tex}}}
-	\hspace{-1.1em}
+	\hspace{-1em}
 	{\resizebox{0.5\linewidth}{!}{\input{pics/multiHelix.tex}}}
-	\caption{On the left, the factors $\mathcal{S}^-$ (solid) and $\mathcal{S}^+$ (dashed) %
+	\caption[Helicity factors for production of HNL]%
+		{On the left, the factors $\mathcal{S}^-$ (solid) and $\mathcal{S}^+$ (dashed) %
 		from \refeq{eq:scale_ratio} are shown.
 		When the mass approaches to zero, the percentage of neutrinos produced %
 		with negative helicity tends to 100\,\%.
@@ -1176,24 +1183,24 @@ as it happens with the electron decay of $D_s$, the enhancement of which is arou
 %\clearpage
 The scale factor $\mathcal{K}_h$ for leptonic decays of a pseudo-scalar meson $P$ into neutrinos with helicity $h$, 
 is given by the following analytic expression:
-\begin{equation}
+\begin{align}
+	\mathcal{K}_\pm^{P, \alpha}(m_N) = |U_{\alpha N}|^2 & %
+	\ \frac{\kallen(1,\ \xi_N^2,\ \xi_{\ell_\alpha}^2)}{2 \xi_{\ell_\alpha}^2(1-\xi_{\ell_\alpha}^2)^2} \notag \\
 	\label{eq:shrock_helix}
-	\mathcal{K}_\pm^{P, \alpha}(m_N) = |U_{\alpha N}|^2 %
-	\frac{\kallen(1,\ \xi_N^2,\ \xi_{\ell_\alpha}^2) \qty[\xi_{\ell_\alpha}^2+\xi_N^2-(\xi_N^2-\xi_{\ell_\alpha}^2)^2 %
-		\pm(\xi_N^2-\xi_{\ell_\alpha}^2) \kallen(1,\ \xi_N^2,\ \xi_{\ell_\alpha}^2) ] }%
-	{2 \xi_{\ell_\alpha}^2(1-\xi_{\ell_\alpha}^2)^2}\ ,
-\end{equation}
+	&\times \qty[\xi_{\ell_\alpha}^2+\xi_N^2-(\xi_N^2-\xi_{\ell_\alpha}^2)^2 %
+		\pm(\xi_N^2-\xi_{\ell_\alpha}^2) \kallen(1,\ \xi_N^2,\ \xi_{\ell_\alpha}^2) ] \ , 
+\end{align}
 where $\lambda$ is the K\"all\'en function
 \begin{equation}
 	\lambda(a, b, c) = (a-b-c)^2-4\,b\,c\ ,
 \end{equation}
 and $\xi_i = \flatfrac{m_i}{m_X}$ is the mass ratio of the final state particle $i$ over the parent particle mass.
 When summing over the helicity states, the resulting factor coincides with the one computed in~\refref{Shrock:1981wq},
-\begin{equation}
-	\mathcal{K}^{P, \alpha}(m_N) = \sum_{h = \pm 1} \mathcal{K}_h^{P, \alpha}(m_N) = |U_{\alpha N}|^2 %
-	\frac{\kallen(1,\ \xi_N^2,\ \xi_{\ell_\alpha}^2) \qty[\xi_{\ell_\alpha}^2+\xi_N^2-(\xi_N^2-\xi_{\ell_\alpha}^2)^2]}%
-	{\xi_\alpha^2(1-\xi_{\ell_\alpha}^2)^2}\ .
-\end{equation}
+\begin{align}
+	\mathcal{K}^{P, \alpha}(m_N) = \sum_{h = \pm 1} \mathcal{K}_h^{P, \alpha}(m_N) = |U_{\alpha N}|^2 &\  %
+	\frac{\kallen(1,\ \xi_N^2,\ \xi_{\ell_\alpha}^2)}{\xi_\alpha^2(1-\xi_{\ell_\alpha}^2)^2} \notag \\
+ 		&\times \qty[\xi_{\ell_\alpha}^2+\xi_N^2-(\xi_N^2-\xi_{\ell_\alpha}^2)^2]\ .
+\end{align}
 In order to understand the effect of~\refeq{eq:shrock_helix}, it is convenient to define the fraction of neutrinos produced with a certain helicity as
 \begin{equation}
 	\label{eq:scale_ratio}
@@ -1209,7 +1216,8 @@ The behaviour of the ratio $\mathcal{S}^\pm$ is shown in \reffig{fig:helix}.
 \begin{figure}[t]
 	\centering
 	{\resizebox{\linewidth}{!}{\input{pics/multiScale_2.tex}}}
-	\caption{The scale factors separated by helicity components are shown.
+	\caption[Scale factors for production of HNL]%
+		{The scale factors separated by helicity components are shown.
 		In two-body decays (left), the $h=-1$ components (dashed) for all channels %
 		do not depend on the mass.
 		The enhancement is driven by the $h=+1$ components (dotted), %
@@ -1225,12 +1233,12 @@ The behaviour of the ratio $\mathcal{S}^\pm$ is shown in \reffig{fig:helix}.
 \end{figure}
 
 The only two-body decay of a lepton considered in this work is $\tau \to \nu_\tau \pi$, whose scale factor is
-\begin{equation}
-	\mathcal{K}_\pm^{\tau, \pi}(m_N) = |U_{\tau N}|^2 %
-	\frac{\kallen(1,\ \xi_N^2,\ \xi_\pi^2) \qty[(1-\xi_N^2)^2 + \xi_\pi^2(1+\xi_N^2) \mp %
-		(1 - \xi_N^2) \kallen(1,\ \xi_N^2,\ \xi_\pi^2) ] }%
-	{2 (1-\xi_\pi^2)^2}\ .
-\end{equation}
+\begin{align}
+	\mathcal{K}_\pm^{\tau, \pi}(m_N) = |U_{\tau N}|^2 &\  %
+	\frac{\kallen(1,\ \xi_N^2,\ \xi_\pi^2)}{2 (1-\xi_\pi^2)^2} \notag \\
+		&\times \qty[(1-\xi_N^2)^2 + \xi_\pi^2(1+\xi_N^2) \mp %
+		(1 - \xi_N^2) \kallen(1,\ \xi_N^2,\ \xi_\pi^2) ] \ .
+\end{align}
 The structure is similar to the scale factor for pseudo-scalar meson two-body decays, given in~\refeq{eq:shrock_helix}, %
 and analogous considerations as above can be deduced.
 This is explained by crossing symmetries, as the matrix element of the process is the same.
@@ -1310,7 +1318,8 @@ The combinations $F$ and $G$ are
 \begin{align}
 	F &= 2\ f_+^{(h,h')}(u) = f_+^{(h,h')}(0)%
 	\qty(1 + \lambda^{(h,h')}_+ \frac{u}{x})\ , \\
-	G &= f_+^{(h,h')}(u) - f_-^{(h,h')}(u) = f_+^{(h,h')}(0)%
+	G &= f_+^{(h,h')}(u) - f_-^{(h,h')}(u) \notag \\
+	 &= f_+^{(h,h')}(0)%
 	\qty[1 + \lambda^{(h,h')}_+ \frac{u}{x} - %
 	\qty(\lambda^{(h,h')}_+ - \lambda^{(h,h')}_0) \qty( 1 + \frac{1}{x})]\ ,
 \end{align}

@@ -233,10 +233,11 @@ and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron den
 
 \begin{figure}
 	\centering
-	\resizebox{0.45\linewidth}{!}{\input{pics/base_ball.tex}}
+	\resizebox{0.46\linewidth}{!}{\input{pics/base_ball.tex}}
 	\hfill
-	\raisebox{2em}{\resizebox{0.50\linewidth}{!}{\input{pics/norm_asymm.tex}}}
-	\caption{Effect of $\delta_\text{CP}$ on the oscillation probability.
+	\raisebox{2em}{\resizebox{0.52\linewidth}{!}{\input{pics/norm_asymm.tex}}}
+	\caption[Effect of $\delta_\text{CP}$ on the oscillation probability]%
+		{Effect of $\delta_\text{CP}$ on the oscillation probability.
 		The oscillation probabilities for neutrinos and antineutrinos are plotted %
 		against each other (left), while the CP phase is varied between $-\pi$ and $\pi$.
 		The effect of $\sin^2\theta_{23}$ is also emphasised.
@@ -270,7 +271,7 @@ will constrain the value of $\delta_\text{CP}$.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{pics/hkonlytank.png}
-	\caption{Cut-views of the Hyper-Kamiokande experiment.}
+	\caption[Views of the Hyper-Kamiokande experiment]{Cut-views of the Hyper-Kamiokande experiment.}
 	\label{fig:hkdr}
 \end{figure}
 
@@ -347,13 +348,15 @@ To this end, a fitting framework capable of performing a simultaneous study of b
 \subsection{Event samples}
 \label{sec:event_samples}
 
-\begin{table}
+\begin{table}[t]
 	\centering
-	\caption{The sample events for atmospheric data are used to build 2D distributions in $\log p$ and $\cos\theta$.
+	\caption[Sample events for atmospheric data]%
+		{The sample events for atmospheric data are used to build 2D distributions in $\log p$ and $\cos\theta$.
 		The number of bins in each direction is listed and they sum up to 2224.
 		The samples are categorised as fully-contained sub-GeV (FC sub-GeV), %
 		fully-contained multi-GeV (FC multi-GeV), partially-contained (PC) and upward-going muons (UP-$\mu$).}
 	\label{tab:atmo_samples}
+	\small
 	\begin{tabular}{llcc}
 		\toprule
 		Event type	&	Sample	&	Bins $\log p$	& Bins $\cos\theta$  \\
@@ -414,7 +417,11 @@ The one ring $e$-like with one electron decay sample is not considered in this s
 \begin{table}
 	\small
 	\centering
-	\caption{Oscillation space.}
+	\caption[Parameter space used in the oscillation analysis]%
+		{The parameter space used in the oscillation analysis is shown here.
+		It spans over the four parameters $\Delta m_{23}^2$, $\sin^2 2\theta_{13}$, %
+		$\sin^2 \theta_{23}$, and $\delta_\text{CP}$ arond the nominal values from Asimov A (see text).
+		The range and number of points scanned is also reported.}
 	\label{tab:asimovA}
 	\begin{tabular}{cccc}
 		\toprule
@@ -471,8 +478,10 @@ Let us define the likelihood
 	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} E_n^{O_n}}{O_n!}\ ,
 \end{equation}
 where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin, %
-which are built using a combination of oscillation parameters %
-$\Theta = (\Delta m^2_{32}, \sin^2 2\theta_{13}, \sin^2 \theta_{23}, \delta_\text{CP})$.
+which are built using a combination of oscillation parameters 
+\begin{equation}
+	\Theta = (\Delta m^2_{32}, \sin^2 2\theta_{13}, \sin^2 \theta_{23}, \delta_\text{CP})\ .
+\end{equation}
 The expected events are defined by a prediction of events at the far detector weighted by the oscillation probabilities %
 for parameters $\Theta$, and since there is no real data yet the ``observed'' events are also given by %
 a prediction at the \emph{true} oscillation point $\Theta_\text{true}$.
@@ -496,12 +505,12 @@ The $\chi^2$ becomes the following
 %	&= \overset{\text{obs}}{2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + O_n \log \qty(\frac{E_n(1+\sum_j f_j^n \varepsilon_j)}{O_n})]} + %
 %	\overset{\text{\shortstack{syst\\ \hphantom{.}}}}{\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j}\ ,
 %\end{align}
-\begin{equation}
+\begin{align}
+	\chi^2(\Theta;\uj{\varepsilon})  =&\ 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
+		O_n \log \qty(\frac{O_n}{E_n(1+\sum_j f_j^n \varepsilon_j)})] \notag \\
 	\label{eq:chi2}
-	\chi^2(\Theta;\uj{\varepsilon})  = 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
-		O_n \log \qty(\frac{O_n}{E_n(1+\sum_j f_j^n \varepsilon_j)})] + %
-		\sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ ,
-\end{equation}
+		&+ \sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ ,
+\end{align}
 where $\rho^{-1}$ is the inverse of the correlation matrix of the systematic errors.
 The effect of the systematic uncertainties on the event distributions are embedded in the $f_j^n$ parameters, %
 defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic.
@@ -581,11 +590,12 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 
 \begin{figure}[t]
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_app_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_app_rhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_app_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_app_rhc.tex}}
-	\caption{The predicted distribution of one ring $e$-like events with respect to reconstructed energy at HK %
+	\resizebox{0.49\linewidth}{!}{\input{pics/hkdr_app_fhc.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/hkdr_app_rhc.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/asim_app_fhc.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/asim_app_rhc.tex}}
+	\caption[Predicted distribution of one ring $e$-like events]%
+		{The predicted distribution of one ring $e$-like events with respect to reconstructed energy at HK %
 		are shown here for $\nu$-mode (left) and $\cj{\nu}$-mode.
 		The appearance signals $\nu_\mu \to \nu_e$ and $\cj{\nu}_\mu \to \cj{\nu}_e$ are compared to the %
 		background events.
@@ -598,11 +608,12 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 
 \begin{figure}[t]
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_dis_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/hkdr_dis_rhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_dis_fhc.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/asim_dis_rhc.tex}}
-	\caption{The predicted distribution of one ring $\mu$-like events with respect to reconstructed energy at HK %
+	\resizebox{0.49\linewidth}{!}{\input{pics/hkdr_dis_fhc.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/hkdr_dis_rhc.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/asim_dis_fhc.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/asim_dis_rhc.tex}}
+	\caption[Predicted distribution of one ring $\mu$-like events]%
+		{The predicted distribution of one ring $\mu$-like events with respect to reconstructed energy at HK %
 		are shown here for $\nu$-mode (left) and $\cj{\nu}$-mode.
 		The disappearance events $\nu_\mu \to \nu_\mu$ and $\cj{\nu}_\mu \to \cj{\nu}_\mu$ %
 		are compared to the small contributions from electron neutrinos.
@@ -677,15 +688,16 @@ On the other hand, different values of correlated systematics do not degrade the
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys0.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys0.tex}}
 	\hfill
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys0.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys0.tex}}
 
 	\medskip
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys1.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_E_FHC_sys1.tex}}
 	\hfill
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys1.tex}}
-	\caption{Prediction of events at the far detector for the one ring $e$-like sample in %
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_E_RHC_sys1.tex}}
+	\caption[Prediction of events with a simplified systematic model]%
+		{Prediction of events at the far detector for the one ring $e$-like sample in %
 		$\nu$-mode (left) and $\cj{\nu}$-mode (right).
 		The $\nu_e$ (top) and $\cj{\nu}_e$ (bottom) CC cross-section systematics are varied to reach relative errors %
 		between 1\,\% and 5\,\%.
@@ -697,13 +709,14 @@ On the other hand, different values of correlated systematics do not degrade the
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S23.tex}}
-	\caption{The top panels of each figure show the $\chi^2$ profile for %
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_corr_chi2_M23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_anti_chi2_M23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S13.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S13.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_corr_chi2_S23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_anti_chi2_S23.tex}}
+	\caption[$\chi^2$ profiles for $\Delta m_{32}^2$, $\sin^2 2\theta_{13}$, and $\sin\theta_{23}$ with a simplified systematic model]%
+		{The top panels of each figure show the $\chi^2$ profile for %
 		$\Delta m_{32}^2$ (top), $\sin^2 2\theta_{13}$ (middle), and $\sin\theta_{23}$ 
 		for correlated (left) and anticorrelated (right) systematics. 
 		The degeneracy in the $\chi^2$ for $\Delta m_{32}^2$ is slightly with anticorrelated systematics, %
@@ -717,13 +730,15 @@ On the other hand, different values of correlated systematics do not degrade the
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_cont_S23_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_corr_sensitivity.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/nuenorm_anti_sensitivity.tex}}
-	\caption{For correlated (left) and anticorrelated (right) systematics, %
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_corr_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_anti_cont_S23_M23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_corr_chi2_dCP.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_anti_chi2_dCP.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_corr_sensitivity.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/nuenorm_anti_sensitivity.tex}}
+	\caption[Contour lines of $\Delta m_{32}^2$ versus $\sin^2 2\theta_{13}$, $\chi^2$ profiles for $\delta_\text{CP}$, %
+		and sensitivity to $\delta_{CP}$$\sin\theta_{23}$ with a simplified systematic model]%
+		{For correlated (left) and anticorrelated (right) systematics, %
 		the top panel show the contour lines for $\Delta m_{32}^2$ versus $\sin\theta_{23}$.
 		The ``pointy'' shape of the contours comes from the low resolution of the oscillation parameter space, %
 		which accounts for 19 points in the $\sin^2\theta_{23}$ direction and 13 points in the $\Delta m_{32}^2$ one.
@@ -769,7 +784,8 @@ The main focus of this work is the beam sample.
 \begin{figure}[t]
 	\centering
 	\resizebox{0.8\linewidth}{!}{\input{pics/matrixplot.tex}}
-	\caption{Correlation matrix of the beam systematic model.
+	\caption[Correlation matrix of the beam systematic model]%
+		{Correlation matrix of the beam systematic model.
 		The two main blocks correspond to respectively the BANFF errors and the far detector %
 		Final State interaction errors.}
 	\label{fig:correlation}
@@ -855,13 +871,14 @@ as they are correlated.
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_chi2_S23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_cont_S13_dCP.tex}}	%%%%%%%%%%%this is important
-	\caption{$\chi^2$ profile for $\delta_\text{CP}$ (top left), $\sin^2 2\theta_{13}$ (top right), %
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_chi2_dCP.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_chi2_S13.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_chi2_M23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_chi2_S23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_cont_S13_dCP.tex}}	%%%%%%%%%%%this is important
+	\caption[$\chi^2$ profiles for $\Delta m_{32}^2$, $\sin^2 2\theta_{13}$, and $\sin\theta_{23}$ with the nominal systematic model]%
+		{$\chi^2$ profile for $\delta_\text{CP}$ (top left), $\sin^2 2\theta_{13}$ (top right), %
 		$\Delta m_{32}^2$ (middle left), and $\sin^2 \theta_{23}$ (middle right), %
 		together with the contour levels for $\delta_\text{CP}$ versus $\sin^2 2\theta_{13}$ (bottom left) %
 		and $\Delta m_{32}^2$ versus $\sin^2 \theta_{23}$ (bottom right).
@@ -875,9 +892,10 @@ as they are correlated.
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/just0_sensitivity.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/stats0_sensitivity.tex}}
-	\caption{Expected significance to exclude $\sin\delta_\text{CP} = 0$ with the nominal model (left), %
+	\resizebox{0.49\linewidth}{!}{\input{pics/just0_sensitivity.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/stats0_sensitivity.tex}}
+	\caption[Sensitivity to $\delta_\text{CP}$ with the nominal systematic model]%
+		{Expected significance to exclude $\sin\delta_\text{CP} = 0$ with the nominal model (left), %
 		revealing that the sensitivity it is not affected by the penalty term of $\theta_{13}$ %
 		from reactor constraints.
 		On the right, the sensitivity to CP violation with full statistics (black) is compared %
@@ -899,8 +917,9 @@ Increasing the collected samples, the sensitivity quickly saturates to the best 
 
 \begin{figure}
 	\centering
-	\resizebox{0.6\linewidth}{!}{\input{pics/combined_sens.tex}}
-	\caption{Expected significance to exclude $\sin\delta_\text{CP} = 0$ with the nominal model and %
+	\resizebox{0.7\linewidth}{!}{\input{pics/combined_sens.tex}}
+	\caption[Sensitivity to $\delta_\text{CP}$ with the nominal model and unknown hierarchy]%
+		{Expected significance to exclude $\sin\delta_\text{CP} = 0$ with the nominal model and %
 		for the beam sample (black), the atmospheric sample (red) and the combination of the two (blue).
 		The solid lines correspond to sensitivity where the mass hierarchy is known to be normal.
 		If the mass hierarchy is not known the sensitivity is weakened.
@@ -924,13 +943,15 @@ of the experiment to mass ordering increases.
 
 \begin{table}
 	\centering
-	\caption{Variations of the nominal systematic model, labelled \textbf{0}.
+	\caption[Variations of the nominal systematic model]%
+		{Variations of the nominal systematic model, labelled \textbf{0}.
 		The second column specify the modification applied to the reference model:
 		the sets in the first block have one or more parameters added, %
 		whereas one or more parameters are removed in the variations of the second block.
 		The systematic models in the last group have the same number of parameters of the nominal model, %
 		with the modifications specified.}
 	\label{tab:variations}
+	\small
 	\begin{tabular}{rr@{\quad}l}
 		\toprule
 		%Label		& & Modification \\
@@ -983,13 +1004,16 @@ between the two data samples.
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_dCP.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_S13.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_M23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_S23.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_cont_S13_dCP.tex}}	%%%%%%%%%%%this is important
-	\caption{$\chi^2$ profile for $\delta_\text{CP}$ (top left), $\sin^2 2\theta_{13}$ (top right), %
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_dCP.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_S13.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_M23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_S23.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_cont_S23_M23.tex}}	%%%%%%%%%%%this is important
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_cont_S13_dCP.tex}}	%%%%%%%%%%%this is important
+	\caption[$\chi^2$ profiles for $\delta_\text{CP}$, $\Delta m_{32}^2$, $\sin^2 2\theta_{13}$, and $\sin\theta_{23}$ %
+		and contours for $\Delta m_{32}^2$ versus $\sin\theta_{23}$ and $\delta_\text{CP}$ versus $\sin^2 2\theta_{13}$ %
+		with variations on the nominal systematic model]%
+		{$\chi^2$ profile for $\delta_\text{CP}$ (top left), $\sin^2 2\theta_{13}$ (top right), %
 		$\Delta m_{32}^2$ (middle left), and $\sin^2 \theta_{23}$ (middle right), %
 		together with the contour levels for $\delta_\text{CP}$ versus $\sin^2 2\theta_{13}$ (bottom left) %
 		and $\Delta m_{32}^2$ versus $\sin^2 \theta_{23}$ (bottom right).
@@ -1003,10 +1027,11 @@ between the two data samples.
 
 \begin{figure}
 	\centering
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_sensitivity.tex}}
-	\resizebox{0.48\linewidth}{!}{\input{pics/new_0_11a_11b_8_detail.tex}}
-	\caption{Expected significance (right) to exclude $\sin\delta_\text{CP} = 0$ with the nominal model (\textbf{0}) %
-		and its variations (\textbf{8}, \textbf{11a}, and \text{11b}).
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_sensitivity.tex}}
+	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_detail.tex}}
+	\caption[Sensitivity to $\delta_\text{CP} = 0$ with variations on the nominal systematic model]%
+		{Expected significance (right) to exclude $\sin\delta_\text{CP} = 0$ with the nominal model (\textbf{0}) %
+		and its variations (\textbf{8}, \textbf{11a}, and \textbf{11b}).
 		On the left, the difference of each curve with the nominal model show that the sensitivity %
 		does not change significantly with the modifications of the systematic model in place.}
 	\label{fig:0_11a_11b_8_sensitivity}

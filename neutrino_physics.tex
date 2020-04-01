@@ -79,7 +79,7 @@ in its description of reality, in that some evidence is not explained nor addres
 The most outstanding breakthrough is the discovery of neutrino oscillation, which was awarded the Nobel Prize in Physics in 2015 %
 and has proven that the neutrinos are not all massless, as was assumed by theory.
 Mass terms for the neutrinos can be included in the SM, with the implications of theoretical and naturalness problems.
-Likewise, the SM is unable to provide an explanation of the observed asymmetry between matter and anti-matter.
+Likewise, the SM is unable to provide an explanation of the observed asymmetry between matter and antimatter.
 It was noted by Sakharov that a solution to this puzzle would require some form of C and CP violation %
 in the early Universe, along with Baryon number violation and out-of-equilibrium interactions~\cite{Sakharov:1967dj}.
 There is also plenty of evidence suggesting the presence of dark matter %
@@ -287,8 +287,8 @@ The Lagrangian terms with the Higgs field therefore becomes
 	\label{eq:all_higgs}
 	\mathcal{L}_\text{Higgs} =&\ \frac{1}{2} (\pd h)^2 - v^2 \lambda h^2 - \lambda h^3 - \frac{\lambda}{4} h^4 + %
 			\frac{g^2 v^2}{4} W^\dagger_\mu W^\mu + \frac{g^2 v^2}{8\cos^2\vartheta_\text{W}} Z_\mu Z^\mu \notag \\
-			& +\frac{g^2 v}{2} W^\dagger_\mu W^\mu h +\frac{g^2 v}{4\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h 
-			 +\frac{g^2}{4} W^\dagger_\mu W^\mu h^2 +  \frac{g^2}{8\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h^2\ .
+			& +\frac{g^2 v}{2} W^\dagger_\mu W^\mu h +\frac{g^2 v}{4\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h \notag\\
+			& +\frac{g^2}{4} W^\dagger_\mu W^\mu h^2 +  \frac{g^2}{8\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h^2\ .
 \end{align}
 The second term of the first line is a mass term for the scalar fields, %
 from which the mass of the Higgs boson is determined to be $m_H = v \sqrt(2\lambda) = \sqrt{-2 \mu^2}$. %,
@@ -315,13 +315,13 @@ The lepton section becomes
 			     - \frac{1}{\sqrt{2}}\ \cj{\bs{\ell}}_L\,Y^\ell\, \bs{\ell}_R\,h \ + \ \text{h.c.}\ ,
 \end{equation}
 and the same is found in the quark sector:
-\begin{equation}
+\begin{align}
+	\mathcal{L}_{H, Q} = -& \qty(\frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D %
+			          + \frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U) \notag\\ 
 	\label{eq:quark_mass}
-	\mathcal{L}_{H, Q} = - \qty(\frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D %
-			          + \frac{v}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U) %
-			     - \qty(\frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D\ h %
+			     -& \qty(\frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^D Y^D \bs{q}_R^D\ h %
 			          + \frac{1}{\sqrt{2}}\ \cj{\bs{q}}_L^U Y^U \bs{q}_R^U\ h) \,+\,\text{h.c.}
-\end{equation}
+\end{align}
 
 The terms in the Lagrangians of \refeqs{eq:lepton_mass}{eq:quark_mass} proportional to $\cj{\ferm}_L \ferm_R = \cj{\ferm}\, \ferm$ %
 are Dirac mass terms for the fermion $\ferm$.
@@ -357,13 +357,13 @@ Dropping the ``hat notation'' to denote mass eigenfields, the lepton sector beco
 				= -\! \sum_{\alpha=e, \mu, \tau} m_\alpha\ \cj{\ell}_\alpha\, \ell_\alpha \ ,%
 \end{equation}
 and similarly the quark sector
-\begin{equation}
+\begin{align}
 	\label{eq:quark_diag}
-	\mathcal{L}_\text{mass} = -\!\! \sum_{\alpha=d,s,b} \!\qty(\frac{y_\alpha^D v}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha) %
-				  -\!\! \sum_{\beta=u,c,t}  \!\qty(\frac{y_\alpha^U v}{\sqrt{2}}\ \cj{q}^U_\beta\,  q^U_\beta) %
-				= -\!\! \sum_{\alpha=d,s,b} \!\qty(m_\alpha\ \cj{q}^D_\alpha\, q^D_\alpha) %
+	\mathcal{L}_\text{mass} &= -\!\! \sum_{\alpha=d,s,b} \!\qty(\frac{y_\alpha^D v}{\sqrt{2}}\ \cj{q}^D_\alpha\, q^D_\alpha) %
+				  -\!\! \sum_{\beta=u,c,t}  \!\qty(\frac{y_\alpha^U v}{\sqrt{2}}\ \cj{q}^U_\beta\,  q^U_\beta) \notag \\
+				&= -\!\! \sum_{\alpha=d,s,b} \!\qty(m_\alpha\ \cj{q}^D_\alpha\, q^D_\alpha) %
 				  -\!\! \sum_{\beta=u,c,t}  \!\qty(m_\beta \ \cj{q}^U_\beta\,  q^U_\beta)\ . %
-\end{equation}
+\end{align}
 As stressed previously, in the SM there are no right-handed neutrino fields, necessary for Dirac mass terms: %
 the neutrinos are simply massless by definition.
 
@@ -383,8 +383,8 @@ where the unitary matrix $V = V^{U\dagger}_L V^D_L$, called Cabibbo-Kobayashi-Ma
 describes the mixing between quark fields in weak interaction processes when initial and final states %
 represent particles with definite masses.
 The same mixing matrix however does not appear in the NC current of \refeq{eq:quark_nc}; %
-defining the couplings $2\,g_L^\ferm = g_V^\ferm + g_A^\ferm$ and $2\,g_R^\ferm = g_V^\ferm - g_A^\ferm$, the current with mass eigenstates %
-becomes
+defining the couplings $2\,g_L^\ferm = g_V^\ferm + g_A^\ferm$ and $2\,g_R^\ferm = g_V^\ferm - g_A^\ferm$, %
+the current with mass eigenstates becomes
 \begin{align}
 	\label{eq:real_quark_nc}
 	j^\mu_\text{NC,Q} &= 2\,g^U_L\ \cj{\bs{q}}^U_L\, \gamma^\mu\, \bs{q}^U_L %
@@ -392,8 +392,8 @@ becomes
 			   + 2\,g^D_L\ \cj{\bs{q}}^D_L\, \gamma^\mu\, \bs{q}^D_L %
 			   + 2\,g^D_R\ \cj{\bs{q}}^D_R\, \gamma^\mu\, \bs{q}^D_R \notag \\
 			  &= 2\,g^U_L\ \cj{\hat{\bs{q}}}^U_L V^{U\dagger}_L\, \gamma^\mu\, V^U_L \hat{\bs{q}}^U_L %
-			   + 2\,g^U_R\ \cj{\hat{\bs{q}}}^U_R V^{U\dagger}_R\, \gamma^\mu\, V^U_R \hat{\bs{q}}^U_R %
-			   + 2\,g^D_L\ \cj{\hat{\bs{q}}}^D_L V^{D\dagger}_L\, \gamma^\mu\, V^D_L \hat{\bs{q}}^D_L %
+			   + 2\,g^U_R\ \cj{\hat{\bs{q}}}^U_R V^{U\dagger}_R\, \gamma^\mu\, V^U_R \hat{\bs{q}}^U_R \notag \\
+			  &\hphantom{=} + 2\,g^D_L\ \cj{\hat{\bs{q}}}^D_L V^{D\dagger}_L\, \gamma^\mu\, V^D_L \hat{\bs{q}}^D_L %
 			   + 2\,g^D_R\ \cj{\hat{\bs{q}}}^D_R V^{D\dagger}_R\, \gamma^\mu\, V^D_R \hat{\bs{q}}^D_R \notag \\
 			  &= 2\,g^U_L\ \cj{\hat{\bs{q}}}^U_L \, \gamma^\mu\, \hat{\bs{q}}^U_L %
 			   + 2\,g^U_R\ \cj{\hat{\bs{q}}}^U_R \, \gamma^\mu\, \hat{\bs{q}}^U_R %
@@ -554,11 +554,12 @@ measure the amount of neutrinos of a certain flavour at the production site and 
 \begin{figure}
 	\centering
 	\resizebox{\linewidth}{!}{\input{pics/oscillatorybehave.tex}}
-	\caption{Oscillation probability for an initial $\nu_e$ (left) and $\nu_\mu$ (right), %
-		clearly manifesting an oscillatory behaviour with respect to $L/E$.
-		The oscillation parameters used here are $\Delta m_{21}^2 = \np{7.6e-5}$\,eV\tapi{2}, %
-		$\Delta m_{32}^2 = \np{2.4e-3}$\,eV\tapi{2}, $\sin^2 \theta_{12} = 0.32$, %
-		$\sin^2 2\theta{13} = 0.1$, $\sin^2\theta_{23} = 0.5$, and $\delta_\text{CP} = 0$.}
+	\caption[Oscillation probability for an initial $\nu_e$ and $\nu_\mu$]%
+	{Oscillation probability for an initial $\nu_e$ (left) and $\nu_\mu$ (right), %
+	clearly manifesting an oscillatory behaviour with respect to $L/E$.
+	The oscillation parameters used here are $\Delta m_{21}^2 = \np{7.6e-5}$\,eV\tapi{2}, %
+	$\Delta m_{32}^2 = \np{2.4e-3}$\,eV\tapi{2}, $\sin^2 \theta_{12} = 0.32$, %
+	$\sin^2 2\theta{13} = 0.1$, $\sin^2\theta_{23} = 0.5$, and $\delta_\text{CP} = 0$.}
 	\label{fig:osc_behave}
 \end{figure}
 
@@ -648,7 +649,7 @@ The CKM matrix can be parameterised in an analogous way.
 \begin{table}
 	\small
 	\centering
-	\caption{Best fit values for neutrino oscillation parameters~\cite{Esteban:2018azc}.
+	\caption[Best fit values for neutrino oscillation parameters]{Best fit values for neutrino oscillation parameters~\cite{Esteban:2018azc}.
 		This results includes Super-Kamiokande data and assumes a normal mass ordering.}
 	\label{tab:nufit}
 
@@ -830,14 +831,14 @@ because of the combinations between the different mass squared differences.
 %and a clear understanding of the physical mechanisms at work in experiments.
 Let us consider a simpler scenario of only two neutrino generations, $\nu_e$ and $\nu_\mu$.
 Assuming the initial flavour being $\alpha = e$, the evolution equation is now 
-\begin{equation}
+\begin{align}
+	i \dv{}{x} \mqty(\phi_{e e} \\ \phi_{e \mu}) &= %
+			\mathcal{H}_F \mqty(\phi_{e e} \\ \phi_{e \mu}) \notag \\
 	\label{eq:two_flav_evolution}
-	i \dv{}{x} \mqty(\phi_{e e} \\ \phi_{e \mu}) = %
-			\mathcal{H}_F \mqty(\phi_{e e} \\ \phi_{e \mu}) =
-		\frac{1}{4E} \mqty( -\Delta m^2 \cos 2\theta + A_\text{CC} & \Delta m^2 \sin 2\theta \\
+		&= \frac{1}{4E} \mqty( -\Delta m^2 \cos 2\theta + A_\text{CC} & \Delta m^2 \sin 2\theta \\
 				    \Delta m^2 \sin 2\theta	& \Delta m^2 \cos 2\theta - A_\text{CC} ) %
 		   \mqty(\phi_{e e} \\ \phi_{e \mu})\ ,
-\end{equation}
+\end{align}
 where $\Delta m^2 = m_2^2 - m_1^2$ and $\theta$ is the mixing angle, as in
 \begin{equation}
 	\mqty(\nu_e \\ \nu_\mu)  =
@@ -1017,7 +1018,7 @@ as well as those emitted by nuclear reactors.
 Neutrinos are also the products of natural-occurring $\beta$-decays, from the study of which neutrinos were first hypothesised. 
 The study of the rare double-$\beta$ decay is of utter importance, % 
 because the proposed neutrinoless manifestation of this decay is a true lepton number violating process, %
-the detection of which has deep and considerable connotation for neutrino mass theories~\cite{Majorana:1937vz}.
+the detection of which has deep and considerable connotations for neutrino mass theories~\cite{Majorana:1937vz}.
 
 In the following sections the most relevant sources for the neutrino experiment mentioned in this thesis are discussed.
 
@@ -1027,29 +1028,30 @@ In the following sections the most relevant sources for the neutrino experiment 
 \begin{table}
 	\small
 	\centering
-	\captionof{table}{Processes occurring in the $pp$ chain (left) and CNO cycle (right) that emits $\nu_e$.
+	\captionof{table}[Processes emitting $\nu_e$ in the $pp$ chain and CNO cycle]%
+		{Processes occurring in the $pp$ chain (left) and CNO cycle (right) that emits $\nu_e$.
 		The first column of the $pp$ chain table lists the typical label with which the %
 		processes are referred to; the neutrinos of the CNO cycle are labelled with the name of the decaying nuclide. 
 		In both tables, the maximum neutrino energy is also reported.}
 	\label{tab:pp_cno}
 
-	\begin{tabular}{lr@{\quad$\longrightarrow$\quad}lr}
+	\begin{tabular}{lr@{~$\longrightarrow$~}lr}
 		\toprule
-		Label	& \multicolumn{2}{c}{Process}	& $E_\text{max}$ \\ %(MeV)	\\
+		\raisebox{0.6em}{Label}	& \multicolumn{2}{c}{\raisebox{0.6em}{Process}}	& \shortstack{$E_\text{max}$ \\ (MeV)} 	\\
 		\midrule
-		$\bs{pp}$	    & $p + p$		 & \tapi{2}H $+ e^+ + \nu_e$		& 0.423\,MeV\\
-		$\bs{pep}$	    & $p + e^- + p$	 & \tapi{2}H $+ \nu_e$			& 1.445\,MeV\\
-		$\bs{hep}$	    & \tapi{3}He $+ p$   & \tapi{4}He $+ e^+ + \nu_e$		& 18.778\,MeV\\
-		\textbf{\tapi{7}Be} & \tapi{7}Be $+ e^-$ & \tapi{7}Li $+ \nu_e$			& 0.386\,MeV\\
-		\textbf{\tapi{8}Be} & \tapi{8}Be	 & \tapi{8}Be\tapi{*} $+ e^+ + \nu_e$	& 0.862\,MeV\\
-				    &			 & 2\,\tapi{4}He $+ e^+ + \nu_e$ 	& $\sim$15\,MeV\\
+		$\bs{pp}$	    & $p + p$		 & \tapi{2}H $+ e^+ + \nu_e$		& 0.423 \\
+		$\bs{pep}$	    & $p + e^- + p$	 & \tapi{2}H $+ \nu_e$			& 1.445 \\
+		$\bs{hep}$	    & \tapi{3}He $+ p$   & \tapi{4}He $+ e^+ + \nu_e$		& 18.778 \\
+		\textbf{\tapi{7}Be} & \tapi{7}Be $+ e^-$ & \tapi{7}Li $+ \nu_e$			& 0.386 \\
+		\textbf{\tapi{8}Be} & \tapi{8}Be	 & \tapi{8}Be\tapi{*} $+ e^+ + \nu_e$	& 0.862 \\
+				    &			 & 2\,\tapi{4}He $+ e^+ + \nu_e$ 	& $\sim$15 \\
 		\bottomrule
 	\end{tabular}
 	\hfill
 	\raisebox{1.85em}{
-	\begin{tabular}{r@{\quad$\longrightarrow$\quad}lr}
+	\begin{tabular}{r@{~$\longrightarrow$~}lr}
 		\toprule
-		\multicolumn{2}{c}{Process}	& $E_\text{max}$ \\%(MeV)	\\
+		 \multicolumn{2}{c}{\raisebox{0.6em}{Process}}	& \shortstack{$E_\text{max}$ \\ (MeV)} 	\\
 		\midrule
 		\tapi{13}N    & \tapi{13}C $+ e^+ + \nu_e$ & 1.198\,MeV \\
 		\tapi{15}O    & \tapi{15}N $+ e^+ + \nu_e$ & 1.732\,MeV \\
@@ -1087,17 +1089,19 @@ as shown in \reffig{fig:borex}.
 \begin{figure}
 	\begin{minipage}[t]{0.48\textwidth}
 		\includegraphics[width=\textwidth]{pics/BahcallNuFlux.pdf}
-		\caption{The neutrino flux from the $pp$ chain, predicted with the solar standard model~\cite{Bahcall:2004mz}.
-			The threshold energies of major solar neutrino experiments are shown for comparison.}
+		\captionof{figure}[Solar standard model prediction of the solar neutrino flux]%
+		{The neutrino flux from the $pp$ chain, predicted with the solar standard model~\cite{Bahcall:2004mz}.
+		The threshold energies of major solar neutrino experiments are shown for comparison.}
 		\label{fig:solar_nu_flux}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.5\textwidth}
 		\centering
 		\raisebox{0.45em}{\includegraphics[width=\textwidth]{pics/borexino.pdf}}
-		\captionof{figure}{Survival probability of $\nu_e$ produced by the different nuclear reactions in the $pp$ chain, %
-			as measured by BOREXINO~\cite{Bellini:2014uqa}.
-			The violet band corresponds to the $\pm1\sigma$ prediction of the flavour transition in the Sun.}
+		\captionof{figure}[Survival probability of $\nu_e$ measured by BOREXINO]%
+		{Survival probability of $\nu_e$ produced by the different nuclear reactions in the $pp$ chain, %
+		as measured by BOREXINO~\cite{Bellini:2014uqa}.
+		The violet band corresponds to the $\pm1\sigma$ prediction of the flavour transition in the Sun.}
 		\label{fig:borex}
 	\end{minipage}
 \end{figure}
@@ -1167,12 +1171,13 @@ These and the energies for electron neutrinos and antineutrinos usually range be
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{pics/SN_burst.pdf}
-	\caption{Time and energy profile of the predicted neutrino flux from a Supernova core-collapse of %
-		mass $M \simeq 20\,M_\odot$~\cite{Totani:1997vj}.
-		Other neutrino flavours than $\nu_e$ and $\cj{\nu}_e$ are collectively represented by %
-		$\nu_X = (\nu_\mu + \cj{\nu}_\mu + \nu_\tau + \cj{\nu}_\tau) / 4$.
-		From the prediction, the neutronisation burst of $\nu_e$ is visibale at early stages of the explosion, %
-		wherease neutrinos of all flavours are emitted at later times.}
+	\caption[Neutrino flux from a core-collapse supernova]%
+	{Time and energy profile of the predicted neutrino flux from a Supernova core-collapse of %
+	mass $M \simeq 20\,M_\odot$~\cite{Totani:1997vj}.
+	Other neutrino flavours than $\nu_e$ and $\cj{\nu}_e$ are collectively represented by %
+	$\nu_X = (\nu_\mu + \cj{\nu}_\mu + \nu_\tau + \cj{\nu}_\tau) / 4$.
+	From the prediction, the neutronisation burst of $\nu_e$ is visibale at early stages of the explosion, %
+	wherease neutrinos of all flavours are emitted at later times.}
 	\label{fig:sn_nu_flux}
 \end{figure}
 
@@ -1229,18 +1234,20 @@ Greisen-Zatsepin-Kuzmin (GZK) cutoff~\cite{Greisen:1966jv, Zatsepin:1966jv}.
 	\begin{minipage}[t]{0.4\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{pics/CR_flux.pdf}
-		\captionof{figure}{Measurement of cosmic rays over the entire energy spectrum, %
-			where the change of energy dependence (\emph{knee}) is visible at around \np{e15}\,eV.
-			Taken from \refref{Anchordoqui:2002hs}.}
+		\captionof{figure}[Energy spectrum of cosmic rays]%
+		{Measurement of cosmic rays over the entire energy spectrum, %
+		where the change of energy dependence (\emph{knee}) is visible at around \np{e15}\,eV.
+		Taken from \refref{Anchordoqui:2002hs}.}
 		\label{fig:CR_flux}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.58\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{pics/honda_flux.pdf}
-		\captionof{figure}{Prediction of atmospheric neutrinos created with a 3D simulation %
-			of Earth's atmosphere and including geomagnetic effects.
-			Taken from~\cite{Honda:2004yz}.}
+		\captionof{figure}[Prediction of atmospheric neutrinos]%
+		{Prediction of atmospheric neutrinos created with a 3D simulation %
+		of Earth's atmosphere and including geomagnetic effects.
+		Taken from~\cite{Honda:2004yz}.}
 		\label{fig:honda_flux}
 	\end{minipage}
 \end{figure}
@@ -1284,25 +1291,27 @@ Each of the subsequent $\tau^+$ decays produces a $\cj{\nu}_\tau$.
 The production of $D_s$ meson however requires a very high energy proton beam and therefore %
 for practical reasons this contribution is disregarded in most experiments.
 
-\begin{figure}
+\begin{figure}[t]
 	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{pics/bnb_flux.pdf}
-		\captionof{figure}{Prediction of the $\nu_\mu$ (top) and $\cj{\nu}_\mu$ (bottom) fluxes at the %
-			Booster Neutrino Beam.
-			The contributions from different parent particles are highlighted.
-			Taken from \refref{AguilarArevalo:2008yp}.}
+		\captionof{figure}[Prediction of $\nu_\mu$ and $\cj{\nu}_\mu$ at the Booster Neutrino Beam]%
+		{Prediction of the $\nu_\mu$ (top) and $\cj{\nu}_\mu$ (bottom) fluxes at the %
+		Booster Neutrino Beam.
+		The contributions from different parent particles are highlighted.
+		Taken from \refref{AguilarArevalo:2008yp}.}
 		\label{fig:bnb_flux}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\raisebox{3.0em}{\includegraphics[width=\textwidth]{pics/t2k_flux.pdf}}
-		\captionof{figure}{Prediction of the $\nu_\mu$ flux at T2K (bottom), %
-		       showing the profile at different off-axis angles (OA).
-		       At $2.5^\circ$ from the axis, the energy distributions peaks %
-		       in correspondence of a minimum for the $\nu_\mu$ disappearance probability (top).
-	       		Taken from \refref{Abe:2012av}.}
+		\captionof{figure}[Prediction of $\nu_\mu$ at T2K]%
+		{Prediction of the $\nu_\mu$ flux at T2K (bottom), %
+		showing the profile at different off-axis angles (OA).
+		At $2.5^\circ$ from the axis, the energy distributions peaks %
+		in correspondence of a minimum for the $\nu_\mu$ disappearance probability (top).
+	       	Taken from \refref{Abe:2012av}.}
 		\label{fig:t2k_flux}
 	\end{minipage}
 \end{figure}
@@ -1337,6 +1346,45 @@ neutrino energy should be fixed and known, as shown in \reffig{fig:t2k_flux}.
 
 \section{Neutrino interactions}
 \label{sec:neutrino_interactions}
+
+\begin{figure}
+	\centering
+	\medskip
+	\begin{fmffile}{neutrino_CC}
+		\begin{fmfgraph*}(80,60)
+			\fmfleft{f1,nu}
+			\fmfright{f2,ell}
+			\fmf{fermion}{nu,v1,ell}
+			\fmf{fermion}{f1,v2,f2}
+			\fmf{photon, label=$W$}{v1,v2}
+			\fmflabel{$\ferm_1$}{f1}
+			\fmflabel{$\ferm_2$}{f2}
+			\fmflabel{$\nu_\alpha$}{nu}
+			\fmflabel{$\ell_\alpha$}{ell}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\qquad
+	\raisebox{2.5em}{,}
+	\qquad
+	\begin{fmffile}{neutrino_NC}
+		\begin{fmfgraph*}(80,60)
+			\fmfleft{f1,nu1}
+			\fmfright{f2,nu2}
+			\fmf{fermion}{nu1,v1,nu2}
+			\fmf{fermion}{f1,v2,f2}
+			\fmf{photon, label=$Z$}{v1,v2}
+			\fmflabel{$\ferm$}{f1}
+			\fmflabel{$\ferm$}{f2}
+			\fmflabel{$\nu_\alpha$}{nu1}
+			\fmflabel{$\nu_\alpha$}{nu2}
+		\end{fmfgraph*}
+	\end{fmffile}
+	\bigskip
+	\caption[Generic CC and NC tree-level weak interactions]%
+	{Generic CC (right) and NC (left) tree-level interactions with neutrinos involved.
+	Note that these diagrams have illustration purpose only, and time flow convention is not respected. }
+	\label{fig:neutrino_tree}
+\end{figure}
 
 Neutrino interactions in their flavour states are described by \refeqs{eq:lepton_cc}{eq:lepton_nc}.
 Replacing the values of $g^\nu_V$ and $g^\nu_A$ for a neutrino, the relevant Lagrangian terms are
@@ -1386,44 +1434,6 @@ can be described by effective four-point Lagrangians.
 %							     \qty[\cj{f}\gamma_\mu(g^F_V - g^F_A \gamma^5) f]
 %\end{align}
 						    
-\begin{figure}
-	\centering
-	\medskip
-	\begin{fmffile}{neutrino_CC}
-		\begin{fmfgraph*}(80,60)
-			\fmfleft{f1,nu}
-			\fmfright{f2,ell}
-			\fmf{fermion}{nu,v1,ell}
-			\fmf{fermion}{f1,v2,f2}
-			\fmf{photon, label=$W$}{v1,v2}
-			\fmflabel{$\ferm_1$}{f1}
-			\fmflabel{$\ferm_2$}{f2}
-			\fmflabel{$\nu_\alpha$}{nu}
-			\fmflabel{$\ell_\alpha$}{ell}
-		\end{fmfgraph*}
-	\end{fmffile}
-	\qquad
-	\raisebox{2.5em}{,}
-	\qquad
-	\begin{fmffile}{neutrino_NC}
-		\begin{fmfgraph*}(80,60)
-			\fmfleft{f1,nu1}
-			\fmfright{f2,nu2}
-			\fmf{fermion}{nu1,v1,nu2}
-			\fmf{fermion}{f1,v2,f2}
-			\fmf{photon, label=$Z$}{v1,v2}
-			\fmflabel{$\ferm$}{f1}
-			\fmflabel{$\ferm$}{f2}
-			\fmflabel{$\nu_\alpha$}{nu1}
-			\fmflabel{$\nu_\alpha$}{nu2}
-		\end{fmfgraph*}
-	\end{fmffile}
-	\bigskip
-	\caption{Generic CC (right) and NC (left) tree-level interactions with neutrinos involved.
-		Note that these diagrams have illustration purpose only, and time flow convention is not respected. }
-	\label{fig:neutrino_tree}
-\end{figure}
-
 In the following sections the most important neutrino interactions with matter are reviewed, %
 from low to high energies.
 
@@ -1456,9 +1466,10 @@ where $M$ is the mass of the target, $E$ the energy of the incoming neutrino and
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{pics/cevns.pdf}
-	\caption{Behaviour of the neutrino--nucleus cross-sections for various targets, as a function of the neutrino energy.
-	       	The cross-sections for neutrino-induced neutrons (NIN), inverse beta decay (IBD), and %
-		elastic scattering of $\nu_e$ on electrons are also shown for comparison. Taken from~\refref{Akimov:2017ade}.}
+	\caption[Neutrino--nucleus cross-sections at low neutrino energies]%
+	{Behaviour of the neutrino--nucleus cross-sections for various targets, as a function of the neutrino energy.
+	The cross-sections for neutrino-induced neutrons (NIN), inverse beta decay (IBD), and %
+	elastic scattering of $\nu_e$ on electrons are also shown for comparison. Taken from~\refref{Akimov:2017ade}.}
 	\label{fig:cevns}
 \end{figure}
 The vector and axial coupling constants for protons and neutrons are
@@ -1549,8 +1560,8 @@ electron scattering angle $\theta$ with respect to the incoming neutrino with en
 \begin{align}
 	\dv{\sigma}{\cos\theta} =&\ \frac{2 G_F^2 m_e}{\pi} %
 			\frac{4 E_\nu^2 (m_e+E_\nu)^2 \cos \theta}{\qty[(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta ]^2} \quad \times \notag \\
-			&\qty[g_1^2 + g_2^2\qty(1 - \frac{2 m_e E_\nu \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} )^2
-		- g_1\, g_2\, \frac{2m_e^2 \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta}]\ .
+			&\qty[g_1^2 + g_2^2\qty(1 - \frac{2 m_e E_\nu \cos^2 \theta}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta} )^2 \!\!
+		- \frac{2m_e^2 \cos^2 \theta\  g_1\, g_2}{(m_e+E_\nu)^2-E_\nu^2 \cos^2 \theta}]\ .
 \end{align}
 
 For the electron neutrino $\nu_e$, both CC and NC interactions are allowed and %
@@ -1603,7 +1614,8 @@ The functions $A(q^2)$, $B(q^2)$, and $C(q^2)$ for the charged-current process a
 	A(q^2) &= \frac{m_l^2+q^2}{m_N^2} \bigg\{ \qty(1+\frac{q^2}{4m_N^2}) G_A^2 - \qty(1-\frac{q^2}{4m_N^2}) %
 			\qty(F_1^2 - \frac{q^2}{4m_N^2}F_2^2 ) +\frac{q^2}{m_N^2}\,F_1\,F_2\notag \\
 	\label{eq:A_Q}
-		&\hphantom{=\frac{m_l^2+q^2}{m_N^2}\{} - \frac{m_l^2}{4m_N^2} %
+		&\hphantom{=\frac{m_l^2+q^2}{m_N^2}}%\{}
+			- \frac{m_l^2}{4m_N^2} %
 		 \qty[ (F_1+F_2)^2+(G_A+2G_P)^2-\frac{1}{4}\qty(1+\frac{q^2}{4m_N^2}) G_P^2] \bigg\}\ ,\\
 	\label{eq:B_Q}
 	B(q^2) &= \frac{q^2}{m_N^2}\, G_A\, (F_1+F_2)\ ,\\
@@ -1662,12 +1674,13 @@ then this can be calculated as:
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{pics/qe_xsec.pdf}
-	\caption{Total neutrino (left) and antineutrino (right) cross-section measurements and predictions for an isoscalar target %
-		as a function of energy. The contributions from quasi-elastic (QE, red), resonance (RES, blue), %
-		and deep-inelastic-scattering (DIS, green) are highlighted.
-		Resonant modes only give a substantial contribution in a small energy region between 1\,GeV and 7\,GeV, %
-		explaining the difficulty in constraining theoretical models.
-		Taken from~\refref{Formaggio:2013kya}.}
+	\caption[Neutrino--nucleus cross-sections at high neutrino energies]%
+	{Total neutrino (left) and antineutrino (right) cross-section measurements and predictions for an isoscalar target %
+	as a function of energy. The contributions from quasi-elastic (QE, red), resonance (RES, blue), %
+	and deep-inelastic-scattering (DIS, green) are highlighted.
+	Resonant modes only give a substantial contribution in a small energy region between 1\,GeV and 7\,GeV, %
+	explaining the difficulty in constraining theoretical models.
+	Taken from~\refref{Formaggio:2013kya}.}
 	\label{fig:xsec}
 \end{figure}
 
