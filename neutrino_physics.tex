@@ -20,7 +20,7 @@ The electroweak subgroup $\text{SU(2)}_L \otimes \text{U(1)}_Y$ undergoes a spon
 out of which three of the four vector bosons acquire mass ($W^\pm$ and $Z$~bosons) and the last one, the photon, remains massless.
 This process requires at least one scalar boson with a non-zero vacuum expectation value~\cite{Higgs:1964pj, Higgs:1964ia}.
 The colour symmetry does not break and does not mix with the electroweak sector. 
-The generators of its algebra corresponds to eight massless gluons.
+The generators of its algebra correspond to eight massless gluons.
 The gauge and scalar bosons are coupled to fermion fields, which are irreducible representation of %
 the Poincaré group.
 The known elementary fermions are divided in two categories: quarks and leptons.
@@ -77,22 +77,22 @@ and the fermion representations must lead to the cancellation of quantum anomali
 Despite being the most successful theory of particle physics to date, the SM is actually limited %
 in its description of reality, in that some evidence is not explained nor addressed.
 The most outstanding breakthrough is the discovery of neutrino oscillation, which was awarded the Nobel Prize in Physics in 2015 %
-and has proven that the neutrinos are not all massless, as was assumed by theory.
+and has proven that the neutrinos are not all massless, as was assumed by the theory.	%% ??
 Mass terms for the neutrinos can be included in the SM, with the implications of theoretical and naturalness problems.
 Likewise, the SM is unable to provide an explanation of the observed asymmetry between matter and antimatter.
 It was noted by Sakharov that a solution to this puzzle would require some form of C and CP violation %
 in the early Universe, along with Baryon number violation and out-of-equilibrium interactions~\cite{Sakharov:1967dj}.
 There is also plenty of evidence suggesting the presence of dark matter %
 in the Universe~\cite{Zwicky:1933gu, Rubin:1970zza, Aghanim:2018eyx}, %
-and there is a variety of theoretical and experimental endeavours trying to unearth its nature.
+and there are a variety of theoretical and experimental endeavours trying to unearth its nature.
 These facts suggest that the Standard Model is not a complete theory and additional physics %
 Beyond the Standard Model (BSM) is required.
 
-The study of neutrinos is for sure one of the most promising probe to BSM physics and %
+The study of neutrinos is for sure one of the most promising probes to BSM physics and %
 is of vital importance to the future development of particle physics, %
 in particular through precision measurement of their interactions.
 A deep understanding of neutrino interactions, and neutrino-nucleon interactions in particular, %
-could lead to a great impact on long-baseline experiments, proton decay search, and supernova detection.
+could lead to a great impact on long-baseline experiments, proton decay searches, and supernova detection.
 Since the SM is a renormalisable theory, even its quantum corrections are insensitive to the physics beyond the SM.
 For this reason, the SM is phenomenologically very successful and so far has been able to describe all the known
 phenomena, except for the indications in favour of neutrino oscillations, as it will be discussed in the following chapters.
@@ -187,10 +187,10 @@ Defining the combinations
 \begin{align}
 	\label{eq:fields}
 	W^\mu &= \flatfrac{\qty(A_1^\mu - i A_2^\mu)}{\sqrt{2}} \\
-	Z^\mu &= \cos \vartheta_\text{W} A_3^\mu - \cos \vartheta_\text{W} B^\mu \\
+	Z^\mu &= \cos \vartheta_\text{W} A_3^\mu - \sin \vartheta_\text{W} B^\mu \\
 	A^\mu &= \sin \vartheta_\text{W} A_3^\mu + \cos \vartheta_\text{W} B^\mu \ ,
 \end{align}
-the electromagnetic field $A^\mu$ is expressed as a rotation of $A_e^\mu$ and $B^\mu$, thus recovering QED; %
+the electromagnetic field $A^\mu$ is expressed as a rotation of $A_3^\mu$ and $B^\mu$, thus recovering QED; %
 the new field $Z^\mu$ also describes a neutral current process.
 The Lagrangian in \refeq{eq:interaction} can therefore be divided into two parts, %
 $\mathcal{L}_\text{int,L} = \mathcal{L}_\text{CC,L} + \mathcal{L}_\text{NC,L}$, %
@@ -216,7 +216,9 @@ to the electromagnetic field for neutrinos, which gives
 \begin{equation}
 	g\, \sin \vartheta_\text{W} = g'\, \cos \vartheta_\text{W}\ .
 \end{equation}
-The angle $\vartheta_\text{W}$ is known as Weinberg angle and it is such that $\sin^2\vartheta_\text{W} = 0.213$.
+The angle $\vartheta_\text{W}$ is known as Weinberg angle and it is estimated %
+to be $\sin^2\vartheta_\text{W} \simeq 0.231$ from either neutrino neutral-current processes at low energies %
+or the Z mixing with the photon in Drell-Yan processes at higher energies~\cite{Tanabashi:2018oca}.
 Another important relation comes from the charged lepton couplings with the electromagnetic field which must coincide %
 the QED Lagrangian.
 It follows that $g \sin\vartheta_\text{W} = q_e$ and so $g^2 + g'^2 = q_e^2$.
@@ -239,7 +241,7 @@ Thanks to this notation, the interaction Lagrangians for the quark sector can be
 \subsection{Higgs mechanism}
 \label{sec:ew_higgs}
 
-In the EW Lagrangian in \refeq{eq:ew_lagrangian}, the Higgs $H$ is a complex scalar field and an $SU(2)_L$ doublet %
+In the EW Lagrangian in \refeq{eq:ew_lagrangian}, the Higgs $H$ is a complex scalar field and an $\text{SU(2)}_L$ doublet %
 \begin{equation}
 	\label{eq:higgs}
 	H(x) = \mqty( H^+(x) \\ H^0(x) ) \ ,
@@ -290,8 +292,8 @@ The Lagrangian terms with the Higgs field therefore becomes
 			& +\frac{g^2 v}{2} W^\dagger_\mu W^\mu h +\frac{g^2 v}{4\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h \notag\\
 			& +\frac{g^2}{4} W^\dagger_\mu W^\mu h^2 +  \frac{g^2}{8\cos^2\vartheta_\text{W}} Z_\mu Z^\mu h^2\ .
 \end{align}
-The second term of the first line is a mass term for the scalar fields, %
-from which the mass of the Higgs boson is determined to be $m_H = v \sqrt(2\lambda) = \sqrt{-2 \mu^2}$. %,
+The second term of the first line is a mass term for the scalar field, %
+from which the mass of the Higgs boson is determined to be $m_H = v \sqrt{2\lambda} = \sqrt{-2 \mu^2}$. %,
 %a value recently measured~\ref{}.
 The fifth and sixth terms represent the mass terms for the $W$ and $Z$ bosons, namely
 \begin{equation}
@@ -527,7 +529,7 @@ therefore the transition probability from a state $\nu_\alpha$ to a state $\nu_\
 	e^{-i(E_j - E_i)t}\ .
 	%\exp \qty(-i \frac{\Delta m_{ij}^2 L}{2 E})\ ,
 \end{equation}
-For ultra relativistic neutrino, the energy values can be approximated by
+For ultra relativistic neutrinos, the energies can be approximated by
 \begin{equation}
 	E_i \simeq E + \frac{m_i^2}{2E}\ ,
 \end{equation}
@@ -559,7 +561,7 @@ measure the amount of neutrinos of a certain flavour at the production site and 
 	clearly manifesting an oscillatory behaviour with respect to $L/E$.
 	The oscillation parameters used here are $\Delta m_{21}^2 = \np{7.6e-5}$\,eV\tapi{2}, %
 	$\Delta m_{32}^2 = \np{2.4e-3}$\,eV\tapi{2}, $\sin^2 \theta_{12} = 0.32$, %
-	$\sin^2 2\theta{13} = 0.1$, $\sin^2\theta_{23} = 0.5$, and $\delta_\text{CP} = 0$.}
+	$\sin^2 2\theta_{13} = 0.1$, $\sin^2\theta_{23} = 0.5$, and $\delta_\text{CP} = 0$.}
 	\label{fig:osc_behave}
 \end{figure}
 
@@ -662,7 +664,7 @@ The CKM matrix can be parameterised in an analogous way.
 		$\sin^2 \theta_{12}$	& 0.310		& ${}^{+0.013}_{-0.012}$ 	\\
 		$\sin^2 2\theta_{13}$	& 0.0875	& ${}^{+0.0025}_{-0.0025}$	\\
 		$\sin^2\theta_{23}$	& 0.563		& ${}^{+0.018}_{-0.024}$	\\
-		$\delta_\text{CP} / {}^\circ$			& 221	& ${}^{+39}_{-28}$	\\
+		$\delta_\text{CP} / \pi$			& -0.772 & ${}^{+0.217}_{-0.156}$	\\
 		\midrule
 		$\Delta m_{21}^2 / \np{e-5}$\,eV\tapi{2}	& 7.39	& ${}^{0.21}_{-0.20}$ 	\\
 		$|\Delta m_{32}^2| / \np{e-3}$\,eV\tapi{2}	& 2.528	& ${}^{+0.029}_{-0.031}$ 	\\
@@ -1158,7 +1160,7 @@ In most scenarios, the shock wave stalls and the bounce mechanism from the core 
 The remnant of the core, which is forming a proto-neutron star, can revive the shock if its mass is large enough.
 In the hot core, numerous neutrinos are produced in all flavours by electron-positron annihilation, %
 electron-nucleon and nucleon-nucleon bremsstrahlung, and electron neutrinos from electron or positron capture.
-These neutrinos get trapped between the core and the mantle regions with a density high enough such that %
+These neutrinos remain trapped between the core and the mantle regions with a density high enough such that %
 their mean free path is smaller than the supernova radius.
 This region, known as \emph{neutrinosphere}, depends on the $\nu$ energies and flavours %
 and emits a thermal flux of neutrinos the energy of which is believed to revive the shock up to explosion.
@@ -1230,26 +1232,26 @@ The maximum theoretical limit is near \np{e20}\,eV~\cite{Abraham:2008ru}, after 
 the interactions of the cosmic rays with the cosmic microwave background, also known as %
 Greisen-Zatsepin-Kuzmin (GZK) cutoff~\cite{Greisen:1966jv, Zatsepin:1966jv}.
 
+%\begin{minipage}[t]{0.4\textwidth}
 \begin{figure}
-	\begin{minipage}[t]{0.4\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{pics/CR_flux.pdf}
-		\captionof{figure}[Energy spectrum of cosmic rays]%
-		{Measurement of cosmic rays over the entire energy spectrum, %
-		where the change of energy dependence (\emph{knee}) is visible at around \np{e15}\,eV.
-		Taken from \refref{Anchordoqui:2002hs}.}
-		\label{fig:CR_flux}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.58\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{pics/honda_flux.pdf}
-		\captionof{figure}[Prediction of atmospheric neutrinos]%
-		{Prediction of atmospheric neutrinos created with a 3D simulation %
-		of Earth's atmosphere and including geomagnetic effects.
-		Taken from~\cite{Honda:2004yz}.}
-		\label{fig:honda_flux}
-	\end{minipage}
+	\centering
+	%\includegraphics[width=0.9\textwidth]{pics/CR_flux.pdf}
+	\includegraphics[width=0.7\textwidth]{pics/cosmicrays.pdf}
+	\captionof{figure}[Energy spectrum of cosmic rays]%
+	{Measurement of cosmic rays over the entire energy spectrum, %
+	where the change of energy dependence (\emph{knee}) is visible at around \np{e15}\,eV.
+	The flux is multiplied by the power law $E^{2.5}$. Taken from \refref{Bluemer:2009zf}.}
+	\label{fig:CR_flux}
+\end{figure}
+%\begin{minipage}[t]{0.58\textwidth}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/honda_flux.pdf}
+	\captionof{figure}[Prediction of atmospheric neutrinos]%
+	{Prediction of atmospheric neutrinos created with a 3D simulation %
+	of Earth's atmosphere and including geomagnetic effects.
+	Taken from~\cite{Honda:2004yz}.}
+	\label{fig:honda_flux}
 \end{figure}
 
 The neutrinos are produced isotropically around the atmosphere with energies up to a few hundreds of TeV, %
@@ -1272,9 +1274,9 @@ Atmospheric neutrinos provide an invaluable source for studying the properties o
 such as the squared mass differences and the mixing angles.
 However, the uncertainty on the path lengths of neutrinos from production to detection can downgrade %
 the precision of the measurement.
-Man-made accelerator facilities try to overcome this limitation.
+Accelerator facilities try to overcome this limitation.
 Neutrino beams are derived from a similar mechanism that generates atmospheric neutrinos.
-A proton beam hitting a fixed target typically yields a large number of pions and kaons, %
+A proton beam directed on a fixed target typically yields a large number of pions and kaons, %
 and also heavier mesons the amount of which depends on the energy of the protons and the choice of the target.
 All these secondary particles decay leptonically or semi-leptonically via CC weak interactions thus creating a neutrino beam.
 Pions and kaons principally decay into $\nu_\mu$ because two-body electronic modes are disfavoured %
@@ -1284,7 +1286,7 @@ Other production sources of $\nu_e$ are the three-body decays of $K^0$ and $K^+$
 As an example, the parentage composition of the Booster Neutrino Beam flux~\cite{AguilarArevalo:2008yp} %
 is shown in \reffig{fig:bnb_flux}, highlighting that pions are the main source of low energy neutrinos %
 and kaons of energetic ones.
-Above the neutral kaon mass, the first sizeable source of neutrino is given by the $D_s$ meson, %
+Above the neutral kaon mass, the first significant source of neutrino is given by the $D_s$ meson, %
 for which helicity suppression again favours the production of heavy charged-leptons, %
 and so $\tau$~leptons and $\nu_\tau$ are more likely to be emitted than the other flavours.
 Each of the subsequent $\tau^+$ decays produces a $\cj{\nu}_\tau$.
@@ -1426,7 +1428,7 @@ where the relation in \refeq{eq:magic_ratio} was used and a new constant was int
 	\frac{G_F}{\sqrt{2}} = \frac{g^2}{8\,m_W^2}\ .
 \end{equation}
 The constant in \refeq{eq:fermi_const} is called Fermi's constant and the interactions %
-can be described by effective four-point Lagrangians.
+can be described by effective four-point Lagrangian.
 %\begin{align}
 %	\mathcal{L}_\text{eff, CC} &= - \frac{G_F}{\sqrt{2}} \qty[\cj{\ell}_\alpha \gamma^\mu(1-\gamma^5)\nu_\alpha] %
 %							     \qty[\cj{f}_2\gamma_\mu(1 - \gamma^5) f_1] \\
