@@ -704,16 +704,17 @@ the knowledge of which would define the neutrino mass hierarchy.
 
 Neutrinos propagating in a dense medium can interact with its particles, %
 although the probability of an incoherent inelastic scattering is very small (see \refsec{sec:neutrino_interactions}).
-For example the characteristic cross-section for $\nu$-proton scattering is of the order
+For example the characteristic cross-section for $\nu$-neutron elastic scattering is of the order
 \begin{equation}
-	\sigma \simeq \frac{G_F^2 s}{\pi} \sim \np{e-43} \text{cm}^2 \qty(\frac{E}{\text{MeV}})^2
+	\sigma \simeq \frac{G_F^2 E_\nu^2}{\pi} \sim \np{e-43} \text{cm}^2 \qty(\frac{E_\nu}{\text{MeV}})^2
 \end{equation}
-where $s$ is the square of the centre of mass energy of the collision and $G_F$ is the Fermi constant introduced in \refeq{eq:fermi_const}.
+where $E_\nu$ is the neutrino energy and $G_F$ is the Fermi constant introduced in \refeq{eq:fermi_const}.
 The mean free path of a neutrino passing through a material with number density $n$ can %
 be approximated as
 \begin{equation}
-	\ell \sim \frac{1}{n\,\sigma}\ .
+	\ell \sim \frac{1}{n\,\sigma}\ ,
 \end{equation}
+assuming the target particles are at rest.
 In matter, the main targets are nucleons with mass $m \simeq 1$\,GeV.
 If the number density is $n \simeq \mathcal{N}_A$\,cm\tapi{-3}, the mean free path is
 \begin{equation}
@@ -1696,9 +1697,9 @@ then this can be calculated as:
 The neutrino--hadron cross-sections as a functions of energy are shown in \reffig{fig:xsec}.
 The QE cross-section drops for neutrino energies above 1\,GeV as the available $q^2$ increases. 
 At higher energies, processes such as multi-nucleon emission or baryon resonance become relevant.
-In this kind of interactions, correlated pairs of nucleons inside the nucleus are either ejected, %
-known as $2p2h$ interactions, or the nucleon itself gets excited into a baryonic %
-resonance before decaying and emitting a charged or a neutral pion.
+%In this kind of interactions,
+Correlated pairs of nucleons inside the nucleus can be simultaneously ejected, in the so-called $2p2h$ interactions, %
+or the nucleon itself gets excited into a baryonic resonance before decaying and emitting a charged or a neutral pion.
 There are many theoretical models explaining these multi-body interactions~\cite{Rein:1980wg, Martini:2009uj, Nieves:2011pp}, %
 and neutrino interaction generators, like GENIE~\cite{Andreopoulos:2009rq} or NEUT~\cite{Hayato:2002sd}, %
 often implement more than one.
