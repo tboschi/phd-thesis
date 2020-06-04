@@ -31,7 +31,7 @@ present in the detector's components.
 As we are entering a precision era for neutrino experiments, the capability of tagging neutron %
 events is becoming a more and more crucial requisite for detectors.
 One of the most promising approaches is the addition of gadolinium to the active medium of the detector.
-Certain isotopes of Gd have a very high cross-section for thermal neutron capture %
+Certain isotopes of Gd have a very high cross-section for neutron capture %thermal 
 accompanied with the emission of high energy photons, which makes neutron detection more efficient.
 Many existing neutrino experiments are already using Gd-loaded water or Gd-loaded scintillator for neutron tagging, %
 such as EGADS~\cite{Ikeda:2019pcm}, ANNIE~\cite{Back:2019aqi}, and RENO~\cite{Ahn:2010vy}, %
@@ -276,14 +276,17 @@ SK will be exposed to a huge number of neutrino events if a core-collapse supern
 Such an event would provide not only an early warning system for other observatories, %
 but also information about the neutrino spectrum, time profile, and information about early stages of the core-collapse process, %
 like pre-supernova neutrinos from the silicon burning phase~\cite{Simpson:2019xwo}.
-A sizeable amount of the neutrinos emitted are actually antineutrinos in the energies where the IBD cross-section dominates.
+A sizeable amount of the neutrinos emitted are actually antineutrinos in the energies where the IBD cross-section dominates %
+(see \reffig{fig:xsec}).
 Detecting the neutron in the final state can be fundamental in distinguishing whether the incoming particle is %
 a neutrino or an antineutrino.
 Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states.
 At energies $E_\nu > 1$\,GeV, the number of CCQE interactions decreases and often additional neutrons %
 from $2p2h$ interactions or pions from baryon resonance are also released in the scattering process.
 The capability of separating neutrinos and antineutrinos can still produce anti-neutrino enriched samples.
-Finally, neutron-induced background in proton decay searches can be reduced, since it requires no neutrons to appear in the final state.
+Finally, neutron-induced background in proton decay searches can be reduced, %
+since most channels do not require neutrons to appear in the final state.
+%since it requires no neutrons to appear in the final state.
 
 %Among these background sources, flasher events\footnote{A flasher event refers to the phenomenon %
 %	in which a PMT mis-fires and many repetitive internal discharges are triggered also on nearby PMTs.
@@ -302,10 +305,10 @@ For fast neutrons, with $T > 1$\,MeV, elastic scattering is the prevailing inter
 for some target nuclei the only mode possible.
 The cross-section for these energetic neutrons present some wide resonance peaks which depend %
 on the target nuclei.
-The elastic scattering cross-sections at energies below 1\,MeV is almost independent of the neutron energy.
-This is true for most light isotopes, but some intermediate and heavy elements presents some specific %
+The elastic scattering cross-section at energies below 1\,MeV is almost independent of the neutron energy.
+This is true for most light isotopes, but some intermediate and heavy elements present some specific %
 behaviour at higher energy.
-Neutrons for which $T \simeq \np{0.0025}$\,eV are called \emph{thermal neutrons} because %
+Neutrons for which $T \simeq \np{0.025}$\,eV are called \emph{thermal neutrons} because %
 a Maxwell-Boltzmann distribution at the temperature of 290\,K peaks at that energy; %
 such neutrons are in thermal equilibrium with the surrounding medium.
 At thermal energies and below, the most important interaction is neutron absorption, %
@@ -361,13 +364,14 @@ Assuming uniform isotropic scattering, the average outgoing energy for the neutr
 	\label{eq:average_outgoing_E}
 	\expval{E_\text{f}} = \frac{\displaystyle \int \dd{\Omega} E_\text{f}}{\displaystyle \int\dd{\Omega}} = E_\text{i}\ \frac{1+\zeta}{2}\ .
 \end{equation}
-This means that if each neutron collision decreases to the same average final state energy, %
+This means that if each collision decreases the neutron energy by the same factor as in \refeq{eq:average_outgoing_E}, 
+%if each neutron collision decreases to the same average final state energy, %
 after $n$ interactions the neutron energy is
 \begin{equation}
 	\label{eq:energy_loss}
 	E_n = E_0 \qty(\frac{1+\zeta}{2})^n = E_0\,e^{-n \xi}\ .
 \end{equation}
-The thermalisation process follows an exponential law, and $\xi$ represents the typical %
+The thermalisation process follows an exponential law and $\xi$ represents the typical %
 energy decrease in log-scale, which on average equals to
 \begin{equation}
 	\label{eq:average_decrease}
@@ -415,13 +419,13 @@ Hydrogen presents a relative high cross-section for neutron capture, as it can b
 the cross-section for a thermal neutron on hydrogen is measured to be $\np{332.6}$~\,mb~\cite{ZERKIN201831}. %
 The cross-section of capture on the oxygen nucleus \tapi{16}O is around $0.19$~\,mb, four orders of magnitude smaller %
 than the capture on hydrogen, and therefore typically neglected.
-The hydrogen capture is followed by the emission of a $\np{2.2}$\,MeV gammas from the %
+The hydrogen capture is followed by the emission of a $\np{2.2}$\,MeV gamma from the %
 de-excitation of the newly-formed deuterium.
 The characteristic time for Maxwellian neutrons with energy below 10\,MeV to thermalise and being captured %
 by hydrogen in water has been measured to be $(\np{204.8}\pm\np{0.4})$\,\textmu s~\cite{Cokinos:1977zz}.
 The typical time and energy of this event require special triggers and dedicated analysis %
 to correctly identify the neutron capture on hydrogen in SK.
-Since the SK-IV phase, after any primary events above the standard higher energy threshold is detected, 
+Since the SK-IV phase, after any primary events above the standard higher energy threshold are detected, 
 a time window of 535\,\textmu s is saved with no threshold requirement, so that approximately the 92\,\% %
 of neutron capture signals are collected.
 The 2.2\,MeV photon produces on average 7$\sim$8 PMT hits, which are difficult to reconstruct accurately.
@@ -451,7 +455,7 @@ due to the fact that knowing the location of the capture significantly reduces t
 Neutron tagging efficiency in SK is measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
 In an Am-Be source, \tapi{214}Am decays 100\,\% of the times into \tapi{237}Np via $\alpha$ emission, %
 with a half-life of 432.6\,y.
-The $\alpha$ particle is captured by the \tapi{9}Be nuclei to become \tapi{12}C\tapi{*} with the emission of a neutron.
+The $\alpha$ particle is captured by a \tapi{9}Be nucleus to become \tapi{12}C\tapi{*} with the emission of a neutron.
 The carbon de-excites to the ground state with sometimes the emission of a 4.43\,MeV photon.
 This gamma is used to trigger the neutron emission.
 The Am-Be source is placed at the centre of a 5\,cm cube of bismuth germanite (BGO) crystal scintillator and %
@@ -463,10 +467,10 @@ this intense signal triggers in turn the search for neutron captures on hydrogen
 %Forced triggers were imposed during the SK-III phase to extend the acquisition time window.
 The candidates are selected by an analysis similar to the simulation of \refref{Irvine:2014hja}.
 Neutrons from beryllium have energies below 10\,MeV, as seen in \reffig{fig:spectra}, %
-less than the typical neutron energy resulting from an atmospheric neutrino interactions.
+less than the typical neutron energy resulting from atmospheric neutrino interactions.
 For this reason, in the calibration analysis the neutron capture vertex is assumed to be roughly at the same location %
 of the Am-Be source.
-The efficiency measured in \refref{Watanabe:2008ru} range from 13.1\,\% to 24.5\,\%, %
+The efficiency measured in \refref{Watanabe:2008ru} ranges from 13.1\,\% to 24.5\,\%, %
 the exact value of which is position dependent.
 These values agree overall with the simulation analysis.
 
@@ -497,12 +501,12 @@ undergoes $\alpha$ emissions (96.91\%) or spontaneous fission (SF, 3.09\%).
 Thanks to a shorter half-life of 2.645\,y, a \tapi{252}Cf source presents a higher activity compared to an Am-Be source %
 with the same number of nucleons.
 Furthermore, the SF process emits an average of 3.75 neutrons per fission and an average of 10.3 photons %
-summing up for a total energy of 8.2\,Mev~\cite{PhysRev.104.699}.
+summing up to a total energy of 8.2\,Mev~\cite{PhysRev.104.699}.
 As for the case of the Am-Be calibrating device, the photons can be collected by a scintillating material %
 and tag the emission of neutrons.
 After the trigger signal, multiple neutron captures on hydrogen are expected, separated by short intervals in time %
 of the order of milliseconds.
-The yield of multiple neutrons is an advantage that the SNO collaboration exploited to develop a method, %
+The yield of multiple neutrons is an advantage which the SNO collaboration exploited to develop a method, %
 called \emph{Time Series Analysis}, that uses multiplicity and time intervals between the detected events %
 to find the neutron detection efficiency, the neutron mean life inside the detector, %
 and activity from non-fission events~\cite{Labranche:2004sya}.
@@ -516,7 +520,7 @@ bringing about an even more accurate calibration than with the Am-Be source.
 
 Some preliminary studies were performed to develop a device for neutron calibration %
 of a generic water Cherenkov detector.
-For laboratory measurement, a \tapi{252}Cf source with an activity of 4.3\,kBq at the time of its production was used.
+For laboratory measurements, a \tapi{252}Cf source with an activity of 4.3\,kBq at the time of its production was used.
 %measured on the 28\tapi{th} of July, 2017.
 The californium is encapsulated in a double-hull stainless steel cylinder, 9.5\,mm in diameter and 37.5\,mm high.
 The source is placed in a simple prototype of the device, shown in \reffig{fig:setup}, %
