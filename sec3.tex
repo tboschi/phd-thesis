@@ -52,27 +52,28 @@ since most channels do not require neutrons to appear in the final state.
 %	Flasher events tend to have a broader hit timing distribution than neutrino events.} %
 
 \subsection{Neutron tagging}
+\label{sec:neutron_tagging}
 
-Neutrons have a relative long lifetime and, since they cannot directly emit Cherenkov radiation, %
-these particles can travel quite some distance from their production point without being detected.
+Neutrons have a very long lifetime and since they cannot directly emit Cherenkov radiation %
+they can travel quite some distance from their production point without being detected.
 Neutrons interact with nuclei in various ways, depending on their energy and the target nucleus.
 The interactions are divided in three typologies: scatterings, which can be elastic or inelastic, %
 absorptions, such as radiative capture or fission, and nucleon transfer reactions.
 The kinetic energy of the neutron $T$, sometimes referred to as the \emph{detection temperature}, %
-is the main factor in determining the dominant cross-section of these interactions.
-For fast neutrons, with $T > 1$\,MeV, elastic scattering is the prevailing interaction mode, and %
+is the main factor in determining the dominant interaction mode. %cross-section of these interactions.
+For fast neutrons, with $T > 1$\,MeV, elastic scattering is the prevailing process, and %interaction mode, and %
 for some target nuclei the only mode possible.
-The cross-section for these energetic neutrons present some wide resonance peaks which depend %
+The cross-section for these energetic neutrons present some resonance peaks the structure of which depend %
 on the target nuclei.
 The elastic scattering cross-section at energies below 1\,MeV is almost independent of the neutron energy.
 This is true for most light isotopes, but some intermediate and heavy elements present some specific %
 behaviour at higher energy.
-Neutrons for which $T \simeq \np{0.025}$\,eV are called \emph{thermal neutrons} because %
+Neutrons with a kinetic energy $T \simeq \np{0.025}$\,eV are called \emph{thermal neutrons} because %
 a Maxwell-Boltzmann distribution at the temperature of 290\,K peaks at that energy; %
 such neutrons are in thermal equilibrium with the surrounding medium.
 At thermal energies and below, the most important interaction is neutron absorption, %
-the cross-section of which follows the ``$1/v$ law'', with $v$ the velocity of the neutron.
-In this region, absorption cross-section increases as the velocity, or the detection temperature, of the neutron decreases
+the cross-section of which follows the ``$1/v$ law'', with $v$ being the velocity of the neutron.
+In this region, the absorption cross-section increases as the velocity of the neutron, i.e.\ its temperature, decreases:
 \begin{equation}
 	\label{eq:abs_xsec}
 	\sigma \sim \frac{1}{v} \sim \frac{1}{T}\ .
@@ -82,7 +83,7 @@ a compound nucleus with the target, which might undergo fission or radiation emi
 For energies between a few eV and hundreds of keV there are resonances in the capture cross-section which %
 are strongly dependent on the target isotope, but also on the temperature of the material.
 In fact, the thermal motions of the target relative to the incident neutron broadens the resonance peaks, %
-despite the integrated cross-section over the energy remains constant.
+even though the integrated cross-section over the energy range remains constant.
 This effect is called \emph{Doppler broadening}, and results in a decreased likelihood of capture or fission %
 when the target material has a wide energy distribution.
 
@@ -92,19 +93,23 @@ when the target material has a wide energy distribution.
 Fast neutrons slow down to thermal energies via subsequent elastic collisions, until %
 the free neutron is captured by some nucleus.
 This process is called \emph{thermalisation}.
-Considering a scattering between a neutron and a nucleus, $n + A \to n + A$, %
+Considering a scattering between a neutron and a nucleus,
+\begin{equation}
+       n + A \to n + A\ ,
+\end{equation}
 the final state energy of the neutron depends on the outgoing angle $\hat\theta$ %
 in the centre of mass frame
 \begin{equation}
 	\label{eq:outgoing_E}
 	E_\text{f} = E_\text{i}\ \frac{(1+\zeta) + (1 - \zeta) \cos\hat\theta}{2} \ ,
 \end{equation}
-where $E_\text{i,f}$ are the initial and final energies of the free neutron and $\zeta$ %
-is the following kinematic factor
+where $E_\text{i,f}$ are the initial and final energies of the free neutron.
+The kinematic factor $\zeta$ is defined as
 \begin{equation}
 	\label{eq:n_alpha}
-	\zeta = \frac{(m_n - M_A)^2}{(m_n + M_A)^2} \simeq \frac{(1 - A)^2}{(1 + A)^2}\ .
+	\zeta = \frac{(m_n - M_A)^2}{(m_n + M_A)^2} \simeq \frac{(1 - A)^2}{(1 + A)^2}\ ,
 \end{equation}
+where $m_n$ is the neutron mass, $M_A \approx A\, m_n$ is the mass of the nucleon and $A$ the mass number.
 Using classic mechanics, the scattering angle $\theta$ in the laboratory frame is given by
 \begin{equation}
 	\label{eq:lab_angle}
@@ -115,9 +120,10 @@ and the average scattering angle can be therefore estimated as
 	\label{eq:average_angle}
 	\expval{\cos\theta} = \frac{\displaystyle \int\dd{\Omega} \cos\theta}{\displaystyle \int \dd{\Omega}} = \frac{2}{3 A}\ .
 \end{equation}
-Heavy targets will deviate on average more the neutron from its path than light targets.
+%Heavy targets will deviate the neutron from its path more than light targets on average.
+On average, heavy targets will modify the neutron's path more significantly than light ones.
 For hydrogen ($A = 1$), the average angle is $\expval{\theta} \simeq 48^\circ$, but %
-for heavier elements with large atomic mass, the average angle approximate $\expval{\theta} \to 90^\circ$.
+for heavier elements with large atomic mass the average angle $\expval{\theta} \to 90^\circ$.
 Assuming uniform isotropic scattering, the average outgoing energy for the neutron is
 \begin{equation}
 	\label{eq:average_outgoing_E}
@@ -137,19 +143,20 @@ energy decrease in log-scale, which on average equals to
 	\expval{\xi} = \frac{\displaystyle \int \dd{\Omega} \log\qty(\frac{E_\text{i}}{E_\text{f}})}{\displaystyle \int\dd{\Omega}} %
 		     = \frac{\zeta - \zeta \log \zeta -1 }{\zeta - 1} = 1 + \frac{(A-1)^2}{2A} \log \frac{A-1}{A+1}\ .
 \end{equation}
-With this expression, the average number of collisions a neutron undergoes when %
-propagating in a medium can be computed.
-Because of the dependency of $\xi$ on $A$, lighter nuclides are more effective than heavier ones.
-For example, the number of interactions for a fast neutron to slow down to thermal energies in lead ($A = 208$) %
+The average number of collisions a neutron undergoes when %
+propagating in a medium can be then computed with the above expression.
+Lighter nuclides appear to be more effective at slowing down neutrons than heavier ones because of the $A$-dependency of~$\xi$.
+For example, the number of interactions necessary for a fast neutron to decelerate to thermal energies in lead ($A = 208$) %
 is about hundred times the number of interactions that would occur in hydrogen.
-In reality, the media in which neutrons propagate are compounds with more than one type of target.
+In most cases, the media in which neutrons propagate are compounds with more than one type of target.
 The energy decrease for these materials is an average of the individual components weighted by %
 their respective elastic cross-sections
 \begin{equation}
 	\label{eq:decrease_weighted}
 	\xi_\text{tot}(E) = \frac{\sum_k \sigma_k(E) \xi_k(E)}{\sum_k \sigma_k(E)}\ .
 \end{equation}
-In this simplified scenario, the impact of resonance capture has been overlooked, which only manifests at around the keV energy range.
+In this simplified scenario, the impact of resonance capture has been overlooked, %
+which is only manifest at around the keV energy range.
 While fast neutrons with energies above 1\,MeV are being slowed down to thermal energies, %
 the mean free path decreases with the neutron's velocity, and the possibility of resonance capture increases.
 These captures affect the relative neutron flux around the energy of the resonance peaks, which %
@@ -165,12 +172,12 @@ might be widened by the Doppler broadening effect.
 	Fast neutrons interact on \tapi{157}Gd via elastic scattering, but for lower energies %
 	the main contribution comes from neutron capture cross-section.
 	The $1/v$ dependency can be appreciated in both cases.
-	The inset shows a detail of the resonance region of the cross-section, between 10\,eV and 500\,eV.}
+	The inset on the right plot shows a detail of the resonance region of the cross-section, between 10\,eV and 500\,eV.}
 	\label{fig:n_xsec}
 \end{figure}
 
 
-From the considerations above, water turns out to be a good moderator for thermalising fast neutrons.
+From the considerations above, water is a good moderator for thermalising fast neutrons.
 The energy decrease for water is $\xi_{\text{H}_2\text{O}} \simeq 0.93$, %
 when the kinetic energy of the neutron is in the range $2.5\,\text{meV} \lesssim T \lesssim 0.1\,\text{MeV}$.
 Neutrons that reach subthermal energies enter the $1/v$ regions in which the capture probabilities increases as $T^{-1}$.
@@ -178,13 +185,13 @@ Hydrogen presents a relative high cross-section for neutron capture, as it can b
 the cross-section for a thermal neutron on hydrogen is measured to be $\np{332.6}$~\,mb~\cite{ZERKIN201831}. %
 The cross-section of capture on the oxygen nucleus \tapi{16}O is around $0.19$~\,mb, four orders of magnitude smaller %
 than the capture on hydrogen, and therefore typically neglected.
-The hydrogen capture is followed by the emission of a $\np{2.2}$\,MeV gamma from the %
+The hydrogen capture is followed by the emission of a single $\np{2.2}$\,MeV gamma from the %
 de-excitation of the newly-formed deuterium.
 The characteristic time for Maxwellian neutrons with energy below 10\,MeV to thermalise and being captured %
 by hydrogen in water has been measured to be $(\np{204.8}\pm\np{0.4})$\,\textmu s~\cite{Cokinos:1977zz}.
 The typical time and energy of this event require special triggers and dedicated analysis %
 to correctly identify the neutron capture on hydrogen in SK.
-Since the SK-IV phase, after any primary events above the standard higher energy threshold are detected, 
+Since the SK-IV phase, after any primary event above the standard higher energy threshold is detected, 
 a time window of 535\,\textmu s is saved with no threshold requirement, so that approximately the 92\,\% %
 of neutron capture signals are collected.
 The 2.2\,MeV photon produces on average 7$\sim$8 PMT hits, which are difficult to reconstruct accurately.
@@ -197,6 +204,9 @@ The background rejection is improved by feeding the simulated data of the select
 to a neural network, which retains an overall efficiency of 20.5\,\% with \np{0.018} backgrounds per signal event~\cite{Irvine:2014hja}.
 The efficiency is found to be highly dependent on the distance travelled by the released neutron, %
 due to the fact that knowing the location of the capture significantly reduces the background.
+A completely analgous search can be used for the gadolinium phase of SK, %
+even though the energy released in the neutron capture process is above the detection threshold, %
+the thermal lifetime is shorter, and the expected efficiency is much higher as explained in \refsec{sec:gadolinium}.
 
 %follows an exponential and the time constant is largely studied amongst all the thermalisation in water.
 %It was found that neutron thermalisation in water has a time constant of 5$\mu$s [fujino, sumita, shiba].
@@ -212,19 +222,19 @@ due to the fact that knowing the location of the capture significantly reduces t
 %https://www.sno.phy.queensu.ca/sno/papers/lyon_phd.pdf
 
 Neutron tagging efficiency in SK is measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
-In an Am-Be source, \tapi{214}Am decays 100\,\% of the times into \tapi{237}Np via $\alpha$ emission, %
+In an Am-Be source, \tapi{214}Am decays 100\,\% of the time into \tapi{237}Np via $\alpha$-emission, %
 with a half-life of 432.6\,y.
 The $\alpha$ particle is captured by a \tapi{9}Be nucleus to become \tapi{12}C\tapi{*} with the emission of a neutron.
 The carbon de-excites to the ground state with sometimes the emission of a 4.43\,MeV photon.
 This gamma is used to trigger the neutron emission.
-The Am-Be source is placed at the centre of a 5\,cm cube of bismuth germanite (BGO) crystal scintillator and %
-the device is lowered inside the water Cherenkov tank.
+To maximise this trigger signal, the Am-Be source is placed at the centre of a 5\,cm cube of %
+bismuth germanite (BGO) crystal scintillator which is lowered inside the water Cherenkov tank during calibration runs.
 The gamma ray from the beryllium neutron capture is promptly absorbed by the BGO crystal, %
-with the release of scintillation light that triggers the detectors. 
+with the release of intense scintillation light that triggers the SK detector. 
 Around a thousands of photoelectrons are typically observed by the PMTs from the BGO emission; %
-this intense signal triggers in turn the search for neutron captures on hydrogen.
+this signal triggers the search for a neutron capture on hydrogen.
 %Forced triggers were imposed during the SK-III phase to extend the acquisition time window.
-The candidates are selected by an analysis similar to the simulation of \refref{Irvine:2014hja}.
+The candidates are selected by an analysis similar to the simulation of \refref{Irvine:2014hja} and outlined in \refsec{sec:neutron_tagging}.
 Neutrons from beryllium have energies below 10\,MeV, as seen in \reffig{fig:spectra}, %
 less than the typical neutron energy resulting from atmospheric neutrino interactions.
 For this reason, in the calibration analysis the neutron capture vertex is assumed to be roughly at the same location %
@@ -256,7 +266,7 @@ These values agree overall with the simulation analysis.
 \end{figure}
 
 Another possibility as a source for neutron calibration is using californium-252, which %
-undergoes $\alpha$ emissions (96.91\%) or spontaneous fission (SF, 3.09\%).
+undergoes $\alpha$-emissions (96.91\%) or spontaneous fission (SF, 3.09\%).
 Thanks to a shorter half-life of 2.645\,y, a \tapi{252}Cf source presents a higher activity compared to an Am-Be source %
 with the same number of nucleons.
 Furthermore, the SF process emits an average of 3.75 neutrons per fission and an average of 10.3 photons %
