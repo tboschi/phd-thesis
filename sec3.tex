@@ -244,25 +244,28 @@ the exact value of which is position dependent.
 These values agree overall with the simulation analysis.
 
 \begin{figure}
-	\begin{minipage}[t]{0.49\textwidth}
-		\centering
-		\resizebox{\textwidth}{!}{\input{pics/source_spectrum.tex}}
-		\captionof{figure}[Normalised energy distribution of AmBe and \tapi{252}Cf sources]%
-		{Normalised energy distribution of neutrons emitted by an AmBe source~\cite{PMID:4744412} %
-		and neutrons and photons from the spontaneous fission of a %
-		\tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.}
-		\label{fig:spectra}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.49\textwidth}
-		\centering
-		\resizebox{\textwidth}{!}{\input{pics/QE.tex}}
-		\captionof{figure}[Distribution of optical photons from the simulation of a neutron calibration device]{%
-		Distributions showing PMT quantum efficiency (red), the scintillator yield (blue), %
-		their correlation (magenta), and the photons collected by the PMT in the GEANT4 %
-		simulation of optical photons (black).}
-		\label{fig:QE}
-	\end{minipage}
+	\centering
+	\resizebox{0.6\textwidth}{!}{\input{pics/source_spectrum.tex}}
+	\captionof{figure}[Normalised energy distribution of Am-Be and \tapi{252}Cf sources]%
+	{Normalised energy distribution of neutrons emitted by an Am-Be source~\cite{PMID:4744412} %
+	and neutrons and photons from the spontaneous fission of a \tapi{252}Cf source~\cite{PhysRev.104.699, PhysRev.108.411}.
+	The Am-Be emission is more uniform over the energy range, compared to \tapi{252}Cf which %
+	peaks at around 1\,MeV.}
+	\label{fig:spectra}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\linewidth]{pics/device.png}
+	\hspace{1em}
+	\raisebox{2.8em}{\includegraphics[width=0.3\linewidth]{pics/device_in.png}}
+	\captionof{figure}[Setup used to test a californium source]%
+	{Setup used to test the californium source.
+		The plastic scintillator cylinder is encased in an aluminium structure %
+		connected to the PMT support (black).
+		The scintillator is optically coupled to the PMT.}
+	\label{fig:setup}
 \end{figure}
 
 Another possibility as a source for neutron calibration is using californium-252, which %
@@ -275,20 +278,42 @@ As for the case of the Am-Be calibrating device, the photons can be collected by
 and tag the emission of neutrons.
 After the trigger signal, multiple neutron captures on hydrogen are expected, separated by short intervals in time %
 of the order of milliseconds.
-The yield of multiple neutrons is an advantage which the SNO collaboration exploited to develop a method, %
-called \emph{Time Series Analysis}, that uses multiplicity and time intervals between the detected events %
-to find the neutron detection efficiency, the neutron mean life inside the detector, %
-and activity from nonfission events~\cite{Labranche:2004sya}.
+The yield of multiple neutrons is an advantage which the SNO collaboration exploited with a method %
+called \emph{Time Series Analysis}.
+Multiplicity and time intervals between the detected events can be used to determine the neutron detection efficiency, %
+the neutron mean life inside the detector, and activity from nonfission events~\cite{Labranche:2004sya}.
 Differently from the Am-Be source, the activity of which must be known precisely, the neutron tagging calibration %
 with a californium source can be done in principle regardless of that information.
-The fast-neutron and photon energy spectra from \tapi{252}Cf are shown in \ref{fig:spectra}; %
-the neutrons are emitted with a most-probable energy of 0.7\,MeV and an average energy of 2.1\,MeV.
-It is reasonable to assume that the capture on hydrogen occurs in the proximity of the source, %
-bringing about an even more accurate calibration than with the Am-Be source.
+The Time Series Analysis could be implemented also in SK if californium was used as a calibrating source.
+The fast-neutron and photon energy spectra from \tapi{252}Cf are shown in \reffig{fig:spectra}. 
+The neutrons are emitted with a most-probable energy of 1\,MeV and an average energy of 2.1\,MeV.
+It is reasonable to assume that the capture on hydrogen occurs in the proximity of the source. %
+Using a californium source would bring about an even more accurate calibration than with the Am-Be source, %
+being the location of the capture an important semplification in the calibration measurement.	% ???
 
+
+\begin{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\resizebox{\textwidth}{!}{\input{pics/peaksources.tex}}
+		\captionof{figure}[Distribution of PMT peaks measured with a californium source]%
+		{Distribution of PMT peaks measured with source inside (black) and source removed from the scintillator~(red).}
+		\label{fig:source}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\resizebox{\textwidth}{!}{\input{pics/QE.tex}}
+		\captionof{figure}[Distribution of optical photons from the simulation of a neutron calibration device]{%
+			Distributions showing PMT quantum efficiency (red), the scintillator yield (blue), %
+			their correlation (magenta), and the photons collected by the PMT in the GEANT4 %
+			simulation of optical photons (black).}
+		\label{fig:QE}
+	\end{minipage}
+\end{figure}
 
 Some preliminary studies were performed to develop a device for neutron calibration %
-of a generic water Cherenkov detector.
+with californium of a generic water Cherenkov detector.
 For laboratory measurements, a \tapi{252}Cf source with an activity of 4.3\,kBq at the time of its production was used.
 %measured on the 28\tapi{th} of July, 2017.
 The californium is encapsulated in a double-hull stainless steel cylinder, 9.5\,mm in diameter and 37.5\,mm high.
@@ -303,32 +328,28 @@ the signal from the PMT is amplified and cleaned by NIM modules and finally reco
 %a daisy-chain of NIM amplifier, threshold, and discriminator is used before the digitiser to optimise the signal.
 Without the source inside the scintillator, a dark rate of 1.633\,Hz is measured, %
 whereas with the source the rate increases to 41.395\,Hz.
-The distributions of the PMT peaks collected by the digitiser are shown in Fig.~\ref{fig:source}.
+The distributions of the PMT peaks collected by the digitiser are shown in \reffig{fig:source}.
 A predicted activity of 3.1\,kBq is expected on the day of the measurement---446 days after the production of the source--- %
 which translates to a SF rate of 96.46\,Hz.
 The SF tagging efficiency with this setup is therefore estimated to be around~41\,\%.
 
 \begin{figure}
-	\begin{minipage}[t]{0.53\textwidth}
-		\centering
-		\includegraphics[width=0.48\linewidth]{pics/device.png}
-		\raisebox{2.8em}{\includegraphics[width=0.48\linewidth]{pics/device_in.png}}
-		\captionof{figure}[Setup used to test a californium source]%
-		{Setup used to test the californium source.
-		The plastic scintillator cylinder is encased in an aluminium structure %
-		connected to the PMT support (black).
-		The scintillator is optically coupled to the PMT.}
-		\label{fig:setup}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.45\textwidth}
-		\centering
-		\resizebox{\textwidth}{!}{\input{pics/peaksources.tex}}
-		\captionof{figure}[Distribution of PMT peaks measured with a californium source]%
-		{Distribution of PMT peaks measured with source inside (black) and source removed from the scintillator~(red).}
-		\label{fig:source}
-	\end{minipage}
+	\centering
+	\resizebox{\textwidth}{!}{\input{pics/n_vs_gamma_2.tex}}
+	\caption[Performance of different scintillators from the simulation of a neutron calibration device]%
+	{Result of the GEANT4 simulation (points), showing the expected performance of different scintillators %
+		as a function of the characteristic size.
+		The lines are a smooth interpolation between simulation points.
+		The fraction of absorbed energy per initial energy of neutrons (solid) and photons (dashed) %
+		is averaged and plotted against the scintillator size.
+		Three shapes are tested: a cube (green), a cylinder with diameter-height-ratio of 1:1 (blue), %
+		and a cylinder with ratio 1:2 (red).
+		On the left, the scintillating material is BGO crystal; on the right, %
+		a generic vinyltouluene plastic is used.}
+	\label{fig:geant4}
 \end{figure}
+
+
 
 A GEANT4~\cite{Agostinelli:2002hh} simulation of the setup was performed with the aim of optimising the calibration instrument.
 An ideal device would absorb all the photons converting them into visible light without affecting the neutrons.
@@ -343,7 +364,7 @@ The simulation tracks the energy deposited in the scintillator by the photons an
 from a simulation of \np{10000} SF events.
 The result is shown in Fig.~\ref{fig:geant4}, where for both photons and neutrons %
 the average value of the fraction of absorbed energy with respect to the initial one is plotted against the size.
-In terms of materials, the BGO crystal unsurprisingly performs better than the plastic scintillator, %
+In terms of materials, the BGO crystal performs better than the plastic scintillator as expected, %
 absorbing almost the entirety of photons and leaving the neutrons mainly unaffected.
 Apart from not being as efficient as scintillator, the hydrogen in the plastic thermalises the neutrons more than BGO.
 This would impact the capture time in a water Cherenkov detector.
@@ -356,23 +377,13 @@ As far as the plastic scintillator is concerned, it is more difficult to define 
 a cubic scintillator is more efficient in collecting photons, but being the form with the largest volume %
 per given size, it is also more effective in slowing down neutrons.
 The two cylinder shapes have similar performances, proportionally to their volumes.
-Further R\&D is in place to build an optimal device for neutron calibration.
 
-\begin{figure}
-	\centering
-	\resizebox{\textwidth}{!}{\input{pics/n_vs_gamma_2.tex}}
-	\caption[Performance of different scintillators from the simulation of a neutron calibration device]%
-	{Result of the GEANT4 simulation (points), showing the performance of different scintillators.
-	The lines are a smooth interpolation between simulation points.
-	The fraction of absorbed energy per initial energy of neutrons (solid) and photons (dashed) %
-	is averaged and plotted against the scintillator size.
-	Three shapes are tested: a cube (green), a cylinder with diameter-height-ratio of 1:1 (blue), %
-	and a cylinder with ratio 1:2 (red).
-	On the left, the scintillating material is BGO crystal; on the right, %
-	a generic vinyltouluene plastic is used.}
-	\label{fig:geant4}
-\end{figure}
-
+From the simulation studies, the current design used with the Am-Be source seems to be ideal %
+even for \tapi{252}Cf.
+Simply replacing the neutron source in SK and adopting the Time Series Analysis could give a more accurate calibration.
+It is important to realise that the same calibrating procedure and device can be equally applied %
+to the gadolinium phase of SK and Hyper-Kamiokande in the future.
+Further R\&D is anyway needed to build an optimal device for neutron calibration with a californium source.
 
 %To verify neutron tagging efficiency given above, experimental tests were conducted with an Am/Be source embedded in a bismuth germanite (BGO) scintillator. The prompt and delayed event-pair is generated via: α + 9Be →12
 %C∗+n; 12C∗ →12 C+γ(prompt); n+p → d+γ(delayed).
