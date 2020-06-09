@@ -1,4 +1,5 @@
-\chapter{The gadolinium phase of Super-Kamiokande}
+%\chapter{The gadolinium phase of Super-Kamiokande}
+\chapter{The future of Super-Kamiokande}
 \label{cha:skgd}
 
 The typical total cross-section for an accelerator neutrino \mbox{($\sim1$\,GeV)} %
@@ -45,13 +46,15 @@ and future experiments are planning to use the same principle.
 In the next phase of SK, hundred tons of gadolinium sulphate will be dissolved in water, making %
 Super-Kamiokande the largest Gd-doped water Cherenkov detector.	% expand this point
 The benefits and challenges of this technique are extensively covered in this chapter, %
-after a review of the working principle of a generic Cherenkov detector in \refsec{sec:wch}, %
-and the Super-Kamiokande experiment in \refsec{sec:sk}.
-The theory of neutron thermalisation and neutron capture is explained in \refsec{sec:sk_neutron}.
-In the same chapter, neutron calibration in SK is discussed together with %
-possible improvements of the neutron calibration device studied for this thesis.
-The SK Gd-phase is outlined in \refsec{sec:gadolinium} and in \refsec{sec:gad} %
-a novel technique to monitor gadolinium concentration in water using UV spectroscopy is presented.
+after a review of the working principle of a generic Cherenkov detector in \refsec{sec:wch} %
+and the theory of neutron thermalisation and neutron capture in \refsec{sec:neutron}.
+The Super-Kamiokande experiment is briefly introduced in \refsec{sec:sk}, with %
+particular emphasis on the techinques in place to control backgrounds, %
+seraches limited by irreducible background, and the improvements provisioned by the gadolinium phase of SK.
+The neutron calibration of the detector is discussed \refsec{sec:neutron_cal}
+together with a promising substitute for the neutron calibration device, studied for this thesis.
+Finally, a novel technique to monitor gadolinium concentration in water %
+using UV spectroscopy is presented in \refsec{sec:gad} and the first laboratory results are reported.
 
 \section{Cherenkov detectors}
 \label{sec:wch}
@@ -145,7 +148,7 @@ and the direction of the interaction.
 The directionality information is lost in scintillator Cherenkov detectors, because %
 scintillating materials typically emit light isotropically.
 The topology and pattern of the radiation collected is often used for event classification, %
-but a preciser particle identification is possible in certain cases, such as in SK which is discussed in the following section.
+but a preciser particle identification is possible in certain cases, such as in SK which is discussed in \refsec{sec:sk}.
 %Most detectors are capable of event classification particle identification or some sort of classification, and the particle identification capabilities %
 %of SK are covered in the following section. 
 
@@ -156,158 +159,9 @@ but a preciser particle identification is possible in certain cases, such as in 
 %``tracks'', produced by very energetic muons; ``double bangs'', %
 %the results of a $\nu_\tau$ producing a tau lepton, which decays inside the detector.
 
-\section{The Super-Kamiokande experiment}
-\label{sec:sk}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.50\textwidth]{pics/superk-schematic-tags.png}
-	\hfill
-	\includegraphics[width=0.40\textwidth]{pics/superk-internal.jpeg}
-	\caption[View of the Super-Kamiokande detector]%
-	{Cut-open view (left) of the Super-Kamiokande detector in Kamioka mine, %
-	located at the centre of Mt.\ Ikeno.
-	On the right, a wide-angle picture of the inside of the tank; each golden bulb is a 20'' PMT.}
-	\label{fig:sk_scheme}
-\end{figure}
-
-The Super-Kamiokande experiment (SK)~\cite{Fukuda:2002uc} is a water Cherenkov detector, %
-located in the Kamioka mine, under Mt.\ Ikeno in the Gifu prefecture, Japan.
-A schematic of the cavern is shown in~\reffig{fig:sk_scheme}.
-The rock overburden of $\sim\np{1000}$\,m (\np{2700}\,m.w.e.), shields very efficiently the experiment %
-and only cosmic rays with energies above 1.3\,TeV can reach the detector: %
-the muon flux at SK is about \np{6e-8}\,cm\tapi{-2}s\tapi{-1}sr\tapi{-1}, which translates to a rate of 2\,Hz %
-in the fiducial volume.
-The detector consists of a cylindrical stainless steel tank, with a height of 41.4\,m and a diameter of 39.3\,m, %
-and it is filled with 50\,kt of ultra pure water.
-The water region is separated in two concentric cylindrical regions, %
-called the inner detector (ID, 33.8\,m in diameter) and the outer detector (OD), the latter working as a passive and active veto.
-The two regions are separated by a 55\,cm insensitive region containing the support structure for the PMTs and their cables.
-The ID is instrumented with \np{11129} 20'' Hamamatsu R3600 PMTs, facing towards the inside of the tank.
-Since the 2001 implosion accident, the photocathode of the PMTs are protected by UV--transparent acrylic domes %
-and their sides with fibre-reinforced plastic.
-The photo coverage of the inner surface is around 40\,\%; the remaining surface not occupied by a PMT is %
-lined with black sheet to reduce light reflection.
-The main goal of the OD is to tag events originating or finishing outside the ID.
-The only signal events that can originate inside the ID without triggering the OD are neutrino or proton decay events.
-The OD is instrumented with \np{1885} 8'' Hamamatsu R1408 PMTs which are optically coupled to wavelength shifting plates %
-to increase light collection.
-Sheets of white tyvek maximise the propagation of photons inside the OD and help the reconstruction of %
-events occurring at the edges of the cylinder tank, also known as \emph{corner-clipping events}.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.48\textwidth]{pics/Electron.pdf}
-	\hfill
-	\includegraphics[width=0.48\textwidth]{pics/Muon.pdf}
-	\caption[Reconstructed fully-contained events in Super-Kamiokande]%
-	{Reconstructed fully-contained events in the fiducial volume of Super-Kamiokande.
-	Electron rings (left) are less defined than muon ones (right) because they are scattered more %
-	along their path.
-	The developed cylinders on the top right of each figure show the outer detector hits.
-	The histograms on the bottom right corners are the time distributions of the events.}
-	\label{fig:sk_events}
-\end{figure}
-
-The refractive index of water in the visible and ultraviolet region is $n \geq 1.33$, %
-and so a charged particle can emit Cherenkov radiation if it is travelling %
-with speed $\beta \gtrsim 0.75$.
-This translates to an energy threshold of \np{0.78}\,MeV for electrons, \np{160.26}\,MeV for muons, %
-\np{211.69}\,MeV for pions, and \np{1423.13}\,MeV for protons, which are the particles usually detected in SK.
-The Cherenkov photons, thanks to the high-purity water, reach the walls of the tank where they %
-are collected by the PMTs, forming ring patterns.
-From the time and charge deposited on the PMTs, the event reconstruction algorithm extracts information of the event %
-such as vertex, direction, and energy.
-%High energy events, for which $\beta \simeq 1$, generates Cherenkov rings with the same conic angle, %
-%which is $\theta \simeq 41^\circ$ in water. 
-The same algorithm performs particle identification by looking at the topology and the multiplicity of the ring patterns: %
-for example, an electron travelling in the water is more likely to be scattered compared to a muon %
-which on the other hand will follow a more straight path.
-The electron-induced ring is therefore less defined and fuzzier than the muon-induced one.
-This can be appreciated from the reconstructed events of \reffig{fig:sk_events} showing an electron-like and %
-a muon-like ring originated from neutrino interactions.
-Pions usually interact hadronically with oxygen nuclei, and the high cross-section does not allow long tracks; %
-their Cherenkov rings are also less defined than the muon ones.
-Muon and pion events can be accompanied by secondary rings from the electrons produced in their decays.
-Energetic gamma rays can also be detected, as for instance the ones from $\pi^0$ decays, %
-thanks to the rings produced by Compton-scattered or pair-produced electrons.
-%Cosmic rays are easily identified, not only because of the light deposited in the OD, %
-%but also thanks to the strong trail
-
-
-As part of the strategies to tackle backgrounds, only events originating at the centre %
-of the ID are considered to be valid neutrino interactions.
-%Events producing substanial hits in the OD are likely to be bac
-The materials of the walls of the tank, and particularly the glass of the PMTs, contain radioactive material, %
-such as isotopes of thorium, uranium and potassium.
-These impurities can mimic a signal event in the MeV energy region, crucial for solar neutrino studies.
-The selection algorithm in most of the SK analyses simply discards any reconstructed event %
-with the vertex less than 200\,cm away from the ID walls.
-This criterion defines a fiducial volume (FV), which is around 22.5\,kt in water mass.
-The water used to fill the tank may also contain impurities, among which radon, that cause background events.
-Thus, the water in the tank is continuously filtered at a flow rate of 60\,t/hour by a water purification system (see \refsec{sec:gadolinium}).
-An air purification system pumps radon-free air into the SK area inside the mine, %
-and therefore less radon can dissolve from air into the water system.
-%This prevents radon in the air from dissolving in the clean water, with a %
-The level of contamination reached is usually less than 3\,mBq/m\tapi{3}.
-As a comparison, unpurified air can peak at about 1200\,Bq/m\tapi{3}.
-Thanks to these precautions and state-of-the-art electronics~\cite{Nishino:2009zu}, the current energy threshold for SK is \np{3.5}\,MeV.
-
-
-\section{Neutrons in Super-Kamiokande}
-\label{sec:sk_neutron}
-
-Super-Kamiokande and other large scale water Cherenkov detectors have provided %
-much evidence in the experimental understanding of neutrinos, %
-be it originated in solar, atmospheric, or accelerator facilities.
-Despite the large exposure of the experiment, some studies are still curbed by statistical uncertainty %
-and would benefit from simply collecting more data.
-Other searches, instead, suffer from irreducible background events, as for example the detection of Supernova Relic Neutrinos (SRN), %
-%One of the main motivation to detect neutrons is to be able to detect relic supernova neutrinos, %
-an incoherent background spectrum produced from all previous core-collapse supernova explosions in the Universe (see \refsec{sec:nu_sun_sn}).
-The observation of SRN would be of great importance for improving our knowledge on the population of core-collapse SN %
-and the rate of star formation.
-The average energies of these neutrinos are around a few tens of MeV, at which the largest cross-section %
-corresponds to inverse beta decay (IBD, see \reffig{sec:xsec}).
-%which is two orders of magnitude larger than $\nu_e$ elastic scattering.
-This measurement is afflicted for energies between $14\,\text{MeV} < E_\nu < 30\,\text{MeV}$ %
-by nonrelativistic muons produced from atmospheric neutrinos which are below Cherenkov threshold and decay into electrons, %
-known as \emph{invisible muon decays}~\cite{Kaplinghat:1999xi}.
-At lower energy, the dominant backgrounds are decays of muon-induced spallation products, %
-between 10\,MeV and 18\,MeV, and reactor neutrinos below 10\,MeV.
-No SRN has been detected yet~\cite{Bays:2011si, Zhang:2013tua}, but %
-theoretical predictions place the diffuse supernova neutrino background flux (DSNB, see \refsec{sec:nu_sun_sn}) %
-within a factor of four below the upper limit obtained by SK in 2003~\cite{Malek:2002ns, Horiuchi:2008jz}.
-Even though a more recent and detailed analysis with increased efficiency, lower energy threshold, and expanded statistics %
-revealed less stringent limits~\cite{Bays:2011si}, neutron tagging capabilities could reduce %
-the invisible muon background by a factor of five and remove the spallation background.
-%upper limits on supernova relic neutrino flux are between 2.8 and 3:1 e cm2 s1 > 16 MeV total
-%positron energy (17.3 MeV E).
-
-
-Searches of galactic supernova bursts could also avail of an improved background suppression.
-SK will be exposed to a huge number of neutrino events if a core-collapse supernova occurs inside our galaxy.
-Such an event would provide not only an early warning system for other observatories, %
-but also information about the neutrino spectrum, time profile, and information about early stages of the core-collapse process, %
-like pre-supernova neutrinos from the silicon burning phase~\cite{Simpson:2019xwo}.
-A sizeable amount of the neutrinos emitted are actually antineutrinos in the energies where the IBD cross-section dominates.
-%(see \reffig{fig:xsec}).
-Detecting the neutron in the final state is fundamental for distinguishing whether the incoming particle is %
-a neutrino or an antineutrino.
-Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states.
-At energies $E_\nu > 1$\,GeV, the number of CCQE interactions decreases and often additional neutrons %
-from $2p2h$ interactions or pions from baryon resonance are also released in the scattering process.
-The possibility of separating neutrinos and antineutrinos can nevertheless improve the purity of antineutrino samples.
-Finally, neutron-induced background in proton decay searches can be reduced, %
-since most channels do not require neutrons to appear in the final state.
-%since it requires no neutrons to appear in the final state.
-
-%Among these background sources, flasher events\footnote{A flasher event refers to the phenomenon %
-%	in which a PMT mis-fires and many repetitive internal discharges are triggered also on nearby PMTs.
-%	Flasher events tend to have a broader hit timing distribution than neutrino events.} %
-
-\subsection{Neutron tagging}
-\label{sec:neutron_tagging}
+\section{Neutron thermalisation and neutron capture}
+\label{sec:neutron}
 
 Neutrons have a very long lifetime and since they cannot directly emit Cherenkov radiation %
 they can travel quite some distance from their production point without being detected.
@@ -432,6 +286,314 @@ might be widened by the Doppler broadening effect.
 \end{figure}
 
 
+
+\section{The Super-Kamiokande experiment}
+\label{sec:sk}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.50\textwidth]{pics/superk-schematic-tags.png}
+	\hfill
+	\includegraphics[width=0.40\textwidth]{pics/superk-internal.jpeg}
+	\caption[View of the Super-Kamiokande detector]%
+	{Cut-open view (left) of the Super-Kamiokande detector in Kamioka mine, %
+	located at the centre of Mt.\ Ikeno.
+	On the right, a wide-angle picture of the inside of the tank; each golden bulb is a 20'' PMT.}
+	\label{fig:sk_scheme}
+\end{figure}
+
+The Super-Kamiokande experiment (SK)~\cite{Fukuda:2002uc} is a water Cherenkov detector, %
+located in the Kamioka mine, under Mt.\ Ikeno in the Gifu prefecture, Japan.
+A schematic of the cavern is shown in~\reffig{fig:sk_scheme}.
+The rock overburden of $\sim\np{1000}$\,m (\np{2700}\,m.w.e.), shields very efficiently the experiment %
+and only cosmic rays with energies above 1.3\,TeV can reach the detector: %
+the muon flux at SK is about \np{6e-8}\,cm\tapi{-2}s\tapi{-1}sr\tapi{-1}, which translates to a rate of 2\,Hz %
+in the fiducial volume.
+The detector consists of a cylindrical stainless steel tank, with a height of 41.4\,m and a diameter of 39.3\,m, %
+and it is filled with 50\,kt of ultra pure water.
+The water region is separated in two concentric cylindrical regions, %
+called the inner detector (ID, 33.8\,m in diameter) and the outer detector (OD), the latter working as a passive and active veto.
+The two regions are separated by a 55\,cm insensitive region containing the support structure for the PMTs and their cables.
+The ID is instrumented with \np{11129} 20'' Hamamatsu R3600 PMTs, facing towards the inside of the tank.
+Since the 2001 implosion accident, the photocathode of the PMTs are protected by UV--transparent acrylic domes %
+and their sides with fibre-reinforced plastic.
+The photo coverage of the inner surface is around 40\,\%; the remaining surface not occupied by a PMT is %
+lined with black sheet to reduce light reflection.
+The main goal of the OD is to tag events originating or finishing outside the ID.
+The only signal events that can originate inside the ID without triggering the OD are neutrino or proton decay events.
+The OD is instrumented with \np{1885} 8'' Hamamatsu R1408 PMTs which are optically coupled to wavelength shifting plates %
+to increase light collection.
+Sheets of white tyvek maximise the propagation of photons inside the OD and help the reconstruction of %
+events occurring at the edges of the cylinder tank, also known as \emph{corner-clipping events}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.48\textwidth]{pics/Electron.pdf}
+	\hfill
+	\includegraphics[width=0.48\textwidth]{pics/Muon.pdf}
+	\caption[Reconstructed fully-contained events in Super-Kamiokande]%
+	{Reconstructed fully-contained events in the fiducial volume of Super-Kamiokande.
+	Electron rings (left) are less defined than muon ones (right) because they are scattered more %
+	along their path.
+	The developed cylinders on the top right of each figure show the outer detector hits.
+	The histograms on the bottom right corners are the time distributions of the events.}
+	\label{fig:sk_events}
+\end{figure}
+
+The refractive index of water in the visible and ultraviolet region is $n \geq 1.33$, %
+and so a charged particle can emit Cherenkov radiation if it is travelling %
+with speed $\beta \gtrsim 0.75$.
+This translates to an energy threshold of \np{0.78}\,MeV for electrons, \np{160.26}\,MeV for muons, %
+\np{211.69}\,MeV for pions, and \np{1423.13}\,MeV for protons, which are the particles usually detected in SK.
+The Cherenkov photons, thanks to the high-purity water, reach the walls of the tank where they %
+are collected by the PMTs, forming ring patterns.
+From the time and charge deposited on the PMTs, the event reconstruction algorithm extracts information of the event %
+such as vertex, direction, and energy.
+%High energy events, for which $\beta \simeq 1$, generates Cherenkov rings with the same conic angle, %
+%which is $\theta \simeq 41^\circ$ in water. 
+The same algorithm performs particle identification by looking at the topology and the multiplicity of the ring patterns: %
+for example, an electron travelling in the water is more likely to be scattered compared to a muon %
+which on the other hand will follow a more straight path.
+The electron-induced ring is therefore less defined and fuzzier than the muon-induced one.
+This can be appreciated from the reconstructed events of \reffig{fig:sk_events} showing an electron-like and %
+a muon-like ring originated from neutrino interactions.
+Pions usually interact hadronically with oxygen nuclei, and the high cross-section does not allow long tracks; %
+their Cherenkov rings are also less defined than the muon ones.
+Muon and pion events can be accompanied by secondary rings from the electrons produced in their decays.
+Energetic gamma rays can also be detected, as for instance the ones from $\pi^0$ decays, %
+thanks to the rings produced by Compton-scattered or pair-produced electrons.
+%Cosmic rays are easily identified, not only because of the light deposited in the OD, %
+%but also thanks to the strong trail
+
+
+\subsection{Background control}
+\label{sec:sk_neutron}
+
+As part of the strategies to tackle backgrounds, only events originating at the centre %
+of the ID are considered to be valid neutrino interactions.
+%Events producing substanial hits in the OD are likely to be bac
+The materials of the walls of the tank, and particularly the glass of the PMTs, contain radioactive material, %
+such as isotopes of thorium, uranium and potassium.
+These impurities can mimic a signal event in the MeV energy region, crucial for solar neutrino studies.
+The selection algorithm in most of the SK analyses simply discards any reconstructed event %
+with the vertex less than 200\,cm away from the ID walls.
+This criterion defines a fiducial volume (FV), which is around 22.5\,kt in water mass.
+The water used to fill the tank may also contain impurities, among which radon, that cause background events.
+Thus, the water in the tank is continuously filtered at a flow rate of 60\,t/hour by a water purification system (see \refsec{sec:gadolinium}).
+An air purification system pumps radon-free air into the SK area inside the mine, %
+and therefore less radon can dissolve from air into the water system.
+%This prevents radon in the air from dissolving in the clean water, with a %
+The level of contamination reached is usually less than 3\,mBq/m\tapi{3}.
+As a comparison, unpurified air can peak at about 1200\,Bq/m\tapi{3}.
+Thanks to these precautions and state-of-the-art electronics~\cite{Nishino:2009zu}, the current energy threshold for SK is \np{3.5}\,MeV.
+
+Super-Kamiokande has provided %and other large scale water Cherenkov detectors have provided %
+much evidence in the experimental understanding of neutrinos, %
+be it originated in solar, atmospheric, or accelerator facilities.
+Despite the large exposure of the experiment and excellent background control, % ??
+some studies are still curbed by statistical uncertainty and would benefit from simply collecting more data.
+Other searches, instead, suffer from irreducible background events, as for example the detection of Supernova Relic Neutrinos (SRN), %
+%One of the main motivation to detect neutrons is to be able to detect relic supernova neutrinos, %
+an incoherent background spectrum produced from all previous core-collapse supernova explosions in the Universe (see \refsec{sec:nu_sun_sn}).
+The observation of SRN would be of great importance for improving our knowledge on the population of core-collapse SN %
+and the rate of star formation.
+The average energies of these neutrinos are around a few tens of MeV, at which the largest cross-section %
+corresponds to inverse beta decay (IBD, see \reffig{sec:xsec}).
+%which is two orders of magnitude larger than $\nu_e$ elastic scattering.
+This measurement is afflicted for energies between $14\,\text{MeV} < E_\nu < 30\,\text{MeV}$ %
+by nonrelativistic muons produced from atmospheric neutrinos which are below Cherenkov threshold and decay into electrons, %
+known as \emph{invisible muon decays}~\cite{Kaplinghat:1999xi}.
+At lower energy, the dominant backgrounds are decays of muon-induced spallation products, %
+between 10\,MeV and 18\,MeV, and reactor neutrinos below 10\,MeV.
+No SRN has been detected yet~\cite{Bays:2011si, Zhang:2013tua}, but %
+theoretical predictions place the diffuse supernova neutrino background flux (DSNB, see \refsec{sec:nu_sun_sn}) %
+within a factor of four below the upper limit obtained by SK in 2003~\cite{Malek:2002ns, Horiuchi:2008jz}.
+Even though a more recent and detailed analysis with increased efficiency, lower energy threshold, and expanded statistics %
+revealed less stringent limits~\cite{Bays:2011si}, neutron tagging capabilities could reduce %
+the invisible muon background by a factor of five and remove the spallation background.
+%upper limits on supernova relic neutrino flux are between 2.8 and 3:1 e cm2 s1 > 16 MeV total
+%positron energy (17.3 MeV E).
+
+Searches of galactic supernova bursts could also avail of an improved background suppression.
+SK will be exposed to a huge number of neutrino events if a core-collapse supernova occurs inside our galaxy.
+Such an event would provide not only an early warning system for other observatories, %
+but also information about the neutrino spectrum, time profile, and information about early stages of the core-collapse process, %
+like pre-supernova neutrinos from the silicon burning phase~\cite{Simpson:2019xwo}.
+A sizeable amount of the neutrinos emitted are actually antineutrinos in the energies where the IBD cross-section dominates.
+%(see \reffig{fig:xsec}).
+Detecting the neutron in the final state is fundamental for distinguishing whether the incoming particle is %
+a neutrino or an antineutrino.
+Improved neutron tagging is also helpful to understand atmospheric and accelerator neutrino interactions and final states.
+At energies $E_\nu > 1$\,GeV, the number of CCQE interactions decreases and often additional neutrons %
+from $2p2h$ interactions or pions from baryon resonance are also released in the scattering process.
+The possibility of separating neutrinos and antineutrinos can nevertheless improve the purity of antineutrino samples.
+Finally, neutron-induced background in proton decay searches can be reduced, %
+since most channels do not require neutrons to appear in the final state.
+%since it requires no neutrons to appear in the final state.
+
+%Among these background sources, flasher events\footnote{A flasher event refers to the phenomenon %
+%	in which a PMT mis-fires and many repetitive internal discharges are triggered also on nearby PMTs.
+%	Flasher events tend to have a broader hit timing distribution than neutrino events.} %
+
+
+\subsection{The gadolinium phase of Super-Kamiokande}
+\label{sec:gadolinium}
+
+%In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
+%will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
+%Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
+%The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
+%Capture of a thermal neutron on hydrogen has a cross-section of $\np{332.6}\pm\np{0.7}$~\,b, %
+%characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
+%After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
+%compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
+%However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
+%
+%The detectable light following neutron capture on Gd (in thin foils) in possible discrete counters was carefully simulated %
+%for the SNO heavy water Cerenkov detector.
+%The equivalent single electron energy was found to peak at about 5 MeV, and range over 3--8\,MeV.
+%This spread reflects the intrinsic variation in the gamma cascades and the detector energy
+%resolution (the simulation had 5 photoelectrons per MeV of electron energy, compared to 6 in SK-I)~\cite{Beacom:2003nk}.
+%The energy threshold for SK is 5\,MeV, and the search of hydrogen-tagged neutrons is not efficient (20\%).
+%a long time window in which to look for the hydrogen signal, 
+%Capture on gadolinium has a cross-section of $\np{49e3}$~b, which de-excites emitting a $\sim\np{8}$~MeV gamma-ray cascade.
+%By adding 0.2\,\% by mass of the Gd salt as Gd\tped{2}(SO\tped{4})\tped{3}, the characteristic time of capture is %
+%$\sim30$~\textmu s and an efficiency of 90\,\% can be achieved.
+%The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
+%respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
+%Hydrogen alone has a cross-section of \np{3.321e-1}\,b.
+
+
+Gadolinium-157 has the highest thermal neutron capture cross-section among any stable nuclides.
+It is estimated to be \np{2.537E5}\,b and its natural abundance is around 15.65\,\%.
+Another isotope of gadolinium with similar abundance is \tapi{155}Gd, at 14.80\,\%, %
+which also presents a very high neutron capture cross-section \np{6.074E4}\,b.
+Dissolving gadolinium compounds in water could therefore considerably increase the neutron capture %
+probability, as proposed for the first time in \refref{Beacom:2003nk}.
+Gd-doped water enhances the capture cross-section, with an effective cross-section of \np{49e3}\,b for a 0.2\,\% concentration, %
+compared to pure water with $\sim$0.3\,b on a free proton.
+Upon capturing a neutron, the Gd nucleus emits three to four gamma rays having a total energy of about 8\,MeV.
+Such energetic photons can produce Cherenkov light via Compton-scattering and therefore they can be 
+reliably detected in a large detector volume.
+The neutron in gadolinium-loaded water thermalises more quickly than in just pure water, with a %
+characteristic time of $\sim$30\,\textmu s, and it can be captured by a Gd nucleus with an %
+estimated efficiency of 90\,\%~\cite{Beacom:2003nk} for a 0.2\,\% Gd solution (see \reffig{fig:gd_conc}).
+%The time and spatial correlation of the positron and neutron capture events ($20~\mu$s and 4~cm) %
+%can significantly reduce the backgrounds, and hence enhance the nu e signal events.
+%Even moderately energetic neutrons ranging from tens to hundreds of MeV will quickly lose energy %
+%by collisions with free protons and oxygen nuclei in water. 
+%Once thermalised, the neutrons undergo radiative capture, combining with a nearby nucleus to %
+%produce a more tightly bound final state, with excess energy released in a gamma-ray ( ) cascade. 
+
+%\iffalse
+\begin{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{\input{pics/gdconcentration.tex}}
+		\captionof{figure}[Dependency of neutron capture efficiency with respect to gadolinium concentration]%
+		{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
+		concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
+		increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
+		\label{fig:gd_conc}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\raisebox{0.8em}{\includegraphics[width=\linewidth]{pics/bandpass.pdf}}
+		\captionof{figure}[Schematic of the band-pass filtration system and the fast recirculation loop in EGADS]%
+		{Schematic of the band-pass filtration system and the fast recirculation loop in EGADS, %
+		where the main components of the system are highlighted: anion-exchange resins (AE), %
+		ultraviolet lamp (UV), total organic compound lamp (TOC), deionising system (DI), %
+		reverse osmosis stage (RO). See text and \refref{Ikeda:2019pcm} for details. }
+		\label{fig:egads}
+	\end{minipage}
+\end{figure}
+%\fi
+
+
+In the next phase of the Super-Kamiokande experiment, called SK-Gd, a gadolinium salt compound %
+will be dissolved in the detector to improve the ability to identify neutrons.
+The gadolinium phase is supposed to start in late 2020.
+This will be possible thanks to extensive R\&D performed by the EGADS experiment~\cite{Ikeda:2019pcm}.
+In \refref{Beacom:2003nk}, gadolinium trichloride GdCl\tped{3} was proposed, %
+but the current full-scale plan for SK and EGADS has settled on using gadolinium sulphate Gd\tped{2}(SO\tped{4})\tped{3}.
+%---another candidate being 
+This choice was determined by a few requirements by which a Gd compound candidate must comply.
+In addition to the aforementioned salts, a third option could have been gadolinium nitrate Gd(NO\tped{3})\tped{3}.
+The candidate compound must be water soluble, also in large amounts, but all of the three gadolinium salts %
+easily dissolve in water.
+%The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
+%needing stirring to fully dissolve, while the Gd2(SO4)3, can be forced into solution with the addition of %
+%a small amount of sulfuric acid, about 380 ml of acid for 28 kg of Gd2(SO4)3 in 14 tons of water (test done at EGADS).
+%So, this solubility requirement does not immediately rule out any of these three compounds.
+If used in very large quantities, as it will be for SK-Gd, the compound must be safe for %
+%Next, if the compound is to be used inside a very large water Cherenkov detector, such as SK, it must be safe for
+the detectors components and it should be nontoxic. %it may be easily put into existing detectors.
+None of the above salts are toxic, but GdCl\tped{3} is corrosive and not suitable for a full scale test.
+Soak tests in a Gd solution at $25^\circ$C showed that the rubber friction pads used to hold the inner detector PMTs %
+are susceptible to the sulphate, even though they seem to be affected also by pure water.
+In over twenty years of operation of SK, the effect has never been noticed, meaning the filtration system %
+removes the impurities from this material with great success.
+Taking in account the different scales between the detector and the test and that the typical temperature %
+of the water in SK is around $13^\circ$C, the case was deemed not to be a potential problem.
+%they show different corrosive properties, due to the different anions of the molecule.
+%The nitrate and the sulfate turn out to be non-corrosive, and do not seem to affect detectors components much, if at all.
+%An extensive soak test study was carried out in Japan, with each of the 31 different materials inside the SK detector %
+%being soaked in both pure water and Gd2(SO4)3 solution.
+%Only the which it is in the case of SK.
+%However, the chloride is corrosive, so for this reason the GdCl3 has been ruled out as a full scale test candidate.
+It is also necessary that the gadolinium solution maintains a high level of optical transparency, %
+so that optical photons of Cherenkov radiation can propagate inside the tank without attenuation.
+The Gd(NO\tped{3})\tped{3} is opaque in the UV region of the electromagnetic spectrum, for wavelengths less than 350\,nm, %
+and this unfortunately is where a large fraction of Cherenkov light is detected by SK PMTs, %
+so it must be rejected as a good full scale candidate.
+This leaves Gd2(SO4)3 as the only choice possible, having good transparency in the UV and optical regions.
+%This is in fact the choice that has been made by the EGADS group, and the remaining studies described in this paper %
+%have been done using, or under the assumption that, Gd2(SO4)3 will be used.
+%One last exceptionally nice quality about this compound is today it costs only 5 US dollars per kilogram, %
+%meaning it would only be about 500,000 US dollars to dope SK, a price which is on the scale of such a major %
+%experiment~\cite{1201.1017}[conference].
+
+The most challenging aspect of a gadolinium-loaded water Cherenkov detector is the filtration system.
+The SK water purification system produces ultra pure water, close to the theoretical maximum, %
+with a resistivity around $18$\,M$\Omega\cdot$cm.
+This high purity is achieved thanks to several filtration stages, including microfilters, %
+ultrafilters discarding particles with a size less than 0.1\,\textmu m, UV lamps for bacterial growth, %
+reverse osmosis, vacuum and membrane degasifier, and anion-exchange resins.
+The current process, without modifications, would completely remove the dissolved gadolinium.
+Therefore, in order to keep good water quality and high transparency, it is necessary to adapt the purification system %
+such that it can remove all impurities, ions included, except Gd\tapi{3+} and its anionic partner (SO\tped{4})\tapi{2-}.
+A new filtration system, called ``band-pass filtration system'', has been devised for EGADS and runs in parallel to %
+the fast-recirculation loop~\cite{Ikeda:2019pcm}.
+The schematic is illustrated in \reffig{fig:egads}.
+The water from the water Cherenkov tank is first cleaned by microfilters and UV light.
+The Gd solution is then cooled down, as the sulphate dissolves better at lower temperatures, %
+before passing through an ultafilter.
+At this stage, a series of nanofilters splits up the water line into Gd-enriched water and %
+water with less than one part-per-million of gadolinium.
+The concentrated line goes directly back to a buffer collection tank, whereas the gadolinium-free line %
+is first cleaned by deionisation and reverse osmosis.
+In the collection tank, dissolved air is removed by a membrane degasifier and resins are used %
+for the final purification.
+After full loading up to a concentration of 0.2\,\% of Gd, the water transparency in EGADS is found to be within typical SK values %
+thanks to the water filtration system which can maintain good water quality and minimise gadolinium losses.
+
+The water system for the gadolinium phase of SK will be essentially a scaled version of the EGADS filtration system.
+During the first stage, a solution of 0.02\,\% in Gd\tped{2}(SO\tped{4})\tped{3} mass will be loaded in SK, %
+to progressively increase it up to 0.2\,\% after the first commissioning.
+When the experiment will be decommissioned in the future, the gadolinium will be extracted from the water system %
+to avoid dispersing it in the environment.
+This process was also tested successfully by the EGADS experiment.
+
+
+\section{Neutron calibration in Super-Kamiokande}
+\label{sec:neutron_cal}
+
+%https://arxiv.org/pdf/0811.0735.pdf
+%https://www.sno.phy.queensu.ca/sno/papers/labranche_phd.pdf
+%https://www.sno.phy.queensu.ca/sno/papers/lyon_phd.pdf
+
+
 From the considerations above, water is a good moderator for thermalising fast neutrons.
 The energy decrease for water is $\xi_{\text{H}_2\text{O}} \simeq 0.93$, %
 when the kinetic energy of the neutron is in the range $2.5\,\text{meV} \lesssim T \lesssim 0.1\,\text{MeV}$.
@@ -470,12 +632,6 @@ the thermal lifetime is shorter, and the expected efficiency is much higher as e
 %In SK, for instance, this gamma results in about seven photo-electrons, and thus only detectable with $\simeq$20\,\% %
 %efficiency.
 
-\subsection{Neutron calibration}
-
-%https://arxiv.org/pdf/0811.0735.pdf
-%https://www.sno.phy.queensu.ca/sno/papers/labranche_phd.pdf
-%https://www.sno.phy.queensu.ca/sno/papers/lyon_phd.pdf
-
 Neutron tagging efficiency in SK is measured with an americium-beryllium (Am-Be) source~\cite{Watanabe:2008ru}.
 In an Am-Be source, \tapi{214}Am decays 100\,\% of the time into \tapi{237}Np via $\alpha$-emission, %
 with a half-life of 432.6\,y.
@@ -489,7 +645,7 @@ with the release of intense scintillation light that triggers the SK detector.
 Around a thousands of photoelectrons are typically observed by the PMTs from the BGO emission; %
 this signal triggers the search for a neutron capture on hydrogen.
 %Forced triggers were imposed during the SK-III phase to extend the acquisition time window.
-The candidates are selected by an analysis similar to the simulation of \refref{Irvine:2014hja} and outlined in \refsec{sec:neutron_tagging}.
+The candidates are selected by an analysis similar to the simulation of \refref{Irvine:2014hja} and outlined above.
 Neutrons from beryllium have energies below 10\,MeV, as seen in \reffig{fig:spectra}, %
 less than the typical neutron energy resulting from atmospheric neutrino interactions.
 For this reason, in the calibration analysis the neutron capture vertex is assumed to be roughly at the same location %
@@ -688,155 +844,6 @@ Further R\&D is anyway needed to build an optimal device for neutron calibration
 
 
 
-
-\section{Gadolinium neutron capture}
-\label{sec:gadolinium}
-
-%In the next phase of the Super-Kamiokande experiment, a gadolinium salt compound Gd\tped{2}(SO\tped{4})\tped{3} %
-%will be added to the detector~\cite{}, which will improve the ability of the detector to identify neutrons.
-%Neutrons are emitted in inverse beta decay (IBD) process, $\cj{\nu}_e + p \to e^+ + n$.
-%The current technique to tag neutrons in SK is by detecting capture on hydrogen nuclei.
-%Capture of a thermal neutron on hydrogen has a cross-section of $\np{332.6}\pm\np{0.7}$~\,b, %
-%characteristic time of $\sim200$\,\textmu s in water, with the release of $\np{2.2}$\,MeV gammas.
-%After the prompt Cherenkov radiation from the charged lepton, the secondary signal from an electron, %
-%compton-scattered by the 2.2\,MeV photon, is looked for in a long time window.
-%However, in water what matters are the electrons Compton-scattered above the Cerenkov threshold by relatively hard gammas.
-%
-%The detectable light following neutron capture on Gd (in thin foils) in possible discrete counters was carefully simulated %
-%for the SNO heavy water Cerenkov detector.
-%The equivalent single electron energy was found to peak at about 5 MeV, and range over 3--8\,MeV.
-%This spread reflects the intrinsic variation in the gamma cascades and the detector energy
-%resolution (the simulation had 5 photoelectrons per MeV of electron energy, compared to 6 in SK-I)~\cite{Beacom:2003nk}.
-%The energy threshold for SK is 5\,MeV, and the search of hydrogen-tagged neutrons is not efficient (20\%).
-%a long time window in which to look for the hydrogen signal, 
-%Capture on gadolinium has a cross-section of $\np{49e3}$~b, which de-excites emitting a $\sim\np{8}$~MeV gamma-ray cascade.
-%By adding 0.2\,\% by mass of the Gd salt as Gd\tped{2}(SO\tped{4})\tped{3}, the characteristic time of capture is %
-%$\sim30$~\textmu s and an efficiency of 90\,\% can be achieved.
-%The isotopes \tapi{155}Gd and \tapi{157}Gd present very high cross-sections to thermal neutron capture, %
-%respectively \np{6.074e4}\,b and \np{2.537e5}\,b.
-%Hydrogen alone has a cross-section of \np{3.321e-1}\,b.
-
-
-Gadolinium-157 has the highest thermal neutron capture cross-section among any stable nuclides.
-It is estimated to be \np{2.537E5}\,b and its natural abundance is around 15.65\,\%.
-Another isotope of gadolinium with similar abundance is \tapi{155}Gd, at 14.80\,\%, %
-which also presents a very high neutron capture cross-section \np{6.074E4}\,b.
-Dissolving gadolinium compounds in water could therefore considerably increase the neutron capture %
-probability, as proposed for the first time in \refref{Beacom:2003nk}.
-Gd-doped water enhances the capture cross-section, with an effective cross-section of \np{49e3}\,b for a 0.2\,\% concentration, %
-compared to pure water with $\sim$0.3\,b on a free proton.
-Upon capturing a neutron, the Gd nucleus emits three to four gamma rays having a total energy of about 8\,MeV.
-Such energetic photons can produce Cherenkov light via Compton-scattering and therefore they can be 
-reliably detected in a large detector volume.
-The neutron in gadolinium-loaded water thermalises more quickly than in just pure water, with a %
-characteristic time of $\sim$30\,\textmu s, and it can be captured by a Gd nucleus with an %
-estimated efficiency of 90\,\%~\cite{Beacom:2003nk} for a 0.2\,\% Gd solution (see \reffig{fig:gd_conc}).
-%The time and spatial correlation of the positron and neutron capture events ($20~\mu$s and 4~cm) %
-%can significantly reduce the backgrounds, and hence enhance the nu e signal events.
-%Even moderately energetic neutrons ranging from tens to hundreds of MeV will quickly lose energy %
-%by collisions with free protons and oxygen nuclei in water. 
-%Once thermalised, the neutrons undergo radiative capture, combining with a nearby nucleus to %
-%produce a more tightly bound final state, with excess energy released in a gamma-ray ( ) cascade. 
-
-%\iffalse
-\begin{figure}
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\resizebox{\linewidth}{!}{\input{pics/gdconcentration.tex}}
-		\captionof{figure}[Dependency of neutron capture efficiency with respect to gadolinium concentration]%
-		{Estimated dependency of neutron capture efficiency on gadolinium with respect to the gadolinium %
-		concentration in water. Super-Kamiokande will start with a 0.02\,\% Gd-load, %
-		increasing up to 0.2\,\% to reach an expected $\sim$90\,\% capture efficiency.}
-		\label{fig:gd_conc}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.5\textwidth}
-		\centering
-		\raisebox{0.8em}{\includegraphics[width=\linewidth]{pics/bandpass.pdf}}
-		\captionof{figure}[Schematic of the band-pass filtration system and the fast recirculation loop in EGADS]%
-		{Schematic of the band-pass filtration system and the fast recirculation loop in EGADS, %
-		where the main components of the system are highlighted: anion-exchange resins (AE), %
-		ultraviolet lamp (UV), total organic compound lamp (TOC), deionising system (DI), %
-		reverse osmosis stage (RO). See text and \refref{Ikeda:2019pcm} for details. }
-		\label{fig:egads}
-	\end{minipage}
-\end{figure}
-%\fi
-
-
-In the next phase of the Super-Kamiokande experiment, called SK-Gd, a gadolinium salt compound %
-will be dissolved in the detector to improve the ability to identify neutrons.
-The gadolinium phase is supposed to start in late 2020.
-This will be possible thanks to extensive R\&D performed by the EGADS experiment~\cite{Ikeda:2019pcm}.
-In \refref{Beacom:2003nk}, gadolinium trichloride GdCl\tped{3} was proposed, %
-but the current full-scale plan for SK and EGADS has settled on using gadolinium sulphate Gd\tped{2}(SO\tped{4})\tped{3}.
-%---another candidate being 
-This choice was determined by a few requirements by which a Gd compound candidate must comply.
-In addition to the aforementioned salts, a third option could have been gadolinium nitrate Gd(NO\tped{3})\tped{3}.
-The candidate compound must be water soluble, also in large amounts, but all of the three gadolinium salts %
-easily dissolve in water.
-%The above three candidates can all be dissolved fairly easily, with the GdCl3 and Gd(NO3)3 only
-%needing stirring to fully dissolve, while the Gd2(SO4)3, can be forced into solution with the addition of %
-%a small amount of sulfuric acid, about 380 ml of acid for 28 kg of Gd2(SO4)3 in 14 tons of water (test done at EGADS).
-%So, this solubility requirement does not immediately rule out any of these three compounds.
-If used in very large quantities, as it will be for SK-Gd, the compound must be safe for %
-%Next, if the compound is to be used inside a very large water Cherenkov detector, such as SK, it must be safe for
-the detectors components and it should be nontoxic. %it may be easily put into existing detectors.
-None of the above salts are toxic, but GdCl\tped{3} is corrosive and not suitable for a full scale test.
-Soak tests in a Gd solution at $25^\circ$C showed that the rubber friction pads used to hold the inner detector PMTs %
-are susceptible to the sulphate, even though they seem to be affected also by pure water.
-In over twenty years of operation of SK, the effect has never been noticed, meaning the filtration system %
-removes the impurities from this material with great success.
-Taking in account the different scales between the detector and the test and that the typical temperature %
-of the water in SK is around $13^\circ$C, the case was deemed not to be a potential problem.
-%they show different corrosive properties, due to the different anions of the molecule.
-%The nitrate and the sulfate turn out to be non-corrosive, and do not seem to affect detectors components much, if at all.
-%An extensive soak test study was carried out in Japan, with each of the 31 different materials inside the SK detector %
-%being soaked in both pure water and Gd2(SO4)3 solution.
-%Only the which it is in the case of SK.
-%However, the chloride is corrosive, so for this reason the GdCl3 has been ruled out as a full scale test candidate.
-It is also necessary that the gadolinium solution maintains a high level of optical transparency, %
-so that optical photons of Cherenkov radiation can propagate inside the tank without attenuation.
-The Gd(NO\tped{3})\tped{3} is opaque in the UV region of the electromagnetic spectrum, for wavelengths less than 350\,nm, %
-and this unfortunately is where a large fraction of Cherenkov light is detected by SK PMTs, %
-so it must be rejected as a good full scale candidate.
-This leaves Gd2(SO4)3 as the only choice possible, having good transparency in the UV and optical regions.
-%This is in fact the choice that has been made by the EGADS group, and the remaining studies described in this paper %
-%have been done using, or under the assumption that, Gd2(SO4)3 will be used.
-%One last exceptionally nice quality about this compound is today it costs only 5 US dollars per kilogram, %
-%meaning it would only be about 500,000 US dollars to dope SK, a price which is on the scale of such a major %
-%experiment~\cite{1201.1017}[conference].
-
-The most challenging aspect of a gadolinium-loaded water Cherenkov detector is the filtration system.
-The SK water purification system produces ultra pure water, close to the theoretical maximum, %
-with a resistivity around $18$\,M$\Omega\cdot$cm.
-This high purity is achieved thanks to several filtration stages, including microfilters, %
-ultrafilters discarding particles with a size less than 0.1\,\textmu m, UV lamps for bacterial growth, %
-reverse osmosis, vacuum and membrane degasifier, and anion-exchange resins.
-The current process, without modifications, would completely remove dissolved gadolinium.
-Therefore, in order to keep good water quality and high transparency, it is necessary to adapt the purification system %
-such that it can remove all impurities, ions included, except Gd\tapi{3+} and its anionic partner (SO\tped{4})\tapi{2-}.
-A new filtration system, called ``band-pass filtration system'', has been devised for EGADS and runs in parallel to %
-the fast-recirculation loop~\cite{Ikeda:2019pcm}.
-The schematic is illustrated in \reffig{fig:egads}.
-The water from the water Cherenkov tank is first cleaned by microfilters and UV light.
-The Gd solution is then cooled down, as the sulphate dissolves better at lower temperatures, %
-before passing through an ultafilter.
-At this stage, a series of nanofilters splits up the water line into Gd-enriched water and %
-water with less than one part-per-million of gadolinium.
-The concentrated line goes directly back to a buffer collection tank, whereas the gadolinium-free line %
-is first cleaned by deionisation and reverse osmosis.
-In the collection tank, dissolved air is removed by a membrane degasifier and resins are used %
-for the final purification.
-After full loading up to a concentration of 0.2\,\% of Gd, the water transparency in EGADS is found to be within typical SK values %
-thanks to the water filtration system which can maintain good water quality and minimise gadolinium losses.
-
-The water system for the gadolinium phase of SK will be essentially a scaled version of the EGADS filtration system.
-During the first stage, a solution of 0.02\,\% in Gd\tped{2}(SO\tped{4})\tped{3} mass will be loaded in SK, %
-to progressively increase it up to 0.2\,\% after the first commissioning.
-When the experiment will be decommissioned in the future, the gadolinium will be extracted from the water system %
-to avoid dispersing it in the environment.
-This process was also tested successfully by the EGADS experiment.
 
 \section{Monitoring gadolinium concentration}
 \label{sec:gad}
