@@ -921,6 +921,27 @@ FUNCTION {article}
         newline$
 }
 
+FUNCTION {link}
+{
+        output.bibitem
+        write$
+        format.authors " (" *
+        write$
+        format.date ") " *
+        write$
+        title empty$
+        { "." }
+        { url empty$
+           { ", {\it " title "t" change.case$ * "}." * }
+           { ", \href{" url * "}{\it " * title "t" change.case$ * "}." * }
+           if$
+        }
+        if$
+        write$
+        newline$
+}
+
+
 FUNCTION {phdthesis}
 {
         output.bibitem
