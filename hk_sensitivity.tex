@@ -16,7 +16,7 @@ baryon number violation and interactions out of thermal equilibrium~\cite{Sakhar
 The amount of CP violation in the quark sector however is not enough %
 to describe the observed baryon asymmetry within the SM~\cite{Farrar:1993hn}.
 %Looking at the lepton sector,
-A conceivaable CP asymmetry in the lepton sector could be translated into baryogenesis %
+A conceivable CP asymmetry in the lepton sector could be translated into baryogenesis %
 via non-perturbative sphaleronic processes~\cite{Fukugita:1986hr}.
 This mechanism, called \emph{leptogenesis}, would be allowed by the addition of %
 right-handed Majorana neutrinos to the SM which can violate lepton number.
@@ -40,7 +40,7 @@ In this chapter, a study of the sensitivity of the HK experiment to oscillation 
 with special emphasis on $\delta_\text{CP}$.
 After a review of the theory and phenomenology of CP violation in neutrino oscillation in \refsec{sec:cp_oscillation}, %
 the HK experiment is introduced in \refsec{sec:hk}.
-The methodology of the sensitivty studies is outlined in \refsec{sec:sensitivity}, %
+The methodology of the sensitivity studies is outlined in \refsec{sec:sensitivity}, %
 together with the results from a validation test.
 Finally, a preliminary analysis of the systematic model is reported in \refsec{sec:syst_studies} %
 along with the full sensitivity to CP violation.
@@ -412,10 +412,10 @@ To this end, a fitting framework capable of performing a simultaneous study of b
 
 For the study, SK atmospheric Monte Carlo (MC) data are adapted and scaled to HK statistics to form the atmospheric sample.
 The events are then classified and binned into several two-dimensional histograms of $\log p$ and $\cos\vartheta$, %
-where $p$ and $\vartheta$ are respecitvely the momentum and the azimuthal angle of the reconstruscted charged lepton.
+where $p$ and $\vartheta$ are respectively the momentum and the azimuthal angle of the reconstructed charged lepton.
 The histograms are summarised in~\reftab{tab:atmo_samples} where they are categorised as fully-contained (FC), %
 partially-contained (PC), or upward-going muons (UP-$\mu$) events~\cite{Jiang:2019xwn}.
-There are a total of \np{2224} bins employed for the atmoshperic sample.
+There are a total of \np{2224} bins employed for the atmospheric sample.
 The beam sample instead is created using the far detector flux prediction, as explained in \refsec{sec:prediction}.
 From the flux prediction, fully-contained candidate events in the fiducial volume are grouped %
 as appearance signal, i.e.\ $\nu_\mu\to\nu_e$ and $\cj{\nu}_\mu\to\cj{\nu}_e$, %
@@ -633,7 +633,7 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 		The appearance signals $\nu_\mu \to \nu_e$ and $\cj{\nu}_\mu \to \cj{\nu}_e$ are compared to the %
 		background events.
 		The spectra on the top and bottom panel are generated using respectively %
-		the Design Report and the Asimov A oscillation parameters (see \reftab{tab:asimovA}).}
+		the Design Report and the Asimov~A oscillation parameters (see \reftab{tab:asimovA}).}
 	\label{fig:reco_spectra_e}
 \end{figure}
 
@@ -649,7 +649,7 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 		The disappearance events $\nu_\mu \to \nu_\mu$ and $\cj{\nu}_\mu \to \cj{\nu}_\mu$ %
 		are compared to the small contributions from electron neutrinos.
 		The spectra on the top and bottom panel are generated using respectively %
-		the Design Report and the Asimov A oscillation parameters (see \reftab{tab:asimovA}).}
+		the Design Report and the Asimov~A oscillation parameters (see \reftab{tab:asimovA}).}
 	\label{fig:reco_spectra_mu}
 \end{figure}
 
@@ -737,7 +737,7 @@ whereas at fixed correlation the effect of the systematics on the likelihood is 
 		even though the latter shows variation not only for correlated, but also for anticorrelated systematics.
 		The bottom panels show instead the difference between the profiles at different error magnitudes and %
 		the curve computed without systematic uncertainties (black).
-		The dashed lines show the position of the best fit value, which is always at the nominal Asimov A value.}
+		The dashed lines show the position of the best fit value, which is always at the nominal Asimov~A value.}
 	\label{fig:nuenorm_mass_angles}
 \end{figure}
 
@@ -834,7 +834,7 @@ its impact on oscillation parameter uncertainties is significantly smaller,
 given that the near and far detector measurements sample nearly the same flux.
 %As mentioned earlier, the neutrino interactions are simulated with the NEUT [15] neutrino interaction generator.
 The dominant CCQE interaction (see \refsec{sec:ccqe}) %
-is modeled with a relativistic Fermi gas nuclear model including long-range correlations %
+is modelled with a relativistic Fermi gas nuclear model including long-range correlations %
 using the random phase approximation (RPA)~\cite{Nieves:2004wx}.
 The 2p-2h model implemented is developed by Nieves and collaborators~\cite{Nieves:2011pp,Gran:2013kda}, %
 which predicts multinucleon emission considering contributions from $\Delta$-like meson exchange currents %
@@ -847,7 +847,7 @@ There is an additional uncertainty on the relative normalisation between such pa
 The $q^2$ dependence of the RPA correction is also allowed to vary as well, parameterising it over four additional variables.
 Processes producing a single pion and one or more nucleons in the final state are instead %
 described by a tuned Rein-Sehgal model~\cite{Rein:1980wg}.
-The differences between dadiative corrections to electron- or muon-neutrino interactions are large at low energies~\cite{Day:2012gb}.
+The differences between radiative corrections to electron- or muon-neutrino interactions are large at low energies~\cite{Day:2012gb}.
 This is due to the different final-state lepton mass and the issue is addressed by adding uncorrelated and anticorrelated %
 uncertainties to $\nu_e$ and $\cj{\nu}_e$ CC cross-sections in relation to the muon neutrino ones.
 Other important parameters are the the axial-mass $m_A$, the Fermi momentum $p_F$, and the nucleon binding energy $E_b$, %
@@ -989,12 +989,18 @@ Increasing the collected samples, the sensitivity quickly saturates to the best 
 
 The usefulness of performing a combined fit between beam and atmospheric %
 data can be best understood from \reffig{fig:combined_sens}.
-If the mass hierarchy is unknown, the sensitivity to certain values of $\delta_\text{CP}$ can deteriorate.
+When the expected ($E_n$) and observed ($O_n$) event distributions are built for the $\chi^2$ calculation, %
+a neutrino mass hierarchy must be assumed.
+In reality, the true mass ordering is unknown and unless this freedom is parameterised in some way, %
+it can happen that the wrong mass hierarchy is used in defining the expected events.
+In this case, the sensitivity to certain values of $\delta_\text{CP}$ can deteriorate.
 For example, if the true mass ordering is normal hierarchy and inverted hierarchy is assumed in the fit, %
 the sensitivity for $\delta_\text{CP} < 0$ remains unaffected, whereas the one for $\delta_\text{CP} > 0$ worsens.
+The opposite occurs in the reverse situation.
 Adding the atmospheric sample to the likelihood calculation allows to partially recover the exclusion power to CP conservation.
 The very long baseline of atmospheric neutrinos amplifies matter effects, thanks to which the sensitivity %
-of the experiment to mass ordering increases.
+of the experiment to mass ordering.
+The differences between expected and observed events thus intensify leading to larger values of the $\chi^2$.
 
 
 \subsection{Variations of the nominal model}
@@ -1003,7 +1009,7 @@ of the experiment to mass ordering increases.
 
 Previous studies~\cite{Abe:2018wpn} found that some systematic uncertainties %
 were not easily implemented by varying model parameters.
-These were then the subjects of fake data studies, where a variant systematic model was analyzed under %
+These were then the subjects of fake data studies, where a variant systematic model was analysed under %
 the assumptions of the default model.
 A series of modifications of the nominal systematic model are performed also for this study.
 New systematic sets are created, and by performing sensitivity studies with these variations of the nominal model %
@@ -1013,7 +1019,7 @@ some of them have been analysed in this thesis and these are:
 increment of the $\nu_e$ flux uncertainty in the $\nu$-mode beam by 2\%, labelled \textbf{8}; %
 increment of the energy scale uncertainty, from 2.4\,\% to 2.9\,\%, labelled \textbf{11a}; %
 decrement of the energy scale uncertainty, from 2.4\,\% to 1.9\,\%, labelled \textbf{11b}.
-The remaining ones will be studied in the future.
+The remaining ones will be analysed in future studies.
 The new three profiles are shown collectively with the nominal model, labelled \textbf{0}, in \reffig{fig:0_11a_11b_8_profile}.
 The $\chi^2$ as a function of $\delta_\text{CP}$ and $\sin^2 2\theta_{13}$ changes slightly with a different flux uncertainty, %
 but it is not very much affected by a variation of the energy scale error.
@@ -1023,14 +1029,23 @@ The contour plots in \reffig{fig:0_11a_11b_8_profile} confirm that no appreciabl
 is seen for $\chi^2$ levels corresponding to $1\sigma$ and $3\sigma$.
 In terms of sensitivity, the variation induced by the modified systematic model is %
 less than 0.1\,\% at values of maximal violation of CP, as it can be appreciated in \reffig{fig:0_11a_11b_8_sensitivity}.
-The treatement of the energy scale uncertainty with the methology described in this chapter might be too simplistic.
-The linear behvaiour of the systematic errors (see \refeq{eq:linear}) should be applied with mindfullness: %
+The treatment of the energy scale uncertainty with the methodology described in this chapter might be too simplistic.
+The linear behaviour of the systematic errors (see \refeq{eq:linear}) should be applied with mindfulness: %
 it follows that the systematic parameters in the $\chi^2$ can commute with each other; %
 the energy scale error, however, does not since it effectively shifts the bin contents of the event distributions.
 It is also believed that this parameter is simultaneously constrained by the $e$-like samples %
 the $\mu$-like samples, thus exhibiting no appreciable effect on the sensitivity prediction.
 There is probably need to improve the systematic model by not only duplicating the energy scale systematic %
 between the two data samples, but also by changing the $\chi^2$ definition and the way this parameter is treated.
+
+Keeping in mind the above caveats, the sensitivity to $\delta_\text{CP}$ from \reffig{fig:0_11a_11b_8_sensitivity} %
+is above $6\sigma$ at full statistics.
+It is expected that the systematics variations of \reftab{tab:variations} should not degrade %
+the significance of CP conservation exclusion below this value.
+Further studies are in place before the definitive quantitative results, %
+since a more accurate treatment of the energy scale parameter is needed.
+Once the beam sample is extensively analysed, the atmospheric sample can be added to the $\chi^2$ calculation %
+and a more complicated and comprehensive systematic model can be adopted. 
 
 \begin{table}
 	\centering
