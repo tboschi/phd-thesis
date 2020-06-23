@@ -290,7 +290,7 @@ As the mixing between massless states is not defined in the LNC limit, the pertu
 the induced mixing between the nearly-sterile state and the active ones.
 The cartoon of \reffig{fig:iss_spectrum} shows how the mass spectrum changes with LNV terms, %
 highlighting how the mass degeneracy in the LNC limit is resolved when LNV contributions are added.
-The notation ``ISS\,$(a,b)$'' will be used to denote a realisatione of the model with $a$ and $b$ new gauge singlets of, %
+The notation ``ISS\,$(a,b)$'' will be used to denote a realisation of the model with $a$ and $b$ new gauge singlets of, %
 respectively, lepton number $+1$ and $-1$, and $a, b \neq 0$.
 
 The discussion above suggests that both Majorana states and \mbox{(pseudo-)Dirac} states should be considered %
@@ -816,11 +816,19 @@ The five-dimensional phase space of the final-state particles can be parameteris
 \begin{equation}
 	s_1=\frac{(k_2+k_3)^2}{m_N^2} \qquad \text{and} \qquad s_2=\frac{(k_2+k_4)^2}{m_N^2}\ ,
 \end{equation}
-as well as three lab-frame angular variables, $(\theta_3, \phi_3)$, giving the direction of $\ell^-_\alpha$ and $\varphi_{43}$ %
+as well as three lab-frame angular variables, $(\theta_3, \varphi_3)$, giving the direction of $\ell^-_\alpha$ and $\varphi_{43}$ %
 denoting the relative azimuthal angle between $\ell^-_\alpha$ and $\ell^+_\beta$. 
 Although $\cos\theta_4$ is not an independent element of this parametrisation, it is a physically relevant quantity %
 which is used to simplify the presentation of the distributions below.
 It can be easily related to the fundamental variables $s_1,s_2,\theta_3,\varphi_3, \varphi_{43}$.
+as 
+\begin{equation}
+	\cos \theta_4 = \cos \theta_3 \cos \theta_{43} - \sin\theta_3 \sin\theta_{43}\cos\varphi_{43}\ ,
+\end{equation}
+with
+\begin{equation}
+	\cos \theta_{43} = \frac{s_1 + s_2 - m_N^2 + 2\, E_3\, E_4}{ \abs{p_3} \abs{p_4}}
+\end{equation}
 The differential decay rate is expressed as
 \begin{equation}  
 	\label{eq:threebody_dist_master}
@@ -908,7 +916,8 @@ and correct a typographical mistake in the rates presented in \refref{Ballett:20
 The Feynman diagram for one of the three-body leptonic decay is shown in \ref{fig:HNL_fyenman}.
 
 All possible combinations of charged leptons except $\nu \tau^- \tau^+$ are allowed for masses below~$m_{D_s}$.
-However, because of the limited phase space, the decays into $\nu \tau^\mp e^\pm$ and $\nu \tau^\mp \mu^\pm$ can be neglected.	
+However, the decays into $\nu \tau^\mp e^\pm$ and $\nu \tau^\mp \mu^\pm$ can be neglected due to the the limited phase space.
+The number of events from these modes is negligible with respect to the other channels. 
 
 \subsubsection{Other decays}
 \label{sec:decay_other}
@@ -929,7 +938,7 @@ Secondly, there are other decay modes with small branching ratios and/or complic
 These include the one-loop decay into a photon which has received some interest as an observable signature %
 in nonminimal models~\cite{Gninenko:2009ks,Gninenko:2010pr,Magill:2018jla} where it may be enhanced. %
 In the mass models considered in this work, it has a branching ratio of below $10^{-3}$ and will not be considered. 
-Other interesting but neglected channels are the multipion decay modes discussed in \refref{Bondarenko:2018ptm}, %
+Other interesting but neglected channels are the multi-pion decay modes discussed in \refref{Bondarenko:2018ptm}, %
 which are estimated to have at most a percent level branching ratio and a challenging hadronic final state for reconstruction. 
 %
 %   The total decay width in the minimal model considered here is
@@ -1293,7 +1302,7 @@ In order to understand the effect of~\refeq{eq:shrock_helix}, it is convenient t
 	\frac{1}{2} \left[ 1 \pm \frac{(\xi_N^2-\xi_{\ell_\alpha}^2)\ \kallen(1,\ \xi_N^2, %
 			\ \xi_{\ell_\alpha}^2)}{\xi_{\ell_\alpha}^2+\xi_N^2-(\xi_N^2-\xi_{\ell_\alpha}^2)^2}\right].
 \end{equation}
-In the limit of a massless neutrino, i.e.\ $\xi_N \to 0$, the fractions are $S_+ \to 0$ and $S_- \to 1$, as expected: %
+In the limit of a massless neutrino, i.e.\ $\xi_N \to 0$, the fractions are $\mathcal{S}_+ \to 0$ and $\mathcal{S}_- \to 1$, as expected: %
 all neutrinos are produced with a negative helicity.
 The opposite is true when the charged lepton is in the massless limit, and the neutrinos are produced with a positive~helicity.
 The behaviour of the ratio $\mathcal{S}^\pm$ is shown in \reffig{fig:helix}.
