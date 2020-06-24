@@ -131,6 +131,8 @@ Furthermore, the lower density of the MPD helps reduce the number of neutrino sc
 Apart from volume and density differences and relative positions in the detector hall, %
 the two ND units are assumed to have similar detection performances and to be on-axis; %
 the magnetisation of the gaseous TPC is not considered for HNL discovery.
+These approximations simplify the study which is purely phenomenological in style; %
+a more accurate and detailed study will be be carried out by the experimental collaboration. 
 %Optical partitioning, short electron drift distance, and pixelated readout are features being taken in consideration to %
 %improve the performance of the LArTPC to the anticipated high-rate environment %
 %and the efficiency of reconstructing events at the near site.
@@ -206,7 +208,7 @@ with the beam in neutrino mode and the ND on-axis.
 
 A summary of the features of the ND system relevant for this analysis is reported in~\reftab{tab:nd}, %
 where it is compared to other beam dump experiments: %
-PS191~\cite{Bernardi:1985ny,Bernardi:1987ek}, SBND which is the detector of the SBN programme with the best sensitivity to %
+PS191~\cite{Bernardi:1985ny,Bernardi:1987ek}, SBND which is the detector of the \emph{SBN program} with the best sensitivity to %
 HNL~\cite{Ballett:2016opr}, NA62~\cite{NA62:2017rwk}, and SHiP~\cite{Anelli:2015pba}.
 The total exposure of the experiment is defined as the proton accelerator beam power, integrated over the total run time, %
 and scaled by the volume of the detector over its baseline squared.
@@ -222,6 +224,10 @@ sensitivity to HNL~\cite{Drewes:2018irr}.
 The SHiP experiment presents an exposure thirty times bigger than DUNE ND, but the detector is specifically %
 designed to search for BSM physics, including heavy neutrinos~\cite{SHiP:2018xqw,Caputo:2016ojx}.
 The decay-in-flight search hugely benefits from its 50\,m long decay vessel and short baseline.
+The DUNE experiment, however, is planned to start before than the SHiP experiment and %
+these new physics searches are totally complementary to the main physics goal of oscillation physics: %
+no modification of the detector design and no special data acquisition mode are required.
+%If a signal is eventually found, a second check will  be helpful.
 On the collider physics frontier, the MATHUSLA~\cite{Curtin:2018mvb} and the FASER~\cite{Ariga:2018uku} experiments %
 will perform a dedicated search for extremely weakly-interacting and long lived particles, %
 like HNLs for which they present interesting sensitivity~\cite{Curtin:2018mvb, Kling:2018wct}.
@@ -258,9 +264,9 @@ FASER will consist of a 10\,m cylindrical decay volume located 480\,m downstream
 \end{figure}
 
 %A powerful proton beam is responsible for the very intense neutrino flux at the LBNF facility.
-The study of HNL requires the various components of the flux by parentage to be known separately, %
+The study of HNL requires the various components of the flux to be known separately by parentage, %
 as explained in \refsec{sec:production}.
-Only the beam operating with a forward horn current is considered here.
+Only the beam operating with a forward horn current is considered in this study.
 Positively charged secondary particles are therefore selected at the target and this results %
 in a beam dominantly made of neutrinos with a smaller component of antineutrinos.
 The flux predictions for $\nu_e$, $\nu_\mu$, and $\cj{\nu}_\mu$ at DUNE, provided by \refref{LauraFields} for the reference beam, %
@@ -299,7 +305,7 @@ The meson $D^+$ also decays into $\tau^+ \nu_\tau$, but being lighter than the $
 the decay is disfavoured by the smaller phase space, with a branching ratio~50 times smaller.
 This meson presents three-body decay channels into $\nu_e$ and $\nu_\mu$ with much higher branching ratio, %
 but there is no enhancement for such channels into HNL, as explained in \refsec{sec:production}, and so these subdominant components %
-are not taken in account in the present study.
+are not taken into account in the present study.
 %However, HNL with masses above the $K^0$ mass can only be produced by the decays of $D^+$ and $D_s^+$, %
 %and the production of massive neutrinos could be enhanced, especially if produced via the $|U_{e 4}|^2$ mixing.
 %{\color{red} What about the decay of $D^+$?? The considerations of it being disfavoured because of phase space would not apply to decay into N and muons or N and electron, which are enhanced compared to the standard case.}
@@ -344,7 +350,7 @@ This is because heavier neutrinos are more easily boosted inside the geometric a
 Besides the peak height, the start and the end point of the energy flux are also affected,
 as illustrated in~\reffig{fig:taudist} where the enhancement discussed in \refsec{sec:production} is not included.
 The distribution of heavy neutrinos from $\tau$ decays also changes with the neutrino mass.
-These effects are taken in account by modifying the scaled neutrino flux using information retrieved by the $\nu_\tau$ and $\cj{\nu}_\tau$~simulation. 
+These effects are taken into account by modifying the scaled neutrino flux using information retrieved by the $\nu_\tau$ and $\cj{\nu}_\tau$~simulation. 
 
 
 \section{Simulation of events at DUNE ND}
@@ -998,9 +1004,10 @@ The solid lines corresponds to a scenario in which zero background is assumed at
 A background evaluation was carried out for these channels (see~\refsec{sec:background}), %
 in order to define a more realistic sensitivity; %
 the resulting regions are shown as dashed lines in \reffig{fig:senseW}.
-The final sensitivity will lie somewhere between the lines with and without backgrounds,
-since it is expected that further improvements to background reduction can be achieved %
+The final sensitivity will lie somewhere between the lines with and without backgrounds.
+It is expected that further improvements to background reduction can be achieved %
 with a dedicated analysis by the experimental collaboration, %
+although systematic uncertainties could degrade the sensitivity.
 
 For both the electronic and the muonic mixings, the two-body semileptonic decay modes are the ones providing %
 the best sensitivity for sufficiently heavy masses.
@@ -1203,7 +1210,7 @@ is retrieved starting from the SVD decomposition $\mathcal{M} = V \Sigma U^\dagg
 from which the singular values $\Sigma$ are the non-negative square roots of the eigenvalues of $\mathcal{M}^\dagger \mathcal{M}$ %
 and the unitary matrix is $\hat{U} = U \rho^\dagger$, where $\rho = (U^T V)^\frac{1}{2}$ is a unitary phase matrix.
 
-Only matrices satisfying the current constraints on heavy neutral fermions are taken in account.
+Only matrices satisfying the current constraints on heavy neutral fermions are taken into account.
 The first requirement is that the eigenvalues must give the correct mass squared splittings %
 compatible within 3$\sigma$ with the measured values~\cite{Esteban:2018azc}.
 The condition of matching also the measured mixing angles is relaxed because %
