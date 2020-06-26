@@ -22,7 +22,7 @@ Other upcoming experiments, such as DUNE, will implement state-of-the-art techno
 not only to study Standard Model physics, but also to perform complementary searches of BSM physics.
 
 The benefits of gadolinium for water Cherenkov detectors have been explained in \refcha{cha:skgd}.
-Super-Kamiokande is about to start a new phase in which a hundred tons of gadolinium sulphate %
+Super-Kamiokande (SK) is about to start a new phase in which a hundred tons of gadolinium sulphate %
 will be dissolved in the water tank.
 This will allow the detector to improve neutron tagging efficiency up to 90\,\%, with a Gd concentration of 0.2\,\%, %
 transforming the experiment into a supernova observatory %
@@ -31,42 +31,85 @@ and improving all the ongoing analyses.
 %can be refined by a controlled neutron background.
 There are many technical challenges when dealing with a Gd-loaded Cherenkov detector, %
 one of which being the monitoring of gadolinium concentration in water.
-A new method involving UV absorption spectroscopy is being developed with promising results.
-It allows for an almost continuous monitoring and it reachs a precision of $\sim$1\,\% %
-on the full load concentration of 0.2\,\%.
-The device can also be used to monitor the initial loading of 0.02\,\% with good sensitivity.
-Regardless of gadolinium-doping, californium-252 is being studied as a new way of %
-performing a more accurate neutron calibration in water Cherenkov detectors.
+A new method involving UV absorption spectroscopy is being developed with promising results, %
+as shown in \refcha{cha:skgd}.
+Gadolinium presents strong absorption lines in the region between 270\,nm and 275\,nm %
+and their intensity is directly proportional to the amount of gadolinium in aqueous solution.
+This technique allows for an almost continuous monitoring of the concentration, %
+compared to the current spectroscopy technique in place which is executed with a monthly frequency.
+The precision reached with the UV absorption spectroscopy is around $\sim$1\,\% %
+on the full load concentration of 0.2\,\%, using a 100\,cm water sample.
+The same device was able to reach competitive sensitivity also on the initial loading concentration of 0.02\,\%.
+Regardless of gadolinium-doping, an improved method for neutron calibration of the detector was also investigated.
+A californium-252 source has some advantages compared to the currently-employed Americium-Beryllium (Am-Be), %
+among which the possibility of estimating the source activity indirectly.
+Using a GEANT4 simulation, it was found that the same calibration device used by SK %
+%, consisting of a 5\,cm cube of BGO scintillator,
+has already the optimal shape to be used in with \tapi{252}Cf instead.
+The Am-Be neutron source could be then replace without further modifications of the device; %
+a more accurate neutron calibration can therefore be achieve thanks to the features of spontaneous fission events in californium-252.
 
-The next-generation water Cherenkov detector, Hyper-Kamiokande, has been introduced in \refcha{cha:cp_hk}.
+The next-generation water Cherenkov detector, Hyper-Kamiokande (HK), has been introduced in \refcha{cha:cp_hk}.
 Thanks to unprecedented statistics and upgraded instrumentation, Hyper-Kamiokande has the potential %
-to study a plethora of topics related to neutrino physics, with particular emphasis on neutrino oscillation.
-It is predicted that oscillation parameters will be constrained with high precision, %
-eventually determining the CP violation phase in the lepton sector.
-This task can be achieved also thanks to a deep knowledge of systematic errors %
-introduced at the near and far detectors.
-In this thesis, the sensitivity to oscillation parameters has been assessed employing %
-the state-of-the-art T2K systematic model.
-A combined fitting framework is employed to calculate the likelihood function of predicted event samples.
-It is found that Hyper-Kamiokande can exclude maximal violation of CP at full statistics %
-with more than $6\sigma$ of significance.
-Furthermore, the total sensitivity is not substantially affected by variations of the nominal systematic model.
+to study a plethora of topics related to neutrino physics, %
+with particular emphasis on neutrino oscillation and CP violation in the lepton sector.
+%It is predicted that oscillation parameters will be constrained with high precision, %
+%eventually determining the CP violation phase in the lepton sector.
+%This task can be achieved also thanks to a deep knowledge of systematic errors %
+%introduced at the near and far detectors.
+In this thesis, the sensitivity to oscillation parameters has been assessed %
+using a combined fit between atmospheric and beam samples.
+The atmospheric events for HK are simulated by scaling SK Monte Carlo atmospheric data %
+and they are classified as fully-contained, partially contained, or upward-going muons events, for a total of 2224 bins.
+The beam-related events are classified as electron- or muon-like one ring events, %
+for the beam in neutrino mode or antineutrino mode and they are arranged in four distributions with 87 energy bins each.
+These spectra are predicted from a neutrino beam flux simulation tuned with near detector constraints.
+Once a \emph{true} combination of oscillation parameters is chosen, the $\chi^2$ between observed, i.e.\ true, %
+and expected events is calculated in the way explained in \refcha{cha:cp_hk}.
+The framework employed is capable of beam and atmospheric combined fits.
+The likelihood implements also effects from systematic uncertainties.
+%After the explanation of the likelihood used in the study, the systematic error models employed are introduced.
+Although the atmospheric model is still preliminary, the state-of-the-art T2K systematic model %
+is adopted for the beam component instead.
+It consists of 119 systematics encompassing beam, cross-section, and far detector parameters.
+Just considering the beam sample, it is found that Hyper-Kamiokande can exclude maximal %
+violation of CP at full statistics with more than $6\sigma$ of significance.
+Some variations of the beam systematic model are also being investigated in order to understand %
+how the experimental sensitivity is affected by certain model parameters. 
+One of these, the energy scale error, might be treated too naively in the fitting framework %
+and so slight modifications to both the error model and the likelihood should be considered.
 This study, however, is preliminary and still ongoing.
+
 
 In \refcha{cha:mass_models}, the origin and lightness of the neutrino mass has been addressed %
 in the framework of low-scale seesaw mechanisms.
 The addition of an arbitrary number of heavy neutral leptons is the simplest extension of the Standard Model %
 and it is accompanied with a diverse and rich phenomenology.
 Some textures of the mass matrix, such as the one of the inverse seesaw, %
-allows Majorana or pseudo-Dirac heavy neutrinos with experimentally accessible masses.
+predict Majorana or pseudo-Dirac heavy neutrinos with experimentally accessible masses.
 These new particles could be searched for by direct production in beam dump experiments, %
 in which the expected signature would be a decay in-flight into Standard Model particles.
 In this thesis, the phenomenological consequences of Majorana and Dirac states have been thoroughly investigated %
 in light of searches of neutrino decays.
 The differential decay rates and production scale factors have been computed using %
 the helicity-spinor formalism and are provided decomposed by helicity states.
+It was shown that Dirac and Majorana neutrinos have different total decay width in neutral current processes %
+and measuring the rate could be an actual way of determining the nature of the initial state.
+Interesting differences appear between Majorana and Dirac neutrinos once the role of helicity is considered, %
+and this could be also exploited to determine the nature of the heavy singlet fermion.
+The effect of the helicity emerges in the differential decay rate leading to different %
+distributions of final state particles. %
+%and if the initial state is Majorana or (pseudo-)Dirac.
+For example, if the HNL are Majorana, two-body decays present an isotropic distribution for both helicity states, %
+or, if Dirac, the angular distribution has a dependency proportional to $A\pm B \cos\theta$, %
+with the sign depending on the helicity state.
+An effective evaluation of the heavy neutrino flux was also carried out %
+which is not polarised to a single helicity state differently from a light neutrino flux.
+The production modes of a nearly-sterile neutrinos are sensitive to its helicity state, %
+thanks to mass effects which lead to the enhancement of certain channels with respect to light neutrinos.
+The two components of the neutrino flux behave therefore differently thanks to the dependency of decay distribution on the helicity.
 These results, first published in \refref{Ballett:2019bgd}, set the groundwork for novel phenomenological analyses %
-with future experiments.
+of future experiments.
 
 %this thesis has been focused on
 For instance, the near detector complex of DUNE is capable of performing BSM searches, %
@@ -80,13 +123,33 @@ Thanks to the high energy of the beam, neutrino masses up to 2\,GeV have also be
 by simulating $D_s$ meson production at the target.
 A background study was performed on decay channels with good detection prospects, %
 defined by high branching ratios and clean detector signatures.
+Due to the ND vicinity to the beam target, it is fundamental to suppress the overwhelming %
+number of SM neutrino--nucleon interactions, which constitute the background for the rare signal of HNL decays.
+Reconstruction of hadronic activity at the vertex and the multiplicity of final state particles are %
+most of the time enough to distinguish between signal and background, reducing the latter down to~$\lesssim5$\,\%.
+To further reduce unwanted events, simple kinematic cuts are applied thanks to the very forward distribution of %
+decay in-flight events, additionally suppressing the background events to less than \np{5e-5} of the original number.
+The rejection prescriptions are tuned to maintain an acceptable signal efficiency, which is between $\sim$40\,\% down to $\sim$20\,\%.
+For all the other channels, no background study was performed, mainly because the final state particles %
+are vector mesons which present experimentally challenging and specific signatures, the study of which %
+was out of the scope of this work.
 Combining the scaled flux components with the decay probabilities and signal efficiencies, %
-the 90\,\% C.L.\ sensitivity of the near detector has been estimated to all accessible channels.
+the 90\,\% C.L.\ sensitivity of the near detector has been estimated to all accessible channels, %
+for both single and dominant mixings.
+For masses between 0.3 and 0.5\,GeV, the ND can probe mixing elements below \np{e-9} in most cases, %
+reaching \np{e-10}, especially with two-body semi-leptonic channels for both $|U_{e N}|^2$ and $|U_{\mu N}|^2$.
+Thanks to the $D_s$ meson production, neutrino masses above 0.5\, and up to 2\,GeV become accessible, %
+as well as production and decay modes purely sensitive to the tau mixing.
+In this case, the sensitivity does not exceed \np{e-8} for the electronic and muonic channels and %
+\np{5e-6} for the tauonic channel.
 Finally, a random matrix scan of different inverse seesaw realisations was performed %
 to define regions of parameter space allowed by the considered seesaw realisation.
 It is found that the near detector can extend current limits on mixing parameters, %
 reaching regions of interests for neutrino mass models.
 If a discovery is made, some considerations can be drawn upon the nature of the new fermionic states.
+The charges of the final state particles can help determine whether the lepton number %
+is conserved in the event: any event clearly violating lepton number would be a manifestation of %
+the Majorana nature of the decaying HNL.
 
 
 In conclusion, neutrino physics has made giant leaps thanks to both impressive experimental efforts %
