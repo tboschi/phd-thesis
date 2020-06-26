@@ -308,7 +308,6 @@ but there is no enhancement for such channels into HNL, as explained in \refsec{
 are not taken into account in the present study.
 %However, HNL with masses above the $K^0$ mass can only be produced by the decays of $D^+$ and $D_s^+$, %
 %and the production of massive neutrinos could be enhanced, especially if produced via the $|U_{e 4}|^2$ mixing.
-%{\color{red} What about the decay of $D^+$?? The considerations of it being disfavoured because of phase space would not apply to decay into N and muons or N and electron, which are enhanced compared to the standard case.}
 %We make an estimate of the $\nu_\tau$ spectrum, starting from the $D_s^+$ production by %
 %an 80\,GeV proton beam hitting a fixed graphite target.
 The proton beam has a relatively low energy for producing charm quarks with a high cross-section, %
@@ -529,16 +528,12 @@ survive the particle identification process, becoming background events.
 
 %A million neutrino-nucleon events in argon is generated using the neutrino event generator \textsc{genie}~\cite{Andreopoulos:2009rq} %
 %and then smeared according to a normal distribution centred on the simulated value of energy/momentum: %
-%%{\color{red} true value of what? energy??} %
 %particles with a kinetic energy above the detection threshold are assumed to be reconstructed.
 %We use the same resolutions and thresholds from~\refref{Alion:2016uaj} for both parts of the ND.
 %These are summarised in~\reftab{tab:fastmc}.
 %We then implement detector geometry effects and possible sources of misidentification.
-%{\color{red} but wouldn't it appear as 2 electrons???} 
 %Likewise, if a pair of photons shows an invariant mass comparable with the $\pi^0$ mass, %
 %the parent pion is identified.
-%{color{red} WHAT DO WE MEAN WITH THIS????? Relying solely on particle counting,} the background is reduced by at least a factor of $\sim$10 %
-%and up to a factor of $\sim\np{e4}$.
 
 The channels which open up for masses above the kaon mass are more challenging from an experimental point of view.
 The final state particles of these modes are mostly neutral pseudoscalar mesons, which decay electromagnetically, %
@@ -561,38 +556,39 @@ but rejection techniques are being developed with good signal efficiencies~\cite
 \label{sec:numevt}
 
 \begin{table}
-	\renewcommand{\cellalign}{tl}
 	\centering
 	\caption[Decay channels with good discovery prospect and their signals and backgrounds]%
 		{The decay channels with the best discovery prospect are listed here, together with their signatures %
-			and most likely background events. }
+			and most likely background events. For any HNL decay mode, no hadronic activity %
+			such as nucleus recoil is present at the decay vertex.	}
 	\label{tab:signals_backgrounds}
 	\small
-	\begin{tabular}{lll}
+	\begin{longtable}{llp{0.4\linewidth}}
 		\toprule
 		Channel			& Signal	& Background	\\
 		\midrule
-		$N\to\nu e^+ e^-$	& \makecell{Two electron-like tracks}	& %
-					  \makecell{CC $\nu_e$ event with photon emission \\ or mis-reconstructed $\pi^0$ decay}	\\
+		$N\to\nu e^+ e^-$	& {Two $e$-like tracks}	& %
+					  {$\nu_e$ CC event with $\gamma$ emission or mis-reconstructed $\pi^0$ decay}	\\
 		\addlinespace[0.8em]
-		$N\to\nu e^\pm \mu^\mp$	& \makecell{A muon- and \\electron-like tracks}	& %
-					  \makecell{CC $\nu_\mu$ event with mis-reconstructed photon \\ %
-						  or CC $\nu_e$ event with mis-reconstructed pion}	\\
+		$N\to\nu e^\pm \mu^\mp$	& {A $\mu$- and a $e$-like track}	& %
+					  {$\nu_\mu$ CC event with mis-reconstructed $\gamma$ %
+						  or $\nu_e$ CC event with one mis-reconstructed $\pi$}	\\
 		\addlinespace[0.8em]
-		$N\to\nu \mu^+ \mu^-$	& \makecell{Two muon-like tracks}	& %
-					  \makecell{CC $\nu_\mu$ event with mis-reconstructed pion}	\\
+		$N\to\nu \mu^+ \mu^-$	& {Two $\mu$-like tracks}	& %
+					  {$\nu_\mu$ CC event with mis-reconstructed $\pi$}	\\
 		\addlinespace[0.8em]
-		$N\to\nu \pi^0$		& \makecell{Two photons with \\invariant mass $m_{\pi^0}$} & %
-					  \makecell{Neutrino interaction with $\pi^0$ emission \\ and only its decay is detected}	\\
+		$N\to\nu \pi^0$		& {Two $\gamma$ with invariant mass $m_{\pi^0}$} & %
+					  {Any NC interaction with only one $\pi^0$ above detection threshold}	\\
 		\addlinespace[0.8em]
-		$N\to e^\mp \pi^\pm$	& \makecell{Electron- and \\pion-like tracks}	& %
-					  \makecell{CC $\nu_e$ resonance interaction \\with single pion emission}	\\
+		$N\to e^\mp \pi^\pm$	& {An $e$- and a $\pi$-like track}	& %
+					  {$\nu_e$ CC resonance or DIS with single $\pi$ emission or only one $\pi$ above threshold}	\\
 		\addlinespace[0.8em]
-		$N\to\mu^\mp \pi^\pm$	& \makecell{Muon- and pion-like \\tracks}	& %
-					  \makecell{CC $\nu_\mu$ resonance interaction \\with single pion emission}	\\
+		$N\to\mu^\mp \pi^\pm$	& {A $\mu$- and a $\pi$-like track}	& %
+					  {$\nu_\mu$ CC resonance or DIS with single $\pi$ emission or only one $\pi$ above threshold}	\\
 		\bottomrule
-	\end{tabular}
+	\end{longtable}
 \end{table}
+
 
 Except for $N$ decaying into three neutrinos, all the other decay channels listed in \refsec{sec:decay} are in principle detectable.
 Some decay modes contribute more significantly to the physics reach thanks to larger branching ratios and lower backgrounds.
@@ -974,23 +970,27 @@ the results of which are reported in~\refsec{sec:bimax}.
 
 \begin{table}
 	\centering
-	\caption[Results from single dominant mixing]%
-		{This table summarises the sensitivity result for single dominant mixing and for each decay channel.
+	\caption[Results for sensitivity with dominant mixing to channels with background analysis]%
+		{This table summarises the sensitivity result of \reffig{fig:senseW}.
 			The minimum value of the mixing to Majorana HNLs to which DUNE ND is sensitive to is reported; %
 			the value in bracket is with the background analysis included.
+			The respective mass value at that point is also reported.
+			The particle $\ell^\mp$ denotes the charged lepton with corresponding flavour given by the mixing element.
 		}
-	\label{tab:main_result}
+	\label{tab:senseW}
 	\small
-	\begin{tabular}{lccc}
+	\newcommand{\nodecay}{\multicolumn{2}{c}{---}}
+	\begin{tabular}{lr@{\ ,\ }lr@{\ ,\ }lr@{\ ,\ }l}
 		\toprule
-		Channel	& $|U_{e N}|^2$ & $|U_{\mu N}|^2$ & $|U_{\tau N}|^2$ 	\\
+		Channel	& $m_N$/GeV & $|U_{e N}|^2/\np{e-9}$ %
+			& $m_N$/GeV & $|U_{\mu N}|^2/\np{e-7}$ %
+			& $m_N$/GeV & $|U_{\tau N}|^2/\np{e-6}$ \\
 		\midrule
-		$N\to\nu e^+ e^-$	& \np{2.9e-10} (\np{24.5e-10})	& \np{9.9e-10} (\np{73.1e-10})	& \np{1.3e-6} (\np{17.6e-6})	\\
-		$N\to\nu e^\pm \mu^\mp$	& \np{2.3e-10} (\np{5.1e-10})	& \np{4.8e-10} (\np{6.4e-10})	& --	\\
-		$N\to\nu \mu^+ \mu^-$	& \np{12.0e-10} (\np{46.5e-10})	& \np{9.2e-10} (\np{16.6e-10})	& \np{1.5e-6} (\np{40.0e-6})	\\
-		$N\to\nu \pi^0$		& \np{1.1e-10} (\np{29.8e-10})	& \np{1.5e-10} (\np{36.9e-10})	& \np{4.6e-7} (\np{2.21e-5})	\\
-		$N\to e^\mp \pi^\pm$	& \np{0.7e-10} (\np{4.3e-10})	& --				& --	\\
-		$N\to\mu^\mp \pi^\pm$	& --				& \np{1.3e-10} (\np{19.9e-10})	& --	\\
+		$N\to\nu e^+ e^-$	& 0.40 & \np{2.9} (\np{24.2})	& 0.36 & \np{9.9} (\np{73.1})	& 1.05 & \np{1.3} (\np{17.6})	\\
+		$N\to\nu e^\pm \mu^\mp$	& 0.41 & \np{2.8} (\np{5.1})	& 0.36 & \np{4.8} (\np{6.4})	& \nodecay	\\
+		$N\to\nu \mu^+ \mu^-$	& 0.42 & \np{12.0} (\np{46.5})	& 0.37 & \np{9.2} (\np{19.6})	& 1.06 & \np{1.5} (\np{40.0})	\\
+		$N\to\nu \pi^0$		& 0.39 & \np{1.1} (\np{15.6})	& 0.35 & \np{1.6} (\np{13.6})	& 0.88 & \np{0.46} (\np{17.3})	\\
+		$N\to \ell^\mp \pi^\pm$	& 0.39 & \np{0.7} (\np{4.2})	& 0.36 & \np{1.3} (\np{19.9})	& \nodecay 	\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -1045,6 +1045,7 @@ $|U_{\mu N}|^2 < \np{4.8e-10}$ at $m_N \simeq 0.36$\,GeV and $|U_{\mu N}|^2 < \n
 The $\tau$ sector can only be constrained by the two NC--mediated channels, %
 which give very similar constraints near $m_N\simeq 1.0$\,GeV, these being $|U_{\tau N}|^2 < \np{1.3e-6}$ 
 for the $\nu e^- e^+$ channel and $|U_{\tau N}|^2 < \np{1.5e-6}$ for the $\nu \mu^- \mu ^+$ channel.
+All the results are summarised in \reftab{tab:senseW}.
 
 %These regions are naturally weakened when the background analysis is taken in account.
 %Instead of performing an event simulation for each value of the heavy neutrino mass, %
@@ -1073,6 +1074,35 @@ for the $\nu e^- e^+$ channel and $|U_{\tau N}|^2 < \np{1.5e-6}$ for the $\nu \m
 	\label{fig:senseV}
 \end{figure}
 
+\begin{table}
+	\centering
+	\caption[Results for sensitivity with dominant mixing to channels without background analysis]%
+		{This table summarises the sensitivity result of \reffig{fig:senseV}.
+			The minimum value of the mixing to Majorana HNLs to which DUNE ND is sensitive to is reported, %
+			together with the respective mass value, $m_N$.
+			No background analysis was carried out for the channels listed here.
+			The particle $\ell^\mp$ denotes the charged lepton with corresponding flavour given by the mixing element.}
+	\label{tab:senseV}
+	\small
+	\newcommand{\nodecay}{\multicolumn{2}{c}{---}}
+	\begin{tabular}{lr@{\ ,\ }lr@{\ ,\ }lr@{\ ,\ }l}
+		\toprule
+		Channel	& $m_N$/GeV & $|U_{e N}|^2/\np{e-9}$ %
+			& $m_N$/GeV & $|U_{\mu N}|^2/\np{e-7}$ %
+			& $m_N$/GeV & $|U_{\tau N}|^2/\np{e-6}$ \\
+		\midrule
+		$N\to \nu \rho^0$	& 1.55 & \np{5.7}   	& 1.52 & \np{1.54}	& 1.10	& \np{1.07} \\
+		$N\to \nu \eta$	 	& 1.57 & \np{6.8}   	& 1.52 & \np{1.87}	& 1.06	& \np{1.24} \\
+		$N\to \nu \eta'$ 	& 1.64 & \np{9.5}   	& 1.58 & \np{2.82}	& 1.23	& \np{5.09} \\
+		$N\to \nu \omega$ 	& 1.55 & \np{7.5}   	& 1.50 & \np{3.03}	& 1.09	& \np{2.14} \\
+		$N\to \nu \phi$ 	& 1.60 & \np{3.6}   	& 1.58 & \np{0.96}	& 1.24	& \np{1.09} \\
+		$N\to \ell^\mp K^\pm$	 & 1.55 & \np{10.3}	& 1.49 & \np{2.9}	& \nodecay	\\
+		$N\to \ell^\mp K*^\pm$	 & 1.57 & \np{8.6}	& 1.53 & \np{2.5}	& \nodecay	\\
+		$N\to \ell^\mp \rho^\pm$ & 1.55 & \np{2.2}	& 1.53 & \np{58.4}	& \nodecay	\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
 A background study was not performed for all the other decay channels, which open up for masses above the $K^0$ mass, %
 due to the fact that the final state particles need a more complex analysis.
 The sensitivities to these modes are shown in~\reffig{fig:senseV}, and they can place some constraints to the mixing.
@@ -1083,6 +1113,7 @@ among the NC decays $|U_{e N}|^2 < \np{3.7e-9}$ and $|U_{\mu N}|^2 < \np{1.0e-7}
 Even for these channels, there is no sensitivity to CC processes to the tau mixing, %
 but interesting limits are set from $N\to \nu\eta$, $N\to \nu\omega$, and $\nu\rho^0$ to be respectively %
 $|U_{\tau N}|^2 < \np{1.86e-6}$, $\np{3.24e-6}$, and~$\np{1.60e-6}$.
+The sensitivity results are summarised in \reftab{tab:senseV}.
 
 \subsection{Two dominant mixings}
 \label{sec:bimax}
@@ -1106,6 +1137,47 @@ $|U_{\tau N}|^2 < \np{1.86e-6}$, $\np{3.24e-6}$, and~$\np{1.60e-6}$.
 		As before, the solid lines correspond to the analysis with Majorana neutrinos, the dashed lines with Dirac neutrino.}
 	\label{fig:senseMix}
 \end{figure}
+
+
+\begin{table}
+	\centering
+	\caption[Results for sensitivity with two dominant mixing]%
+		{This table summarises the sensitivity result of \reffig{fig:senseMix}.
+			The minimum value of the mixing to Majorana HNLs to which DUNE ND is sensitive to is reported; %
+			the value in bracket is with the background analysis included.
+			The respective mass value at that point is also reported.
+			The particle $\ell^\mp$ denotes the charged lepton with corresponding flavour given by the mixing element.
+		}
+	\label{tab:senseMix}
+	\small
+	\newcommand{\nodecay}{\multicolumn{2}{c}{---}}
+	\begin{tabular}{lr@{\ ,\ }lr@{\ ,\ }lr@{\ ,\ }l}
+		\toprule
+		Channel	& $m_N$/GeV & $|U_{e N}^* U_{\mu N}|$ %
+			& $m_N$/GeV & $|U_{\mu N}^* U_{\tau N}|$ %
+			& $m_N$/GeV & $|U_{\tau N}^* U_{e N}|$ \\
+		\midrule
+		$N\to\nu e^+ e^-$	& 0.37 & \np{2.35e-10}	& 0.36 & \np{6.99e-10}	& 0.40 & \np{2.61e-10}		\\ %nEE
+		$N\to\nu e^\pm \mu^\mp$	& 0.37 & \np{1.87e-10}	& 0.36 & \np{4.80e-10}	& 0.41 & \np{2.82e-10}		\\ %nEM
+		$N\to\nu \mu^+ \mu^-$	& 0.42 & \np{4.46e-10}	& 0.37 & \np{8.56e-10}	& 0.42 & \np{8.51e-10}		\\ %nMM
+		$N\to\nu \pi^0$		& 0.37 & \np{6.42e-11}	& 0.35 & \np{1.11e-10}	& 0.39 & \np{7.45e-11}		\\ %nPI0
+		$N\to \nu \rho^0$	& 1.55 & \np{4.04e-9}	& 1.52 & \np{1.09e-7}	& 1.55 & \np{4.04e-9}		\\ %nRHO0
+		$N\to \nu \eta$	 	& 1.57 & \np{4.84e-9}	& 1.52 & \np{1.32e-7}	& 1.57 & \np{4.83e-9}		\\ %nETA
+		$N\to \nu \eta'$ 	& 1.64 & \np{6.73e-9}	& 1.58 & \np{2.00e-7}	& 1.64 & \np{6.72e-9}		\\ %nETAi
+		$N\to \nu \omega$ 	& 1.55 & \np{7.51e-9}	& 1.49 & \np{2.14e-7}	& 1.55 & \np{7.50e-9}		\\ %nOMEGA
+		$N\to \nu \phi$ 	& 1.60 & \np{2.54e-9}	& 1.58 & \np{6.78e-8}	& 1.60 & \np{2.54e-9}		\\ %nPHI
+		$N\to e^\mp \pi^\pm$	& 0.37 & \np{6.19e-11}	& \nodecay		& 0.39 & \np{7.24e-11} 		\\ % EPI
+		$N\to \mu^\mp \pi^\pm$	& 0.37 & \np{7.42e-11}	& 0.36 & \np{1.31e-10}	& \nodecay 			\\ % MPI
+		$N\to e^\mp K^\pm$	& 1.53 & \np{1.03e-8}	& \nodecay		& 1.53 & \np{1.03e-8}		\\ % EKA
+		$N\to \mu^\mp K^\pm$	& 1.55 & \np{1.04e-8}	& 1.64 & \np{3.09e-7}	& \nodecay			\\ % MKA
+		$N\to e^\mp K*^\pm$	& 1.57 & \np{8.65e-9}	& \nodecay		& 1.57 & \np{8.63e-9}		\\ % EKAx
+		$N\to \mu^\mp K*^\pm$	& 1.57 & \np{8.74e-9}	& 1.50 & \np{2.58e-7}	& \nodecay			\\ % MKAx
+		$N\to e^\mp \rho^\pm$	& 1.55 & \np{2.23e-9}	& \nodecay		& 1.55 & \np{2.23e-9}		\\ % ERHO
+		$N\to \mu^\mp \rho^\pm$	& 1.55 & \np{2.25e-9}	& 1.53 & \np{5.90e-8}	& \nodecay			\\ % MRHO
+		\bottomrule
+	\end{tabular}
+\end{table}
+
 
 The bounds in a scenario in which two mixing elements are comparable and dominant over the third one are presented in this section.
 This case complements the previous analysis in \refsec{sec:dominant} as, by searching for HNL decays, %
@@ -1167,6 +1239,7 @@ Amongst the three-body leptonic decay channels, $N\to\nu e e$ has the best sensi
 but the mode $N\to \nu e^\mp \mu^\pm$ can be actually more constraining at higher masses.
 Regarding the channels available only above the kaon mass threshold, decays to pseudoscalar mesons are the most sensitive %
 between CC processes, whereas the decay $N \to \nu \phi$ gives the best constraint of the NC--mediated channels.
+In \reftab{tab:senseMax}, the sensitivity results for two dominant mixings are reported.
 
 \section{Mass model constraints from DUNE ND}
 \label{sec:combined}
