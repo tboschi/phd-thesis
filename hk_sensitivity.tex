@@ -7,7 +7,7 @@
 
 
 C and CP violation are some of the conditions required in order to generate %
-an asymmetry between matter and antimatter particles, together with %
+an asymmetry between matter and antimatter particles, the others being %
 baryon number violation and interactions out of thermal equilibrium~\cite{Sakharov:1967dj}.
 %The observed baryon asymmetry in our Universe amounts to~\cite{Tanabashi:2018oca, Aghanim:2018eyx}
 %\begin{equation*}
@@ -17,7 +17,7 @@ The amount of CP violation in the quark sector however is not enough %
 to describe the observed baryon asymmetry within the SM~\cite{Farrar:1993hn}.
 %Looking at the lepton sector,
 A conceivable CP asymmetry in the lepton sector could be translated into baryogenesis %
-via non-perturbative sphaleronic processes~\cite{Fukugita:1986hr}.
+via nonperturbative sphaleronic processes~\cite{Fukugita:1986hr}.
 This mechanism, called \emph{leptogenesis}, would be allowed by the addition of %
 right-handed Majorana neutrinos to the SM which can violate lepton number.
 Furthermore, the extra fermions can justify light neutrino masses via a \emph{seesaw mechanism} (see \refsec{cha:mass_models}).
@@ -31,19 +31,21 @@ A similar matrix that describes neutrino mass states mixing exists in the lepton
 It turns out that the best probe to discover CP violation is actually the study of neutrino oscillations, %
 being a purely weak phenomenon in which CP--conjugate processes are well-defined.
 %CP violation in the lepton sector is a plausible picture and it is also a necessary ingredient for leptogenesis.
-Current neutrino oscillation experiments are paving the way to the discovery of CP violation, %
+Current neutrino oscillation experiments are paving the way to the discovery of CP violation %
 and it is foreseen that next-generation experiments such as Hyper-Kamiokande (HK) %
 will determine the value of~$\delta_\text{CP}$, a milestone which requires precise measurements %
-and a deep understanding of the systematic errors.
+and a thorough understanding of the systematic errors.
 
 In this chapter, a study of the sensitivity of the HK experiment to oscillation parameters is presented, %
 with special emphasis on $\delta_\text{CP}$.
 After a review of the theory and phenomenology of CP violation in neutrino oscillation in \refsec{sec:cp_oscillation}, %
 the HK experiment is introduced in \refsec{sec:hk}.
+A fitting framework which combines atmospheric and beam data samples is employed for the study.
 The methodology of the sensitivity studies is outlined in \refsec{sec:sensitivity}, %
 together with the results from a validation test.
-Finally, a preliminary analysis of the systematic model is reported in \refsec{sec:syst_studies} %
-along with the full sensitivity to CP violation.
+Finally, the full sensitivity to CP violation with the nominal systematic model is reported in \refsec{sec:syst_studies}.
+Despite being very sophisticated, variations of the beam error model are considered since some systematic parameters %
+are still not well understood and some early considerations are drawn at the of this chapter.
 
 
 \section{CP violation in neutrino oscillations}
@@ -58,7 +60,7 @@ The spinor field $\psi$ and $\cj{\psi}$ transform under charge conjugation as
 \end{equation}
 where $\mathcal{C}$ is the charge conjugation operator.
 The application of the transformation twice returns the same initial field, %
-so $\xi_\text{C}$ must be a unitary phase, or $\abs{\xi_\text{C}}^2 = 1$. 
+so $\xi_\text{C}$ must be a unitary phase, i.e.\  $\abs{\xi_\text{C}}^2 = 1$. 
 The parity transformation, instead, inverts spatial coordinates and acts on spinor fields as
 \begin{equation}
 	\psi(x) \longmapsto \psi^\text{P}(x') = \xi_\text{P}\, \gamma^0 \,\psi(x) \quad , \quad
@@ -67,18 +69,18 @@ The parity transformation, instead, inverts spatial coordinates and acts on spin
 With two consecutive parity transformations the coordinate system is restored and therefore %
 the unitary phase $\xi_\text{P}$ is constrained to be $\pm1$ or $\pm i$.
 Vector and axial covariants, respectively $\cj{\psi}_a \gamma^\mu \psi_b$ and $\cj{\psi}_a \gamma^\mu \gamma^5 \psi_b$, %
-transforms oppositely under charge conjugation and spatial inversion, unless $a = b$, and therefore the $V-A$ structure %
+transforms oppositely under charge conjugation and spatial inversion, unless $a = b$, and so the $V-A$ structure %
 of weak interactions (see \refeqs{eq:lepton_cc}{eq:lepton_nc}) violates C and P individually.
 
 The combined transformation of charge conjugation and parity, referred to as CP transformation, %
 is applied to the fields as
 \begin{equation}
-	\psi(x) \longmapsto \psi^\text{CP}(x) = -\xi_\text{CP}\, \mathcal{C}\,\psi^* (x) \quad , \quad
+	\psi(x) \longmapsto \psi^\text{CP}(x) = -\xi_\text{CP}\, \mathcal{C}\,\psi^* (x) \ , \quad
 	\cj{\psi}(x) \longmapsto \cj{\psi^\text{CP}}(x) = - \xi_\text{CP}^*\,\psi^T (x)\,\mathcal{C}^\dagger \gamma^0\ ,
 \end{equation}
 where the CP phase $\xi_\text{CP}$ is also unitary.
 A CP transformation presents the same coefficient on vector and axial bilinear terms, %
-and so $V-A$ bilinears are in principle invariant under CP.
+which means that $V-A$ bilinears are in principle invariant under CP.
 The weak interactions of the SM are therefore CP--symmetric if the phase of the $W$ boson is chosen accordingly.
 In the case of generation mixing, the invariance in the quark sector is obtained when
 \begin{equation}
@@ -102,13 +104,13 @@ The condition for CP invariance now becomes
 This condition cannot be satisfied with an arbitrary choice of the CP phases for the quark fields %
 if the mixing matrix is not real, or $V = V^*$.
 
-It follows from the discussion above that if the mixing matrix presents one or more non-zero complex phases, %
+It follows from the discussion above that if the mixing matrix presents one or more nonzero complex phases, %
 the quark charged-current weak interactions break the CP symmetry of the SM Lagrangian.
 The violation of CP is indeed a known process in the quark sector of the standard model.
 It has been extensively observed~\cite{Christenson:1964fg,Aubert:2001sp, Abe:2001xe, Aaij:2013iua, Aaij:2019kcg}, %
-giving a clear evidence that the CKM) matrix is complex.
-The symmetry is restored when considering the time reversal symmetry.
-Consecutive transformation of C, P, and T leave invariant all possible covariant bilinears, in accordance with %
+giving a clear evidence that the CKM matrix is complex.
+The symmetry is restored when considering the time reversal symmetry: %
+consecutive transformation of C, P, and T leave invariant all possible covariant bilinears, in accordance with %
 the \emph{CPT theorem}.
 
 The Pontecorvo--Maki--Nakagawa--Sakata (PMNS) matrix is usually parameterised as in \refeq{eq:pmns} %
@@ -131,7 +133,7 @@ The CP--conjugate of a neutrino with negative helicity is an antineutrino with p
 which, in terms of neutrino oscillations, means transforming the $\nu_\alpha \to \nu_\beta$ oscillation channel %
 into the $\cj{\nu}_\alpha \to \cj{\nu}_\beta$ channel.
 The violation of CP in neutrino oscillation can be quantified by the asymmetry in oscillation probabilities %
-between neutrinos and antineutrinos, which in vacuum reads as
+between neutrinos and antineutrinos which in vacuum reads as
 %\vspace{-0.5em}
 \begin{equation}
 	\label{eq:asymmetry}
@@ -141,10 +143,10 @@ between neutrinos and antineutrinos, which in vacuum reads as
 \end{equation}
 %with $t \simeq L$ and $\Delta m^2_{ij} = m_i^2 - m_j^2$.
 The quartic product $U_{i\alpha}^* U_{\beta i} U_{\alpha j} U_{j \beta}^*$ %
-is invariant under a reparameterisation of the mixing matrix being a physical observable, %
+is invariant under a reparameterisation of the mixing matrix being a physical observable %
 and it is complex only if $\alpha\neq\beta$ and $i \neq j$.
 For this reason, CP violation can only be measured in ``appearance'' channels.
-The imaginary part of the quartic products is anti-symmetric on the indices $\alpha,\beta$ and $i, j$.
+The imaginary part of the quartic products is antisymmetric on the indices $\alpha,\beta$ and $i, j$.
 %and %
 %they are all equal up to a sign.
 Starting from the unitarity of the mixing matrix, for example $U\,U^\dagger = 1$, the following relation holds:
@@ -160,15 +162,33 @@ Taking the imaginary part of left-hand and right-hand sides of the equation resu
 \begin{equation}
 	\sum_{\alpha \neq \beta} \imaginary\qty[U_{\alpha i} U_{\beta j} U_{\beta i}^* U_{\beta j}^*] = 0\ .
 \end{equation}
-The above condition together with the anti-symmetry of the indices reveals that the quartic products are all equal up to a sign.
+The above condition together with the antisymmetry of the indices reveals that the quartic products are all equal up to a sign.
 This value is called \emph{Jarlskog invariant}.
 Using the parametrisation of the PMNS matrix in Eq.~\ref{eq:pmns}, %
-this invariant can be expressed in terms of the mixing angles~\cite{Jarlskog:1985ht}:
+this invariant is usually expressed in terms of the mixing angles as~\cite{Jarlskog:1985ht}
 \begin{equation}
 	\label{eq:jarlskog}
 	J = \imaginary\qty[U_{\mu 3} U_{e 2} U_{\mu 2}^* U_{e 3}^*] = %
 	    \frac{1}{8} \cos\theta_{13} \sin(2\theta_{12}) \sin(2\theta_{13}) \sin(2\theta_{23}) \sin \delta_\text{CP}\ .
 \end{equation}
+
+\begin{figure}
+	\centering
+	\resizebox{0.46\linewidth}{!}{\input{pics/base_ball.tex}}
+	\hfill
+	\raisebox{2em}{\resizebox{0.52\linewidth}{!}{\input{pics/norm_asymm.tex}}}
+	\caption[Effect of $\delta_\text{CP}$ on the oscillation probability]%
+		{Effect of $\delta_\text{CP}$ on the oscillation probability.
+		The oscillation probabilities for neutrinos and antineutrinos are plotted %
+		against each other (left), while the CP phase is varied between $-\pi$ and $\pi$.
+		The effect of $\sin^2\theta_{23}$ is also emphasised.
+		The mass hierarchy has a nonnegligible behaviour only if matter oscillation is %
+		considered.
+		The normalised asymmetry from Eq.~\ref{eq:asymmetry} is shown on the right.
+		When not specified, both graphs are created with the Design Report oscillation parameters (see \reftab{tab:asimovA}).
+		A neutrino energy of 0.6\,GeV and a baseline of 295\,km was used to calculate the oscillation probability.}
+	\label{fig:baseball}
+\end{figure}
 
 The main channel of interest for long baseline experiments (LBL) is the appearance channel $\nu_\mu \to \nu_e$.
 This is for two main reasons: the attainable flux in accelerator experiments is principally composed of muon neutrinos, %
@@ -183,7 +203,7 @@ Putting together \refeqs{eq:asymmetry}{eq:jarlskog}, the asymmetry for this chan
 %\end{align}
 \end{equation}
 where $\Delta_{ij} = \flatfrac{\Delta m_{ij}^2 L }{4 E}$,
-even though the CP asymmetries for each channel are all equal up to a sign:
+even though the CP asymmetries for each channel are all equal up to a sign,
 \begin{equation}
 	\mathcal{A}_{\mu e} = \mathcal{A}_{\tau \mu} = \mathcal{A}_{e \tau} = %
 	- \mathcal{A}_{e \mu} = - \mathcal{A}_{\mu \tau} = - \mathcal{A}_{\tau e}  \ .
@@ -208,7 +228,7 @@ it follows that the effective mixing angle $\theta_\text{eff}$ is invariant unde
 so the effective asymmetry vanishes, $\mathcal{A}^\text{eff}_{\alpha \beta} = 0$.
 The data collected by LBL experiments to date does not provide sufficient statistics to be sensitive %
 to the effects of $\Delta m_{21}^2$ and the measured neutrino--antineutrino asymmetries cannot be constrained, %
-even though good significance was recently reached~\cite{Abe:2019vii}.
+even though good significance was recently reached by the T2K experiment~\cite{Abe:2019vii}.
 %(see for example \refref{Abe:2018wpn}).Abe:2019vii
 Remaining in the limit of \refeq{eq:hierarchy}, the evolution equation including matter effects %
 receives helpful cancellations and it reads
@@ -228,11 +248,12 @@ even considering matter effects.
 %This is understandable because the limit given by the approximation of \refeq{eq:hierarchy} %
 %corresponds to an effective two-flavour oscillation: with two generations only one angle is sufficient to %
 %describe neutrino mixing.
-However, the oscillation probabilities of neutrinos and antineutrinos in matter are not the same, %
+However, the oscillation probabilities of neutrinos and antineutrinos in matter are not the same %
 because the medium is not CP--invariant and so it induces CP violation in the oscillation probabilities %
-via the potential $A_\text{CC}$.
-The effect of $\delta_\text{CP}$ on the asymmetry of \refeq{eq:asymmetry} is visualised in two different fashions %
-in \reffig{fig:baseball}: one graph shows the probabilities of neutrinos and antineutrinos against each other %
+via the matter potential $A_\text{CC}$.
+The effect of $\delta_\text{CP}$ and of matter effects on the asymmetry of \refeq{eq:asymmetry} %
+are visualised in two different fashions in \reffig{fig:baseball}: %
+one graph shows the probabilities of neutrinos and antineutrinos against each other %
 evidencing that these two are different for $\delta_\text{CP} \neq 0, \pm\pi$; the other figure %
 shows the asymmetry as a function of $\delta_\text{CP}$.
 
@@ -253,24 +274,6 @@ where $s_{ij} = \sin \theta_{ij}$, $c_{ij} = \cos\theta_{ij}$,
 and $a = 2\sqrt{2} G_F\,n_e\,E$ embeds matter effect with $n_e$ the electron density of the medium.
 \fi
 
-
-\begin{figure}
-	\centering
-	\resizebox{0.46\linewidth}{!}{\input{pics/base_ball.tex}}
-	\hfill
-	\raisebox{2em}{\resizebox{0.52\linewidth}{!}{\input{pics/norm_asymm.tex}}}
-	\caption[Effect of $\delta_\text{CP}$ on the oscillation probability]%
-		{Effect of $\delta_\text{CP}$ on the oscillation probability.
-		The oscillation probabilities for neutrinos and antineutrinos are plotted %
-		against each other (left), while the CP phase is varied between $-\pi$ and $\pi$.
-		The effect of $\sin^2\theta_{23}$ is also emphasised.
-		The mass hierarchy has a nonnegligible behaviour only if matter oscillation is %
-		considered.
-		The normalised asymmetry from Eq.~\ref{eq:asymmetry} is shown on the right.
-		When not specified, both graphs are created with the Design Report oscillation parameters (see \reftab{tab:asimovA}).
-		A neutrino energy of 0.6\,GeV and a baseline of 295\,km was used to calculate the oscillation probability.}
-	\label{fig:baseball}
-\end{figure}
 
 Given the parametrisation in Eq.~\ref{eq:pmns}, %
 it is clear that the asymmetry is not measurable if the phase is trivial, \ie~$\delta_\text{CP} = 0$~or~$\pm \pi$, %
@@ -305,15 +308,16 @@ At this location, the rock overburden is equivalent to 1750\,m.w.e.
 %superseding its predecessor, Super-Kamiokande (SK).
 %, the rare interactions of neutrinos can be detected, %
 %as well as the possible spontaneous decay of nucleons.
-The design of HK is similar to the one of SK and Kamiokande, with size being the biggest difference.
+The design of HK is similar to the one of SK (see \refsec{sec:sk}), with size being the biggest difference.
+A possible schematic of the detector is shown in \reffig{fig:hkdr}.
 The cylindrical tank of HK will be 72\,m high and 68\,m in diameter, with a fiducial volume of 188.4\,kton (total volume 257.8\,kton), %
 around 8.4 times the fiducial volume of SK.
-The photo-coverage of the inner detector region will be 40\,\%, the same of SK, %
+The photocoverage of the inner detector region will be 40\,\%, the same of SK, %
 but it translates to roughly forty thousand photomultipliers (PMTs).
 New 20'' box and line PMTs will be employed, with improved charge and timing resolution, %
 and an increased quantum efficiency which is almost twice as much that of the previous generation of PMTs.
 The new photosensors must also have a high pressure tolerance to be used at a depth of 60\,m and more of water.
-A study for implementing multi PMT modules, containing each 23 3'' PMT, is also being carried out.
+A study for implementing multi PMT modules, each containing 23 3'' PMT, is also being carried out.
 %The detector will be located underground at Kamioka mine in Gifu Prefecture, %
 %with an overburden of approximately 650 meters or more of rock, which is equivalent to \np{1750} meters or more of water.
 As SK, the new detector will have an outer detector which is just 1\,m wide and instrumented with 3'' PMTs.
@@ -336,11 +340,10 @@ will be located around 1\,km from the target.
 HK will take data for ten years, collecting a total of \np{2.7e22} protons on target (POT), %
 divided between $\nu$ and $\cj{\nu}$ beam modes.
 Studies have shown that CP violation discovery is not very sensitive to POT allocation between the two modes~\cite{Abe:2018uyc}.
-Assuming a POT ratio $\nu:\cj{\nu} = 1:3$ and $\delta_\text{CP} = 0$, %
+Assuming a POT ratio $\nu:\cj{\nu} = 1:3$ and CP conservation, %
 the expected number of fully-contained events in the fiducial volume for the channels %
 $\nu_\mu \to \nu_e$ and $\cj{\nu}_\mu \to \cj{\nu}_e$ %
-are respectively \np{1643} and \np{15} in $\nu$ mode and \np{206} and \np{1183} in $\cj{\nu}$ mode, %
-assuming CP conservation.
+are respectively \np{1643} and \np{15} in $\nu$ mode and \np{206} and \np{1183} in $\cj{\nu}$ mode.
 Deviations from these expected numbers could be an indication of CP violation.
 %A preliminary study for the HK design report~\cite{Abe:2018uyc}, using a different analysis, %
 %estimated a significance well-above $5\,\sigma$ after ten years of data taking, as can be seen in Fig.~\ref{fig:hkdr}.
@@ -410,15 +413,16 @@ To this end, a fitting framework capable of performing a simultaneous study of b
 	\end{tabular}
 \end{table}
 
-For the study, SK atmospheric Monte Carlo (MC) data are adapted and scaled to HK statistics to form the atmospheric sample.
+For the study, SK atmospheric Monte Carlo (MC) data are adapted and scaled to HK fiducial volume in order to form the atmospheric sample.
 The events are then classified and binned into several two-dimensional histograms of $\log p$ and $\cos\vartheta$, %
 where $p$ and $\vartheta$ are respectively the momentum and the azimuthal angle of the reconstructed charged lepton.
 The histograms are summarised in~\reftab{tab:atmo_samples} where they are categorised as fully-contained (FC), %
 partially-contained (PC), or upward-going muons (UP-$\mu$) events~\cite{Jiang:2019xwn}.
 There are a total of \np{2224} bins employed for the atmospheric sample.
-The beam sample instead is created using the far detector flux prediction, as explained in \refsec{sec:prediction}.
+
+The beam sample is instead created using a far detector flux prediction which is explained in \refsec{sec:prediction}.
 From the flux prediction, fully-contained candidate events in the fiducial volume are grouped %
-as appearance signal, i.e.\ $\nu_\mu\to\nu_e$ and $\cj{\nu}_\mu\to\cj{\nu}_e$, %
+as appearance signals, i.e.\ $\nu_\mu\to\nu_e$ and $\cj{\nu}_\mu\to\cj{\nu}_e$, %
 and background events from disappearance channels.
 Signal and background distributions in true energy (98 bins) undergo event selection criteria %
 to obtain the distributions in reconstructed energy (87 bins) for the four event samples: %
@@ -430,7 +434,7 @@ A set of 2D smearing matrices, produced by the T2K fitting framework VALOR~\cite
 simulates and replaces the correct event selection process, including tuning of the flux with near detector constraints.
 These smearing matrices are provided for all samples, acting on signal (CCQE and CCnQE) %
 and background (CCQE, CCnQE, and NC) distributions.
-The one ring $e$-like with one electron decay sample is not considered in this study.
+The one ring $e$-like with one electron decay sample, included in T2K analyses, is not considered in this study.
 
 
 
@@ -479,15 +483,15 @@ the intervals for the other parameters are built around ``Asimov A'', the best f
 for Asimov and fake data studies~\cite{Abe:2018wpn} .
 The details of the oscillation space are listed in \reftab{tab:asimovA}.
 For the atmospheric squared mass difference and $\sin^2 2\theta_{13}$, the range is chosen such that it covers %
-a $[-3\sigma, +3\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
-the range for $\sin^2\theta_{23}$ spans over $[-6\sigma, +3\sigma]$ so that both octants are covered symmetrically.
+a $[-3\,\sigma, +3\,\sigma]$ interval, where $\sigma$ is the error from the Asimov A set; %
+the range for $\sin^2\theta_{23}$ spans over $[-6\,\sigma, +3\,\sigma]$ so that both octants are covered symmetrically.
 %Reactor experiments~\cite{Bak:2018ydk, Adey:2018zwh}.
 At each point of this space, the event distributions are weighted with the correct oscillation probability %
 for appearance or disappearance channels.
 The Asimov A point is chosen to be the \emph{true} combination of oscillation parameters %
 to perform sensitivity studies using a $\chi^2$-test statistic.
-By changing the \emph{true} value of the CP phase, it is possible to define the exclusion regions for CP conservation, %
-by comparing the $\chi^2$ at any value of $\delta_\text{CP}$ with the $\chi^2$ computed at %
+It is possible to define the exclusion regions for CP conservation by changing the \emph{true} value of the CP phase
+and by comparing the $\chi^2$ at any value of $\delta_\text{CP}$ with the $\chi^2$ computed at %
 the null hypothesis, i.e.\ CP conservation or $\delta_\text{CP} = 0, \pm\pi$.
 The exclusion sensitivity as a function of \emph{true} $\delta_\text{CP}$ %
 is quantified by %
@@ -507,13 +511,13 @@ Let us define the likelihood
 	\mathfrak{L}(E_n, O_n) = \prod_n \frac{e^{-E_n} E_n^{O_n}}{O_n!}\ ,
 \end{equation}
 where $O_n$ and $E_n$ are respectively the number of observed and expected events in the $n$-th bin, %
-which are built using a combination of oscillation parameters 
+which are built using a specific combination of oscillation parameters 
 \begin{equation}
-	\Theta = (\Delta m^2_{32}, \sin^2 2\theta_{13}, \sin^2 \theta_{23}, \delta_\text{CP})\ .
+	\Theta \equiv (\Delta m^2_{32}, \sin^2 2\theta_{13}, \sin^2 \theta_{23}, \delta_\text{CP})\ .
 \end{equation}
-The expected events are defined by a prediction of events at the far detector weighted by the oscillation probabilities %
+The expected events are defined by a prediction at the far detector weighted by the oscillation probabilities %
 for parameters $\Theta$, and since there is no real data yet the ``observed'' events are also given by %
-a prediction at the \emph{true} oscillation point $\Theta_\text{true}$.
+a prediction weighted with the \emph{true} oscillation point, $\Theta_\text{true}$.
 %and the product runs over the total number of bins.
 The $\chi^2$ is hence the following log-likelihood ratio
 \begin{equation}
@@ -539,13 +543,13 @@ With all these adjustments included, the $\chi^2$ becomes
 %\end{align}
 \begin{align}
 	\chi^2(\Theta;\bs{\varepsilon})  =&\ 2 \sum_n \qty[E_n(1+{\textstyle\sum_j f_j^n \varepsilon_j}) - O_n + %
-		O_n \log \qty(\frac{O_n}{E_n(1+\sum_j f_j^n \varepsilon_j)})] \notag \\
+		O_n \log \qty(\frac{O_n}{E_n(1+\sum_j f_j^n \varepsilon_j)})] %\notag \\
+		+ \sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ .
 	\label{eq:chi2}
-		&+ \sum_{ij} \varepsilon_i\, \rho^{-1}_{ij}\, \varepsilon_j\ .
 \end{align}
 The effect of the systematic uncertainties on the event distributions are embedded in the $f_j^n$ parameters, %
 defined as the fractional change induced on the $n$-th bin by a 1\,$\sigma$ variation of the $j$-th systematic.
-The amount of change is therefore parameterised by the $\varepsilon_j$ in units of the uncertainty $\sigma_j$.
+The amount of change is therefore parameterised by the $\varepsilon_j$ variables in units of the uncertainty $\sigma_j$.
 However, being $\rho$ the correlation matrix, the $\varepsilon_j$ are promoted to embody the systematic uncertainties.
 Once the observed sample is defined, the oscillation parameters $\Theta$ are scanned over the oscillation %
 space defined in \reftab{tab:asimovA} to estimate the expected events; finally, the $\chi^2$ is profiled %
@@ -592,8 +596,8 @@ to the minimised value of $\chi^2$ from \refeq{eq:chi2_min}
 \begin{equation}
 	\chi^2_\text{penalty} = \frac{(\Theta - \hat{\Theta})^2}{\sigma_\Theta^2}\ .
 \end{equation}
-In this analysis, only the error on $\theta_{13}$ is considered %
-which is predicted to be $\sigma(\sin^2 2\theta_{13}) = 0.005$ from measurements of reactor experiments.
+In this analysis, only a penalty on the parameter $\theta_{13}$ is considered, %
+which is predicted to be constrained to $\sigma(\sin^2 2\theta_{13}) = 0.005$ by future measurements of reactor experiments.
 
 For most of the systematic parameters, a linear response is assumed in the~MC.
 This means that varying the $j$-th systematic by a known amount, $\beta_j \to \beta_j + \varepsilon_j\sigma_j$ %
@@ -615,12 +619,6 @@ do not present a linear behaviour for small values of $\varepsilon$ %
 and they are better described by a four-point linear interpolation of different~$f_j^n$ histograms, %
 computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic parameter.
 
-
-
-
-\subsection{Far detector prediction}
-\label{sec:prediction}
-
 \begin{figure}[t]
 	\centering
 	\resizebox{0.49\linewidth}{!}{\input{pics/hkdr_app_fhc.tex}}
@@ -637,6 +635,10 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 	\label{fig:reco_spectra_e}
 \end{figure}
 
+
+\subsection{Far detector prediction}
+\label{sec:prediction}
+
 \begin{figure}[t]
 	\centering
 	\resizebox{0.49\linewidth}{!}{\input{pics/hkdr_dis_fhc.tex}}
@@ -652,6 +654,8 @@ computed at~$\pm1\,\sigma$ and~$\pm3\,\sigma$ variations of the systematic param
 		the Design Report and the Asimov~A oscillation parameters (see \reftab{tab:asimovA}).}
 	\label{fig:reco_spectra_mu}
 \end{figure}
+
+
 
 The simulation of the HK detector heavily relies on the techniques established by the SK and T2K collaborations.
 Neutrinos interactions are generated using NEUT~\cite{Hayato:2002sd}, also employed in SK and T2K.
@@ -673,10 +677,11 @@ and the presence of the electron from the Michel decay of the muon.
 The simulation is run assuming an integrated beam power of 13\,MW, corresponding to \np{2.7e22}\,POT %
 collected over 10 years with a 30\,GeV proton beam.
 The proportion between the amount of data collected in neutrino and antineutrino modes is set to $\nu : \cj{\nu} = 1:3$.
-The ratio is chosen in order to have similar number of events in $\nu$- and $\cj{\nu}$-mode samples.
+The ratio is chosen in order to have similar number of events in the $\nu$- and $\cj{\nu}$-mode samples.
 The reconstructed spectra from the simulations are shown in \reffigs{fig:reco_spectra_e}{fig:reco_spectra_mu} %
 where two different oscillation parameter combinations are compared to illustrate the effect of neutrino oscillation;
 the contributions from different oscillation channels to the overall distributions are also highlighted.
+
 
 
 
@@ -697,7 +702,7 @@ but they are both singular and not invertible.
 A small offset of \np{e-5} is added to off-diagonal terms to allow the calculation of the $\chi^2$.
 Due to the definition of the $\chi^2$ in \refeq{eq:chi2}, %
 the difference between fits with the same relative error lies in the correlation matrix, %
-whereas at fixed correlation the effect of the systematics on the likelihood is given by the $1\sigma$ histograms.
+whereas at fixed correlation the effect of the systematics on the likelihood is given by the $1\,\sigma$ histograms.
 
 \begin{figure}
 	\centering
@@ -716,7 +721,7 @@ whereas at fixed correlation the effect of the systematics on the likelihood is 
 		with relative errors between 1\,\% and 5\,\% at 1$\sigma$.
 		In each figure, the top panel shows how the event distribution is affected, %
 		and the bottom panel shows the variations with respect to the prediction without errors applied, %
-		which is by definition one plus the $1\sigma$ histogram of the error, or $1 + f^n$ (see \refeq{eq:pull}). }
+		which is by definition one plus the $1\,\sigma$ histogram of the error, or $1 + f^n$ (see \refeq{eq:pull}). }
 	\label{fig:nuenorm_prediction}
 \end{figure}
 
@@ -762,7 +767,7 @@ whereas at fixed correlation the effect of the systematics on the likelihood is 
 		The effect on $\delta_\text{CP}$ is reflected on the expected significance to exclude CP conservation (bottom).
 		The anticorrelation between the $\nu_e$ and $\cj{\nu}_e$ CC cross-section systematic errors %
        		masks the resolution power to distinguishing neutrino from antineutrino events.
-		The result is a CP-violating effect.
+		The result is a CP--violating effect.
 		The dashed lines and the black triangles show the position of the best fit value, %
 		which is always at the nominal Asimov A value.}
 	\label{fig:nuenorm_sensitivity}
@@ -776,9 +781,9 @@ It can be seen that the effect of the systematic errors is linear with the relat
 The $\chi^2$ profiles with respect to $\Delta m_{32}^2$, $\sin^2 2\theta_{13}$, and $\sin^2 \theta_{23}$ are
 shown in \reffig{fig:nuenorm_mass_angles} for correlated and anticorrelated errors, %
 and a contour plot between $\Delta m_{32}^2$ and $\sin^2 \theta_{23}$ is reported in \reffig{fig:nuenorm_sensitivity}.
-These parameters are not very sensitive to the correlation between the two systematic uncertainties.
+These parameters are not significantly sensitive to the correlation between the two systematic uncertainties.
 The contour levels of the $\chi^2$ versus $\Delta m_{32}^2$ and $\sin^2 \theta_{23}$ %
-show that at the $1\sigma$ level of confidence the determination of the $\theta_{23}$ octant %
+show that at the $1\,\sigma$ level of confidence the determination of the $\theta_{23}$ octant %
 is slowly lost as the uncertainty increases.
 On the other hand, the CP phase is the parameter which shows more difference between correlation and anticorrelation, %
 as it can be seen from the remaining panels of \reffig{fig:nuenorm_sensitivity}.
@@ -820,8 +825,10 @@ There are 74 uncertainties for flux and cross-section parameters from near detec
 known as the BANFF fit, acronym for Beam And ND280 Flux extrapolation task Force.
 %divided in $25\times 2$ systematics, for each beam mode, for the four main flux components, %
 These are grouped in 50 systematics\,---\,25 for the $\nu$ mode and 25 for the $\cj{\nu}$~mode\,---\,%
-for the main flux components ($\nu_e$, $\nu_\mu$, $\cj{\nu}_e$, and $\cj{\nu}_\mu$), % 
+for the main four flux components ($\nu_e$, $\nu_\mu$, $\cj{\nu}_e$, and $\cj{\nu}_\mu$), % 
 and 24 systematics for cross-section parameters.
+In the T2K experiment the neutrino flux and cross-section parameters are fitted from the unoscillated spectra of %
+CC candidate events in ND280.
 %Some of them are 2p-2h normalisation and shape for \tapi{16}O, CCQE axial-mass scaling factor, %
 %CC and NC interaction normalisations, random phase approximation (RPA) coefficients, and binding energy on oxygen.
 The uncertainty from hadron-production data is the dominant source of systematic error of the flux model.
@@ -833,6 +840,7 @@ Even though the flux uncertainty is approximately 9\,\% at the peak energy, %
 its impact on oscillation parameter uncertainties is significantly smaller,
 given that the near and far detector measurements sample nearly the same flux.
 %As mentioned earlier, the neutrino interactions are simulated with the NEUT [15] neutrino interaction generator.
+
 The dominant CCQE interaction (see \refsec{sec:ccqe}) %
 is modelled with a relativistic Fermi gas nuclear model including long-range correlations %
 using the random phase approximation (RPA)~\cite{Nieves:2004wx}.
@@ -844,7 +852,7 @@ when calculated with the quasi-elastic formula of \refsec{eq:e_reco}.
 This effect is adjusted by introducing systematic parameters for the components of the model %
 related to \tapi{12}C and \tapi{16}O and interactions, being these two the principal target nucleons in ND280.
 There is an additional uncertainty on the relative normalisation between such parameters.
-The $q^2$ dependence of the RPA correction is also allowed to vary as well, parameterising it over four additional variables.
+The $q^2$ dependence of the RPA correction is allowed to vary as well, parameterising it over four additional variables.
 Processes producing a single pion and one or more nucleons in the final state are instead %
 described by a tuned Rein-Sehgal model~\cite{Rein:1980wg}.
 The differences between radiative corrections to electron- or muon-neutrino interactions are large at low energies~\cite{Day:2012gb}.
@@ -853,8 +861,6 @@ uncertainties to $\nu_e$ and $\cj{\nu}_e$ CC cross-sections in relation to the m
 Other important parameters are the the axial-mass $m_A$, the Fermi momentum $p_F$, and the nucleon binding energy $E_b$, %
 which are uncorrelated to the \tapi{12}C and \tapi{16}O systematics and are left unconstrained given the poor agreement %
 from other neutrino experiments~\cite{Kabirnezhad:2017jmf}.
-In the T2K experiment the neutrino flux and cross-section parameters are fitted from the unoscillated spectra of %
-CC candidate events in ND280.
 
 \begin{figure}[t]
 	\centering
@@ -870,17 +876,17 @@ There are also 45 uncertainties for SK detector efficiencies and Final State Int
 which parameterise the uncertainties on the four final state event selections at the far detector. %
 Among these, one uncorrelated systematic describes the energy scale uncertainty.
 %The energy scale calibration of the far detector is a crucial step to scale systematic of SK is assumed to be valid for HK.
-The reconstruction of the momenta in a neutrino event is mainly based on the charge collected by the PMTs, %
-and therefore the resolution is limited by water quality and PMT gain.
+The reconstruction of the momenta in a neutrino event is mainly based on the charge collected by the PMTs; %
+for this reason, the resolution is mostly limited by water quality and PMT gain.
 A precise momentum determination of the incoming neutrino is a necessary requirement for oscillation analysis.
 The calibration of the energy scale is therefore a crucial step and in SK it is performed %
-using four well-known independent control samples~\cite{Abe:2017aap}.
+using four well-understood independent control samples~\cite{Abe:2017aap}.
 %from 1\,GeV to 10\,GeV by high energy stopping muons; from 200\,MeV to 500\,MeV by low energy stopping muons;
 %around 130\,MeV by neutral pions from neutrino interactions; %
 %around 40\,MeV from decay electrons.
 Since the energy loss $\dv*{E}{x}$ is approximately constant, %
 the ratio between reconstructed momentum and track length of high energy stopping muon  %
-is used to regulate the energy scale for energies in the range 1--10\,GeV.
+is used to regulate the energy scale for energies in the range $1\sim10$\,GeV.
 The track is estimated from the entering position of the muon and the vertex of the detected Michel electron, %
 both of which are assumed to be independent on the reconstruction method.
 The momentum of low-energy stopping muons with energies from 200\,MeV to 500\,MeV are estimated by determining the %
@@ -892,7 +898,7 @@ by looking at the invariant mass of the final state photons
 \begin{equation}
 	m_{\pi^0}^2 = 2\,p_{\gamma_1}\,p_{\gamma_2} (1-\cos\theta)\ ,
 \end{equation}
-with $\theta$ the opening angle between $\gamma_1$ and $\gamma_2$.
+with $\theta$ being the opening angle between $\gamma_1$ and $\gamma_2$.
 The error on the energy scale at around 130\,MeV comes from comparing the peak positions %
 of the data and Monte Carlo distributions of $m_{\pi^0}$.
 Finally, the distribution of decay electron events from stopping cosmic muons is used at energies around 40\,MeV.
@@ -903,7 +909,7 @@ The energy scale systematic of SK is assumed to be valid for HK.
 
 The full list of systematics is reported in \refapp{cha:systematics}.
 The correlation matrix between the beam systematics is shown as a 2D colour map on \reffig{fig:correlation}, %
-from which the three main typologies of uncertainties -- flux, cross-section, and far detector -- %
+from which the three main typologies of uncertainties\,---\,flux, cross-section, and far detector\,---\,%
 are easily recognised.
 The SK and FSI systematics are visibly uncorrelated with the BANFF ones.
 %and the far detector energy scale error.
@@ -963,15 +969,15 @@ as they are correlated.
 \end{figure}
 
 
-The sensitivity to exclude CP conservation computed with the nominal systematic model %
+The full sensitivity to exclude CP conservation computed with the nominal systematic model %
 is shown in \reffig{fig:nominal_sensitivity}.
-The effect of the Gaussian penalty term does not impact the sensitivity of HK to CP violation, and %
-therefore this term is always included in the following studies.
+The effect of the Gaussian penalty term does not impact the sensitivity of HK to CP violation, %
+hence this term is always included in the following results.
 In \reffig{fig:nominal_sensitivity}, the sensitivity is shown at different stages of the experiment.
-The effect is simulated by using rescaled event samples.
-With only a quarter of the data collected, a maximally violating CP phase could be found with a significance of $3\sigma$, %
-but with half of the statistics $5\sigma$ are easily reached.
-Increasing the collected samples, the sensitivity quickly saturates to the best exclusion of $\sim6.5\sigma$.
+The effect is simulated by rescaling event samples.
+With only a quarter of the data collected, a maximally violating CP phase could be found with a significance of $3\,\sigma$, %
+but with half of the statistics $5\,\sigma$ are easily reached.
+Increasing the collected samples, the sensitivity quickly saturates to the best exclusion of $\sim$6.5\,$\sigma$.
 
 \begin{figure}
 	\centering
@@ -999,57 +1005,12 @@ the sensitivity for $\delta_\text{CP} < 0$ remains unaffected, whereas the one f
 The opposite occurs in the reverse situation.
 Adding the atmospheric sample to the likelihood calculation allows to partially recover the exclusion power to CP conservation.
 The very long baseline of atmospheric neutrinos amplifies matter effects, thanks to which the sensitivity %
-of the experiment to mass ordering.
-The differences between expected and observed events thus intensify leading to larger values of the $\chi^2$.
+of the experiment to mass ordering is restored.
+The differences between expected and observed events thus intensify, leading to larger values of the likelihood.
 
 
 \subsection{Variations of the nominal model}
 \label{sec:variations}
-
-
-Previous studies~\cite{Abe:2018wpn} found that some systematic uncertainties %
-were not easily implemented by varying model parameters.
-These were then the subjects of fake data studies, where a variant systematic model was analysed under %
-the assumptions of the default model.
-A series of modifications of the nominal systematic model are considered also in this study.
-New systematic sets are created and by performing sensitivity studies with these variations of the nominal model %
-it is possible to determine whether certain systematic errors need more control than other.
-All of the produced sets are listed in \reftab{tab:variations}, even though only %
-some of them have been analysed in this thesis and they are:
-increment of the $\nu_e$ flux uncertainty in the $\nu$-mode beam by 2\%, labelled \textbf{8}; %
-increment of the energy scale uncertainty, from 2.4\,\% to 2.9\,\%, labelled \textbf{11a}; %
-decrement of the energy scale uncertainty, from 2.4\,\% to 1.9\,\%, labelled \textbf{11b}.
-The choice of these sets is motivated by the fact that the number of systematic errors is the same %
-with respect to the nominal model and the modified uncertainties are well understood by the various analysis groups.
-The remaining variations will be analysed in future studies.
-The new three profiles are shown collectively with the nominal model, labelled \textbf{0}, in \reffig{fig:0_11a_11b_8_profile}.
-The $\chi^2$ as a function of $\delta_\text{CP}$ and $\sin^2 2\theta_{13}$ changes slightly with a different flux uncertainty, %
-but it is not very much affected by a variation of the energy scale error.
-The opposite is true for $\chi^2$ versus $\Delta m_{32}^2$ or $\sin^2\theta_{23}$, in which %
-varying the energy scale error is reflected in larger deviations from the nominal model away from the best fit value.
-The contour plots in \reffig{fig:0_11a_11b_8_profile} confirm that no appreciable deviation from the nominal model %
-is seen for $\chi^2$ levels corresponding to $1\sigma$ and $3\sigma$.
-In terms of sensitivity, the variation induced by the modified systematic model is %
-less than 0.1\,\% at values of maximal violation of CP, as it can be appreciated in \reffig{fig:0_11a_11b_8_sensitivity}.
-The treatment of the energy scale uncertainty with the methodology described in this chapter might be too simplistic.
-The linear behaviour of the systematic errors (see \refeq{eq:linear}) should be applied with mindfulness: %
-it follows that the systematic parameters in the $\chi^2$ could commute with each other.
-The energy scale error, however, does not since it effectively shifts the bin contents of the event distributions.
-It is also believed that this parameter is simultaneously constrained by the $e$-like samples %
-the $\mu$-like samples, thus exhibiting no appreciable effect on the sensitivity prediction.
-The calibration of the energy scale is, as a matter of fact, performed separately %
-on stopping muon and decay electron events, as explained in \refsec{sec:syst_model}.
-There is probably need to improve the systematic model by not only splitting the energy scale systematic %
-between the two data samples, but also by changing the $\chi^2$ definition and the way this parameter is treated.
-
-Keeping in mind the above caveats, the sensitivity to $\delta_\text{CP}$ from \reffig{fig:0_11a_11b_8_sensitivity} %
-is above $6\sigma$ at full statistics.
-It is expected that the systematics variations of \reftab{tab:variations} should not degrade %
-the significance of CP conservation exclusion below this value.
-Further studies are in place before the definitive quantitative results, %
-since a more accurate treatment of the energy scale parameter is needed.
-Once the beam sample is extensively analysed, the atmospheric sample can be added to the $\chi^2$ calculation %
-and a more complicated and comprehensive systematic model can be adopted. 
 
 \begin{table}
 	\centering
@@ -1088,6 +1049,7 @@ and a more complicated and comprehensive systematic model can be adopted.
 	\end{tabular}
 \end{table}
 
+
 \begin{figure}
 	\centering
 	\resizebox{0.49\linewidth}{!}{\input{pics/new_0_11a_11b_8_chi2_dCP.tex}}
@@ -1110,6 +1072,50 @@ and a more complicated and comprehensive systematic model can be adopted.
 		which is always at the nominal Asimov A value.}
 	\label{fig:0_11a_11b_8_profile}
 \end{figure}
+
+Previous studies~\cite{Abe:2018wpn} found that some systematic uncertainties %
+were not easily implemented by varying model parameters.
+These were then the subjects of fake data studies, where a variant systematic model was analysed under %
+the assumptions of the default model.
+A series of modifications of the nominal systematic model are considered also in this study.
+New systematic sets are created and by performing sensitivity studies with these variations of the nominal model %
+it is possible to determine whether certain systematic errors need more control than other.
+All of the produced sets are listed in \reftab{tab:variations}, even though only %
+some of them have been analysed for this thesis and they are:
+increment of the $\nu_e$ flux uncertainty in the $\nu$-mode beam by 2\% (labelled \textbf{8}); %
+increment of the energy scale uncertainty, from 2.4\,\% to 2.9\,\% (labelled \textbf{11a}); %
+decrement of the energy scale uncertainty, from 2.4\,\% to 1.9\,\% (labelled \textbf{11b}).
+The choice of these sets is motivated by the fact that the number of systematic errors is the same %
+with respect to the nominal model and the modified uncertainties are well understood by the various analysis groups.
+The remaining variations will be analysed in future studies.
+The new three profiles are shown collectively with the nominal model (labelled \textbf{0}) in \reffig{fig:0_11a_11b_8_profile}.
+The $\chi^2$ as a function of $\delta_\text{CP}$ and $\sin^2 2\theta_{13}$ changes slightly with a different flux uncertainty, %
+but it is not very much affected by a variation of the energy scale error.
+The opposite is true for $\chi^2$ versus $\Delta m_{32}^2$ or $\sin^2\theta_{23}$, in which %
+varying the energy scale error is reflected in larger deviations from the nominal model away from the best fit value.
+The contour plots in \reffig{fig:0_11a_11b_8_profile} confirm that no appreciable deviation from the nominal model %
+is seen for $\chi^2$ levels corresponding to $1\,\sigma$ and $3\,\sigma$.
+In terms of sensitivity, the variation induced by the modified systematic model is %
+less than 0.1\,\% at values of maximal violation of CP, as it can be appreciated in \reffig{fig:0_11a_11b_8_sensitivity}.
+The treatment of the energy scale uncertainty with the methodology described in this chapter might be too simplistic.
+The linear behaviour of the systematic errors (see \refeq{eq:linear}) should be applied with mindfulness: %
+it follows that the systematic parameters in the $\chi^2$ could commute with each other.
+The energy scale error, however, does not since it effectively shifts the bin contents of the event distributions.
+It is also believed that this parameter is simultaneously constrained by the $e$-like samples %
+the $\mu$-like samples, thus exhibiting no appreciable effect on the sensitivity prediction.
+The calibration of the energy scale is, as a matter of fact, performed separately %
+on stopping muon and decay electron events, as explained in \refsec{sec:syst_model}.
+There is probably need to improve the systematic model by not only splitting the energy scale systematic %
+between the two data samples, but also by changing the $\chi^2$ definition and the way this parameter is treated.
+
+Keeping in mind the above caveats, the sensitivity to $\delta_\text{CP}$ from \reffig{fig:0_11a_11b_8_sensitivity} %
+is above $6\,\sigma$ at full statistics.
+It is expected that the systematics variations of \reftab{tab:variations} should not degrade %
+the significance of CP conservation exclusion below this value.
+Further studies are in place before the definitive quantitative results, %
+since a more accurate treatment of the energy scale parameter is needed.
+Once the beam sample is extensively analysed, the atmospheric sample can be added to the $\chi^2$ calculation %
+and a more comprehensive systematic model can be adopted. 
 
 \begin{figure}
 	\centering
