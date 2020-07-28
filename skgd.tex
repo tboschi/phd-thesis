@@ -52,7 +52,7 @@ The benefits and challenges of this technique are extensively covered in this ch
 after a review of the working principle of a generic Cherenkov detector in \refsec{sec:wch} %
 and the theory of neutron thermalisation and neutron capture in \refsec{sec:neutron}.
 The Super-Kamiokande experiment is briefly introduced in \refsec{sec:sk}, with %
-particular emphasis on the techniques in place to control backgrounds, %
+an emphasis on the techniques currently in place to control backgrounds, %
 searches limited by irreducible background, and the improvements provisioned by the gadolinium phase of SK.
 The neutron calibration procedure of the detector is explained in \refsec{sec:neutron_cal} %
 and a promising substitute for the neutron calibration device is there introduced.
@@ -135,7 +135,7 @@ At higher frequencies, for example in the x-ray region, the refractive index dro
 Cherenkov photons cannot be produced at these shorter wavelengths.
 Experiments exploiting the Cherenkov effect try to match the sensitivity band of photodetectors to the radiation region.
 Photomultipliers (PMT) are the detectors of choice, thanks to their low noise and capability of single photodetection, %
-but microchannel plates (MCP) and silicon photomultipliers (SiPM) are used too (see for e.g.\ \cite{Ambrosio:2016ijk}).
+but microchannel plates (MCP) and silicon photomultipliers (SiPM) are used too (see e.g.\ \cite{Ambrosio:2016ijk}).
 This technique is largely used in neutrino detection, since it easily allows %
 to transform large volumes of some transparent or scintillating medium into a detector sensitive to charged particles.
 Amongst the most notable examples, the IceCube experiment is the largest Cherenkov detector~\cite{Abbasi:2008aa}, %
@@ -612,7 +612,7 @@ Hydrogen presents a relative high cross-section for neutron capture, as it can b
 the cross-section for a thermal neutron on hydrogen is measured to be $\np{332.6}$~\,mb~\cite{ZERKIN201831}. %
 The capture cross-section on oxygen \tapi{16}O is around $0.19$~\,mb, four orders of magnitude smaller %
 than the capture on hydrogen and therefore typically neglected.
-The hydrogen capture is followed by the emission of a single $\np{2.2}$\,MeV gamma from the %
+The hydrogen capture is followed by the emission of a single $\np{2.2}$\,MeV photon from the %
 de-excitation of the newly-formed deuterium.
 The characteristic time for Maxwellian neutrons with energy below 10\,MeV to thermalise and being captured %
 by hydrogen in water has been measured to be $(\np{204.8}\pm\np{0.4})$\,\textmu s~\cite{Cokinos:1977zz}.
@@ -1123,3 +1123,31 @@ with a better accuracy than the current technique AAS technique.
 		even for a concentration of 0.02\,\%.}
 	\label{fig:gad_1m}
 \end{figure}
+
+
+\section*{\em Summary}
+
+In this chapter, the upcoming Super-Kamiokande gadolinium phase was outlined, %
+focusing on its advantages and main challenges.
+All of the current analysis will benefit from the the improved neutron tagging efficiency, %
+up to 90\,\% with a Gd concentration of 0.2\,\%.
+This is thanks to the smoking-gun signature of the neutron capture on gadolinium: %
+a handful of photons with a total energy of about 8\,MeV and a typical thermalisation time of $\sim$30\textmu s.
+Up until now, the sensitivity of SK to neutron tagging has been assessed with a calibrating device %
+consisting of an Am-Be source encased in a BGO crystal cube.
+In this thesis, californium-252 was investigated as an alternative neutron source, %
+having a higher neutron activity and emitting multiple neutrons per fission events.
+With the help of a GEANT4 simulation, it was found that the same calibration device used in SK %
+is already of the optimal shape and material to be used with \tapi{252}Cf instead.
+The Am-Be neutron source could then be replaced without further modifications of the device, %
+bringing about a more precise neutron calibration.
+One of the challenges of a Gd-loaded Cherenkov detector %
+is to monitor the gadolinium concentration in water, as this can vary in time or be affected by the water flow and temperature.
+A new method involving UV absorption spectroscopy is being developed with promising results %
+which takes advantage of the strong Gadolinium absorption lines in the region between 270\,nm and 275\,nm.
+The Beer-Lambert law relates absorbance to gadolinium concentration and so the latter can be estimate by %
+measuring the intensity of UV light through a water sample.
+The precision reached with this method on a 100\,cm water sample is around $\sim$0.3\,\% %
+on the full load concentration of 0.2\,\%.
+Furthermore, this technique allows for an almost continuous monitoring of the concentration, %
+compared to the current atomic spectroscopy technique in place which is executed with a monthly frequency.

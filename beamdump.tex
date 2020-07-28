@@ -38,12 +38,12 @@ at their far detectors and consequently poor sensitivity.
 However, the near detector of DUNE (DUNE ND), placed \np{574}\,m from the target, has a great potential %
 for searches of new physics~\cite{Adams:2013qkq}.
 Close proximity to a very intense neutrino beam and cutting-edge event reconstruction capabilities %
-will allow DUNE ND to undertake valuable searches for BSM physics in a entirely complementary way %
+will allow the DUNE ND to undertake valuable searches for BSM physics in a entirely complementary way %
 to the central oscillation physics programme. 
 
-In this chapter, a detailed analysis of the sensitivity of DUNE ND to HNL in beam-dump-style searches is presented.
+In this chapter, a detailed analysis of the sensitivity of the DUNE ND to HNL in beam-dump-style searches is presented.
 The following analysis is based on the theoretically consistent models from \refcha{cha:mass_models}, %
-in which sterile neutrinos are associated with neutrino mass generation via a low-scale seesaw mechanism.
+in which sterile neutrinos are associated with a low-scale seesaw mechanism to address neutrino mass generation.
 In particular, the production modes of \reftab{tab:branch} and most of the decay channels of \reftab{tab:decays} %
 are considered.
 The analysis presented here is refined and extended in comparison with previous works~\cite{Krasnov:2019kdc, Adams:2013qkq}, %
@@ -51,7 +51,7 @@ thanks to the polarised rates computed in \refcha{cha:mass_models} and the lates
 The ND and the neutrino beam are described in \refsec{sec:dunend}; %
 a first estimate of the $\nu_\tau$ flux component is also presented.
 The simulation used to compute the number of HNL decays at the ND site is explained in \refsec{sec:experiment}, %
-and possible backgrounds for the most relevant discovery channels are there discussed.
+and possible backgrounds for the most relevant discovery channels are discussed there.
 Results of the sensitivity to HNL discovery are reported in \refsec{sec:results}.
 Finally, discussions of the possibility of resolving mass models and the fermionic nature of HNLs is %
 carried out respectively in \refsec{sec:combined} and \refsec{sec:majorana_dirac}.
@@ -208,7 +208,7 @@ with the beam in neutrino mode and the ND on-axis.
 \end{table}
 
 A summary of the detector features relevant for this analysis is reported in~\reftab{tab:nd}, %
-where DUNE ND is compared to other beam dump experiments: %
+where the DUNE ND is compared to other beam dump experiments: %
 PS191~\cite{Bernardi:1985ny,Bernardi:1987ek}, SBND which is the detector of the \emph{SBN program} with the best sensitivity to %
 HNL~\cite{Ballett:2016opr}, NA62~\cite{NA62:2017rwk}, and SHiP~\cite{Anelli:2015pba}.
 The total exposure of the experiment is defined as the proton accelerator beam power integrated over the total run time %
@@ -222,7 +222,7 @@ they are reported here for thoroughness since they give competitive sensitivitie
 The estimated exposure of NA62 is limited by its number of POT and by just one year of data taking; %
 in spite of this, the experiment is optimised to study kaon decays and has good %
 sensitivity to HNL~\cite{Drewes:2018irr}.
-The SHiP experiment presents an exposure thirty times bigger than DUNE ND, but the detector is specifically %
+The SHiP experiment presents an exposure thirty times bigger than the DUNE ND, but the detector is specifically %
 designed to search for BSM physics, including heavy neutrinos~\cite{SHiP:2018xqw,Caputo:2016ojx}.
 The decay-in-flight search hugely benefits from its 50\,m long decay vessel and short baseline.
 The DUNE experiment, however, is planned to start before than the SHiP experiment and %
@@ -353,7 +353,7 @@ The distribution of heavy neutrinos from $\tau$ decays also changes with the neu
 These effects are taken into account by modifying the scaled neutrino flux using information retrieved by the $\nu_\tau$ and $\cj{\nu}_\tau$~simulation. 
 
 
-\section{Simulation of events at DUNE ND}
+\section{Simulation of events at the DUNE ND}
 \label{sec:experiment}
 
 \begin{table}
@@ -424,7 +424,7 @@ The event rates are shown in~\reftab{tab:rate}.
 It turns out that less than one $\nu_\tau$ event is expected in the total run of the experiment.
 As~a~comparison, the number of $\nu_\mu$ events will be \np{e10} times higher.
 This confirms the expectations that the $\nu_\tau$ component of the flux is negligible %
-for standard oscillation physics in~DUNE ND; %
+for standard oscillation physics in the DUNE ND; %
 on the other hand $\nu_\tau$ appearance is expected at the FD.
 SM neutrino scatterings occurring within the fiducial volume of the detector could mimic %
 the rare signal of HNL in-flight decays, as some final-state particles are common to both processes.
@@ -598,7 +598,7 @@ but rejection techniques are being developed with good signal efficiencies~\cite
 Except for $N$ decaying into three neutrinos, all the other decay channels listed in \refsec{sec:decay} are in principle detectable.
 Some decay modes contribute more significantly to the physics reach thanks to larger branching ratios and lower backgrounds.
 Along with the number of background events, a correct estimation of the number of decays in visible channels %
-is necessary in order to evaluate the sensitivity of DUNE ND to the discovery of HNL.
+is necessary in order to evaluate the sensitivity of the DUNE ND to the discovery of HNL.
 For a given visible decay mode~$d$, the number of signal events is
 %The expected number of heavy neutrino decays inside the detector for a given decay channel~$d$ %
 %can be estimated with the following formula:
@@ -663,7 +663,7 @@ and the signal efficiency $W_d(E)$ is introduced in \refsec{sec:numevt}.
 
 As an example of the selection process, the results of the background analysis for an HNL with mass $m_N = 450$\,MeV %
 is reported here.
-In the following tables the number of background events is reported %
+In Tables \ref{tab:eff_two}, \ref{tab:eff_three}, and \ref{tab:eff_EM} the number of background events is reported %
 in the form ``$\mathcal{X} \to \mathcal{Y}\ \mathcal{Z}$'', %
 where $\mathcal{X}$ is the per mille (\np{e-3}) fraction of background events %
 from mis-identification and $\mathcal{Y}$ and $\mathcal{Z}$ are fractions of irreducible background %
@@ -686,6 +686,43 @@ decays which can be only detected via photon reconstruction.
 %We limit our analysis only for events with a total energy greater than 5~GeV, unless stated differently.
 
 \subsubsection{Two-body decays}
+
+\begin{table}
+	\centering
+	\caption[Efficiencis of selection cuts of two-body decays]%
+	{The number of background events are reported before and after the event selection process is applied %
+		for two-body decay channels of HNLs. See text for details.
+		The last row is the integrated signal efficiency.}
+	\label{tab:eff_two}
+	\small
+	\begin{tabular}{cr@{~}c@{~~}cr@{~}c@{~~}c}
+		%%%%%%
+	\toprule
+
+	& \multicolumn{3}{c}{$N\to e^\mp \pi^\pm$}		& \multicolumn{3}{c}{$N\to \mu^\mp \pi^\pm$}	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}   
+
+	& & Majorana		& Dirac	 & & Majorana	& Dirac	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7} 
+
+	$\nu_e$         &\np{19.090}~~$\to$ & \np{0.015} & \np{0.015}	&\np{ 0.007}~~$\to$ & \np{0.000} & \np{0.000}	\\
+	$\nu_\mu$       &\np{ 0.027}~~$\to$ & \np{0.000} & \np{0.000}	&\np{25.030}~~$\to$ & \np{0.011} & \np{0.012}	\\
+	$\cj{\nu}_\mu$  &\np{ 0.025}~~$\to$ & \np{0.000} & \np{0.000}	&\np{29.822}~~$\to$ & \np{0.046} & \np{0.053}	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+
+	$\langle\nu\rangle$		&\np{ 0.239}~~$\to$ & \np{0.000} & \np{0.000}	&\np{24.302}~~$\to$ & \np{0.013} & \np{0.014}	\\
+
+	\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+
+	$\widehat{W}_{\ell\pi}$&		& 36.4\,\%	& 35.2\,\%	&		& 43.3\,\%	& 40.2\,\% \\
+
+	\bottomrule
+		%%%%%%
+	\end{tabular}
+\end{table}
 
 The two-body decays $N \to e^\pm \pi^\mp$ and $N \to \mu^\pm \pi^\mp$ are the most promising channels for the detection %
 of a heavy neutrino, being the decay modes with the highest branching ratios.
@@ -715,61 +752,18 @@ After the cuts are applied, the background events are reduced up to a factor of 
 and the signal efficiency are $\sim$35\,\% for the electronic channel and $\sim$40\,\% %
 for the muonic channel, with little difference (respectively 1\,\% and 3\,\%) %
 between Dirac or Majorana selection windows.
+The background rejection and signal efficiency are shown in \reftab{tab:eff_two}.
 
-\begin{center}
-\smallskip
-	\small
-	\begin{tabular}{cr@{~}c@{~~}cr@{~}c@{~~}c}
-		%%%%%%
-	\toprule
-
-	& \multicolumn{3}{c}{$N\to e^\mp \pi^\pm$}		& \multicolumn{3}{c}{$N\to \mu^\mp \pi^\pm$}	\\
-
-	\cmidrule(lr){2-4} \cmidrule(lr){5-7}   
-
-	& & Majorana		& Dirac	 & & Majorana	& Dirac	\\
-
-	\cmidrule(lr){2-4} \cmidrule(lr){5-7} 
-
-	$\nu_e$         &\np{19.090}~~$\to$ & \np{0.015} & \np{0.015}	&\np{ 0.007}~~$\to$ & \np{0.000} & \np{0.000}	\\
-	$\nu_\mu$       &\np{ 0.027}~~$\to$ & \np{0.000} & \np{0.000}	&\np{25.030}~~$\to$ & \np{0.011} & \np{0.012}	\\
-	$\cj{\nu}_\mu$  &\np{ 0.025}~~$\to$ & \np{0.000} & \np{0.000}	&\np{29.822}~~$\to$ & \np{0.046} & \np{0.053}	\\
-
-	\cmidrule(lr){2-4} \cmidrule(lr){5-7}
-
-	$\langle\nu\rangle$		&\np{ 0.239}~~$\to$ & \np{0.000} & \np{0.000}	&\np{24.302}~~$\to$ & \np{0.013} & \np{0.014}	\\
-
-	\cmidrule(lr){2-4} \cmidrule(lr){5-7}
-
-	$\widehat{W}_{\ell\pi}$&		& 36.4\,\%	& 35.2\,\%	&		& 43.3\,\%	& 40.2\,\% \\
-
-	\bottomrule
-		%%%%%%
-	\end{tabular}
-\medskip
-\end{center}
 
 \subsubsection{Three-body decays}
 
-The three-body decays studied are $N\to \nu e^- e^+$, $N\to \nu e^\mp \mu^\pm$, and $N\to \nu \mu^- \mu^+$.
-The event selection in this case is more challenging compared to the two-body case, due to the loss of the light neutrino %
-which precludes the reconstruction of the decaying HNL; selection cuts cannot be defined as rigorously. 
-However, since two charged leptons are needed to identify these channels, the resulting background rate %
-from mis-identified photons and long-track pions is low.
-Even in this case, only high energy events are considered, but with a lower threshold on the charged lepton energies.
-The invariant mass of the two leptons has as upper limit $m_N$ and this constrain helps to reduce the background.
-Lower and upper limits are also defined for the transverse momenta, as well as for the separation angles from the beamline.
-
-The background events are reduced from a factor of 40 up to a factor of 200, with the selection requirements %
-for Dirac neutrinos being more effective.
-The signal efficiency results to be better by $6\sim8$\,\% points for Majorana neutrinos in the $N\to \nu e^- e^+$ and $\mu^-\mu^+$ %
-channels, whereas the Dirac neutrino have give a better efficiency in the $N\to e^\mp \mu^\pm$ channel.
-High efficiency and low background make these three channels competitive for HNL discovery, %
-despite lower branching ratios.
-%\enlargethispage{\baselineskip}
-
-\begin{center}
-\smallskip
+\begin{table}
+	\centering
+	\caption[Efficiencis of selection cuts of three-body decays]%
+	{The number of background events are reported before and after the event selection process is applied %
+		for three-body decay channels of HNLs. See text for details.
+		The last row is the integrated signal efficiency.}
+	\label{tab:eff_three}
 	\small
 	\begin{tabular}{cr@{~}c@{~~}cr@{~}c@{~~}cr@{~}c@{~~}c}
 	%\begin{tabular}{cr@{~}r@{\ |\ }rr@{~}r@{\ |\ }rr@{~}r@{\ |\ }r}
@@ -799,30 +793,36 @@ despite lower branching ratios.
 	\bottomrule
 		%%%%%%
 	\end{tabular}
-\end{center}
+\end{table}
+
+The three-body decays studied are $N\to \nu e^- e^+$, $N\to \nu e^\mp \mu^\pm$, and $N\to \nu \mu^- \mu^+$.
+The event selection in this case is more challenging compared to the two-body case, due to the loss of the light neutrino %
+which precludes the reconstruction of the decaying HNL; selection cuts cannot be defined as rigorously. 
+However, since two charged leptons are needed to identify these channels, the resulting background rate %
+from mis-identified photons and long-track pions is low.
+Even in this case, only high energy events are considered, but with a lower threshold on the charged lepton energies.
+The invariant mass of the two leptons has as upper limit $m_N$ and this constrain helps to reduce the background.
+Lower and upper limits are also defined for the transverse momenta, as well as for the separation angles from the beamline.
+
+The background events are reduced from a factor of 40 up to a factor of 200, with the selection requirements %
+for Dirac neutrinos being more effective.
+The signal efficiency results to be better by $6\sim8$\,\% points for Majorana neutrinos in the $N\to \nu e^- e^+$ and $\mu^-\mu^+$ %
+channels, whereas the Dirac neutrino have give a better efficiency in the $N\to e^\mp \mu^\pm$ channel.
+High efficiency and low background make these three channels competitive for HNL discovery, %
+despite lower branching ratios.
+The background rejection and signal efficiency are shown in \reftab{tab:eff_three}.
+%\enlargethispage{\baselineskip}
 
 \subsubsection{EM--detected decays}
 
-The semileptonic decay $N \to \nu \pi^0$ may only be identified by a correct photon reconstruction, %
-since the neutral pion decays almost 100\,\% of the time in two photons.
-This particle is produced in any NC interaction with a $\pi^0$ emission.
-Background events occur if only two final-state photons from the neutral pion decay %
-are above detection threshold and properly reconstructed with an invariant mass equal to $m_{\pi^0}$.
-The energy of the reconstructed pion is the best discriminant against background events %
-which have typically higher energies.
-Lower and upper limits can be placed on the $\pi^0$ transverse momentum and angle with the beamline, %
-but also a threshold on the energy of the photons as well as an upper limit on their angular distributions %
-help to define the kinematics of the event.
-The residual background for this channel is the highest among the ones studied.
-Only reduction factors up to 130 can be achieved, with a notable difference between selection cuts %
-for Majorana and Dirac HNL decays\,---\,the latter ones being more strict.
-The signal efficiency is $\sim$46\,\% for Majorana and $\sim$42\,\% for Dirac.
-It is, however, one of the decay modes with the highest branching ratio, %
-and with advanced and dedicated techniques~\cite{Ankowski:2008aa, Back:2012wc}
-the background rejection can be improved.
-
-\begin{center}
+\begin{table}
 \smallskip
+	\centering
+	\caption[Efficiencis of selection cuts of EM--detected decay]%
+	{The number of background events are reported before and after the event selection process is applied %
+		for the neutral pseudoscalar meson decay. See text for details.
+		The last row is the integrated signal efficiency.}
+	\label{tab:eff_EM}
 	\small
 	%\begin{tabular}{cr@{\ }r@{\ |\ }r}
 	\begin{tabular}{cr@{~}c@{~~}c}
@@ -856,7 +856,26 @@ the background rejection can be improved.
 		%%%%%%
 	\end{tabular}
 	\medskip
-\end{center}
+\end{table}
+
+The semileptonic decay $N \to \nu \pi^0$ may only be identified by a correct photon reconstruction, %
+since the neutral pion decays almost 100\,\% of the time in two photons.
+This particle is produced in any NC interaction with a $\pi^0$ emission.
+Background events occur if only two final-state photons from the neutral pion decay %
+are above detection threshold and properly reconstructed with an invariant mass equal to $m_{\pi^0}$.
+The energy of the reconstructed pion is the best discriminant against background events %
+which have typically higher energies.
+Lower and upper limits can be placed on the $\pi^0$ transverse momentum and angle with the beamline, %
+but also a threshold on the energy of the photons as well as an upper limit on their angular distributions %
+help to define the kinematics of the event.
+The residual background for this channel is the highest among the ones studied.
+Only reduction factors up to 130 can be achieved, with a notable difference between selection cuts %
+for Majorana and Dirac HNL decays\,---\,the latter ones being more strict.
+The signal efficiency is $\sim$46\,\% for Majorana and $\sim$42\,\% for Dirac.
+It is, however, one of the decay modes with the highest branching ratio, %
+and with advanced and dedicated techniques~\cite{Ankowski:2008aa, Back:2012wc}
+the background rejection can be improved.
+The background rejection and signal efficiency are shown in \reftab{tab:eff_EM}.
 
 %We note that the selection cuts for Dirac neutrino decays are generally more strict than the corresponding %
 %Majorana cuts for masses $m_N \gtrsim 0.25$.
@@ -900,7 +919,7 @@ the background rejection can be improved.
 
 
 
-\section{Sensitivities of DUNE ND}
+\section{Sensitivities of the DUNE ND}
 \label{sec:results}
 
 The sensitivity regions for the discovery of heavy neutrino decays are presented in this section, %
@@ -936,7 +955,7 @@ The limits reported here below refer to Majorana heavy neutrinos; %
 the corresponding limit for which $N$ is a Dirac fermion is easily retrieved by multiplying the upper limit %
 by~$\sqrt{2}$.
 
-\refsec{sec:dominant} shows the constraint that DUNE ND can place on a simplified scenario %
+\refsec{sec:dominant} shows the constraint that the DUNE ND can place on a simplified scenario %
 in which a single mixing matrix element between HNL and active neutrinos dominates.
 The scenario in which two mixings are dominant with respect to the third one is also considered, %
 the results of which are reported in~\refsec{sec:bimax}.
@@ -991,7 +1010,7 @@ although systematic uncertainties could also degrade the sensitivity.
 	\centering
 	\caption[Results for sensitivity with dominant mixing to channels with background analysis]%
 		{This table summarises the sensitivity result of \reffig{fig:senseW}.
-			The minimum value of the mixing to Majorana HNLs to which DUNE ND is sensitive to is reported; %
+			The minimum value of the mixing to Majorana HNLs to which the DUNE ND is sensitive to is reported; %
 			the value in bracket is with the background analysis included.
 			The respective mass value at that point is also reported.
 			The particle $\ell^\mp$ denotes the charged lepton with corresponding flavour given by the mixing element.
@@ -1094,7 +1113,7 @@ The sensitivity results are summarised in \reftab{tab:senseV}.
 	\centering
 	\caption[Results for sensitivity with dominant mixing to channels without background analysis]%
 		{This table summarises the sensitivity result of \reffig{fig:senseV}.
-			The minimum value of the mixing to Majorana HNLs to which DUNE ND is sensitive to is reported, %
+			The minimum value of the mixing to Majorana HNLs to which the DUNE ND is sensitive to is reported, %
 			together with the respective mass value, $m_N$.
 			No background analysis was carried out for the channels listed here.
 			The particle $\ell^\mp$ denotes the charged lepton with corresponding flavour given by the mixing element.}
@@ -1193,9 +1212,8 @@ $0.24\,\text{GeV}\lesssim m_N \lesssim 1.7\,\text{GeV}$~\cite{Helo:2010cw}.
 	\centering
 	\caption[Results for sensitivity with two dominant mixing]%
 		{This table summarises the sensitivity result of \reffig{fig:senseMix}.
-			The minimum value of the mixing to Majorana HNLs to which DUNE ND is sensitive to is reported; %
-			the value in bracket is with the background analysis included.
-			The respective mass value at that point is also reported.
+			The minimum value of the mixing to Majorana HNLs to which the DUNE ND is sensitive to is reported; %
+			the respective mass value at that point is also reported.
 		}
 	\label{tab:senseMix}
 	\small
@@ -1244,14 +1262,14 @@ Regarding the channels available only above the kaon mass threshold, decays to p
 between CC processes, whereas the decay $N \to \nu \phi$ gives the best constraint of the NC--mediated channels.
 In \reftab{tab:senseMix}, the sensitivity results for two dominant mixings are reported.
 
-\section{Mass model constraints from DUNE ND}
+\section{Mass model constraints from the DUNE ND}
 \label{sec:combined}
 
 %Finally, we make a comparison of this analysis with previous and recent results of beam dump experiment.
 %and explain the how the experiment %
 %can explore the parameter spaces of different neutrino mass models in the next section, \ref{sec:combined}.
 
-From the results presented in the previous section, DUNE ND will be sensitive to very low couplings %
+From the results presented in the previous section, the DUNE ND will be sensitive to very low couplings %
 for experimentally accessible mass values.
 These points of the parameter space correspond to regions viable in some realisations of low scale neutrino mass models.
 In view of the discussion regarding seesaw models in \refsec{sec:model}, %
@@ -1262,7 +1280,7 @@ Following the notation introduce in \refcha{cha:mass_models}, in the first two c
 the heavy neutrino under study belongs to the lightest pseudo-Dirac pair of an ISS\,(2,2) and an ISS\,(2,3) realisation; %
 the third scenario is an ISS\,(2,3) case in which the fourth massless state becomes %
 a Majorana neutrino in the \mbox{MeV--GeV} region thanks to a high LNV parameter.
-The details of this analysis are reported in this section, together with the overall sensitivities of DUNE ND to %
+The details of this analysis are reported in this section, together with the overall sensitivities of the DUNE ND to %
 heavy neutrino discovery and low scale mass models. 
 A~comparison with future experiments is also included.
 
@@ -1362,7 +1380,7 @@ is highlighted in the figure for comparison.
 
 \subsection{Overall sensitivity}
 
-The overall sensitivity of DUNE ND to the discovery of HNL is defined here as the combination of the sensitivities %
+The overall sensitivity of the DUNE ND to the discovery of HNL is defined here as the combination of the sensitivities %
 to some selected channels and presented in \reffig{fig:sensAll}.
 These channels are $N \to \nu e^+ e^-$, $\nu e^\pm \mu^\mp$, $\nu \mu^+\mu^-$, $\nu\pi^0$, $e^\mp\pi^\pm$, and $\mu^\mp\pi^\pm$, %
 and are preferred because of their good discovery prospect, for which a background study has also been carried out.
@@ -1393,7 +1411,7 @@ The sensitivity study is conducted for the two scenarios in which either a Major
 		peak searches~\cite{Artamonov:2014urb, Britton:1992pg, Britton:1992xv, Aguilar-Arevalo:2017vlf, Aguilar-Arevalo:2019owf}, %
 		CHARM~\cite{Vilain:1994vg}, NuTeV~\cite{Vaitaitis:1999wq}, DELPHI~\cite{Abreu:1996pa}, and T2K~\cite{Abe:2019kgx}, %
 		with the lines reinterpreted for Majorana neutrinos (see \refref{Ruchayskiy:2011aa}).
-		The sensitivity for DUNE ND (black) is compared to the predictions of future experiments, %
+		The sensitivity for the DUNE ND (black) is compared to the predictions of future experiments, %
 		SBN~\cite{Ballett:2016opr} (blue), %
 		SHiP~\cite{Alekhin:2015byh} (red), NA62~\cite{Drewes:2018irr} (green), MATHUSLA~\cite{Curtin:2018mvb} (purple), %
 		and FASER~\cite{Kling:2018wct} with 1\,m radius (orange).
@@ -1409,7 +1427,7 @@ A comparison with previous experiments allows to appreciate the ND performance t
 The results of PS191~\cite{Bernardi:1985ny, Bernardi:1987ek}, peak searches~\cite{Artamonov:2014urb, Britton:1992pg, Britton:1992xv}, %
 CHARM~\cite{Vilain:1994vg}, NuTeV~\cite{Vaitaitis:1999wq}, DELPHI~\cite{Abreu:1996pa}, and T2K~\cite{Abe:2019kgx} are shown %
 in \reffig{fig:sensAll}.
-It is found that DUNE ND can increase the bound on the electronic and muonic mixing elements %
+It is found that the DUNE ND can increase the bound on the electronic and muonic mixing elements %
 for masses $m_N < m_{K^0}$ with respect to past experiments.
 The constraint on the tauonic mixing is at least comparable with previous measurements.
 For masses above, for which neutrino production relies on charm meson decays, the existing bounds %
@@ -1418,7 +1436,7 @@ can be achieved in the muonic case.
 The prospects for the SBN programme~\cite{Ballett:2016opr}, %
 NA62~\cite{Drewes:2018irr}, and the proposed SHiP~\cite{Alekhin:2015byh}, MATHUSLA~\cite{Curtin:2018mvb}, %
 and FASER~\cite{Kling:2018wct} with 1\,m radius are also overlaid.
-DUNE ND will give the best sensitivity for masses below the 0.5\,GeV in all channels, but the tauonic one.
+The DUNE ND will give the best sensitivity for masses below the 0.5\,GeV in all channels, but the tauonic one.
 However, anywhere the $D_s$ meson production is involved, the experiment cannot outperform the predicted %
 sensitivity of the SHiP experiment which will deploy a 400\,GeV proton beam on a titanium-zinc-molybdenum alloy %
 target, enhancing the production of charm and bottom mesons.
@@ -1438,7 +1456,7 @@ despite accounting only for the $D_s$ meson component.
 Moreover, a different ND configuration was assumed and no background study was performed in \refref{Krasnov:2019kdc}.
 
 Finally, in \reffig{fig:sensAll} the overall sensitivity is compared with respect to regions allowed by neutrino mass models.
-In the electronic and muonic channels, DUNE ND will be sensitive to a large part of the pseudo-Dirac regions, %
+In the electronic and muonic channels, the DUNE ND will be sensitive to a large part of the pseudo-Dirac regions, %
 corresponding to ISS\,(2,2) and ISS\,(2,3) models, %
 part of which have been already excluded by past experiments.
 The ND will also close the gap and put to test type I seesaw parameters, especially for HNL masses between 0.2 and 0.5\,GeV, %
@@ -1487,7 +1505,7 @@ require values of $\sin^2 2\theta_{\mu e} \gtrsim \np{e-3}$.
 The regions already excluded by these experiments are also reported in \reffig{fig:sblosc}.
 Given the results of the matrix scan, it is unlikely that one of the ISS\,(2,3) realisations %
 considered in this work could explain simultaneously a short baseline anomaly and predict %
-a heavy neutrino--like signal in DUNE ND, unless for sparse and very fine-tuned points.
+a heavy neutrino--like signal in the DUNE ND, unless for sparse and very fine-tuned points.
 
 
 \section{Determining the nature of HNLs}
@@ -1625,7 +1643,7 @@ some events originating inside the LArTPC module can propagate to the MPD and th
 of escaping particles could be identified in this way.
 This would allow the expansion of the fiducial volume of the ND sensitive to charges which strongly %
 depends on the momentum of the final-state particles.
-Using the same fast MC simulation of DUNE ND explained in \refsec{sec:experiment}, %
+Using the same fast MC simulation of the DUNE ND explained in \refsec{sec:experiment}, %
 the charge is retrieved if the sagitta of curved tracks inside the MPD are greater than 1\,cm, %
 hundred times the spatial resolution.
 Assuming a high momentum and neglecting energy loss in the MPD, the condition required is 
@@ -1645,4 +1663,29 @@ Charge identification can further reduce background from SM neutrino interaction
 especially if with production of extra pions and other hadrons.
 HNL decays have always particles of opposite charge in the final state and this requirement %
 can help reject more background events in the selection process.
-\enlargethispage{\baselineskip}
+%\enlargethispage{\baselineskip}
+
+\section*{\em Summary}
+
+In this chapter, the sensitivity of the DUNE ND to heavy neutral leptons in beam-dump-style searches has been estimated.
+The analysis is based on the calculations presented in \refcha{cha:mass_models}, %
+as HNLs can be produced with light neutrinos by the powerful LBNF neutrino beam 
+and subsequently decay inside the Near Detector system.
+The number of heavy neutrinos is calculated by a convolution between the HNL flux, the decay probability, %
+and detector's efficiency and geometry.
+A first estimate of the $\nu_\tau$ component of the beam from $D_s$ mesons has also been carried out.
+The efficiency of the detector is evaluated with the help of a custom fast MC simulation %
+and the background sources from SM neutrino--nucleon interactions are generated with GENIE.
+A detailed background study was also performed on decay channels with good detection prospects, %
+defined by high branching ratios and clean detector signatures.
+Thanks to the vicinity to the beam target and the state-of-the-art reconstruction capabilities, %
+the DUNE ND can place very competitive bounds to the HNL mixings with active neutrinos;
+the 90\,\% C.L.\ sensitivity regions have been estimated for both single and dominant mixings.
+For masses between 0.3 and 0.5\,GeV, the ND can probe mixing elements below \np{e-9} in most cases, %
+reaching \np{e-10} especially with two-body semi-leptonic channels via $|U_{e N}|^2$ and $|U_{\mu N}|^2$.
+Thanks to the $D_s$ meson production, neutrino masses above 0.5\, and up to 2\,GeV are also accessible, %
+as well as the sensitivity to the tau mixing.
+A random matrix scan of possible inverse seesaw realisations shows that the DUNE ND %
+can extend current limits on mixing parameters reaching regions of interest for neutrino mass models.
+If a discovery is made, some considerations can be drawn upon the nature of the new fermionic states, %
+particularly if the charges of the final state particles can be reconstructed.
