@@ -980,6 +980,24 @@ FUNCTION {cpp}
         newline$
 }
 
+FUNCTION {lecture}
+{
+        output.bibitem
+        write$
+        format.authors " (" *
+        write$
+        format.date "). " *
+        write$
+        format.title 
+        write$
+        url empty$
+        { "Lecture series." }
+        { "\href{" url * "}{Lecture series}." * }
+        if$
+        write$
+        newline$
+}
+
 FUNCTION {private}
 {
         output.bibitem
